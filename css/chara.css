@@ -144,8 +144,6 @@
 
 table {
   width: 600px;
-  max-width: 90%;
-  height: auto;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -232,7 +230,7 @@ td img {
   }
   
   .MU_table p {
-    font-size: 6px;
+    font-size: 8px;
     line-height: 1.5;
     display: table-cell;
     vertical-align: middle;
@@ -279,6 +277,15 @@ td img {
   
   .sorttbl p {
     font-size: 0%;
+  }
+
+  table {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center; /* 全テキストを中央寄せ */
   }
 
   th {
