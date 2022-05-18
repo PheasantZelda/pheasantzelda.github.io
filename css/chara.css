@@ -220,7 +220,6 @@ td img {
   }
 
   .MU_title {
-    padding: 0px;
     padding-top: 2px;
     text-align: center;
     margin-right: 2px;
@@ -238,10 +237,7 @@ td img {
   
   .MU_result {
     width: 693px;
-    margin: 0;
-    padding: 0;
     padding-top: 2px;
-    
   }
   
   .MU_result img {
