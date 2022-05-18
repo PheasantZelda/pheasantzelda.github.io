@@ -102,7 +102,7 @@
   background-color: #333536;
   border: 1px solid #333536;
   margin: 0;
-  padding: 0;
+  padding: 2;
   border: solid 1px #837f7f;
 }
 
@@ -220,8 +220,7 @@ td img {
   }
 
   .MU_title {
-    padding: 0px;
-    padding-top: 2px;
+    padding: 2%px;
     text-align: center;
     margin-right: 2px;
     border: solid 0.5px #eee;
@@ -238,10 +237,8 @@ td img {
   
   .MU_result {
     width: 693px;
-    margin: 0;
-    padding: 0;
-    padding-top: 2px;
-    
+    margin: 2%;
+    padding: 0; 
   }
   
   .MU_result img {
