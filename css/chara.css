@@ -242,7 +242,8 @@ td img {
   }
   
   .MU_result img {
-    padding-top: 1.6%;
+    padding-top: 1.4%;
+    padding-bottom: 0.4%;
     width: 63px;
     max-width: 7.5%;
     margin-left: 0.4%;
