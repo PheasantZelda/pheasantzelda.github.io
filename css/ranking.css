@@ -97,9 +97,7 @@
 .MU_result {
   width: 693px;
   background-color: #333536;
-  border: 1px solid #333536;
-  margin: 0;
-  padding: 0;
+  padding: 5px;
   border: solid 1px #837f7f;
 }
 
@@ -219,7 +217,7 @@ td img {
 
   .MU_title {
     padding: 0px;
-    padding-top: 2px;
+    padding-top: 0.5px;
     text-align: center;
     margin-right: 2px;
     border: solid 0.5px #eee;
@@ -228,22 +226,22 @@ td img {
   }
   
   .MU_table p {
-    font-size: 6px;
-    line-height: 1;
+    font-size: 8px;
+    line-height: 1.5;
     display: table-cell;
     vertical-align: middle;
   }
   
   .MU_result {
     width: 693px;
-    margin: 0;
     padding: 0;
-    padding-top: 2px;
-    
+    padding-top: 0.5px;
+    border: solid 0.5px #837f7f;
   }
   
   .MU_result img {
-    padding-top: 1px;
+    padding-top: 1.0%;
+    padding-bottom: 0.4%;
     width: 63px;
     max-width: 7.5%;
     margin-left: 0.4%;
