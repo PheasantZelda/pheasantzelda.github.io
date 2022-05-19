@@ -56,7 +56,7 @@
 }
 
 .MU_title {
-  padding: 5px;
+  padding: 3px;
   width: 300px;
   text-align: center;
   margin-right: 5px;
@@ -98,9 +98,9 @@
 }
 
 .MU_result {
-  width: 693px;
+  width: 698px;
   background-color: #333536;
-  padding: 5px;
+  padding: 2px;
   border: solid 1px #837f7f;
 }
 
