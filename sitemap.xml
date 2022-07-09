@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in posts %}
+  <url>
+    <loc>{{ post.permalink | uriencode }}</loc>
+    {% if post.updated %}
+    <lastmod>{{ post.updated | formatDate }}</lastmod>
+    {% elif post.date %}
+    <lastmod>{{ post.date | formatDate }}</lastmod>
+    {% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {% endfor %}
 
-<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
-<url>
-  <loc>https://pheasantzelda.github.io/smashmate_analysys/</loc>
-  <priority>1.0</priority>
-  <lastmod>2022-05-01T10:31:58+09:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://pheasantzelda.github.io/smashmate_analysys/userpolicy.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2022-05-01T10:31:58+09:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://pheasantzelda.github.io/smashmate_analysys/contact.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2022-05-01T10:31:58+09:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
+  <url>
+    <loc>{{ config.url | uriencode }}</loc>
+    <lastmod>{{ sNow | formatDate }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
+  {% for tag in tags %}
+  <url>
+    <loc>{{ tag.permalink | uriencode }}</loc>
+    <lastmod>{{ sNow | formatDate }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  {% endfor %}
+
+  {% for cat in categories %}
+  <url>
+    <loc>{{ cat.permalink | uriencode }}</loc>
+    <lastmod>{{ sNow | formatDate }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  {% endfor %}
 </urlset>
