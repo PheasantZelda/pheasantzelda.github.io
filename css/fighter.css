@@ -18,6 +18,10 @@
   border-radius: 10px;
 }
 
+.fighter_list img:hover{
+  opacity:0.8;
+}
+
 .fighter_list dl {
   width: 125px;
   position:absolute;
