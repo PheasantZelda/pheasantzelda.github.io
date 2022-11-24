@@ -97,7 +97,6 @@
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid white;
 }
 
 .Fighter_TITLE {
@@ -118,12 +117,12 @@
 .Fighter_box {
   display: flex;
   margin-top: 5px;
-  padding-left: 25px;
+  padding-left: 15px;
   font-size: 0;
 }
 
 .Fighter_li {
-  padding-left: 8px;
+  text-align: center;
   margin: 0;
 }
 .Fighter_table img {
@@ -350,7 +349,7 @@
   }
 
   .MU_title {
-    min-height: 50px;
+    min-height: 32px;
     padding: 0px;
     padding-top: 0.5px;
     text-align: center;
@@ -375,7 +374,7 @@
   
   .MU_result img {
     width: 63px;
-    max-width: 10%;
+    max-width: 12%;
   }
 
 
@@ -402,6 +401,10 @@
     padding: 10px 0px;
   }
   
+  .Fighter_box {
+    padding-left: 8px;
+  }
+
   .Fighter_TITLE h2{
     font-size: 60%;
   }
@@ -411,12 +414,11 @@
     margin-top: 10px;
   }
   .Fighter_li {
-    padding-left: 8px;
     margin: 0;
   }
   .Fighter_table img {
     width: 63px;
-    max-width: 7.5%;
+    max-width: 12%;
   }
   
   .center {
@@ -470,7 +472,7 @@
     font-size: 10px;
     padding: 0px 10px;
     font-weight: bold;
-    line-height: 2;
+    line-height: 3;
   }
 
   .color_list {
@@ -482,7 +484,8 @@
   .color_input {
     margin-bottom: 0px;
     height: 30px;
-    width: 20px;    
+    width: 20px; 
+    border-radius: 0px;   
   }
 
 
