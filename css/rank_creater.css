@@ -307,6 +307,10 @@
   flex: 1 1 auto;
 }
 
+.controller {
+  display:none;
+}
+
 
 @media (max-width: 800px) {
 
@@ -394,17 +398,11 @@
     margin-top: 2px;
   }
 
-
-
   .Fighter_Storage {
     max-width: 98%;
     padding: 10px 0px;
   }
   
-  .Fighter_box {
-    padding-left: 8px;
-  }
-
   .Fighter_TITLE h2{
     font-size: 60%;
   }
@@ -412,6 +410,9 @@
   .Fighter_table {
     max-width: 95%;
     margin-top: 10px;
+  }
+    .Fighter_box {
+    margin-right: 15px;
   }
   .Fighter_li {
     margin: 0;
@@ -421,11 +422,18 @@
     max-width: 12%;
   }
   
+  .controller {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
   .center {
     margin-top: 20px;
   }
+
   .Save {
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 50px;
     width: 150px;
     border-radius: 4px;
@@ -433,8 +441,21 @@
   .Reset {
     margin-left: 50px;
     width: 60px;
+    height: 25px;
     font-size: 12px;
     border-radius: 4px;
+  }
+
+  .scroll {
+    width: 90px;
+    height: 18px;
+    font-size: 12px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor:pointer;
+    margin-right: 5px;
+    border: none;
   }
 
   .button_group {
@@ -448,6 +469,7 @@
   .button_container p {
     font-size: 10px;
     padding: 5px 10px;
+    line-height: 2;
   }
 
   .buttons {
