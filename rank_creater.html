@@ -131,7 +131,7 @@
     </div>
     <!-- 画像変換 -->
     <div>
-      <img id="image" name="image" src="" class="IMG">
+      <img id="image" name="image" src=" " class="IMG">
       <a id="download" href="#" download=""></a>
     </div>
     <div class="button_group">
@@ -352,6 +352,10 @@
 
     <!--表はここから-->
     <div class="Fighter_Storage">
+      <div class="controller">
+        <button class="scroll" id="on">Scroll Lock</button>
+        <button class="scroll" id="off">Scroll Unlock</button>
+      </div>
       <div class="Fighter_TITLE">
         <h2>Fighter Storage</h2>
       </div>
@@ -524,6 +528,28 @@
   <!--非表示機能-->
   <script src="./js/canvas.js"></script>
   <script src="./js/backgroundcolor.js"></script>
+  <script>
+    window.onload = function() {
+  // スクロールを禁止にする関数
+  function disableScroll(event) {
+    event.preventDefault();
+  }
+
+  // スクロール禁止
+  document.getElementById('on').onclick = function() {
+    // イベントと関数を紐付け
+    document.addEventListener('touchmove', disableScroll, { passive: false });
+    document.body.classList.add('overflow-hidden');
+  }
+
+  // スクロール解除
+  document.getElementById('off').onclick = function() {
+    // イベントと関数を紐付け
+    document.removeEventListener('touchmove', disableScroll, { passive: false });
+    document.body.classList.remove('overflow-hidden');
+  }
+}
+  </script>
 </body>
 
 </html>
