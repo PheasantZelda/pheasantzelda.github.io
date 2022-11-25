@@ -63,7 +63,6 @@
   margin-right: 5px;
   display: table;
   font-weight: bold;
-  border: solid 1px #837f7f;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -95,18 +94,16 @@
 }
 
 .MU_result {
-  width: 698px;
+  width: 683px;
   background-color: #333536;
-  padding: 2px;
   border: solid 1px #837f7f;
+  font-size: 0;
 }
 
 .MU_result img {
-  margin-top: 0.5px;
-  padding-top: 2px;
-  width: 63px;
-  margin-left: 1px;
-  margin-bottom: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 68px;
 }
 
 .MU_result img:hover{
@@ -220,13 +217,13 @@ td img {
   }
 
   .MU_title {
+    min-height: 32px;
     padding: 0px;
     padding-top: 0.5px;
     text-align: center;
     margin-right: 2px;
-    border: solid 0.5px #eee;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
   }
   
   .MU_table p {
@@ -234,22 +231,21 @@ td img {
     line-height: 1.5;
     display: table-cell;
     vertical-align: middle;
+    font-weight: 800;
   }
   
   .MU_result {
-    width: 693px;
+    width: 683px;
     padding: 0;
     padding-top: 0.5px;
     border: solid 0.5px #837f7f;
   }
+
   
   .MU_result img {
-    padding-top: 1.0%;
-    padding-bottom: 0.4%;
+
     width: 63px;
-    max-width: 7.5%;
-    margin-left: 0.4%;
-    margin-bottom: 0px;
+    max-width: 10%;
   }
 
     /* === ソートボタン ============================== */

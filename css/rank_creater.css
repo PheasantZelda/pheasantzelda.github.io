@@ -358,8 +358,8 @@
     padding-top: 0.5px;
     text-align: center;
     margin-right: 2px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
   }
   
   .MU_table p {
@@ -367,6 +367,7 @@
     line-height: 1.5;
     display: table-cell;
     vertical-align: middle;
+    font-weight: 800;
   }
   
   .MU_result {
@@ -509,7 +510,15 @@
     width: 20px; 
     border-radius: 0px;   
   }
-
+  
+  img {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-touch-callout:none;
+    -moz-user-select:none;
+    touch-callout:none;
+    user-select:none;
+    }
 
 
 }
