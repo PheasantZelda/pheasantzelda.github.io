@@ -222,7 +222,6 @@ td img {
   .MU_title {
     min-height: 30px;
     padding: 0px;
-    padding-top: 0.5px;
     text-align: center;
     margin-right: 2px;
     border-bottom-left-radius: 6px;
@@ -231,7 +230,7 @@ td img {
   
   .MU_table p {
     font-size: 8px;
-    line-height: 1.5;
+    line-height: 1.3;
     display: table-cell;
     vertical-align: middle;
     font-weight: 800;
@@ -240,7 +239,6 @@ td img {
   .MU_result {
     width: 683px;
     padding: 0;
-    padding-top: 0.5px;
     border: solid 0.5px #837f7f;
   }
   
