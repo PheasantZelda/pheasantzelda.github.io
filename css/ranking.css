@@ -57,6 +57,7 @@
 }
 
 .MU_title {
+  min-height: 68px;
   padding: 3px;
   width: 300px;
   text-align: center;
@@ -217,7 +218,7 @@ td img {
   }
 
   .MU_title {
-    min-height: 30px;
+    min-height: 27px;
     padding: 0px;
     text-align: center;
     margin-right: 2px;
@@ -226,8 +227,9 @@ td img {
   }
   
   .MU_table p {
+    padding-top: 2px;
     font-size: 7px;
-    line-height: 1.5;
+    line-height: 1.2;
     display: table-cell;
     vertical-align: middle;
     font-weight: 800;
@@ -240,7 +242,6 @@ td img {
   }
   
   .MU_result img {
-    width: 63px;
     max-width: 10%;
   }
 
