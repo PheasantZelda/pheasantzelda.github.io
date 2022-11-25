@@ -370,7 +370,7 @@
   }
   
   .MU_result {
-    width: 693px;
+    width: 683px;
     padding: 0;
     padding-top: 0.5px;
     border: solid 0.5px #837f7f;
@@ -378,7 +378,7 @@
   
   .MU_result img {
     width: 63px;
-    max-width: 12%;
+    max-width: 12.5%;
   }
 
 
@@ -510,13 +510,6 @@
     border-radius: 0px;   
   }
 
-  img {
-    -webkit-touch-callout:none;
-      -webkit-user-select:none;
-      -moz-touch-callout:none;
-      -moz-user-select:none;
-      touch-callout:none;
-      user-select:none;
-    }
+
 
 }
