@@ -39,25 +39,7 @@
     //初期設定
     $(function () {
       //HTML画像化イベント登録
-      $('#exec_pc').on('click', function () {
-        html2image();
-      });
-    });
-    function html2image(html) {
-      html2canvas(document.querySelector("#canvas-box")).then(canvas => {
-        var base64 = canvas.toDataURL('image/png');
-        //$('#image').attr("src", base64);		//画面に画像表示
-        $('#download').attr('href', base64);
-        $('#download').attr('download', 'Tier-List');
-        $('#download')[0].click();				//自動ダウンロード
-      });
-    }
-  </script>
-  <script language="JavaScript">
-    //初期設定
-    $(function () {
-      //HTML画像化イベント登録
-      $('#exec_phone').on('click', function () {
+      $('#exec').on('click', function () {
         html2image();
       });
     });
@@ -142,13 +124,13 @@
         <br>　※2 端末やブラウザにより画面が崩れてしまうことがあります。その際はお問い合わせページまでご連絡ください。
       </p>
     </div>
-    <div class="center_phone">
-      <button class="Save" type="button" id="exec_phone" name="exec_phone">Save or Download</button>
+    <div class="center">
+      <button class="Save" type="button" id="exec" name="exec">Save or Download</button>
       <button class="Reset" type="button"><a href="./rank_creater.html">Reset</a></button>
     </div>
     <!-- 画像変換 -->
     <div>
-      <img id="image_phone" name="image_phone" src=" " class="IMG">
+      <img id="image" name="image" src=" " class="IMG">
       <a id="download" href="#" download=""></a>
     </div>
     <div class="button_group">
@@ -370,15 +352,6 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="center_pc">
-        <button class="Save" type="button" id="exec_pc" name="exec_pc">Save or Download</button>
-        <button class="Reset" type="button"><a href="./rank_creater.html">Reset</a></button>
-      </div>
-      <!-- 画像変換 -->
-      <div>
-        <img id="image_pc" name="image" src=" " class="IMG">
-        <a id="download_pc" href="#" download=""></a>
       </div>
       <!--表はここから-->
       <div class="Fighter_Storage">
