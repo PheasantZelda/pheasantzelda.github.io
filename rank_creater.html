@@ -39,7 +39,25 @@
     //初期設定
     $(function () {
       //HTML画像化イベント登録
-      $('#exec').on('click', function () {
+      $('#exec_pc').on('click', function () {
+        html2image();
+      });
+    });
+    function html2image(html) {
+      html2canvas(document.querySelector("#canvas-box")).then(canvas => {
+        var base64 = canvas.toDataURL('image/png');
+        //$('#image').attr("src", base64);		//画面に画像表示
+        $('#download').attr('href', base64);
+        $('#download').attr('download', 'Tier-List');
+        $('#download')[0].click();				//自動ダウンロード
+      });
+    }
+  </script>
+  <script language="JavaScript">
+    //初期設定
+    $(function () {
+      //HTML画像化イベント登録
+      $('#exec_phone').on('click', function () {
         html2image();
       });
     });
@@ -98,7 +116,6 @@
             <li><a href="./rank_creater.html">Tier表メーカー</a></li>
             <li><a href="./capability.html">簡易不利相性</a></li>
             <li><a href="./userpolicy.html">利用規約</a></li>
-            <li><a href="./contact.html">お問い合わせ</a></li>
           </ul>
         </nav>
       </div>
@@ -125,13 +142,13 @@
         <br>　※2 端末やブラウザにより画面が崩れてしまうことがあります。その際はお問い合わせページまでご連絡ください。
       </p>
     </div>
-    <div class="center">
-      <button class="Save" type="button" id="exec" name="exec">Save or Download</button>
+    <div class="center_phone">
+      <button class="Save" type="button" id="exec_phone" name="exec_phone">Save or Download</button>
       <button class="Reset" type="button"><a href="./rank_creater.html">Reset</a></button>
     </div>
     <!-- 画像変換 -->
     <div>
-      <img id="image" name="image" src=" " class="IMG">
+      <img id="image_phone" name="image_phone" src=" " class="IMG">
       <a id="download" href="#" download=""></a>
     </div>
     <div class="button_group">
@@ -188,13 +205,13 @@
         </li>
         <li class="color_list">
           <input class="color_input" type="color" value="#ffffff" onChange="setFontColor3(this.value);">
-          <input class="color_input" type="color" data-bg="3" value="#c4e126">
           <input class="color_input" type="color" data-bg="3" value="#39f68f">
+          <input class="color_input" type="color" data-bg="3" value="#c4e126">
         </li>
         <li class="color_list">
           <input class="color_input" type="color" value="#ffffff" onChange="setFontColor4(this.value);">
-          <input class="color_input" type="color" data-bg="4" value="#1cddeb">
           <input class="color_input" type="color" data-bg="4" value="#3782f6">
+          <input class="color_input" type="color" data-bg="4" value="#1cddeb">
         </li>
         <li class="color_list">
           <input class="color_input" type="color" value="#ffffff" onChange="setFontColor5(this.value);">
@@ -266,7 +283,7 @@
           </ul>
           <ul class="MU_box MU_box3">
             <li class="MU_title" data-bg-area="3" id="BTier1"
-              style="background: linear-gradient(270deg, #c4e126, #39f68f)">
+              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
               <p contenteditable='plaintext-only'>B Tier</p>
             </li>
             <li class="MU_result" contenteditable='true'>
@@ -277,7 +294,7 @@
           </ul>
           <ul class="MU_box MU_box4">
             <li class="MU_title" data-bg-area="4" id="CTier1"
-              style="background: linear-gradient(270deg,  #1cddeb, #3782f6)">
+              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
               <p contenteditable='plaintext-only'>C Tier</p>
             </li>
             <li class="MU_result" contenteditable='true'>
@@ -354,7 +371,15 @@
           </ul>
         </div>
       </div>
-
+      <div class="center_pc">
+        <button class="Save" type="button" id="exec_pc" name="exec_pc">Save or Download</button>
+        <button class="Reset" type="button"><a href="./rank_creater.html">Reset</a></button>
+      </div>
+      <!-- 画像変換 -->
+      <div>
+        <img id="image_pc" name="image" src=" " class="IMG">
+        <a id="download_pc" href="#" download=""></a>
+      </div>
       <!--表はここから-->
       <div class="Fighter_Storage">
         <div class="Fighter_TITLE">
@@ -530,7 +555,7 @@
           </ul>
           <ul class="MU_box MU_box3">
             <li class="MU_title" data-bg-area="3" id="BTier1"
-              style="background: linear-gradient(270deg, #c4e126, #39f68f)">
+              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
               <p contenteditable='plaintext-only'>B Tier</p>
             </li>
             <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
@@ -541,7 +566,7 @@
           </ul>
           <ul class="MU_box MU_box4">
             <li class="MU_title" data-bg-area="4" id="CTier1"
-              style="background: linear-gradient(270deg,  #1cddeb, #3782f6)">
+              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
               <p contenteditable='plaintext-only'>C Tier</p>
             </li>
             <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
@@ -872,7 +897,6 @@
         <li><a href="./rank_creater.html">Tier表メーカー</a></li>
         <li><a href="./capability.html">簡易不利相性</a></li>
         <li><a href="./userpolicy.html">利用規約</a></li>
-        <li><a href="./contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
     <a class="footer-logo" href="./index.html">
