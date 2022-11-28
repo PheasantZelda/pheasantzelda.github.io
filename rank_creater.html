@@ -51,6 +51,13 @@
         $('#download').attr('download', 'Tier-List');
         $('#download')[0].click();				//自動ダウンロード
       });
+      html2canvas(document.querySelector("#canvas-box_phone")).then(canvas => {
+        var base64 = canvas.toDataURL('image/png');
+        //$('#image').attr("src", base64);		//画面に画像表示
+        $('#download').attr('href', base64);
+        $('#download').attr('download', 'Tier-List');
+        $('#download')[0].click();				//自動ダウンロード
+      });
     }
   </script>
   <!--画像を移動する-->
@@ -495,7 +502,7 @@
       </div>
     </div>
     <div class="phone_ver">
-      <div class="tierlist" id="canvas-box" name="canvas-box">
+      <div class="tierlist" id="canvas-box_phone" name="canvas-box_phone">
         <div class="MUTITLE">
           <h2 contenteditable='plaintext-only'>TITLE <br> Editable</h2>
           <img src="./img/common/logo.png" alt="SSBU">
