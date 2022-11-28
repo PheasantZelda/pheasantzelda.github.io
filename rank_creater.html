@@ -42,6 +42,9 @@
       $('#exec').on('click', function () {
         html2image();
       });
+      $('#exec_phone').on('click', function () {
+        html2image();
+      });
     });
     function html2image(html) {
       html2canvas(document.querySelector("#canvas-box")).then(canvas => {
@@ -131,15 +134,11 @@
         <br>　※2 端末やブラウザにより画面が崩れてしまうことがあります。その際はお問い合わせページまでご連絡ください。
       </p>
     </div>
-    <div class="center">
-      <button class="Save" type="button" id="exec" name="exec">Save or Download</button>
+    <div class="center_phone">
+      <button class="Save" type="button" id="exec_phone" name="exec_phone">Save or Download</button>
       <button class="Reset" type="button"><a href="./rank_creater.html">Reset</a></button>
     </div>
-    <!-- 画像変換 -->
-    <div>
-      <img id="image" name="image" src=" " class="IMG">
-      <a id="download" href="#" download=""></a>
-    </div>
+
     <div class="button_group">
       <ul class="button_container">
         <li class="button_list">
@@ -359,6 +358,10 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div class="center">
+        <button class="Save" type="button" id="exec" name="exec">Save or Download</button>
+        <button class="Reset" type="button"><a href="./rank_creater.html">Reset</a></button>
       </div>
       <!--表はここから-->
       <div class="Fighter_Storage">
@@ -862,7 +865,11 @@
       </div>
     </div>
 
-
+    <!-- 画像変換 -->
+    <div>
+      <img id="image" name="image" src=" " class="IMG">
+      <a id="download" href="#" download=""></a>
+    </div>
 
   </main>
   <!--mainはここまで-->
