@@ -134,18 +134,12 @@
 .Fighter_table img:hover{
   opacity:0.8;
 }
-
-.center_pc {
+.center {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.center_phone {
-  display: none;
-}
-
 .Save {
   margin-left: 190px;
   width: 100%;
@@ -433,20 +427,13 @@
   }
   
   .controller {
-    display: none;
+    display: block;
     text-align: center;
     padding-bottom: 0px;
   }
   
-  .center_pc {
-    display: none;
-  }
-
-  .center_phone {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .center {
+    margin-top: 20px;
   }
 
   .Save {
