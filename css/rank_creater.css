@@ -415,7 +415,8 @@
     max-width: 95%;
     margin-top: 10px;
   }
-    .Fighter_box {
+
+  .Fighter_box {
     margin-right: 15px;
   }
   .Fighter_li {
@@ -427,7 +428,7 @@
   }
   
   .controller {
-    display: block;
+    display: none;
     text-align: center;
     padding-bottom: 0px;
   }
