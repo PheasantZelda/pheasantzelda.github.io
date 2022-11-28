@@ -524,7 +524,7 @@
     }
 
   .pc_ver {
-    display: block;
+    display: none;
   }
   .phone_ver {
     display:block;
