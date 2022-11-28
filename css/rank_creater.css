@@ -311,6 +311,9 @@
   display:none;
 }
 
+.phone_ver {
+  display: none;
+}
 
 @media (max-width: 800px) {
 
@@ -520,5 +523,11 @@
     user-select:none;
     }
 
+  .pc_ver {
+    display: block;
+  }
+  .phone_ver {
+    display:block;
+  }
 
 }
