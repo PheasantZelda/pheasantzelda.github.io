@@ -138,106 +138,101 @@
       <button class="Save" type="button" id="exec_phone" name="exec_phone">Save or Download</button>
       <button class="Reset" type="button"><a href="./rank_creater.html">Reset</a></button>
     </div>
-
-    <div class="button_group">
-      <ul class="button_container">
-        <li class="button_list">
-          <p>ROW ADD/DELEATE</p>
-        </li>
-        <li class="button_list"><button class="buttons button1" id="STier" data-bg-area="A1"
-            style="background:linear-gradient(90deg, #ff3331, #ff7e21)">S +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button2" id="ATier" data-bg-area="A2"
-            style="background:linear-gradient(90deg, #ffa300, #ede404)">A +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button3" id="BTier" data-bg-area="A3"
-            style="background:linear-gradient(270deg, #c4e126, #39f68f)">B +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button4" id="CTier" data-bg-area="A4"
-            style="background:linear-gradient(270deg,  #1cddeb, #3782f6)">C +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button5" id="DTier" data-bg-area="A5"
-            style="background:linear-gradient(90deg, #4d3eff, #8833ff)">D +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button6" id="ETier" data-bg-area="A6"
-            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">E +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button7" id="FTier" data-bg-area="A7"
-            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">F +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button8" id="GTier" data-bg-area="A8"
-            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">G +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button9" id="HTier" data-bg-area="A9"
-            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">H +/-</button>
-        </li>
-        <li class="button_list"><button class="buttons button10" id="ITier" data-bg-area="A10"
-            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">I +/-</button>
-        </li>
-      </ul>
-    </div>
-    <div class="color_group">
-      <ul class="color_container">
-        <li class="color_list">
-          <p>FONT COLOR<br>BG1 COLOR<br>BG2 COLOR</p>
-        </li>
-        <li class="color_list">
-          <input type="color" class="color_input" value="#ffffff" onChange="setFontColor1(this.value);">
-          <input class="color_input" type="color" data-bg="1" value="#ff3331">
-          <input class="color_input" type="color" data-bg="1" value="#ff7e21">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor2(this.value);">
-          <input class="color_input" type="color" data-bg="2" value="#ffa300">
-          <input class="color_input" type="color" data-bg="2" value="#ede404">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor3(this.value);">
-          <input class="color_input" type="color" data-bg="3" value="#39f68f">
-          <input class="color_input" type="color" data-bg="3" value="#c4e126">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor4(this.value);">
-          <input class="color_input" type="color" data-bg="4" value="#3782f6">
-          <input class="color_input" type="color" data-bg="4" value="#1cddeb">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor5(this.value);">
-          <input class="color_input" type="color" data-bg="5" value="#4d3eff">
-          <input class="color_input" type="color" data-bg="5" value="#8833ff">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor6(this.value);">
-          <input class="color_input" type="color" data-bg="6" value="#3d3c3c">
-          <input class="color_input" type="color" data-bg="6" value="#6b696e">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor7(this.value);">
-          <input class="color_input" type="color" data-bg="7" value="#3d3c3c">
-          <input class="color_input" type="color" data-bg="7" value="#6b696e">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor8(this.value);">
-          <input class="color_input" type="color" data-bg="8" value="#3d3c3c">
-          <input class="color_input" type="color" data-bg="8" value="#6b696e">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor9(this.value);">
-          <input class="color_input" type="color" data-bg="9" value="#3d3c3c">
-          <input class="color_input" type="color" data-bg="9" value="#6b696e">
-        </li>
-        <li class="color_list">
-          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor10(this.value);">
-          <input class="color_input" type="color" data-bg="10" value="#3d3c3c">
-          <input class="color_input" type="color" data-bg="10" value="#6b696e">
-        </li>
-      </ul>
-    </div>
-    <div class="controller">
-      <button class="scroll" id="on">Scroll Lock</button>
-      <button class="scroll" id="off">Scroll Unlock</button>
-    </div>
     <div class="pc_ver">
+      <div class="button_group">
+        <ul class="button_container">
+          <li class="button_list">
+            <p>ROW ADD/DELEATE</p>
+          </li>
+          <li class="button_list"><button class="buttons button1" id="STier" data-bg-area="A1"
+              style="background:linear-gradient(90deg, #ff3331, #ff7e21)">S +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button2" id="ATier" data-bg-area="A2"
+              style="background:linear-gradient(90deg, #ffa300, #ede404)">A +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button3" id="BTier" data-bg-area="A3"
+              style="background:linear-gradient(270deg, #c4e126, #39f68f)">B +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button4" id="CTier" data-bg-area="A4"
+              style="background:linear-gradient(270deg,  #1cddeb, #3782f6)">C +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button5" id="DTier" data-bg-area="A5"
+              style="background:linear-gradient(90deg, #4d3eff, #8833ff)">D +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button6" id="ETier" data-bg-area="A6"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">E +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button7" id="FTier" data-bg-area="A7"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">F +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button8" id="GTier" data-bg-area="A8"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">G +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button9" id="HTier" data-bg-area="A9"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">H +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button10" id="ITier" data-bg-area="A10"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">I +/-</button>
+          </li>
+        </ul>
+      </div>
+      <div class="color_group">
+        <ul class="color_container">
+          <li class="color_list">
+            <p>FONT COLOR<br>BG1 COLOR<br>BG2 COLOR</p>
+          </li>
+          <li class="color_list">
+            <input type="color" class="color_input" value="#ffffff" onChange="setFontColor1(this.value);">
+            <input class="color_input" type="color" data-bg="1" value="#ff3331">
+            <input class="color_input" type="color" data-bg="1" value="#ff7e21">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor2(this.value);">
+            <input class="color_input" type="color" data-bg="2" value="#ffa300">
+            <input class="color_input" type="color" data-bg="2" value="#ede404">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor3(this.value);">
+            <input class="color_input" type="color" data-bg="3" value="#39f68f">
+            <input class="color_input" type="color" data-bg="3" value="#c4e126">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor4(this.value);">
+            <input class="color_input" type="color" data-bg="4" value="#3782f6">
+            <input class="color_input" type="color" data-bg="4" value="#1cddeb">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor5(this.value);">
+            <input class="color_input" type="color" data-bg="5" value="#4d3eff">
+            <input class="color_input" type="color" data-bg="5" value="#8833ff">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor6(this.value);">
+            <input class="color_input" type="color" data-bg="6" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="6" value="#6b696e">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor7(this.value);">
+            <input class="color_input" type="color" data-bg="7" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="7" value="#6b696e">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor8(this.value);">
+            <input class="color_input" type="color" data-bg="8" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="8" value="#6b696e">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor9(this.value);">
+            <input class="color_input" type="color" data-bg="9" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="9" value="#6b696e">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor10(this.value);">
+            <input class="color_input" type="color" data-bg="10" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="10" value="#6b696e">
+          </li>
+        </ul>
+      </div>
       <div class="tierlist" id="canvas-box" name="canvas-box">
         <div class="MUTITLE">
           <h2 contenteditable='plaintext-only'>TITLE <br> Editable</h2>
@@ -505,6 +500,105 @@
       </div>
     </div>
     <div class="phone_ver">
+      <div class="button_group">
+        <ul class="button_container">
+          <li class="button_list">
+            <p>ROW ADD/DELEATE</p>
+          </li>
+          <li class="button_list"><button class="buttons button11" id="STier_phone" data-bg-area="A11"
+              style="background:linear-gradient(90deg, #ff3331, #ff7e21)">S +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button12" id="ATier_phone" data-bg-area="A12"
+              style="background:linear-gradient(90deg, #ffa300, #ede404)">A +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button13" id="BTier_phone" data-bg-area="A13"
+              style="background:linear-gradient(270deg, #c4e126, #39f68f)">B +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button14" id="CTier_phone" data-bg-area="A14"
+              style="background:linear-gradient(270deg,  #1cddeb, #3782f6)">C +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button15" id="DTier_phone" data-bg-area="A15"
+              style="background:linear-gradient(90deg, #4d3eff, #8833ff)">D +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button16" id="ETier_phone" data-bg-area="A16"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">E +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button17" id="FTier_phone" data-bg-area="A17"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">F +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button18" id="GTier_phone" data-bg-area="A18"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">G +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button19" id="HTier_phone" data-bg-area="A19"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">H +/-</button>
+          </li>
+          <li class="button_list"><button class="buttons button20" id="ITier_phone" data-bg-area="A20"
+              style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">I +/-</button>
+          </li>
+        </ul>
+      </div>
+      <div class="color_group">
+        <ul class="color_container">
+          <li class="color_list">
+            <p>FONT COLOR<br>BG1 COLOR<br>BG2 COLOR</p>
+          </li>
+          <li class="color_list">
+            <input type="color" class="color_input" value="#ffffff" onChange="setFontColor11(this.value);">
+            <input class="color_input" type="color" data-bg="11" value="#ff3331">
+            <input class="color_input" type="color" data-bg="11" value="#ff7e21">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor12(this.value);">
+            <input class="color_input" type="color" data-bg="12" value="#ffa300">
+            <input class="color_input" type="color" data-bg="12" value="#ede404">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor13(this.value);">
+            <input class="color_input" type="color" data-bg="13" value="#39f68f">
+            <input class="color_input" type="color" data-bg="13" value="#c4e126">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor14(this.value);">
+            <input class="color_input" type="color" data-bg="14" value="#3782f6">
+            <input class="color_input" type="color" data-bg="14" value="#1cddeb">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor15(this.value);">
+            <input class="color_input" type="color" data-bg="15" value="#4d3eff">
+            <input class="color_input" type="color" data-bg="15" value="#8833ff">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor16(this.value);">
+            <input class="color_input" type="color" data-bg="16" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="16" value="#6b696e">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor17(this.value);">
+            <input class="color_input" type="color" data-bg="17" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="17" value="#6b696e">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor18(this.value);">
+            <input class="color_input" type="color" data-bg="18" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="18" value="#6b696e">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor19(this.value);">
+            <input class="color_input" type="color" data-bg="19" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="19" value="#6b696e">
+          </li>
+          <li class="color_list">
+            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor20(this.value);">
+            <input class="color_input" type="color" data-bg="20" value="#3d3c3c">
+            <input class="color_input" type="color" data-bg="20" value="#6b696e">
+          </li>
+        </ul>
+      </div>
+      <div class="controller">
+        <button class="scroll" id="on">Scroll Lock</button>
+        <button class="scroll" id="off">Scroll Unlock</button>
+      </div>
+
       <div class="tierlist" id="canvas-box_phone" name="canvas-box_phone">
         <div class="MUTITLE">
           <h2 contenteditable='plaintext-only'>TITLE <br> Editable</h2>
@@ -512,8 +606,8 @@
         </div>
 
         <div class="MU_table">
-          <ul class="MU_box MU_box1">
-            <li class="MU_title" data-bg-area="1" id="STier1"
+          <ul class="MU_box MU_box11">
+            <li class="MU_title" data-bg-area="11" id="STier1_phone"
               style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
               <p contenteditable='plaintext-only'>S Tier <br> Editable</p>
             </li>
@@ -523,10 +617,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-
-
-          <ul class="MU_box MU_box2">
-            <li class="MU_title" data-bg-area="2" id="ATier1"
+          <ul class="MU_box MU_box12">
+            <li class="MU_title" data-bg-area="12" id="ATier1_phone"
               style="background: linear-gradient(90deg, #ffa300, #ede404)">
               <p contenteditable='plaintext-only'>A Tier</p>
             </li>
@@ -536,8 +628,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-          <ul class="MU_box MU_box3">
-            <li class="MU_title" data-bg-area="3" id="BTier1"
+          <ul class="MU_box MU_box13">
+            <li class="MU_title" data-bg-area="13" id="BTier1_phone"
               style="background: linear-gradient(90deg, #39f68f, #c4e126)">
               <p contenteditable='plaintext-only'>B Tier</p>
             </li>
@@ -547,8 +639,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-          <ul class="MU_box MU_box4">
-            <li class="MU_title" data-bg-area="4" id="CTier1"
+          <ul class="MU_box MU_box14">
+            <li class="MU_title" data-bg-area="14" id="CTier1_phone"
               style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
               <p contenteditable='plaintext-only'>C Tier</p>
             </li>
@@ -558,8 +650,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-          <ul class="MU_box MU_box5">
-            <li class="MU_title" data-bg-area="5" id="DTier1"
+          <ul class="MU_box MU_box15">
+            <li class="MU_title" data-bg-area="15" id="DTier1_phone"
               style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
               <p contenteditable='plaintext-only'>D Tier</p>
             </li>
@@ -569,8 +661,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-          <ul class="MU_box MU_box6">
-            <li class="MU_title" data-bg-area="6" id="ETier1"
+          <ul class="MU_box MU_box16">
+            <li class="MU_title" data-bg-area="16" id="ETier1_phone"
               style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
               <p contenteditable='plaintext-only'>E Tier</p>
             </li>
@@ -580,8 +672,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-          <ul class="MU_boxx MU_box7">
-            <li class="MU_title" data-bg-area="7" id="FTier1"
+          <ul class="MU_boxx MU_box17">
+            <li class="MU_title" data-bg-area="17" id="FTier1_phone"
               style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
               <p contenteditable='plaintext-only'>F Tier</p>
             </li>
@@ -591,8 +683,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-          <ul class="MU_boxx MU_box8">
-            <li class="MU_title" data-bg-area="8" id="GTier1"
+          <ul class="MU_boxx MU_box18">
+            <li class="MU_title" data-bg-area="18" id="GTier1_phone"
               style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
               <p contenteditable='plaintext-only'>G Tier</p>
             </li>
@@ -602,8 +694,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-          <ul class="MU_boxx MU_box9">
-            <li class="MU_title" data-bg-area="9" id="HTier1"
+          <ul class="MU_boxx MU_box19">
+            <li class="MU_title" data-bg-area="19" id="HTier1_phone"
               style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
               <p contenteditable='plaintext-only'>H Tier</p>
             </li>
@@ -613,8 +705,8 @@
               <!--ここまでデータ挿入-->
             </li>
           </ul>
-          <ul class="MU_boxx MU_box10">
-            <li class="MU_title" data-bg-area="10" id="ITier1"
+          <ul class="MU_boxx MU_box20">
+            <li class="MU_title" data-bg-area="20" id="ITier1_phone"
               style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
               <p contenteditable='plaintext-only'>I Tier</p>
             </li>
