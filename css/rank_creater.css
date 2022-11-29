@@ -330,6 +330,15 @@
 .phone_ver {
   display: none;
 }
+  
+img {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-touch-callout:none;
+  -moz-user-select:none;
+  touch-callout:none;
+  user-select:none;
+  }
 
 @media (max-width: 800px) {
 
@@ -538,15 +547,6 @@
     width: 20px; 
     border-radius: 0px;   
   }
-  
-  img {
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    -moz-touch-callout:none;
-    -moz-user-select:none;
-    touch-callout:none;
-    user-select:none;
-    }
 
   .pc_ver {
     display: none;
