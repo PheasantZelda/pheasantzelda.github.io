@@ -51,14 +51,14 @@
         var base64 = canvas.toDataURL('image/png');
         //$('#image').attr("src", base64);		//画面に画像表示
         $('#download').attr('href', base64);
-        $('#download').attr('download', 'Tier-List');
+        $('#download').attr('download', 'TIER-LIST');
         $('#download')[0].click();				//自動ダウンロード
       });
       html2canvas(document.querySelector("#canvas-box_phone")).then(canvas => {
         var base64 = canvas.toDataURL('image/png');
         //$('#image').attr("src", base64);		//画面に画像表示
         $('#download').attr('href', base64);
-        $('#download').attr('download', 'Tier-List');
+        $('#download').attr('download', 'TIER-LIST');
         $('#download')[0].click();				//自動ダウンロード
       });
     }
@@ -130,8 +130,11 @@
         また、フォントと背景を上部のカラーバーからカスタマイズすることができます。
         作成した画像は上部のSAVEボタンからダウンロード可能です。
         リセットボタンを押すと一度作成したものを初期化することができます。
+        スマホの場合は少し長めにファイタ画面を押していただいてドラッグ＆ドロップで移動できます。
+
         <br>　※1 BG : Background (背景)
         <br>　※2 端末やブラウザにより画面が崩れてしまうことがあります。その際はお問い合わせページまでご連絡ください。
+        <br>　※3 動作確認ブラウザ：Chrome, Safari, Microsoft Edge, Fire Fox
       </p>
     </div>
     <div class="center_phone">
@@ -144,34 +147,34 @@
           <li class="button_list">
             <p>ROW ADD/DELEATE</p>
           </li>
-          <li class="button_list"><button class="buttons button1" id="STier" data-bg-area="A1"
+          <li class="button_list"><button class="buttons button1 clickon" id="STier" data-bg-area="A1"
               style="background:linear-gradient(90deg, #ff3331, #ff7e21)">S +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button2" id="ATier" data-bg-area="A2"
+          <li class="button_list"><button class="buttons button2 clickon" id="ATier" data-bg-area="A2"
               style="background:linear-gradient(90deg, #ffa300, #ede404)">A +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button3" id="BTier" data-bg-area="A3"
-              style="background:linear-gradient(270deg, #c4e126, #39f68f)">B +/-</button>
+          <li class="button_list"><button class="buttons button3 clickon" id="BTier" data-bg-area="A3"
+              style="background:linear-gradient(90deg, #39f68f, #c4e126)">B +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button4" id="CTier" data-bg-area="A4"
-              style="background:linear-gradient(270deg,  #1cddeb, #3782f6)">C +/-</button>
+          <li class="button_list"><button class="buttons button4 clickon" id="CTier" data-bg-area="A4"
+              style="background:linear-gradient(90deg, #3782f6, #1cddeb)">C +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button5" id="DTier" data-bg-area="A5"
+          <li class="button_list"><button class="buttons button5 clickon" id="DTier" data-bg-area="A5"
               style="background:linear-gradient(90deg, #4d3eff, #8833ff)">D +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button6" id="ETier" data-bg-area="A6"
+          <li class="button_list"><button class="buttons button6 clickon" id="ETier" data-bg-area="A6"
               style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">E +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button7" id="FTier" data-bg-area="A7"
+          <li class="button_list"><button class="buttons button7 clickoff" id="FTier" data-bg-area="A7"
               style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">F +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button8" id="GTier" data-bg-area="A8"
+          <li class="button_list"><button class="buttons button8 clickoff" id="GTier" data-bg-area="A8"
               style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">G +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button9" id="HTier" data-bg-area="A9"
+          <li class="button_list"><button class="buttons button9 clickoff" id="HTier" data-bg-area="A9"
               style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">H +/-</button>
           </li>
-          <li class="button_list"><button class="buttons button10" id="ITier" data-bg-area="A10"
+          <li class="button_list"><button class="buttons button10 clickoff" id="ITier" data-bg-area="A10"
               style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">I +/-</button>
           </li>
         </ul>
@@ -243,7 +246,7 @@
           <ul class="MU_box MU_box1">
             <li class="MU_title" data-bg-area="1" id="STier1"
               style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
-              <p contenteditable='plaintext-only'>S Tier <br> Editable</p>
+              <p contenteditable='plaintext-only'>S Tier ✎<br> Editable</p>
             </li>
             <li class="MU_result" contenteditable='true'>
               <!--ここからデータ挿入-->
@@ -512,10 +515,10 @@
               style="background:linear-gradient(90deg, #ffa300, #ede404)">A +/-</button>
           </li>
           <li class="button_list"><button class="buttons button13" id="BTier_phone" data-bg-area="A13"
-              style="background:linear-gradient(270deg, #c4e126, #39f68f)">B +/-</button>
+              style="background:linear-gradient(90deg, #39f68f, #c4e126)">B +/-</button>
           </li>
           <li class="button_list"><button class="buttons button14" id="CTier_phone" data-bg-area="A14"
-              style="background:linear-gradient(270deg,  #1cddeb, #3782f6)">C +/-</button>
+              style="background:linear-gradient(90deg, #3782f6, #1cddeb)">C +/-</button>
           </li>
           <li class="button_list"><button class="buttons button15" id="DTier_phone" data-bg-area="A15"
               style="background:linear-gradient(90deg, #4d3eff, #8833ff)">D +/-</button>
@@ -1013,6 +1016,29 @@
         document.body.classList.remove('overflow-hidden');
       }
     }
+  </script>
+  <!--ボタンのon/offデザイン-->
+  <script>
+    const btnElem1 = document.querySelectorAll('.clickon');
+
+    const initBtnTrigger1 = function () {
+      for (let i = 0; i < btnElem1.length; i++) {
+        btnElem1[i].addEventListener('click', function () {
+          this.classList.toggle('is-btnActive');
+        });
+      }
+    };
+    initBtnTrigger1();
+    const btnElem2 = document.querySelectorAll('.clickoff');
+
+    const initBtnTrigger2 = function () {
+      for (let i = 0; i < btnElem2.length; i++) {
+        btnElem2[i].addEventListener('click', function () {
+          this.classList.toggle('is-btnActive');
+        });
+      }
+    };
+    initBtnTrigger2();
   </script>
 </body>
 
