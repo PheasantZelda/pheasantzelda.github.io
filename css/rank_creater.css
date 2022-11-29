@@ -223,6 +223,15 @@
   opacity:0.8;
 }
 
+.clickoff {
+  opacity: 0.5;
+}
+.clickon.is-btnActive {
+  opacity:0.5;
+}
+.clickoff.is-btnActive {
+  opacity:1.0;
+}
 .color_group {
   display: flex;
   justify-content: center;
