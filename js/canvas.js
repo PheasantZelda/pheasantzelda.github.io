@@ -48,4 +48,55 @@ var $button10 = document.querySelector('.button10')
 $button10.addEventListener('click', function () {
   $target10.classList.toggle('is-hidden')
 })
+//phone ver
+var $target11 = document.querySelector('.MU_box11')
+var $button11 = document.querySelector('.button11')
+$button11.addEventListener('click', function () {
+  $target11.classList.toggle('is-hidden')
+})
+var $target12 = document.querySelector('.MU_box12')
+var $button12 = document.querySelector('.button12')
+$button12.addEventListener('click', function () {
+  $target12.classList.toggle('is-hidden')
+})
+var $target13 = document.querySelector('.MU_box13')
+var $button13 = document.querySelector('.button13')
+$button13.addEventListener('click', function () {
+  $target13.classList.toggle('is-hidden')
+})
+var $target14 = document.querySelector('.MU_box14')
+var $button14 = document.querySelector('.button14')
+$button14.addEventListener('click', function () {
+  $target14.classList.toggle('is-hidden')
+})
+var $target15 = document.querySelector('.MU_box15')
+var $button15 = document.querySelector('.button15')
+$button15.addEventListener('click', function () {
+  $target15.classList.toggle('is-hidden')
+})
+var $target16 = document.querySelector('.MU_box16')
+var $button16 = document.querySelector('.button16')
+$button16.addEventListener('click', function () {
+  $target16.classList.toggle('is-hidden')
+})
+var $target17 = document.querySelector('.MU_box17')
+var $button17 = document.querySelector('.button17')
+$button17.addEventListener('click', function () {
+  $target17.classList.toggle('is-hidden')
+})
+var $target18 = document.querySelector('.MU_box18')
+var $button18 = document.querySelector('.button18')
+$button18.addEventListener('click', function () {
+  $target18.classList.toggle('is-hidden')
+})
+var $target19 = document.querySelector('.MU_box19')
+var $button19 = document.querySelector('.button19')
+$button19.addEventListener('click', function () {
+  $target19.classList.toggle('is-hidden')
+})
+var $target20 = document.querySelector('.MU_box20')
+var $button20 = document.querySelector('.button20')
+$button20.addEventListener('click', function () {
+  $target20.classList.toggle('is-hidden')
+})
 

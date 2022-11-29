@@ -30,14 +30,19 @@ function setFontColor1(e) {
   document.getElementById('STier1').style.color = e;
 }
 
-function setFontColor2(e) {
-  document.getElementById('STier').style.color = e;
-  document.getElementById('STier1').style.color = e;
+function setBGcolor1(e) {
+  document.getElementById('STier').style.backgroundColor = e;
+  document.getElementById('STier1').style.backgroundColor = e;
 }
 
-function setFontColor3(e) {
+function setFontColor2(e) {
   document.getElementById('ATier').style.color = e;
   document.getElementById('ATier1').style.color = e;
+}
+
+function setBGcolor2(e) {
+  document.getElementById('ATier').style.backgroundColor = e;
+  document.getElementById('ATier1').style.backgroundColor = e;
 }
 
 function setFontColor3(e) {
@@ -45,14 +50,29 @@ function setFontColor3(e) {
   document.getElementById('BTier1').style.color = e;
 }
 
+function setBGcolor3(e) {
+  document.getElementById('BTier').style.backgroundColor = e;
+  document.getElementById('BTier1').style.backgroundColor = e;
+}
+
 function setFontColor4(e) {
   document.getElementById('CTier').style.color = e;
   document.getElementById('CTier1').style.color = e;
 }
 
+function setBGcolor4(e) {
+  document.getElementById('CTier').style.backgroundColor = e;
+  document.getElementById('CTier1').style.backgroundColor = e;
+}
+
 function setFontColor5(e) {
   document.getElementById('DTier').style.color = e;
   document.getElementById('DTier1').style.color = e;
+}
+
+function setBGcolor5(e) {
+  document.getElementById('DTier').style.backgroundColor = e;
+  document.getElementById('DTier1').style.backgroundColor = e;
 }
 
 function setFontColor6(e) {
@@ -98,4 +118,100 @@ function setFontColor10(e) {
 function setBGcolor10(e) {
   document.getElementById('ITier').style.backgroundColor = e;
   document.getElementById('ITier1').style.backgroundColor = e;
+}
+
+//phone ver
+function setFontColor11(e) {
+  document.getElementById('STier_phone').style.color = e;
+  document.getElementById('STier1_phone').style.color = e;
+}
+
+function setBGcolor11(e) {
+  document.getElementById('STier_phone').style.backgroundColor = e;
+  document.getElementById('STier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor12(e) {
+  document.getElementById('ATier_phone').style.color = e;
+  document.getElementById('ATier1_phone').style.color = e;
+}
+
+function setBGcolor12(e) {
+  document.getElementById('ATier_phone').style.backgroundColor = e;
+  document.getElementById('ATier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor13(e) {
+  document.getElementById('BTier_phone').style.color = e;
+  document.getElementById('BTier1_phone').style.color = e;
+}
+
+function setBGcolor13(e) {
+  document.getElementById('BTier_phone').style.backgroundColor = e;
+  document.getElementById('BTier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor14(e) {
+  document.getElementById('CTier_phone').style.color = e;
+  document.getElementById('CTier1_phone').style.color = e;
+}
+
+function setBGcolor14(e) {
+  document.getElementById('CTier_phone').style.backgroundColor = e;
+  document.getElementById('CTier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor15(e) {
+  document.getElementById('DTier_phone').style.color = e;
+  document.getElementById('DTier1_phone').style.color = e;
+}
+
+function setBGcolor15(e) {
+  document.getElementById('DTier_phone').style.backgroundColor = e;
+  document.getElementById('DTier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor16(e) {
+  document.getElementById('ETier_phone').style.color = e;
+  document.getElementById('ETier1_phone').style.color = e;
+}
+function setBGcolor16(e) {
+  document.getElementById('ETier_phone').style.backgroundColor = e;
+  document.getElementById('ETier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor17(e) {
+  document.getElementById('FTier_phone').style.color = e;
+  document.getElementById('FTier1_phone').style.color = e;
+}
+function setBGcolor17(e) {
+  document.getElementById('FTier_phone').style.backgroundColor = e;
+  document.getElementById('FTier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor18(e) {
+  document.getElementById('GTier_phone').style.color = e;
+  document.getElementById('GTier1_phone').style.color = e;
+}
+function setBGcolor18(e) {
+  document.getElementById('GTier_phone').style.backgroundColor = e;
+  document.getElementById('GTier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor19(e) {
+  document.getElementById('HTier_phone').style.color = e;
+  document.getElementById('HTier1_phone').style.color = e;
+}
+function setBGcolor19(e) {
+  document.getElementById('HTier_phone').style.backgroundColor = e;
+  document.getElementById('HTier1_phone').style.backgroundColor = e;
+}
+
+function setFontColor20(e) {
+  document.getElementById('ITier_phone').style.color = e;
+  document.getElementById('ITier1_phone').style.color = e;
+}
+function setBGcolor20(e) {
+  document.getElementById('ITier_phone').style.backgroundColor = e;
+  document.getElementById('ITier1_phone').style.backgroundColor = e;
 }
