@@ -221,6 +221,7 @@
 
 .buttons:hover{
   opacity:0.8;
+  transform: scale(0.9);
 }
 
 .clickoff {
@@ -340,7 +341,7 @@ img {
   user-select:none;
   }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
 
   .tierlist {
     max-width: 98%;
