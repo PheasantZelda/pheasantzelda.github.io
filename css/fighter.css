@@ -42,7 +42,7 @@
   margin-top: 100px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
   .fighter_list {
     margin-top: 45px;
     row-gap: 40px;

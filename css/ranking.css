@@ -139,6 +139,18 @@
   font-size: 0%;
 }
 
+.example {
+  margin-top: 20px;
+}
+.example table{
+  border-collapse:separate;
+  margin: 0;
+  border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 table {
   width: 600px;
   margin-top: 20px;
@@ -151,7 +163,6 @@ table {
 th, td {
   padding: 5px 2px;
   border: solid 1px white;
-  border-radius: 5px;
 }
 
 th {
@@ -159,6 +170,9 @@ th {
   color: white;
   font-size: 18px;
   line-height: 1.5;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 td {
@@ -177,7 +191,7 @@ td img {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
 
   .tierlist {
     max-width: 98%;

@@ -40,7 +40,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  font-size: 15px;
 }
 
 .toggle-menu-button {
@@ -200,7 +200,7 @@ img {
   margin-top: 20px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
   .site-menu ul {
     display: block;
     text-align: center;

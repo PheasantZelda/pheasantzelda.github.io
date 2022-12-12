@@ -163,6 +163,9 @@ th {
   color: white;
   font-size: 18px;
   line-height: 1.5;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 td {
@@ -180,7 +183,7 @@ td img {
   margin-top: 50px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
 
   .tierlist {
     max-width: 98%;

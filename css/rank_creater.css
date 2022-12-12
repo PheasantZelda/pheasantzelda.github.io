@@ -341,7 +341,7 @@ img {
   user-select:none;
   }
 
-@media (max-width: 830px) {
+@media (max-width: 840px) {
 
   .tierlist {
     max-width: 98%;
