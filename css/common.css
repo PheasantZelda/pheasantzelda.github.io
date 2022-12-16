@@ -30,6 +30,15 @@ img {
   max-width: 100%;
 }
 
+/* header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+} */
+
 .header-inner {
   max-width: 1200px;
   height: 110px;
@@ -66,8 +75,14 @@ img {
   font-weight: bold;
 }
 
+.site-menu ul li :hover {
+  transform: scale(0.95);
+  color: #e7412b;
+}
+
 /*Body関係*/
 .title {
+  /* margin-top: 100px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,6 +213,7 @@ img {
   font-size: 14px;
   font-weight: bold;
   margin-top: 20px;
+  text-align: center;
 }
 
 @media (max-width: 840px) {
