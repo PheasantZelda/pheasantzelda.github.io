@@ -7,20 +7,19 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-6GR32CWGN7');
 
 </script>
-</script>
 
 <head>
   <!--google adsense-->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <meta charset="UTF-8">
-  <title>SSBU SMASHMATE-ANALYSYS</title>
+  <title>スマアナ SMASHMATE-ANALYSYS</title>
   <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
   <meta name="discription" content="トップページ">
   <!--スマホ用の画面設定-->
@@ -51,9 +50,10 @@
             <li><a href="./fighter.html">ファイタ一覧</a></li>
             <li><a href="./ranking.html">キャラランク</a></li>
             <li><a href="./statstics.html">統計データ</a></li>
-            <li><a href="./capability.html">簡易不利相性</a></li>            
+            <li><a href="./capability.html">簡易不利相性</a></li>
+            <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+            <li><a href="./fighter_pick.html">キャラ使用率</a></li>
             <li><a href="./userpolicy.html">利用規約</a></li>
-            <li><a href="./contact.html">お問い合わせ</a></li>
           </ul>
         </nav>
       </div>
@@ -68,29 +68,102 @@
       <h1>トップページ</h1>
       <p>TOP-PAGE</p>
     </div>
-    <div class="section">はじめに</div>
+    <div class="section">「スマアナ」とは．．．</div>
     <div class="explain">
-      <p>　このサイトは、スマブラSPオンライン対戦サイト
-        「<a href="https://smashmate.net/">スマメイト*</a>」の対戦結果を元にファイタ毎の勝率やキャラランクをまとめています。
+      <p>　スマアナとは、スマブラSPオンライン対戦サイト
+        「<a href="https://smashmate.net/">スマメイト*</a>」の対戦結果を元にファイタ毎の勝率からキャラランクや統計データを掲載しているサイトになります。
         スマブラSPは他にも多くの方がキャラランクや相性表を作成しておりますが、当サイトはオンライン対戦の結果を勝敗数から定量的にまとめることを主眼に置いております。
         扱っているデータについては皆様にも数値として見ていただけるように詳細の結果も掲載していますので、ぜひご覧ください。
-        扱っているデータは、22 年 9 月 時点で 15-20 期 (サブ期も含む) の結果、およそ 290 万対戦の結果をまとめています。各期が終わり次第更新していこうと考えておりますので、各期を終えた際は随時ご確認ください。
-        <br>　*スマメイトとは・・・<a href="https://twitter.com/@noticoco">のちょう様</a>が運営されているオンライン上で気軽にスマブラ対戦募集やレーティング、大会開催ができるWrbサイト。
+        これまで集計したデータは、22 年 12 月 時点で 15-21 期 (サブ期も含む) の結果、およそ 370 万対戦の結果をまとめています。
+        各期が終わり次第更新していこうと考えておりますので、各期を終えた際は随時ご確認ください。
+        <br>　*スマメイトとは・・・<a
+          href="https://twitter.com/@noticoco">のちょう様</a>が運営されているオンライン上で気軽にスマブラ対戦募集やレーティング、大会開催ができるWrbサイト。
       </p>
     </div>
     <div class="section">本サイト概要</div>
     <div class="explain">
-      <p>　本サイトでは下記のことを確認することができます。<br>
-      <ul>
-        <li><a href="./fighter.html">ファイタ統計データ</a></li>
-        <li><a href="./statstics.html">全体の統計データ</a></li>
-        <li><a href="./fighter.html">ファイタMU表</a></li>
-        <li><a href="./fighter.html">サブ適正表</a></li>
-        <li><a href="./ranking.html">キャラランク</a></li>
-        <li><a href="./capability.html">簡易不利相性</a></li> 
-      </ul>
+      <p>　本サイトでは下記の項目を掲載しています。</p>
+    </div>
+    <div class="service__body">
+      <div class="service-list">
+        <a class="link" href="./fighter.html">
+          <div class="service-list__item fighter">
+            <div class="service-list__body">
+              <img src="./img/common/personel.png" alt="ファイタの画像">
+              <div class="service-list__title">Fighter<br>ファイタ統計</div>
+              <div class="service-list__text">
+                <p>ファイタ毎の戦績やMatch UP サブ適表を掲載</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="link" href="./ranking.html">
+          <div class="service-list__item">
+            <div class="service-list__body">
+              <img src="./img/common/trophy.png" alt="ファイタの画像">
+              <div class="service-list__title">Ranking<br>キャラランク</div>
+              <div class="service-list__text">
+                <p>スマメイトの戦績から算出したキャラランクを掲載</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="link" href="./statstics.html">
+          <div class="service-list__item">
+            <div class="service-list__body">
+              <img src="./img/common/graph.png" alt="ファイタの画像">
+              <div class="service-list__title">Analsys<br>全体統計</div>
+              <div class="service-list__text">
+                <p>ファイタ全体の統計データをグラフ化 戦績を掲載</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="link" href="./capability.html">
+          <div class="service-list__item">
+            <div class="service-list__body">
+              <img src="./img/common/ranking.png" alt="ファイタの画像">
+              <div class="service-list__title">Simply MU<br>簡易不利相性</div>
+              <div class="service-list__text">
+                <p>ファイタ毎の不利相性のTOP3を掲載</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="link" href="./rank_creater.html">
+
+          <div class="service-list__item">
+            <div class="service-list__body">
+              <img src="./img/common/tier1.png" alt="ファイタの画像">
+              <div class="service-list__title">　　Tier Maker<p class="new">　new!</p><br>Tier表メーカー</div>
+              <div class="service-list__text">
+                <p>自分でキャラランクやMU表を作成可能</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="link" href="./fighter_pick.html">
+          <div class="service-list__item">
+            <div class="service-list__body">
+              <img src="./img/common/fighter_pick.png" alt="ファイタの画像">
+              <div class="service-list__title">　Pick up Fighter<p class="new">　new!</p><br>キャラ使用率</div>
+              <div class="service-list__text">
+                <p>各期毎のファイタの使用率を順位をつけて掲載</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="section">お問い合わせ</div>
+    <div class="explain">
+      <p>　当サイトのお問い合わせについては、サイト専用<a href="https://twitter.com/PheasantSmash">Twitter DM</a>、あるいは管理人の<a
+          href="https://twitter.com/pheasan95712838">Twitter DM</a>からお願いいたします。
+        サイトの可読性や掲載してほしい情報などありましたら、今後の運営への参考にさせていただきますので、ぜひご連絡ください。
       </p>
     </div>
+
     <div class="section">管理人</div>
     <div class="explain">
       <p>　このサイトを運営しております「Pheasant/フェザント」と申します。
@@ -135,9 +208,10 @@
         <li><a href="./fighter.html">ファイタ一覧</a></li>
         <li><a href="./ranking.html">キャラランク</a></li>
         <li><a href="./statstics.html">統計データ</a></li>
-        <li><a href="./capability.html">簡易不利相性</a></li> 
+        <li><a href="./capability.html">簡易不利相性</a></li>
+        <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+        <li><a href="./fighter_pick.html">キャラ使用率</a></li>
         <li><a href="./userpolicy.html">利用規約</a></li>
-        <li><a href="./contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
     <a class="footer-logo" href="./index.html">
@@ -147,7 +221,7 @@
     <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
         当サイトは個人が運営する非公式のWebサービスです。<br>
         任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-    <p class="copyright"><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
+    <p class="copyright">ver4.0.0 2022/12/16<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
   </footer>
   <!--footerはここまで-->
 </body>
