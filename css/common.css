@@ -221,6 +221,11 @@ img {
   margin-bottom: 30px;
 }
 
+iframe {
+  height: 700px;
+  width: 1000px;
+}
+
 @media (max-width: 840px) {
   .site-menu ul {
     display: block;
@@ -361,4 +366,10 @@ img {
     font-weight: bold;
     margin-top: 20px;
   }
+  
+  iframe {
+    height: 700px;
+    width: 90%;
+  }
+
 }
