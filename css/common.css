@@ -40,7 +40,7 @@ img {
 } */
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 1300px;
   height: 110px;
   margin-left: auto;
   margin-right: auto;
@@ -58,7 +58,7 @@ img {
 
 .header-logo {
   display: block;
-  width: 190px;
+  width: 150px;
 }
 
 .site-menu ul {
