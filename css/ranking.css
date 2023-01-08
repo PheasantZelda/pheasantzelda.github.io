@@ -317,6 +317,10 @@ td img {
     text-align: center; /* 全テキストを中央寄せ */
   }
 
+  .sorttbla {
+    width: 95%;
+  }
+
   th {
     font-size: 12px;
     line-height: 1.5;
