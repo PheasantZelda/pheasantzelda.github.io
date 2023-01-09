@@ -35,6 +35,22 @@
 <!--Bodyはここから-->
 
 <body>
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      const spinner = document.getElementById('loading');
+      spinner.classList.add('loaded');
+    }
+  </script>
   <!--headerはここから-->
   <header class="header">
     <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
@@ -65,6 +81,7 @@
 
   <!--mainはここから-->
   <main class="main">
+
     <div class="title">
       <img src="./img/common/Main.jpg" alt="SSBU">
       <h1>スマアナ検定</h1>
@@ -77,13 +94,29 @@
         問題については随時アップデートしていこうと考えております。
         ぜひユーザーの皆様も扱ってほしい問題などがありましたら<a href="https://twitter.com/pheasan95712838">DM</a>まで問題文と画像をお送りください。
         現在掲載している項目は下記になります。
-        <br>　■ 各ファイタのMU
+        <br>　■ 各ファイタのMU（スマアナ調べ）
         <br>　■ ファイタのパラメータ
-        <br>　■ 技の発生F・全体F・ダメージ
+        <br>　■ 技の発生F・全体F・ダメージ※
       </p>
     </div>
     <div class="quiz">
-      <iframe src="//quizgenerator.net/quizhoster/?action=play&course_id=117152&course_path=03322eda3c3a68bf9ae75cae023ebfe4" frameborder="0">Iframe対応ブラウザでご覧ください。</iframe>
+      <iframe
+        src="//quizgenerator.net/quizhoster/?action=play&course_id=117152&course_path=03322eda3c3a68bf9ae75cae023ebfe4"
+        frameborder="0">Iframe対応ブラウザでご覧ください。</iframe>
+    </div>
+    <div class="explain">
+      <p>　※ 技については下記のような条件で算出
+        <br>　・アイスクライマー：２人　　　　　　　　　　　　・オリマー：赤ピクミン
+        <br>　・ルカリオ：波動補正 ０％　 　　　　　　　　　　・Wii Fit トレーナ：通常 （腹式無）
+        <br>　・ロゼッタ＆チコ：ロゼッタのみ　　　　　　　　　・ルフレ：サンダーソード
+        <br>　・シュルク：通常　　　　　　　　　　　　　　　　・ジョーカー：通常（アルセーヌ無）
+        <br>　・勇者：通常　　　　　　　　　　　　　　　　　　・スティーブ武器：木材
+        <br>　・ミェンミェン：ドラゴン（強化無）　　　　　　　・セフィロス：通常（片翼無）
+        <br>　・カズヤ：技が複数選択できるため一部問題で除外
+        <br>
+        <br>
+        <br>
+      </p>
     </div>
   </main>
   <!--mainはここまで-->
