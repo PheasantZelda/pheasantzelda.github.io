@@ -226,6 +226,93 @@ iframe {
   width: 1000px;
 }
 
+
+/* ローディング画面 */
+
+.spinner {
+  margin: auto;
+  margin-top: 22%;
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.spinner > div {
+  background-color: #e7412b;
+  height: 100%;
+  width: 10px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1.0s;
+  background-color: #181a1b;
+ 
+/* 以下のコードを追加 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+
+@keyframes fadeOut {
+  from {
+      opacity: 10;
+  }
+  to {
+      display: none;
+      opacity: 0;
+      z-index: -1;
+  }
+}
+
+/* 読み込み完了後に「loaded」を付与する */
+#loading.loaded {
+  animation: fadeOut 1.3s forwards;
+}
+
 @media (max-width: 840px) {
   .site-menu ul {
     display: block;
@@ -371,5 +458,11 @@ iframe {
     height: 700px;
     width: 90%;
   }
+
+/*ローディング画面*/
+.spinner {
+  margin: auto;
+  margin-top: 80%;
+}
 
 }
