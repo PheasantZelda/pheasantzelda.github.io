@@ -12,8 +12,6 @@ var gSortBtnRow = 0;
  //===============================================================
 window.addEventListener = function() {
   tSortInit();
-  const spinner = document.getElementById('loading');
-  spinner.classList.add('loaded');
 }
 
 function tSortInit(){
