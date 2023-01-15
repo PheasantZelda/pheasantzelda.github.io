@@ -216,16 +216,6 @@ img {
   text-align: center;
 }
 
-.quiz {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-iframe {
-  height: 700px;
-  width: 1000px;
-}
-
 
 /* ローディング画面 */
 
@@ -454,10 +444,6 @@ iframe {
     margin-top: 20px;
   }
   
-  iframe {
-    height: 700px;
-    width: 90%;
-  }
 
 /*ローディング画面*/
 .spinner {

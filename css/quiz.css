@@ -1,0 +1,101 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+/*コメント*/
+
+.quiz {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+iframe {
+  height: 700px;
+  width: 1000px;
+}
+
+
+.twitter {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.twitter-share-button {
+  margin-top: 10px;
+}
+
+.example table{
+  border-collapse:separate;
+  margin: 20px;
+  border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+table {
+  width: 800px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center; /* 全テキストを中央寄せ */
+}
+
+th, td {
+  padding: 5px 2px;
+  border: solid 1px white;
+}
+
+th {
+  background-color: #504545;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+td {
+  background-color: #292828;
+}
+
+td img {
+  width: 50px;
+  margin-top: 0px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+@media (max-width: 840px) {
+  iframe {
+    height: 700px;
+    width: 90%;
+  }
+
+  table {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center; /* 全テキストを中央寄せ */
+  }
+
+  .sorttbla {
+    width: 95%;
+  }
+
+  th {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  td {
+    font-size: 10px;
+  }
+  td img {
+    width: 30px;
+  }
+
+}
