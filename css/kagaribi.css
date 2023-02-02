@@ -166,7 +166,7 @@
 
 
 table {
-  width: 00px;
+  width: 1000px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -299,39 +299,52 @@ td img {
   .tsImg:hover{
     background : grey;
   }
+  /* === ソートボタン（カーソルオーバー時）========= */
+  .tsImg:hover{
+    background : grey;
+  }
   /* === ソートボタン内の三角の色（SVG）============ */
   .tsImg path{
     fill       : #333536;
   }
-  
-  .sorttbl p {
-    font-size: 0%;
-  }
 
-
-  table {
-    width: 100%;
-    margin-top: 20px;
+  .example{
+    overflow: auto;
+    margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    border-collapse: collapse;
-    text-align: center; /* 全テキストを中央寄せ */
+    overflow: auto;
+    width: 90%;
   }
 
-  .sorttbla {
-    width: 95%;
-  }
-
-  th {
+  .example td{
+    width: 40px;
     font-size: 8px;
-    line-height: 1.5;
+  }
+
+  
+
+  .example th{
+    width: 40px;
+    border-right: 0.5px solid rgb(255, 255, 255);
+    border-bottom: 0.5px solid rgb(255, 255, 255);
+    font-size: 8px;
   }
   
-  td {
-    font-size: 8px;
-  }
   td img {
-    width: 30px;
+    width: 20%;
+
   }
+
+  .example tr:first-child th{
+      border-top: 0.5px solid rgb(255, 255, 255);
+  }
+  .example th:first-child{
+      border-left: 0.5px solid rgb(255, 255, 255);
+  }
+  .example tr:first-child th:first-child{
+    z-index: 1;
+  }
+
 
 }
