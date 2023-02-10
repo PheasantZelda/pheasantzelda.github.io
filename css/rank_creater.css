@@ -60,6 +60,12 @@
   flex: 1 1 auto;
 }
 
+.MU_box_phone {
+  display: flex;
+  margin-top: 5px;
+  flex: 1 1 auto;
+}
+
 .MU_title {
   padding: 3px;
   width: 300px;
@@ -307,6 +313,10 @@
 }
 
 .MU_boxx {
+  display: none;
+}
+
+.MU_boxx_phone {
   display: none;
 }
 
@@ -1029,6 +1039,12 @@ img {
     flex: 1 1 auto;
   }
 
+  .MU_box_phone {
+    display: flex;
+    margin-top: 2px;
+    flex: 1 1 auto;
+  }
+
   .MU_title {
     min-height: 32px;
     padding: 0px;
@@ -1055,7 +1071,7 @@ img {
     border: solid 0.5px #837f7f;
   }
 
-/*
+  /*
   .item {
     object-fit: cover;
     background-repeat: no-repeat;
@@ -1238,6 +1254,10 @@ img {
   }
 
   .MU_boxx {
+    display: none;
+  }
+
+  .MU_boxx_phone {
     display: none;
   }
 
