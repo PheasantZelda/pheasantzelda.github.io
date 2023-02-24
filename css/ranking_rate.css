@@ -1,26 +1,5 @@
 @charset "utf-8";
 
-.bread {
-  width: 1000px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.breadcrumb {
-  font-size: 15px;
-  font-weight: 500;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-.breadcrumb li:not(:last-of-type)::after {
-  content: "»";
-  margin: 0 .6em; /* 記号の左右の余白 */
-  color: #e7412b; /* 記号の色 */
-}
-
 .tierlista {
   width: 1050px;
   background-color: #2c2a2a;
@@ -30,8 +9,6 @@
   margin-right: auto;
   margin-bottom: 25px;
 }
-
-
 /*詳細*/
 
 /* === ソートボタン ============================== */

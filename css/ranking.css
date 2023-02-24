@@ -149,6 +149,10 @@
   font-size: 0%;
 }
 
+.sorttbla p {
+  font-size: 0%;
+}
+
 .example {
   margin-top: 20px;
 }
@@ -170,9 +174,6 @@ table {
   text-align: center; /* 全テキストを中央寄せ */
 }
 
-.sorttbla {
-  width: 800px;
-}
 
 th, td {
   padding: 5px 2px;

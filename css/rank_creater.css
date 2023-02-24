@@ -8,6 +8,9 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
+/*  position: sticky;
+  top: -130px;
+  z-index: 1;*/
 }
 
 .tierlist h2 {
@@ -115,12 +118,12 @@
 }
 
 .Fighter_table {
-  margin-top: 20px;
   padding-left: 25px;
   display: flex;
   justify-content: center;
   position: relative;
   align-items: center;
+  
 }
 
 .Fighter_box {
@@ -1110,7 +1113,7 @@ img {
 
   .Fighter_table {
     max-width: 95%;
-    margin-top: 10px;
+    margin-top: 0px;
     padding-left: 5%;
   }
 
