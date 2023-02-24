@@ -21,7 +21,7 @@
   <meta charset="UTF-8">
   <title>キャラランク 15-18期</title>
   <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
-  <meta name="discription" content="キャラランク">
+  <meta name="discription" content="スマブラのオンライン対戦サイト「スマメイト」の対戦結果の統計を元に算出したファイタの15-18期のキャラランクを掲載しています。ディディーコング、スティーブがオンラインでは強いです。">
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./js/toggle-menu.js"></script>
@@ -36,6 +36,22 @@
 <!--Bodyはここから-->
 
 <body>
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      const spinner = document.getElementById('loading');
+      spinner.classList.add('loaded');
+    }
+  </script>
   <!--headerはここから-->
   <header class="header">
     <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
@@ -50,17 +66,18 @@
           <ul>
             <li><a href="./fighter.html">ファイタ一覧</a></li>
             <li><a href="./ranking.html">キャラランク</a></li>
+            <li><a href="./statstics.html">統計データ</a></li>
             <li><a href="./capability.html">簡易不利相性</a></li>
             <li><a href="./rank_creater.html">Tier表メーカー</a></li>
             <li><a href="./fighter_pick.html">キャラ使用率</a></li>
+            <li><a href="./quiz.html">スマアナ検定</a></li>
+            <li><a href="./record.html">歴代記録</a></li>
             <li><a href="./userpolicy.html">利用規約</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-  <!--headerはここまで-->
-
   <!--mainはここから-->
   <main class="main">
     <div class="title">
@@ -71,11 +88,11 @@
     <div class="section">キャラランク</div>
     <div class="explain">
       <p>　オンライン対戦サイト「<a href="https://smashmate.net/">スマメイト</a>」の 15-18 期（サブ期含む）までの対戦 約 200万戦、全ファイタ 86 体の戦績の統計を取りました。
-        全体サンプル数と個人の技量による偏りを鑑みて、レート 1500 以上の対戦をサンプリング対象としております。レートは期の最終時の値を参照しています。
+        全体サンプル数と個人の技量による偏りを鑑みて、レート 1500 以上の対戦をサンプリング対象としています。レートは期の最終時の値を参照しています。
         このTierリストはオンライン環境での結果であり、
         単純なファイター性能以外に使い手の技量や偏りなども多分に含んでいるので、あくまでも一つの捉え方として受け止めていただきたいです。
         ダッシュファイタについて、下記ファイタについては性能差が少なく、プレイヤー人口も少ないことから、
-        同一ファイタとして扱っておりますのでご了承ください。 <br>【同一扱い】サムス/ダークサムス, ピーチ/デイジー, ピット/ブラックピット, シモン/リヒター
+        同一ファイタとして扱っていますのでご了承ください。 <br>【同一扱い】サムス/ダークサムス, ピーチ/デイジー, ピット/ブラックピット, シモン/リヒター
       </p>
     </div>
     <div class="tierlist">
@@ -832,9 +849,12 @@
       <ul>
         <li><a href="./fighter.html">ファイタ一覧</a></li>
         <li><a href="./ranking.html">キャラランク</a></li>
+        <li><a href="./statstics.html">統計データ</a></li>
         <li><a href="./capability.html">簡易不利相性</a></li>
         <li><a href="./rank_creater.html">Tier表メーカー</a></li>
         <li><a href="./fighter_pick.html">キャラ使用率</a></li>
+        <li><a href="./quiz.html">スマアナ検定</a></li>
+        <li><a href="./record.html">歴代記録</a></li>
         <li><a href="./userpolicy.html">利用規約</a></li>
       </ul>
     </nav>
