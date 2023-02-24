@@ -19,7 +19,8 @@ a {
   text-decoration: none;
 }
 
-body {  font-family: sans-serif;
+body {  
+  font-family: 'Montserrat','sans-serif';
   font-size: 16px;
   color: white;
   line-height: 1;
