@@ -21,7 +21,7 @@
     <meta charset="UTF-8">
     <title>ファイタ一覧</title>
     <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
-    <meta name="discription" content="ファイタ一覧">
+    <meta name="Description" content="スマブラSPのオンライン対戦サイト「スマメイト」を元にしたキャラランク、有利不利を示す相性表（MU表）、サブ補完適正、対戦戦績分析をファイタ毎一覧表示しています。">
     <!--スマホ用の画面設定-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/toggle-menu.js"></script>
@@ -35,22 +35,22 @@
 <!--Bodyはここから-->
 
 <body>
-  <!-- ローディング画面 -->
-  <div id="loading">
-    <div class="spinner">
-      <div class="rect1"></div>
-      <div class="rect2"></div>
-      <div class="rect3"></div>
-      <div class="rect4"></div>
-      <div class="rect5"></div>
+    <!-- ローディング画面 -->
+    <div id="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
     </div>
-  </div>
-  <script>
-    window.onload = function () {
-      const spinner = document.getElementById('loading');
-      spinner.classList.add('loaded');
-    }
-  </script>
+    <script>
+        window.onload = function () {
+            const spinner = document.getElementById('loading');
+            spinner.classList.add('loaded');
+        }
+    </script>
     <!--headerはここから-->
     <header class="header">
         <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
@@ -70,7 +70,7 @@
                         <li><a href="./rank_creater.html">Tier表メーカー</a></li>
                         <li><a href="./fighter_pick.html">キャラ使用率</a></li>
                         <li><a href="./quiz.html">スマアナ検定</a></li>
-                        <li><a href="./ranking_rate.html">歴代記録</a></li>
+                        <li><a href="./record.html">歴代記録</a></li>
                         <li><a href="./userpolicy.html">利用規約</a></li>
                     </ul>
                 </nav>
@@ -85,6 +85,15 @@
             <img src="./img/common/Main.jpg" alt="SSBU">
             <h1>ファイターリスト</h1>
             <p>FIGHTER LIST</p>
+        </div>
+        <!--パンくずリスト-->
+        <div class="bread">
+            <nav>
+                <ol class="breadcrumb">
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="./fighter.html">ファイタ一覧</a></li>
+                </ol>
+            </nav>
         </div>
         <div class="section">一覧表</div>
         <ul class="fighter_list">
@@ -605,7 +614,7 @@
                 <li><a href="./rank_creater.html">Tier表メーカー</a></li>
                 <li><a href="./fighter_pick.html">キャラ使用率</a></li>
                 <li><a href="./quiz.html">スマアナ検定</a></li>
-                <li><a href="./ranking_rate.html">歴代記録</a></li>
+                <li><a href="./record.html">歴代記録</a></li>
                 <li><a href="./userpolicy.html">利用規約</a></li>
             </ul>
         </nav>
@@ -617,7 +626,7 @@
                     href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
                 当サイトは個人が運営する非公式のWebサービスです。<br>
                 任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-        <p class="copyright"><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
+        <p class="copyright">ver5.0.0 2023/2/23<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
     </footer>
     <!--footerはここまで-->
 </body>

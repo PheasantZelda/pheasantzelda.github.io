@@ -21,8 +21,8 @@
   <meta charset="UTF-8">
   <title>Tier表メーカー</title>
   <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
-  <meta name="discription" content="スマブラSP スマブラ スマメイト統計サイト【スマアナ】Tier表 ティア表　メーカー">
-  <meta property="og:title" content="スマブラSP スマブラ スマメイト統計サイト【スマアナ】Tier表 ティア表　メーカー">
+  <meta name="discription" content="スマブラSPのキャラランクや相性表などを作成するTier表 tier表 ティア表作成するメーカーを掲載しています。">
+  <meta property="og:title" content="スマブラSPのキャラランクや相性表などを作成するTier表 tier表 ティア表作成するメーカーを掲載しています。">
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./js/toggle-menu.js"></script>
@@ -119,7 +119,7 @@
             <li><a href="./rank_creater.html">Tier表メーカー</a></li>
             <li><a href="./fighter_pick.html">キャラ使用率</a></li>
             <li><a href="./quiz.html">スマアナ検定</a></li>
-            <li><a href="./ranking_rate.html">歴代記録</a></li>
+            <li><a href="./record.html">歴代記録</a></li>
             <li><a href="./userpolicy.html">利用規約</a></li>
           </ul>
         </nav>
@@ -135,15 +135,24 @@
       <h1>Tier表メーカー</h1>
       <p>TIER-List MAKER</p>
     </div>
+    <!--パンくずリスト-->
+    <div class="bread">
+      <nav>
+        <ol class="breadcrumb">
+          <li><a href="/">ホーム</a></li>
+          <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+        </ol>
+      </nav>
+    </div>
     <div class="section">Tier表メーカー</div>
     <div class="explain">
       <p>　キャラランクやMatch UPについて皆さんの意見を活発化するためにTier表メーカーを実装しました。
         タイトルと各行の名称はユーザー自身で編集することができます。
-        各行の追加/削除はROW ADD/DELEATの横のボタンをクリックすることで編集できます。
-        また、フォントと背景は上部のカラーバーからカスタマイズすることができます。
+        各行の追加/削除は ROW ADD/DELEAT の横のボタンをクリックすることで編集できます。
+        また、フォントと背景は上部のカラーバーからカスタマイズすることができます。行の順番はドラッグ＆ドロップで変更できます。(PCのみ)
         スマホの場合はファイタ画像を少し長めに押していただくとドラッグ＆ドロップできます。
         作成した画像はSAVEボタンからダウンロード可能です。 リセットボタンを押すと一度作成したものを初期化することができます。
-        タブレットに関しては横向きに使用するとドラッグ＆ドロップができない恐れがあります。縦向きでのご使用をお願いいたします。
+        タブレットに関しては横向きに使用するとドラッグ＆ドロップができない恐れがあります。
 
         <br>　※1 BG : Background (背景)
         <br>　※2 端末やブラウザにより画面が崩れてしまうことがあります。その際はトップページの管理人アカウントまでご連絡ください。
@@ -250,7 +259,7 @@
       </div>
       <div class="tierlist" id="canvas-box" name="canvas-box">
         <div class="MUTITLE">
-          <h2 contenteditable='plaintext-only'>TITLE ✎<br> Editable</h2>
+          <h2 contenteditable='plaintext-only'>TITLE ✎</h2>
           <img src="./img/common/logo.png" alt="SSBU">
         </div>
 
@@ -375,9 +384,10 @@
       </div>
       <!--表はここから-->
       <div class="Fighter_Storage">
-        <div class="Fighter_TITLE">
+<!--       <div class="Fighter_TITLE">
           <h2>Fighter Storage</h2>
         </div>
+--> 
         <div class="Fighter_table">
           <div class="Fighter_box box" draggable="true">
             <!--ここからデータ挿入-->
@@ -762,9 +772,10 @@
 
       <!--表はここから-->
       <div class="Fighter_Storage">
-        <div class="Fighter_TITLE">
+ <!--       <div class="Fighter_TITLE">
           <h2>Fighter Storage</h2>
         </div>
+  -->
         <div class="Fighter_table">
           <ul class="Fighter_box">
             <li class="Fighter_li" ondragover="drag_over(event)" ondrop="drop_end(event)">
@@ -1024,11 +1035,11 @@
         </div>
       </div>
     </div>
-      <!-- 画像変換 -->
-      <div>
-        <img id="image" name="image" src=" " class="IMG">
-        <a id="download" href="#" download=""></a>
-      </div>
+    <!-- 画像変換 -->
+    <div>
+      <img id="image" name="image" src=" " class="IMG">
+      <a id="download" href="#" download=""></a>
+    </div>
 
   </main>
   <!--mainはここまで-->
@@ -1044,7 +1055,7 @@
         <li><a href="./rank_creater.html">Tier表メーカー</a></li>
         <li><a href="./fighter_pick.html">キャラ使用率</a></li>
         <li><a href="./quiz.html">スマアナ検定</a></li>
-        <li><a href="./ranking_rate.html">歴代記録</a></li>
+        <li><a href="./record.html">歴代記録</a></li>
         <li><a href="./userpolicy.html">利用規約</a></li>
       </ul>
     </nav>
@@ -1109,6 +1120,7 @@
     };
     initBtnTrigger2();
   </script>
+  <!--ローディング-->
   <script>
     window.onload = function () {
       const spinner = document.getElementById('loading');
