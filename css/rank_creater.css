@@ -59,13 +59,13 @@
 
 .MU_box {
   display: flex;
-  margin-top: 5px;
+  padding-top: 5px;
   flex: 1 1 auto;
 }
 
 .MU_box_phone {
   display: flex;
-  margin-top: 5px;
+  padding-top: 5px;
   flex: 1 1 auto;
 }
 
@@ -1038,13 +1038,13 @@ img {
 
   .MU_box {
     display: flex;
-    margin-top: 2px;
+    padding-top: 2px;
     flex: 1 1 auto;
   }
 
   .MU_box_phone {
     display: flex;
-    margin-top: 2px;
+    padding-top: 2px;
     flex: 1 1 auto;
   }
 
