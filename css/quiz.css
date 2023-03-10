@@ -67,6 +67,10 @@ td img {
   border-radius: 5px;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 @media (max-width: 840px) {
   iframe {
     height: 700px;
