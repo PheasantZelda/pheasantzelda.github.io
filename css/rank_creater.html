@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--Headerはここから-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-6GR32CWGN7');
+
+</script>
+
+
+<head>
+  <!--google adsense-->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>SMASHMATE-ANALYSYS RANK_CREATER</title>
+  <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <meta name="discription" content="Tier表メーカー">
+  <!--スマホ用の画面設定-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/toggle-menu.js"></script>
+  <script src="./js/csv.js"></script>
+  <link href="./css/common.css" rel="stylesheet">
+  <link href="./css/rank_creater.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/common/icon-192x192.png">
+  <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.png">
+  <link rel="icon" href="img/common/favicon.ico">
+  <!-- HTMLを画像に変換しダウンロードする -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
+  <script language="JavaScript">
+    //初期設定
+    $(function () {
+      //HTML画像化イベント登録
+      $('#exec').on('click', function () {
+        html2image();
+      });
+    });
+    function html2image(html) {
+      html2canvas(document.querySelector("#canvas-box")).then(canvas => {
+        var base64 = canvas.toDataURL('image/png');
+        //$('#image').attr("src", base64);		//画面に画像表示
+        $('#download').attr('href', base64);
+        $('#download').attr('download', 'Tier-List');
+        $('#download')[0].click();				//自動ダウンロード
+      });
+    }
+  </script>
+  <!--画像を移動する-->
+  <script>
+    //◆◆◆ ドラッグ開始時処理 ◆◆◆
+    function drag_start(event) {
+      event.dataTransfer.setData("text", event.target.id);	//DRAG対象要素 id名設定
+    }
+
+    //◆◆◆ 対象要素がドロップ領域上処理 ◆◆◆
+    function drag_over(event) {
+      event.preventDefault();				//dragoverEVENTｷｬﾝｾﾙ→DROP先要素が受付可能
+    }
+
+    //◆◆◆ ドロップ時処理 ◆◆◆
+    function drop_end(event) {
+      var id_name = event.dataTransfer.getData("text");	//ドラッグデータid名取得
+      var drag_elm = document.getElementById(id_name);	//id名でドラッグ要素取得
+      event.currentTarget.appendChild(drag_elm);		//要素追加
+      event.preventDefault();				//dropイベントキャンセル
+    }
+  </script>
+
+</head>
+
+<!--Bodyはここから-->
+
+<body>
+
+  <!--headerはここから-->
+  <header class="header">
+    <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
+    <div class="header-inner">
+      <!--./index.htmlでトップページを指す-->
+      <a class="header-logo" href="./index.html">
+        <img src="./img/common/logo.png" alt="SSBU">
+      </a>
+      <button class="toggle-menu-button"></button>
+      <div class="header-site-menu">
+        <nav class="site-menu">
+          <ul>
+            <li><a href="./fighter.html">ファイタ一覧</a></li>
+            <li><a href="./ranking.html">キャラランク</a></li>
+            <li><a href="./statstics.html">統計データ</a></li>
+            <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+            <li><a href="./capability.html">簡易不利相性</a></li>
+            <li><a href="./userpolicy.html">利用規約</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--headerはここまで-->
+
+  <!--mainはここから-->
+  <main class="main" draggable="true">
+    <div class="title">
+      <img src="./img/common/Main.jpg" alt="SSBU">
+      <h1>Tier表メーカー</h1>
+      <p>TIER-List MAKER</p>
+    </div>
+    <div class="section">Tier表メーカー</div>
+    <div class="explain">
+      <p>　キャラランクについて皆さんの意見を活発化するためにTier表メーカーを実装しました。
+        タイトルと各行の名称はユーザー自身で編集することができます。
+        各行の追加/削除はROW ADD/DELEATの横のボタンをクリックすることで編集できます。
+        また、フォントと背景を上部のカラーバーからカスタマイズすることができます。
+        作成した画像は上部のSAVEボタンからダウンロード可能です。
+        リセットボタンを押すと一度作成したものを初期化することができます。
+        <br>　※1 BG : Background (背景)
+        <br>　※2 端末やブラウザにより画面が崩れてしまうことがあります。その際はお問い合わせページまでご連絡ください。
+      </p>
+    </div>
+    <div class="center">
+      <button class="Save" type="button" id="exec" name="exec">Save or Download</button>
+      <button class="Reset" type="button"><a href="./rank_creater.html">Reset</a></button>
+    </div>
+    <!-- 画像変換 -->
+    <div>
+      <img id="image" name="image" src=" " class="IMG">
+      <a id="download" href="#" download=""></a>
+    </div>
+    <div class="button_group">
+      <ul class="button_container">
+        <li class="button_list">
+          <p>ROW ADD/DELEATE</p>
+        </li>
+        <li class="button_list"><button class="buttons button1" id="STier" data-bg-area="A1"
+            style="background:linear-gradient(90deg, #ff3331, #ff7e21)">S +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button2" id="ATier" data-bg-area="A2"
+            style="background:linear-gradient(90deg, #ffa300, #ede404)">A +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button3" id="BTier" data-bg-area="A3"
+            style="background:linear-gradient(270deg, #c4e126, #39f68f)">B +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button4" id="CTier" data-bg-area="A4"
+            style="background:linear-gradient(270deg,  #1cddeb, #3782f6)">C +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button5" id="DTier" data-bg-area="A5"
+            style="background:linear-gradient(90deg, #4d3eff, #8833ff)">D +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button6" id="ETier" data-bg-area="A6"
+            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">E +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button7" id="FTier" data-bg-area="A7"
+            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">F +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button8" id="GTier" data-bg-area="A8"
+            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">G +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button9" id="HTier" data-bg-area="A9"
+            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">H +/-</button>
+        </li>
+        <li class="button_list"><button class="buttons button10" id="ITier" data-bg-area="A10"
+            style="background:linear-gradient(90deg, #3d3c3c, #6b696e)">I +/-</button>
+        </li>
+      </ul>
+    </div>
+    <div class="color_group">
+      <ul class="color_container">
+        <li class="color_list">
+          <p>FONT COLOR<br>BG1 COLOR<br>BG2 COLOR</p>
+        </li>
+        <li class="color_list">
+          <input type="color" class="color_input" value="#ffffff" onChange="setFontColor1(this.value);">
+          <input class="color_input" type="color" data-bg="1" value="#ff3331">
+          <input class="color_input" type="color" data-bg="1" value="#ff7e21">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor2(this.value);">
+          <input class="color_input" type="color" data-bg="2" value="#ffa300">
+          <input class="color_input" type="color" data-bg="2" value="#ede404">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor3(this.value);">
+          <input class="color_input" type="color" data-bg="3" value="#39f68f">
+          <input class="color_input" type="color" data-bg="3" value="#c4e126">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor4(this.value);">
+          <input class="color_input" type="color" data-bg="4" value="#3782f6">
+          <input class="color_input" type="color" data-bg="4" value="#1cddeb">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor5(this.value);">
+          <input class="color_input" type="color" data-bg="5" value="#4d3eff">
+          <input class="color_input" type="color" data-bg="5" value="#8833ff">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor6(this.value);">
+          <input class="color_input" type="color" data-bg="6" value="#3d3c3c">
+          <input class="color_input" type="color" data-bg="6" value="#6b696e">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor7(this.value);">
+          <input class="color_input" type="color" data-bg="7" value="#3d3c3c">
+          <input class="color_input" type="color" data-bg="7" value="#6b696e">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor8(this.value);">
+          <input class="color_input" type="color" data-bg="8" value="#3d3c3c">
+          <input class="color_input" type="color" data-bg="8" value="#6b696e">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor9(this.value);">
+          <input class="color_input" type="color" data-bg="9" value="#3d3c3c">
+          <input class="color_input" type="color" data-bg="9" value="#6b696e">
+        </li>
+        <li class="color_list">
+          <input class="color_input" type="color" value="#ffffff" onChange="setFontColor10(this.value);">
+          <input class="color_input" type="color" data-bg="10" value="#3d3c3c">
+          <input class="color_input" type="color" data-bg="10" value="#6b696e">
+        </li>
+      </ul>
+    </div>
+    <div class="controller">
+      <button class="scroll" id="on">Scroll Lock</button>
+      <button class="scroll" id="off">Scroll Unlock</button>
+    </div>
+    <div class="pc_ver">
+      <div class="tierlist" id="canvas-box" name="canvas-box">
+        <div class="MUTITLE">
+          <h2 contenteditable='plaintext-only'>TITLE <br> Editable</h2>
+          <img src="./img/common/logo.png" alt="SSBU">
+        </div>
+
+        <div class="MU_table">
+          <ul class="MU_box MU_box1">
+            <li class="MU_title" data-bg-area="1" id="STier1"
+              style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
+              <p contenteditable='plaintext-only'>S Tier <br> Editable</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+
+
+          <ul class="MU_box MU_box2">
+            <li class="MU_title" data-bg-area="2" id="ATier1"
+              style="background: linear-gradient(90deg, #ffa300, #ede404)">
+              <p contenteditable='plaintext-only'>A Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_box MU_box3">
+            <li class="MU_title" data-bg-area="3" id="BTier1"
+              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
+              <p contenteditable='plaintext-only'>B Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_box MU_box4">
+            <li class="MU_title" data-bg-area="4" id="CTier1"
+              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
+              <p contenteditable='plaintext-only'>C Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_box MU_box5">
+            <li class="MU_title" data-bg-area="5" id="DTier1"
+              style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
+              <p contenteditable='plaintext-only'>D Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_box MU_box6">
+            <li class="MU_title" data-bg-area="6" id="ETier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>E Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_boxx MU_box7">
+            <li class="MU_title" data-bg-area="7" id="FTier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>F Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_boxx MU_box8">
+            <li class="MU_title" data-bg-area="8" id="GTier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>G Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_boxx MU_box9">
+            <li class="MU_title" data-bg-area="9" id="HTier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>H Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_boxx MU_box10">
+            <li class="MU_title" data-bg-area="10" id="ITier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>I Tier</p>
+            </li>
+            <li class="MU_result" contenteditable='true'>
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--表はここから-->
+      <div class="Fighter_Storage">
+        <div class="Fighter_TITLE">
+          <h2>Fighter Storage</h2>
+        </div>
+        <div class="Fighter_table">
+          <ul class="Fighter_box">
+            <li class="Fighter_li" contenteditable='true'>
+              <!--ここからデータ挿入-->
+              <img src="./img/fighter/01.マリオ.png" alt="マリオの画像">
+              <img src="./img/fighter/02.ドンキーコング.png" alt="ドンキーコングの画像">
+              <img src="./img/fighter/03.リンク.png" alt="リンクの画像">
+              <img src="./img/fighter/04.サムス.png" alt="サムスの画像">
+              <img src="./img/fighter/05.ダークサムス.png" alt="ダークサムスの画像">
+              <img src="./img/fighter/06.ヨッシー.png" alt="ヨッシーの画像">
+              <img src="./img/fighter/07.カービィ.png" alt="カービィの画像">
+              <img src="./img/fighter/08.フォックス.png" alt="フォックスの画像">
+              <img src="./img/fighter/09.ピカチュウ.png" alt="ピカチュウの画像">
+              <img src="./img/fighter/10.ルイージ.png" alt="ルイージの画像">
+              <img src="./img/fighter/11.ネス.png" alt="ネスの画像">
+              <img src="./img/fighter/12.キャプテン・ファルコン.png" alt="キャプテン・ファルコンの画像">
+              <img src="./img/fighter/13.プリン.png" alt="プリンの画像">
+              <img src="./img/fighter/14.ピーチ.png" alt="ピーチの画像">
+              <img src="./img/fighter/15.デイジー.png" alt="デイジーの画像">
+              <img src="./img/fighter/16.クッパ.png" alt="クッパの画像">
+              <img src="./img/fighter/17.アイスクライマー.png" alt="アイスクライマーの画像">
+              <img src="./img/fighter/18.シーク.png" alt="シークの画像">
+              <img src="./img/fighter/19.ゼルダ.png" alt="ゼルダの画像">
+              <img src="./img/fighter/20.ドクターマリオ.png" alt="ドクターマリオの画像">
+              <img src="./img/fighter/21.ピチュー.png" alt="ピチューの画像">
+              <img src="./img/fighter/22.ファルコ.png" alt="ファルコの画像">
+              <img src="./img/fighter/23.マルス.png" alt="マルスの画像">
+              <img src="./img/fighter/24.ルキナ.png" alt="ルキナの画像">
+              <img src="./img/fighter/25.こどもリンク.png" alt="こどもリンクの画像">
+              <img src="./img/fighter/26.ガノンドルフ.png" alt="ガノンドルフの画像">
+              <img src="./img/fighter/27.ミュウツー.png" alt="ミュウツーの画像">
+              <img src="./img/fighter/28.ロイ.png" alt="ロイの画像">
+              <img src="./img/fighter/29.クロム.png" alt="クロムの画像">
+              <img src="./img/fighter/30.Mr.ゲーム&ウォッチ.png" alt="Mr.ゲーム&ウォッチの画像">
+              <img src="./img/fighter/31.メタナイト.png" alt="メタナイトの画像">
+              <img src="./img/fighter/32.ピット.png" alt="ピットの画像">
+              <img src="./img/fighter/33.ブラックピット.png" alt="ブラックピットの画像">
+              <img src="./img/fighter/34.ゼロスーツサムス.png" alt="ゼロスーツサムスの画像">
+              <img src="./img/fighter/35.ワリオ.png" alt="ワリオの画像">
+              <img src="./img/fighter/36.スネーク.png" alt="スネークの画像">
+              <img src="./img/fighter/37.アイク.png" alt="アイクの画像">
+              <img src="./img/fighter/38.ポケモントレーナー.png" alt="ポケモントレーナーの画像">
+              <img src="./img/fighter/39.ディディーコング.png" alt="ディディーコングの画像">
+              <img src="./img/fighter/40.リュカ.png" alt="リュカの画像">
+              <img src="./img/fighter/41.ソニック.png" alt="ソニックの画像">
+              <img src="./img/fighter/42.デデデ.png" alt="デデデの画像">
+              <img src="./img/fighter/43.ピクミン＆オリマー.png" alt="ピクミン＆オリマーの画像">
+              <img src="./img/fighter/44.ルカリオ.png" alt="ルカリオの画像">
+              <img src="./img/fighter/45.ロボット.png" alt="ロボットの画像">
+              <img src="./img/fighter/46.トゥーンリンク.png" alt="トゥーンリンクの画像">
+              <img src="./img/fighter/47.ウルフ.png" alt="ウルフの画像">
+              <img src="./img/fighter/48.むらびと.png" alt="むらびとの画像">
+              <img src="./img/fighter/49.ロックマン.png" alt="ロックマンの画像">
+              <img src="./img/fighter/50.Wii Fit トレーナー.png" alt="Wii Fit トレーナーの画像">
+              <img src="./img/fighter/51.ロゼッタ＆チコ.png" alt="ロゼッタ＆チコの画像">
+              <img src="./img/fighter/52.リトルマック.png" alt="リトルマックの画像">
+              <img src="./img/fighter/53.ゲッコウガ.png" alt="ゲッコウガの画像">
+              <img src="./img/fighter/54.格闘Mii.png" alt="格闘Miiの画像">
+              <img src="./img/fighter/55.剣術Mii.png" alt="剣術Miiの画像">
+              <img src="./img/fighter/56.射撃Mii.png" alt="射撃Miiの画像">
+              <img src="./img/fighter/57.パルテナ.png" alt="パルテナの画像">
+              <img src="./img/fighter/58.パックマン.png" alt="パックマンの画像">
+              <img src="./img/fighter/59.ルフレ.png" alt="ルフレの画像">
+              <img src="./img/fighter/60.シュルク.png" alt="シュルクの画像">
+              <img src="./img/fighter/61.クッパJr..png" alt="クッパJr.の画像">
+              <img src="./img/fighter/62.ダックハント.png" alt="ダックハントの画像">
+              <img src="./img/fighter/63.リュウ.png" alt="リュウの画像">
+              <img src="./img/fighter/64.ケン.png" alt="ケンの画像">
+              <img src="./img/fighter/65.クラウド.png" alt="クラウドの画像">
+              <img src="./img/fighter/66.カムイ.png" alt="カムイの画像">
+              <img src="./img/fighter/67.ベヨネッタ.png" alt="ベヨネッタの画像">
+              <img src="./img/fighter/68.インクリング.png" alt="インクリングの画像">
+              <img src="./img/fighter/69.リドリー.png" alt="リドリーの画像">
+              <img src="./img/fighter/70.シモン.png" alt="シモンの画像">
+              <img src="./img/fighter/71.リヒター.png" alt="リヒターの画像">
+              <img src="./img/fighter/72.キングクルール.png" alt="キングクルールの画像">
+              <img src="./img/fighter/73.しずえ.png" alt="しずえの画像">
+              <img src="./img/fighter/74.ガオガエン.png" alt="ガオガエンの画像">
+              <img src="./img/fighter/75.パックンフラワー.png" alt="パックンフラワーの画像">
+              <img src="./img/fighter/76.ジョーカー.png" alt="ジョーカーの画像">
+              <img src="./img/fighter/77.勇者.png" alt="勇者の画像">
+              <img src="./img/fighter/78.バンジョー＆カズーイ.png" alt="バンジョー＆カズーイの画像">
+              <img src="./img/fighter/79.テリー.png" alt="テリーの画像">
+              <img src="./img/fighter/80.ベレトス.png" alt="ベレトスの画像">
+              <img src="./img/fighter/81.ミェンミェン.png" alt="ミェンミェンの画像">
+              <img src="./img/fighter/82.スティーブ.png" alt="スティーブの画像">
+              <img src="./img/fighter/83.セフィロス.png" alt="セフィロスの画像">
+              <img src="./img/fighter/84.ホムヒカ.png" alt="ホムヒカの画像">
+              <img src="./img/fighter/85.カズヤ.png" alt="カズヤの画像">
+              <img src="./img/fighter/86.ソラ.png" alt="ソラの画像">
+              <img src="./img/fighter/04.サムス_05.ダークサムス.png" alt="04.サムス/05.ダークサムスの画像">
+              <img src="./img/fighter/14.ピーチ_15.デイジー.png" alt="14.ピーチ/15.デイジーの画像">
+              <img src="./img/fighter/32.ピット_33.ブラックピット.png" alt="32.ピット/33.ブラックピットの画像">
+              <img src="./img/fighter/70.シモン_71.リヒター.png" alt="70.シモン/71.リヒターの画像">
+              <img src="./img/fighter/リンク.png" alt="リンクの画像">
+              <img src="./img/fighter/ピカチュウ.png" alt="ピカチュウの画像">
+              <img src="./img/fighter/ワリオ.png" alt="ワリオの画像">
+              <img src="./img/fighter/アイク.png" alt="アイクの画像">
+              <img src="./img/fighter/アルフ.png" alt="アルフの画像">
+              <img src="./img/fighter/ゼニガメ.png" alt="ゼニガメの画像">
+              <img src="./img/fighter/フシギソウ.png" alt="フシギソウの画像">
+              <img src="./img/fighter/リザードン.png" alt="リザードンの画像">
+              <img src="./img/fighter/むらびと.png" alt="むらびとの画像">
+              <img src="./img/fighter/リトルマック3.png" alt="リトルマック3の画像">
+              <img src="./img/fighter/パルテナ.png" alt="パルテナの画像">
+              <img src="./img/fighter/ルフレ.png" alt="ルフレの画像">
+              <img src="./img/fighter/ラリー.png" alt="ラリーの画像">
+              <img src="./img/fighter/ロイ.png" alt="ロイの画像">
+              <img src="./img/fighter/ウェンディ.png" alt="ウェンディの画像">
+              <img src="./img/fighter/イギー.png" alt="イギーの画像">
+              <img src="./img/fighter/モートン.png" alt="モートンの画像">
+              <img src="./img/fighter/レミー.png" alt="レミーの画像">
+              <img src="./img/fighter/ルドウィグ.png" alt="ルドウィグの画像">
+              <img src="./img/fighter/クラウド.png" alt="クラウドの画像">
+              <img src="./img/fighter/カムイ.png" alt="カムイの画像">
+              <img src="./img/fighter/ベヨネッタ.png" alt="ベヨネッタの画像">
+              <img src="./img/fighter/インクリング.png" alt="インクリングの画像">
+              <img src="./img/fighter/リドリー.png" alt="リドリーの画像">
+              <img src="./img/fighter/勇者1.png" alt="勇者1の画像">
+              <img src="./img/fighter/勇者3.png" alt="勇者3の画像">
+              <img src="./img/fighter/勇者8.png" alt="勇者8の画像">
+              <img src="./img/fighter/ベレス.png" alt="ベレスの画像">
+              <img src="./img/fighter/アレックス.png" alt="アレックスの画像">
+              <img src="./img/fighter/ゾンビ.png" alt="ゾンビの画像">
+              <img src="./img/fighter/エンダーマン.png" alt="エンダーマンの画像">
+              <img src="./img/fighter/セフィロス.png" alt="セフィロスの画像">
+              <img src="./img/fighter/ホムラ.png" alt="ホムラの画像">
+              <img src="./img/fighter/ヒカリ.png" alt="ヒカリの画像">
+              <img src="./img/fighter/カズヤ.png" alt="カズヤの画像">
+              <img src="./img/fighter/ソラ4.png" alt="ソラ4の画像">
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="phone_ver">
+      <div class="tierlist" id="canvas-box" name="canvas-box">
+        <div class="MUTITLE">
+          <h2 contenteditable='plaintext-only'>TITLE <br> Editable</h2>
+          <img src="./img/common/logo.png" alt="SSBU">
+        </div>
+
+        <div class="MU_table">
+          <ul class="MU_box MU_box1">
+            <li class="MU_title" data-bg-area="1" id="STier1"
+              style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
+              <p contenteditable='plaintext-only'>S Tier <br> Editable</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+
+
+          <ul class="MU_box MU_box2">
+            <li class="MU_title" data-bg-area="2" id="ATier1"
+              style="background: linear-gradient(90deg, #ffa300, #ede404)">
+              <p contenteditable='plaintext-only'>A Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_box MU_box3">
+            <li class="MU_title" data-bg-area="3" id="BTier1"
+              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
+              <p contenteditable='plaintext-only'>B Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_box MU_box4">
+            <li class="MU_title" data-bg-area="4" id="CTier1"
+              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
+              <p contenteditable='plaintext-only'>C Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_box MU_box5">
+            <li class="MU_title" data-bg-area="5" id="DTier1"
+              style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
+              <p contenteditable='plaintext-only'>D Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_box MU_box6">
+            <li class="MU_title" data-bg-area="6" id="ETier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>E Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_boxx MU_box7">
+            <li class="MU_title" data-bg-area="7" id="FTier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>F Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_boxx MU_box8">
+            <li class="MU_title" data-bg-area="8" id="GTier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>G Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_boxx MU_box9">
+            <li class="MU_title" data-bg-area="9" id="HTier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>H Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+          <ul class="MU_boxx MU_box10">
+            <li class="MU_title" data-bg-area="10" id="ITier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable='plaintext-only'>I Tier</p>
+            </li>
+            <li class="MU_result" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+
+              <!--ここまでデータ挿入-->
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--表はここから-->
+      <div class="Fighter_Storage">
+        <div class="Fighter_TITLE">
+          <h2>Fighter Storage</h2>
+        </div>
+        <div class="Fighter_table">
+          <ul class="Fighter_box">
+            <li class="Fighter_li" ondragover="drag_over(event)" ondrop="drop_end(event)">
+              <!--ここからデータ挿入-->
+              <img src="./img/fighter/01.マリオ.png" alt="マリオの画像" id="001" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/02.ドンキーコング.png" alt="ドンキーコングの画像" id="002" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/03.リンク.png" alt="リンクの画像" id="003" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/04.サムス.png" alt="サムスの画像" id="004" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/05.ダークサムス.png" alt="ダークサムスの画像" id="005" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/06.ヨッシー.png" alt="ヨッシーの画像" id="006" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/07.カービィ.png" alt="カービィの画像" id="007" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/08.フォックス.png" alt="フォックスの画像" id="008" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/09.ピカチュウ.png" alt="ピカチュウの画像" id="009" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/10.ルイージ.png" alt="ルイージの画像" id="010" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/11.ネス.png" alt="ネスの画像" id="011" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/12.キャプテン・ファルコン.png" alt="キャプテン・ファルコンの画像" id="012" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/13.プリン.png" alt="プリンの画像" id="013" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/14.ピーチ.png" alt="ピーチの画像" id="014" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/15.デイジー.png" alt="デイジーの画像" id="015" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/16.クッパ.png" alt="クッパの画像" id="016" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/17.アイスクライマー.png" alt="アイスクライマーの画像" id="017" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/18.シーク.png" alt="シークの画像" id="018" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/19.ゼルダ.png" alt="ゼルダの画像" id="019" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/20.ドクターマリオ.png" alt="ドクターマリオの画像" id="020" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/21.ピチュー.png" alt="ピチューの画像" id="021" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/22.ファルコ.png" alt="ファルコの画像" id="022" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/23.マルス.png" alt="マルスの画像" id="023" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/24.ルキナ.png" alt="ルキナの画像" id="024" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/25.こどもリンク.png" alt="こどもリンクの画像" id="025" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/26.ガノンドルフ.png" alt="ガノンドルフの画像" id="026" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/27.ミュウツー.png" alt="ミュウツーの画像" id="027" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/28.ロイ.png" alt="ロイの画像" id="028" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/29.クロム.png" alt="クロムの画像" id="029" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/30.Mr.ゲーム&ウォッチ.png" alt="Mr.ゲーム&ウォッチの画像" id="030" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/31.メタナイト.png" alt="メタナイトの画像" id="031" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/32.ピット.png" alt="ピットの画像" id="032" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/33.ブラックピット.png" alt="ブラックピットの画像" id="033" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/34.ゼロスーツサムス.png" alt="ゼロスーツサムスの画像" id="034" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/35.ワリオ.png" alt="ワリオの画像" id="035" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/36.スネーク.png" alt="スネークの画像" id="036" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/37.アイク.png" alt="アイクの画像" id="037" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/38.ポケモントレーナー.png" alt="ポケモントレーナーの画像" id="038" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/39.ディディーコング.png" alt="ディディーコングの画像" id="039" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/40.リュカ.png" alt="リュカの画像" id="040" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/41.ソニック.png" alt="ソニックの画像" id="041" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/42.デデデ.png" alt="デデデの画像" id="042" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/43.ピクミン＆オリマー.png" alt="ピクミン＆オリマーの画像" id="043" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/44.ルカリオ.png" alt="ルカリオの画像" id="044" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/45.ロボット.png" alt="ロボットの画像" id="045" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/46.トゥーンリンク.png" alt="トゥーンリンクの画像" id="046" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/47.ウルフ.png" alt="ウルフの画像" id="047" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/48.むらびと.png" alt="むらびとの画像" id="048" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/49.ロックマン.png" alt="ロックマンの画像" id="049" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/50.Wii Fit トレーナー.png" alt="Wii Fit トレーナーの画像" id="050" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/51.ロゼッタ＆チコ.png" alt="ロゼッタ＆チコの画像" id="051" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/52.リトルマック.png" alt="リトルマックの画像" id="052" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/53.ゲッコウガ.png" alt="ゲッコウガの画像" id="053" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/54.格闘Mii.png" alt="格闘Miiの画像" id="054" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/55.剣術Mii.png" alt="剣術Miiの画像" id="055" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/56.射撃Mii.png" alt="射撃Miiの画像" id="056" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/57.パルテナ.png" alt="パルテナの画像" id="057" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/58.パックマン.png" alt="パックマンの画像" id="058" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/59.ルフレ.png" alt="ルフレの画像" id="059" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/60.シュルク.png" alt="シュルクの画像" id="060" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/61.クッパJr..png" alt="クッパJr.の画像" id="061" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/62.ダックハント.png" alt="ダックハントの画像" id="062" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/63.リュウ.png" alt="リュウの画像" id="063" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/64.ケン.png" alt="ケンの画像" id="064" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/65.クラウド.png" alt="クラウドの画像" id="065" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/66.カムイ.png" alt="カムイの画像" id="066" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/67.ベヨネッタ.png" alt="ベヨネッタの画像" id="067" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/68.インクリング.png" alt="インクリングの画像" id="068" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/69.リドリー.png" alt="リドリーの画像" id="069" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/70.シモン.png" alt="シモンの画像" id="070" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/71.リヒター.png" alt="リヒターの画像" id="071" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/72.キングクルール.png" alt="キングクルールの画像" id="072" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/73.しずえ.png" alt="しずえの画像" id="073" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/74.ガオガエン.png" alt="ガオガエンの画像" id="074" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/75.パックンフラワー.png" alt="パックンフラワーの画像" id="075" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/76.ジョーカー.png" alt="ジョーカーの画像" id="076" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/77.勇者.png" alt="勇者の画像" id="077" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/78.バンジョー＆カズーイ.png" alt="バンジョー＆カズーイの画像" id="078" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/79.テリー.png" alt="テリーの画像" id="079" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/80.ベレトス.png" alt="ベレトスの画像" id="080" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/81.ミェンミェン.png" alt="ミェンミェンの画像" id="081" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/82.スティーブ.png" alt="スティーブの画像" id="082" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/83.セフィロス.png" alt="セフィロスの画像" id="083" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/84.ホムヒカ.png" alt="ホムヒカの画像" id="084" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/85.カズヤ.png" alt="カズヤの画像" id="085" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/86.ソラ.png" alt="ソラの画像" id="086" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/04.サムス_05.ダークサムス.png" alt="04.サムス/05.ダークサムスの画像" id="087" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/14.ピーチ_15.デイジー.png" alt="14.ピーチ/15.デイジーの画像" id="088" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/32.ピット_33.ブラックピット.png" alt="32.ピット/33.ブラックピットの画像" id="089" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/70.シモン_71.リヒター.png" alt="70.シモン/71.リヒターの画像" id="090" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/リンク.png" alt="リンクの画像" id="91" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ピカチュウ.png" alt="ピカチュウの画像" id="091" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/ワリオ.png" alt="ワリオの画像" id="092" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/アイク.png" alt="アイクの画像" id="093" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/アルフ.png" alt="アルフの画像" id="094" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ゼニガメ.png" alt="ゼニガメの画像" id="095" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/フシギソウ.png" alt="フシギソウの画像" id="096" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/リザードン.png" alt="リザードンの画像" id="097" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/むらびと.png" alt="むらびとの画像" id="098" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/リトルマック3.png" alt="リトルマック3の画像" id="099" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/パルテナ.png" alt="パルテナの画像" id="100" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ルフレ.png" alt="ルフレの画像" id="101" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ラリー.png" alt="ラリーの画像" id="102" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ロイ.png" alt="ロイの画像" id="103" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ウェンディ.png" alt="ウェンディの画像" id="104" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/イギー.png" alt="イギーの画像" id="105" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/モートン.png" alt="モートンの画像" id="106" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/レミー.png" alt="レミーの画像" id="107" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ルドウィグ.png" alt="ルドウィグの画像" id="108" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/クラウド.png" alt="クラウドの画像" id="109" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/カムイ.png" alt="カムイの画像" id="110" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ベヨネッタ.png" alt="ベヨネッタの画像" id="111" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/インクリング.png" alt="インクリングの画像" id="112" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/リドリー.png" alt="リドリーの画像" id="113" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/勇者1.png" alt="勇者1の画像" id="114" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/勇者3.png" alt="勇者3の画像" id="115" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/勇者8.png" alt="勇者8の画像" id="116" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ベレス.png" alt="ベレスの画像" id="117" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/アレックス.png" alt="アレックスの画像" id="118" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/ゾンビ.png" alt="ゾンビの画像" id="119" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/エンダーマン.png" alt="エンダーマンの画像" id="120" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/セフィロス.png" alt="セフィロスの画像" id="121" draggable="true"
+                ondragstart="drag_start(event)">
+              <img src="./img/fighter/ホムラ.png" alt="ホムラの画像" id="122" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ヒカリ.png" alt="ヒカリの画像" id="123" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/カズヤ.png" alt="カズヤの画像" id="124" draggable="true" ondragstart="drag_start(event)">
+              <img src="./img/fighter/ソラ4.png" alt="ソラ4の画像" id="125" draggable="true" ondragstart="drag_start(event)">
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+  <!--mainはここまで-->
+
+  <!--footerはここから-->
+  <footer class="footer">
+    <nav class="site-menu">
+      <ul>
+        <li><a href="./fighter.html">ファイタ一覧</a></li>
+        <li><a href="./ranking.html">キャラランク</a></li>
+        <li><a href="./statstics.html">統計データ</a></li>
+        <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+        <li><a href="./capability.html">簡易不利相性</a></li>
+        <li><a href="./userpolicy.html">利用規約</a></li>
+      </ul>
+    </nav>
+    <a class="footer-logo" href="./index.html">
+      <img src="./img/common/logo.png" alt="SSBU">
+    </a>
+    <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
+    <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
+        当サイトは個人が運営する非公式のWebサービスです。<br>
+        任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
+    <p class="copyright"><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
+  </footer>
+  <!--footerはここまで-->
+  <!--JS挿入部-->
+  <!--非表示機能-->
+  <script src="./js/canvas.js"></script>
+  <script src="./js/backgroundcolor.js"></script>
+  <script>
+    window.onload = function () {
+      // スクロールを禁止にする関数
+      function disableScroll(event) {
+        event.preventDefault();
+      }
+
+      // スクロール禁止
+      document.getElementById('on').onclick = function () {
+        // イベントと関数を紐付け
+        document.addEventListener('touchmove', disableScroll, { passive: false });
+        document.body.classList.add('overflow-hidden');
+      }
+
+      // スクロール解除
+      document.getElementById('off').onclick = function () {
+        // イベントと関数を紐付け
+        document.removeEventListener('touchmove', disableScroll, { passive: false });
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+  </script>
+</body>
+
+</html>

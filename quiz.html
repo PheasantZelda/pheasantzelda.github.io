@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--Headerはここから-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-6GR32CWGN7');
+
+</script>
+
+<head>
+  <!--google adsense-->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>スマアナ検定</title>
+  <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <meta name="discription" content="スマブラの知識やスマアナの統計結果をクイズ形式で出題、スマアナ検定にぜひ挑戦してください。">
+  <meta property="og:site_name" contet="スマアナ検定" />
+  <meta property="og:title" contet="スマアナ検定" />
+  <meta property="og:discription" content="スマブラの知識やスマアナの統計結果をクイズ形式で出題、スマアナ検定にぜひ挑戦してください。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pheasantzelda.github.io/quiz.html" />
+  <meta name="og:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="スマアナ検定" />
+  <meta name="twitter:description" content="スマブラの知識やスマアナの統計結果をクイズ形式で出題、スマアナ検定にぜひ挑戦してください。" />
+  <meta name="twitter:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
+  <meta name="twitter:url" content="https://pheasantzelda.github.io/quiz.html" />
+  <!--スマホ用の画面設定-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/toggle-menu.js"></script>
+  <link href="./css/common.css" rel="stylesheet">
+  <link href="./css/quiz.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/common/icon-192x192.png">
+  <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.png">
+  <link rel="icon" href="img/common/favicon.ico">
+</head>
+
+<!--Bodyはここから-->
+
+<body>
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      const spinner = document.getElementById('loading');
+      spinner.classList.add('loaded');
+    }
+  </script>
+  <!--headerはここから-->
+  <header class="header">
+    <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
+    <div class="header-inner">
+      <!--./index.htmlでトップページを指す-->
+      <a class="header-logo" href="./index.html">
+        <img src="./img/common/logo.png" alt="SSBU">
+      </a>
+      <button class="toggle-menu-button"></button>
+      <div class="header-site-menu">
+        <nav class="site-menu">
+          <ul>
+            <li><a href="./fighter.html">ファイタ一覧</a></li>
+            <li><a href="./ranking.html">キャラランク</a></li>
+            <li><a href="./statstics.html">統計データ</a></li>
+            <li><a href="./capability.html">簡易不利相性</a></li>
+            <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+            <li><a href="./fighter_pick.html">キャラ使用率</a></li>
+            <li><a href="./quiz.html">スマアナ検定</a></li>
+            <li><a href="./record.html">歴代記録</a></li>
+            <li><a href="./userpolicy.html">利用規約</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--headerはここまで-->
+
+  <!--mainはここから-->
+  <main class="main">
+
+    <div class="title">
+      <img src="./img/common/Main.jpg" alt="SSBU">
+      <h1>スマアナ検定</h1>
+      <p>SUMA-ANA EXAM</p>
+    </div>
+    <!--パンくずリスト-->
+    <div class="bread">
+      <nav>
+        <ol class="breadcrumb">
+          <li><a href="/">ホーム</a></li>
+          <li><a href="./quiz.html">スマアナ検定</a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="section">スマアナ検定</div>
+    <div class="explain">
+      <p>　スマアナに掲載している内容やスマブラにまつわる知識について問題にしてみました。問題は全部で140問 (2022/1/9 現在) あり、
+        その中からランダムで表示される５問中４問正解でスマアナ検定合格です。すべての問題で左右差はあります。
+        問題については随時アップデートしていこうと考えています。
+        ぜひユーザーの皆様も扱ってほしい問題などがありましたら<a href="https://twitter.com/pheasant_SSBU">DM</a>、または<a href="#jump"><span>ページ下部のフォーム</span></a>までお送りください。
+        現在掲載している項目は下記になります。
+        <br>　■ 各ファイタのMU（スマアナ調べ15-21期のMUを参照）
+        <br>　■ ファイタのパラメータ
+        <br>　■ 技の発生F・全体F・ダメージ
+      </p>
+    </div>
+    <div class="quiz">
+      <iframe
+        src="//quizgenerator.net/quizhoster/?action=play&course_id=119134&course_path=518143b53d8907d15583b316542978f3"
+        frameborder="0">Iframe対応ブラウザでご覧ください。</iframe>
+    </div>
+    <div class="twitter">
+      <h2>スマアナ検定をツイートしよう！</h2>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="君もスマアナ検定に挑戦してみよう！"
+        data-size="large" data-url="https://pheasantzelda.github.io/quiz.html" data-hashtags="スマアナ検定"
+        data-related="pheasan95712838" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div class="explain">
+      <p>　※ 技については下記のような条件で算出</p>
+    </div>
+    <div class="example">
+      <table>
+        <tr>
+          <th>ファイタ</th>
+          <th>条件</th>
+          <th>ファイタ</th>
+          <th>条件</th>
+        </tr>
+        <tr class="item">
+          <td>アイスクライマー</td>
+          <td>２人</td>
+          <td>オリマー</td>
+          <td>赤ピクミン</td>
+        </tr>
+        <tr class="item">
+          <td>ルカリオ</td>
+          <td>波動補正０％</td>
+          <td>Wii Fit トレーナ</td>
+          <td>通常（腹式無）</td>
+        </tr>
+        <tr class="item">
+          <td>ロゼッタ＆チコ</td>
+          <td>ロゼッタのみ</td>
+          <td>ジョーカー</td>
+          <td>通常（アルセーヌ無）</td>
+        </tr>
+        <tr class="item">
+          <td>シュルク</td>
+          <td>通常</td>
+          <td>ルフレ</td>
+          <td>サンダーソード</td>
+        </tr>
+        <tr class="item">
+          <td>勇者</td>
+          <td>通常</td>
+          <td>ルフレ</td>
+          <td>サンダーソード</td>
+        </tr>
+        <tr class="item">
+          <td>スティーブ武器</td>
+          <td>木材</td>
+          <td>ミェンミェン</td>
+          <td>ドラゴン（強化無）</td>
+        </tr>
+        <tr class="item">
+          <td>セフィロス</td>
+          <td>通常（片翼無）</td>
+          <td>カズヤ</td>
+          <td>技が複数あるため一部問題で除外</td>
+        </tr>
+      </table>
+    </div>
+    <div class="explain">
+      <p>　データソース：<a
+          href="https://docs.google.com/spreadsheets/d/1bdAEBAn1WlWcsJrJaCDrmIk97nHnj9yZy0TouFpmkiA/edit#gid=1437247302">スマブラSP
+          データいろいろ (Ver.11.0.0)<br>　
+        </a></p>
+        <a name="jump" class="jump"></a>
+    </div>
+    <div class="explain">
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdByqoQsKylyqxDBKSV71OaK19KDfChv2Fxvxw1IojenS979Q/viewform?embedded=true"
+        width="640" height="1600" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+      <a><br>　<br></a>
+    </div>
+    <!--<div class="section">スマアナ検定出題問題</div>
+    <div class="explain">
+      <p>　<a href="https://www.smashbros.com/ja_JP/"></p>
+    </div>-->
+
+
+
+
+  </main>
+  <!--mainはここまで-->
+
+  <!--footerはここから-->
+  <footer class="footer">
+    <nav class="site-menu">
+      <ul>
+        <li><a href="./fighter.html">ファイタ一覧</a></li>
+        <li><a href="./ranking.html">キャラランク</a></li>
+        <li><a href="./statstics.html">統計データ</a></li>
+        <li><a href="./capability.html">簡易不利相性</a></li>
+        <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+        <li><a href="./fighter_pick.html">キャラ使用率</a></li>
+        <li><a href="./quiz.html">スマアナ検定</a></li>
+        <li><a href="./record.html">歴代記録</a></li>
+        <li><a href="./userpolicy.html">利用規約</a></li>
+      </ul>
+    </nav>
+    <a class="footer-logo" href="./index.html">
+      <img src="./img/common/logo.png" alt="SSBU">
+    </a>
+    <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
+    <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
+        当サイトは個人が運営する非公式のWebサービスです。<br>
+        任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
+    <p class="copyright">ver5.0.0 2023/2/23<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
+  </footer>
+  <!--footerはここまで-->
+</body>
+
+</html>

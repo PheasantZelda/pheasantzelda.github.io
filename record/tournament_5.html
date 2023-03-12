@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--Headerはここから-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-6GR32CWGN7');
+
+</script>
+
+<head>
+  <!--google adsense-->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>オンライン大会の歴史5</title>
+  <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <meta name="discription" content="スマメイト内で開催される２つのオンライン大会 タミスマ マエスマの成績をポイントしてランキング形式で掲載しています。">
+  <!--スマホ用の画面設定-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../js/toggle-menu.js"></script>
+  <script src="../js/csv.js"></script>
+  <link href="../css/common.css" rel="stylesheet">
+  <link href="../css/tournament.css" rel="stylesheet">
+  <link rel="icon" type="../image/png" href="../img/common/icon-192x192.png">
+  <link rel="apple-touch-icon" type="image/png" href="../img/common/apple-touch-icon-180x180.png">
+  <link rel="icon" href="../img/common/favicon.ico">
+</head>
+<!--Bodyはここから-->
+
+<body>
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+  <!--staticsとranking_rateはcsv.js内にloadingの記述を記載-->
+  <!--headerはここから-->
+  <header class="header">
+    <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
+    <div class="header-inner">
+      <!--./index.htmlでトップページを指す-->
+      <a class="header-logo" href="../index.html">
+        <img src="../img/common/logo.png" alt="SSBU">
+      </a>
+      <button class="toggle-menu-button"></button>
+      <div class="header-site-menu">
+        <nav class="site-menu">
+          <ul>
+            <li><a href="../fighter.html">ファイタ一覧</a></li>
+            <li><a href="../ranking.html">キャラランク</a></li>
+            <li><a href="../statstics.html">統計データ</a></li>
+            <li><a href="../capability.html">簡易不利相性</a></li>
+            <li><a href="../rank_creater.html">Tier表メーカー</a></li>
+            <li><a href="../fighter_pick.html">キャラ使用率</a></li>
+            <li><a href="../quiz.html">スマアナ検定</a></li>
+            <li><a href="../record.html">歴代記録</a></li>
+            <li><a href="../userpolicy.html">利用規約</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--headerはここまで-->
+
+  <!--mainはここから-->
+  <main class="main">
+    <div class="title">
+      <img src="../img/common/Main.jpg" alt="SSBU">
+      <h1>オンライン大会</h1>
+      <p>RECORD</p>
+    </div>
+    <!--パンくずリスト-->
+    <div class="bread">
+      <nav>
+        <ol class="breadcrumb">
+          <li><a href="/">ホーム</a></li>
+          <li><a href="../record.html">歴代記録</a></li>
+          <li>オンライン大会</li>
+        </ol>
+      </nav>
+    </div>
+    <!--表はここから-->
+    <div class="section">
+      オンライン大会結果詳細 (5)
+    </div>
+    <div class="explain">
+      <p>
+        　タミスマ、マエスマでベスト 16 の結果を残したプレイヤー約1500名について、大会ポイントと各順位の回数を下記テーブルにまとめました。
+        プレイヤーのハンドルネームの変更により数値が必ずしも正しくないことがあること、ご留意ください。
+        各カラムの▲/▼ボタンを押すことで、昇順・降順に並べ替えることが可能です。1ページでの表示件数は100名としています。
+      </p>
+    </div>
+    <div class="Pagination">
+      <ul class="Pagination_ul">
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_1.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="Pagination-Item-Link-Icon" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" .. />
+            </svg>
+          </a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_1.html"><span>1</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_2.html"><span>2</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_3.html"><span>3</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_4.html"><span>4</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link isActive" href="./tournament_5.html"><span>5</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_6.html"><span>6</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_7.html"><span>7</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_8.html"><span>8</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_9.html"><span>9</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_10.html"><span>10</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_11.html"><span>11</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_12.html"><span>12</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_13.html"><span>13</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_14.html"><span>14</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_15.html"><span>15</span></a>
+        </li>
+        <li class="Pagination-Item">
+          <a class="Pagination-Item-Link" href="./tournament_15.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="Pagination-Item-Link-Icon" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" .. />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="example">
+      <table class="sorttbl">
+        <tr>
+          <th rowspan="2" class="fix1">順位</th>
+          <th rowspan="2" class="fix1">プレイヤー</th>
+          <th rowspan="2" class="fix1">ポイント</th>
+          <th colspan="5" class="fix1">タミスマ 上位入賞数</th>
+          <th colspan="5" class="fix1">マエスマ 上位入賞数</th>
+        </tr>
+        <tr>
+          <th class="fix2">1位</th>
+          <th class="fix2">2位</th>
+          <th class="fix2">4位</th>
+          <th class="fix2">8位</th>
+          <th class="fix2">16位</th>
+          <th class="fix2">1位</th>
+          <th class="fix2">2位</th>
+          <th class="fix2">4位</th>
+          <th class="fix2">8位</th>
+          <th class="fix2">16位</th>
+        </tr>
+        <!--ここからデータ挿入-->
+
+
+
+        <tr class="item">
+          <td><a>401</a></td>
+          <td><a>びとしゃん</a></td>
+          <td><a>207</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>5</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>402</a></td>
+          <td><a>ジーカ</a></td>
+          <td><a>207</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>403</a></td>
+          <td><a>くまユナ</a></td>
+          <td><a>206</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>8</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>404</a></td>
+          <td><a>Oi ジョーji</a></td>
+          <td><a>205</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>405</a></td>
+          <td><a>ファスター</a></td>
+          <td><a>203</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>3</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>406</a></td>
+          <td><a>獄虎</a></td>
+          <td><a>202</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>407</a></td>
+          <td><a>えかて</a></td>
+          <td><a>198</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>5</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>4</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>408</a></td>
+          <td><a>かいり</a></td>
+          <td><a>195</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>7</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>409</a></td>
+          <td><a>ピチ</a></td>
+          <td><a>194</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>410</a></td>
+          <td><a>ゆきぼう</a></td>
+          <td><a>194</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>411</a></td>
+          <td><a>アイゴスキー</a></td>
+          <td><a>193</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>5</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>412</a></td>
+          <td><a>ヨシオ</a></td>
+          <td><a>193</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>413</a></td>
+          <td><a>最弱犬@サブ</a></td>
+          <td><a>193</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>414</a></td>
+          <td><a>コーヒー</a></td>
+          <td><a>192</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>415</a></td>
+          <td><a>オールド</a></td>
+          <td><a>191</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>4</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>416</a></td>
+          <td><a>あつむ　ゆうちゅーぶ</a></td>
+          <td><a>191</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>417</a></td>
+          <td><a>あこ＆そんぐン</a></td>
+          <td><a>190</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>418</a></td>
+          <td><a>もつみ</a></td>
+          <td><a>190</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>419</a></td>
+          <td><a>わだ</a></td>
+          <td><a>190</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+          <td><a>4</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>420</a></td>
+          <td><a>VIC/ふぁいやー</a></td>
+          <td><a>189</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>421</a></td>
+          <td><a>AIR&Norito</a></td>
+          <td><a>189</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>422</a></td>
+          <td><a>Sylph</a></td>
+          <td><a>188</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>423</a></td>
+          <td><a>鰤</a></td>
+          <td><a>188</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>424</a></td>
+          <td><a>フィル</a></td>
+          <td><a>187</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>8</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>425</a></td>
+          <td><a>かにたま</a></td>
+          <td><a>187</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>426</a></td>
+          <td><a>パスード</a></td>
+          <td><a>187</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>5</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>427</a></td>
+          <td><a>りむ！</a></td>
+          <td><a>187</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>5</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>428</a></td>
+          <td><a>WEED-P</a></td>
+          <td><a>185</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>429</a></td>
+          <td><a>かろえぐ</a></td>
+          <td><a>183</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>430</a></td>
+          <td><a>かした</a></td>
+          <td><a>183</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>431</a></td>
+          <td><a>くまー</a></td>
+          <td><a>182</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>432</a></td>
+          <td><a>マキナ</a></td>
+          <td><a>181</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>6</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>433</a></td>
+          <td><a>たみふる</a></td>
+          <td><a>180</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>434</a></td>
+          <td><a>とんたん</a></td>
+          <td><a>180</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>435</a></td>
+          <td><a>bt.yamato</a></td>
+          <td><a>179</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>436</a></td>
+          <td><a>りぜお</a></td>
+          <td><a>178</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>5</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>437</a></td>
+          <td><a>にっけ</a></td>
+          <td><a>177</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>438</a></td>
+          <td><a>ドラ</a></td>
+          <td><a>175</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>439</a></td>
+          <td><a>りすと</a></td>
+          <td><a>174</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>4</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>440</a></td>
+          <td><a>エイク</a></td>
+          <td><a>174</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>441</a></td>
+          <td><a>ikep</a></td>
+          <td><a>173</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>4</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>442</a></td>
+          <td><a>すいのこ@配信or録画</a></td>
+          <td><a>172</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>443</a></td>
+          <td><a>ユマ自滅全1</a></td>
+          <td><a>172</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>444</a></td>
+          <td><a>はるぽよ</a></td>
+          <td><a>172</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>5</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>445</a></td>
+          <td><a>ナギ</a></td>
+          <td><a>172</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>6</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>446</a></td>
+          <td><a>FILIP</a></td>
+          <td><a>170</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>447</a></td>
+          <td><a>やま</a></td>
+          <td><a>169</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>448</a></td>
+          <td><a>rari</a></td>
+          <td><a>168</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>449</a></td>
+          <td><a>ばんくー</a></td>
+          <td><a>166</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>450</a></td>
+          <td><a>c_Ka</a></td>
+          <td><a>166</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>451</a></td>
+          <td><a>マイキー</a></td>
+          <td><a>166</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>452</a></td>
+          <td><a>ももちか</a></td>
+          <td><a>165</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>4</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>453</a></td>
+          <td><a>LLENN</a></td>
+          <td><a>165</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>454</a></td>
+          <td><a>メルハバ</a></td>
+          <td><a>165</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>455</a></td>
+          <td><a>つも</a></td>
+          <td><a>164</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>456</a></td>
+          <td><a>ズズバ</a></td>
+          <td><a>164</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>457</a></td>
+          <td><a>もこニー</a></td>
+          <td><a>164</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>458</a></td>
+          <td><a>33ぺらんBOXつべ</a></td>
+          <td><a>164</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>459</a></td>
+          <td><a>うるさき</a></td>
+          <td><a>162</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>460</a></td>
+          <td><a>シーノック</a></td>
+          <td><a>162</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>461</a></td>
+          <td><a>こめぐら＆ヴァルこころ&ぎらん</a></td>
+          <td><a>162</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>8</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>462</a></td>
+          <td><a>あんこ</a></td>
+          <td><a>161</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>463</a></td>
+          <td><a>J-Snake</a></td>
+          <td><a>161</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>464</a></td>
+          <td><a>れお</a></td>
+          <td><a>160</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>465</a></td>
+          <td><a>硬派ななみせちゃん♪</a></td>
+          <td><a>160</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>466</a></td>
+          <td><a>チマチョゴリ</a></td>
+          <td><a>160</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>467</a></td>
+          <td><a>そ一めん</a></td>
+          <td><a>158</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>468</a></td>
+          <td><a>イチめが</a></td>
+          <td><a>158</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>469</a></td>
+          <td><a>ルフ軍</a></td>
+          <td><a>158</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>470</a></td>
+          <td><a>ウラトム</a></td>
+          <td><a>157</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>471</a></td>
+          <td><a>ぼぼちゃん</a></td>
+          <td><a>157</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>5</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>472</a></td>
+          <td><a>キコ</a></td>
+          <td><a>157</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>473</a></td>
+          <td><a>チルチルミチル</a></td>
+          <td><a>156</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>474</a></td>
+          <td><a>Ｒ&だんごむし先生</a></td>
+          <td><a>156</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>475</a></td>
+          <td><a>アイユ Twitch</a></td>
+          <td><a>156</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>476</a></td>
+          <td><a>カム子の生足美脚ドリル！</a></td>
+          <td><a>156</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>477</a></td>
+          <td><a>まさやーん</a></td>
+          <td><a>155</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>478</a></td>
+          <td><a>グルダン</a></td>
+          <td><a>155</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>7</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>479</a></td>
+          <td><a>hr</a></td>
+          <td><a>154</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>480</a></td>
+          <td><a>caN</a></td>
+          <td><a>154</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>481</a></td>
+          <td><a>めろん</a></td>
+          <td><a>154</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>482</a></td>
+          <td><a>ドラ右</a></td>
+          <td><a>153</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>5</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>483</a></td>
+          <td><a>れうみな</a></td>
+          <td><a>153</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>484</a></td>
+          <td><a>クモゆき</a></td>
+          <td><a>153</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>485</a></td>
+          <td><a>はろもぐHERO</a></td>
+          <td><a>152</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>4</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>4</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>486</a></td>
+          <td><a>ゆう〆シャチ</a></td>
+          <td><a>152</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>3</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>487</a></td>
+          <td><a>ぶりぶりぶりぶりぶり</a></td>
+          <td><a>151</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>488</a></td>
+          <td><a>モントキン</a></td>
+          <td><a>151</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>489</a></td>
+          <td><a>SIN</a></td>
+          <td><a>150</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>490</a></td>
+          <td><a>ふわ</a></td>
+          <td><a>149</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>4</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>491</a></td>
+          <td><a>コムギコ</a></td>
+          <td><a>148</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>492</a></td>
+          <td><a>ひかぞろ</a></td>
+          <td><a>148</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>493</a></td>
+          <td><a>かみきの</a></td>
+          <td><a>147</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>494</a></td>
+          <td><a>くろくま</a></td>
+          <td><a>146</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>495</a></td>
+          <td><a>つばき</a></td>
+          <td><a>145</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>496</a></td>
+          <td><a>よしてん</a></td>
+          <td><a>145</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>2</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>3</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>497</a></td>
+          <td><a>らららし</a></td>
+          <td><a>144</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>498</a></td>
+          <td><a>えぬK</a></td>
+          <td><a>144</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>499</a></td>
+          <td><a>シルソル444</a></td>
+          <td><a>144</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>6</a></td>
+        </tr>
+        <tr class="item">
+          <td><a>500</a></td>
+          <td><a>いおり</a></td>
+          <td><a>141</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>1</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>0</a></td>
+          <td><a>5</a></td>
+        </tr>
+
+
+
+        <!--ここまでデータ挿入-->
+      </table>
+      <div class="Pagination">
+        <ul class="Pagination_ul">
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_1.html">
+              <svg xmlns="http://www.w3.org/2000/svg" class="Pagination-Item-Link-Icon" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" .. />
+              </svg>
+            </a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_1.html"><span>1</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_2.html"><span>2</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_3.html"><span>3</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_4.html"><span>4</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link isActive" href="./tournament_5.html"><span>5</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_6.html"><span>6</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_7.html"><span>7</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_8.html"><span>8</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_9.html"><span>9</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_10.html"><span>10</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_11.html"><span>11</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_12.html"><span>12</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_13.html"><span>13</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_14.html"><span>14</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_15.html"><span>15</span></a>
+          </li>
+          <li class="Pagination-Item">
+            <a class="Pagination-Item-Link" href="./tournament_15.html">
+              <svg xmlns="http://www.w3.org/2000/svg" class="Pagination-Item-Link-Icon" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" .. />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <!--mainはここまで-->
+
+  <!--footerはここから-->
+  <footer class="footer">
+    <nav class="site-menu">
+      <ul>
+        <li><a href="../fighter.html">ファイタ一覧</a></li>
+        <li><a href="../ranking.html">キャラランク</a></li>
+        <li><a href="../statstics.html">統計データ</a></li>
+        <li><a href="../capability.html">簡易不利相性</a></li>
+        <li><a href="../rank_creater.html">Tier表メーカー</a></li>
+        <li><a href="../fighter_pick.html">キャラ使用率</a></li>
+        <li><a href="../quiz.html">スマアナ検定</a></li>
+        <li><a href="../record.html">歴代記録</a></li>
+        <li><a href="../userpolicy.html">利用規約</a></li>
+      </ul>
+    </nav>
+    <a class="footer-logo" href="../index.html">
+      <img src="../img/common/logo.png" alt="SSBU">
+    </a>
+    <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
+    <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
+        当サイトは個人が運営する非公式のWebサービスです。<br>
+        任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
+    <p class="copyright">ver5.0.0 2023/2/23<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
+  </footer>
+  <!--footerはここまで-->
+</body>
+
+</html>

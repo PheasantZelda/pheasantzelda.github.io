@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+.tierlist {
+  width: 1050px;
+  background-color: #2c2a2a;
+  padding: 20px 0px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.tierlista {
+  width: 1050px;
+  background-color: #2c2a2a;
+  padding: 0px 0px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.tierlist h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tierlist h2::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sorttbl p {
+  font-size: 0%;
+}
+
+.sorttbla p {
+  font-size: 0%;
+}
+
+.example {
+  margin-top: 20px;
+}
+
+.example table {
+  border-collapse: separate;
+  margin: 0;
+  border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+table {
+  width: 1000px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+  /* 全テキストを中央寄せ */
+}
+
+
+th, td {
+  padding: 5px 5px;
+  border: solid 0.5px white;
+}
+
+.fix1 {
+  position: sticky;
+  top: 0px;
+}
+
+.fix2 {
+  position: sticky;
+  top: 34.5px;
+}
+
+th {
+  background-color: #504545;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  top: 0;
+  left: 0;
+}
+
+td {
+  background-color: #292828;
+  padding: 10px 5px;
+}
+
+.Pagination {
+  display: flex;
+  margin-top: 20px;
+
+}
+
+.Pagination_ul {
+  display: flex;
+  align-items: center;
+  border: solid 2px #111;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Pagination_ul>*+* {
+  border-left: solid 2px #111;
+}
+
+.Pagination-Item-Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  background: #e7412b;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.15s linear;
+}
+
+.Pagination-Item-Link-Icon {
+  width: 20px;
+}
+
+.Pagination-Item-Link.isActive {
+  background: white;
+  color: #e7412b;
+  pointer-events: none;
+}
+
+.Pagination-Item-Link:not(.isActive):hover {
+  background: white;
+  color: #e7412b;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+
+@media (max-width: 840px) {
+
+  .tierlist {
+    max-width: 98%;
+    padding: 10px 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .tierlista {
+    max-width: 98%;
+    padding: 0px 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .tierlist h2 {
+    font-size: 12px;
+  }
+
+  .tierlist h2::after {
+    max-width: 40%;
+    height: 2px;
+    margin-top: 10px;
+  }
+
+  table {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .sorttbla {
+    width: 95%;
+  }
+
+  th, td {
+    border: solid 0.2px white;
+  }
+
+  .fix1 {
+    position: relative;
+  }
+  
+  .fix2 {
+    top:0;
+    position: relative;
+  }
+
+  th {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  td {
+    font-size: 10px;
+  }
+
+  .Pagination {
+    margin-top: 20px;
+  }
+
+  .Pagination_ul {
+    border: solid 1px #111;
+  }
+
+  .Pagination_ul>*+* {
+    border-left: solid 1px #111;
+  }
+
+  .Pagination-Item-Link {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    font-weight: 100;
+    transition: all 0.15s linear;
+  }
+
+  .Pagination-Item-Link-Icon {
+    width: 20px;
+  }
+
+  .Pagination-Item-Link.isActive {
+    pointer-events: none;
+  }
+
+}
