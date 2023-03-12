@@ -1,3 +1,4 @@
-User-Agent: Googlebot
+User-Agent: *
 Disallow: /smashmate_analysys/
+Disallow: /chara/index.html
 Sitemap: https://pheasantzelda.github.io/sitemap.xml
