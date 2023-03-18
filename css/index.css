@@ -19,7 +19,7 @@
 
 .Link dl {
   width: 50px;
-  top:-12px;
+  top: -12px;
 }
 
 .Link dt {
@@ -100,10 +100,10 @@
 .service-list {
   display: grid;
   column-gap: 30px;
-  row-gap: 20px;
+  row-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   cursor: pointer;
 }
 
@@ -111,20 +111,21 @@
   text-align: center;
   padding: 30px 50px;
   color: white;
-  background-color:#292b2c;
-  box-shadow: 8px 8px 10px rgb(194, 11, 11);
+  background-color: #292b2c;
+  box-shadow: 5px 5px 8px rgb(194, 11, 11);
   border-radius: 10px;
   line-height: 1.5;
   border: red 0.5px solid;
+  transition: all 0.5s;
 }
 
 .service-list__item:hover {
-  transform: scale(0.95);
+  transform: scale(1.05);
   color: #e7412b;
   background-color: #292020;
 }
 
-.service-list__title{
+.service-list__title {
   padding: 5px 0px;
   text-align: center;
   font-size: 18px;
@@ -134,25 +135,29 @@
 
 .service-list__title p {
   font-size: 12px;
-  display:inline;
+  display: inline;
   animation: color-change 2s linear infinite;
 }
 
 @keyframes color-change {
-  0%,100%{
-    color:#ff1493;
+  0%, 100% {
+    color: #ff1493;
   }
-  25%{
-    color:#7fff00;
+
+  25% {
+    color: #7fff00;
   }
-  50%{
-    color:#0091EA;
+
+  50% {
+    color: #0091EA;
   }
-  75%{
-    color:#9400d3;
+
+  75% {
+    color: #9400d3;
   }
-  
+
 }
+
 .service-list__text {
   line-height: 1.0em;
 }
@@ -174,6 +179,7 @@
     width: 500px;
     padding: 20px 25px;
   }
+
   .movie iframe {
     height: 240px;
   }
@@ -190,6 +196,7 @@
     max-width: 100%;
     margin-left: 6%;
   }
+
   .service-list {
     max-width: 90%;
     display: grid;
@@ -204,7 +211,7 @@
   .service-list__item {
     padding: 20px 20px;
     color: white;
-    background-color:#292b2c;
+    background-color: #292b2c;
     box-shadow: 8px 8px 16px rgb(194, 11, 11);
     border-radius: 8px;
     line-height: 1.0;
@@ -215,7 +222,7 @@
     transform: scale(0.95);
   }
 
-  .service-list__title{
+  .service-list__title {
     padding: 5px 0px;
     text-align: center;
     font-size: 13px;
