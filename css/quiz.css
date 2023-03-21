@@ -7,6 +7,10 @@
   margin-bottom: 30px;
 }
 
+.explain h2 {
+  color: yellow;
+}
+
 iframe {
   height: 700px;
   width: 1000px;
@@ -23,8 +27,8 @@ iframe {
   margin-top: 10px;
 }
 
-.example table{
-  border-collapse:separate;
+.example table {
+  border-collapse: separate;
   margin: 20px;
   border-spacing: 0;
   margin-left: auto;
@@ -38,7 +42,8 @@ table {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
-  text-align: center; /* 全テキストを中央寄せ */
+  text-align: center;
+  /* 全テキストを中央寄せ */
 }
 
 th, td {
@@ -68,7 +73,7 @@ td img {
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 840px) {
@@ -83,7 +88,8 @@ html {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    text-align: center; /* 全テキストを中央寄せ */
+    text-align: center;
+    /* 全テキストを中央寄せ */
   }
 
   .sorttbla {
@@ -94,10 +100,11 @@ html {
     font-size: 12px;
     line-height: 1.5;
   }
-  
+
   td {
     font-size: 10px;
   }
+
   td img {
     width: 30px;
   }
