@@ -263,7 +263,7 @@
 
   .service-list__item {
     padding: 20px 15px;
-    border-radius: 8px;
+    border-radius: 0px;
     line-height: 1.0;
     color: white;
     /*     background-color: #292b2c;
