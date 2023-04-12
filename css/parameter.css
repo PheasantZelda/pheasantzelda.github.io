@@ -229,7 +229,7 @@ td img {
   background-color: rgb(53, 48, 48);
   max-width: 800px;
   border: double 4px #e7412b;
-  padding: 0.5em 1em 0.5em 2.3em;
+  padding: 0.5em 1em 0.5em 1.8em;
 }
 
 .toc_title {
@@ -259,13 +259,13 @@ td img {
   line-height: 1.3;
   position: relative;
   padding: .3em 1em .1em 1.1em;
-  list-style: none;
+  list-style: armenian;
 }
-
 
 .toc_child li a {
   font-weight: 400;
   font-size: 18px;
+  transition: .3s;
 }
 
 .toc_child li :hover {
@@ -294,8 +294,8 @@ td img {
   .tierlist {
     max-width: 98%;
     padding: 10px 0px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 
 
@@ -369,7 +369,6 @@ td img {
     display: inline-flex;
     width: 12px;
     height: 10px;
-
     background: #eee;
     border: 1px solid grey;
     margin-top: 4px;
@@ -379,15 +378,6 @@ td img {
     cursor: pointer;
   }
 
-  /* === ソートボタン（カーソルオーバー時）========= */
-  .tsImg:hover {
-    background: grey;
-  }
-
-  /* === ソートボタン内の三角の色（SVG）============ */
-  .tsImg path {
-    fill: #333536;
-  }
 
   .sorttbl p {
     font-size: 0%;
@@ -421,4 +411,54 @@ td img {
     width: 30px;
   }
 
+  .MU_result a p {
+    padding: 0.5px 0px;
+    width: 100%;
+    font-size: 8px;
+  }
+
+  /*目次*/
+  #toc_container {
+    margin: 5px auto 20px auto;
+    max-width: 600px;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+  }
+
+  .toc_title {
+    padding: 5px 0px;
+    font-size: 20px;
+  }
+
+  .toc_list {
+    padding-bottom: 10px;
+  }
+
+  .toc_list span {
+    padding: 5px 0px;
+    font-size: 15px;
+  }
+
+  .toc_child li {
+    line-height: 1.2;
+    padding: .3em 0.5em .1em 0.5em;
+    list-style: none;
+  }
+
+
+  .toc_child li a {
+    font-weight: 400;
+    font-size: 11px;
+    transition: .3s;
+  }
+
+  .back {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .back a {
+    border-radius: 3px;
+    padding: 5px 5px;
+    width: 100px;
+  }
 }
