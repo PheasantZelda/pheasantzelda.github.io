@@ -535,7 +535,7 @@ button:hover svg {
   }
 
   .back {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   button {
@@ -545,6 +545,7 @@ button:hover svg {
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 20px;
+    border: 0.5px solid #e7412b;
 
   }
 
