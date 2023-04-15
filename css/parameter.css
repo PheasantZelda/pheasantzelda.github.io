@@ -490,6 +490,10 @@ button:hover svg {
     font-size: 9px;
   }
 
+  td img {
+    width: 30px;
+  }
+
   .MU_result a p {
     padding: 0.5px 0px;
     width: 100%;
