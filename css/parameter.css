@@ -4,27 +4,24 @@ html {
   scroll-behavior: smooth;
 }
 
-#off {
+#toggle1 {
   display: none;
+  opacity: 0;
+  transition: all 1s;
 }
 
-.off {
-  display: inline-block;
-  background: #b6beff;
-  padding: 5px 10px;
-  cursor: pointer;
+.toggle-inner {
   display: none;
+  padding: 10px 0px;
+  transition: all 1s;
+  opacity: 0;
 }
 
-.on {
-  background: #ffaf74;
-  height: 100px;
+#toggle1:checked~.toggle-inner {
+  display: block;
+  opacity: 1;
+  transition: all 1s;
 }
-
-#off:checked+label+.MU_result a p {
-  display: none;
-}
-
 
 .tierlist {
   width: 1050px;
@@ -403,6 +400,13 @@ button:hover svg {
     margin-bottom: 5px;
   }
 
+  .toggle-inner {
+    width: 140%;
+  }
+
+  label {
+    font-size: 13px;
+  }
 
   .tierlist h2 {
     font-size: 12px;

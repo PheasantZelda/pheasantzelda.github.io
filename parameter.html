@@ -112,10 +112,8 @@
         　スマブラはファイタにより技の特性や固有パラメータが異なっております。本ページでは特性を可視化するため表形式でまとめております。
         各ファイタの長所などを再認識するきっかけになればと思います。
         ここに掲載している内容は『<a href="./quiz.html">スマアナ検定</a>』でも出題していますので、ぜひ挑戦してみてください。
-        表の構成上同じパラメータやフレーム、ダメージの場合でもTierが異なる場合がありますが、ご了承ください。
+        表の構成上、同じパラメータやフレーム,ダメージの場合でもTierが異なる場合がありますが、ご了承ください。
       </p>
-      <input type="checkbox" id="off">
-      <label class="off" for="off">ボタン</label>
     </div>
     <div id="page_top"></div>
     <div class="toc_container">
@@ -124,12 +122,12 @@
         <li><span>パラメーター</span>
           <ul class="toc_child">
             <li><a href="#重さ">重さ</a></li>
-            <li><a href="#盾サイズ">盾サイズ</a></li>
+            <li><a href="#シールドサイズ">シールドサイズ</a></li>
             <li><a href="#歩行加速量">歩行加速量</a></li>
             <li><a href="#最大歩行速度">最大歩行速度</a></li>
             <li><a href="#ダッシュ初速度">ダッシュ初速度</a></li>
-            <li><a href="#走行加速">走行加速</a></li>
-            <li><a href="#最大走行速度">最大走行速度</a></li>
+            <li><a href="#ダッシュ加速量">ダッシュ加速量</a></li>
+            <li><a href="#最大ダッシュ速度">最大ダッシュ速度</a></li>
             <li><a href="#地上抵抗">地上抵抗</a></li>
             <li><a href="#空中加速">空中加速</a></li>
             <li><a href="#最大空中速度">最大空中速度</a></li>
@@ -140,6 +138,8 @@
             <li><a href="#大ジャンプ高さ">大ジャンプ高さ</a></li>
             <li><a href="#小ジャンプ高さ">小ジャンプ高さ</a></li>
             <li><a href="#空中ジャンプ高さ">空中ジャンプ高さ</a></li>
+            <li><a href="#その場掴み長さ">その場掴み長さ</a></li>
+            <li><a href="#その場掴み発生">その場掴み発生</a></li>
           </ul>
         </li>
         <li><span>地上攻撃</span>
@@ -196,7 +196,68 @@
 
     <div class="example" id="condition">
       <div class="explain">
-        <p>　※ 技については下記のような条件で算出
+        <input type="checkbox" id="toggle1">
+        <div class="toggle-outer">
+          <label for="toggle1"><br>
+            　※1 パラメータの説明は<span>こちらクリックして開く▼</span><br> <br></label>
+        </div>
+        <div class="toggle-inner">
+          <table>
+            <tr>
+              <th>パラメータ</th>
+              <th>説明</th>
+            </tr>
+            <tr class="item">
+              <td>歩行加速量</td>
+              <td>歩行したときにファイターに追加される加速量</td>
+            </tr>
+            <tr class="item">
+              <td>最大歩行速度</td>
+              <td>ファイターが達することのできる最大の歩行速度</td>
+            </tr>
+            <tr class="item">
+              <td>ダッシュ初速度</td>
+              <td>ダッシュし始めにファイターに追加されるX軸方向の速度</td>
+            </tr>
+            <tr class="item">
+              <td>ダッシュ加速量</td>
+              <td>ダッシュしたときにファイターに追加されるX軸方向の加速量</td>
+            </tr>
+            <tr class="item">
+              <td>最大ダッシュ速度</td>
+              <td>ファイターが達することのできる最大の走行速度</td>
+            </tr>
+            <tr class="item">
+              <td>地上抵抗</td>
+              <td>1F毎に減少するファイターのX軸方向の速度</td>
+            </tr>
+            <tr class="item">
+              <td>空中加速</td>
+              <td>空中のファイターが達することのできる最大のX軸方向の速度</td>
+            </tr>
+            <tr class="item">
+              <td>最大空中速度</td>
+              <td>空中のファイターが達することのできる最大のX軸方向の速度</td>
+            </tr>
+            <tr class="item">
+              <td>空中抵抗</td>
+              <td>1F毎に減少するファイターのX軸方向の速度</td>
+            </tr>
+            <tr class="item">
+              <td>最大落下速度</td>
+              <td>落下状態にあるファイターが空中で達することのできる最大のY軸方高の速度</td>
+            </tr>
+            <tr class="item">
+              <td>急降下速度</td>
+              <td>急降下中のファイターのY軸方向の速</td>
+            </tr>
+            <tr class="item">
+              <td>重力</td>
+              <td>落下状態にあるファイターのY軸方向の加速度</td>
+            </tr>
+          </table>
+        </div>
+        <p>　※2 技については下記のような条件で算出
           <br>
         </p>
       </div>
@@ -581,13 +642,13 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>
         </button></a></div>
-    <div class="section" id="盾サイズ">
-      盾サイズ
+    <div class="section" id="シールドサイズ">
+      シールドサイズ
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
         <h2>
-          盾サイズ
+          シールドサイズ
         </h2>
         <img src="./img/common/logo.png" alt="SSBU" />
       </div>
@@ -1861,13 +1922,13 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>
         </button></a></div>
-    <div class="section" id="走行加速">
-      走行加速
+    <div class="section" id="ダッシュ加速量">
+      ダッシュ加速量
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
         <h2>
-          走行加速
+          ダッシュ加速量
         </h2>
         <img src="./img/common/logo.png" alt="SSBU" />
       </div>
@@ -2181,13 +2242,13 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>
         </button></a></div>
-    <div class="section" id="最大走行速度">
-      最大走行速度
+    <div class="section" id="最大ダッシュ速度">
+      最大ダッシュ速度
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
         <h2>
-          最大走行速度
+          最大ダッシュ速度
         </h2>
         <img src="./img/common/logo.png" alt="SSBU" />
       </div>
@@ -5999,6 +6060,646 @@
             </a>
             <a href="./chara/42.king_dedede.html"><img src="./img/fighter2/42.デデデ.jpg" alt="ファイター画像">
               <p>26F</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="back"><a href="#page_top">
+        <button>
+          <div class="text">
+            <span>Back</span>
+            <span>to</span>
+            <span>top</span>
+          </div>
+          <div class="clone">
+            <span>Back</span>
+            <span>to</span>
+            <span>top</span>
+          </div>
+          <svg width="20px" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </button></a></div>
+    <div class="section" id="その場掴み長さ">
+      その場掴み長さ
+    </div>
+    <div class="tierlist">
+      <div class="MUTITLE">
+        <h2>
+          その場掴み長さ
+        </h2>
+        <img src="./img/common/logo.png" alt="SSBU" />
+      </div>
+      <div class="MU_table">
+        <ul class="MU_box">
+          <li class="MU_title MU_title_yuuri">
+            <p>S Tier<br>1~10</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/04.samus_dark_samus.html"><img src="./img/fighter/04.サムス_05.ダークサムス.png" alt="ファイター画像">
+              <p>42.2</p>
+            </a>
+            <a href="./chara/81.minmin.html"><img src="./img/fighter/81.ミェンミェン.png" alt="ファイター画像">
+              <p>40</p>
+            </a>
+            <a href="./chara/34.zero_suit_samus.html"><img src="./img/fighter/34.ゼロスーツサムス.png" alt="ファイター画像">
+              <p>37</p>
+            </a>
+            <a href="./chara/82.steve.html"><img src="./img/fighter/82.スティーブ.png" alt="ファイター画像">
+              <p>31.9</p>
+            </a>
+            <a href="./chara/10.luigi.html"><img src="./img/fighter/10.ルイージ.png" alt="ファイター画像">
+              <p>29.8</p>
+            </a>
+            <a href="./chara/25.young_link.html"><img src="./img/fighter/25.こどもリンク.png" alt="ファイター画像">
+              <p>29.5</p>
+            </a>
+            <a href="./chara/46.toon_link.html"><img src="./img/fighter/46.トゥーンリンク.png" alt="ファイター画像">
+              <p>28.2</p>
+            </a>
+            <a href="./chara/58.pacman.html"><img src="./img/fighter/58.パックマン.png" alt="ファイター画像">
+              <p>28.2</p>
+            </a>
+            <a href="./chara/06.yoshi.html"><img src="./img/fighter/06.ヨッシー.png" alt="ファイター画像">
+              <p>26</p>
+            </a>
+            <a href="./chara/43.olimar.html"><img src="./img/fighter/43.ピクミン＆オリマー.png" alt="ファイター画像">
+              <p>24.15</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="MU_box">
+          <li class="MU_title MU_title_biyuuri">
+            <p>A Tier<br>11~30</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/86.sora.html"><img src="./img/fighter/85.カズヤ.png" alt="ファイター画像">
+              <p>23</p>
+            </a>
+            <a href="./chara/40.lucas.html"><img src="./img/fighter/40.リュカ.png" alt="ファイター画像">
+              <p>22.9</p>
+            </a>
+            <a href="./chara/38.pokemon_trainer.html"><img src="./img/fighter/フシギソウ.png" alt="ファイター画像">
+              <p>21.4</p>
+            </a>
+            <a href="./chara/16.bowser.html"><img src="./img/fighter/16.クッパ.png" alt="ファイター画像">
+              <p>20</p>
+            </a>
+            <a href="./chara/72.king_k_rool.html"><img src="./img/fighter/72.キングクルール.png" alt="ファイター画像">
+              <p>20</p>
+            </a>
+            <a href="./chara/02.donkey_kong.html"><img src="./img/fighter/02.ドンキーコング.png" alt="ファイター画像">
+              <p>19.5</p>
+            </a>
+            <a href="./chara/48.villager.html"><img src="./img/fighter/48.むらびと.png" alt="ファイター画像">
+              <p>19</p>
+            </a>
+            <a href="./chara/73.isabelle.html"><img src="./img/fighter/73.しずえ.png" alt="ファイター画像">
+              <p>19</p>
+            </a>
+            <a href="./chara/53.greninja.html"><img src="./img/fighter/53.ゲッコウガ.png" alt="ファイター画像">
+              <p>18.5</p>
+            </a>
+            <a href="./chara/61.bowser_jr.html"><img src="./img/fighter/61.クッパJr..png" alt="ファイター画像">
+              <p>18</p>
+            </a>
+            <a href="./chara/42.king_dedede.html"><img src="./img/fighter/42.デデデ.png" alt="ファイター画像">
+              <p>17</p>
+            </a>
+            <a href="./chara/45.rob.html"><img src="./img/fighter/45.ロボット.png" alt="ファイター画像">
+              <p>16.5</p>
+            </a>
+            <a href="./chara/74.incineroar.html"><img src="./img/fighter/74.ガオガエン.png" alt="ファイター画像">
+              <p>16</p>
+            </a>
+            <a href="./chara/36.snake.html"><img src="./img/fighter/36.スネーク.png" alt="ファイター画像">
+              <p>15.5</p>
+            </a>
+            <a href="./chara/19.zelda.html"><img src="./img/fighter/19.ゼルダ.png" alt="ファイター画像">
+              <p>15.3</p>
+            </a>
+            <a href="./chara/38.pokemon_trainer.html"><img src="./img/fighter/ゼニガメ.png" alt="ファイター画像">
+              <p>15.2</p>
+            </a>
+            <a href="./chara/56.mii_gunner.html"><img src="./img/fighter/56.射撃Mii.png" alt="ファイター画像">
+              <p>14.8</p>
+            </a>
+            <a href="./chara/23.marth.html"><img src="./img/fighter/23.マルス.png" alt="ファイター画像">
+              <p>14.5</p>
+            </a>
+            <a href="./chara/24.lucina.html"><img src="./img/fighter/24.ルキナ.png" alt="ファイター画像">
+              <p>14.5</p>
+            </a>
+            <a href="./chara/62.duck_hunt.html"><img src="./img/fighter/62.ダックハント.png" alt="ファイター画像">
+              <p>14.5</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="MU_box">
+          <li class="MU_title MU_title_gobu">
+            <p>B Tier<br>31~50</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/69.ridley.html"><img src="./img/fighter/69.リドリー.png" alt="ファイター画像">
+              <p>14.4</p>
+            </a>
+            <a href="./chara/27.mewtwo.html"><img src="./img/fighter/27.ミュウツー.png" alt="ファイター画像">
+              <p>14.3</p>
+            </a>
+            <a href="./chara/75.piranha_plant.html"><img src="./img/fighter/75.パックンフラワー.png" alt="ファイター画像">
+              <p>14.3</p>
+            </a>
+            <a href="./chara/28.roy.html"><img src="./img/fighter/28.ロイ.png" alt="ファイター画像">
+              <p>14.2</p>
+            </a>
+            <a href="./chara/29.chrom.html"><img src="./img/fighter/29.クロム.png" alt="ファイター画像">
+              <p>14.2</p>
+            </a>
+            <a href="./chara/26.ganondorf.html"><img src="./img/fighter/26.ガノンドルフ.png" alt="ファイター画像">
+              <p>14</p>
+            </a>
+            <a href="./chara/35.wario.html"><img src="./img/fighter/35.ワリオ.png" alt="ファイター画像">
+              <p>14</p>
+            </a>
+            <a href="./chara/51.rosalina_luma.html"><img src="./img/fighter/51.ロゼッタ＆チコ.png" alt="ファイター画像">
+              <p>14</p>
+            </a>
+            <a href="./chara/38.pokemon_trainer.html"><img src="./img/fighter/リザードン.png" alt="ファイター画像">
+              <p>14</p>
+            </a>
+            <a href="./chara/79.terry.html"><img src="./img/fighter/79.テリー.png" alt="ファイター画像">
+              <p>13.7</p>
+            </a>
+            <a href="./chara/44.lucario.html"><img src="./img/fighter/44.ルカリオ.png" alt="ファイター画像">
+              <p>13.5</p>
+            </a>
+            <a href="./chara/79.terry.html"><img src="./img/fighter/78.バンジョー＆カズーイ.png" alt="ファイター画像">
+              <p>13.2</p>
+            </a>
+            <a href="./chara/12.captain_falcon.html"><img src="./img/fighter/12.キャプテン・ファルコン.png" alt="ファイター画像">
+              <p>13</p>
+            </a>
+            <a href="./chara/32.pit_dark_pit.html"><img src="./img/fighter/32.ピット_33.ブラックピット.png" alt="ファイター画像">
+              <p>13</p>
+            </a>
+            <a href="./chara/57.palutena.html"><img src="./img/fighter/57.パルテナ.png" alt="ファイター画像">
+              <p>13</p>
+            </a>
+            <a href="./chara/59.robin.html"><img src="./img/fighter/59.ルフレ.png" alt="ファイター画像">
+              <p>13</p>
+            </a>
+            <a href="./chara/52.little_mac.html"><img src="./img/fighter/52.リトルマック.png" alt="ファイター画像">
+              <p>12.9</p>
+            </a>
+            <a href="./chara/07.kirby.html"><img src="./img/fighter/07.カービィ.png" alt="ファイター画像">
+              <p>12.5</p>
+            </a>
+            <a href="./chara/18.sheik.html"><img src="./img/fighter/18.シーク.png" alt="ファイター画像">
+              <p>12.5</p>
+            </a>
+            <a href="./chara/49.megaman.html"><img src="./img/fighter/49.ロックマン.png" alt="ファイター画像">
+              <p>12.5</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="MU_box">
+          <li class="MU_title MU_title_bihuri">
+            <p>C Tier<br>51~70</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/60.shulk.html"><img src="./img/fighter/60.シュルク.png" alt="ファイター画像">
+              <p>12.5</p>
+            </a>
+            <a href="./chara/67.bayonetta.html"><img src="./img/fighter/67.ベヨネッタ.png" alt="ファイター画像">
+              <p>12.5</p>
+            </a>
+            <a href="./chara/84.homura.html"><img src="./img/fighter/ヒカリ.png" alt="ファイター画像">
+              <p>12.5</p>
+            </a>
+            <a href="./chara/76.joker.html"><img src="./img/fighter/76.ジョーカー.png" alt="ファイター画像">
+              <p>12.3</p>
+            </a>
+            <a href="./chara/80.byleth.html"><img src="./img/fighter/80.ベレトス.png" alt="ファイター画像">
+              <p>12.3</p>
+            </a>
+            <a href="./chara/01.mario.html"><img src="./img/fighter/01.マリオ.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/11.ness.html"><img src="./img/fighter/11.ネス.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/13.jigglypuff.html"><img src="./img/fighter/13.プリン.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/14.peach_daisy.html"><img src="./img/fighter/14.ピーチ_15.デイジー.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/20.dr_mario.html"><img src="./img/fighter/20.ドクターマリオ.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/21.pichu.html"><img src="./img/fighter/21.ピチュー.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/22.falco.html"><img src="./img/fighter/22.ファルコ.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/30.mr_game_and_watch.html"><img src="./img/fighter/30.Mr.ゲーム&ウォッチ.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/41.sonic.html"><img src="./img/fighter/41.ソニック.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/47.wolf.html"><img src="./img/fighter/47.ウルフ.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/54.mii_brawler.html"><img src="./img/fighter/54.格闘Mii.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/55.mii_swordfighter.html"><img src="./img/fighter/55.剣術Mii.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/65.cloud.html"><img src="./img/fighter/65.クラウド.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/68.inkling.html"><img src="./img/fighter/68.インクリング.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/70.simon_richter.html"><img src="./img/fighter/70.シモン_71.リヒター.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="MU_box">
+          <li class="MU_title MU_title_huri">
+            <p>D Tier<br>71~85</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/83.sephiroth.html"><img src="./img/fighter/83.セフィロス.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/84.homura.html"><img src="./img/fighter/ホムラ.png" alt="ファイター画像">
+              <p>12</p>
+            </a>
+            <a href="./chara/09.pikachu.html"><img src="./img/fighter/09.ピカチュウ.png" alt="ファイター画像">
+              <p>11.9</p>
+            </a>
+            <a href="./chara/85.kazuya.html"><img src="./img/fighter/86.ソラ.png" alt="ファイター画像">
+              <p>11.9</p>
+            </a>
+            <a href="./chara/66.corrin.html"><img src="./img/fighter/66.カムイ.png" alt="ファイター画像">
+              <p>11.8</p>
+            </a>
+            <a href="./chara/63.ryu.html"><img src="./img/fighter/63.リュウ.png" alt="ファイター画像">
+              <p>11.6</p>
+            </a>
+            <a href="./chara/64.ken.html"><img src="./img/fighter/64.ケン.png" alt="ファイター画像">
+              <p>11.6</p>
+            </a>
+            <a href="./chara/31.metaknight.html"><img src="./img/fighter/31.メタナイト.png" alt="ファイター画像">
+              <p>11.5</p>
+            </a>
+            <a href="./chara/37.ike.html"><img src="./img/fighter/37.アイク.png" alt="ファイター画像">
+              <p>11.5</p>
+            </a>
+            <a href="./chara/39.diddy_kong.html"><img src="./img/fighter/39.ディディーコング.png" alt="ファイター画像">
+              <p>11.5</p>
+            </a>
+            <a href="./chara/50.wii_fit_trainer.html"><img src="./img/fighter/50.Wii Fit トレーナー.png" alt="ファイター画像">
+              <p>11.5</p>
+            </a>
+            <a href="./chara/03.link.html"><img src="./img/fighter/03.リンク.png" alt="ファイター画像">
+              <p>11</p>
+            </a>
+            <a href="./chara/08.fox.html"><img src="./img/fighter/08.フォックス.png" alt="ファイター画像">
+              <p>11</p>
+            </a>
+            <a href="./chara/77.hero.html"><img src="./img/fighter/77.勇者.png" alt="ファイター画像">
+              <p>10.3</p>
+            </a>
+            <a href="./chara/17.ice_climber.html"><img src="./img/fighter/17.アイスクライマー.png" alt="ファイター画像">
+              <p>10</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="back"><a href="#page_top">
+        <button>
+          <div class="text">
+            <span>Back</span>
+            <span>to</span>
+            <span>top</span>
+          </div>
+          <div class="clone">
+            <span>Back</span>
+            <span>to</span>
+            <span>top</span>
+          </div>
+          <svg width="20px" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </button></a></div>
+    <div class="section" id="その場掴み発生">
+      その場掴み発生
+    </div>
+    <div class="tierlist">
+      <div class="MUTITLE">
+        <h2>
+          その場掴み発生
+        </h2>
+        <img src="./img/common/logo.png" alt="SSBU" />
+      </div>
+      <div class="MU_table">
+        <ul class="MU_box">
+          <li class="MU_title MU_title_yuuri">
+            <p>S Tier<br>1~10</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/01.mario.html"><img src="./img/fighter/01.マリオ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/03.link.html"><img src="./img/fighter/03.リンク.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/07.kirby.html"><img src="./img/fighter/07.カービィ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/08.fox.html"><img src="./img/fighter/08.フォックス.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/11.ness.html"><img src="./img/fighter/11.ネス.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/12.captain_falcon.html"><img src="./img/fighter/12.キャプテン・ファルコン.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/13.jigglypuff.html"><img src="./img/fighter/13.プリン.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/14.peach_daisy.html"><img src="./img/fighter/14.ピーチ_15.デイジー.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/18.sheik.html"><img src="./img/fighter/18.シーク.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/20.dr_mario.html"><img src="./img/fighter/20.ドクターマリオ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="MU_box">
+          <li class="MU_title MU_title_biyuuri">
+            <p>A Tier<br>11~30</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/21.pichu.html"><img src="./img/fighter/21.ピチュー.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/22.falco.html"><img src="./img/fighter/22.ファルコ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/23.marth.html"><img src="./img/fighter/23.マルス.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/28.roy.html"><img src="./img/fighter/28.ロイ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/30.mr_game_and_watch.html"><img src="./img/fighter/30.Mr.ゲーム&ウォッチ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/36.snake.html"><img src="./img/fighter/36.スネーク.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/43.olimar.html"><img src="./img/fighter/43.ピクミン＆オリマー.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/45.rob.html"><img src="./img/fighter/45.ロボット.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/47.wolf.html"><img src="./img/fighter/47.ウルフ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/48.villager.html"><img src="./img/fighter/48.むらびと.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/49.megaman.html"><img src="./img/fighter/49.ロックマン.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/52.little_mac.html"><img src="./img/fighter/52.リトルマック.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/53.greninja.html"><img src="./img/fighter/53.ゲッコウガ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/54.mii_brawler.html"><img src="./img/fighter/54.格闘Mii.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/60.shulk.html"><img src="./img/fighter/60.シュルク.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/61.bowser_jr.html"><img src="./img/fighter/61.クッパJr..png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/72.king_k_rool.html"><img src="./img/fighter/72.キングクルール.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/73.isabelle.html"><img src="./img/fighter/73.しずえ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/74.incineroar.html"><img src="./img/fighter/74.ガオガエン.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/76.joker.html"><img src="./img/fighter/76.ジョーカー.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="MU_box">
+          <li class="MU_title MU_title_gobu">
+            <p>B Tier<br>31~50</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/77.hero.html"><img src="./img/fighter/77.勇者.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/82.steve.html"><img src="./img/fighter/82.スティーブ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/84.homura.html"><img src="./img/fighter/ヒカリ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/85.kazuya.html"><img src="./img/fighter/85.カズヤ.png" alt="ファイター画像">
+              <p>6F</p>
+            </a>
+            <a href="./chara/09.pikachu.html"><img src="./img/fighter/09.ピカチュウ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/26.ganondorf.html"><img src="./img/fighter/26.ガノンドルフ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/27.mewtwo.html"><img src="./img/fighter/27.ミュウツー.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/29.chrom.html"><img src="./img/fighter/29.クロム.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/35.wario.html"><img src="./img/fighter/35.ワリオ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/38.pokemon_trainer.html"><img src="./img/fighter/フシギソウ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/39.diddy_kong.html"><img src="./img/fighter/39.ディディーコング.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/42.king_dedede.html"><img src="./img/fighter/42.デデデ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/55.mii_swordfighter.html"><img src="./img/fighter/55.剣術Mii.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/57.palutena.html"><img src="./img/fighter/57.パルテナ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/58.pacman.html"><img src="./img/fighter/58.パックマン.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/63.ryu.html"><img src="./img/fighter/63.リュウ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/64.ken.html"><img src="./img/fighter/64.ケン.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/70.simon_richter.html"><img src="./img/fighter/70.シモン_71.リヒター.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/75.piranha_plant.html"><img src="./img/fighter/75.パックンフラワー.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/80.byleth.html"><img src="./img/fighter/80.ベレトス.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="MU_box">
+          <li class="MU_title MU_title_bihuri">
+            <p>C Tier<br>51~70</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/81.minmin.html"><img src="./img/fighter/81.ミェンミェン.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/83.sephiroth.html"><img src="./img/fighter/83.セフィロス.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/84.homura.html"><img src="./img/fighter/ホムラ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/86.sora.html"><img src="./img/fighter/86.ソラ.png" alt="ファイター画像">
+              <p>7F</p>
+            </a>
+            <a href="./chara/02.donkey_kong.html"><img src="./img/fighter/02.ドンキーコング.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/16.bowser.html"><img src="./img/fighter/16.クッパ.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/17.ice_climber.html"><img src="./img/fighter/17.アイスクライマー.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/25.young_link.html"><img src="./img/fighter/25.こどもリンク.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/32.pit_dark_pit.html"><img src="./img/fighter/32.ピット_33.ブラックピット.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/34.zero_suit_samus.html"><img src="./img/fighter/34.ゼロスーツサムス.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/38.pokemon_trainer.html"><img src="./img/fighter/ゼニガメ.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/40.lucas.html"><img src="./img/fighter/40.リュカ.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/65.cloud.html"><img src="./img/fighter/65.クラウド.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/66.corrin.html"><img src="./img/fighter/66.カムイ.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/68.inkling.html"><img src="./img/fighter/68.インクリング.png" alt="ファイター画像">
+              <p>8F</p>
+            </a>
+            <a href="./chara/50.wii_fit_trainer.html"><img src="./img/fighter/50.Wii Fit トレーナー.png" alt="ファイター画像">
+              <p>9F</p>
+            </a>
+            <a href="./chara/62.duck_hunt.html"><img src="./img/fighter/62.ダックハント.png" alt="ファイター画像">
+              <p>9F</p>
+            </a>
+            <a href="./chara/19.zelda.html"><img src="./img/fighter/19.ゼルダ.png" alt="ファイター画像">
+              <p>10F</p>
+            </a>
+            <a href="./chara/51.rosalina_luma.html"><img src="./img/fighter/51.ロゼッタ＆チコ.png" alt="ファイター画像">
+              <p>10F</p>
+            </a>
+            <a href="./chara/67.bayonetta.html"><img src="./img/fighter/67.ベヨネッタ.png" alt="ファイター画像">
+              <p>10F</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="MU_box">
+          <li class="MU_title MU_title_huri">
+            <p>D Tier<br>71~85</p>
+          </li>
+          <li class="MU_result">
+            <a href="./chara/59.robin.html"><img src="./img/fighter/59.ルフレ.png" alt="ファイター画像">
+              <p>11F</p>
+            </a>
+            <a href="./chara/24.lucina.html"><img src="./img/fighter/24.ルキナ.png" alt="ファイター画像">
+              <p>12F</p>
+            </a>
+            <a href="./chara/38.pokemon_trainer.html"><img src="./img/fighter/リザードン.png" alt="ファイター画像">
+              <p>12F</p>
+            </a>
+            <a href="./chara/41.sonic.html"><img src="./img/fighter/41.ソニック.png" alt="ファイター画像">
+              <p>12F</p>
+            </a>
+            <a href="./chara/44.lucario.html"><img src="./img/fighter/44.ルカリオ.png" alt="ファイター画像">
+              <p>12F</p>
+            </a>
+            <a href="./chara/56.mii_gunner.html"><img src="./img/fighter/56.射撃Mii.png" alt="ファイター画像">
+              <p>12F</p>
+            </a>
+            <a href="./chara/37.ike.html"><img src="./img/fighter/37.アイク.png" alt="ファイター画像">
+              <p>13F</p>
+            </a>
+            <a href="./chara/79.terry.html"><img src="./img/fighter/79.テリー.png" alt="ファイター画像">
+              <p>13F</p>
+            </a>
+            <a href="./chara/06.yoshi.html"><img src="./img/fighter/06.ヨッシー.png" alt="ファイター画像">
+              <p>14F</p>
+            </a>
+            <a href="./chara/10.luigi.html"><img src="./img/fighter/10.ルイージ.png" alt="ファイター画像">
+              <p>14F</p>
+            </a>
+            <a href="./chara/46.toon_link.html"><img src="./img/fighter/46.トゥーンリンク.png" alt="ファイター画像">
+              <p>14F</p>
+            </a>
+            <a href="./chara/69.ridley.html"><img src="./img/fighter/69.リドリー.png" alt="ファイター画像">
+              <p>14F</p>
+            </a>
+            <a href="./chara/04.samus_dark_samus.html"><img src="./img/fighter/04.サムス_05.ダークサムス.png" alt="ファイター画像">
+              <p>15F</p>
+            </a>
+            <a href="./chara/31.metaknight.html"><img src="./img/fighter/31.メタナイト.png" alt="ファイター画像">
+              <p>15F</p>
+            </a>
+            <a href="./chara/79.terry.html"><img src="./img/fighter/78.バンジョー＆カズーイ.png" alt="ファイター画像">
+              <p>18F</p>
             </a>
           </li>
         </ul>
@@ -18851,6 +19552,7 @@
         <li><a href="./fighter_pick.html">キャラ使用率</a></li>
         <li><a href="./quiz.html">スマアナ検定</a></li>
         <li><a href="./record.html">歴代記録</a></li>
+        <li><a href="./parameter.html">特性早見表</a></li>
         <li><a href="./userpolicy.html">利用規約</a></li>
       </ul>
     </nav>
