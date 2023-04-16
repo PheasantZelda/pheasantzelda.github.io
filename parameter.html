@@ -27,19 +27,19 @@
   <meta property="og:discription" content="スマブラのファイタの特性を早見表形式で掲載。技のフレームやパラメータの確認にご使用ください。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pheasantzelda.github.io/parameter.html" />
-  <meta name="og:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.jpg" />
+  <meta name="og:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="ファイタ特性早見表" />
   <meta name="twitter:description" content="スマブラのファイタの特性を早見表形式で掲載。技のフレームやパラメータの確認にご使用ください。" />
-  <meta name="twitter:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.jpg" />
+  <meta name="twitter:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
   <meta name="twitter:url" content="https://pheasantzelda.github.io/quiz.html" />
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="./js/toggle-menu.js"></script>
   <link href="./css/common.css" rel="stylesheet" />
   <link href="./css/parameter.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="img/common/icon-192x192.jpg" />
-  <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.jpg" />
+  <link rel="icon" type="image/png" href="img/common/icon-192x192.png" />
+  <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.png" />
   <link rel="icon" href="img/common/favicon.ico" />
 </head>
 
@@ -82,6 +82,7 @@
             <li><a href="./fighter_pick.html">キャラ使用率</a></li>
             <li><a href="./quiz.html">スマアナ検定</a></li>
             <li><a href="./record.html">歴代記録</a></li>
+            <li><a href="./parameter.html">特性早見表</a></li>
             <li><a href="./userpolicy.html">利用規約</a></li>
           </ul>
         </nav>
@@ -113,6 +114,8 @@
         ここに掲載している内容は『<a href="./quiz.html">スマアナ検定</a>』でも出題していますので、ぜひ挑戦してみてください。
         表の構成上同じパラメータやフレーム、ダメージの場合でもTierが異なる場合がありますが、ご了承ください。
       </p>
+      <input type="checkbox" id="off">
+      <label class="off" for="off">ボタン</label>
     </div>
     <div id="page_top"></div>
     <div class="toc_container">
@@ -141,9 +144,9 @@
         </li>
         <li><span>地上攻撃</span>
           <ul class="toc_child">
-            <li><a href="#ダッシュ攻撃発生F">ダッシュ攻撃発生F</a></li>
-            <li><a href="#ダッシュ攻撃全体F">ダッシュ攻撃全体F</a></li>
-            <li><a href="#ダッシュ攻撃ダメージ">ダッシュ攻撃ダメージ</a></li>
+            <li><a href="#ダッシュ攻撃発生F">DA 発生F</a></li>
+            <li><a href="#ダッシュ攻撃全体F">DA 全体F</a></li>
+            <li><a href="#ダッシュ攻撃ダメージ">DA ダメージ</a></li>
             <li><a href="#上強発生F">上強発生F</a></li>
             <li><a href="#上強全体F">上強全体F</a></li>
             <li><a href="#上強ダメージ">上強ダメージ</a></li>
@@ -153,15 +156,15 @@
             <li><a href="#下強発生F">下強発生F</a></li>
             <li><a href="#下強全体F">下強全体F</a></li>
             <li><a href="#下強ダメージ">下強ダメージ</a></li>
-            <li><a href="#上スマッシュ発生F">上スマッシュ発生F</a></li>
-            <li><a href="#上スマッシュ全体F">上スマッシュ全体F</a></li>
-            <li><a href="#上スマッシュダメージ">上スマッシュダメージ</a></li>
-            <li><a href="#横スマッシュ発生F">横スマッシュ発生F</a></li>
-            <li><a href="#横スマッシュ全体F">横スマッシュ全体F</a></li>
-            <li><a href="#横スマッシュダメージ">横スマッシュダメージ</a></li>
-            <li><a href="#下スマッシュ発生F">下スマッシュ発生F</a></li>
-            <li><a href="#下スマッシュ全体F">下スマッシュ全体F</a></li>
-            <li><a href="#下スマッシュダメージ">下スマッシュダメージ</a></li>
+            <li><a href="#上スマッシュ発生F">上スマ発生F</a></li>
+            <li><a href="#上スマッシュ全体F">上スマ全体F</a></li>
+            <li><a href="#上スマッシュダメージ">上スマダメージ</a></li>
+            <li><a href="#横スマッシュ発生F">横スマ発生F</a></li>
+            <li><a href="#横スマッシュ全体F">横スマ全体F</a></li>
+            <li><a href="#横スマッシュダメージ">横スマダメージ</a></li>
+            <li><a href="#下スマッシュ発生F">下スマ発生F</a></li>
+            <li><a href="#下スマッシュ全体F">下スマ全体F</a></li>
+            <li><a href="#下スマッシュダメージ">下スマダメージ</a></li>
           </ul>
         </li>
         <li><span>空中攻撃</span>
