@@ -23,6 +23,11 @@ html {
   transition: all 1s;
 }
 
+.service-list {
+  margin-bottom: 10px;
+}
+
+
 .tierlist {
   width: 1050px;
   background-color: #2c2a2a;
@@ -266,11 +271,13 @@ td img {
   padding-bottom: 10px;
 }
 
-.toc_list span {
-
-  display: block;
-  padding: 10px 0px 20px 0px;
+.select {
   color: #e7412b;
+}
+
+.toc_list span {
+  display: block;
+  padding: 10px 0px 10px 0px;
   font-weight: bold;
   font-size: 23px;
 }
@@ -569,7 +576,7 @@ button:hover svg {
     height: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 20px;
+    padding-bottom: 21px;
     border: 0.5px solid #e7412b;
 
   }
