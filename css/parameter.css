@@ -278,7 +278,7 @@ td img {
 
 .toc_list span {
   display: block;
-  padding: 10px 30px 10px 0px;
+  padding: 10px 40px 10px 0px;
   font-weight: bold;
   font-size: 23px;
   transition: all .3s;
@@ -555,33 +555,28 @@ button:hover svg {
   /*目次*/
   #toc_container {
     margin: 5px auto 20px auto;
-    max-width: 600px;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-  }
-
-  .toc_title {
-    padding: 5px 0px;
-    font-size: 20px;
-  }
-
-  .toc_list {
-    padding-bottom: 10px;
+    padding: 0px;
   }
 
   .toc_list span {
-    padding: 5px 0px;
-    font-size: 15px;
+    padding: 5px 20px 0px 0px;
+    font-size: 13px;
   }
 
   .toc_child li {
     line-height: 1.2;
-    padding: .3em 0.5em .1em 0.5em;
+    padding: 3px 0px;
+  }
+
+  .toc_list span a:after {
+    margin: 5px auto;
+    height: 1px;
   }
 
 
   .toc_child li a {
     font-weight: 400;
-    font-size: 11px;
+    font-size: 12px;
     transition: .3s;
   }
 
