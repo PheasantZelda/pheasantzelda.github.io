@@ -252,7 +252,9 @@ td img {
   margin: 20px auto 20px auto;
   background-color: rgb(53, 48, 48);
   max-width: 800px;
-  border: double 4px #e7412b;
+  border: 4px double #e7412b;
+  border-image: linear-gradient(75deg, #e7412b, #e7921a);
+  border-image-slice: 1;
   padding: 0.5em 1em 1em 1.8em;
 }
 
@@ -268,7 +270,6 @@ td img {
 .toc_list {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 10px;
 }
 
 .select {
@@ -277,9 +278,27 @@ td img {
 
 .toc_list span {
   display: block;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 30px 10px 0px;
   font-weight: bold;
   font-size: 23px;
+  transition: all .3s;
+}
+
+.toc_list span a:after {
+  content: "";
+  margin: 10px auto;
+  display: block;
+  height: 2px;
+  background: linear-gradient(25deg, #e7412b, #FFC778);
+}
+
+.toc_list span :hover {
+  color: #e7412b;
+}
+
+.toc_child {
+  display: flex;
+  justify-content: space-around;
 }
 
 .toc_child li {
