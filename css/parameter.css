@@ -258,18 +258,15 @@ td img {
   padding: 0.5em 1em 1em 1.8em;
 }
 
-.toc_title {
-  display: block;
-  padding: 5px 0px;
-  text-align: center;
-  color: #e7412b;
-  font-size: 30px;
-  font-weight: bold;
-}
-
 .toc_list {
+  margin-top: 15px;
   display: flex;
   justify-content: space-around;
+  text-align: center;
+}
+
+.toc_list li {
+  width: 170px;
 }
 
 .select {
@@ -278,7 +275,7 @@ td img {
 
 .toc_list span {
   display: block;
-  padding: 10px 40px 10px 0px;
+  padding: 10px 0px 10px 0px;
   font-weight: bold;
   font-size: 23px;
   transition: all .3s;
@@ -286,7 +283,7 @@ td img {
 
 .toc_list span a:after {
   content: "";
-  margin: 10px auto;
+  margin: 5px auto;
   display: block;
   height: 2px;
   background: linear-gradient(25deg, #e7412b, #FFC778);
@@ -296,16 +293,13 @@ td img {
   color: #e7412b;
 }
 
-.toc_child {
-  display: flex;
-  justify-content: space-around;
-}
-
 .toc_child li {
+  margin-left: 20px;
   line-height: 1.3;
   position: relative;
   padding: 4px 0px;
   list-style: circle;
+  text-align: start;
 }
 
 .toc_child li a {
@@ -316,7 +310,6 @@ td img {
 .toc_child li :hover {
   color: #e7412b;
 }
-
 
 .back {
   display: flex;
@@ -604,34 +597,41 @@ td img {
 
   /*目次*/
   .toc_container {
-    margin: 10px auto 10px auto;
-    padding: 10px 0px 20px 15px;
+    margin: 10px 0px;
+    max-width: 600px;
+    padding: 0px;
   }
 
   .toc_list {
-    justify-content: space-between;
+    margin-top: 10px;
+
+  }
+
+
+  .toc_list li {
+    width: 80%;
   }
 
   .toc_list span {
-    padding: 5px 20px 20px -10px;
-    font-size: 13px;
-  }
-
-  .toc_child li {
-    line-height: 1.2;
-    padding: 3px 0px;
+    padding: 5px 0px;
+    font-size: 15px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .toc_list span a:after {
     margin: 5px auto;
-    height: 1px;
   }
 
+  .toc_child li {
+    line-height: 1.2;
+    padding: 2px 0px;
+    margin-left: 30%;
+  }
 
   .toc_child li a {
-    font-weight: 400;
     font-size: 12px;
-    transition: .3s;
   }
 
   .back {
