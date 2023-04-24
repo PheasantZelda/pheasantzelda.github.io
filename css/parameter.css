@@ -255,7 +255,7 @@ td img {
   border: 4px double #e7412b;
   border-image: linear-gradient(75deg, #e7412b, #e7921a);
   border-image-slice: 1;
-  padding: 0.5em 1em 1em 1.8em;
+  padding: 5px 5px 15px 5px;
 }
 
 .toc_list {
@@ -271,6 +271,9 @@ td img {
 
 .select {
   color: #e7412b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .toc_list span {
@@ -461,6 +464,10 @@ td img {
   color: #fff;
 }
 
+.rotation {
+  rotate: calc(-90deg);
+}
+
 @media (max-width: 840px) {
   .tierlist {
     max-width: 98%;
@@ -470,7 +477,7 @@ td img {
   }
 
   .toggle-inner {
-    width: 140%;
+    width: 150%;
   }
 
   label {
@@ -597,16 +604,10 @@ td img {
 
   /*目次*/
   .toc_container {
-    margin: 10px 0px;
+    margin: 20px 0px;
     max-width: 600px;
-    padding: 0px;
+    padding: 5px 0px 10px;
   }
-
-  .toc_list {
-    margin-top: 10px;
-
-  }
-
 
   .toc_list li {
     width: 80%;
@@ -614,8 +615,8 @@ td img {
 
   .toc_list span {
     padding: 5px 0px;
-    font-size: 15px;
-    width: 90%;
+    font-size: 14px;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -627,7 +628,7 @@ td img {
   .toc_child li {
     line-height: 1.2;
     padding: 2px 0px;
-    margin-left: 30%;
+    margin-left: 25%;
   }
 
   .toc_child li a {
