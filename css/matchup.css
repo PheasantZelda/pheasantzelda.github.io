@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+
+.tierlist {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.MU_table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.MU_table ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MU_table ul li {
+  list-style: none;
+  padding: 10px
+}
+
+.MU_table img {
+  width: 500px;
+
+}
+
+/*詳細*/
+
+/* === ソートボタン ============================== */
+.tsImg {
+  display: inline-flex;
+  width: 20px;
+  height: 18px;
+  background: #eee;
+  border: 1px solid grey;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* === ソートボタン（カーソルオーバー時）========= */
+.tsImg:hover {
+  background: grey;
+}
+
+/* === ソートボタン内の三角の色（SVG）============ */
+.tsImg path {
+  fill: #333536;
+}
+
+.example {
+  margin-top: 20px;
+}
+
+.example table {
+  border-collapse: separate;
+  margin: 0;
+  border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+table {
+  width: 800px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+  /* 全テキストを中央寄せ */
+}
+
+
+th, td {
+  padding: 5px 2px;
+  border: solid 1px white;
+  min-width: 120px;
+}
+
+th {
+  background-color: #504545;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+td {
+  background-color: #292828;
+}
+
+td img {
+  width: 50px;
+  margin-top: 0px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+
+@media (max-width: 840px) {
+
+  .tierlist {
+    max-width: 98%;
+  }
+
+  .MU_table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .MU_table ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .MU_table ul li {
+    list-style: none;
+    padding: 10px
+  }
+
+  .MU_table img {
+    width: 500px;
+
+  }
+
+  .MU_title {
+    min-height: 27px;
+    padding: 0px;
+    text-align: center;
+    margin-right: 2px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+
+  .MU_title p {
+    padding-top: 2px;
+    font-size: 7px;
+    line-height: 1.2;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 800;
+  }
+
+  .MU_result {
+    width: 683px;
+    padding: 0;
+    border: solid 0.5px #837f7f;
+  }
+
+  .MU_result img {
+    max-width: 10%;
+  }
+
+  /* === ソートボタン ============================== */
+  .tsImg {
+    display: inline-flex;
+    width: 12px;
+    height: 10px;
+
+    background: #eee;
+    border: 1px solid grey;
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+    padding: 1px;
+    cursor: pointer;
+  }
+
+  /* === ソートボタン（カーソルオーバー時）========= */
+  .tsImg:hover {
+    background: grey;
+  }
+
+  /* === ソートボタン内の三角の色（SVG）============ */
+  .tsImg path {
+    fill: #333536;
+  }
+
+  .sorttbl p {
+    font-size: 0%;
+  }
+
+
+  table {
+    width: 95%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+    /* 全テキストを中央寄せ */
+  }
+
+  .sorttbla {
+    width: 95%;
+  }
+
+  th {
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+    min-width: 10px;
+  }
+
+  td {
+    font-size: 10px;
+    white-space: nowrap;
+    min-width: 10px;
+  }
+
+  td img {
+    width: 30px;
+  }
+
+}
