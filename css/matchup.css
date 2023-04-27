@@ -1,35 +1,75 @@
 @charset "utf-8";
 
-
-.tierlist {
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: center;
+html {
+  scroll-behavior: smooth;
 }
 
 .MU_table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.MU_table ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.MU_table ul li {
-  list-style: none;
-  padding: 10px
+.MU_table ul {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.MU_table img {
-  width: 500px;
-
+.MU_table ul li img {
+  cursor: zoom-in;
+  width: 200px;
+  padding: 0px 10px 20px 10px;
 }
+
+.MU_table ul li p {
+  margin-bottom: 10px;
+}
+
+
+/* zoom */
+#zoomback {
+  /* 絶対位置に配置 */
+  position: fixed;
+  top: 0;
+
+  /* 画面いっぱいに */
+  width: 100vw;
+  height: 100vh;
+
+  /* 背景を少し透過 */
+  background-color: rgba(0, 0, 0, 0.8);
+
+  /* 中のimgを中央揃え */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 10;
+}
+
+/* 拡大画像のサイズを調整 */
+#zooming {
+  width: 35%;
+}
+
+#zoomback img {
+  width: 35%;
+}
+
+.deka {
+  animation: deka 0.2s ease-in-out;
+}
+
+@keyframes deka {
+  from {
+    transform: scale(0);
+  }
+}
+
 
 /*詳細*/
 
@@ -113,32 +153,32 @@ td img {
 }
 
 
+
+
 @media (max-width: 840px) {
 
-  .tierlist {
-    max-width: 98%;
-  }
-
   .MU_table {
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 5px;
   }
 
   .MU_table ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
   }
 
-  .MU_table ul li {
-    list-style: none;
-    padding: 10px
+  .MU_table ul li img {
+    cursor: pointer;
+    padding: 5px;
   }
 
-  .MU_table img {
-    width: 500px;
+  .MU_table ul li p {
+    margin-bottom: 10px;
+  }
 
+
+  /* zoom */
+
+  #zoomback img {
+    width: 85%;
   }
 
   .MU_title {

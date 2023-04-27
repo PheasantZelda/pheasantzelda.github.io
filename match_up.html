@@ -18,7 +18,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
     crossorigin="anonymous"></script>
   <meta charset="UTF-8">
-  <title>相性ランキング</title>
+  <title>キャラ相性優劣</title>
   <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
   <meta name="discription" content="スマブラのオンライン対戦サイト「スマメイト」の対戦結果の統計から有利不利相性のランキングを作成">
   <!--スマホ用の画面設定-->
@@ -61,8 +61,9 @@
             <li><a href="./ranking.html">キャラランク</a></li>
             <li><a href="./statstics.html">統計データ</a></li>
             <li><a href="./capability.html">簡易不利相性</a></li>
+            <li><a href="./parameter.html">特性早見表</a></li>
+            <li><a href="./match_up.html">キャラ相性優劣</a></li>
             <li><a href="./rank_creater.html">Tier表メーカー</a></li>
-            <li><a href="./fighter_pick.html">キャラ使用率</a></li>
             <li><a href="./quiz.html">スマアナ検定</a></li>
             <li><a href="./record.html">歴代記録</a></li>
             <li><a href="./userpolicy.html">利用規約</a></li>
@@ -77,7 +78,7 @@
   <main class="main">
     <div class="title">
       <img src="./img/common/Main.jpg" alt="SSBU">
-      <h1>ファイター相性</h1>
+      <h1>キャラ相性優劣</h1>
       <p>Fighter Math-Up</p>
     </div>
     <!--パンくずリスト-->
@@ -85,41 +86,62 @@
       <nav>
         <ol class="breadcrumb">
           <li><a href="/">ホーム</a></li>
-          <li><a href="./match_up.html">ファイター相性</a></li>
+          <li><a href="./match_up.html">キャラ相性優劣</a></li>
         </ol>
       </nav>
     </div>
-    <div class="section">ファイター相性</div>
+    <div class="section">キャラ相性優劣</div>
     <div class="explain">
       <p>　オンライン対戦サイト「<a href="https://smashmate.net/">スマメイト</a>」の 15-22 期 までの対戦 約 440 万戦の対戦戦績から有利不利相性のランキングを作成しました。
         本サイトでは有利不利の差が大きいMatch-Upの上位 100 組を表形式で掲載しました。その中でも上位 10 組については、上位勢の所感と対策ポイントなどを簡単にまとめていますので、
         単キャラ使いの方などは参考にして下さい。
       </p>
     </div>
-    <div class="section">有利不利相性差 TOP10</div>
+    <div class="section">キャラ相性優劣 TOP10</div>
     <div class="explain">
-      <p>　記事作成依頼中
+      <p>　各ファイターの対戦結果から勝率の差が大きいキャラ相性のTOP10を作成しました。
+        勝率に加えて今回は不利側ファイターを扱う上位勢による辛いポイントと心がけている
+        対策ポイントをお聞きしました。ぜひ不利側のファイターを使用している方は
+        上位勢がどのように対策しているか参考にしてみてください。<span>クリックすると画像が拡大します。</span>
       </p>
-
-      <div class="tierlist">
-        <div class="MU_table">
-          <ul>
-            <li><a><img src="img/common/falco_iceclimber.png"></a>
-            </li>
-            <li><a><img src="img/common/hero_villager.png"></a>
-            </li>
-          </ul>
-        </div>
+    </div>
+    <div class="MU_table">
+      <ul>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li><img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+        <li>
+          <img class="zoom" src="./img/common/hero_villager.png">
+        </li>
+      </ul>
+      <div id="zoomback" class="zoomback">
+        <img id="zooming" class="moge" src="cyan.svg" />
       </div>
     </div>
 
     <!--表はここから-->
     <div class="section">
-      有利不利相性差 TOP100
+      キャラ相性優劣 TOP100
     </div>
     <div class="explain">
       <p>
-        　各ファイターの対戦数、勝敗、勝率を定量的にご覧いただきたい方は以下のテーブルを参照ください。
+        　全ファイターのMUを表にすると3000を超える行数になってしまうため、TOP100までを掲載しました。
+        各ファイターの対戦数、勝敗、勝率を定量的にご覧いただきたい方は以下のテーブルを参照ください。
         各カラムの▲/▼ボタンを押すことで、昇順・降順に並べ替えることが可能です。
       </p>
     </div>
@@ -468,7 +490,8 @@
         <tr class="item">
           <td><a>36</a></td>
           <td><a href="./chara/62.duck_hunt.html"><img src="./img/fighter/62.ダックハント.png" alt="ファイター画像"></a></td>
-          <td><a href="./chara/04.samus_dark_samus.html"><img src="./img/fighter/04.サムス_ダークサムス.png" alt="ファイター画像"></a>
+          <td><a href="./chara/04.samus_dark_samus.html"><img src="./img/fighter/04.サムス_05.ダークサムス.png"
+                alt="ファイター画像"></a>
           </td>
           <td><a href="./chara/62.duck_hunt.html">410</a></td>
           <td><a href="./chara/04.samus_dark_samus.html">196</a></td>
@@ -1076,8 +1099,9 @@
         <li><a href="./ranking.html">キャラランク</a></li>
         <li><a href="./statstics.html">統計データ</a></li>
         <li><a href="./capability.html">簡易不利相性</a></li>
+        <li><a href="./parameter.html">特性早見表</a></li>
+        <li><a href="./match_up.html">キャラ相性優劣</a></li>
         <li><a href="./rank_creater.html">Tier表メーカー</a></li>
-        <li><a href="./fighter_pick.html">キャラ使用率</a></li>
         <li><a href="./quiz.html">スマアナ検定</a></li>
         <li><a href="./record.html">歴代記録</a></li>
         <li><a href="./userpolicy.html">利用規約</a></li>
@@ -1090,9 +1114,11 @@
     <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
         当サイトは個人が運営する非公式のWebサービスです。<br>
         任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-    <p class="copyright">ver5.0.0 2023/2/23<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
+    <p class="copyright">ver6.0.0 2023/05/01<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
   </footer>
   <!--footerはここまで-->
+  <!-- zoom用のjs -->
+  <script src="./js/zoom.js"></script>
 </body>
 
 </html>
