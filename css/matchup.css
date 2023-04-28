@@ -22,7 +22,7 @@ html {
 .MU_table ul li img {
   cursor: zoom-in;
   width: 200px;
-  padding: 0px 10px 20px 10px;
+  padding: 5px;
 }
 
 .MU_table ul li p {
@@ -162,12 +162,15 @@ td img {
   }
 
   .MU_table ul {
-    width: 100%;
+    width: 98%;
+  }
+
+  .MU_table ul li {
+    width: 50%;
   }
 
   .MU_table ul li img {
-    cursor: pointer;
-    padding: 5px;
+    padding: 3px;
   }
 
   .MU_table ul li p {
@@ -176,37 +179,8 @@ td img {
 
 
   /* zoom */
-
   #zoomback img {
     width: 85%;
-  }
-
-  .MU_title {
-    min-height: 27px;
-    padding: 0px;
-    text-align: center;
-    margin-right: 2px;
-    border-bottom-left-radius: 6px;
-    border-top-left-radius: 6px;
-  }
-
-  .MU_title p {
-    padding-top: 2px;
-    font-size: 7px;
-    line-height: 1.2;
-    display: table-cell;
-    vertical-align: middle;
-    font-weight: 800;
-  }
-
-  .MU_result {
-    width: 683px;
-    padding: 0;
-    border: solid 0.5px #837f7f;
-  }
-
-  .MU_result img {
-    max-width: 10%;
   }
 
   /* === ソートボタン ============================== */
@@ -221,7 +195,6 @@ td img {
     margin-right: 4px;
     margin-left: 4px;
     padding: 1px;
-    cursor: pointer;
   }
 
   /* === ソートボタン（カーソルオーバー時）========= */
