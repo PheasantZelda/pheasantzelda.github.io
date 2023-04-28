@@ -23,6 +23,12 @@ html {
   cursor: zoom-in;
   width: 200px;
   padding: 5px;
+  transition: all .3s;
+}
+
+
+.MU_table ul li img:hover {
+  transform: scale(1.1);
 }
 
 .MU_table ul li p {
