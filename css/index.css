@@ -338,4 +338,14 @@ span {
     color: #e7412b;
   }
 
+  /*１周年記念*/
+  .release {
+    margin-top: 55px;
+  }
+
+  .news {
+    font-size: 13px;
+    line-height: 30px;
+  }
+
 }
