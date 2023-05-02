@@ -343,9 +343,9 @@ span {
     margin-top: 55px;
   }
 
-  .news {
+  .news p {
     font-size: 10px;
-    line-height: 30px;
+    line-height: 20px;
   }
 
 }
