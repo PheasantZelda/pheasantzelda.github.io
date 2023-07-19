@@ -29,7 +29,7 @@
 
 .MUTITLE {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   position: relative;
   align-items: center;
   padding: 20px 0;
@@ -75,7 +75,7 @@
 
 .MU_title_Fighter {
   background: linear-gradient(90deg, #333536, #504c4c);
-  border:#837f7f 1px solid;
+  border: #837f7f 1px solid;
 }
 
 .MU_title_yuuri {
@@ -91,7 +91,7 @@
 }
 
 .MU_title_bihuri {
-  background: linear-gradient(270deg,  #1cddeb, #3782f6);
+  background: linear-gradient(270deg, #1cddeb, #3782f6);
 }
 
 .MU_title_huri {
@@ -111,34 +111,36 @@
   width: 68px;
 }
 
-.MU_result img:hover{
-  opacity:0.8;
+.MU_result img:hover {
+  opacity: 0.8;
 }
 
 /*詳細*/
 
 /* === ソートボタン ============================== */
-.tsImg{
-  display    :inline-flex;
-  width      : 20px;
-  height     : 18px;
-  background : #eee;
-  border     : 1px solid grey;
-  margin-top   : 10px;
+.tsImg {
+  display: inline-flex;
+  width: 20px;
+  height: 18px;
+  background: #eee;
+  border: 1px solid grey;
+  margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
-  padding    : 5px;
-  cursor     : pointer;
+  padding: 5px;
+  cursor: pointer;
 }
+
 /* === ソートボタン（カーソルオーバー時）========= */
-.tsImg:hover{
-  background : grey;
+.tsImg:hover {
+  background: grey;
 }
+
 /* === ソートボタン内の三角の色（SVG）============ */
-.tsImg path{
-  fill       : #333536;
+.tsImg path {
+  fill: #333536;
 }
- 
+
 .sorttbl p {
   font-size: 0%;
 }
@@ -146,9 +148,11 @@
 .example {
   margin-top: 20px;
 }
-.example table{
-  border-collapse:separate;
-  margin: 0;
+
+.example table {
+  border-collapse: separate;
+  margin: 0px;
+  margin-bottom: 40px;
   border-spacing: 0;
   margin-left: auto;
   margin-right: auto;
@@ -160,7 +164,8 @@ table {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
-  text-align: center; /* 全テキストを中央寄せ */
+  text-align: center;
+  /* 全テキストを中央寄せ */
 }
 
 th, td {
@@ -201,32 +206,32 @@ td img {
     margin-top: 25px;
     margin-bottom: 25px;
   }
-  
+
   .tierlist h2 {
     font-size: 12px;
   }
-  
+
   .tierlist h2::after {
     max-width: 40%;
     height: 2px;
     margin-top: 10px;
   }
-    
+
   .MUTITLE {
     padding: 1% 0;
   }
-  
+
   .MUTITLE img {
     width: 20%;
     position: absolute;
     right: 5%;
   }
-  
+
   .MU_table {
     max-width: 95%;
     margin-top: 10px;
   }
-  
+
   .MU_box {
     display: flex;
     margin-top: 2px;
@@ -241,7 +246,7 @@ td img {
     border-bottom-left-radius: 6px;
     border-top-left-radius: 6px;
   }
-  
+
   .MU_title p {
     padding-top: 2px;
     font-size: 7px;
@@ -250,44 +255,46 @@ td img {
     vertical-align: middle;
     font-weight: 800;
   }
-  
+
   .MU_result {
     width: 683px;
     padding: 0;
     border: solid 0.5px #837f7f;
   }
-  
+
   .MU_result img {
     max-width: 10%;
   }
 
   .MU_title_Fighter {
-    border:#837f7f 0.5px solid;
+    border: #837f7f 0.5px solid;
   }
 
-    /* === ソートボタン ============================== */
-  .tsImg{
-    display    :inline-flex;
-    width      : 12px;
-    height     : 10px;
-    
-    background : #eee;
-    border     : 1px solid grey;
-    margin-top   : 4px;
+  /* === ソートボタン ============================== */
+  .tsImg {
+    display: inline-flex;
+    width: 12px;
+    height: 10px;
+
+    background: #eee;
+    border: 1px solid grey;
+    margin-top: 4px;
     margin-right: 4px;
     margin-left: 4px;
-    padding    : 1px;
-    cursor     : pointer;
+    padding: 1px;
+    cursor: pointer;
   }
+
   /* === ソートボタン（カーソルオーバー時）========= */
-  .tsImg:hover{
-    background : grey;
+  .tsImg:hover {
+    background: grey;
   }
+
   /* === ソートボタン内の三角の色（SVG）============ */
-  .tsImg path{
-    fill       : #333536;
+  .tsImg path {
+    fill: #333536;
   }
-  
+
   .sorttbl p {
     font-size: 0%;
   }
@@ -298,17 +305,19 @@ td img {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    text-align: center; /* 全テキストを中央寄せ */
+    text-align: center;
+    /* 全テキストを中央寄せ */
   }
 
   th {
     font-size: 12px;
     line-height: 1.5;
   }
-  
+
   td {
     font-size: 10px;
   }
+
   td img {
     width: 30px;
   }
