@@ -10,25 +10,27 @@
   flex-direction: row;
   column-gap: 50px;
   row-gap: 40px;
+  align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .Link img {
-  height: 40px;
-}
+  height: 55px;
 
-.Link dl {
-  width: 50px;
-  top: -12px;
 }
 
 .Link dt {
   font-weight: bold;
-  font-size: 10px;
+  font-size: 13px;
+  padding-top: 2px;
+  text-align: center;
 }
 
-.Link li {
-  position: relative;
+.Link a {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .movie {
@@ -330,6 +332,15 @@ span {
 
   .service-list__text p {
     text-align: center;
+    font-size: 10px;
+  }
+
+  .Link img {
+    height: 40px;
+
+  }
+
+  .Link td {
     font-size: 10px;
   }
 
