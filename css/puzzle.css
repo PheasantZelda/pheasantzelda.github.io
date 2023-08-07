@@ -1,0 +1,8316 @@
+/*----------------------------------------
+    画像 & 各種配色設定
+----------------------------------------*/
+/* パズル画像 */
+.panelGraphic {}
+
+.twitter {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.twitter-share-button {
+  margin-top: 30px;
+}
+
+.tierlist {
+  width: 1050px;
+  background-color: #2c2a2a;
+  padding-bottom: 50px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tierlist h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tierlist h2::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.MUTITLE {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.MUTITLE img {
+  width: 180px;
+  position: absolute;
+  right: 5%;
+}
+
+/* 画面の背景色 */
+.container {
+  background: #181a1b;
+}
+
+/* パズルボディの色と影 */
+.puzzleBody {}
+
+/* パズルのタイトル文字色 */
+.puzzleBody .header {
+  color: #fff;
+}
+
+/* パズルエリアの背景色 */
+.puzzleBody .puzzleArea {
+  background: #00142e;
+}
+
+/* 選択中パネルフォーカスラインの色 */
+.panelGraphic::before {
+  border-color: #c6a726;
+}
+
+/* 移動方向ナビゲーション（矢印）の色 */
+.panelMoveArea .label::before {
+  background: #c6a726;
+}
+
+/*----------------------------------------
+
+
+  本体のスタイル
+
+
+----------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.puzzleBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.puzzleBody .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  font-family: "Anton", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+}
+
+.puzzleBody .header .title_main {
+  padding: 20px 0px;
+  font-size: clamp(12px, 6vw, 30px);
+}
+
+.puzzleBody .puzzleArea {
+  position: relative;
+  width: 60%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.puzzleBody .puzzleArea::before,
+.puzzleBody .puzzleArea::after {
+  content: "";
+  position: absolute;
+  z-index: 11;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+}
+
+.puzzleBody .puzzleArea::before {
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+}
+
+.puzzleBody .puzzleArea::after {
+  top: 0;
+  left: -10%;
+  width: 10%;
+  height: 100%;
+}
+
+.puzzleBody .puzzleArea .puzzleAreaShadow {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  right: -10%;
+  width: 10%;
+  height: 100%;
+}
+
+.puzzleBody .puzzleArea .puzzleAreaShadow::before,
+.puzzleBody .puzzleArea .puzzleAreaShadow::after {
+  content: "";
+  position: absolute;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+}
+
+.puzzleBody .puzzleArea .puzzleAreaShadow::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.puzzleBody .puzzleArea .puzzleAreaShadow::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom right;
+  transform: rotate(-90deg);
+}
+
+.panelMoveArea {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 25%;
+  aspect-ratio: 1/1;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+
+.panelMoveArea .label,
+.panelMoveArea .panelGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.panelMoveArea .label {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.panelMoveArea .label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 60%;
+  height: 60%;
+  clip-path: polygon(0% 20%, 50% 20%, 50% 0%, 100% 50%, 50% 100%, 50% 80%, 0% 80%);
+}
+
+.panelMoveArea .panelGraphic {
+  z-index: 2;
+  background-size: 400%;
+  background-repeat: no-repeat;
+}
+
+.panelMoveArea .panelPosition--1 {
+  background-position: 0 0;
+}
+
+.panelMoveArea .panelPosition--2 {
+  background-position: 33.333333333% 0;
+}
+
+.panelMoveArea .panelPosition--3 {
+  background-position: 66.666666666% 0;
+}
+
+.panelMoveArea .panelPosition--4 {
+  background-position: 100% 0;
+}
+
+.panelMoveArea .panelPosition--5 {
+  background-position: 0 33.333333333%;
+}
+
+.panelMoveArea .panelPosition--6 {
+  background-position: 33.333333333% 33.333333333%;
+}
+
+.panelMoveArea .panelPosition--7 {
+  background-position: 66.666666666% 33.333333333%;
+}
+
+.panelMoveArea .panelPosition--8 {
+  background-position: 100% 33.333333333%;
+}
+
+.panelMoveArea .panelPosition--9 {
+  background-position: 0 66.666666666%;
+}
+
+.panelMoveArea .panelPosition--10 {
+  background-position: 33.333333333% 66.666666666%;
+}
+
+.panelMoveArea .panelPosition--11 {
+  background-position: 66.666666666% 66.666666666%;
+}
+
+.panelMoveArea .panelPosition--12 {
+  background-position: 100% 66.666666666%;
+}
+
+.panelMoveArea .panelPosition--13 {
+  background-position: 0 100%;
+}
+
+.panelMoveArea .panelPosition--14 {
+  background-position: 33.333333333% 100%;
+}
+
+.panelMoveArea .panelPosition--15 {
+  background-position: 66.666666666% 100%;
+}
+
+.checkPanelMove,
+.panelController {
+  display: none;
+}
+
+#panelMove-1:checked~.puzzleBody .panelMoveArea--1 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-1:checked~.puzzleBody .panelMoveArea--1 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-1-A:checked~.puzzleBody .panelMoveArea--1 {
+  top: 0;
+  left: 0;
+}
+
+#panel-1-A:checked~.puzzleBody .panelMoveArea--1 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-A:checked~.puzzleBody .panelMoveArea--1 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-1-A:checked~.puzzleBody .panelMoveArea--1 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-A:checked~.puzzleBody .panelMoveArea--1 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-B:checked~.puzzleBody .panelMoveArea--1 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-1-B:checked~.puzzleBody .panelMoveArea--1 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-B:checked~.puzzleBody .panelMoveArea--1 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-B:checked~.puzzleBody .panelMoveArea--1 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-B:checked~.puzzleBody .panelMoveArea--1 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-1-B:checked~.puzzleBody .panelMoveArea--1 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-B:checked~.puzzleBody .panelMoveArea--1 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-C:checked~.puzzleBody .panelMoveArea--1 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-1-C:checked~.puzzleBody .panelMoveArea--1 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-C:checked~.puzzleBody .panelMoveArea--1 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-C:checked~.puzzleBody .panelMoveArea--1 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-C:checked~.puzzleBody .panelMoveArea--1 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-1-C:checked~.puzzleBody .panelMoveArea--1 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-C:checked~.puzzleBody .panelMoveArea--1 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-D:checked~.puzzleBody .panelMoveArea--1 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-1-D:checked~.puzzleBody .panelMoveArea--1 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-D:checked~.puzzleBody .panelMoveArea--1 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-D:checked~.puzzleBody .panelMoveArea--1 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-D:checked~.puzzleBody .panelMoveArea--1 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-E:checked~.puzzleBody .panelMoveArea--1 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-1-E:checked~.puzzleBody .panelMoveArea--1 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-E:checked~.puzzleBody .panelMoveArea--1 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-E:checked~.puzzleBody .panelMoveArea--1 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-E:checked~.puzzleBody .panelMoveArea--1 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-1-E:checked~.puzzleBody .panelMoveArea--1 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-E:checked~.puzzleBody .panelMoveArea--1 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-F:checked~.puzzleBody .panelMoveArea--1 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-G:checked~.puzzleBody .panelMoveArea--1 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-H:checked~.puzzleBody .panelMoveArea--1 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-1-H:checked~.puzzleBody .panelMoveArea--1 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-H:checked~.puzzleBody .panelMoveArea--1 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-H:checked~.puzzleBody .panelMoveArea--1 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-H:checked~.puzzleBody .panelMoveArea--1 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-H:checked~.puzzleBody .panelMoveArea--1 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-H:checked~.puzzleBody .panelMoveArea--1 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-I:checked~.puzzleBody .panelMoveArea--1 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-1-I:checked~.puzzleBody .panelMoveArea--1 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-I:checked~.puzzleBody .panelMoveArea--1 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-I:checked~.puzzleBody .panelMoveArea--1 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-I:checked~.puzzleBody .panelMoveArea--1 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-1-I:checked~.puzzleBody .panelMoveArea--1 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-I:checked~.puzzleBody .panelMoveArea--1 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-J:checked~.puzzleBody .panelMoveArea--1 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-K:checked~.puzzleBody .panelMoveArea--1 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-L:checked~.puzzleBody .panelMoveArea--1 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-1-L:checked~.puzzleBody .panelMoveArea--1 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-L:checked~.puzzleBody .panelMoveArea--1 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-L:checked~.puzzleBody .panelMoveArea--1 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-L:checked~.puzzleBody .panelMoveArea--1 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-L:checked~.puzzleBody .panelMoveArea--1 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-1-L:checked~.puzzleBody .panelMoveArea--1 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-1-M:checked~.puzzleBody .panelMoveArea--1 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-1-M:checked~.puzzleBody .panelMoveArea--1 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-M:checked~.puzzleBody .panelMoveArea--1 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-M:checked~.puzzleBody .panelMoveArea--1 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-M:checked~.puzzleBody .panelMoveArea--1 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-1-N:checked~.puzzleBody .panelMoveArea--1 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-1-N:checked~.puzzleBody .panelMoveArea--1 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-N:checked~.puzzleBody .panelMoveArea--1 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-N:checked~.puzzleBody .panelMoveArea--1 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-N:checked~.puzzleBody .panelMoveArea--1 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-N:checked~.puzzleBody .panelMoveArea--1 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-N:checked~.puzzleBody .panelMoveArea--1 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-1-O:checked~.puzzleBody .panelMoveArea--1 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-1-O:checked~.puzzleBody .panelMoveArea--1 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-O:checked~.puzzleBody .panelMoveArea--1 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-O:checked~.puzzleBody .panelMoveArea--1 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-O:checked~.puzzleBody .panelMoveArea--1 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-1-O:checked~.puzzleBody .panelMoveArea--1 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-1-O:checked~.puzzleBody .panelMoveArea--1 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-1-P:checked~.puzzleBody .panelMoveArea--1 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-1-P:checked~.puzzleBody .panelMoveArea--1 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-1-P:checked~.puzzleBody .panelMoveArea--1 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-1-P:checked~.puzzleBody .panelMoveArea--1 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-1-P:checked~.puzzleBody .panelMoveArea--1 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-2:checked~.puzzleBody .panelMoveArea--2 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-2:checked~.puzzleBody .panelMoveArea--2 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-2-A:checked~.puzzleBody .panelMoveArea--2 {
+  top: 0;
+  left: 0;
+}
+
+#panel-2-A:checked~.puzzleBody .panelMoveArea--2 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-A:checked~.puzzleBody .panelMoveArea--2 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-2-A:checked~.puzzleBody .panelMoveArea--2 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-A:checked~.puzzleBody .panelMoveArea--2 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-B:checked~.puzzleBody .panelMoveArea--2 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-2-B:checked~.puzzleBody .panelMoveArea--2 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-B:checked~.puzzleBody .panelMoveArea--2 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-B:checked~.puzzleBody .panelMoveArea--2 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-B:checked~.puzzleBody .panelMoveArea--2 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-2-B:checked~.puzzleBody .panelMoveArea--2 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-B:checked~.puzzleBody .panelMoveArea--2 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-C:checked~.puzzleBody .panelMoveArea--2 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-2-C:checked~.puzzleBody .panelMoveArea--2 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-C:checked~.puzzleBody .panelMoveArea--2 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-C:checked~.puzzleBody .panelMoveArea--2 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-C:checked~.puzzleBody .panelMoveArea--2 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-2-C:checked~.puzzleBody .panelMoveArea--2 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-C:checked~.puzzleBody .panelMoveArea--2 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-D:checked~.puzzleBody .panelMoveArea--2 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-2-D:checked~.puzzleBody .panelMoveArea--2 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-D:checked~.puzzleBody .panelMoveArea--2 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-D:checked~.puzzleBody .panelMoveArea--2 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-D:checked~.puzzleBody .panelMoveArea--2 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-E:checked~.puzzleBody .panelMoveArea--2 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-2-E:checked~.puzzleBody .panelMoveArea--2 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-E:checked~.puzzleBody .panelMoveArea--2 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-E:checked~.puzzleBody .panelMoveArea--2 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-E:checked~.puzzleBody .panelMoveArea--2 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-2-E:checked~.puzzleBody .panelMoveArea--2 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-E:checked~.puzzleBody .panelMoveArea--2 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-F:checked~.puzzleBody .panelMoveArea--2 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-G:checked~.puzzleBody .panelMoveArea--2 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-H:checked~.puzzleBody .panelMoveArea--2 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-2-H:checked~.puzzleBody .panelMoveArea--2 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-H:checked~.puzzleBody .panelMoveArea--2 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-H:checked~.puzzleBody .panelMoveArea--2 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-H:checked~.puzzleBody .panelMoveArea--2 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-H:checked~.puzzleBody .panelMoveArea--2 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-H:checked~.puzzleBody .panelMoveArea--2 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-I:checked~.puzzleBody .panelMoveArea--2 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-2-I:checked~.puzzleBody .panelMoveArea--2 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-I:checked~.puzzleBody .panelMoveArea--2 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-I:checked~.puzzleBody .panelMoveArea--2 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-I:checked~.puzzleBody .panelMoveArea--2 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-2-I:checked~.puzzleBody .panelMoveArea--2 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-I:checked~.puzzleBody .panelMoveArea--2 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-J:checked~.puzzleBody .panelMoveArea--2 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-K:checked~.puzzleBody .panelMoveArea--2 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-L:checked~.puzzleBody .panelMoveArea--2 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-2-L:checked~.puzzleBody .panelMoveArea--2 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-L:checked~.puzzleBody .panelMoveArea--2 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-L:checked~.puzzleBody .panelMoveArea--2 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-L:checked~.puzzleBody .panelMoveArea--2 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-L:checked~.puzzleBody .panelMoveArea--2 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-2-L:checked~.puzzleBody .panelMoveArea--2 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-2-M:checked~.puzzleBody .panelMoveArea--2 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-2-M:checked~.puzzleBody .panelMoveArea--2 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-M:checked~.puzzleBody .panelMoveArea--2 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-M:checked~.puzzleBody .panelMoveArea--2 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-M:checked~.puzzleBody .panelMoveArea--2 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-2-N:checked~.puzzleBody .panelMoveArea--2 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-2-N:checked~.puzzleBody .panelMoveArea--2 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-N:checked~.puzzleBody .panelMoveArea--2 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-N:checked~.puzzleBody .panelMoveArea--2 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-N:checked~.puzzleBody .panelMoveArea--2 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-N:checked~.puzzleBody .panelMoveArea--2 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-N:checked~.puzzleBody .panelMoveArea--2 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-2-O:checked~.puzzleBody .panelMoveArea--2 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-2-O:checked~.puzzleBody .panelMoveArea--2 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-O:checked~.puzzleBody .panelMoveArea--2 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-O:checked~.puzzleBody .panelMoveArea--2 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-O:checked~.puzzleBody .panelMoveArea--2 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-2-O:checked~.puzzleBody .panelMoveArea--2 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-2-O:checked~.puzzleBody .panelMoveArea--2 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-2-P:checked~.puzzleBody .panelMoveArea--2 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-2-P:checked~.puzzleBody .panelMoveArea--2 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-2-P:checked~.puzzleBody .panelMoveArea--2 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-2-P:checked~.puzzleBody .panelMoveArea--2 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-2-P:checked~.puzzleBody .panelMoveArea--2 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-3:checked~.puzzleBody .panelMoveArea--3 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-3:checked~.puzzleBody .panelMoveArea--3 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-3-A:checked~.puzzleBody .panelMoveArea--3 {
+  top: 0;
+  left: 0;
+}
+
+#panel-3-A:checked~.puzzleBody .panelMoveArea--3 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-A:checked~.puzzleBody .panelMoveArea--3 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-3-A:checked~.puzzleBody .panelMoveArea--3 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-A:checked~.puzzleBody .panelMoveArea--3 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-B:checked~.puzzleBody .panelMoveArea--3 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-3-B:checked~.puzzleBody .panelMoveArea--3 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-B:checked~.puzzleBody .panelMoveArea--3 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-B:checked~.puzzleBody .panelMoveArea--3 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-B:checked~.puzzleBody .panelMoveArea--3 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-3-B:checked~.puzzleBody .panelMoveArea--3 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-B:checked~.puzzleBody .panelMoveArea--3 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-C:checked~.puzzleBody .panelMoveArea--3 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-3-C:checked~.puzzleBody .panelMoveArea--3 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-C:checked~.puzzleBody .panelMoveArea--3 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-C:checked~.puzzleBody .panelMoveArea--3 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-C:checked~.puzzleBody .panelMoveArea--3 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-3-C:checked~.puzzleBody .panelMoveArea--3 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-C:checked~.puzzleBody .panelMoveArea--3 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-D:checked~.puzzleBody .panelMoveArea--3 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-3-D:checked~.puzzleBody .panelMoveArea--3 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-D:checked~.puzzleBody .panelMoveArea--3 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-D:checked~.puzzleBody .panelMoveArea--3 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-D:checked~.puzzleBody .panelMoveArea--3 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-E:checked~.puzzleBody .panelMoveArea--3 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-3-E:checked~.puzzleBody .panelMoveArea--3 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-E:checked~.puzzleBody .panelMoveArea--3 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-E:checked~.puzzleBody .panelMoveArea--3 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-E:checked~.puzzleBody .panelMoveArea--3 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-3-E:checked~.puzzleBody .panelMoveArea--3 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-E:checked~.puzzleBody .panelMoveArea--3 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-F:checked~.puzzleBody .panelMoveArea--3 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-G:checked~.puzzleBody .panelMoveArea--3 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-H:checked~.puzzleBody .panelMoveArea--3 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-3-H:checked~.puzzleBody .panelMoveArea--3 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-H:checked~.puzzleBody .panelMoveArea--3 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-H:checked~.puzzleBody .panelMoveArea--3 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-H:checked~.puzzleBody .panelMoveArea--3 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-H:checked~.puzzleBody .panelMoveArea--3 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-H:checked~.puzzleBody .panelMoveArea--3 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-I:checked~.puzzleBody .panelMoveArea--3 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-3-I:checked~.puzzleBody .panelMoveArea--3 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-I:checked~.puzzleBody .panelMoveArea--3 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-I:checked~.puzzleBody .panelMoveArea--3 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-I:checked~.puzzleBody .panelMoveArea--3 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-3-I:checked~.puzzleBody .panelMoveArea--3 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-I:checked~.puzzleBody .panelMoveArea--3 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-J:checked~.puzzleBody .panelMoveArea--3 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-K:checked~.puzzleBody .panelMoveArea--3 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-L:checked~.puzzleBody .panelMoveArea--3 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-3-L:checked~.puzzleBody .panelMoveArea--3 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-L:checked~.puzzleBody .panelMoveArea--3 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-L:checked~.puzzleBody .panelMoveArea--3 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-L:checked~.puzzleBody .panelMoveArea--3 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-L:checked~.puzzleBody .panelMoveArea--3 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-3-L:checked~.puzzleBody .panelMoveArea--3 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-3-M:checked~.puzzleBody .panelMoveArea--3 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-3-M:checked~.puzzleBody .panelMoveArea--3 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-M:checked~.puzzleBody .panelMoveArea--3 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-M:checked~.puzzleBody .panelMoveArea--3 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-M:checked~.puzzleBody .panelMoveArea--3 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-3-N:checked~.puzzleBody .panelMoveArea--3 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-3-N:checked~.puzzleBody .panelMoveArea--3 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-N:checked~.puzzleBody .panelMoveArea--3 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-N:checked~.puzzleBody .panelMoveArea--3 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-N:checked~.puzzleBody .panelMoveArea--3 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-N:checked~.puzzleBody .panelMoveArea--3 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-N:checked~.puzzleBody .panelMoveArea--3 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-3-O:checked~.puzzleBody .panelMoveArea--3 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-3-O:checked~.puzzleBody .panelMoveArea--3 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-O:checked~.puzzleBody .panelMoveArea--3 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-O:checked~.puzzleBody .panelMoveArea--3 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-O:checked~.puzzleBody .panelMoveArea--3 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-3-O:checked~.puzzleBody .panelMoveArea--3 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-3-O:checked~.puzzleBody .panelMoveArea--3 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-3-P:checked~.puzzleBody .panelMoveArea--3 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-3-P:checked~.puzzleBody .panelMoveArea--3 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-3-P:checked~.puzzleBody .panelMoveArea--3 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-3-P:checked~.puzzleBody .panelMoveArea--3 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-3-P:checked~.puzzleBody .panelMoveArea--3 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-4:checked~.puzzleBody .panelMoveArea--4 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-4:checked~.puzzleBody .panelMoveArea--4 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-4-A:checked~.puzzleBody .panelMoveArea--4 {
+  top: 0;
+  left: 0;
+}
+
+#panel-4-A:checked~.puzzleBody .panelMoveArea--4 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-A:checked~.puzzleBody .panelMoveArea--4 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-4-A:checked~.puzzleBody .panelMoveArea--4 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-A:checked~.puzzleBody .panelMoveArea--4 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-B:checked~.puzzleBody .panelMoveArea--4 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-4-B:checked~.puzzleBody .panelMoveArea--4 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-B:checked~.puzzleBody .panelMoveArea--4 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-B:checked~.puzzleBody .panelMoveArea--4 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-B:checked~.puzzleBody .panelMoveArea--4 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-4-B:checked~.puzzleBody .panelMoveArea--4 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-B:checked~.puzzleBody .panelMoveArea--4 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-C:checked~.puzzleBody .panelMoveArea--4 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-4-C:checked~.puzzleBody .panelMoveArea--4 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-C:checked~.puzzleBody .panelMoveArea--4 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-C:checked~.puzzleBody .panelMoveArea--4 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-C:checked~.puzzleBody .panelMoveArea--4 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-4-C:checked~.puzzleBody .panelMoveArea--4 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-C:checked~.puzzleBody .panelMoveArea--4 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-D:checked~.puzzleBody .panelMoveArea--4 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-4-D:checked~.puzzleBody .panelMoveArea--4 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-D:checked~.puzzleBody .panelMoveArea--4 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-D:checked~.puzzleBody .panelMoveArea--4 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-D:checked~.puzzleBody .panelMoveArea--4 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-E:checked~.puzzleBody .panelMoveArea--4 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-4-E:checked~.puzzleBody .panelMoveArea--4 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-E:checked~.puzzleBody .panelMoveArea--4 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-E:checked~.puzzleBody .panelMoveArea--4 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-E:checked~.puzzleBody .panelMoveArea--4 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-4-E:checked~.puzzleBody .panelMoveArea--4 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-E:checked~.puzzleBody .panelMoveArea--4 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-F:checked~.puzzleBody .panelMoveArea--4 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-G:checked~.puzzleBody .panelMoveArea--4 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-H:checked~.puzzleBody .panelMoveArea--4 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-4-H:checked~.puzzleBody .panelMoveArea--4 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-H:checked~.puzzleBody .panelMoveArea--4 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-H:checked~.puzzleBody .panelMoveArea--4 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-H:checked~.puzzleBody .panelMoveArea--4 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-H:checked~.puzzleBody .panelMoveArea--4 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-H:checked~.puzzleBody .panelMoveArea--4 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-I:checked~.puzzleBody .panelMoveArea--4 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-4-I:checked~.puzzleBody .panelMoveArea--4 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-I:checked~.puzzleBody .panelMoveArea--4 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-I:checked~.puzzleBody .panelMoveArea--4 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-I:checked~.puzzleBody .panelMoveArea--4 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-4-I:checked~.puzzleBody .panelMoveArea--4 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-I:checked~.puzzleBody .panelMoveArea--4 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-J:checked~.puzzleBody .panelMoveArea--4 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-K:checked~.puzzleBody .panelMoveArea--4 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-L:checked~.puzzleBody .panelMoveArea--4 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-4-L:checked~.puzzleBody .panelMoveArea--4 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-L:checked~.puzzleBody .panelMoveArea--4 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-L:checked~.puzzleBody .panelMoveArea--4 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-L:checked~.puzzleBody .panelMoveArea--4 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-L:checked~.puzzleBody .panelMoveArea--4 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-4-L:checked~.puzzleBody .panelMoveArea--4 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-4-M:checked~.puzzleBody .panelMoveArea--4 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-4-M:checked~.puzzleBody .panelMoveArea--4 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-M:checked~.puzzleBody .panelMoveArea--4 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-M:checked~.puzzleBody .panelMoveArea--4 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-M:checked~.puzzleBody .panelMoveArea--4 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-4-N:checked~.puzzleBody .panelMoveArea--4 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-4-N:checked~.puzzleBody .panelMoveArea--4 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-N:checked~.puzzleBody .panelMoveArea--4 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-N:checked~.puzzleBody .panelMoveArea--4 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-N:checked~.puzzleBody .panelMoveArea--4 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-N:checked~.puzzleBody .panelMoveArea--4 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-N:checked~.puzzleBody .panelMoveArea--4 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-4-O:checked~.puzzleBody .panelMoveArea--4 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-4-O:checked~.puzzleBody .panelMoveArea--4 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-O:checked~.puzzleBody .panelMoveArea--4 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-O:checked~.puzzleBody .panelMoveArea--4 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-O:checked~.puzzleBody .panelMoveArea--4 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-4-O:checked~.puzzleBody .panelMoveArea--4 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-4-O:checked~.puzzleBody .panelMoveArea--4 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-4-P:checked~.puzzleBody .panelMoveArea--4 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-4-P:checked~.puzzleBody .panelMoveArea--4 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-4-P:checked~.puzzleBody .panelMoveArea--4 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-4-P:checked~.puzzleBody .panelMoveArea--4 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-4-P:checked~.puzzleBody .panelMoveArea--4 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-5:checked~.puzzleBody .panelMoveArea--5 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-5:checked~.puzzleBody .panelMoveArea--5 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-5-A:checked~.puzzleBody .panelMoveArea--5 {
+  top: 0;
+  left: 0;
+}
+
+#panel-5-A:checked~.puzzleBody .panelMoveArea--5 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-A:checked~.puzzleBody .panelMoveArea--5 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-5-A:checked~.puzzleBody .panelMoveArea--5 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-A:checked~.puzzleBody .panelMoveArea--5 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-B:checked~.puzzleBody .panelMoveArea--5 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-5-B:checked~.puzzleBody .panelMoveArea--5 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-B:checked~.puzzleBody .panelMoveArea--5 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-B:checked~.puzzleBody .panelMoveArea--5 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-B:checked~.puzzleBody .panelMoveArea--5 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-5-B:checked~.puzzleBody .panelMoveArea--5 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-B:checked~.puzzleBody .panelMoveArea--5 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-C:checked~.puzzleBody .panelMoveArea--5 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-5-C:checked~.puzzleBody .panelMoveArea--5 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-C:checked~.puzzleBody .panelMoveArea--5 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-C:checked~.puzzleBody .panelMoveArea--5 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-C:checked~.puzzleBody .panelMoveArea--5 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-5-C:checked~.puzzleBody .panelMoveArea--5 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-C:checked~.puzzleBody .panelMoveArea--5 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-D:checked~.puzzleBody .panelMoveArea--5 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-5-D:checked~.puzzleBody .panelMoveArea--5 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-D:checked~.puzzleBody .panelMoveArea--5 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-D:checked~.puzzleBody .panelMoveArea--5 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-D:checked~.puzzleBody .panelMoveArea--5 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-E:checked~.puzzleBody .panelMoveArea--5 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-5-E:checked~.puzzleBody .panelMoveArea--5 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-E:checked~.puzzleBody .panelMoveArea--5 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-E:checked~.puzzleBody .panelMoveArea--5 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-E:checked~.puzzleBody .panelMoveArea--5 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-5-E:checked~.puzzleBody .panelMoveArea--5 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-E:checked~.puzzleBody .panelMoveArea--5 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-F:checked~.puzzleBody .panelMoveArea--5 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-G:checked~.puzzleBody .panelMoveArea--5 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-H:checked~.puzzleBody .panelMoveArea--5 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-5-H:checked~.puzzleBody .panelMoveArea--5 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-H:checked~.puzzleBody .panelMoveArea--5 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-H:checked~.puzzleBody .panelMoveArea--5 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-H:checked~.puzzleBody .panelMoveArea--5 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-H:checked~.puzzleBody .panelMoveArea--5 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-H:checked~.puzzleBody .panelMoveArea--5 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-I:checked~.puzzleBody .panelMoveArea--5 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-5-I:checked~.puzzleBody .panelMoveArea--5 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-I:checked~.puzzleBody .panelMoveArea--5 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-I:checked~.puzzleBody .panelMoveArea--5 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-I:checked~.puzzleBody .panelMoveArea--5 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-5-I:checked~.puzzleBody .panelMoveArea--5 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-I:checked~.puzzleBody .panelMoveArea--5 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-J:checked~.puzzleBody .panelMoveArea--5 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-K:checked~.puzzleBody .panelMoveArea--5 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-L:checked~.puzzleBody .panelMoveArea--5 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-5-L:checked~.puzzleBody .panelMoveArea--5 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-L:checked~.puzzleBody .panelMoveArea--5 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-L:checked~.puzzleBody .panelMoveArea--5 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-L:checked~.puzzleBody .panelMoveArea--5 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-L:checked~.puzzleBody .panelMoveArea--5 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-5-L:checked~.puzzleBody .panelMoveArea--5 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-5-M:checked~.puzzleBody .panelMoveArea--5 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-5-M:checked~.puzzleBody .panelMoveArea--5 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-M:checked~.puzzleBody .panelMoveArea--5 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-M:checked~.puzzleBody .panelMoveArea--5 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-M:checked~.puzzleBody .panelMoveArea--5 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-5-N:checked~.puzzleBody .panelMoveArea--5 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-5-N:checked~.puzzleBody .panelMoveArea--5 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-N:checked~.puzzleBody .panelMoveArea--5 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-N:checked~.puzzleBody .panelMoveArea--5 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-N:checked~.puzzleBody .panelMoveArea--5 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-N:checked~.puzzleBody .panelMoveArea--5 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-N:checked~.puzzleBody .panelMoveArea--5 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-5-O:checked~.puzzleBody .panelMoveArea--5 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-5-O:checked~.puzzleBody .panelMoveArea--5 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-O:checked~.puzzleBody .panelMoveArea--5 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-O:checked~.puzzleBody .panelMoveArea--5 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-O:checked~.puzzleBody .panelMoveArea--5 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-5-O:checked~.puzzleBody .panelMoveArea--5 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-5-O:checked~.puzzleBody .panelMoveArea--5 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-5-P:checked~.puzzleBody .panelMoveArea--5 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-5-P:checked~.puzzleBody .panelMoveArea--5 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-5-P:checked~.puzzleBody .panelMoveArea--5 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-5-P:checked~.puzzleBody .panelMoveArea--5 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-5-P:checked~.puzzleBody .panelMoveArea--5 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-6:checked~.puzzleBody .panelMoveArea--6 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-6:checked~.puzzleBody .panelMoveArea--6 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-6-A:checked~.puzzleBody .panelMoveArea--6 {
+  top: 0;
+  left: 0;
+}
+
+#panel-6-A:checked~.puzzleBody .panelMoveArea--6 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-A:checked~.puzzleBody .panelMoveArea--6 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-6-A:checked~.puzzleBody .panelMoveArea--6 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-A:checked~.puzzleBody .panelMoveArea--6 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-B:checked~.puzzleBody .panelMoveArea--6 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-6-B:checked~.puzzleBody .panelMoveArea--6 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-B:checked~.puzzleBody .panelMoveArea--6 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-B:checked~.puzzleBody .panelMoveArea--6 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-B:checked~.puzzleBody .panelMoveArea--6 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-6-B:checked~.puzzleBody .panelMoveArea--6 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-B:checked~.puzzleBody .panelMoveArea--6 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-C:checked~.puzzleBody .panelMoveArea--6 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-6-C:checked~.puzzleBody .panelMoveArea--6 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-C:checked~.puzzleBody .panelMoveArea--6 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-C:checked~.puzzleBody .panelMoveArea--6 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-C:checked~.puzzleBody .panelMoveArea--6 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-6-C:checked~.puzzleBody .panelMoveArea--6 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-C:checked~.puzzleBody .panelMoveArea--6 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-D:checked~.puzzleBody .panelMoveArea--6 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-6-D:checked~.puzzleBody .panelMoveArea--6 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-D:checked~.puzzleBody .panelMoveArea--6 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-D:checked~.puzzleBody .panelMoveArea--6 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-D:checked~.puzzleBody .panelMoveArea--6 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-E:checked~.puzzleBody .panelMoveArea--6 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-6-E:checked~.puzzleBody .panelMoveArea--6 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-E:checked~.puzzleBody .panelMoveArea--6 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-E:checked~.puzzleBody .panelMoveArea--6 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-E:checked~.puzzleBody .panelMoveArea--6 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-6-E:checked~.puzzleBody .panelMoveArea--6 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-E:checked~.puzzleBody .panelMoveArea--6 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-F:checked~.puzzleBody .panelMoveArea--6 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-G:checked~.puzzleBody .panelMoveArea--6 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-H:checked~.puzzleBody .panelMoveArea--6 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-6-H:checked~.puzzleBody .panelMoveArea--6 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-H:checked~.puzzleBody .panelMoveArea--6 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-H:checked~.puzzleBody .panelMoveArea--6 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-H:checked~.puzzleBody .panelMoveArea--6 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-H:checked~.puzzleBody .panelMoveArea--6 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-H:checked~.puzzleBody .panelMoveArea--6 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-I:checked~.puzzleBody .panelMoveArea--6 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-6-I:checked~.puzzleBody .panelMoveArea--6 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-I:checked~.puzzleBody .panelMoveArea--6 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-I:checked~.puzzleBody .panelMoveArea--6 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-I:checked~.puzzleBody .panelMoveArea--6 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-6-I:checked~.puzzleBody .panelMoveArea--6 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-I:checked~.puzzleBody .panelMoveArea--6 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-J:checked~.puzzleBody .panelMoveArea--6 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-K:checked~.puzzleBody .panelMoveArea--6 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-L:checked~.puzzleBody .panelMoveArea--6 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-6-L:checked~.puzzleBody .panelMoveArea--6 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-L:checked~.puzzleBody .panelMoveArea--6 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-L:checked~.puzzleBody .panelMoveArea--6 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-L:checked~.puzzleBody .panelMoveArea--6 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-L:checked~.puzzleBody .panelMoveArea--6 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-6-L:checked~.puzzleBody .panelMoveArea--6 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-6-M:checked~.puzzleBody .panelMoveArea--6 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-6-M:checked~.puzzleBody .panelMoveArea--6 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-M:checked~.puzzleBody .panelMoveArea--6 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-M:checked~.puzzleBody .panelMoveArea--6 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-M:checked~.puzzleBody .panelMoveArea--6 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-6-N:checked~.puzzleBody .panelMoveArea--6 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-6-N:checked~.puzzleBody .panelMoveArea--6 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-N:checked~.puzzleBody .panelMoveArea--6 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-N:checked~.puzzleBody .panelMoveArea--6 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-N:checked~.puzzleBody .panelMoveArea--6 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-N:checked~.puzzleBody .panelMoveArea--6 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-N:checked~.puzzleBody .panelMoveArea--6 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-6-O:checked~.puzzleBody .panelMoveArea--6 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-6-O:checked~.puzzleBody .panelMoveArea--6 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-O:checked~.puzzleBody .panelMoveArea--6 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-O:checked~.puzzleBody .panelMoveArea--6 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-O:checked~.puzzleBody .panelMoveArea--6 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-6-O:checked~.puzzleBody .panelMoveArea--6 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-6-O:checked~.puzzleBody .panelMoveArea--6 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-6-P:checked~.puzzleBody .panelMoveArea--6 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-6-P:checked~.puzzleBody .panelMoveArea--6 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-6-P:checked~.puzzleBody .panelMoveArea--6 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-6-P:checked~.puzzleBody .panelMoveArea--6 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-6-P:checked~.puzzleBody .panelMoveArea--6 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-7:checked~.puzzleBody .panelMoveArea--7 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-7:checked~.puzzleBody .panelMoveArea--7 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-7-A:checked~.puzzleBody .panelMoveArea--7 {
+  top: 0;
+  left: 0;
+}
+
+#panel-7-A:checked~.puzzleBody .panelMoveArea--7 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-A:checked~.puzzleBody .panelMoveArea--7 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-7-A:checked~.puzzleBody .panelMoveArea--7 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-A:checked~.puzzleBody .panelMoveArea--7 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-B:checked~.puzzleBody .panelMoveArea--7 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-7-B:checked~.puzzleBody .panelMoveArea--7 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-B:checked~.puzzleBody .panelMoveArea--7 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-B:checked~.puzzleBody .panelMoveArea--7 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-B:checked~.puzzleBody .panelMoveArea--7 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-7-B:checked~.puzzleBody .panelMoveArea--7 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-B:checked~.puzzleBody .panelMoveArea--7 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-C:checked~.puzzleBody .panelMoveArea--7 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-7-C:checked~.puzzleBody .panelMoveArea--7 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-C:checked~.puzzleBody .panelMoveArea--7 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-C:checked~.puzzleBody .panelMoveArea--7 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-C:checked~.puzzleBody .panelMoveArea--7 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-7-C:checked~.puzzleBody .panelMoveArea--7 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-C:checked~.puzzleBody .panelMoveArea--7 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-D:checked~.puzzleBody .panelMoveArea--7 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-7-D:checked~.puzzleBody .panelMoveArea--7 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-D:checked~.puzzleBody .panelMoveArea--7 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-D:checked~.puzzleBody .panelMoveArea--7 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-D:checked~.puzzleBody .panelMoveArea--7 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-E:checked~.puzzleBody .panelMoveArea--7 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-7-E:checked~.puzzleBody .panelMoveArea--7 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-E:checked~.puzzleBody .panelMoveArea--7 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-E:checked~.puzzleBody .panelMoveArea--7 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-E:checked~.puzzleBody .panelMoveArea--7 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-7-E:checked~.puzzleBody .panelMoveArea--7 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-E:checked~.puzzleBody .panelMoveArea--7 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-F:checked~.puzzleBody .panelMoveArea--7 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-G:checked~.puzzleBody .panelMoveArea--7 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-H:checked~.puzzleBody .panelMoveArea--7 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-7-H:checked~.puzzleBody .panelMoveArea--7 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-H:checked~.puzzleBody .panelMoveArea--7 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-H:checked~.puzzleBody .panelMoveArea--7 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-H:checked~.puzzleBody .panelMoveArea--7 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-H:checked~.puzzleBody .panelMoveArea--7 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-H:checked~.puzzleBody .panelMoveArea--7 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-I:checked~.puzzleBody .panelMoveArea--7 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-7-I:checked~.puzzleBody .panelMoveArea--7 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-I:checked~.puzzleBody .panelMoveArea--7 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-I:checked~.puzzleBody .panelMoveArea--7 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-I:checked~.puzzleBody .panelMoveArea--7 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-7-I:checked~.puzzleBody .panelMoveArea--7 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-I:checked~.puzzleBody .panelMoveArea--7 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-J:checked~.puzzleBody .panelMoveArea--7 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-K:checked~.puzzleBody .panelMoveArea--7 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-L:checked~.puzzleBody .panelMoveArea--7 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-7-L:checked~.puzzleBody .panelMoveArea--7 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-L:checked~.puzzleBody .panelMoveArea--7 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-L:checked~.puzzleBody .panelMoveArea--7 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-L:checked~.puzzleBody .panelMoveArea--7 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-L:checked~.puzzleBody .panelMoveArea--7 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-7-L:checked~.puzzleBody .panelMoveArea--7 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-7-M:checked~.puzzleBody .panelMoveArea--7 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-7-M:checked~.puzzleBody .panelMoveArea--7 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-M:checked~.puzzleBody .panelMoveArea--7 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-M:checked~.puzzleBody .panelMoveArea--7 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-M:checked~.puzzleBody .panelMoveArea--7 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-7-N:checked~.puzzleBody .panelMoveArea--7 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-7-N:checked~.puzzleBody .panelMoveArea--7 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-N:checked~.puzzleBody .panelMoveArea--7 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-N:checked~.puzzleBody .panelMoveArea--7 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-N:checked~.puzzleBody .panelMoveArea--7 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-N:checked~.puzzleBody .panelMoveArea--7 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-N:checked~.puzzleBody .panelMoveArea--7 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-7-O:checked~.puzzleBody .panelMoveArea--7 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-7-O:checked~.puzzleBody .panelMoveArea--7 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-O:checked~.puzzleBody .panelMoveArea--7 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-O:checked~.puzzleBody .panelMoveArea--7 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-O:checked~.puzzleBody .panelMoveArea--7 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-7-O:checked~.puzzleBody .panelMoveArea--7 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-7-O:checked~.puzzleBody .panelMoveArea--7 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-7-P:checked~.puzzleBody .panelMoveArea--7 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-7-P:checked~.puzzleBody .panelMoveArea--7 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-7-P:checked~.puzzleBody .panelMoveArea--7 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-7-P:checked~.puzzleBody .panelMoveArea--7 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-7-P:checked~.puzzleBody .panelMoveArea--7 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-8:checked~.puzzleBody .panelMoveArea--8 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-8:checked~.puzzleBody .panelMoveArea--8 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-8-A:checked~.puzzleBody .panelMoveArea--8 {
+  top: 0;
+  left: 0;
+}
+
+#panel-8-A:checked~.puzzleBody .panelMoveArea--8 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-A:checked~.puzzleBody .panelMoveArea--8 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-8-A:checked~.puzzleBody .panelMoveArea--8 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-A:checked~.puzzleBody .panelMoveArea--8 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-B:checked~.puzzleBody .panelMoveArea--8 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-8-B:checked~.puzzleBody .panelMoveArea--8 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-B:checked~.puzzleBody .panelMoveArea--8 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-B:checked~.puzzleBody .panelMoveArea--8 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-B:checked~.puzzleBody .panelMoveArea--8 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-8-B:checked~.puzzleBody .panelMoveArea--8 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-B:checked~.puzzleBody .panelMoveArea--8 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-C:checked~.puzzleBody .panelMoveArea--8 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-8-C:checked~.puzzleBody .panelMoveArea--8 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-C:checked~.puzzleBody .panelMoveArea--8 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-C:checked~.puzzleBody .panelMoveArea--8 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-C:checked~.puzzleBody .panelMoveArea--8 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-8-C:checked~.puzzleBody .panelMoveArea--8 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-C:checked~.puzzleBody .panelMoveArea--8 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-D:checked~.puzzleBody .panelMoveArea--8 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-8-D:checked~.puzzleBody .panelMoveArea--8 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-D:checked~.puzzleBody .panelMoveArea--8 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-D:checked~.puzzleBody .panelMoveArea--8 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-D:checked~.puzzleBody .panelMoveArea--8 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-E:checked~.puzzleBody .panelMoveArea--8 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-8-E:checked~.puzzleBody .panelMoveArea--8 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-E:checked~.puzzleBody .panelMoveArea--8 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-E:checked~.puzzleBody .panelMoveArea--8 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-E:checked~.puzzleBody .panelMoveArea--8 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-8-E:checked~.puzzleBody .panelMoveArea--8 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-E:checked~.puzzleBody .panelMoveArea--8 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-F:checked~.puzzleBody .panelMoveArea--8 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-G:checked~.puzzleBody .panelMoveArea--8 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-H:checked~.puzzleBody .panelMoveArea--8 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-8-H:checked~.puzzleBody .panelMoveArea--8 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-H:checked~.puzzleBody .panelMoveArea--8 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-H:checked~.puzzleBody .panelMoveArea--8 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-H:checked~.puzzleBody .panelMoveArea--8 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-H:checked~.puzzleBody .panelMoveArea--8 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-H:checked~.puzzleBody .panelMoveArea--8 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-I:checked~.puzzleBody .panelMoveArea--8 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-8-I:checked~.puzzleBody .panelMoveArea--8 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-I:checked~.puzzleBody .panelMoveArea--8 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-I:checked~.puzzleBody .panelMoveArea--8 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-I:checked~.puzzleBody .panelMoveArea--8 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-8-I:checked~.puzzleBody .panelMoveArea--8 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-I:checked~.puzzleBody .panelMoveArea--8 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-J:checked~.puzzleBody .panelMoveArea--8 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-K:checked~.puzzleBody .panelMoveArea--8 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-L:checked~.puzzleBody .panelMoveArea--8 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-8-L:checked~.puzzleBody .panelMoveArea--8 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-L:checked~.puzzleBody .panelMoveArea--8 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-L:checked~.puzzleBody .panelMoveArea--8 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-L:checked~.puzzleBody .panelMoveArea--8 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-L:checked~.puzzleBody .panelMoveArea--8 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-8-L:checked~.puzzleBody .panelMoveArea--8 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-8-M:checked~.puzzleBody .panelMoveArea--8 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-8-M:checked~.puzzleBody .panelMoveArea--8 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-M:checked~.puzzleBody .panelMoveArea--8 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-M:checked~.puzzleBody .panelMoveArea--8 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-M:checked~.puzzleBody .panelMoveArea--8 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-8-N:checked~.puzzleBody .panelMoveArea--8 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-8-N:checked~.puzzleBody .panelMoveArea--8 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-N:checked~.puzzleBody .panelMoveArea--8 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-N:checked~.puzzleBody .panelMoveArea--8 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-N:checked~.puzzleBody .panelMoveArea--8 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-N:checked~.puzzleBody .panelMoveArea--8 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-N:checked~.puzzleBody .panelMoveArea--8 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-8-O:checked~.puzzleBody .panelMoveArea--8 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-8-O:checked~.puzzleBody .panelMoveArea--8 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-O:checked~.puzzleBody .panelMoveArea--8 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-O:checked~.puzzleBody .panelMoveArea--8 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-O:checked~.puzzleBody .panelMoveArea--8 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-8-O:checked~.puzzleBody .panelMoveArea--8 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-8-O:checked~.puzzleBody .panelMoveArea--8 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-8-P:checked~.puzzleBody .panelMoveArea--8 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-8-P:checked~.puzzleBody .panelMoveArea--8 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-8-P:checked~.puzzleBody .panelMoveArea--8 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-8-P:checked~.puzzleBody .panelMoveArea--8 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-8-P:checked~.puzzleBody .panelMoveArea--8 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-9:checked~.puzzleBody .panelMoveArea--9 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-9:checked~.puzzleBody .panelMoveArea--9 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-9-A:checked~.puzzleBody .panelMoveArea--9 {
+  top: 0;
+  left: 0;
+}
+
+#panel-9-A:checked~.puzzleBody .panelMoveArea--9 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-A:checked~.puzzleBody .panelMoveArea--9 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-9-A:checked~.puzzleBody .panelMoveArea--9 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-A:checked~.puzzleBody .panelMoveArea--9 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-B:checked~.puzzleBody .panelMoveArea--9 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-9-B:checked~.puzzleBody .panelMoveArea--9 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-B:checked~.puzzleBody .panelMoveArea--9 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-B:checked~.puzzleBody .panelMoveArea--9 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-B:checked~.puzzleBody .panelMoveArea--9 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-9-B:checked~.puzzleBody .panelMoveArea--9 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-B:checked~.puzzleBody .panelMoveArea--9 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-C:checked~.puzzleBody .panelMoveArea--9 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-9-C:checked~.puzzleBody .panelMoveArea--9 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-C:checked~.puzzleBody .panelMoveArea--9 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-C:checked~.puzzleBody .panelMoveArea--9 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-C:checked~.puzzleBody .panelMoveArea--9 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-9-C:checked~.puzzleBody .panelMoveArea--9 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-C:checked~.puzzleBody .panelMoveArea--9 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-D:checked~.puzzleBody .panelMoveArea--9 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-9-D:checked~.puzzleBody .panelMoveArea--9 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-D:checked~.puzzleBody .panelMoveArea--9 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-D:checked~.puzzleBody .panelMoveArea--9 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-D:checked~.puzzleBody .panelMoveArea--9 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-E:checked~.puzzleBody .panelMoveArea--9 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-9-E:checked~.puzzleBody .panelMoveArea--9 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-E:checked~.puzzleBody .panelMoveArea--9 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-E:checked~.puzzleBody .panelMoveArea--9 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-E:checked~.puzzleBody .panelMoveArea--9 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-9-E:checked~.puzzleBody .panelMoveArea--9 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-E:checked~.puzzleBody .panelMoveArea--9 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-F:checked~.puzzleBody .panelMoveArea--9 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-G:checked~.puzzleBody .panelMoveArea--9 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-H:checked~.puzzleBody .panelMoveArea--9 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-9-H:checked~.puzzleBody .panelMoveArea--9 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-H:checked~.puzzleBody .panelMoveArea--9 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-H:checked~.puzzleBody .panelMoveArea--9 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-H:checked~.puzzleBody .panelMoveArea--9 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-H:checked~.puzzleBody .panelMoveArea--9 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-H:checked~.puzzleBody .panelMoveArea--9 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-I:checked~.puzzleBody .panelMoveArea--9 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-9-I:checked~.puzzleBody .panelMoveArea--9 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-I:checked~.puzzleBody .panelMoveArea--9 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-I:checked~.puzzleBody .panelMoveArea--9 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-I:checked~.puzzleBody .panelMoveArea--9 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-9-I:checked~.puzzleBody .panelMoveArea--9 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-I:checked~.puzzleBody .panelMoveArea--9 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-J:checked~.puzzleBody .panelMoveArea--9 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-K:checked~.puzzleBody .panelMoveArea--9 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-L:checked~.puzzleBody .panelMoveArea--9 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-9-L:checked~.puzzleBody .panelMoveArea--9 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-L:checked~.puzzleBody .panelMoveArea--9 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-L:checked~.puzzleBody .panelMoveArea--9 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-L:checked~.puzzleBody .panelMoveArea--9 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-L:checked~.puzzleBody .panelMoveArea--9 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-9-L:checked~.puzzleBody .panelMoveArea--9 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-9-M:checked~.puzzleBody .panelMoveArea--9 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-9-M:checked~.puzzleBody .panelMoveArea--9 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-M:checked~.puzzleBody .panelMoveArea--9 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-M:checked~.puzzleBody .panelMoveArea--9 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-M:checked~.puzzleBody .panelMoveArea--9 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-9-N:checked~.puzzleBody .panelMoveArea--9 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-9-N:checked~.puzzleBody .panelMoveArea--9 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-N:checked~.puzzleBody .panelMoveArea--9 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-N:checked~.puzzleBody .panelMoveArea--9 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-N:checked~.puzzleBody .panelMoveArea--9 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-N:checked~.puzzleBody .panelMoveArea--9 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-N:checked~.puzzleBody .panelMoveArea--9 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-9-O:checked~.puzzleBody .panelMoveArea--9 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-9-O:checked~.puzzleBody .panelMoveArea--9 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-O:checked~.puzzleBody .panelMoveArea--9 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-O:checked~.puzzleBody .panelMoveArea--9 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-O:checked~.puzzleBody .panelMoveArea--9 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-9-O:checked~.puzzleBody .panelMoveArea--9 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-9-O:checked~.puzzleBody .panelMoveArea--9 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-9-P:checked~.puzzleBody .panelMoveArea--9 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-9-P:checked~.puzzleBody .panelMoveArea--9 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-9-P:checked~.puzzleBody .panelMoveArea--9 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-9-P:checked~.puzzleBody .panelMoveArea--9 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-9-P:checked~.puzzleBody .panelMoveArea--9 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-10:checked~.puzzleBody .panelMoveArea--10 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-10:checked~.puzzleBody .panelMoveArea--10 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-10-A:checked~.puzzleBody .panelMoveArea--10 {
+  top: 0;
+  left: 0;
+}
+
+#panel-10-A:checked~.puzzleBody .panelMoveArea--10 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-A:checked~.puzzleBody .panelMoveArea--10 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-10-A:checked~.puzzleBody .panelMoveArea--10 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-A:checked~.puzzleBody .panelMoveArea--10 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-B:checked~.puzzleBody .panelMoveArea--10 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-10-B:checked~.puzzleBody .panelMoveArea--10 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-B:checked~.puzzleBody .panelMoveArea--10 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-B:checked~.puzzleBody .panelMoveArea--10 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-B:checked~.puzzleBody .panelMoveArea--10 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-10-B:checked~.puzzleBody .panelMoveArea--10 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-B:checked~.puzzleBody .panelMoveArea--10 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-C:checked~.puzzleBody .panelMoveArea--10 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-10-C:checked~.puzzleBody .panelMoveArea--10 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-C:checked~.puzzleBody .panelMoveArea--10 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-C:checked~.puzzleBody .panelMoveArea--10 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-C:checked~.puzzleBody .panelMoveArea--10 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-10-C:checked~.puzzleBody .panelMoveArea--10 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-C:checked~.puzzleBody .panelMoveArea--10 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-D:checked~.puzzleBody .panelMoveArea--10 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-10-D:checked~.puzzleBody .panelMoveArea--10 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-D:checked~.puzzleBody .panelMoveArea--10 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-D:checked~.puzzleBody .panelMoveArea--10 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-D:checked~.puzzleBody .panelMoveArea--10 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-E:checked~.puzzleBody .panelMoveArea--10 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-10-E:checked~.puzzleBody .panelMoveArea--10 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-E:checked~.puzzleBody .panelMoveArea--10 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-E:checked~.puzzleBody .panelMoveArea--10 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-E:checked~.puzzleBody .panelMoveArea--10 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-10-E:checked~.puzzleBody .panelMoveArea--10 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-E:checked~.puzzleBody .panelMoveArea--10 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-F:checked~.puzzleBody .panelMoveArea--10 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-G:checked~.puzzleBody .panelMoveArea--10 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-H:checked~.puzzleBody .panelMoveArea--10 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-10-H:checked~.puzzleBody .panelMoveArea--10 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-H:checked~.puzzleBody .panelMoveArea--10 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-H:checked~.puzzleBody .panelMoveArea--10 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-H:checked~.puzzleBody .panelMoveArea--10 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-H:checked~.puzzleBody .panelMoveArea--10 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-H:checked~.puzzleBody .panelMoveArea--10 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-I:checked~.puzzleBody .panelMoveArea--10 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-10-I:checked~.puzzleBody .panelMoveArea--10 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-I:checked~.puzzleBody .panelMoveArea--10 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-I:checked~.puzzleBody .panelMoveArea--10 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-I:checked~.puzzleBody .panelMoveArea--10 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-10-I:checked~.puzzleBody .panelMoveArea--10 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-I:checked~.puzzleBody .panelMoveArea--10 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-J:checked~.puzzleBody .panelMoveArea--10 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-K:checked~.puzzleBody .panelMoveArea--10 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-L:checked~.puzzleBody .panelMoveArea--10 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-10-L:checked~.puzzleBody .panelMoveArea--10 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-L:checked~.puzzleBody .panelMoveArea--10 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-L:checked~.puzzleBody .panelMoveArea--10 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-L:checked~.puzzleBody .panelMoveArea--10 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-L:checked~.puzzleBody .panelMoveArea--10 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-10-L:checked~.puzzleBody .panelMoveArea--10 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-10-M:checked~.puzzleBody .panelMoveArea--10 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-10-M:checked~.puzzleBody .panelMoveArea--10 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-M:checked~.puzzleBody .panelMoveArea--10 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-M:checked~.puzzleBody .panelMoveArea--10 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-M:checked~.puzzleBody .panelMoveArea--10 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-10-N:checked~.puzzleBody .panelMoveArea--10 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-10-N:checked~.puzzleBody .panelMoveArea--10 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-N:checked~.puzzleBody .panelMoveArea--10 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-N:checked~.puzzleBody .panelMoveArea--10 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-N:checked~.puzzleBody .panelMoveArea--10 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-N:checked~.puzzleBody .panelMoveArea--10 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-N:checked~.puzzleBody .panelMoveArea--10 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-10-O:checked~.puzzleBody .panelMoveArea--10 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-10-O:checked~.puzzleBody .panelMoveArea--10 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-O:checked~.puzzleBody .panelMoveArea--10 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-O:checked~.puzzleBody .panelMoveArea--10 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-O:checked~.puzzleBody .panelMoveArea--10 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-10-O:checked~.puzzleBody .panelMoveArea--10 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-10-O:checked~.puzzleBody .panelMoveArea--10 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-10-P:checked~.puzzleBody .panelMoveArea--10 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-10-P:checked~.puzzleBody .panelMoveArea--10 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-10-P:checked~.puzzleBody .panelMoveArea--10 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-10-P:checked~.puzzleBody .panelMoveArea--10 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-10-P:checked~.puzzleBody .panelMoveArea--10 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-11:checked~.puzzleBody .panelMoveArea--11 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-11:checked~.puzzleBody .panelMoveArea--11 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-11-A:checked~.puzzleBody .panelMoveArea--11 {
+  top: 0;
+  left: 0;
+}
+
+#panel-11-A:checked~.puzzleBody .panelMoveArea--11 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-A:checked~.puzzleBody .panelMoveArea--11 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-11-A:checked~.puzzleBody .panelMoveArea--11 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-A:checked~.puzzleBody .panelMoveArea--11 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-B:checked~.puzzleBody .panelMoveArea--11 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-11-B:checked~.puzzleBody .panelMoveArea--11 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-B:checked~.puzzleBody .panelMoveArea--11 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-B:checked~.puzzleBody .panelMoveArea--11 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-B:checked~.puzzleBody .panelMoveArea--11 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-11-B:checked~.puzzleBody .panelMoveArea--11 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-B:checked~.puzzleBody .panelMoveArea--11 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-C:checked~.puzzleBody .panelMoveArea--11 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-11-C:checked~.puzzleBody .panelMoveArea--11 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-C:checked~.puzzleBody .panelMoveArea--11 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-C:checked~.puzzleBody .panelMoveArea--11 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-C:checked~.puzzleBody .panelMoveArea--11 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-11-C:checked~.puzzleBody .panelMoveArea--11 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-C:checked~.puzzleBody .panelMoveArea--11 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-D:checked~.puzzleBody .panelMoveArea--11 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-11-D:checked~.puzzleBody .panelMoveArea--11 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-D:checked~.puzzleBody .panelMoveArea--11 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-D:checked~.puzzleBody .panelMoveArea--11 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-D:checked~.puzzleBody .panelMoveArea--11 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-E:checked~.puzzleBody .panelMoveArea--11 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-11-E:checked~.puzzleBody .panelMoveArea--11 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-E:checked~.puzzleBody .panelMoveArea--11 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-E:checked~.puzzleBody .panelMoveArea--11 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-E:checked~.puzzleBody .panelMoveArea--11 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-11-E:checked~.puzzleBody .panelMoveArea--11 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-E:checked~.puzzleBody .panelMoveArea--11 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-F:checked~.puzzleBody .panelMoveArea--11 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-G:checked~.puzzleBody .panelMoveArea--11 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-H:checked~.puzzleBody .panelMoveArea--11 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-11-H:checked~.puzzleBody .panelMoveArea--11 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-H:checked~.puzzleBody .panelMoveArea--11 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-H:checked~.puzzleBody .panelMoveArea--11 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-H:checked~.puzzleBody .panelMoveArea--11 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-H:checked~.puzzleBody .panelMoveArea--11 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-H:checked~.puzzleBody .panelMoveArea--11 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-I:checked~.puzzleBody .panelMoveArea--11 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-11-I:checked~.puzzleBody .panelMoveArea--11 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-I:checked~.puzzleBody .panelMoveArea--11 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-I:checked~.puzzleBody .panelMoveArea--11 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-I:checked~.puzzleBody .panelMoveArea--11 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-11-I:checked~.puzzleBody .panelMoveArea--11 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-I:checked~.puzzleBody .panelMoveArea--11 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-J:checked~.puzzleBody .panelMoveArea--11 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-K:checked~.puzzleBody .panelMoveArea--11 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-L:checked~.puzzleBody .panelMoveArea--11 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-11-L:checked~.puzzleBody .panelMoveArea--11 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-L:checked~.puzzleBody .panelMoveArea--11 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-L:checked~.puzzleBody .panelMoveArea--11 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-L:checked~.puzzleBody .panelMoveArea--11 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-L:checked~.puzzleBody .panelMoveArea--11 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-11-L:checked~.puzzleBody .panelMoveArea--11 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-11-M:checked~.puzzleBody .panelMoveArea--11 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-11-M:checked~.puzzleBody .panelMoveArea--11 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-M:checked~.puzzleBody .panelMoveArea--11 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-M:checked~.puzzleBody .panelMoveArea--11 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-M:checked~.puzzleBody .panelMoveArea--11 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-11-N:checked~.puzzleBody .panelMoveArea--11 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-11-N:checked~.puzzleBody .panelMoveArea--11 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-N:checked~.puzzleBody .panelMoveArea--11 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-N:checked~.puzzleBody .panelMoveArea--11 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-N:checked~.puzzleBody .panelMoveArea--11 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-N:checked~.puzzleBody .panelMoveArea--11 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-N:checked~.puzzleBody .panelMoveArea--11 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-11-O:checked~.puzzleBody .panelMoveArea--11 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-11-O:checked~.puzzleBody .panelMoveArea--11 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-O:checked~.puzzleBody .panelMoveArea--11 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-O:checked~.puzzleBody .panelMoveArea--11 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-O:checked~.puzzleBody .panelMoveArea--11 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-11-O:checked~.puzzleBody .panelMoveArea--11 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-11-O:checked~.puzzleBody .panelMoveArea--11 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-11-P:checked~.puzzleBody .panelMoveArea--11 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-11-P:checked~.puzzleBody .panelMoveArea--11 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-11-P:checked~.puzzleBody .panelMoveArea--11 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-11-P:checked~.puzzleBody .panelMoveArea--11 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-11-P:checked~.puzzleBody .panelMoveArea--11 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-12:checked~.puzzleBody .panelMoveArea--12 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-12:checked~.puzzleBody .panelMoveArea--12 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-12-A:checked~.puzzleBody .panelMoveArea--12 {
+  top: 0;
+  left: 0;
+}
+
+#panel-12-A:checked~.puzzleBody .panelMoveArea--12 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-A:checked~.puzzleBody .panelMoveArea--12 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-12-A:checked~.puzzleBody .panelMoveArea--12 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-A:checked~.puzzleBody .panelMoveArea--12 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-B:checked~.puzzleBody .panelMoveArea--12 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-12-B:checked~.puzzleBody .panelMoveArea--12 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-B:checked~.puzzleBody .panelMoveArea--12 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-B:checked~.puzzleBody .panelMoveArea--12 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-B:checked~.puzzleBody .panelMoveArea--12 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-12-B:checked~.puzzleBody .panelMoveArea--12 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-B:checked~.puzzleBody .panelMoveArea--12 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-C:checked~.puzzleBody .panelMoveArea--12 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-12-C:checked~.puzzleBody .panelMoveArea--12 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-C:checked~.puzzleBody .panelMoveArea--12 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-C:checked~.puzzleBody .panelMoveArea--12 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-C:checked~.puzzleBody .panelMoveArea--12 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-12-C:checked~.puzzleBody .panelMoveArea--12 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-C:checked~.puzzleBody .panelMoveArea--12 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-D:checked~.puzzleBody .panelMoveArea--12 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-12-D:checked~.puzzleBody .panelMoveArea--12 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-D:checked~.puzzleBody .panelMoveArea--12 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-D:checked~.puzzleBody .panelMoveArea--12 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-D:checked~.puzzleBody .panelMoveArea--12 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-E:checked~.puzzleBody .panelMoveArea--12 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-12-E:checked~.puzzleBody .panelMoveArea--12 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-E:checked~.puzzleBody .panelMoveArea--12 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-E:checked~.puzzleBody .panelMoveArea--12 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-E:checked~.puzzleBody .panelMoveArea--12 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-12-E:checked~.puzzleBody .panelMoveArea--12 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-E:checked~.puzzleBody .panelMoveArea--12 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-F:checked~.puzzleBody .panelMoveArea--12 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-G:checked~.puzzleBody .panelMoveArea--12 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-H:checked~.puzzleBody .panelMoveArea--12 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-12-H:checked~.puzzleBody .panelMoveArea--12 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-H:checked~.puzzleBody .panelMoveArea--12 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-H:checked~.puzzleBody .panelMoveArea--12 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-H:checked~.puzzleBody .panelMoveArea--12 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-H:checked~.puzzleBody .panelMoveArea--12 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-H:checked~.puzzleBody .panelMoveArea--12 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-I:checked~.puzzleBody .panelMoveArea--12 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-12-I:checked~.puzzleBody .panelMoveArea--12 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-I:checked~.puzzleBody .panelMoveArea--12 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-I:checked~.puzzleBody .panelMoveArea--12 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-I:checked~.puzzleBody .panelMoveArea--12 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-12-I:checked~.puzzleBody .panelMoveArea--12 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-I:checked~.puzzleBody .panelMoveArea--12 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-J:checked~.puzzleBody .panelMoveArea--12 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-K:checked~.puzzleBody .panelMoveArea--12 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-L:checked~.puzzleBody .panelMoveArea--12 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-12-L:checked~.puzzleBody .panelMoveArea--12 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-L:checked~.puzzleBody .panelMoveArea--12 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-L:checked~.puzzleBody .panelMoveArea--12 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-L:checked~.puzzleBody .panelMoveArea--12 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-L:checked~.puzzleBody .panelMoveArea--12 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-12-L:checked~.puzzleBody .panelMoveArea--12 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-12-M:checked~.puzzleBody .panelMoveArea--12 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-12-M:checked~.puzzleBody .panelMoveArea--12 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-M:checked~.puzzleBody .panelMoveArea--12 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-M:checked~.puzzleBody .panelMoveArea--12 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-M:checked~.puzzleBody .panelMoveArea--12 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-12-N:checked~.puzzleBody .panelMoveArea--12 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-12-N:checked~.puzzleBody .panelMoveArea--12 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-N:checked~.puzzleBody .panelMoveArea--12 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-N:checked~.puzzleBody .panelMoveArea--12 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-N:checked~.puzzleBody .panelMoveArea--12 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-N:checked~.puzzleBody .panelMoveArea--12 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-N:checked~.puzzleBody .panelMoveArea--12 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-12-O:checked~.puzzleBody .panelMoveArea--12 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-12-O:checked~.puzzleBody .panelMoveArea--12 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-O:checked~.puzzleBody .panelMoveArea--12 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-O:checked~.puzzleBody .panelMoveArea--12 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-O:checked~.puzzleBody .panelMoveArea--12 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-12-O:checked~.puzzleBody .panelMoveArea--12 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-12-O:checked~.puzzleBody .panelMoveArea--12 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-12-P:checked~.puzzleBody .panelMoveArea--12 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-12-P:checked~.puzzleBody .panelMoveArea--12 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-12-P:checked~.puzzleBody .panelMoveArea--12 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-12-P:checked~.puzzleBody .panelMoveArea--12 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-12-P:checked~.puzzleBody .panelMoveArea--12 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-13:checked~.puzzleBody .panelMoveArea--13 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-13:checked~.puzzleBody .panelMoveArea--13 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-13-A:checked~.puzzleBody .panelMoveArea--13 {
+  top: 0;
+  left: 0;
+}
+
+#panel-13-A:checked~.puzzleBody .panelMoveArea--13 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-A:checked~.puzzleBody .panelMoveArea--13 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-13-A:checked~.puzzleBody .panelMoveArea--13 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-A:checked~.puzzleBody .panelMoveArea--13 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-B:checked~.puzzleBody .panelMoveArea--13 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-13-B:checked~.puzzleBody .panelMoveArea--13 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-B:checked~.puzzleBody .panelMoveArea--13 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-B:checked~.puzzleBody .panelMoveArea--13 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-B:checked~.puzzleBody .panelMoveArea--13 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-13-B:checked~.puzzleBody .panelMoveArea--13 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-B:checked~.puzzleBody .panelMoveArea--13 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-C:checked~.puzzleBody .panelMoveArea--13 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-13-C:checked~.puzzleBody .panelMoveArea--13 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-C:checked~.puzzleBody .panelMoveArea--13 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-C:checked~.puzzleBody .panelMoveArea--13 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-C:checked~.puzzleBody .panelMoveArea--13 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-13-C:checked~.puzzleBody .panelMoveArea--13 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-C:checked~.puzzleBody .panelMoveArea--13 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-D:checked~.puzzleBody .panelMoveArea--13 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-13-D:checked~.puzzleBody .panelMoveArea--13 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-D:checked~.puzzleBody .panelMoveArea--13 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-D:checked~.puzzleBody .panelMoveArea--13 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-D:checked~.puzzleBody .panelMoveArea--13 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-E:checked~.puzzleBody .panelMoveArea--13 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-13-E:checked~.puzzleBody .panelMoveArea--13 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-E:checked~.puzzleBody .panelMoveArea--13 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-E:checked~.puzzleBody .panelMoveArea--13 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-E:checked~.puzzleBody .panelMoveArea--13 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-13-E:checked~.puzzleBody .panelMoveArea--13 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-E:checked~.puzzleBody .panelMoveArea--13 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-F:checked~.puzzleBody .panelMoveArea--13 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-G:checked~.puzzleBody .panelMoveArea--13 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-H:checked~.puzzleBody .panelMoveArea--13 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-13-H:checked~.puzzleBody .panelMoveArea--13 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-H:checked~.puzzleBody .panelMoveArea--13 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-H:checked~.puzzleBody .panelMoveArea--13 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-H:checked~.puzzleBody .panelMoveArea--13 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-H:checked~.puzzleBody .panelMoveArea--13 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-H:checked~.puzzleBody .panelMoveArea--13 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-I:checked~.puzzleBody .panelMoveArea--13 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-13-I:checked~.puzzleBody .panelMoveArea--13 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-I:checked~.puzzleBody .panelMoveArea--13 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-I:checked~.puzzleBody .panelMoveArea--13 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-I:checked~.puzzleBody .panelMoveArea--13 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-13-I:checked~.puzzleBody .panelMoveArea--13 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-I:checked~.puzzleBody .panelMoveArea--13 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-J:checked~.puzzleBody .panelMoveArea--13 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-K:checked~.puzzleBody .panelMoveArea--13 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-L:checked~.puzzleBody .panelMoveArea--13 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-13-L:checked~.puzzleBody .panelMoveArea--13 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-L:checked~.puzzleBody .panelMoveArea--13 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-L:checked~.puzzleBody .panelMoveArea--13 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-L:checked~.puzzleBody .panelMoveArea--13 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-L:checked~.puzzleBody .panelMoveArea--13 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-13-L:checked~.puzzleBody .panelMoveArea--13 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-13-M:checked~.puzzleBody .panelMoveArea--13 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-13-M:checked~.puzzleBody .panelMoveArea--13 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-M:checked~.puzzleBody .panelMoveArea--13 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-M:checked~.puzzleBody .panelMoveArea--13 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-M:checked~.puzzleBody .panelMoveArea--13 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-13-N:checked~.puzzleBody .panelMoveArea--13 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-13-N:checked~.puzzleBody .panelMoveArea--13 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-N:checked~.puzzleBody .panelMoveArea--13 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-N:checked~.puzzleBody .panelMoveArea--13 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-N:checked~.puzzleBody .panelMoveArea--13 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-N:checked~.puzzleBody .panelMoveArea--13 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-N:checked~.puzzleBody .panelMoveArea--13 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-13-O:checked~.puzzleBody .panelMoveArea--13 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-13-O:checked~.puzzleBody .panelMoveArea--13 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-O:checked~.puzzleBody .panelMoveArea--13 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-O:checked~.puzzleBody .panelMoveArea--13 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-O:checked~.puzzleBody .panelMoveArea--13 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-13-O:checked~.puzzleBody .panelMoveArea--13 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-13-O:checked~.puzzleBody .panelMoveArea--13 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-13-P:checked~.puzzleBody .panelMoveArea--13 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-13-P:checked~.puzzleBody .panelMoveArea--13 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-13-P:checked~.puzzleBody .panelMoveArea--13 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-13-P:checked~.puzzleBody .panelMoveArea--13 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-13-P:checked~.puzzleBody .panelMoveArea--13 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-14:checked~.puzzleBody .panelMoveArea--14 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-14:checked~.puzzleBody .panelMoveArea--14 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-14-A:checked~.puzzleBody .panelMoveArea--14 {
+  top: 0;
+  left: 0;
+}
+
+#panel-14-A:checked~.puzzleBody .panelMoveArea--14 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-A:checked~.puzzleBody .panelMoveArea--14 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-14-A:checked~.puzzleBody .panelMoveArea--14 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-A:checked~.puzzleBody .panelMoveArea--14 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-B:checked~.puzzleBody .panelMoveArea--14 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-14-B:checked~.puzzleBody .panelMoveArea--14 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-B:checked~.puzzleBody .panelMoveArea--14 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-B:checked~.puzzleBody .panelMoveArea--14 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-B:checked~.puzzleBody .panelMoveArea--14 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-14-B:checked~.puzzleBody .panelMoveArea--14 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-B:checked~.puzzleBody .panelMoveArea--14 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-C:checked~.puzzleBody .panelMoveArea--14 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-14-C:checked~.puzzleBody .panelMoveArea--14 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-C:checked~.puzzleBody .panelMoveArea--14 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-C:checked~.puzzleBody .panelMoveArea--14 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-C:checked~.puzzleBody .panelMoveArea--14 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-14-C:checked~.puzzleBody .panelMoveArea--14 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-C:checked~.puzzleBody .panelMoveArea--14 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-D:checked~.puzzleBody .panelMoveArea--14 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-14-D:checked~.puzzleBody .panelMoveArea--14 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-D:checked~.puzzleBody .panelMoveArea--14 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-D:checked~.puzzleBody .panelMoveArea--14 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-D:checked~.puzzleBody .panelMoveArea--14 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-E:checked~.puzzleBody .panelMoveArea--14 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-14-E:checked~.puzzleBody .panelMoveArea--14 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-E:checked~.puzzleBody .panelMoveArea--14 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-E:checked~.puzzleBody .panelMoveArea--14 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-E:checked~.puzzleBody .panelMoveArea--14 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-14-E:checked~.puzzleBody .panelMoveArea--14 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-E:checked~.puzzleBody .panelMoveArea--14 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-F:checked~.puzzleBody .panelMoveArea--14 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-G:checked~.puzzleBody .panelMoveArea--14 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-H:checked~.puzzleBody .panelMoveArea--14 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-14-H:checked~.puzzleBody .panelMoveArea--14 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-H:checked~.puzzleBody .panelMoveArea--14 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-H:checked~.puzzleBody .panelMoveArea--14 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-H:checked~.puzzleBody .panelMoveArea--14 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-H:checked~.puzzleBody .panelMoveArea--14 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-H:checked~.puzzleBody .panelMoveArea--14 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-I:checked~.puzzleBody .panelMoveArea--14 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-14-I:checked~.puzzleBody .panelMoveArea--14 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-I:checked~.puzzleBody .panelMoveArea--14 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-I:checked~.puzzleBody .panelMoveArea--14 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-I:checked~.puzzleBody .panelMoveArea--14 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-14-I:checked~.puzzleBody .panelMoveArea--14 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-I:checked~.puzzleBody .panelMoveArea--14 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-J:checked~.puzzleBody .panelMoveArea--14 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-K:checked~.puzzleBody .panelMoveArea--14 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-L:checked~.puzzleBody .panelMoveArea--14 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-14-L:checked~.puzzleBody .panelMoveArea--14 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-L:checked~.puzzleBody .panelMoveArea--14 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-L:checked~.puzzleBody .panelMoveArea--14 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-L:checked~.puzzleBody .panelMoveArea--14 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-L:checked~.puzzleBody .panelMoveArea--14 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-14-L:checked~.puzzleBody .panelMoveArea--14 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-14-M:checked~.puzzleBody .panelMoveArea--14 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-14-M:checked~.puzzleBody .panelMoveArea--14 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-M:checked~.puzzleBody .panelMoveArea--14 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-M:checked~.puzzleBody .panelMoveArea--14 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-M:checked~.puzzleBody .panelMoveArea--14 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-14-N:checked~.puzzleBody .panelMoveArea--14 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-14-N:checked~.puzzleBody .panelMoveArea--14 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-N:checked~.puzzleBody .panelMoveArea--14 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-N:checked~.puzzleBody .panelMoveArea--14 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-N:checked~.puzzleBody .panelMoveArea--14 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-N:checked~.puzzleBody .panelMoveArea--14 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-N:checked~.puzzleBody .panelMoveArea--14 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-14-O:checked~.puzzleBody .panelMoveArea--14 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-14-O:checked~.puzzleBody .panelMoveArea--14 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-O:checked~.puzzleBody .panelMoveArea--14 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-O:checked~.puzzleBody .panelMoveArea--14 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-O:checked~.puzzleBody .panelMoveArea--14 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-14-O:checked~.puzzleBody .panelMoveArea--14 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-14-O:checked~.puzzleBody .panelMoveArea--14 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-14-P:checked~.puzzleBody .panelMoveArea--14 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-14-P:checked~.puzzleBody .panelMoveArea--14 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-14-P:checked~.puzzleBody .panelMoveArea--14 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-14-P:checked~.puzzleBody .panelMoveArea--14 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-14-P:checked~.puzzleBody .panelMoveArea--14 .label--O::before {
+  transform: rotate(180deg);
+}
+
+#panelMove-15:checked~.puzzleBody .panelMoveArea--15 {
+  z-index: 1;
+  overflow: visible;
+}
+
+#panelMove-15:checked~.puzzleBody .panelMoveArea--15 .label {
+  animation: dire_opacity ease 0.5s 0.1s forwards;
+}
+
+@keyframes dire_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#panel-15-A:checked~.puzzleBody .panelMoveArea--15 {
+  top: 0;
+  left: 0;
+}
+
+#panel-15-A:checked~.puzzleBody .panelMoveArea--15 .label--B {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-A:checked~.puzzleBody .panelMoveArea--15 .label--B::before {
+  transform: rotate(0);
+}
+
+#panel-15-A:checked~.puzzleBody .panelMoveArea--15 .label--E {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-A:checked~.puzzleBody .panelMoveArea--15 .label--E::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-B:checked~.puzzleBody .panelMoveArea--15 {
+  top: 0;
+  left: 25%;
+}
+
+#panel-15-B:checked~.puzzleBody .panelMoveArea--15 .label--A {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-B:checked~.puzzleBody .panelMoveArea--15 .label--A::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-B:checked~.puzzleBody .panelMoveArea--15 .label--C {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-B:checked~.puzzleBody .panelMoveArea--15 .label--C::before {
+  transform: rotate(0);
+}
+
+#panel-15-B:checked~.puzzleBody .panelMoveArea--15 .label--F {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-B:checked~.puzzleBody .panelMoveArea--15 .label--F::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-C:checked~.puzzleBody .panelMoveArea--15 {
+  top: 0;
+  left: 50%;
+}
+
+#panel-15-C:checked~.puzzleBody .panelMoveArea--15 .label--B {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-C:checked~.puzzleBody .panelMoveArea--15 .label--B::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-C:checked~.puzzleBody .panelMoveArea--15 .label--D {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-C:checked~.puzzleBody .panelMoveArea--15 .label--D::before {
+  transform: rotate(0);
+}
+
+#panel-15-C:checked~.puzzleBody .panelMoveArea--15 .label--G {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-C:checked~.puzzleBody .panelMoveArea--15 .label--G::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-D:checked~.puzzleBody .panelMoveArea--15 {
+  top: 0;
+  left: 75%;
+}
+
+#panel-15-D:checked~.puzzleBody .panelMoveArea--15 .label--C {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-D:checked~.puzzleBody .panelMoveArea--15 .label--C::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-D:checked~.puzzleBody .panelMoveArea--15 .label--H {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-D:checked~.puzzleBody .panelMoveArea--15 .label--H::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-E:checked~.puzzleBody .panelMoveArea--15 {
+  top: 25%;
+  left: 0;
+}
+
+#panel-15-E:checked~.puzzleBody .panelMoveArea--15 .label--A {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-E:checked~.puzzleBody .panelMoveArea--15 .label--A::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-E:checked~.puzzleBody .panelMoveArea--15 .label--F {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-E:checked~.puzzleBody .panelMoveArea--15 .label--F::before {
+  transform: rotate(0);
+}
+
+#panel-15-E:checked~.puzzleBody .panelMoveArea--15 .label--I {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-E:checked~.puzzleBody .panelMoveArea--15 .label--I::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 {
+  top: 25%;
+  left: 25%;
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 .label--B {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 .label--B::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 .label--E {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 .label--E::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 .label--G {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 .label--G::before {
+  transform: rotate(0);
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 .label--J {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-F:checked~.puzzleBody .panelMoveArea--15 .label--J::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 {
+  top: 25%;
+  left: 50%;
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 .label--C {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 .label--C::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 .label--F {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 .label--F::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 .label--H {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 .label--H::before {
+  transform: rotate(0);
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 .label--K {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-G:checked~.puzzleBody .panelMoveArea--15 .label--K::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-H:checked~.puzzleBody .panelMoveArea--15 {
+  top: 25%;
+  left: 75%;
+}
+
+#panel-15-H:checked~.puzzleBody .panelMoveArea--15 .label--D {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-H:checked~.puzzleBody .panelMoveArea--15 .label--D::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-H:checked~.puzzleBody .panelMoveArea--15 .label--G {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-H:checked~.puzzleBody .panelMoveArea--15 .label--G::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-H:checked~.puzzleBody .panelMoveArea--15 .label--L {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-H:checked~.puzzleBody .panelMoveArea--15 .label--L::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-I:checked~.puzzleBody .panelMoveArea--15 {
+  top: 50%;
+  left: 0;
+}
+
+#panel-15-I:checked~.puzzleBody .panelMoveArea--15 .label--E {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-I:checked~.puzzleBody .panelMoveArea--15 .label--E::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-I:checked~.puzzleBody .panelMoveArea--15 .label--J {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-I:checked~.puzzleBody .panelMoveArea--15 .label--J::before {
+  transform: rotate(0);
+}
+
+#panel-15-I:checked~.puzzleBody .panelMoveArea--15 .label--M {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-I:checked~.puzzleBody .panelMoveArea--15 .label--M::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 {
+  top: 50%;
+  left: 25%;
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 .label--F {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 .label--F::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 .label--I {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 .label--I::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 .label--K {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 .label--K::before {
+  transform: rotate(0);
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 .label--N {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-J:checked~.puzzleBody .panelMoveArea--15 .label--N::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 {
+  top: 50%;
+  left: 50%;
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 .label--G {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 .label--G::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 .label--J {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 .label--J::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 .label--L {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 .label--L::before {
+  transform: rotate(0);
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 .label--O {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-K:checked~.puzzleBody .panelMoveArea--15 .label--O::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-L:checked~.puzzleBody .panelMoveArea--15 {
+  top: 50%;
+  left: 75%;
+}
+
+#panel-15-L:checked~.puzzleBody .panelMoveArea--15 .label--H {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-L:checked~.puzzleBody .panelMoveArea--15 .label--H::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-L:checked~.puzzleBody .panelMoveArea--15 .label--K {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-L:checked~.puzzleBody .panelMoveArea--15 .label--K::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-L:checked~.puzzleBody .panelMoveArea--15 .label--P {
+  top: auto;
+  bottom: -100%;
+}
+
+#panel-15-L:checked~.puzzleBody .panelMoveArea--15 .label--P::before {
+  transform: rotate(90deg);
+}
+
+#panel-15-M:checked~.puzzleBody .panelMoveArea--15 {
+  top: 75%;
+  left: 0;
+}
+
+#panel-15-M:checked~.puzzleBody .panelMoveArea--15 .label--I {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-M:checked~.puzzleBody .panelMoveArea--15 .label--I::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-M:checked~.puzzleBody .panelMoveArea--15 .label--N {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-M:checked~.puzzleBody .panelMoveArea--15 .label--N::before {
+  transform: rotate(0);
+}
+
+#panel-15-N:checked~.puzzleBody .panelMoveArea--15 {
+  top: 75%;
+  left: 25%;
+}
+
+#panel-15-N:checked~.puzzleBody .panelMoveArea--15 .label--J {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-N:checked~.puzzleBody .panelMoveArea--15 .label--J::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-N:checked~.puzzleBody .panelMoveArea--15 .label--M {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-N:checked~.puzzleBody .panelMoveArea--15 .label--M::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-N:checked~.puzzleBody .panelMoveArea--15 .label--O {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-N:checked~.puzzleBody .panelMoveArea--15 .label--O::before {
+  transform: rotate(0);
+}
+
+#panel-15-O:checked~.puzzleBody .panelMoveArea--15 {
+  top: 75%;
+  left: 50%;
+}
+
+#panel-15-O:checked~.puzzleBody .panelMoveArea--15 .label--K {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-O:checked~.puzzleBody .panelMoveArea--15 .label--K::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-O:checked~.puzzleBody .panelMoveArea--15 .label--N {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-O:checked~.puzzleBody .panelMoveArea--15 .label--N::before {
+  transform: rotate(180deg);
+}
+
+#panel-15-O:checked~.puzzleBody .panelMoveArea--15 .label--P {
+  left: auto;
+  right: -100%;
+}
+
+#panel-15-O:checked~.puzzleBody .panelMoveArea--15 .label--P::before {
+  transform: rotate(0);
+}
+
+#panel-15-P:checked~.puzzleBody .panelMoveArea--15 {
+  top: 75%;
+  left: 75%;
+}
+
+#panel-15-P:checked~.puzzleBody .panelMoveArea--15 .label--L {
+  top: -100%;
+  bottom: auto;
+}
+
+#panel-15-P:checked~.puzzleBody .panelMoveArea--15 .label--L::before {
+  transform: rotate(-90deg);
+}
+
+#panel-15-P:checked~.puzzleBody .panelMoveArea--15 .label--O {
+  left: -100%;
+  right: auto;
+}
+
+#panel-15-P:checked~.puzzleBody .panelMoveArea--15 .label--O::before {
+  transform: rotate(180deg);
+}
+
+.panelGraphic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  opacity: 0;
+  border-style: solid;
+  border-width: 5px;
+}
+
+#panelMove-1:checked~.puzzleBody .panelMoveArea--1 .panelGraphic::before,
+#panelMove-2:checked~.puzzleBody .panelMoveArea--2 .panelGraphic::before,
+#panelMove-3:checked~.puzzleBody .panelMoveArea--3 .panelGraphic::before,
+#panelMove-4:checked~.puzzleBody .panelMoveArea--4 .panelGraphic::before,
+#panelMove-5:checked~.puzzleBody .panelMoveArea--5 .panelGraphic::before,
+#panelMove-6:checked~.puzzleBody .panelMoveArea--6 .panelGraphic::before,
+#panelMove-7:checked~.puzzleBody .panelMoveArea--7 .panelGraphic::before,
+#panelMove-8:checked~.puzzleBody .panelMoveArea--8 .panelGraphic::before,
+#panelMove-9:checked~.puzzleBody .panelMoveArea--9 .panelGraphic::before,
+#panelMove-10:checked~.puzzleBody .panelMoveArea--10 .panelGraphic::before,
+#panelMove-11:checked~.puzzleBody .panelMoveArea--11 .panelGraphic::before,
+#panelMove-12:checked~.puzzleBody .panelMoveArea--12 .panelGraphic::before,
+#panelMove-13:checked~.puzzleBody .panelMoveArea--13 .panelGraphic::before,
+#panelMove-14:checked~.puzzleBody .panelMoveArea--14 .panelGraphic::before,
+#panelMove-15:checked~.puzzleBody .panelMoveArea--15 .panelGraphic::before {
+  animation: focus ease-in-out 0.6s infinite alternate;
+}
+
+@keyframes focus {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

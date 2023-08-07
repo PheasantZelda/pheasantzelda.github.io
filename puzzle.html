@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--Headerはここから-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-6GR32CWGN7");
+</script>
+
+<head>
+  <!--google adsense-->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <title>スマブラパズル</title>
+  <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <meta name="description" content="スマブラの知識やスマアナの統計結果をクイズ形式で出題、スマアナ検定にぜひ挑戦してください。" />
+  <meta property="og:site_name" contet="スマアナ検定" />
+  <meta property="og:title" contet="スマアナ検定" />
+  <meta property="og:description" content="スマブラの知識やスマアナの統計結果をクイズ形式で出題、スマアナ検定にぜひ挑戦してください。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pheasantzelda.github.io/quiz.html" />
+  <meta name="og:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="スマアナ検定" />
+  <meta name="twitter:description" content="スマブラの知識やスマアナの統計結果をクイズ形式で出題、スマアナ検定にぜひ挑戦してください。" />
+  <meta name="twitter:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
+  <meta name="twitter:url" content="https://pheasantzelda.github.io/quiz.html" />
+  <!--スマホ用の画面設定-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./js/toggle-menu.js"></script>
+  <link href="./css/common.css" rel="stylesheet" />
+  <link href="./css/puzzle.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="img/common/icon-192x192.png" />
+  <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.png" />
+  <link rel="icon" href="img/common/favicon.ico" />
+</head>
+
+<!--Bodyはここから-->
+
+<body>
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div><!--  
+<script>
+    window.onload = function () {
+      const spinner = document.getElementById("loading");
+      spinner.classList.add("loaded");
+    };
+  </script>-->
+  <!--headerはここから-->
+  <header class="header">
+    <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
+    <div class="header-inner">
+      <!--./index.htmlでトップページを指す-->
+      <a class="header-logo" href="./index.html">
+        <img src="./img/common/logo.png" alt="SSBU" />
+      </a>
+      <button class="toggle-menu-button"></button>
+      <div class="header-site-menu">
+        <nav class="site-menu">
+          <ul>
+            <li><a href="./fighter.html">ファイタ一覧</a></li>
+            <li><a href="./ranking.html">キャラランク</a></li>
+            <li><a href="./statstics.html">統計データ</a></li>
+            <li><a href="./capability.html">簡易不利相性</a></li>
+            <li><a href="./parameter.html">特性早見表</a></li>
+            <li><a href="./match_up.html">キャラ相性優劣</a></li>
+            <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+            <li><a href="./quiz.html">スマアナ検定</a></li>
+            <li><a href="./record.html">歴代記録</a></li>
+            <li><a href="./userpolicy.html">利用規約</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--headerはここまで-->
+
+  <!--mainはここから-->
+  <main class="main">
+    <div class="title">
+      <img src="./img/common/Main.jpg" alt="SSBU" />
+      <h1>スマブラパズル</h1>
+      <p>SSBU PUZZLE</p>
+    </div>
+    <!--パンくずリスト-->
+    <div class="bread">
+      <nav>
+        <ol class="breadcrumb">
+          <li><a href="/">ホーム</a></li>
+          <li><a href="./puzzle.html">スマブラパズル</a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="section">スマブラパズル</div>
+    <div class="explain">
+      <p>
+        　スマブラに参戦しているファイターの画像を元に簡単なパズルを作成してみました。クリックすることで
+        画像を動かすことができ、並び替えて正しい画像に変えてみてください。
+      </p>
+    </div>
+    <div class="container">
+      <input type="radio" name="panelMove" id="panelMove-1" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-2" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-3" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-4" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-5" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-6" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-7" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-8" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-9" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-10" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-11" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-12" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-13" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-14" class="checkPanelMove" />
+      <input type="radio" name="panelMove" id="panelMove-15" class="checkPanelMove" checked="" />
+      <input type="radio" name="panel-1" id="panel-1-A" class="panelController" checked="" />
+      <input type="radio" name="panel-1" id="panel-1-B" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-C" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-D" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-E" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-F" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-G" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-H" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-I" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-J" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-K" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-L" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-M" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-N" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-O" class="panelController" />
+      <input type="radio" name="panel-1" id="panel-1-P" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-A" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-B" class="panelController" checked="" />
+      <input type="radio" name="panel-2" id="panel-2-C" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-D" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-E" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-F" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-G" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-H" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-I" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-J" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-K" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-L" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-M" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-N" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-O" class="panelController" />
+      <input type="radio" name="panel-2" id="panel-2-P" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-A" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-B" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-C" class="panelController" checked="" />
+      <input type="radio" name="panel-3" id="panel-3-D" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-E" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-F" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-G" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-H" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-I" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-J" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-K" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-L" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-M" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-N" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-O" class="panelController" />
+      <input type="radio" name="panel-3" id="panel-3-P" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-A" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-B" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-C" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-D" class="panelController" checked="" />
+      <input type="radio" name="panel-4" id="panel-4-E" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-F" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-G" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-H" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-I" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-J" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-K" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-L" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-M" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-N" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-O" class="panelController" />
+      <input type="radio" name="panel-4" id="panel-4-P" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-A" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-B" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-C" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-D" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-E" class="panelController" checked="" />
+      <input type="radio" name="panel-5" id="panel-5-F" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-G" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-H" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-I" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-J" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-K" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-L" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-M" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-N" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-O" class="panelController" />
+      <input type="radio" name="panel-5" id="panel-5-P" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-A" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-B" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-C" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-D" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-E" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-F" class="panelController" checked="" />
+      <input type="radio" name="panel-6" id="panel-6-G" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-H" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-I" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-J" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-K" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-L" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-M" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-N" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-O" class="panelController" />
+      <input type="radio" name="panel-6" id="panel-6-P" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-A" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-B" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-C" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-D" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-E" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-F" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-G" class="panelController" checked="" />
+      <input type="radio" name="panel-7" id="panel-7-H" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-I" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-J" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-K" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-L" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-M" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-N" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-O" class="panelController" />
+      <input type="radio" name="panel-7" id="panel-7-P" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-A" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-B" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-C" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-D" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-E" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-F" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-G" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-H" class="panelController" checked="" />
+      <input type="radio" name="panel-8" id="panel-8-I" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-J" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-K" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-L" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-M" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-N" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-O" class="panelController" />
+      <input type="radio" name="panel-8" id="panel-8-P" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-A" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-B" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-C" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-D" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-E" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-F" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-G" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-H" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-I" class="panelController" checked="" />
+      <input type="radio" name="panel-9" id="panel-9-J" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-K" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-L" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-M" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-N" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-O" class="panelController" />
+      <input type="radio" name="panel-9" id="panel-9-P" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-A" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-B" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-C" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-D" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-E" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-F" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-G" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-H" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-I" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-J" class="panelController" checked="" />
+      <input type="radio" name="panel-10" id="panel-10-K" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-L" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-M" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-N" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-O" class="panelController" />
+      <input type="radio" name="panel-10" id="panel-10-P" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-A" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-B" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-C" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-D" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-E" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-F" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-G" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-H" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-I" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-J" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-K" class="panelController" checked="" />
+      <input type="radio" name="panel-11" id="panel-11-L" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-M" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-N" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-O" class="panelController" />
+      <input type="radio" name="panel-11" id="panel-11-P" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-A" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-B" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-C" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-D" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-E" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-F" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-G" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-H" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-I" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-J" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-K" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-L" class="panelController" checked="" />
+      <input type="radio" name="panel-12" id="panel-12-M" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-N" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-O" class="panelController" />
+      <input type="radio" name="panel-12" id="panel-12-P" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-A" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-B" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-C" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-D" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-E" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-F" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-G" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-H" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-I" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-J" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-K" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-L" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-M" class="panelController" checked="" />
+      <input type="radio" name="panel-13" id="panel-13-N" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-O" class="panelController" />
+      <input type="radio" name="panel-13" id="panel-13-P" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-A" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-B" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-C" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-D" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-E" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-F" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-G" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-H" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-I" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-J" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-K" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-L" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-M" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-N" class="panelController" checked="" />
+      <input type="radio" name="panel-14" id="panel-14-O" class="panelController" />
+      <input type="radio" name="panel-14" id="panel-14-P" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-A" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-B" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-C" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-D" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-E" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-F" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-G" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-H" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-I" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-J" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-K" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-L" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-M" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-N" class="panelController" />
+      <input type="radio" name="panel-15" id="panel-15-O" class="panelController" checked="" />
+      <input type="radio" name="panel-15" id="panel-15-P" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-A" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-B" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-C" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-D" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-E" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-F" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-G" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-H" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-I" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-J" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-K" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-L" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-M" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-N" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-O" class="panelController" />
+      <input type="radio" name="panel-16" id="panel-16-P" class="panelController" checked="" />
+      <div class="puzzleBody">
+        <div class="tierlist">
+          <div class="MUTITLE">
+            <h2>SSBU PUZZLE</h2>
+            <img src="./img/common/logo.png" alt="SSBU">
+          </div>
+          <div class="puzzleArea">
+            <div class="puzzleAreaShadow"></div>
+            <div class="panelMoveArea panelMoveArea--1">
+              <label class="panelGraphic" for="panelMove-1"></label>
+              <label class="label label--A" for="panel-1-A"></label>
+              <label class="label label--B" for="panel-1-B"></label>
+              <label class="label label--C" for="panel-1-C"></label>
+              <label class="label label--D" for="panel-1-D"></label>
+              <label class="label label--E" for="panel-1-E"></label>
+              <label class="label label--F" for="panel-1-F"></label>
+              <label class="label label--G" for="panel-1-G"></label>
+              <label class="label label--H" for="panel-1-H"></label>
+              <label class="label label--I" for="panel-1-I"></label>
+              <label class="label label--J" for="panel-1-J"></label>
+              <label class="label label--K" for="panel-1-K"></label>
+              <label class="label label--L" for="panel-1-L"></label>
+              <label class="label label--M" for="panel-1-M"></label>
+              <label class="label label--N" for="panel-1-N"></label>
+              <label class="label label--O" for="panel-1-O"></label>
+              <label class="label label--P" for="panel-1-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--2">
+              <label class="panelGraphic" for="panelMove-2"></label>
+              <label class="label label--A" for="panel-2-A"></label>
+              <label class="label label--B" for="panel-2-B"></label>
+              <label class="label label--C" for="panel-2-C"></label>
+              <label class="label label--D" for="panel-2-D"></label>
+              <label class="label label--E" for="panel-2-E"></label>
+              <label class="label label--F" for="panel-2-F"></label>
+              <label class="label label--G" for="panel-2-G"></label>
+              <label class="label label--H" for="panel-2-H"></label>
+              <label class="label label--I" for="panel-2-I"></label>
+              <label class="label label--J" for="panel-2-J"></label>
+              <label class="label label--K" for="panel-2-K"></label>
+              <label class="label label--L" for="panel-2-L"></label>
+              <label class="label label--M" for="panel-2-M"></label>
+              <label class="label label--N" for="panel-2-N"></label>
+              <label class="label label--O" for="panel-2-O"></label>
+              <label class="label label--P" for="panel-2-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--3">
+              <label class="panelGraphic" for="panelMove-3"></label>
+              <label class="label label--A" for="panel-3-A"></label>
+              <label class="label label--B" for="panel-3-B"></label>
+              <label class="label label--C" for="panel-3-C"></label>
+              <label class="label label--D" for="panel-3-D"></label>
+              <label class="label label--E" for="panel-3-E"></label>
+              <label class="label label--F" for="panel-3-F"></label>
+              <label class="label label--G" for="panel-3-G"></label>
+              <label class="label label--H" for="panel-3-H"></label>
+              <label class="label label--I" for="panel-3-I"></label>
+              <label class="label label--J" for="panel-3-J"></label>
+              <label class="label label--K" for="panel-3-K"></label>
+              <label class="label label--L" for="panel-3-L"></label>
+              <label class="label label--M" for="panel-3-M"></label>
+              <label class="label label--N" for="panel-3-N"></label>
+              <label class="label label--O" for="panel-3-O"></label>
+              <label class="label label--P" for="panel-3-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--4">
+              <label class="panelGraphic" for="panelMove-4"></label>
+              <label class="label label--A" for="panel-4-A"></label>
+              <label class="label label--B" for="panel-4-B"></label>
+              <label class="label label--C" for="panel-4-C"></label>
+              <label class="label label--D" for="panel-4-D"></label>
+              <label class="label label--E" for="panel-4-E"></label>
+              <label class="label label--F" for="panel-4-F"></label>
+              <label class="label label--G" for="panel-4-G"></label>
+              <label class="label label--H" for="panel-4-H"></label>
+              <label class="label label--I" for="panel-4-I"></label>
+              <label class="label label--J" for="panel-4-J"></label>
+              <label class="label label--K" for="panel-4-K"></label>
+              <label class="label label--L" for="panel-4-L"></label>
+              <label class="label label--M" for="panel-4-M"></label>
+              <label class="label label--N" for="panel-4-N"></label>
+              <label class="label label--O" for="panel-4-O"></label>
+              <label class="label label--P" for="panel-4-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--5">
+              <label class="panelGraphic" for="panelMove-5"></label>
+              <label class="label label--A" for="panel-5-A"></label>
+              <label class="label label--B" for="panel-5-B"></label>
+              <label class="label label--C" for="panel-5-C"></label>
+              <label class="label label--D" for="panel-5-D"></label>
+              <label class="label label--E" for="panel-5-E"></label>
+              <label class="label label--F" for="panel-5-F"></label>
+              <label class="label label--G" for="panel-5-G"></label>
+              <label class="label label--H" for="panel-5-H"></label>
+              <label class="label label--I" for="panel-5-I"></label>
+              <label class="label label--J" for="panel-5-J"></label>
+              <label class="label label--K" for="panel-5-K"></label>
+              <label class="label label--L" for="panel-5-L"></label>
+              <label class="label label--M" for="panel-5-M"></label>
+              <label class="label label--N" for="panel-5-N"></label>
+              <label class="label label--O" for="panel-5-O"></label>
+              <label class="label label--P" for="panel-5-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--6">
+              <label class="panelGraphic" for="panelMove-6"></label>
+              <label class="label label--A" for="panel-6-A"></label>
+              <label class="label label--B" for="panel-6-B"></label>
+              <label class="label label--C" for="panel-6-C"></label>
+              <label class="label label--D" for="panel-6-D"></label>
+              <label class="label label--E" for="panel-6-E"></label>
+              <label class="label label--F" for="panel-6-F"></label>
+              <label class="label label--G" for="panel-6-G"></label>
+              <label class="label label--H" for="panel-6-H"></label>
+              <label class="label label--I" for="panel-6-I"></label>
+              <label class="label label--J" for="panel-6-J"></label>
+              <label class="label label--K" for="panel-6-K"></label>
+              <label class="label label--L" for="panel-6-L"></label>
+              <label class="label label--M" for="panel-6-M"></label>
+              <label class="label label--N" for="panel-6-N"></label>
+              <label class="label label--O" for="panel-6-O"></label>
+              <label class="label label--P" for="panel-6-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--7">
+              <label class="panelGraphic" for="panelMove-7"></label>
+              <label class="label label--A" for="panel-7-A"></label>
+              <label class="label label--B" for="panel-7-B"></label>
+              <label class="label label--C" for="panel-7-C"></label>
+              <label class="label label--D" for="panel-7-D"></label>
+              <label class="label label--E" for="panel-7-E"></label>
+              <label class="label label--F" for="panel-7-F"></label>
+              <label class="label label--G" for="panel-7-G"></label>
+              <label class="label label--H" for="panel-7-H"></label>
+              <label class="label label--I" for="panel-7-I"></label>
+              <label class="label label--J" for="panel-7-J"></label>
+              <label class="label label--K" for="panel-7-K"></label>
+              <label class="label label--L" for="panel-7-L"></label>
+              <label class="label label--M" for="panel-7-M"></label>
+              <label class="label label--N" for="panel-7-N"></label>
+              <label class="label label--O" for="panel-7-O"></label>
+              <label class="label label--P" for="panel-7-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--8">
+              <label class="panelGraphic" for="panelMove-8"></label>
+              <label class="label label--A" for="panel-8-A"></label>
+              <label class="label label--B" for="panel-8-B"></label>
+              <label class="label label--C" for="panel-8-C"></label>
+              <label class="label label--D" for="panel-8-D"></label>
+              <label class="label label--E" for="panel-8-E"></label>
+              <label class="label label--F" for="panel-8-F"></label>
+              <label class="label label--G" for="panel-8-G"></label>
+              <label class="label label--H" for="panel-8-H"></label>
+              <label class="label label--I" for="panel-8-I"></label>
+              <label class="label label--J" for="panel-8-J"></label>
+              <label class="label label--K" for="panel-8-K"></label>
+              <label class="label label--L" for="panel-8-L"></label>
+              <label class="label label--M" for="panel-8-M"></label>
+              <label class="label label--N" for="panel-8-N"></label>
+              <label class="label label--O" for="panel-8-O"></label>
+              <label class="label label--P" for="panel-8-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--9">
+              <label class="panelGraphic" for="panelMove-9"></label>
+              <label class="label label--A" for="panel-9-A"></label>
+              <label class="label label--B" for="panel-9-B"></label>
+              <label class="label label--C" for="panel-9-C"></label>
+              <label class="label label--D" for="panel-9-D"></label>
+              <label class="label label--E" for="panel-9-E"></label>
+              <label class="label label--F" for="panel-9-F"></label>
+              <label class="label label--G" for="panel-9-G"></label>
+              <label class="label label--H" for="panel-9-H"></label>
+              <label class="label label--I" for="panel-9-I"></label>
+              <label class="label label--J" for="panel-9-J"></label>
+              <label class="label label--K" for="panel-9-K"></label>
+              <label class="label label--L" for="panel-9-L"></label>
+              <label class="label label--M" for="panel-9-M"></label>
+              <label class="label label--N" for="panel-9-N"></label>
+              <label class="label label--O" for="panel-9-O"></label>
+              <label class="label label--P" for="panel-9-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--10">
+              <label class="panelGraphic" for="panelMove-10"></label>
+              <label class="label label--A" for="panel-10-A"></label>
+              <label class="label label--B" for="panel-10-B"></label>
+              <label class="label label--C" for="panel-10-C"></label>
+              <label class="label label--D" for="panel-10-D"></label>
+              <label class="label label--E" for="panel-10-E"></label>
+              <label class="label label--F" for="panel-10-F"></label>
+              <label class="label label--G" for="panel-10-G"></label>
+              <label class="label label--H" for="panel-10-H"></label>
+              <label class="label label--I" for="panel-10-I"></label>
+              <label class="label label--J" for="panel-10-J"></label>
+              <label class="label label--K" for="panel-10-K"></label>
+              <label class="label label--L" for="panel-10-L"></label>
+              <label class="label label--M" for="panel-10-M"></label>
+              <label class="label label--N" for="panel-10-N"></label>
+              <label class="label label--O" for="panel-10-O"></label>
+              <label class="label label--P" for="panel-10-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--11">
+              <label class="panelGraphic" for="panelMove-11"></label>
+              <label class="label label--A" for="panel-11-A"></label>
+              <label class="label label--B" for="panel-11-B"></label>
+              <label class="label label--C" for="panel-11-C"></label>
+              <label class="label label--D" for="panel-11-D"></label>
+              <label class="label label--E" for="panel-11-E"></label>
+              <label class="label label--F" for="panel-11-F"></label>
+              <label class="label label--G" for="panel-11-G"></label>
+              <label class="label label--H" for="panel-11-H"></label>
+              <label class="label label--I" for="panel-11-I"></label>
+              <label class="label label--J" for="panel-11-J"></label>
+              <label class="label label--K" for="panel-11-K"></label>
+              <label class="label label--L" for="panel-11-L"></label>
+              <label class="label label--M" for="panel-11-M"></label>
+              <label class="label label--N" for="panel-11-N"></label>
+              <label class="label label--O" for="panel-11-O"></label>
+              <label class="label label--P" for="panel-11-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--12">
+              <label class="panelGraphic" for="panelMove-12"></label>
+              <label class="label label--A" for="panel-12-A"></label>
+              <label class="label label--B" for="panel-12-B"></label>
+              <label class="label label--C" for="panel-12-C"></label>
+              <label class="label label--D" for="panel-12-D"></label>
+              <label class="label label--E" for="panel-12-E"></label>
+              <label class="label label--F" for="panel-12-F"></label>
+              <label class="label label--G" for="panel-12-G"></label>
+              <label class="label label--H" for="panel-12-H"></label>
+              <label class="label label--I" for="panel-12-I"></label>
+              <label class="label label--J" for="panel-12-J"></label>
+              <label class="label label--K" for="panel-12-K"></label>
+              <label class="label label--L" for="panel-12-L"></label>
+              <label class="label label--M" for="panel-12-M"></label>
+              <label class="label label--N" for="panel-12-N"></label>
+              <label class="label label--O" for="panel-12-O"></label>
+              <label class="label label--P" for="panel-12-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--13">
+              <label class="panelGraphic" for="panelMove-13"></label>
+              <label class="label label--A" for="panel-13-A"></label>
+              <label class="label label--B" for="panel-13-B"></label>
+              <label class="label label--C" for="panel-13-C"></label>
+              <label class="label label--D" for="panel-13-D"></label>
+              <label class="label label--E" for="panel-13-E"></label>
+              <label class="label label--F" for="panel-13-F"></label>
+              <label class="label label--G" for="panel-13-G"></label>
+              <label class="label label--H" for="panel-13-H"></label>
+              <label class="label label--I" for="panel-13-I"></label>
+              <label class="label label--J" for="panel-13-J"></label>
+              <label class="label label--K" for="panel-13-K"></label>
+              <label class="label label--L" for="panel-13-L"></label>
+              <label class="label label--M" for="panel-13-M"></label>
+              <label class="label label--N" for="panel-13-N"></label>
+              <label class="label label--O" for="panel-13-O"></label>
+              <label class="label label--P" for="panel-13-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--14">
+              <label class="panelGraphic" for="panelMove-14"></label>
+              <label class="label label--A" for="panel-14-A"></label>
+              <label class="label label--B" for="panel-14-B"></label>
+              <label class="label label--C" for="panel-14-C"></label>
+              <label class="label label--D" for="panel-14-D"></label>
+              <label class="label label--E" for="panel-14-E"></label>
+              <label class="label label--F" for="panel-14-F"></label>
+              <label class="label label--G" for="panel-14-G"></label>
+              <label class="label label--H" for="panel-14-H"></label>
+              <label class="label label--I" for="panel-14-I"></label>
+              <label class="label label--J" for="panel-14-J"></label>
+              <label class="label label--K" for="panel-14-K"></label>
+              <label class="label label--L" for="panel-14-L"></label>
+              <label class="label label--M" for="panel-14-M"></label>
+              <label class="label label--N" for="panel-14-N"></label>
+              <label class="label label--O" for="panel-14-O"></label>
+              <label class="label label--P" for="panel-14-P"></label>
+            </div>
+            <div class="panelMoveArea panelMoveArea--15">
+              <label class="panelGraphic" for="panelMove-15"></label>
+              <label class="label label--A" for="panel-15-A"></label>
+              <label class="label label--B" for="panel-15-B"></label>
+              <label class="label label--C" for="panel-15-C"></label>
+              <label class="label label--D" for="panel-15-D"></label>
+              <label class="label label--E" for="panel-15-E"></label>
+              <label class="label label--F" for="panel-15-F"></label>
+              <label class="label label--G" for="panel-15-G"></label>
+              <label class="label label--H" for="panel-15-H"></label>
+              <label class="label label--I" for="panel-15-I"></label>
+              <label class="label label--J" for="panel-15-J"></label>
+              <label class="label label--K" for="panel-15-K"></label>
+              <label class="label label--L" for="panel-15-L"></label>
+              <label class="label label--M" for="panel-15-M"></label>
+              <label class="label label--N" for="panel-15-N"></label>
+              <label class="label label--O" for="panel-15-O"></label>
+              <label class="label label--P" for="panel-15-P"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="twitter">
+      <h2>スマブラパズルをツイートしよう！</h2>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+        data-text="君もスマアナパズルに挑戦してみよう！" data-size="large" data-url="https://pheasantzelda.github.io/quiz.html"
+        data-hashtags="スマアナ検定" data-related="pheasan95712838" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </main>
+  <!--mainはここまで-->
+
+  <!--footerはここから-->
+  <footer class="footer">
+    <nav class="site-menu">
+      <ul>
+        <li><a href="./fighter.html">ファイタ一覧</a></li>
+        <li><a href="./ranking.html">キャラランク</a></li>
+        <li><a href="./statstics.html">統計データ</a></li>
+        <li><a href="./capability.html">簡易不利相性</a></li>
+        <li><a href="./parameter.html">特性早見表</a></li>
+        <li><a href="./match_up.html">キャラ相性優劣</a></li>
+        <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+        <li><a href="./quiz.html">スマアナ検定</a></li>
+        <li><a href="./record.html">歴代記録</a></li>
+        <li><a href="./userpolicy.html">利用規約</a></li>
+      </ul>
+    </nav>
+    <a class="footer-logo" href="./index.html">
+      <img src="./img/common/logo.png" alt="SSBU" />
+    </a>
+    <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
+    <p class="footer-time">
+      <small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br />
+        当サイトは個人が運営する非公式のWebサービスです。<br />
+        任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small>
+    </p>
+    <p class="copyright">ver7.0.0 2023/07/19<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
+  </footer>
+  <!--footerはここまで-->
+  <script src="./js/puzzle.js"></script>
+
+</body>
+
+</html>
