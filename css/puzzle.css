@@ -17,7 +17,7 @@
 }
 
 .tierlist {
-  width: 900px;
+  width: 850px;
   background-color: #2c2a2a;
   padding-bottom: 50px;
   margin-top: 25px;
@@ -133,7 +133,7 @@
 
 .puzzleBody .puzzleArea {
   position: relative;
-  width: 55%;
+  width: 70%;
   aspect-ratio: 1/1;
   margin: 0 auto;
   border-radius: 8px;
