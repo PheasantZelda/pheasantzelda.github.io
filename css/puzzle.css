@@ -8314,3 +8314,38 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 840px) {
+  .tierlist {
+    max-width: 95%;
+    padding: 10px 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .tierlist h2 {
+    font-size: 15px;
+  }
+
+  .tierlist h2::after {
+    max-width: 40%;
+    height: 2px;
+    margin-top: 10px;
+  }
+
+  .MUTITLE {
+    padding: 3% 0;
+  }
+
+  .MUTITLE img {
+    width: 20%;
+    position: absolute;
+    right: 5%;
+  }
+
+  .twitter {
+    margin: 0px 0px;
+    font-size: 12px;
+  }
+
+}

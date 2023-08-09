@@ -362,7 +362,7 @@ img {
     background-color: #181a1b;
     height: 50px;
     /*要素のZ方向の順番を規定*/
-    z-index: 10;
+    z-index: 14;
     box-shadow: 0 3px 6px rgb(255, 101, 101);
   }
 
