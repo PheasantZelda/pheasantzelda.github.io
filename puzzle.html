@@ -22,17 +22,17 @@
   <title>スマブラパズル</title>
   <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
   <meta name="description" content="スマブラのファイター画像パズルにぜひ挑戦しよう！" />
-  <meta property="og:site_name" contet="スマアナ検定" />
+  <meta property="og:site_name" contet="スマアナパズル" />
   <meta property="og:title" contet="スマブラパズル" />
   <meta property="og:description" content="スマブラのファイター画像パズルにぜひ挑戦しよう！" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pheasantzelda.github.io/quiz.html" />
+  <meta property="og:url" content="https://pheasantzelda.github.io/puzzle.html" />
   <meta name="og:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="スマブラパズル" />
   <meta name="twitter:description" content="スマブラのファイター画像パズルにぜひ挑戦しよう！" />
   <meta name="twitter:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
-  <meta name="twitter:url" content="https://pheasantzelda.github.io/quiz.html" />
+  <meta name="twitter:url" content="https://pheasantzelda.github.io/puzzle.html" />
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="./js/toggle-menu.js"></script>
@@ -79,9 +79,9 @@
             <li><a href="./statstics.html">統計データ</a></li>
             <li><a href="./capability.html">簡易不利相性</a></li>
             <li><a href="./parameter.html">特性早見表</a></li>
-            <li><a href="./match_up.html">キャラ相性優劣</a></li>
             <li><a href="./rank_creater.html">Tier表メーカー</a></li>
             <li><a href="./quiz.html">スマアナ検定</a></li>
+            <li><a href="./puzzle.html">スマブラパズル</a></li>
             <li><a href="./record.html">歴代記録</a></li>
             <li><a href="./userpolicy.html">利用規約</a></li>
           </ul>
@@ -107,12 +107,22 @@
         </ol>
       </nav>
     </div>
-    <div class="section">スマブラパズル</div>
+    <div class="section">スマパズ</div>
     <div class="explain">
       <p>
-        　スマブラに参戦しているファイターの画像を元に簡単なパズルを作成してみました。クリックすることで
-        画像を動かすことができ、並び替えて正しい画像に変えてみてください。
+        　スマブラパズル略してスマパズを作成しました。スマブラに参戦しているファイターの画像のパズルゲームで遊ぶことができます。クリックやドラッグをすることで
+        画像を動かすことができ、並び替えて正しい画像に変えてみてください。ストップウォッチもあるのでぜひタイムトライアルにお使いください。
+        パズルについては<a href="https://twitter.com/ash_creator">あしざわ(@ash_creator)</a>さんの<a
+          href="https://twitter.com/ash_creator/status/1678605647372517376">コード</a>を参考に作成しました。興味がある方はぜひチェックしてみて下さい。
       </p>
+    </div>
+    <div class="stopwatch">
+      <div class="timeCount">00:00:000</div>
+      <div class="watchButton">
+        <button class="start" onclick="startTimer()">Start</button>
+        <button class="stop" onclick="stopTimer()" disabled>Stop</button>
+        <button class="reset" onclick="resetTimer()" disabled>Reset</button>
+      </div>
     </div>
     <div class="container">
       <input type="radio" name="panelMove" id="panelMove-1" class="checkPanelMove" />
@@ -684,10 +694,10 @@
       </div>
     </div>
     <div class="twitter">
-      <h2>スマブラパズルをツイートしよう！</h2>
+      <h2>スマパズをツイートしよう！</h2>
       <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
-        data-text="君もスマアナパズルに挑戦してみよう！" data-size="large" data-url="https://pheasantzelda.github.io/puzzle.html"
-        data-hashtags="スマアナパズル" data-related="pheasan95712838" data-show-count="false">Tweet</a>
+        data-text="君もスマパズに挑戦してみよう！　　　　　" data-size="large" data-url="https://pheasantzelda.github.io/puzzle.html"
+        data-hashtags="スマパズ" data-related="pheasan95712838" data-show-count="false">Tweet</a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </main>
@@ -702,9 +712,9 @@
         <li><a href="./statstics.html">統計データ</a></li>
         <li><a href="./capability.html">簡易不利相性</a></li>
         <li><a href="./parameter.html">特性早見表</a></li>
-        <li><a href="./match_up.html">キャラ相性優劣</a></li>
         <li><a href="./rank_creater.html">Tier表メーカー</a></li>
         <li><a href="./quiz.html">スマアナ検定</a></li>
+        <li><a href="./puzzle.html">スマブラパズル</a></li>
         <li><a href="./record.html">歴代記録</a></li>
         <li><a href="./userpolicy.html">利用規約</a></li>
       </ul>
@@ -718,10 +728,11 @@
         当サイトは個人が運営する非公式のWebサービスです。<br />
         任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small>
     </p>
-    <p class="copyright">ver7.0.0 2023/07/19<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
+    <p class="copyright">ver8.0.0 2023/10/06<br>　<br><small>&copy;SMASHMATE-ANALYSYS All rights reserved.</small></p>
   </footer>
   <!--footerはここまで-->
   <script src="./js/puzzle.js"></script>
+  <script src="./js/stopwatch.js"></script>
 
 </body>
 

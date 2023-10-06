@@ -2,7 +2,36 @@
     画像 & 各種配色設定
 ----------------------------------------*/
 /* パズル画像 */
-.panelGraphic {}
+.stopwatch {
+  display: block;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.timeCount {
+  font-size: 48px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.watchButton button {
+  font-size: 18px;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
 
 .twitter {
   margin-top: 30px;
@@ -26,7 +55,7 @@
 }
 
 .tierlist h2 {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
@@ -8348,4 +8377,19 @@
     font-size: 12px;
   }
 
+  .timeCount {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .watchButton button {
+    font-size: 10px;
+    color: #FAFAFA;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #FAFAFA;
+    box-shadow: 1px 1px #fafafa;
+    margin: 0px 2px;
+  }
 }
