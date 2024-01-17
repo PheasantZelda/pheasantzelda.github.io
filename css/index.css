@@ -280,6 +280,10 @@ span {
     height: 240px;
   }
 
+  .title {
+    margin-top: 0px;
+  }
+
   .footer {
     margin-top: 10px;
   }
