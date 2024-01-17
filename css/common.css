@@ -1,5 +1,5 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP");
 
 /*コメント*/
 *,
@@ -40,7 +40,6 @@ img {
   width: 100%;
   background: black;
 } */
-
 .header-inner {
   max-width: 1300px;
   height: 110px;
@@ -58,6 +57,19 @@ img {
   display: none;
 }
 
+/* ヘッダーのナビ部分 */
+.header__nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  background-color: #fff;
+  transition: ease 0.4s;
+}
+
 .header-logo {
   display: block;
   width: 150px;
@@ -73,7 +85,7 @@ img {
 }
 
 .site-menu ul li a {
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   font-weight: bold;
 }
 
@@ -98,7 +110,7 @@ img {
 }
 
 .title h1 {
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   font-size: 30px;
   font-weight: bold;
   color: white;
@@ -107,7 +119,7 @@ img {
   position: absolute;
   padding: 0px;
   margin: 0;
-  background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+  background: #eee url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
   text-shadow: 5px -5px rgb(31, 27, 27), 4px -4px rgb(255, 255, 255);
   font-weight: bold;
   -webkit-text-fill-color: transparent;
@@ -121,7 +133,7 @@ img {
   position: absolute;
   padding: 10px;
   margin-top: 70px;
-  background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+  background: #eee url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
   text-shadow: 5px -5px rgb(31, 27, 27), 4px -4px rgb(255, 255, 255);
   -webkit-text-stroke: 0.5px rgb(0, 0, 0);
   -webkit-text-fill-color: transparent;
@@ -145,7 +157,7 @@ img {
 
 .breadcrumb li:not(:last-of-type)::after {
   content: "»";
-  margin: 0 .6em;
+  margin: 0 0.6em;
   /* 記号の左右の余白 */
   color: #e7412b;
   /* 記号の色 */
@@ -178,7 +190,7 @@ img {
 .explain P {
   line-height: 2;
   text-align: left;
-  font-size: 15px
+  font-size: 15px;
 }
 
 .explain h2 {
@@ -246,9 +258,7 @@ img {
   text-align: center;
 }
 
-
 /* ローディング画面 */
-
 .spinner {
   margin: auto;
   margin-top: 22%;
@@ -263,39 +273,23 @@ img {
   height: 100%;
   width: 10px;
   display: inline-block;
-
-  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
 
 .spinner .rect2 {
-  -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
 }
 
 .spinner .rect3 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+  animation-delay: -1s;
 }
 
 .spinner .rect4 {
-  -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
 
 .spinner .rect5 {
-  -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
-}
-
-@-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% {
-    -webkit-transform: scaleY(0.4)
-  }
-
-  20% {
-    -webkit-transform: scaleY(1.0)
-  }
 }
 
 @keyframes sk-stretchdelay {
@@ -305,24 +299,22 @@ img {
   }
 
   20% {
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
   }
 }
 
 #loading {
   width: 100vw;
   height: 100vh;
-  transition: all 1.0s;
+  transition: all 1s;
   background-color: #181a1b;
-
   /* 以下のコードを追加 */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
 }
-
 
 @keyframes fadeOut {
   from {
@@ -339,6 +331,73 @@ img {
 /* 読み込み完了後に「loaded」を付与する */
 #loading.loaded {
   animation: fadeOut 1.3s forwards;
+}
+
+/*ハンバーガーメニュー*/
+/* ハンバーガーメニュークリック後のスタイル */
+.header__nav.active {
+  transform: translateX(0);
+}
+
+.hamburger,
+.hamburger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.hamburger {
+  position: relative;
+  width: 25px;
+  height: 22px;
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.hamburger span:nth-of-type(1) {
+  top: 0;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 10px;
+}
+
+.hamburger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.hamburger.active span:nth-of-type(1) {
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.hamburger.active span:nth-of-type(2) {
+  left: 200%;
+  opacity: 0;
+  transform: translateY(5px);
+  animation: active-menu06-bar02 0.8s forwards;
+}
+
+@keyframes active-menu06-bar02 {
+  100% {
+    height: 0;
+  }
+}
+
+.hamburger.active span:nth-of-type(3) {
+  transform: translateY(-10px) rotate(45deg);
 }
 
 @media (max-width: 840px) {
@@ -380,37 +439,39 @@ img {
 
   .header-site-menu {
     position: absolute;
+    width: 100%;
     top: 100%;
     left: 0;
     right: 0;
     color: white;
-    background-color: #736E62;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/common/Main2.jpg);
+    background-size: cover;
+    background-position: center;
     padding-top: 30px;
     padding-bottom: 50px;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    animation: bg 25s infinite linear;
   }
 
-  .header-site-menu.is-show {
-    display: block;
+  @keyframes bg {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: -100% 0;
+    }
   }
 
-  .toggle-menu-button {
-    display: block;
-    width: 44px;
-    height: 34px;
-    background-image: url(../img/common/icon-menu.png);
-    filter: invert(1);
-    background-size: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    outline: none;
+  .header-site-menu.active {
+    opacity: 1;
+    visibility: visible;
   }
 
   .title {
-    margin-top: 60px;
+    margin-top: 0px;
     margin-bottom: 10px;
   }
 
@@ -456,7 +517,7 @@ img {
   .explain P {
     line-height: 2;
     text-align: left;
-    font-size: 13px
+    font-size: 13px;
   }
 
   .explain h2 {
@@ -503,11 +564,11 @@ img {
     margin-top: 20px;
   }
 
-
   /*ローディング画面*/
   .spinner {
     margin: auto;
     margin-top: 80%;
   }
-
 }
+
+/*# sourceMappingURL=common.css.map */

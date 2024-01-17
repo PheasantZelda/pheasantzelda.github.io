@@ -23,7 +23,6 @@
   <meta name="description" content="スマメイトの歴代最高レートを掲載しています。上位選手はミーヤー、あcola、ヨシドラ、らるくん、TG、KEN、おがとう、ロン、よこしゃーぷ、「」選手です。" />
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="../js/toggle-menu.js"></script>
   <script src="../js/csv.js"></script>
   <link href="../css/common.css" rel="stylesheet" />
   <link href="../css/ranking_rate.css" rel="stylesheet" />
@@ -52,7 +51,11 @@
       <a class="header-logo" href="../index.html">
         <img src="../img/common/logo.png" alt="SSBU" />
       </a>
-      <button class="toggle-menu-button"></button>
+      <button class="header__hamburger hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="header-site-menu">
         <nav class="site-menu">
           <ul>
@@ -977,8 +980,9 @@
         <!--ここまでデータ挿入-->
       </table>
     </div>
-  </main>
-  <!--mainはここまで-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/toggle-menu_rev.js"></script>
+  </main> <!--mainはここまで-->
 
   <!--footerはここから-->
   <footer class="footer">

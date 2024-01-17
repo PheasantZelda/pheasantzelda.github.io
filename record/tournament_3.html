@@ -28,7 +28,6 @@
    
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-  <script src="../js/toggle-menu.js"></script>
    
   <script src="../js/csv.js"></script>
    
@@ -64,8 +63,11 @@
             <a class="header-logo" href="../index.html">
                 <img src="../img/common/logo.png" alt="SSBU">
               </a>
-            <button class="toggle-menu-button"></button>
-            <div class="header-site-menu">
+      <button class="header__hamburger hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>       <div class="header-site-menu">
                 <nav class="site-menu">
                     <ul>
                         <li><a href="../fighter.html">ファイタ一覧</a></li>
@@ -81,7 +83,8 @@
                       </ul>
                   </nav>
               </div>
-          </div>
+         
+    </div>
       </header>
     <!--headerはここまで-->
 
@@ -1792,8 +1795,9 @@
                   </ul>
               </div>
           </div>
-      </main>
-    <!--mainはここまで-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/toggle-menu_rev.js"></script>
+  </main>   <!--mainはここまで-->
 
     <!--footerはここから-->
     <footer class="footer">
