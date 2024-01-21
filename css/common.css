@@ -350,6 +350,7 @@ img {
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
+  display: none;
 }
 
 .hamburger span {
@@ -452,6 +453,9 @@ img {
   .header-site-menu.active {
     opacity: 1;
     visibility: visible;
+  }
+  .hamburger {
+    display: block;
   }
   .title {
     margin-top: 60px;
