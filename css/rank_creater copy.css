@@ -130,7 +130,6 @@
 .Fighter_box {
   display: inline-block;
   margin-top: 5px;
-  padding-left: 15px;
   font-size: 0;
 }
 
@@ -1075,6 +1074,10 @@ img {
     padding-top: 0.5px;
     border: solid 0.5px #837f7f;
     height: auto;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   .MU_result img {
@@ -1099,6 +1102,11 @@ img {
     max-width: 12%;
     aspect-ratio: 1;
     height: unset;
+  }
+
+  .MU_result img {
+    width: 63px;
+    max-width: 12.5%;
   }
 
   .MU_box7.is-hidden {
@@ -1130,10 +1138,6 @@ img {
     max-width: 95%;
     margin-top: 0px;
     padding-left: 5%;
-  }
-
-  .Fighter_box {
-    margin-right: 15px;
   }
 
   .Fighter_li {
