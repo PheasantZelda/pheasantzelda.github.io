@@ -1074,10 +1074,10 @@ img {
     padding-top: 0.5px;
     border: solid 0.5px #837f7f;
     height: auto;
-    -moz-user-select: none;
+    /* -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; */
   }
 
   .MU_result img {
@@ -1105,9 +1105,9 @@ img {
     -webkit-user-drag: none;
   }
 
-  .Fighter_box .item[draggable=true] {
+  /* .Fighter_box .item[draggable=true] {
     -webkit-user-drag: auto;
-  }
+  } */
 
   .MU_result img {
     width: 63px;
