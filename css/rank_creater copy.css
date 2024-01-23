@@ -1102,6 +1102,11 @@ img {
     max-width: 12%;
     aspect-ratio: 1;
     height: unset;
+    -webkit-user-drag: none;
+  }
+
+  .Fighter_box .item[draggable=true] {
+    -webkit-user-drag: auto;
   }
 
   .MU_result img {
