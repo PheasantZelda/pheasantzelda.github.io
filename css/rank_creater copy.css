@@ -1010,6 +1010,7 @@ img {
     padding: 10px 0px;
     margin-top: 10px;
     margin-bottom: 0px;
+    top: 0px;
   }
 
   .tierlist h2 {
@@ -1099,6 +1100,10 @@ img {
     aspect-ratio: 1;
     height: unset;
     -webkit-user-drag: none;
+  }
+
+  *[draggable=true] img {
+    -webkit-touch-callout: none;
   }
 
   .Fighter_box .item[draggable=true] {
