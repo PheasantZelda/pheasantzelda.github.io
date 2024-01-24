@@ -1145,10 +1145,10 @@ img {
     margin: 0;
   }
 
-  .Fighter_table img {
+  /* .Fighter_table img {
     width: 63px;
     max-width: 12%;
-  }
+  } */
 
   .controller {
     display: none;

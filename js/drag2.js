@@ -1,16 +1,16 @@
-document.querySelectorAll('.MU_box').forEach (element => {
+document.querySelectorAll('.MU_box').forEach((element) => {
   element.ondragstart = function () {
     event.dataTransfer.setData('text/plain', event.target.id);
   };
-  
+
   element.ondragover = function () {
     event.preventDefault();
     this.style.borderTop = '0px solid';
   };
 
-element.ondragleave = function () {
-this.style.borderTop = "";
-};
+  element.ondragleave = function () {
+    this.style.borderTop = '';
+  };
 
   element.ondrop = function () {
     event.preventDefault();
@@ -21,19 +21,19 @@ this.style.borderTop = "";
   };
 });
 
-document.querySelectorAll('.MU_boxx').forEach (element => {
+document.querySelectorAll('.MU_boxx').forEach((element) => {
   element.ondragstart = function () {
     event.dataTransfer.setData('text/plain', event.target.id);
   };
-  
+
   element.ondragover = function () {
     event.preventDefault();
     this.style.borderTop = '0px solid';
   };
 
-element.ondragleave = function () {
-this.style.borderTop = "";
-};
+  element.ondragleave = function () {
+    this.style.borderTop = '';
+  };
 
   element.ondrop = function () {
     event.preventDefault();
