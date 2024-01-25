@@ -30,6 +30,10 @@
   <link rel="icon" type="image/png" href="img/common/icon-192x192.png" />
   <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.png" />
   <link rel="icon" href="img/common/favicon.ico" />
+  <!-- スマホでドラッグ可能にするJS -->
+  <!-- <script src="js/index.min.js"></script>
+  <script src="js/scroll-behaviour.min.js"></script>
+  <script src="js/drag_new/js"></script> -->
   <!-- HTMLを画像に変換しダウンロードする -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
@@ -63,8 +67,8 @@
       );
     }
   </script>
-  <!-- 画像を移動する
-  <script>
+  <!--画像を移動する-->
+  <!-- <script>
     //◆◆◆ ドラッグ開始時処理 ◆◆◆
     function drag_start(event) {
       event.dataTransfer.setData("text", event.target.id); //DRAG対象要素 id名設定
@@ -435,6 +439,10 @@
         <div class="Fighter_table">
           <div class="Fighter_box box" draggable="true">
             <!--ここからデータ挿入-->
+            <div class="item" draggable="true">
+              <img src="./img/fighter/01.マリオ.png" alt="ファイター画像01.マリオ" />
+              <div class="protect-image"></div>
+            </div>
             <img draggable="true" class="item" src="./img/fighter/01.マリオ.png" alt="ファイター画像01.マリオ">
             <img draggable="true" class="item" src="./img/fighter/02.ドンキーコング.png" alt="ファイター画像02.ドンキーコング">
             <img draggable="true" class="item" src="./img/fighter/03.リンク.png" alt="ファイター画像03.リンク">
@@ -593,6 +601,11 @@
         </div>
       </div>
     </div>
+    <!-- 画像変換 -->
+    <div>
+      <img id="image" name="image" src=" " class="IMG" />
+      <a id="download" href="#" download=""></a>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/toggle-menu_rev.js"></script>
   </main> <!--mainはここまで-->
@@ -629,9 +642,9 @@
   <!--非表示機能-->
   <script src="./js/canvas.js"></script>
   <script src="./js/backgroundcolor.js"></script>
-  <script src="./js/drag3.js"></script>
   <script src="./js/drag2.js"></script>
-  <script>
+  <script src="./js/drag3.js"></script>
+  <!-- <script>
     window.onload = function () {
       // スクロールを禁止にする関数
       function disableScroll(event) {
@@ -656,7 +669,7 @@
         document.body.classList.remove("overflow-hidden");
       };
     };
-  </script>
+  </script> -->
   <!--ボタンのon/offデザイン-->
   <script>
     const btnElem1 = document.querySelectorAll(".clickon");
@@ -680,9 +693,6 @@
     };
     initBtnTrigger2();
   </script>
-  <script src="js/index.min.js"></script>
-  <script src="js/scroll-behaviour.min.js"></script>
-  <script src="js/drag_new/js"></script>
   <!--ローディング-->
   <script>
     window.onload = function () {

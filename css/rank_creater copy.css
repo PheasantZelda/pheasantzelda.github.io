@@ -1102,8 +1102,31 @@ img {
     -webkit-user-drag: none;
   }
 
-  *[draggable=true] img {
-    -webkit-touch-callout: none;
+  img {
+    -webkit-user-drag: none;
+  }
+
+  img[draggable=true] {
+    -webkit-user-drag: auto;
+  }
+
+  .contains-image {
+    position: relative;
+  }
+
+  .item .protect-image {
+    width: unset;
+    height: unset;
+    max-width: unset;
+    max-height: unset;
+    opacity: 0;
+  }
+
+  .not_select {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   .Fighter_box .item[draggable=true] {
@@ -1224,6 +1247,7 @@ img {
 
 
   .color_group {
+    margin-right: 2%;
     margin-bottom: 5px;
   }
 
