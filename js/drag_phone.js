@@ -3,7 +3,7 @@ let startX = 0;
 let startY = 0;
 
 const nonImageArea = document.getElementById('nonImageArea');
-const mappingAreas = document.querySelectorAll('.box');
+const mappingAreas = document.querySelectorAll('.MU_result');
 const draggableItems = document.querySelectorAll('.item');
 
 function handleDragStart(e) {
@@ -54,12 +54,12 @@ function handleTouchEnd(e) {
     }
   });
 
-  // if (!draggedItem.parentNode) {
-  //   // マッピングエリア外に出た場合
-  //   draggedItem.style.left = ''; // スタイルをリセット
-  //   draggedItem.style.top = ''; // スタイルをリセット
-  //   nonImageArea.appendChild(draggedItem);
-  // }
+  if (!draggedItem.parentNode) {
+    // マッピングエリア外に出た場合
+    draggedItem.style.left = ''; // スタイルをリセット
+    draggedItem.style.top = ''; // スタイルをリセット
+    nonImageArea.appendChild(draggedItem);
+  }
 
   draggedItem = null;
   e.preventDefault();
@@ -68,7 +68,6 @@ function handleTouchEnd(e) {
 draggableItems.forEach((item) => {
   item.addEventListener('dragstart', handleDragStart);
   item.addEventListener('dragend', handleDragEnd);
-
   item.addEventListener('touchstart', handleTouchStart);
   item.addEventListener('touchmove', handleTouchMove);
   item.addEventListener('touchend', handleTouchEnd);
