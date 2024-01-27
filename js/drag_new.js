@@ -1,21 +1,48 @@
-// 修正箇所以外はそのまま引用させていただいています
-// 最小限だと、以下をメインの.jsファイルに書き足すだけでOKです
-// 初めにスマホの判定をしているので、書き足すなら冒頭とかが良いかも
+window.addEventListener('DOMContentLoaded', () => {
+  const drag = { target: null, touchon: 0 };
+  const box2 = document.querySelectorAll('.box');
 
-// 以下、「Drag & Drop API を使うときにやっておいたほうがいいこと」の一部改変版
-
-// iOS/Androidのときだけ、usePolyfill=trueになる
-const usePolyfill = MobileDragDrop.polyfill({
-  dragImageTranslateOverride:
-    MobileDragDrop.scrollBehaviourDragImageTranslateOverride,
-});
-
-if (usePolyfill) {
-  // https://github.com/timruffles/mobile-drag-drop#polyfill-requires-dragenter-listener
-  // このpolyfill使用の場合 dragenter イベント時に Event.preventDefault() を呼ぶ必要がある
-  document.addEventListener('dragenter', function (event) {
-    event.preventDefault();
+  document.addEventListener('touchstart', (e) => {
+    const t = e.target;
+    if (t.matches('.item')) {
+      drag.target = t;
+      drag.touchon = 1;
+      drag.target.classList.add('dragging');
+    }
   });
-  // https://github.com/timruffles/mobile-drag-drop/issues/77
-  window.addEventListener('touchmove', function () {}, { passive: false });
-}
+
+  document.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    if (drag.touchon) {
+      const touch = e.touches[0];
+      const target = document.elementFromPoint(touch.clientX, touch.clientY);
+
+      box2.forEach((box) => {
+        box.classList.toggle('over', target.closest('.box') === box);
+      });
+    }
+  });
+
+  document.addEventListener('touchend', () => {
+    drag.touchon = 0;
+    drag.target.classList.remove('dragging');
+
+    const target = document.elementFromPoint(
+      drag.target.getBoundingClientRect().left,
+      drag.target.getBoundingClientRect().top
+    );
+
+    if (target.matches('.box')) {
+      target.appendChild(drag.target);
+    } else if (target.matches('.box .item')) {
+      target.after(drag.target);
+    }
+
+    drag.target.classList.remove('dragging');
+    drag.target = null;
+
+    box2.forEach((box) => {
+      box.classList.remove('over');
+    });
+  });
+});

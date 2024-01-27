@@ -30,10 +30,6 @@
   <link rel="icon" type="image/png" href="img/common/icon-192x192.png" />
   <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.png" />
   <link rel="icon" href="img/common/favicon.ico" />
-  <!-- スマホでドラッグ可能にするJS -->
-  <!-- <script src="js/index.min.js"></script>
-  <script src="js/scroll-behaviour.min.js"></script>
-  <script src="js/drag_new/js"></script> -->
   <!-- HTMLを画像に変換しダウンロードする -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
@@ -437,12 +433,8 @@
         </div>
 -->
         <div class="Fighter_table">
-          <div class="Fighter_box box" draggable="true">
+          <div class="Fighter_box box" draggable="true" id="nonImageArea">
             <!--ここからデータ挿入-->
-            <div class="item" draggable="true">
-              <img src="./img/fighter/01.マリオ.png" alt="ファイター画像01.マリオ" />
-              <div class="protect-image"></div>
-            </div>
             <img draggable="true" class="item" src="./img/fighter/01.マリオ.png" alt="ファイター画像01.マリオ">
             <img draggable="true" class="item" src="./img/fighter/02.ドンキーコング.png" alt="ファイター画像02.ドンキーコング">
             <img draggable="true" class="item" src="./img/fighter/03.リンク.png" alt="ファイター画像03.リンク">
@@ -644,6 +636,7 @@
   <script src="./js/backgroundcolor.js"></script>
   <script src="./js/drag2.js"></script>
   <script src="./js/drag3.js"></script>
+  <!-- <script src="./js/drag_new/js"></script> -->
   <!-- <script>
     window.onload = function () {
       // スクロールを禁止にする関数
