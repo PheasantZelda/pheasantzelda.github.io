@@ -97,10 +97,17 @@
   font-size: 0;
 }
 
+<<<<<<< HEAD
 .MU_result .active {
   position: relative;
   cursor: pointer;
 }
+=======
+/* .MU_result .active {
+  position: relative;
+  cursor: pointer;
+} */
+>>>>>>> 1738d9781301cddadf7ee0f3c5cf5f96c91abc1e
 
 #nonImageArea .active {
   position: relative;
