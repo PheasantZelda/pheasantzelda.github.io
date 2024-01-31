@@ -8,9 +8,9 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
-  /* position: sticky;
+  position: sticky;
   top: -120px;
-  z-index: 1; */
+  z-index: 1;
 }
 
 .tierlist h2 {
@@ -105,6 +105,7 @@
 #nonImageArea .active {
   position: relative;
   cursor: pointer;
+  z-index: 2;
 }
 
 .MU_result img {
