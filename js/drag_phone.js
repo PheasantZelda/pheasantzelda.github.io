@@ -18,9 +18,9 @@ function handleTouchMove(e) {
   if (!draggedItem) return;
   let touch = e.touches[0];
   draggedItem.style.left = `${touch.clientX - startX}px`;
-  console.log("moveX: %s ", draggedItem.style.left);
+  // console.log("moveX: %s ", draggedItem.style.left);
   draggedItem.style.top = `${touch.clientY - startY}px`;
-  console.log("moveY: %s ", draggedItem.style.top);
+  // console.log("moveY: %s ", draggedItem.style.top);
   e.preventDefault();
   e.target.classList.add("active");
 }
@@ -31,16 +31,17 @@ function handleTouchEnd(e) {
 
   mappingAreas.forEach((mappingArea) => {
     const rect = mappingArea.getBoundingClientRect();
-    console.log("rect: %s ", rect);
+    // console.log("rect: %s ", rect);
+    // console.log("draggedItem %s", draggedItem);
+
     let left = parseFloat(draggedItem.style.left) + startX;
     let top = parseFloat(draggedItem.style.top) + startY;
-    console.log("left: %s ", left);
-    console.log("top: %s ", top);
-    console.log("rect.left: %s ", rect.left);
-    console.log("rect.top: %s ", rect.top);
-    console.log("rect.bottom: %s ", rect.bottom);
-    console.log("rect.right: %s ", rect.right);
-
+    // console.log("left: %s ", left);
+    // console.log("top: %s ", top);
+    // console.log("rect.left: %s ", rect.left);
+    // console.log("rect.top: %s ", rect.top);
+    // console.log("rect.bottom: %s ", rect.bottom);
+    // console.log("rect.right: %s ", rect.right);
     if (
       left >= rect.left &&
       left < rect.right &&
@@ -54,6 +55,16 @@ function handleTouchEnd(e) {
       draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
       draggedItem.crossOrigin = "anonymous";
       mappingArea.append(draggedItem);
+      console.log("draggedItem : %s", draggedItem.getElementById);
+      console.log(
+        "left, top: %s %s",
+        draggedItem.style.left,
+        draggedItem.style.top
+      );
+      startX = "0px";
+      startY = "0px";
+      draggedItem.style.left = "0px";
+      draggedItem.style.top = "0px";
     }
   });
 }
