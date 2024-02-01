@@ -8,9 +8,9 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
-  /*  position: sticky;
-  top: -130px;
-  z-index: 1;*/
+  position: sticky;
+  top: -120px;
+  z-index: 1;
 }
 
 .tierlist h2 {
@@ -97,6 +97,17 @@
   font-size: 0;
 }
 
+.MU_result .active {
+  position: relative;
+  cursor: pointer;
+}
+
+#nonImageArea .active {
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+
 .MU_result img {
   width: 68px;
   padding: 0px;
@@ -108,6 +119,8 @@
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .Fighter_TITLE {
@@ -118,18 +131,15 @@
 }
 
 .Fighter_table {
-  padding-left: 25px;
   display: flex;
   justify-content: center;
   position: relative;
   align-items: center;
-
 }
 
 .Fighter_box {
   display: inline-block;
   margin-top: 5px;
-  padding-left: 15px;
   font-size: 0;
 }
 
@@ -249,7 +259,7 @@
 }
 
 .clickoff.is-btnActive {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .color_group {
@@ -285,7 +295,6 @@
   height: 25px;
   cursor: pointer;
 }
-
 
 .color_input:hover {
   opacity: 0.8;
@@ -351,9 +360,10 @@
   display: none;
 }
 
+/*
 .phone_ver {
   display: none;
-}
+} */
 
 img {
   -webkit-touch-callout: none;
@@ -385,630 +395,14 @@ img {
   background-color: rgba(233, 233, 18, 0.3);
 }
 
-.item1 {
-  background-image: url(../img/fighter/01.マリオ.png);
-}
-
-.item2 {
-  background-image: url(../img/fighter/02.ドンキーコング.png);
-}
-
-.item3 {
-  background-image: url(../img/fighter/03.リンク.png);
-}
-
-.item4 {
-  background-image: url(../img/fighter/04.サムス.png);
-}
-
-.item5 {
-  background-image: url(../img/fighter/05.ダークサムス.png);
-}
-
-.item6 {
-  background-image: url(../img/fighter/06.ヨッシー.png);
-}
-
-.item7 {
-  background-image: url(../img/fighter/07.カービィ.png);
-}
-
-.item8 {
-  background-image: url(../img/fighter/08.フォックス.png);
-}
-
-.item9 {
-  background-image: url(../img/fighter/09.ピカチュウ.png);
-}
-
-.item10 {
-  background-image: url(../img/fighter/10.ルイージ.png);
-}
-
-.item11 {
-  background-image: url(../img/fighter/11.ネス.png);
-}
-
-.item12 {
-  background-image: url(../img/fighter/12.キャプテン・ファルコン.png);
-}
-
-.item13 {
-  background-image: url(../img/fighter/13.プリン.png);
-}
-
-.item14 {
-  background-image: url(../img/fighter/14.ピーチ.png);
-}
-
-.item15 {
-  background-image: url(../img/fighter/15.デイジー.png);
-}
-
-.item16 {
-  background-image: url(../img/fighter/16.クッパ.png);
-}
-
-.item17 {
-  background-image: url(../img/fighter/17.アイスクライマー.png);
-}
-
-.item18 {
-  background-image: url(../img/fighter/18.シーク.png);
-}
-
-.item19 {
-  background-image: url(../img/fighter/19.ゼルダ.png);
-}
-
-.item20 {
-  background-image: url(../img/fighter/20.ドクターマリオ.png);
-}
-
-.item21 {
-  background-image: url(../img/fighter/21.ピチュー.png);
-}
-
-.item22 {
-  background-image: url(../img/fighter/22.ファルコ.png);
-}
-
-.item23 {
-  background-image: url(../img/fighter/23.マルス.png);
-}
-
-.item24 {
-  background-image: url(../img/fighter/24.ルキナ.png);
-}
-
-.item25 {
-  background-image: url(../img/fighter/25.こどもリンク.png);
-}
-
-.item26 {
-  background-image: url(../img/fighter/26.ガノンドロフ.png);
-}
-
-.item27 {
-  background-image: url(../img/fighter/27.ミュウツー.png);
-}
-
-.item28 {
-  background-image: url(../img/fighter/28.ロイ.png);
-}
-
-.item29 {
-  background-image: url(../img/fighter/29.クロム.png);
-}
-
-.item30 {
-  background-image: url(../img/fighter/30.Mr.ゲーム&ウォッチ.png);
-}
-
-.item31 {
-  background-image: url(../img/fighter/31.メタナイト.png);
-}
-
-.item32 {
-  background-image: url(../img/fighter/32.ピット.png);
-}
-
-.item33 {
-  background-image: url(../img/fighter/33.ブラックピット.png);
-}
-
-.item34 {
-  background-image: url(../img/fighter/34.ゼロスーツサムス.png);
-}
-
-.item35 {
-  background-image: url(../img/fighter/35.ワリオ.png);
-}
-
-.item36 {
-  background-image: url(../img/fighter/36.スネーク.png);
-}
-
-.item37 {
-  background-image: url(../img/fighter/37.アイク.png);
-}
-
-.item38 {
-  background-image: url(../img/fighter/38.ポケモントレーナー.png);
-}
-
-.item39 {
-  background-image: url(../img/fighter/39.ディディーコング.png);
-}
-
-.item40 {
-  background-image: url(../img/fighter/40.リュカ.png);
-}
-
-.item41 {
-  background-image: url(../img/fighter/41.ソニック.png);
-}
-
-.item42 {
-  background-image: url(../img/fighter/42.デデデ.png);
-}
-
-.item43 {
-  background-image: url(../img/fighter/43.ピクミン＆オリマー.png);
-}
-
-.item44 {
-  background-image: url(../img/fighter/44.ルカリオ.png);
-}
-
-.item45 {
-  background-image: url(../img/fighter/45.ロボット.png);
-}
-
-.item46 {
-  background-image: url(../img/fighter/46.トゥーンリンク.png);
-}
-
-.item47 {
-  background-image: url(../img/fighter/47.ウルフ.png);
-}
-
-.item48 {
-  background-image: url(../img/fighter/48.むらびと.png);
-}
-
-.item49 {
-  background-image: url(../img/fighter/49.ロックマン.png);
-}
-
-.item50 {
-  background-image: url(../img/fighter/50.Wii\ Fit\ トレーナー.png);
-}
-
-.item51 {
-  background-image: url(../img/fighter/51.ロゼッタ＆チコ.png);
-}
-
-.item52 {
-  background-image: url(../img/fighter/52.リトルマック.png);
-}
-
-.item53 {
-  background-image: url(../img/fighter/53.ゲッコウガ.png);
-}
-
-.item54 {
-  background-image: url(../img/fighter/54.格闘Mii.png);
-}
-
-.item55 {
-  background-image: url(../img/fighter/55.剣術Mii.png);
-}
-
-.item56 {
-  background-image: url(../img/fighter/56.射撃Mii.png);
-}
-
-.item57 {
-  background-image: url(../img/fighter/57.パルテナ.png);
-}
-
-.item58 {
-  background-image: url(../img/fighter/58.パックマン.png);
-}
-
-.item59 {
-  background-image: url(../img/fighter/59.ルフレ.png);
-}
-
-.item60 {
-  background-image: url(../img/fighter/60.シュルク.png);
-}
-
-.item61 {
-  background-image: url(../img/fighter/61.クッパJr..png);
-}
-
-.item62 {
-  background-image: url(../img/fighter/62.ダックハント.png);
-}
-
-.item63 {
-  background-image: url(../img/fighter/63.リュウ.png);
-}
-
-.item64 {
-  background-image: url(../img/fighter/64.ケン.png);
-}
-
-.item65 {
-  background-image: url(../img/fighter/65.クラウド.png);
-}
-
-.item66 {
-  background-image: url(../img/fighter/66.カムイ.png);
-}
-
-.item67 {
-  background-image: url(../img/fighter/67.ベヨネッタ.png);
-}
-
-.item68 {
-  background-image: url(../img/fighter/68.インクリング.png);
-}
-
-.item69 {
-  background-image: url(../img/fighter/69.リドリー.png);
-}
-
-.item70 {
-  background-image: url(../img/fighter/70.シモン.png);
-}
-
-.item71 {
-  background-image: url(../img/fighter/71.リヒター.png);
-}
-
-.item72 {
-  background-image: url(../img/fighter/72.キングクルール.png);
-}
-
-.item73 {
-  background-image: url(../img/fighter/73.しずえ.png);
-}
-
-.item74 {
-  background-image: url(../img/fighter/74.ガオガエン.png);
-}
-
-.item75 {
-  background-image: url(../img/fighter/75.パックンフラワー.png);
-}
-
-.item76 {
-  background-image: url(../img/fighter/76.ジョーカー.png);
-}
-
-.item77 {
-  background-image: url(../img/fighter/77.勇者.png);
-}
-
-.item78 {
-  background-image: url(../img/fighter/78.バンジョー＆カズーイ.png);
-}
-
-.item79 {
-  background-image: url(../img/fighter/79.テリー.png);
-}
-
-.item80 {
-  background-image: url(../img/fighter/80.ベレトス.png);
-}
-
-.item81 {
-  background-image: url(../img/fighter/81.ミェンミェン.png);
-}
-
-.item82 {
-  background-image: url(../img/fighter/82.スティーブ.png);
-}
-
-.item83 {
-  background-image: url(../img/fighter/83.セフィロス.png);
-}
-
-.item84 {
-  background-image: url(../img/fighter/84.ホムヒカ.png);
-}
-
-.item85 {
-  background-image: url(../img/fighter/85.カズヤ.png);
-}
-
-.item86 {
-  background-image: url(../img/fighter/86.ソラ.png);
-}
-
-.item87 {
-  background-image: url(../img/fighter/04.サムス_05.ダークサムス.png);
-}
-
-.item88 {
-  background-image: url(../img/fighter/14.ピーチ_15.デイジー.png);
-}
-
-.item89 {
-  background-image: url(../img/fighter/32.ピット_33.ブラックピット.png);
-}
-
-.item90 {
-  background-image: url(../img/fighter/70.シモン_71.リヒター.png);
-}
-
-.item91 {
-  background-image: url(../img/fighter/リンク.png);
-}
-
-.item92 {
-  background-image: url(../img/fighter/ピカチュウ.png);
-}
-
-.item93 {
-  background-image: url(../img/fighter/ワリオ.png);
-}
-
-.item94 {
-  background-image: url(../img/fighter/アイク.png);
-}
-
-.item95 {
-  background-image: url(../img/fighter/アルフ.png);
-}
-
-.item96 {
-  background-image: url(../img/fighter/ゼニガメ.png);
-}
-
-.item97 {
-  background-image: url(../img/fighter/フシギソウ.png);
-}
-
-.item98 {
-  background-image: url(../img/fighter/リザードン.png);
-}
-
-.item99 {
-  background-image: url(../img/fighter/むらびと.png);
-}
-
-.item100 {
-  background-image: url(../img/fighter/リトルマック3.png);
-}
-
-.item101 {
-  background-image: url(../img/fighter/パルテナ.png);
-}
-
-.item102 {
-  background-image: url(../img/fighter/ルフレ.png);
-}
-
-.item103 {
-  background-image: url(../img/fighter/ラリー.png);
-}
-
-.item104 {
-  background-image: url(../img/fighter/ロイ.png);
-}
-
-.item105 {
-  background-image: url(../img/fighter/ウェンディ.png);
-}
-
-.item106 {
-  background-image: url(../img/fighter/イギー.png);
-}
-
-.item107 {
-  background-image: url(../img/fighter/モートン.png);
-}
-
-.item108 {
-  background-image: url(../img/fighter/レミー.png);
-}
-
-.item109 {
-  background-image: url(../img/fighter/ルドウィグ.png);
-}
-
-.item110 {
-  background-image: url(../img/fighter/クラウド.png);
-}
-
-.item111 {
-  background-image: url(../img/fighter/カムイ.png);
-}
-
-.item112 {
-  background-image: url(../img/fighter/ベヨネッタ.png);
-}
-
-.item113 {
-  background-image: url(../img/fighter/インクリング.png);
-}
-
-.item114 {
-  background-image: url(../img/fighter/リドリー.png);
-}
-
-.item115 {
-  background-image: url(../img/fighter/勇者1.png);
-}
-
-.item116 {
-  background-image: url(../img/fighter/勇者3.png);
-}
-
-.item117 {
-  background-image: url(../img/fighter/勇者8.png);
-}
-
-.item118 {
-  background-image: url(../img/fighter/ベレス.png);
-}
-
-.item119 {
-  background-image: url(../img/fighter/アレックス.png);
-}
-
-.item120 {
-  background-image: url(../img/fighter/ゾンビ.png);
-}
-
-.item121 {
-  background-image: url(../img/fighter/エンダーマン.png);
-}
-
-.item122 {
-  background-image: url(../img/fighter/セフィロス.png);
-}
-
-.item123 {
-  background-image: url(../img/fighter/ホムラ.png);
-}
-
-.item124 {
-  background-image: url(../img/fighter/ヒカリ.png);
-}
-
-.item125 {
-  background-image: url(../img/fighter/カズヤ.png);
-}
-
-.item126 {
-  background-image: url(../img/fighter/ソラ4.png);
-}
-
-.item127 {
-  background-image: url(../img/fighter/87.おまかせ.png);
-}
-
-.item128 {
-  background-image: url(../img/fighter/弱.png);
-}
-
-.item129 {
-  background-image: url(../img/fighter/DA.png);
-}
-
-.item130 {
-  background-image: url(../img/fighter/上強.png);
-}
-
-.item131 {
-  background-image: url(../img/fighter/横強.png);
-}
-
-.item132 {
-  background-image: url(../img/fighter/下強.png);
-}
-
-.item133 {
-  background-image: url(../img/fighter/上スマ.png);
-}
-
-.item134 {
-  background-image: url(../img/fighter/横スマ.png);
-}
-
-.item135 {
-  background-image: url(../img/fighter/下スマ.png);
-}
-
-.item136 {
-  background-image: url(../img/fighter/空N.png);
-}
-
-.item137 {
-  background-image: url(../img/fighter/空上.png);
-}
-
-.item138 {
-  background-image: url(../img/fighter/空前.png);
-}
-
-.item139 {
-  background-image: url(../img/fighter/空後.png);
-}
-
-.item140 {
-  background-image: url(../img/fighter/空下.png);
-}
-
-.item141 {
-  background-image: url(../img/fighter/NB.png);
-}
-
-.item142 {
-  background-image: url(../img/fighter/上B.png);
-}
-
-.item143 {
-  background-image: url(../img/fighter/横B.png);
-}
-
-.item144 {
-  background-image: url(../img/fighter/下B.png);
-}
-
-.item145 {
-  background-image: url(../img/fighter/掴み.png);
-}
-
-.item146 {
-  background-image: url(../img/fighter/上投げ.png);
-}
-
-.item147 {
-  background-image: url(../img/fighter/前投げ.png);
-}
-
-.item148 {
-  background-image: url(../img/fighter/後投げ.png);
-}
-
-.item149 {
-  background-image: url(../img/fighter/下投げ.png);
-}
-
-.item150 {
-  background-image: url(../img/fighter/掴み打撃.png);
-}
-
-.item151 {
-  background-image: url(../img/fighter/ガード.png);
-}
-
-.item152 {
-  background-image: url(../img/fighter/上アピ.png);
-}
-
-.item153 {
-  background-image: url(../img/fighter/横アピ.png);
-}
-
-.item154 {
-  background-image: url(../img/fighter/下アピ.png);
-}
-
 
 @media (max-width: 840px) {
-
   .tierlist {
     max-width: 98%;
     padding: 10px 0px;
     margin-top: 10px;
     margin-bottom: 0px;
+    top: 0px;
   }
 
   .tierlist h2 {
@@ -1049,7 +443,7 @@ img {
   }
 
   .MU_title {
-    min-height: 32px;
+    min-height: 25px;
     padding: 0px;
     padding-top: 0.5px;
     text-align: center;
@@ -1064,7 +458,7 @@ img {
     display: table-cell;
     vertical-align: middle;
     font-weight: 800;
-    min-width: 20px
+    min-width: 20px;
   }
 
   .MU_result {
@@ -1072,6 +466,7 @@ img {
     padding: 0;
     padding-top: 0.5px;
     border: solid 0.5px #837f7f;
+    height: unset;
   }
 
   .MU_result img {
@@ -1079,12 +474,32 @@ img {
     max-width: 12.5%;
   }
 
-  .item {
+  .MU_result .item {
+    width: 63px;
+    max-width: 10%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    aspect-ratio: 1;
+    height: unset;
+  }
+
+  .Fighter_box .item {
     object-fit: cover;
     background-repeat: no-repeat;
-    width: 38px;
-    height: 38px;
+    width: 63px;
     max-width: 12%;
+    aspect-ratio: 1;
+    height: unset;
+    -webkit-user-drag: none;
+  }
+
+  .Fighter_box .item[draggable="true"] {
+    -webkit-user-drag: auto;
+  }
+
+  .MU_result img {
+    width: 63px;
+    max-width: 12.5%;
   }
 
   .MU_box7.is-hidden {
@@ -1118,18 +533,14 @@ img {
     padding-left: 5%;
   }
 
-  .Fighter_box {
-    margin-right: 15px;
-  }
-
   .Fighter_li {
     margin: 0;
   }
 
-  .Fighter_table img {
+  /* .Fighter_table img {
     width: 63px;
     max-width: 12%;
-  }
+  } */
 
   .controller {
     display: none;
@@ -1198,8 +609,8 @@ img {
     border-radius: 4px;
   }
 
-
   .color_group {
+    margin-right: 2%;
     margin-bottom: 5px;
   }
 
@@ -1228,9 +639,9 @@ img {
     border-radius: 0px;
   }
 
-  .pc_ver {
+  /* .pc_ver {
     display: none;
-  }
+  } */
 
   .phone_ver {
     display: block;
@@ -1291,6 +702,4 @@ img {
     margin-top: 5px;
     flex: 1 1 auto;
   }
-
-
 }
