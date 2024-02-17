@@ -108,11 +108,12 @@
   z-index: 2;
 }
 
+/* 
 .MU_result img {
   width: 68px;
   padding: 0px;
   cursor: pointer;
-}
+} */
 
 .Fighter_Storage {
   width: 1050px;
@@ -148,11 +149,11 @@
   margin: 0;
 }
 
-.Fighter_table img {
-  width: 68px;
+/* .Fighter_table img {
+  width: 136px;
   padding: 0px;
   cursor: pointer;
-}
+} */
 
 .Fighter_table img:hover {
   opacity: 0.8;
@@ -383,6 +384,10 @@ img {
   background-size: contain;
 }
 
+.stage {
+  width: 136px;
+}
+
 .item :hover {
   opacity: 0.6;
 }
@@ -483,6 +488,12 @@ img {
     height: unset;
   }
 
+  .MU_result .stage {
+    width: 126px;
+    max-width: 20%;
+    aspect-ratio: 136/68;
+  }
+
   .Fighter_box .item {
     object-fit: cover;
     background-repeat: no-repeat;
@@ -491,6 +502,12 @@ img {
     aspect-ratio: 1;
     height: unset;
     -webkit-user-drag: none;
+  }
+
+  .Fighter_box .stage {
+    width: 126px;
+    max-width: 24%;
+    aspect-ratio: 136/68;
   }
 
   .Fighter_box .item[draggable="true"] {
