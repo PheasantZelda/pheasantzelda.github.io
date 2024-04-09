@@ -90,6 +90,7 @@ th {
   font-size: 15px;
   font-weight: bold;
   line-height: 1.5;
+  position: sticky;
   top: 0;
   left: 0;
 }
@@ -193,9 +194,9 @@ td {
   .fix1 {
     position: relative;
   }
-  
+
   .fix2 {
-    top:0;
+    top: 0;
     position: relative;
   }
 

@@ -9,41 +9,47 @@
   margin-right: auto;
   margin-bottom: 25px;
 }
+
 /*詳細*/
 
 /* === ソートボタン ============================== */
-.tsImg{
-  display    :inline-flex;
-  width      : 20px;
-  height     : 18px;
-  background : #eee;
-  border     : 1px solid grey;
-  margin-top   : 10px;
+.tsImg {
+  display: inline-flex;
+  width: 20px;
+  height: 18px;
+  background: #eee;
+  border: 1px solid grey;
+  margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
-  padding    : 5px;
-  cursor     : pointer;
+  padding: 5px;
+  cursor: pointer;
 }
+
 /* === ソートボタン（カーソルオーバー時）========= */
-.tsImg:hover{
-  background : grey;
+.tsImg:hover {
+  background: grey;
 }
+
 /* === ソートボタン内の三角の色（SVG）============ */
-.tsImg path{
-  fill       : #333536;
+.tsImg path {
+  fill: #333536;
 }
- 
+
 .sorttbl p {
   font-size: 0%;
 }
+
 .sorttbla p {
   font-size: 0%;
 }
+
 .example {
   margin-top: 20px;
 }
-.example table{
-  border-collapse:separate;
+
+.example table {
+  border-collapse: separate;
   margin: 0;
   border-spacing: 0;
   margin-left: auto;
@@ -57,7 +63,8 @@ table {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
-  text-align: center; /* 全テキストを中央寄せ */
+  text-align: center;
+  /* 全テキストを中央寄せ */
 }
 
 th, td {
@@ -100,29 +107,31 @@ td img {
     margin-bottom: 25px;
   }
 
-    /* === ソートボタン ============================== */
-  .tsImg{
-    display    :inline-flex;
-    width      : 12px;
-    height     : 10px;
-    
-    background : #eee;
-    border     : 1px solid grey;
-    margin-top   : 4px;
+  /* === ソートボタン ============================== */
+  .tsImg {
+    display: inline-flex;
+    width: 12px;
+    height: 10px;
+
+    background: #eee;
+    border: 1px solid grey;
+    margin-top: 4px;
     margin-right: 4px;
     margin-left: 4px;
-    padding    : 1px;
-    cursor     : pointer;
+    padding: 1px;
+    cursor: pointer;
   }
+
   /* === ソートボタン（カーソルオーバー時）========= */
-  .tsImg:hover{
-    background : grey;
+  .tsImg:hover {
+    background: grey;
   }
+
   /* === ソートボタン内の三角の色（SVG）============ */
-  .tsImg path{
-    fill       : #333536;
+  .tsImg path {
+    fill: #333536;
   }
-  
+
   .sorttbl p {
     font-size: 0%;
   }
@@ -134,7 +143,8 @@ td img {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    text-align: center; /* 全テキストを中央寄せ */
+    text-align: center;
+    /* 全テキストを中央寄せ */
   }
 
   .sorttbla {
@@ -144,11 +154,13 @@ td img {
   th {
     font-size: 12px;
     line-height: 1.5;
+    top: 50px;
   }
-  
+
   td {
     font-size: 10px;
   }
+
   td img {
     width: 30px;
   }

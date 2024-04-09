@@ -312,6 +312,7 @@ td img {
   th {
     font-size: 12px;
     line-height: 1.5;
+    top: 50px;
   }
 
   td {
