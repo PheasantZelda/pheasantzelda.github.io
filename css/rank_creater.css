@@ -384,6 +384,34 @@ img {
   background-size: contain;
 }
 
+.text_box {
+  display: inline-flex;
+  width: 136px;
+  height: 68px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(73, 73, 73);
+  border: #2c2a2a 1px solid;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.red {
+  color: red;
+}
+
+.text {
+  color: white;
+  line-height: 1.3;
+  font-size: 16px;
+  width: 90%;
+}
+
+.text_box :hover {
+  opacity: 0.6;
+}
+
 .stage {
   width: 136px;
 }
@@ -498,7 +526,7 @@ img {
     object-fit: cover;
     background-repeat: no-repeat;
     width: 63px;
-    max-width: 12%;
+    max-width: 12.5%;
     aspect-ratio: 1;
     height: unset;
     -webkit-user-drag: none;
@@ -506,11 +534,39 @@ img {
 
   .Fighter_box .stage {
     width: 126px;
-    max-width: 24%;
+    max-width: 25%;
     aspect-ratio: 136/68;
   }
 
   .Fighter_box .item[draggable="true"] {
+    -webkit-user-drag: auto;
+  }
+
+  .Fighter_box .text_box {
+    width: 126px;
+    max-width: 20%;
+    height: unset;
+    aspect-ratio: 136/68;
+  }
+
+  .Fighter_box .text {
+    font-size: 10px;
+    line-height: 1.0;
+  }
+
+  .MU_result .text_box {
+    width: 126px;
+    max-width: 20%;
+    aspect-ratio: 136/68;
+    height: unset;
+  }
+
+  .MU_result .text {
+    font-size: 6px;
+    line-height: 1.2;
+  }
+
+  .Fighter_box .text[draggable="true"] {
     -webkit-user-drag: auto;
   }
 
@@ -547,7 +603,6 @@ img {
   .Fighter_table {
     max-width: 95%;
     margin-top: 0px;
-    padding-left: 5%;
   }
 
   .Fighter_li {
