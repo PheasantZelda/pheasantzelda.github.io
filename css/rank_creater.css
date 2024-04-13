@@ -570,6 +570,10 @@ img {
     -webkit-user-drag: auto;
   }
 
+  .Fighter_box .text[draggable="true"] {
+    -webkit-user-drag: none;
+  }
+
   .MU_result img {
     width: 63px;
     max-width: 12.5%;
