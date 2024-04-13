@@ -401,7 +401,7 @@ img {
   color: red;
 }
 
-.text {
+.text_content {
   color: white;
   line-height: 1.3;
   font-size: 16px;
@@ -549,7 +549,7 @@ img {
     aspect-ratio: 136/68;
   }
 
-  .Fighter_box .text {
+  .Fighter_box .text_content {
     font-size: 10px;
     line-height: 1.0;
   }
@@ -561,7 +561,7 @@ img {
     height: unset;
   }
 
-  .MU_result .text {
+  .MU_result .text_content {
     font-size: 6px;
     line-height: 1.2;
   }
@@ -570,7 +570,7 @@ img {
     -webkit-user-drag: auto;
   }
 
-  .Fighter_box .text[draggable="true"] {
+  .Fighter_box .text_content[draggable="true"] {
     -webkit-user-drag: none;
   }
 
