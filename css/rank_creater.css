@@ -384,7 +384,7 @@ img {
   background-size: contain;
 }
 
-.text_box {
+/* .text_box {
   display: inline-flex;
   width: 136px;
   height: 68px;
@@ -410,7 +410,7 @@ img {
 
 .text_box :hover {
   opacity: 0.6;
-}
+} */
 
 .stage {
   width: 136px;
@@ -542,7 +542,7 @@ img {
     -webkit-user-drag: auto;
   }
 
-  .Fighter_box .text_box {
+  /* .Fighter_box .text_box {
     width: 126px;
     max-width: 20%;
     height: unset;
@@ -572,7 +572,7 @@ img {
 
   .Fighter_box .text_content[draggable="true"] {
     -webkit-user-drag: none;
-  }
+  } */
 
   .MU_result img {
     width: 63px;
