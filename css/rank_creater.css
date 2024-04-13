@@ -566,7 +566,7 @@ img {
     line-height: 1.2;
   }
 
-  .Fighter_box .text[draggable="true"] {
+  .Fighter_box .text_box[draggable="true"] {
     -webkit-user-drag: auto;
   }
 
