@@ -1,3 +1,7 @@
+let draggedItem = null;
+
+const nonImageAreas = document.querySelectorAll('.Fighter_box');
+const mappingAreas = document.querySelectorAll('.MU_result');
 const draggableItemstext = document.querySelectorAll('.text_box');
 
 function handleTouchStart(e) {
