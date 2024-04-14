@@ -82,82 +82,86 @@ draggableItems.forEach((item) => {
   item.addEventListener('touchend', handleTouchEnd);
 });
 
-// const draggableItemstext = document.querySelectorAll('.text_box');
+const draggableItemstext = document.querySelectorAll('.text_box');
 
-// function handleTouchStart(e) {
-//   draggedItem = e.target;
-//   draggedItem.style.left = ''; // スタイルをリセット
-//   draggedItem.style.top = ''; // スタイルをリセット
-//   let touch = e.touches[0];
-//   startX = touch.clientX - parseFloat(draggedItem.style.left || 0);
-//   startY = touch.clientY - parseFloat(draggedItem.style.top || 0);
-//   e.preventDefault();
-// }
+function handleTouchStart(e) {
+  if (!e.target.classList.contains('text_box')) {
+    return;
+  }
 
-// function handleTouchMove(e) {
-//   if (!draggedItem) return;
-//   let touch = e.touches[0];
-//   draggedItem.style.left = `${touch.clientX - startX}px`;
-//   draggedItem.style.top = `${touch.clientY - startY}px`;
-//   e.preventDefault();
-//   e.target.classList.add('active');
-// }
+  draggedItem = e.target;
+  draggedItem.style.left = ''; // スタイルをリセット
+  draggedItem.style.top = ''; // スタイルをリセット
+  let touch = e.touches[0];
+  startX = touch.clientX - parseFloat(draggedItem.style.left || 0);
+  startY = touch.clientY - parseFloat(draggedItem.style.top || 0);
+  e.preventDefault();
+}
 
-// function handleTouchEnd(e) {
-//   e.target.classList.remove('active');
-//   if (!draggedItem) return;
+function handleTouchMove(e) {
+  if (!draggedItem) return;
+  let touch = e.touches[0];
+  draggedItem.style.left = `${touch.clientX - startX}px`;
+  draggedItem.style.top = `${touch.clientY - startY}px`;
+  e.preventDefault();
+  e.target.classList.add('active');
+}
 
-//   mappingAreas.forEach((mappingArea) => {
-//     const rect = mappingArea.getBoundingClientRect();
+function handleTouchEnd(e) {
+  e.target.classList.remove('active');
+  if (!draggedItem) return;
 
-//     let left = parseFloat(draggedItem.style.left) + startX;
-//     let top = parseFloat(draggedItem.style.top) + startY;
+  mappingAreas.forEach((mappingArea) => {
+    const rect = mappingArea.getBoundingClientRect();
 
-//     if (
-//       left >= rect.left &&
-//       left < rect.right &&
-//       top >= rect.top &&
-//       top < rect.bottom
-//     ) {
-//       const touch = e.changedTouches[0];
-//       const x = touch.clientX - rect.left;
-//       const y = touch.clientY - rect.top;
-//       draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
-//       draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
-//       draggedItem.crossOrigin = 'anonymous';
-//       mappingArea.appendChild(draggedItem);
-//       draggedItem.style.left = ''; // スタイルをリセット
-//       draggedItem.style.top = ''; // スタイルをリセット
-//     }
-//   });
+    let left = parseFloat(draggedItem.style.left) + startX;
+    let top = parseFloat(draggedItem.style.top) + startY;
 
-//   nonImageAreas.forEach((nonImageArea) => {
-//     const rect = nonImageArea.getBoundingClientRect();
+    if (
+      left >= rect.left &&
+      left < rect.right &&
+      top >= rect.top &&
+      top < rect.bottom
+    ) {
+      const touch = e.changedTouches[0];
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+      draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
+      draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
+      draggedItem.crossOrigin = 'anonymous';
+      mappingArea.appendChild(draggedItem);
+      draggedItem.style.left = ''; // スタイルをリセット
+      draggedItem.style.top = ''; // スタイルをリセット
+    }
+  });
 
-//     let left = parseFloat(draggedItem.style.left) + startX;
-//     let top = parseFloat(draggedItem.style.top) + startY;
+  nonImageAreas.forEach((nonImageArea) => {
+    const rect = nonImageArea.getBoundingClientRect();
 
-//     if (
-//       left >= rect.left &&
-//       left < rect.right &&
-//       top >= rect.top &&
-//       top < rect.bottom
-//     ) {
-//       const touch = e.changedTouches[0];
-//       const x = touch.clientX - rect.left;
-//       const y = touch.clientY - rect.top;
-//       draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
-//       draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
-//       draggedItem.crossOrigin = 'anonymous';
-//       nonImageArea.prepend(draggedItem);
-//       draggedItem.style.left = ''; // スタイルをリセット
-//       draggedItem.style.top = ''; // スタイルをリセット
-//     }
-//   });
-// }
+    let left = parseFloat(draggedItem.style.left) + startX;
+    let top = parseFloat(draggedItem.style.top) + startY;
 
-// draggableItemstext.forEach((item) => {
-//   item.addEventListener('touchstart', handleTouchStart);
-//   item.addEventListener('touchmove', handleTouchMove);
-//   item.addEventListener('touchend', handleTouchEnd);
-// });
+    if (
+      left >= rect.left &&
+      left < rect.right &&
+      top >= rect.top &&
+      top < rect.bottom
+    ) {
+      const touch = e.changedTouches[0];
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+      draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
+      draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
+      draggedItem.crossOrigin = 'anonymous';
+      nonImageArea.prepend(draggedItem);
+      draggedItem.style.left = ''; // スタイルをリセット
+      draggedItem.style.top = ''; // スタイルをリセット
+    }
+  });
+}
+
+draggableItemstext.forEach((item) => {
+  item.addEventListener('touchstart', handleTouchStart);
+  item.addEventListener('touchmove', handleTouchMove);
+  item.addEventListener('touchend', handleTouchEnd);
+});
