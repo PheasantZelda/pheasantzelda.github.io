@@ -552,6 +552,8 @@ img {
   .Fighter_box .text_content {
     font-size: 10px;
     line-height: 1.0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
 
   .MU_result .text_box {
@@ -564,6 +566,8 @@ img {
   .MU_result .text_content {
     font-size: 6px;
     line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
 
   .Fighter_box .text_box[draggable="true"] {

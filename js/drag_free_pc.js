@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const box2 = document.querySelectorAll('.box');
   document.addEventListener('mousedown', (e) => {
     const t = e.target;
-    if (t.matches('.item')) {
+    if (t.matches('.text_box')) {
       drag.target = t;
       drag.mouseon = 1;
       drag.target.classList.add('dragging');
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (t.matches('.box')) {
       t.appendChild(drag.target);
     }
-    if (t.matches('.box .item')) {
+    if (t.matches('.box .text_box')) {
       t.after(drag.target);
     }
     drag.target.classList.remove('dragging');
