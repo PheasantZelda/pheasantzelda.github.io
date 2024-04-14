@@ -544,7 +544,7 @@ img {
 
   .Fighter_box .text_box {
     width: 126px;
-    max-width: 20%;
+    max-width: 25%;
     height: unset;
     aspect-ratio: 136/68;
   }
