@@ -270,6 +270,101 @@ span {
   animation: color-change 5s linear infinite;
 }
 
+/* ２周年企画 */
+#full-overlay {
+  transition: all 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 37, 37, 0.801);
+  z-index: 999;
+}
+
+#full-overlay .inner img {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+}
+
+#full-overlay .inner span {
+  position: fixed;
+  left: 83%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.year_text {
+  position: fixed;
+  left: 80%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.year_img {
+  position: fixed;
+  left: 65%;
+  top: 35%;
+  width: 12%;
+  transform: translate(-50%, -50%);
+  animation: squash 2.0s ease-in-out infinite;
+}
+
+.year_img img {
+  border-radius: 20%;
+}
+
+@keyframes squash {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.square_btn {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #333;
+  /* 枠の調整 */
+  background: #fff;
+  /* ボタンの背景色 */
+}
+
+.square_btn::before, .square_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  /* 棒の幅（太さ） */
+  height: 27px;
+  /* 棒の高さ */
+  background: #333;
+  /* バツ印の色 */
+}
+
+.square_btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.square_btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 @media (max-width: 840px) {
   .movie {
     width: 500px;
@@ -362,6 +457,31 @@ span {
   .news p {
     font-size: 10px;
     line-height: 20px;
+  }
+
+
+  /* ２周年企画 */
+  #full-overlay .inner img {
+    width: 90%;
+  }
+
+  #full-overlay .inner span {
+    position: fixed;
+    left: 92%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+  }
+
+  .year_text {
+    left: 45%;
+    top: 15%;
+    font-size: 14px;
+  }
+
+  .year_img {
+    left: 5%;
+    top: 15%;
+    width: 12%;
   }
 
 }

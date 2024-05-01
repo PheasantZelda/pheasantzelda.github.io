@@ -104,12 +104,18 @@
     <div class="release">
       <div class="scroll">
         <div class="news">
-          <p>2024/04/05 に <span>ver10.0.0にアップテート</span>しました！
-            27期のデータを反映しました！27期は最終レートの記録更新多数なので歴代記録を要チェック！</p>
-          <p>2024/04/05 に <span>ver10.0.0にアップテート</span>しました！
-            27期のデータを反映しました！27期は最終レートの記録更新多数なので歴代記録を要チェック！</p>
-          <p>2024/04/05 に <span>ver10.0.0にアップテート</span>しました！
-            27期のデータを反映しました！27期は最終レートの記録更新多数なので歴代記録を要チェック！</p>
+          <p>スマアナは 2024/05/01 に<span>２周年</span>を迎えることができました！
+            それを祝して<span>プレゼント企画</span>を実施中。
+            <a href="https://twitter.com/pheasant_SSBU">Xアカウント</a>から詳細を要チェック！
+          </p>
+          <p>スマアナは 2024/05/01 に<span>２周年</span>を迎えることができました！
+            それを祝して<span>プレゼント企画</span>を実施中。
+            <a href="https://twitter.com/pheasant_SSBU">Xアカウント</a>から詳細を要チェック！
+          </p>
+          <p>スマアナは 2024/05/01 に<span>２周年</span>を迎えることができました！
+            それを祝して<span>プレゼント企画</span>を実施中。
+            <a href="https://twitter.com/pheasant_SSBU">Xアカウント</a>から詳細を要チェック！
+          </p>
         </div>
       </div>
     </div>
@@ -126,6 +132,18 @@
           <li><a></a></li>
         </ol>
       </nav>
+    </div>
+    <!-- ２周年企画 -->
+    <div id="full-overlay">
+      <div class="inner">
+        <span class="square_btn"></span>
+        <a class="year_img" href="https://twitter.com/pheasant_SSBU">
+          <img src="./img/common/twitter.png" alt="twitterアイコン">
+        </a>
+        <a class="year_text" href="https://twitter.com/pheasant_SSBU">
+          <p>←Xの固定ポストをCheck！</p>
+        </a> <img src="./img/contents/２周年記念プレゼント企画.png" alt="">
+      </div>
     </div>
     <div class="section">「スマアナ」とは．．．</div>
     <div class="explain">
@@ -305,6 +323,18 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/toggle-menu_rev.js"></script>
+    <!-- 2周年企画 -->
+    <script>$(function () {
+        // 「隠す！」ボタンクリック
+        $(".show-overlay").on('click', function () {
+          $("#full-overlay").fadeIn();
+        });
+
+        // 「みる？」ボタンクリック
+        $(".square_btn").on('click', function () {
+          $("#full-overlay").fadeOut();
+        });
+      });</script>
   </main>
   <!--mainはここまで-->
 
@@ -331,7 +361,7 @@
     <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
         当サイトは個人が運営する非公式のWebサービスです。<br>
         任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-    <p class="copyright">ver10.0.0 2024/04/05<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
+    <p class="copyright">ver10.0.1 2024/05/01<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
   </footer>
   <!--footerはここまで-->
 </body>
