@@ -41,24 +41,11 @@
   font-size: 0%;
 }
 
-.sorttbla p {
-  font-size: 0%;
-}
-
 .example {
   margin-top: 20px;
 }
 
-.example table {
-  border-collapse: separate;
-  margin: 0;
-  border-spacing: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-table {
+.sorttbl {
   width: 1000px;
   margin-top: 20px;
   margin-left: auto;
@@ -68,10 +55,13 @@ table {
   /* 全テキストを中央寄せ */
 }
 
+.hidden {
+  display: none;
+}
 
 th, td {
   padding: 5px 5px;
-  border: solid 0.5px white;
+  border: solid 0.5px rgb(110, 110, 110);
 }
 
 .fix1 {
@@ -85,6 +75,7 @@ th, td {
 }
 
 th {
+  border: solid 0.5px rgb(110, 110, 110);
   background-color: #504545;
   color: white;
   font-size: 15px;
@@ -98,6 +89,27 @@ th {
 td {
   background-color: #292828;
   padding: 10px 5px;
+}
+
+.load_button {
+  margin: 40px auto;
+  margin-bottom: 0;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.button {
+  padding: 0.7em 2.0em;
+  border: 0.1em solid #ffffff;
+  border-radius: 0.12em;
+  color: #ffffff;
+  transition: all 0.2s;
+  background-color: #2c2c2c;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: #e7412b;
 }
 
 .Pagination {
@@ -178,13 +190,17 @@ td {
     margin-top: 10px;
   }
 
-  table {
-    width: 80%;
-    margin-top: 20px;
+  .example {
+    width: 95%;
+    overflow-x: scroll;
+    margin: 0 auto;
   }
 
-  .sorttbla {
-    width: 95%;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    user-select: none;
   }
 
   th, td {
