@@ -169,6 +169,7 @@ main {
 .dashbord-mu {
   width: 75%;
   height: auto;
+  margin-right: 16px;
 }
 
 .dashbord-mu__title {
@@ -255,80 +256,6 @@ main {
   opacity: 0.8;
 }
 
-/*詳細*/
-
-/* === ソートボタン ============================== */
-.tsImg {
-  display: inline-flex;
-  width: 20px;
-  height: 18px;
-  background: #eee;
-  border: 1px solid grey;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-/* === ソートボタン（カーソルオーバー時）========= */
-.tsImg:hover {
-  background: grey;
-}
-
-/* === ソートボタン内の三角の色（SVG）============ */
-.tsImg path {
-  fill: #333536;
-}
-
-.sorttbl p {
-  font-size: 0%;
-}
-
-.example {
-  width: 100%;
-  margin-top: 20px;
-}
-
-table {
-  width: 50%;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-  text-align: center;
-  /* 全テキストを中央寄せ */
-}
-
-th, td {
-  padding: 5px 2px;
-  border: solid 1px white;
-}
-
-th {
-  background-color: #333536;
-  color: white;
-  font-size: 18px;
-  line-height: 1.5;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-
-td {
-  background-color: #292828;
-}
-
-td img {
-  width: 50px;
-  margin-top: 0px;
-  align-items: center;
-  border-radius: 5px;
-}
-
-.footer {
-  margin-top: 50px;
-}
 
 @media (max-width: 840px) {
 
@@ -401,67 +328,11 @@ td img {
   .MU_title_Fighter {
     border: #837f7f 0.5px solid;
   }
-
-  /* === ソートボタン ============================== */
-  .tsImg {
-    display: inline-flex;
-    width: 12px;
-    height: 10px;
-
-    background: #eee;
-    border: 1px solid grey;
-    margin-top: 4px;
-    margin-right: 4px;
-    margin-left: 4px;
-    padding: 1px;
-    cursor: pointer;
-  }
-
-  /* === ソートボタン（カーソルオーバー時）========= */
-  .tsImg:hover {
-    background: grey;
-  }
-
-  /* === ソートボタン内の三角の色（SVG）============ */
-  .tsImg path {
-    fill: #333536;
-  }
-
-  .sorttbl p {
-    font-size: 0%;
-  }
-
-  table {
-    width: 80%;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    text-align: center;
-    /* 全テキストを中央寄せ */
-  }
-
-  th {
-    font-size: 12px;
-    line-height: 1.5;
-    top: 50px;
-  }
-
-  td {
-    font-size: 10px;
-  }
-
-  td img {
-    width: 30px;
-  }
-
 }
-
 
 .dashbord-weak {
   width: 25%;
   height: auto;
-  margin-left: 16px;
 }
 
 .weak-inner__content {
@@ -619,4 +490,153 @@ input[name="tab_item"] {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
+}
+
+.dashbord__fourth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashbord-data {
+  width: 50%;
+}
+
+/*詳細*/
+
+/* === ソートボタン ============================== */
+.tsImg {
+  display: inline-flex;
+  width: 20px;
+  height: 18px;
+  background: #eee;
+  border: 1px solid grey;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* === ソートボタン（カーソルオーバー時）========= */
+.tsImg:hover {
+  background: grey;
+}
+
+/* === ソートボタン内の三角の色（SVG）============ */
+.tsImg path {
+  fill: #333536;
+}
+
+.sorttbl p {
+  font-size: 0%;
+}
+
+.example {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+  /* 全テキストを中央寄せ */
+}
+
+th, td {
+  padding: 5px 2px;
+  border: solid 1px white;
+  font-family: sans-serif
+}
+
+th {
+  background-color: #333536;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+td {
+  background-color: #292828;
+}
+
+td img {
+  width: 50px;
+  margin-top: 0px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+@media (max-width: 840px) {
+  .dashbord-data {
+    width: 100%;
+  }
+
+  /* === ソートボタン ============================== */
+  .tsImg {
+    display: inline-flex;
+    width: 12px;
+    height: 10px;
+
+    background: #eee;
+    border: 1px solid grey;
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+    padding: 1px;
+    cursor: pointer;
+  }
+
+  /* === ソートボタン（カーソルオーバー時）========= */
+  .tsImg:hover {
+    background: grey;
+  }
+
+  /* === ソートボタン内の三角の色（SVG）============ */
+  .tsImg path {
+    fill: #333536;
+  }
+
+  .sorttbl p {
+    font-size: 0%;
+  }
+
+  .example {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+    /* 全テキストを中央寄せ */
+  }
+
+  th {
+    font-size: 12px;
+    line-height: 1.5;
+    top: 50px;
+  }
+
+  td {
+    font-size: 10px;
+  }
+
+  td img {
+    width: 30px;
+  }
+
 }
