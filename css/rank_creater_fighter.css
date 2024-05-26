@@ -591,6 +591,11 @@ select::-ms-expand {
     aspect-ratio: 136/68;
   }
 
+  .Fighter_box {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .Fighter_box .item {
     object-fit: cover;
     background-repeat: no-repeat;
@@ -670,6 +675,7 @@ select::-ms-expand {
 
   .Fighter_Storage {
     max-width: 98%;
+    width: 100%;
     padding: 10px 0px;
   }
 
@@ -679,6 +685,7 @@ select::-ms-expand {
 
   .Fighter_table {
     max-width: 95%;
+    width: 100%;
     margin-top: 0px;
   }
 
