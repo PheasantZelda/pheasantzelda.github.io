@@ -95,6 +95,8 @@
   background-color: #333536;
   border: solid 1px #837f7f;
   font-size: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .MU_result .active {
@@ -139,7 +141,8 @@
 }
 
 .Fighter_box {
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
   margin-top: 5px;
   font-size: 0;
 }
