@@ -3,6 +3,7 @@ let draggedItem = null;
 const nonImageAreas = document.querySelectorAll('.Fighter_box');
 const mappingAreas = document.querySelectorAll('.MU_result');
 const draggableItems = document.querySelectorAll('.item');
+const draggableItemstext = document.querySelectorAll('.text_box');
 
 function handleTouchStart(e) {
   if (!e.target.classList.contains('text_box')) {
@@ -81,6 +82,12 @@ function handleTouchEnd(e) {
 }
 
 draggableItems.forEach((item) => {
+  item.addEventListener('touchstart', handleTouchStart);
+  item.addEventListener('touchmove', handleTouchMove);
+  item.addEventListener('touchend', handleTouchEnd);
+});
+
+draggableItemstext.forEach((item) => {
   item.addEventListener('touchstart', handleTouchStart);
   item.addEventListener('touchmove', handleTouchMove);
   item.addEventListener('touchend', handleTouchEnd);
