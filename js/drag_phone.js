@@ -5,6 +5,10 @@ const mappingAreas = document.querySelectorAll('.MU_result');
 const draggableItems = document.querySelectorAll('.item');
 
 function handleTouchStart(e) {
+  if (!e.target.classList.contains('text_box')) {
+    return;
+  }
+
   draggedItem = e.target;
   draggedItem.style.left = ''; // スタイルをリセット
   draggedItem.style.top = ''; // スタイルをリセット
