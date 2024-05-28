@@ -431,29 +431,6 @@ img {
   background-color: rgba(233, 233, 18, 0.3);
 }
 
-.new {
-  animation: color-change 2s linear infinite;
-}
-
-@keyframes color-change {
-  0%, 100% {
-    color: #ff1493;
-  }
-
-  25% {
-    color: #7fff00;
-  }
-
-  50% {
-    color: #0091EA;
-  }
-
-  75% {
-    color: #9400d3;
-  }
-
-}
-
 .selector {
   display: flex;
   align-items: center;
@@ -864,7 +841,7 @@ select::-ms-expand {
 
   .selector::after {
     content: '<>';
-    font: 13px "Consolas", monospace;
+    font: 10px "Consolas", monospace;
     color: #ffffff;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
