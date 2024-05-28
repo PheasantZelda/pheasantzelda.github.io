@@ -4,7 +4,7 @@ const nonImageAreas = document.querySelectorAll('.Fighter_box');
 const mappingAreas = document.querySelectorAll('.MU_result');
 const draggableItemstext = document.querySelectorAll('.text_box');
 
-function handleTouchStart(e) {
+function handleTouchStartText(e) {
   if (!e.target.classList.contains('text_box')) {
     return;
   }
