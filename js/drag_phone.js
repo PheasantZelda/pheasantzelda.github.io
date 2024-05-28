@@ -20,10 +20,6 @@ function handleTouchStartText(e) {
 }
 
 function handleTouchStart(e) {
-  if (!e.target.classList.contains('text_box')) {
-    return;
-  }
-
   draggedItem = e.target;
   draggedItem.style.left = ''; // スタイルをリセット
   draggedItem.style.top = ''; // スタイルをリセット

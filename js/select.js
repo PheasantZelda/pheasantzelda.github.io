@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     if (extraction_val === '全て') {
       $('.item').show();
+      $('.text_box').show();
     } else {
       $('.item').hide();
       $('.' + extraction_val).show();
@@ -12,5 +13,6 @@ $(document).ready(function () {
 
   // 初期状態
   $('.item').hide();
+  $('.text_box').hide();
   $('.item.' + $('.extraction').val()).show();
 });
