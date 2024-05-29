@@ -7,6 +7,7 @@ $(document).ready(function () {
       $('.text_box').show();
     } else {
       $('.item').hide();
+      $('.text_box').hide();
       $('.' + extraction_val).show();
     }
   });

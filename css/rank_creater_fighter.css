@@ -840,15 +840,10 @@ select::-ms-expand {
   }
 
   .selector::after {
-    content: '<>';
-    font: 10px "Consolas", monospace;
-    color: #ffffff;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    content: '< >';
+    font: 13px "Consolas", monospace;
     /*Adjust for position however you want*/
-    padding: 0 0 2px;
+    padding: 0 0 3px;
     border-bottom: 0.5px solid #ffffff;
     margin-left: -30px;
   }
@@ -860,7 +855,6 @@ select::-ms-expand {
     margin: 5px 0px;
     padding: 0px 20px;
     font-size: 12px;
-    color: white;
     border: 0.5px solid white;
   }
 }
