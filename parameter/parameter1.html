@@ -22,8 +22,8 @@
   <title>ファイタ特性早見表 | パラメータ</title>
   <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
   <meta name="description" content="スマブラのファイタの特性を早見表形式で掲載。技のフレームやパラメータの確認にご使用ください。" />
-  <meta property="og:site_name" contet="ファイタ特性早見表 | パラメータ" />
-  <meta property="og:title" contet="ファイタ特性早見表 | パラメータ" />
+  <meta property="og:site_name" content="ファイタ特性早見表 | パラメータ" />
+  <meta property="og:title" content="ファイタ特性早見表 | パラメータ" />
   <meta property="og:description" content="スマブラのファイタの特性を早見表形式で掲載。技のフレームやパラメータの確認にご使用ください。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pheasantzelda.github.io/parameter1.html" />
@@ -117,8 +117,17 @@
         各ファイタの長所などを再認識するきっかけになればと思います。表の右上に設置している非表示ボタンでタイトルと各数値を非表示にすることが可能ですので、
         クイズとして共有してみてください。
         ここに掲載している内容は『<a href="../quiz.html">スマアナ検定</a>』でも出題していますので、ぜひ挑戦してみてください。
-        表の構成上、同じパラメータやフレーム,ダメージの場合でもTierが異なる場合がありますが、ご了承ください。
+        表の構成上、同じパラメータやフレーム、ダメージの場合でもTierが異なる場合がありますが、ご了承ください。
       </p>
+    </div>
+    <div class="language">
+      <p>Language →</p>
+      <button class="button_JP" onclick="jpElements()">
+        <p>JP</p>
+      </button>
+      <button class="button_EN" onclick="enElements()">
+        <p>EN</p>
+      </button>
     </div>
     <div id="page_top"></div>
     <div class="toc_container">
@@ -126,81 +135,278 @@
       <ul class="toc_list">
         <li><span><a href="./parameter1.html#page_top">
               <div class="select">
-                <p class="rotation">▼</p>パラメーター
+                <p class="rotation">▼</p>
+                <p class="text_JP">パラメーター</p>
+                <p class="text_EN">Parameter</p>
               </div>
             </a></span>
           <ul class="toc_child">
-            <li><a href="./parameter1.html#重さ">重さ</a></li>
-            <li><a href="./parameter1.html#シールドサイズ">シールドサイズ</a></li>
-            <li><a href="./parameter1.html#歩行加速量">歩行加速量</a></li>
-            <li><a href="./parameter1.html#最大歩行速度">最大歩行速度</a></li>
-            <li><a href="./parameter1.html#ダッシュ初速度">ダッシュ初速度</a></li>
-            <li><a href="./parameter1.html#ダッシュ加速量">ダッシュ加速量</a></li>
-            <li><a href="./parameter1.html#最大ダッシュ速度">最大ダッシュ速度</a></li>
-            <li><a href="./parameter1.html#地上抵抗">地上抵抗</a></li>
-            <li><a href="./parameter1.html#空中加速">空中加速</a></li>
-            <li><a href="./parameter1.html#最大空中速度">最大空中速度</a></li>
-            <li><a href="./parameter1.html#空中抵抗">空中抵抗</a></li>
-            <li><a href="./parameter1.html#最大落下速度">最大落下速度</a></li>
-            <li><a href="./parameter1.html#急降下速度">急降下速度</a></li>
-            <li><a href="./parameter1.html#重力">重力</a></li>
-            <li><a href="./parameter1.html#大ジャンプ高さ">大ジャンプ高さ</a></li>
-            <li><a href="./parameter1.html#小ジャンプ高さ">小ジャンプ高さ</a></li>
-            <li><a href="./parameter1.html#空中ジャンプ高さ">空中ジャンプ高さ</a></li>
-            <li><a href="./parameter1.html#その場掴み長さ">その場掴み長さ</a></li>
-            <li><a href="./parameter1.html#その場掴み発生">その場掴み発生</a></li>
-            <li><a href="./parameter1.html#崖掴まり姿勢">崖掴まり姿勢</a></li>
-            <li><a href="./parameter1.html#回避上がり距離">回避上がり距離</a></li>
-            <li><a href="./parameter1.html#攻撃上がり距離">攻撃上がり距離</a></li>
+            <li><a href="./parameter1.html#重さ">
+                <p class="text_JP">重さ</p>
+                <p class="text_EN">Weight</p>
+              </a></li>
+            <li><a href="./parameter1.html#シールドサイズ">
+                <p class="text_JP">シールドサイズ</p>
+                <p class="text_EN">Shield Size</p>
+              </a></li>
+            <li><a href="./parameter1.html#歩行加速量">
+                <p class="text_JP">歩行加速量</p>
+                <p class="text_EN">Walk Acceleration</p>
+              </a></li>
+            <li><a href="./parameter1.html#最大歩行速度">
+                <p class="text_JP">最大歩行速度</p>
+                <p class="text_EN">Max Walk Speed</p>
+              </a></li>
+            <li><a href="./parameter1.html#ダッシュ初速度">
+                <p class="text_JP">ダッシュ初速度</p>
+                <p class="text_EN">Initial Dash Speed</p>
+              </a></li>
+            <li><a href="./parameter1.html#ダッシュ加速量">
+                <p class="text_JP">ダッシュ加速量</p>
+                <p class="text_EN">Dash Acceleration</p>
+              </a></li>
+            <li><a href="./parameter1.html#最大ダッシュ速度">
+                <p class="text_JP">最大ダッシュ速度</p>
+                <p class="text_EN">Max Run Speed</p>
+              </a></li>
+            <li><a href="./parameter1.html#地上抵抗">
+                <p class="text_JP">地上抵抗</p>
+                <p class="text_EN">Traction</p>
+              </a></li>
+            <li><a href="./parameter1.html#空中加速">
+                <p class="text_JP">空中加速</p>
+                <p class="text_EN">Air Acceleration</p>
+              </a></li>
+            <li><a href="./parameter1.html#最大空中速度">
+                <p class="text_JP">最大空中速度</p>
+                <p class="text_EN">Max Air Speed</p>
+              </a></li>
+            <li><a href="./parameter1.html#空中抵抗">
+                <p class="text_JP">空中抵抗</p>
+                <p class="text_EN">Air Friction</p>
+              </a></li>
+            <li><a href="./parameter1.html#最大落下速度">
+                <p class="text_JP">最大落下速度</p>
+                <p class="text_EN">Max Fall Speed</p>
+              </a></li>
+            <li><a href="./parameter1.html#急降下速度">
+                <p class="text_JP">急降下速度</p>
+                <p class="text_EN">Fast Fall Speed</p>
+              </a></li>
+            <li><a href="./parameter1.html#重力">
+                <p class="text_JP">重力</p>
+                <p class="text_EN">Gravity</p>
+              </a></li>
+            <li><a href="./parameter1.html#大ジャンプ高さ">
+                <p class="text_JP">大ジャンプ高さ</p>
+                <p class="text_EN">Full Hop Height</p>
+              </a></li>
+            <li><a href="./parameter1.html#小ジャンプ高さ">
+                <p class="text_JP">小ジャンプ高さ</p>
+                <p class="text_EN">Short Hop Height</p>
+              </a></li>
+            <li><a href="./parameter1.html#空中ジャンプ高さ">
+                <p class="text_JP">空中ジャンプ高さ</p>
+                <p class="text_EN">Double Jump Height</p>
+              </a></li>
+            <li><a href="./parameter1.html#その場掴み長さ">
+                <p class="text_JP">その場掴み長さ</p>
+                <p class="text_EN">Standing Grab Range</p>
+              </a></li>
+            <li><a href="./parameter1.html#その場掴み発生">
+                <p class="text_JP">その場掴み発生</p>
+                <p class="text_EN">Standing Grab Start-Up</p>
+              </a></li>
+            <li><a href="./parameter1.html#崖掴まり姿勢">
+                <p class="text_JP">崖掴まり姿勢</p>
+                <p class="text_EN">Ledge Hang Posture</p>
+              </a></li>
+            <li><a href="./parameter1.html#回避上がり距離">
+                <p class="text_JP">回避上がり距離</p>
+                <p class="text_EN">Ledge Roll Distance</p>
+              </a></li>
+            <li><a href="./parameter1.html#攻撃上がり距離">
+                <p class="text_JP">攻撃上がり距離</p>
+                <p class="text_EN">Get-up Attack Distance</p>
+              </a></li>
           </ul>
         </li>
-        <li><span><a href="./parameter2.html#page_top">地上攻撃</a></span>
+        <li><span><a href="./parameter2.html#page_top">
+              <p class="text_JP">地上攻撃</p>
+              <p class="text_EN">Ground Attacks</p>
+            </a></span>
           <ul class="toc_child">
-            <li><a href="./parameter2.html#ダッシュ攻撃発生F">DA 発生F</a></li>
-            <li><a href="./parameter2.html#ダッシュ攻撃全体F">DA 全体F</a></li>
-            <li><a href="./parameter2.html#ダッシュ攻撃ダメージ">DA ダメージ</a></li>
-            <li><a href="./parameter2.html#上強発生F">上強発生F</a></li>
-            <li><a href="./parameter2.html#上強全体F">上強全体F</a></li>
-            <li><a href="./parameter2.html#上強ダメージ">上強ダメージ</a></li>
-            <li><a href="./parameter2.html#横強発生F">横強発生F</a></li>
-            <li><a href="./parameter2.html#横強全体F">横強全体F</a></li>
-            <li><a href="./parameter2.html#横強ダメージ">横強ダメージ</a></li>
-            <li><a href="./parameter2.html#下強発生F">下強発生F</a></li>
-            <li><a href="./parameter2.html#下強全体F">下強全体F</a></li>
-            <li><a href="./parameter2.html#下強ダメージ">下強ダメージ</a></li>
-            <li><a href="./parameter2.html#上スマッシュ発生F">上スマ発生F</a></li>
-            <li><a href="./parameter2.html#上スマッシュ全体F">上スマ全体F</a></li>
-            <li><a href="./parameter2.html#上スマッシュダメージ">上スマダメージ</a></li>
-            <li><a href="./parameter2.html#横スマッシュ発生F">横スマ発生F</a></li>
-            <li><a href="./parameter2.html#横スマッシュ全体F">横スマ全体F</a></li>
-            <li><a href="./parameter2.html#横スマッシュダメージ">横スマダメージ</a></li>
-            <li><a href="./parameter2.html#下スマッシュ発生F">下スマ発生F</a></li>
-            <li><a href="./parameter2.html#下スマッシュ全体F">下スマ全体F</a></li>
-            <li><a href="./parameter2.html#下スマッシュダメージ">下スマダメージ</a></li>
+            <li><a href="./parameter2.html#DA 発生F">
+                <p class="text_JP">DA 発生F</p>
+                <p class="text_EN">Dash Attack Start-up</p>
+              </a></li>
+            <li><a href="./parameter2.html#DA 全体F">
+                <p class="text_JP">DA 全体F</p>
+                <p class="text_EN">Dash Attack Total Frames </p>
+              </a></li>
+            <li><a href="./parameter2.html#DA ダメージ">
+                <p class="text_JP">DA ダメージ</p>
+                <p class="text_EN">Dash Attack Damage</p>
+              </a></li>
+            <li><a href="./parameter2.html#上強発生F">
+                <p class="text_JP">上強発生F</p>
+                <p class="text_EN">U-Tilt Start-up</p>
+              </a></li>
+            <li><a href="./parameter2.html#上強全体F">
+                <p class="text_JP">上強全体F</p>
+                <p class="text_EN">U-Tilt Total Frames </p>
+              </a></li>
+            <li><a href="./parameter2.html#上強ダメージ">
+                <p class="text_JP">上強ダメージ</p>
+                <p class="text_EN">U-Tilt Damage</p>
+              </a></li>
+            <li><a href="./parameter2.html#横強発生F">
+                <p class="text_JP">横強発生F</p>
+                <p class="text_EN">F-Tilt Start-up</p>
+              </a></li>
+            <li><a href="./parameter2.html#横強全体F">
+                <p class="text_JP">横強全体F</p>
+                <p class="text_EN">F-Tilt Total Frames </p>
+              </a></li>
+            <li><a href="./parameter2.html#横強ダメージ">
+                <p class="text_JP">横強ダメージ</p>
+                <p class="text_EN">F-Tilt Damage</p>
+              </a></li>
+            <li><a href="./parameter2.html#下強発生F">
+                <p class="text_JP">下強発生F</p>
+                <p class="text_EN">D-Tilt Start-up</p>
+              </a></li>
+            <li><a href="./parameter2.html#下強全体F">
+                <p class="text_JP">下強全体F</p>
+                <p class="text_EN">D-Tilt Total Frames </p>
+              </a></li>
+            <li><a href="./parameter2.html#下強ダメージ">
+                <p class="text_JP">下強ダメージ</p>
+                <p class="text_EN">D-Tilt Damage</p>
+              </a></li>
+            <li><a href="./parameter2.html#上スマ発生F">
+                <p class="text_JP">上スマ発生F</p>
+                <p class="text_EN">U-Smash Start-up</p>
+              </a></li>
+            <li><a href="./parameter2.html#上スマ全体F">
+                <p class="text_JP">上スマ全体F</p>
+                <p class="text_EN">U-Smash Total Frames </p>
+              </a></li>
+            <li><a href="./parameter2.html#上スマダメージ">
+                <p class="text_JP">上スマダメージ</p>
+                <p class="text_EN">U-Smash Damage</p>
+              </a></li>
+            <li><a href="./parameter2.html#横スマ発生F">
+                <p class="text_JP">横スマ発生F</p>
+                <p class="text_EN">F-Smash Start-up</p>
+              </a></li>
+            <li><a href="./parameter2.html#横スマ全体F">
+                <p class="text_JP">横スマ全体F</p>
+                <p class="text_EN">F-Smash Total Frames </p>
+              </a></li>
+            <li><a href="./parameter2.html#横スマダメージ">
+                <p class="text_JP">横スマダメージ</p>
+                <p class="text_EN">F-Smash Damage</p>
+              </a></li>
+            <li><a href="./parameter2.html#下スマ発生F">
+                <p class="text_JP">下スマ発生F</p>
+                <p class="text_EN">D-Smash Start-up</p>
+              </a></li>
+            <li><a href="./parameter2.html#下スマ全体F">
+                <p class="text_JP">下スマ全体F</p>
+                <p class="text_EN">D-Smash Total Frames </p>
+              </a></li>
+            <li><a href="./parameter2.html#下スマダメージ">
+                <p class="text_JP">下スマダメージ</p>
+                <p class="text_EN">D-Smash Damage</p>
+              </a></li>
           </ul>
         </li>
-        <li><span><a href="./parameter3.html#page_top">空中攻撃</a></span>
+        <li><span><a href="./parameter3.html#page_top">
+              <p class="text_JP">空中攻撃</p>
+              <p class="text_EN">Aerial Attacks</p>
+            </a></span>
           <ul class="toc_child">
-            <li><a href="./parameter3.html#空N発生F">空N発生F</a></li>
-            <li><a href="./parameter3.html#空N全体F">空N全体F</a></li>
-            <li><a href="./parameter3.html#空Nダメージ">空Nダメージ</a></li>
-            <li><a href="./parameter3.html#空N着地隙">空N着地隙</a></li>
-            <li><a href="./parameter3.html#空前発生F">空前発生F</a></li>
-            <li><a href="./parameter3.html#空前全体F">空前全体F</a></li>
-            <li><a href="./parameter3.html#空前ダメージ">空前ダメージ</a></li>
-            <li><a href="./parameter3.html#空前着地隙">空前着地隙</a></li>
-            <li><a href="./parameter3.html#空後発生F">空後発生F</a></li>
-            <li><a href="./parameter3.html#空後全体F">空後全体F</a></li>
-            <li><a href="./parameter3.html#空後ダメージ">空後ダメージ</a></li>
-            <li><a href="./parameter3.html#空後着地隙">空後着地隙</a></li>
-            <li><a href="./parameter3.html#空上発生F">空上発生F</a></li>
-            <li><a href="./parameter3.html#空上全体F">空上全体F</a></li>
-            <li><a href="./parameter3.html#空上ダメージ">空上ダメージ</a></li>
-            <li><a href="./parameter3.html#空上着地隙">空上着地隙</a></li>
-            <li><a href="./parameter3.html#空下発生F">空下発生F</a></li>
-            <li><a href="./parameter3.html#空下全体F">空下全体F</a></li>
-            <li><a href="./parameter3.html#空下ダメージ">空下ダメージ</a></li>
-            <li><a href="./parameter3.html#空下着地隙">空下着地隙</a></li>
+            <li><a href="./parameter3.html#空N発生F">
+                <p class="text_JP">空N発生F</p>
+                <p class="text_EN">N-Air Start-up</p>
+              </a></li>
+            <li><a href="./parameter3.html#NAIR">
+                <p class="text_JP">NAIR</p>
+                <p class="text_EN">N-Air Total Frames </p>
+              </a></li>
+            <li><a href="./parameter3.html#空Nダメージ">
+                <p class="text_JP">空Nダメージ</p>
+                <p class="text_EN">N-Air Damage</p>
+              </a></li>
+            <li><a href="./parameter3.html#空N着地隙">
+                <p class="text_JP">空N着地隙</p>
+                <p class="text_EN">N-Air Landing Lag</p>
+              </a></li>
+            <li><a href="./parameter3.html#空前発生F">
+                <p class="text_JP">空前発生F</p>
+                <p class="text_EN">F-Air Start-up</p>
+              </a></li>
+            <li><a href="./parameter3.html#空前全体F">
+                <p class="text_JP">空前全体F</p>
+                <p class="text_EN">F-Air Total Frames </p>
+              </a></li>
+            <li><a href="./parameter3.html#空前ダメージ">
+                <p class="text_JP">空前ダメージ</p>
+                <p class="text_EN">F-Air Damage</p>
+              </a></li>
+            <li><a href="./parameter3.html#空前着地隙">
+                <p class="text_JP">空前着地隙</p>
+                <p class="text_EN">F-Air Landing Lag</p>
+              </a></li>
+            <li><a href="./parameter3.html#空後発生F">
+                <p class="text_JP">空後発生F</p>
+                <p class="text_EN">B-Air Start-up</p>
+              </a></li>
+            <li><a href="./parameter3.html#空後全体F">
+                <p class="text_JP">空後全体F</p>
+                <p class="text_EN">B-Air Total Frames </p>
+              </a></li>
+            <li><a href="./parameter3.html#空後ダメージ">
+                <p class="text_JP">空後ダメージ</p>
+                <p class="text_EN">B-Air Damage</p>
+              </a></li>
+            <li><a href="./parameter3.html#空後着地隙">
+                <p class="text_JP">空後着地隙</p>
+                <p class="text_EN">B-Air Landing Lag</p>
+              </a></li>
+            <li><a href="./parameter3.html#空上発生F">
+                <p class="text_JP">空上発生F</p>
+                <p class="text_EN">U-Air Start-up</p>
+              </a></li>
+            <li><a href="./parameter3.html#空上全体F">
+                <p class="text_JP">空上全体F</p>
+                <p class="text_EN">U-Air Total Frames </p>
+              </a></li>
+            <li><a href="./parameter3.html#空上ダメージ">
+                <p class="text_JP">空上ダメージ</p>
+                <p class="text_EN">U-Air Damage</p>
+              </a></li>
+            <li><a href="./parameter3.html#空上着地隙">
+                <p class="text_JP">空上着地隙</p>
+                <p class="text_EN">U-Air Landing Lag</p>
+              </a></li>
+            <li><a href="./parameter3.html#空下発生F">
+                <p class="text_JP">空下発生F</p>
+                <p class="text_EN">D-Air Start-up</p>
+              </a></li>
+            <li><a href="./parameter3.html#空下全体F">
+                <p class="text_JP">空下全体F</p>
+                <p class="text_EN">D-Air Total Frames </p>
+              </a></li>
+            <li><a href="./parameter3.html#空下ダメージ">
+                <p class="text_JP">空下ダメージ</p>
+                <p class="text_EN">D-Air Damage</p>
+              </a></li>
+            <li><a href="./parameter3.html#空下着地隙">
+                <p class="text_JP">空下着地隙</p>
+                <p class="text_EN">D-Air Landing Lag</p>
+              </a></li>
           </ul>
         </li>
 
@@ -272,12 +478,14 @@
         </div>
       </div>
     </div>
+
     <!--表はここから-->
     <div class="section" id="重さ">
-      重さ
+      <p class="hide text_JP">重さ</p>
+      <p class="hide text_EN"> Weight </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -287,9 +495,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          重さ
-        </h2>
+        <h2 class="hide text_JP">重さ</h2>
+        <h2 class="hide text_EN"> Weight </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -603,10 +810,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="シールドサイズ">
-      シールドサイズ
+      <p class="hide text_JP">シールドサイズ</p>
+      <p class="hide text_EN"> Shield Size </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -616,9 +824,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          シールドサイズ
-        </h2>
+        <h2 class="hide text_JP">シールドサイズ</h2>
+        <h2 class="hide text_EN"> Shield Size </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -932,10 +1139,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="歩行加速量">
-      歩行加速量
+      <p class="hide text_JP">歩行加速量</p>
+      <p class="hide text_EN"> Walk Acceleration </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -945,9 +1153,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          歩行加速量
-        </h2>
+        <h2 class="hide text_JP">歩行加速量</h2>
+        <h2 class="hide text_EN"> Walk Acceleration </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -1261,10 +1468,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="最大歩行速度">
-      最大歩行速度
+      <p class="hide text_JP">最大歩行速度</p>
+      <p class="hide text_EN"> Max Walk Speed </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -1274,9 +1482,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          最大歩行速度
-        </h2>
+        <h2 class="hide text_JP">最大歩行速度</h2>
+        <h2 class="hide text_EN"> Max Walk Speed </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -1590,10 +1797,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="ダッシュ初速度">
-      ダッシュ初速度
+      <p class="hide text_JP">ダッシュ初速度</p>
+      <p class="hide text_EN"> Initial Dash Speed </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -1603,9 +1811,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          ダッシュ初速度
-        </h2>
+        <h2 class="hide text_JP">ダッシュ初速度</h2>
+        <h2 class="hide text_EN"> Initial Dash Speed </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -1919,10 +2126,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="ダッシュ加速量">
-      ダッシュ加速量
+      <p class="hide text_JP">ダッシュ加速量</p>
+      <p class="hide text_EN"> Dash Acceleration </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -1932,9 +2140,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          ダッシュ加速量
-        </h2>
+        <h2 class="hide text_JP">ダッシュ加速量</h2>
+        <h2 class="hide text_EN"> Dash Acceleration </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -2248,10 +2455,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="最大ダッシュ速度">
-      最大ダッシュ速度
+      <p class="hide text_JP">最大ダッシュ速度</p>
+      <p class="hide text_EN"> Max Run Speed </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -2261,9 +2469,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          最大ダッシュ速度
-        </h2>
+        <h2 class="hide text_JP">最大ダッシュ速度</h2>
+        <h2 class="hide text_EN"> Max Run Speed </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -2577,10 +2784,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="地上抵抗">
-      地上抵抗
+      <p class="hide text_JP">地上抵抗</p>
+      <p class="hide text_EN"> Traction </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -2590,9 +2798,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          地上抵抗
-        </h2>
+        <h2 class="hide text_JP">地上抵抗</h2>
+        <h2 class="hide text_EN"> Traction </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -2906,10 +3113,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="空中加速">
-      空中加速
+      <p class="hide text_JP">空中加速</p>
+      <p class="hide text_EN"> Air Acceleration </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -2919,9 +3127,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          空中加速
-        </h2>
+        <h2 class="hide text_JP">空中加速</h2>
+        <h2 class="hide text_EN"> Air Acceleration </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -3235,10 +3442,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="最大空中速度">
-      最大空中速度
+      <p class="hide text_JP">最大空中速度</p>
+      <p class="hide text_EN"> Max Air Speed </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -3248,9 +3456,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          最大空中速度
-        </h2>
+        <h2 class="hide text_JP">最大空中速度</h2>
+        <h2 class="hide text_EN"> Max Air Speed </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -3564,10 +3771,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="空中抵抗">
-      空中抵抗
+      <p class="hide text_JP">空中抵抗</p>
+      <p class="hide text_EN"> Air Friction </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -3577,9 +3785,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          空中抵抗
-        </h2>
+        <h2 class="hide text_JP">空中抵抗</h2>
+        <h2 class="hide text_EN"> Air Friction </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -3893,10 +4100,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="最大落下速度">
-      最大落下速度
+      <p class="hide text_JP">最大落下速度</p>
+      <p class="hide text_EN"> Max Fall Speed </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -3906,9 +4114,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          最大落下速度
-        </h2>
+        <h2 class="hide text_JP">最大落下速度</h2>
+        <h2 class="hide text_EN"> Max Fall Speed </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -4222,10 +4429,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="急降下速度">
-      急降下速度
+      <p class="hide text_JP">急降下速度</p>
+      <p class="hide text_EN"> Fast Fall Speed </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -4235,9 +4443,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          急降下速度
-        </h2>
+        <h2 class="hide text_JP">急降下速度</h2>
+        <h2 class="hide text_EN"> Fast Fall Speed </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -4551,10 +4758,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="重力">
-      重力
+      <p class="hide text_JP">重力</p>
+      <p class="hide text_EN"> Gravity </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -4564,9 +4772,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          重力
-        </h2>
+        <h2 class="hide text_JP">重力</h2>
+        <h2 class="hide text_EN"> Gravity </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -4880,10 +5087,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="大ジャンプ高さ">
-      大ジャンプ高さ
+      <p class="hide text_JP">大ジャンプ高さ</p>
+      <p class="hide text_EN"> Full Hop Height </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -4893,9 +5101,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          大ジャンプ高さ
-        </h2>
+        <h2 class="hide text_JP">大ジャンプ高さ</h2>
+        <h2 class="hide text_EN"> Full Hop Height </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -5209,10 +5416,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="小ジャンプ高さ">
-      小ジャンプ高さ
+      <p class="hide text_JP">小ジャンプ高さ</p>
+      <p class="hide text_EN"> Short Hop Height </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -5222,9 +5430,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          小ジャンプ高さ
-        </h2>
+        <h2 class="hide text_JP">小ジャンプ高さ</h2>
+        <h2 class="hide text_EN"> Short Hop Height </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -5538,10 +5745,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="空中ジャンプ高さ">
-      空中ジャンプ高さ
+      <p class="hide text_JP">空中ジャンプ高さ</p>
+      <p class="hide text_EN"> Double Jump Height </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -5551,9 +5759,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          空中ジャンプ高さ
-        </h2>
+        <h2 class="hide text_JP">空中ジャンプ高さ</h2>
+        <h2 class="hide text_EN"> Double Jump Height </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -5867,10 +6074,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="その場掴み長さ">
-      その場掴み長さ
+      <p class="hide text_JP">その場掴み長さ</p>
+      <p class="hide text_EN"> Standing Grab Range </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -5880,9 +6088,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          その場掴み長さ
-        </h2>
+        <h2 class="hide text_JP">その場掴み長さ</h2>
+        <h2 class="hide text_EN"> Standing Grab Range </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -6199,10 +6406,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="その場掴み発生">
-      その場掴み発生
+      <p class="hide text_JP">その場掴み発生</p>
+      <p class="hide text_EN"> Standing Grab Start-Up </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -6212,9 +6420,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          その場掴み発生
-        </h2>
+        <h2 class="hide text_JP">その場掴み発生</h2>
+        <h2 class="hide text_EN"> Standing Grab Start-Up </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -6529,10 +6736,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="崖掴まり姿勢">
-      崖掴まり姿勢
+      <p class="hide text_JP">崖掴まり姿勢</p>
+      <p class="hide text_EN"> Ledge Hang Posture </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -6542,9 +6750,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          崖掴まり姿勢
-        </h2>
+        <h2 class="hide text_JP">崖掴まり姿勢</h2>
+        <h2 class="hide text_EN"> Ledge Hang Posture </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -6859,10 +7066,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="回避上がり距離">
-      回避上がり距離
+      <p class="hide text_JP">回避上がり距離</p>
+      <p class="hide text_EN"> Ledge Roll Distance </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -6872,9 +7080,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          回避上がり距離
-        </h2>
+        <h2 class="hide text_JP">回避上がり距離</h2>
+        <h2 class="hide text_EN"> Ledge Roll Distance </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
@@ -7189,10 +7396,11 @@
           </svg>
         </button></a></div>
     <div class="section" id="攻撃上がり距離">
-      攻撃上がり距離
+      <p class="hide text_JP">攻撃上がり距離</p>
+      <p class="hide text_EN"> Get-up Attack Distance </p>
     </div>
     <div class="visible">
-      <p>タイトル&数値 ⇒　</p>
+      <p>タイトル & 数値 ⇒　</p>
       <button class="shown" onclick="visibleElements()">
         <p>表示</p>
       </button>
@@ -7202,9 +7410,8 @@
     </div>
     <div class="tierlist">
       <div class="MUTITLE">
-        <h2 class="hide">
-          攻撃上がり距離
-        </h2>
+        <h2 class="hide text_JP">攻撃上がり距離</h2>
+        <h2 class="hide text_EN"> Get-up Attack Distance </h2>
         <img src="../img/common/logo.png" alt="SSBU" />
       </div>
       <div class="MU_table">
