@@ -471,14 +471,6 @@ td img {
   rotate: calc(-90deg);
 }
 
-.language {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 20px auto;
-  width: 800px;
-}
-
 .button_EN {
   font-size: 12px;
   font-weight: bold;
@@ -490,6 +482,7 @@ td img {
   cursor: pointer;
   outline: none;
   padding: 5px 10px;
+  margin-right: 20px;
 }
 
 .button_EN:hover {
