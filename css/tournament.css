@@ -256,4 +256,16 @@ td {
     pointer-events: none;
   }
 
+  .blue {
+    color: rgb(53, 132, 206)
+  }
+
+  .red {
+    color: #e7412b;
+  }
+
+  .green {
+    color: rgb(66, 165, 79);
+  }
+
 }
