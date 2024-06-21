@@ -81,9 +81,6 @@ th {
   font-size: 15px;
   font-weight: bold;
   line-height: 1.5;
-  position: sticky;
-  top: 0;
-  left: 0;
 }
 
 td {
@@ -192,11 +189,11 @@ td {
 
   .example {
     width: 95%;
-    overflow-x: scroll;
+    overflow-x: overlay;
     margin: 0 auto;
   }
 
-  table {
+  .sorttbl {
     width: 100%;
     border-collapse: collapse;
     white-space: nowrap;
@@ -204,7 +201,7 @@ td {
   }
 
   th, td {
-    border: solid 0.2px white;
+    border: solid 0.5px white;
   }
 
   .fix1 {
@@ -212,8 +209,8 @@ td {
   }
 
   .fix2 {
-    top: 0;
     position: relative;
+    top: initial;
   }
 
   th {
@@ -223,6 +220,12 @@ td {
 
   td {
     font-size: 10px;
+  }
+
+  tr td:nth-child(2), .fix1 th:nth-child(2) {
+    position: sticky;
+    left: 0;
+    z-index: 2;
   }
 
   .Pagination {

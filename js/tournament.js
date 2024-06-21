@@ -1,4 +1,4 @@
-var moreNum = 100;
+var moreNum = 102;
 $('.sorttbl tr:nth-child(n + ' + (moreNum + 1) + ')').addClass('hidden');
 $('.button').on('click', function () {
   $('.sorttbl tr.hidden').slice(0, moreNum).removeClass('hidden');
