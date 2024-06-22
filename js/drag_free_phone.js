@@ -1,6 +1,4 @@
 let draggedItem = null;
-let startX = 0;
-let startY = 0;
 
 const nonImageAreas = document.querySelectorAll('.Fighter_box');
 const mappingAreas = document.querySelectorAll('.MU_result');
@@ -8,12 +6,11 @@ const draggableItems = document.querySelectorAll('.item');
 
 function handleTouchStart(e) {
   draggedItem = e.target;
-  draggedItem.style.position = 'absolute';
-  draggedItem.style.zIndex = 1000;
-  document.body.appendChild(draggedItem);
+  draggedItem.style.left = ''; // スタイルをリセット
+  draggedItem.style.top = ''; // スタイルをリセット
   let touch = e.touches[0];
-  startX = touch.clientX - draggedItem.getBoundingClientRect().left;
-  startY = touch.clientY - draggedItem.getBoundingClientRect().top;
+  startX = touch.clientX - parseFloat(draggedItem.style.left || 0);
+  startY = touch.clientY - parseFloat(draggedItem.style.top || 0);
   e.preventDefault();
 }
 
@@ -23,15 +20,16 @@ function handleTouchMove(e) {
   draggedItem.style.left = `${touch.clientX - startX}px`;
   draggedItem.style.top = `${touch.clientY - startY}px`;
   e.preventDefault();
+  e.target.classList.add('active');
 }
 
 function handleTouchEnd(e) {
+  e.target.classList.remove('active');
   if (!draggedItem) return;
 
-  let inserted = false;
+  mappingAreas.forEach((mappingArea) => {
+    const rect = mappingArea.getBoundingClientRect();
 
-  function insertInArea(area) {
-    const rect = area.getBoundingClientRect();
     let left = parseFloat(draggedItem.style.left) + startX;
     let top = parseFloat(draggedItem.style.top) + startY;
 
@@ -41,48 +39,89 @@ function handleTouchEnd(e) {
       top >= rect.top &&
       top < rect.bottom
     ) {
-      let closestItem = null;
-      let closestDistance = Infinity;
+      const touch = e.changedTouches[0];
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+      draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
+      draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
+      draggedItem.crossOrigin = 'anonymous';
 
-      Array.from(area.children).forEach((child) => {
-        if (child !== draggedItem) {
-          const childRect = child.getBoundingClientRect();
-          const childCenterY = (childRect.top + childRect.bottom) / 2;
-          const distance = Math.abs(childCenterY - top);
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestItem = child;
-          }
+      let closestChild = null;
+      let closestChildDistance = Infinity;
+
+      Array.from(mappingArea.children).forEach((child) => {
+        const childRect = child.getBoundingClientRect();
+        const childCenterX = (childRect.left + childRect.right) / 2;
+        const childCenterY = (childRect.top + childRect.bottom) / 2;
+        const distance = Math.hypot(
+          childCenterX - touch.clientX,
+          childCenterY - touch.clientY
+        );
+
+        if (distance < closestChildDistance) {
+          closestChild = child;
+          closestChildDistance = distance;
         }
       });
 
-      if (closestItem) {
-        const closestRect = closestItem.getBoundingClientRect();
-        const insertBefore = top < closestRect.top + closestRect.height / 2;
-        if (insertBefore) {
-          area.insertBefore(draggedItem, closestItem);
-        } else {
-          area.insertBefore(draggedItem, closestItem.nextSibling);
-        }
+      if (closestChild) {
+        mappingArea.insertBefore(draggedItem, closestChild);
       } else {
-        area.appendChild(draggedItem);
+        mappingArea.appendChild(draggedItem);
       }
 
-      inserted = true;
+      draggedItem.style.left = ''; // Reset style
+      draggedItem.style.top = ''; // Reset style
     }
-  }
+  });
 
-  mappingAreas.forEach(insertInArea);
-  if (!inserted) {
-    nonImageAreas.forEach(insertInArea);
-  }
+  nonImageAreas.forEach((nonImageArea) => {
+    const rect = nonImageArea.getBoundingClientRect();
 
-  // Reset style
-  draggedItem.style.left = '';
-  draggedItem.style.top = '';
-  draggedItem.style.position = '';
-  draggedItem.style.zIndex = '';
-  draggedItem = null;
+    let left = parseFloat(draggedItem.style.left) + startX;
+    let top = parseFloat(draggedItem.style.top) + startY;
+
+    if (
+      left >= rect.left &&
+      left < rect.right &&
+      top >= rect.top &&
+      top < rect.bottom
+    ) {
+      const touch = e.changedTouches[0];
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+      draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
+      draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
+      draggedItem.crossOrigin = 'anonymous';
+
+      let closestChild = null;
+      let closestChildDistance = Infinity;
+
+      Array.from(nonImageArea.children).forEach((child) => {
+        const childRect = child.getBoundingClientRect();
+        const childCenterX = (childRect.left + childRect.right) / 2;
+        const childCenterY = (childRect.top + childRect.bottom) / 2;
+        const distance = Math.hypot(
+          childCenterX - touch.clientX,
+          childCenterY - touch.clientY
+        );
+
+        if (distance < closestChildDistance) {
+          closestChild = child;
+          closestChildDistance = distance;
+        }
+      });
+
+      if (closestChild) {
+        nonImageArea.insertBefore(draggedItem, closestChild);
+      } else {
+        nonImageArea.appendChild(draggedItem);
+      }
+
+      draggedItem.style.left = ''; // Reset style
+      draggedItem.style.top = ''; // Reset style
+    }
+  });
 }
 
 draggableItems.forEach((item) => {
