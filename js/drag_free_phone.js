@@ -2,13 +2,9 @@ let draggedItem = null;
 
 const nonImageAreas = document.querySelectorAll('.Fighter_box');
 const mappingAreas = document.querySelectorAll('.MU_result');
-const draggableItemstext = document.querySelectorAll('.text_box');
+const draggableItems = document.querySelectorAll('.item');
 
-function handleTouchStartText(e) {
-  if (!e.target.classList.contains('text_box')) {
-    return;
-  }
-
+function handleTouchStart(e) {
   draggedItem = e.target;
   draggedItem.style.left = ''; // スタイルをリセット
   draggedItem.style.top = ''; // スタイルをリセット
@@ -80,7 +76,7 @@ function handleTouchEnd(e) {
   });
 }
 
-draggableItemstext.forEach((item) => {
+draggableItems.forEach((item) => {
   item.addEventListener('touchstart', handleTouchStart);
   item.addEventListener('touchmove', handleTouchMove);
   item.addEventListener('touchend', handleTouchEnd);
