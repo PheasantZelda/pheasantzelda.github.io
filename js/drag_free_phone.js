@@ -5,6 +5,21 @@ let startY = 0;
 const nonImageAreas = document.querySelectorAll('.Fighter_box');
 const mappingAreas = document.querySelectorAll('.MU_result');
 const draggableItems = document.querySelectorAll('.item');
+const draggableItemstext = document.querySelectorAll('.text_box');
+
+function handleTouchStartText(e) {
+  if (!e.target.classList.contains('text_box')) {
+    return;
+  }
+
+  draggedItem = e.target;
+  draggedItem.style.left = ''; // スタイルをリセット
+  draggedItem.style.top = ''; // スタイルをリセット
+  let touch = e.touches[0];
+  startX = touch.clientX - parseFloat(draggedItem.style.left || 0);
+  startY = touch.clientY - parseFloat(draggedItem.style.top || 0);
+  e.preventDefault();
+}
 
 function handleTouchStart(e) {
   draggedItem = e.target;
@@ -96,6 +111,12 @@ function handleTouchEnd(e) {
 
 draggableItems.forEach((item) => {
   item.addEventListener('touchstart', handleTouchStart);
+  item.addEventListener('touchmove', handleTouchMove);
+  item.addEventListener('touchend', handleTouchEnd);
+});
+
+draggableItemstext.forEach((item) => {
+  item.addEventListener('touchstart', handleTouchStartText);
   item.addEventListener('touchmove', handleTouchMove);
   item.addEventListener('touchend', handleTouchEnd);
 });
