@@ -10,7 +10,7 @@
   <meta name="description" content="利用規約">
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/common.css" rel="stylesheet">
+  <link href="./css/common_test.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="img/common/icon-192x192.png">
   <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.png">
   <link rel="icon" href="img/common/favicon.ico">
@@ -52,13 +52,32 @@
           <ul>
             <li><a href="./fighter.html">ファイタ一覧</a></li>
             <li><a href="./ranking.html">キャラランク</a></li>
-            <li><a href="./statstics.html">統計データ</a></li>
-            <li><a href="./capability.html">簡易不利相性</a></li>
-            <li><a href="./parameter.html">特性早見表</a></li>
             <li><a href="./rank_creater.html">Tier表メーカー</a></li>
-            <li><a href="./quiz.html">スマアナ検定</a></li>
-            <li><a href="./puzzle.html">スマブラパズル</a></li>
-            <li><a href="./record.html">歴代記録</a></li>
+            <li><a href="./record/ranking_rate.html">歴代最終レート</a></li>
+            <li><a href="./capability.html">簡易不利相性</a></li>
+            <li class="has-child"><a href="#">ツール</a>
+              <ul>
+                <li><a href="./quiz.html">スマアナ検定</a></li>
+                <li><a href="./puzzle.html">スマブラパズル</a></li>
+                <li class="has-child"><a href="#">特性早見表</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
+                  <ul>
+                    <li><a href="./parameter/parameter1.html">パラメータ</a></li>
+                    <li><a href="./parameter/parameter2.html">地上攻撃</a></li>
+                    <li><a href="./parameter/parameter3.html">空中攻撃</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-child"><a href="#">統計・過去データ</a>
+              <ul>
+                <li><a href="./statstics.html">統計データ</a></li>
+                <li><a href="./fighter_pick.html">キャラ使用率</a></li>
+                <li><a href="./record/tournament.html">オンライン大会</a></li>
+                <li><a href="./match_up.html">キャラ相性優劣</a></li>
+                <li><a href="./record/kagaribi9.html">篝火#9 新規勢記事</a></li>
+              </ul>
+
+            </li>
             <li><a href="./userpolicy.html">利用規約</a></li>
           </ul>
         </nav>
@@ -118,11 +137,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/toggle-menu_rev.js"></script>
+    <script src="js/drop_menu.js"></script>
   </main> <!--mainはここまで-->
 
   <!--footerはここから-->
   <footer class="footer">
-    <nav class="site-menu">
+    <!-- <nav class="site-menu">
       <ul>
         <li><a href="./fighter.html">ファイタ一覧</a></li>
         <li><a href="./ranking.html">キャラランク</a></li>
@@ -135,7 +155,7 @@
         <li><a href="./record.html">歴代記録</a></li>
         <li><a href="./userpolicy.html">利用規約</a></li>
       </ul>
-    </nav>
+    </nav> -->
     <a class="footer-logo" href="./index.html">
       <img src="./img/common/logo.png" alt="SSBU">
     </a>
