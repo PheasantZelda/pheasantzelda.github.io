@@ -127,7 +127,7 @@ nav ul li a {
 }
 
 nav ul li li a {
-  padding: 15px 25px;
+  padding: 20px 25px;
 }
 
 nav ul li a:hover {
@@ -154,7 +154,7 @@ nav ul ul li.has-child::before {
   content: '';
   position: absolute;
   left: 10px;
-  top: 17px;
+  top: 20px;
   width: 6px;
   height: 6px;
   border-top: 2px solid #fff;
@@ -240,6 +240,7 @@ nav li.has-child ul ul {
     /*JSのslidetoggleで表示させるため非表示に*/
     transition: none;
     /*JSで制御するためCSSのアニメーションを切る*/
+    z-index: 5;
   }
 
   nav ul li a {
@@ -249,7 +250,8 @@ nav li.has-child ul ul {
 
   nav li.has-child ul {
     /*絶対配置で位置を指定*/
-
+    top: 55px;
+    position: absolute;
     background: #292b2c;
 
   }
