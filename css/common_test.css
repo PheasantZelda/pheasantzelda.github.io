@@ -154,7 +154,7 @@ nav ul ul li.has-child::before {
   content: '';
   position: absolute;
   left: 10px;
-  top: 20px;
+  top: 25px;
   width: 6px;
   height: 6px;
   border-top: 2px solid #fff;
@@ -196,9 +196,9 @@ nav li.has-child ul li a {
   border-bottom: solid 1px rgba(255, 255, 255, 0.6);
 }
 
-nav li.has-child ul li:last-child>a {
+/* nav li.has-child ul li:last-child>a {
   border-bottom: none;
-}
+} */
 
 nav li.has-child ul li a:hover,
 nav li.has-child ul li a:active {
