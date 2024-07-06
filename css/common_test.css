@@ -244,8 +244,12 @@ nav li.has-child ul ul {
   }
 
   nav ul li a {
-    padding: 20px 10px;
+    padding: 15px 10px;
     border-bottom: 1px dotted #ccc;
+  }
+
+  nav ul li li a {
+    padding: 15px 10px;
   }
 
   nav li.has-child ul {
@@ -260,15 +264,18 @@ nav li.has-child ul ul {
   /*矢印の位置と向き*/
 
   nav ul li.has-child::before {
+    top: 15px;
     left: 20%;
   }
 
   nav ul ul li.has-child::before {
+    top: 15px;
     transform: rotate(135deg);
     left: 20%;
   }
 
   nav ul li.has-child.active::before {
+    top: 15px;
     transform: rotate(-45deg);
   }
 
