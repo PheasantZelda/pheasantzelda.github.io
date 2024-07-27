@@ -86,12 +86,20 @@
   background: linear-gradient(90deg, #ffa300, #ede404);
 }
 
+.MU_title_bibiyuuri {
+  background: linear-gradient(90deg, #1bd415, #079961);
+}
+
 .MU_title_gobu {
-  background: linear-gradient(270deg, #c4e126, #39f68f);
+  background: linear-gradient(90deg, #c4e126, #6beba5);
 }
 
 .MU_title_bihuri {
   background: linear-gradient(270deg, #1cddeb, #3782f6);
+}
+
+.MU_title_bibihuri {
+  background: linear-gradient(270deg, #197fff, #262fff);
 }
 
 .MU_title_huri {

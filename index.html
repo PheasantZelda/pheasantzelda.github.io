@@ -66,36 +66,53 @@
   </script>
   <!--headerはここから-->
   <header class="header">
-    <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
-    <div class="header-inner">
-      <!--./index.htmlでトップページを指す-->
-      <a class="header-logo" href="./index.html">
-        <img src="./img/common/logo.png" alt="SSBU">
-      </a>
-      <button class="header__hamburger hamburger" id="js-hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="header-site-menu">
-        <nav class="site-menu">
-          <ul>
-            <li><a href="./fighter.html">ファイタ一覧</a></li>
-            <li><a href="./ranking.html">キャラランク</a></li>
-            <li><a href="./statstics.html">統計データ</a></li>
-            <li><a href="./capability.html">簡易不利相性</a></li>
-            <li><a href="./parameter.html">特性早見表</a></li>
-            <li><a href="./rank_creater.html">Tier表メーカー</a></li>
-            <li><a href="./quiz.html">スマアナ検定</a></li>
-            <li><a href="./puzzle.html">スマブラパズル</a></li>
-            <li><a href="./record.html">歴代記録</a></li>
-            <li><a href="./userpolicy.html">利用規約</a></li>
-          </ul>
-        </nav>
-      </div>
+  <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
+  <div class="header-inner">
+    <!--./index.htmlでトップページを指す-->
+    <a class="header-logo" href="./index.html">
+      <img src="./img/common/logo.png" alt="SSBU">
+    </a>
+    <button class="header__hamburger hamburger" id="js-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="header-site-menu">
+      <nav class="site-menu">
+        <ul>
+          <li><a href="./fighter.html">ファイタ一覧</a></li>
+          <li><a href="./ranking.html">キャラランク</a></li>
+          <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+          <li><a href="./record/ranking_rate.html">歴代最終レート</a></li>
+          <li><a href="./capability.html">簡易不利相性</a></li>
+          <li class="has-child"><a href="#">ツール</a>
+            <ul>
+              <li><a href="./quiz.html">スマアナ検定</a></li>
+              <li><a href="./puzzle.html">スマブラパズル</a></li>
+              <li class="has-child"><a href="./parameter.html">特性早見表</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
+                <ul>
+                  <li><a href="./parameter/parameter1.html">パラメータ</a></li>
+                  <li><a href="./parameter/parameter2.html">地上攻撃</a></li>
+                  <li><a href="./parameter/parameter3.html">空中攻撃</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child"><a href="#">統計・過去データ</a>
+            <ul>
+              <li><a href="./statstics.html">統計データ</a></li>
+              <li><a href="./fighter_pick.html">キャラ使用率</a></li>
+              <li><a href="./record/tournament.html">オンライン大会</a></li>
+              <li><a href="./match_up.html">キャラ相性優劣</a></li>
+              <li><a href="./record/kagaribi9.html">篝火#9 新規勢記事</a></li>
+            </ul>
+          </li>
+          <li><a href="./userpolicy.html">利用規約</a></li>
+        </ul>
+      </nav>
     </div>
-
-  </header>
+  </div>
+</header>
   <!--headerはここまで-->
 
   <!--mainはここから-->
@@ -104,12 +121,12 @@
     <div class="release">
       <div class="scroll">
         <div class="news">
-          <p>2024/05/31 に <span>ver10.0.2にアップテート</span>しました！
-            Tier表メーカーがパワーアップ！選択ボタンでランク付けするコンテンツが増えました。ぜひお試しを！</p>
-          <p>2024/05/31 に <span>ver10.0.2にアップテート</span>しました！
-            Tier表メーカーがパワーアップ！選択ボタンでランク付けするコンテンツが増えました。ぜひお試しを！</p>
-          <p>2024/05/31 に <span>ver10.0.2にアップテート</span>しました！
-            Tier表メーカーがパワーアップ！選択ボタンでランク付けするコンテンツが増えました。ぜひお試しを！</p>
+          <p>2024/07/26 に <span>ver11.0.0にアップテート</span>しました！
+            無表情さん企画の上位勢逆引き相性表を掲載！また、ヘッダーのUIを変更しました！</p>
+          <p>2024/07/26 に <span>ver11.0.0にアップテート</span>しました！
+            無表情さん企画の上位勢逆引き相性表を掲載！また、ヘッダーのUIを変更しました！</p>
+          <p>2024/07/26 に <span>ver11.0.0にアップテート</span>しました！
+            無表情さん企画の上位勢逆引き相性表を掲載！また、ヘッダーのUIを変更しました！</p>
         </div>
       </div>
     </div>
@@ -145,7 +162,7 @@
         「<a href="https://smashmate.net/">スマメイト*</a>」の対戦結果を元にファイター毎の勝率からキャラランクや統計データをまとめて掲載しているサイトになります。
         スマブラSPでは他にも多くの方がキャラランクや相性表, サブ補完適性を作成されていますが、当サイトはオンライン対戦の結果を勝敗数から定量的にまとめることに主眼を置いています。
         扱っているデータについては皆様にも数値として見ていただけるように詳細の結果も掲載していますので、ぜひご覧ください。
-        これまで集計したデータは、24 年 4 月 時点で 15-27 期 (サブ期も含む) の結果、およそ 840 万対戦の結果をまとめています。
+        これまで集計したデータは、24 年 7 月 時点で 15-28 期 (サブ期も含む) の結果、およそ 940 万対戦の結果をまとめています。
         各期が終了次第、更新しますので随時ご確認ください。
         <br>　*スマメイトとは・・・<a href="https://twitter.com/@noticoco">coco様</a>
         (旧のちょう様)が運営されているオンライン上で気軽にスマブラ対戦募集やレーティング、大会開催ができるWebサイト
@@ -276,8 +293,8 @@
     </script>
     <div class="section">お問い合わせ</div>
     <div class="explain">
-      <p>　当サイトのお問い合わせについては、サイト専用<a href="https://twitter.com/PheasantSmash">Twitter DM</a>、あるいは管理人の<a
-          href="https://twitter.com/pheasant_SSBU">Twitter DM</a>からお願いいたします。
+      <p>　当サイトのお問い合わせについては、サイト専用<a href="https://twitter.com/PheasantSmash">X DM</a>、あるいは管理人の<a
+          href="https://twitter.com/pheasant_SSBU">X DM</a>からお願いいたします。
         サイトの可読性や掲載してほしい情報などありましたら、今後の運営への参考にさせていただきますので、ぜひご連絡ください。
       </p>
     </div>
@@ -285,7 +302,7 @@
     <div class="section">管理人</div>
     <div class="explain">
       <p>　このサイトを運営しています「Pheasant/フェザント」と申します。
-        今回、初めて独学でサイト作成をしており、表示に不備や誤りなどありましたら、TwitterのDMからお問い合わせください。
+        今回、初めて独学でサイト作成をしており、表示に不備や誤りなどありましたら、XのDMからお問い合わせください。
         スマブラではゼルダをメインファイタとしており、YouTubeでの配信や動画作成を行っています。
         ぜひ興味ありましたら、チャンネル登録やフォローお願いします。
       </p>
@@ -301,9 +318,9 @@
       </li>
       <li>
         <a href="https://twitter.com/pheasant_SSBU">
-          <img src="./img/common/twitter.png" alt="twitterアイコン">
+          <img src="./img/common/twitter.png" alt="Xアイコン">
           <dl>
-            <dt>twitter</dt>
+            <dt>X</dt>
           </dl>
         </a>
       </li>
@@ -333,21 +350,7 @@
   <!--mainはここまで-->
 
   <!--footerはここから-->
-  <footer class="footer">
-    <nav class="site-menu">
-      <ul>
-        <li><a href="./fighter.html">ファイタ一覧</a></li>
-        <li><a href="./ranking.html">キャラランク</a></li>
-        <li><a href="./statstics.html">統計データ</a></li>
-        <li><a href="./capability.html">簡易不利相性</a></li>
-        <li><a href="./parameter.html">特性早見表</a></li>
-        <li><a href="./rank_creater.html">Tier表メーカー</a></li>
-        <li><a href="./quiz.html">スマアナ検定</a></li>
-        <li><a href="./puzzle.html">スマブラパズル</a></li>
-        <li><a href="./record.html">歴代記録</a></li>
-        <li><a href="./userpolicy.html">利用規約</a></li>
-      </ul>
-    </nav>
+      <footer class="footer">
     <a class="footer-logo" href="./index.html">
       <img src="./img/common/logo.png" alt="SSBU">
     </a>
@@ -355,7 +358,7 @@
     <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
         当サイトは個人が運営する非公式のWebサービスです。<br>
         任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-    <p class="copyright">ver10.0.2 2024/05/31<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
+    <p class="copyright">ver11.0.0 2024/07/26<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
   </footer>
   <!--footerはここまで-->
 </body>

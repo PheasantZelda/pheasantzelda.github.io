@@ -133,8 +133,7 @@ function setRandomBackground() {
   var randomImage = backgrounds[randomIndex];
   var elements = document.querySelectorAll('.panelGraphic');
   elements.forEach(function (element) {
-    element.style.backgroundImage =
-      "url('../img/fighter3/" + randomImage + "')";
+    element.style.backgroundImage = "url('./img/fighter3/" + randomImage + "')";
   });
 }
 // ページのロードが完了したら全ての画像にランダムな背景画像を設定する

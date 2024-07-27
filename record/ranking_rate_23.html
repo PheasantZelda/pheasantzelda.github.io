@@ -46,34 +46,53 @@
   <!--staticsとranking_rateはcsv.js内にloadingの記述を記載-->
   <!--headerはここから-->
   <header class="header">
-    <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
-    <div class="header-inner">
-      <a class="header-logo" href="../index.html">
-        <img src="../img/common/logo.png" alt="SSBU" />
-      </a>
-      <button class="header__hamburger hamburger" id="js-hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="header-site-menu">
-        <nav class="site-menu">
-          <ul>
-            <li><a href="../fighter.html">ファイタ一覧</a></li>
-            <li><a href="../ranking.html">キャラランク</a></li>
-            <li><a href="../statstics.html">統計データ</a></li>
-            <li><a href="../capability.html">簡易不利相性</a></li>
-            <li><a href="../parameter.html">特性早見表</a></li>
-            <li><a href="../rank_creater.html">Tier表メーカー</a></li>
-            <li><a href="../quiz.html">スマアナ検定</a></li>
-            <li><a href="../puzzle.html">スマブラパズル</a></li>
-            <li><a href="../record.html">歴代記録</a></li>
-            <li><a href="../userpolicy.html">利用規約</a></li>
-          </ul>
-        </nav>
-      </div>
+  <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
+  <div class="header-inner">
+    <!--./index.htmlでトップページを指す-->
+    <a class="header-logo" href="../index.html">
+      <img src="../img/common/logo.png" alt="SSBU">
+    </a>
+    <button class="header__hamburger hamburger" id="js-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="header-site-menu">
+      <nav class="site-menu">
+        <ul>
+          <li><a href="../fighter.html">ファイタ一覧</a></li>
+          <li><a href="../ranking.html">キャラランク</a></li>
+          <li><a href="../rank_creater.html">Tier表メーカー</a></li>
+          <li><a href="../record/ranking_rate.html">歴代最終レート</a></li>
+          <li><a href="../capability.html">簡易不利相性</a></li>
+          <li class="has-child"><a href="#">ツール</a>
+            <ul>
+              <li><a href="../quiz.html">スマアナ検定</a></li>
+              <li><a href="../puzzle.html">スマブラパズル</a></li>
+              <li class="has-child"><a href="../parameter.html">特性早見表</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
+                <ul>
+                  <li><a href="../parameter/parameter1.html">パラメータ</a></li>
+                  <li><a href="../parameter/parameter2.html">地上攻撃</a></li>
+                  <li><a href="../parameter/parameter3.html">空中攻撃</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child"><a href="#">統計・過去データ</a>
+            <ul>
+              <li><a href="../statstics.html">統計データ</a></li>
+              <li><a href="../fighter_pick.html">キャラ使用率</a></li>
+              <li><a href="../record/tournament.html">オンライン大会</a></li>
+              <li><a href="../match_up.html">キャラ相性優劣</a></li>
+              <li><a href="../record/kagaribi9.html">篝火#9 新規勢記事</a></li>
+            </ul>
+          </li>
+          <li><a href="../userpolicy.html">利用規約</a></li>
+        </ul>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
   <!--headerはここまで-->
 
   <!--mainはここから-->
@@ -987,33 +1006,15 @@
   </main> <!--mainはここまで-->
 
   <!--footerはここから-->
-  <footer class="footer">
-    <nav class="site-menu">
-      <ul>
-        <li><a href="../fighter.html">ファイタ一覧</a></li>
-        <li><a href="../ranking.html">キャラランク</a></li>
-        <li><a href="../statstics.html">統計データ</a></li>
-        <li><a href="../capability.html">簡易不利相性</a></li>
-        <li><a href="../parameter.html">特性早見表</a></li>
-        <li><a href="../rank_creater.html">Tier表メーカー</a></li>
-        <li><a href="../quiz.html">スマアナ検定</a></li>
-        <li><a href="../puzzle.html">スマブラパズル</a></li>
-        <li><a href="../record.html">歴代記録</a></li>
-        <li><a href="../userpolicy.html">利用規約</a></li>
-      </ul>
-    </nav>
+      <footer class="footer">
     <a class="footer-logo" href="../index.html">
-      <img src="../img/common/logo.png" alt="SSBU" />
+      <img src="../img/common/logo.png" alt="SSBU">
     </a>
     <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
-    <p class="footer-time">
-      <small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br />
-        当サイトは個人が運営する非公式のWebサービスです。<br />
-        任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small>
-    </p>
-    <p class="copyright">
-      ver6.0.0 2023/05/01<br />　<br /><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small>
-    </p>
+    <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
+        当サイトは個人が運営する非公式のWebサービスです。<br>
+        任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
+    <p class="copyright">ver10.0.0 2024/04/05<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
   </footer>
   <!--footerはここまで-->
 </body>
