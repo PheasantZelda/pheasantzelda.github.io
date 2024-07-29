@@ -164,7 +164,7 @@ html {
 .example table {
   border-collapse: separate;
   margin: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border-spacing: 0;
   margin-left: auto;
   margin-right: auto;
@@ -216,7 +216,7 @@ td img {
     max-width: 98%;
     padding: 10px 0px;
     margin-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
   }
 
   .tierlist h2 {
@@ -309,6 +309,10 @@ td img {
 
   .sorttbl p {
     font-size: 0%;
+  }
+
+  .example table {
+    margin-bottom: 5px;
   }
 
   table {
