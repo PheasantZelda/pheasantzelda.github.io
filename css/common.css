@@ -21,7 +21,7 @@ a {
 }
 
 body {
-  font-family: "Montserrat", "sans-serif";
+  font-family: "sans-serif";
   font-size: 16px;
   color: white;
   line-height: 1;
@@ -603,8 +603,7 @@ nav li.has-child ul ul {
   } */
 
   .site-menu ul li a {
-    /* font-family: Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif; */
-    font-family: "Montserrat", "sans-serif";
+    font-family: Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
   }
 
   .header {
