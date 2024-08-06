@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resizeObserver = new ResizeObserver((entries) => {
     entries.forEach((entry) => {
       // 高さが900pxを超えた場合、tierlist_highクラスを追加
-      if (entry.contentRect.height > 800) {
+      if (entry.contentRect.height > 730) {
         entry.target.classList.add('tierlist_high');
       } else {
         entry.target.classList.remove('tierlist_high');
