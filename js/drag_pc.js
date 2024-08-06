@@ -32,3 +32,25 @@ window.addEventListener('DOMContentLoaded', () => {
     box2.classList.remove('over');
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 監視対象の要素を取得
+  const tierListElements = document.querySelectorAll('.tierlist');
+
+  // 高さを監視するためのResizeObserverを作成
+  const resizeObserver = new ResizeObserver((entries) => {
+    entries.forEach((entry) => {
+      // 高さが900pxを超えた場合、tierlist_highクラスを追加
+      if (entry.contentRect.height > 800) {
+        entry.target.classList.add('tierlist_high');
+      } else {
+        entry.target.classList.remove('tierlist_high');
+      }
+    });
+  });
+
+  // すべてのtierlist要素に対してResizeObserverを適用
+  tierListElements.forEach((element) => {
+    resizeObserver.observe(element);
+  });
+});
