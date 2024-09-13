@@ -18,7 +18,7 @@ body {
 main {
   max-width: 1440px;
   margin: 0 auto;
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  /* font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体"; */
 }
 
 /* Common */
