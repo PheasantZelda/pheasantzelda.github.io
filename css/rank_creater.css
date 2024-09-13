@@ -539,7 +539,7 @@ select::-ms-expand {
   }
 
   .MU_table p {
-    font-size: 8px;
+    font-size: clamp(4px, 1.8vw, 24px);
     line-height: 1.5;
     display: table-cell;
     vertical-align: middle;

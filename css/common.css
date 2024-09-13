@@ -408,7 +408,7 @@ nav li.has-child ul ul {
 /*Footer関係*/
 .footer {
   color: white;
-  background-color: #181a1b;
+  /* background-color: #181a1b; */
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;

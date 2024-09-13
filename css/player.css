@@ -61,7 +61,8 @@ main {
 }
 
 .dashbord-player__img {
-  width: 240px;
+  height: 250px;
+
 }
 
 /* Graph */
@@ -239,6 +240,10 @@ main {
   background: linear-gradient(90deg, #4d3eff, #8833ff);
 }
 
+.MU_title_NA {
+  background: linear-gradient(90deg, #333536, #504c4c);
+}
+
 .MU_result {
   width: calc(683%/1000*100);
   background-color: #333536;
@@ -256,18 +261,27 @@ main {
   opacity: 0.8;
 }
 
+.first__title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.first__subtitle {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
 
 @media (max-width: 840px) {
 
   .tierlist {
-    max-width: 98%;
-    padding: 10px 0px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    max-width: 105%;
+    padding: 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .tierlist h2 {
-    font-size: 12px;
+    font-size: 30px;
   }
 
   .tierlist h2::after {
@@ -278,6 +292,7 @@ main {
 
   .MUTITLE {
     padding: 1% 0;
+    margin-bottom: 0;
   }
 
   .MUTITLE img {
@@ -288,7 +303,7 @@ main {
 
   .MU_table {
     max-width: 95%;
-    margin-top: 10px;
+    margin-left: 2%;
   }
 
   .MU_box {
@@ -456,7 +471,7 @@ input[name="tab_item"] {
 }
 
 .bar-graph__img {
-  width: 16%;
+  width: 50px;
   padding-right: 16px;
   padding-bottom: 4px;
   z-index: 10;
@@ -578,6 +593,10 @@ td img {
 }
 
 @media (max-width: 840px) {
+  body {
+    padding: 0 4px;
+  }
+
   .dashbord-data {
     width: 100%;
   }
@@ -617,7 +636,7 @@ td img {
 
   table {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
@@ -639,4 +658,77 @@ td img {
     width: 30px;
   }
 
+  .dashbord__first {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .dashbord-back {
+    width: 100%;
+    padding: 16px 4px;
+  }
+
+  .dashbord__title {
+    margin-bottom: 8px;
+  }
+
+  .dashbord-player__img {
+    height: 250px;
+  }
+
+  .weak__img {
+    width: 50%;
+  }
+
+  .dashbord-graph, .dashbord-weak, .dashbord-detail {
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .dashbord-graph__inner, .dashbord__second, .dashbord__third {
+    flex-direction: column;
+  }
+
+  .dashbord-graph__chart:not(:first-child) {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+
+  .dashbord-mu {
+    margin-right: 0;
+  }
+
+  .tab_content {
+    padding: 8px 16px
+  }
+
+  .tab_item {
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .detail-inner {
+    padding: 0 16px;
+  }
+
+  .bar-graph {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+  }
+
+  .bar-graph__img {
+    width: 14%;
+  }
+
+  .bar-graph-wrap {
+    width: 100%;
+  }
+
+  .first__title {
+    margin-top: 80px;
+  }
+
+  .first__subtitle {}
 }
