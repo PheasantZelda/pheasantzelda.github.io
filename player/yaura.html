@@ -20,7 +20,6 @@
   <meta name="Description" content="ヤウラのスマメイトの対戦結果から分析した、対戦戦績、最高レートを紹介しています。対策の優先度やサブ補完適正を提案する">
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../js/toggle-menu.js"></script>
   <script src="../js/csv.js"></script>
   <link href="../css/common.css" rel="stylesheet">
   <link href="../css/player.css" rel="stylesheet">
@@ -48,7 +47,11 @@
       <a class="header-logo" href="../index.html">
         <img src="../img/common/logo.png" alt="SSBU">
       </a>
-      <button class="toggle-menu-button"></button>
+      <button class="header__hamburger hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="header-site-menu">
         <nav class="site-menu">
           <ul>
@@ -2261,6 +2264,8 @@
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/toggle-menu_rev.js"></script>
   </main>
   <!--footerはここから-->
   <footer class="footer">
