@@ -669,7 +669,12 @@ td img {
   }
 
   .dashbord__title {
+    font-size: 24px;
     margin-bottom: 8px;
+  }
+
+  .redItem {
+    font-size: 32px;
   }
 
   .dashbord-player__img {
