@@ -84,7 +84,10 @@ function loadTierList() {
       }
     });
 
-    // コントロール
+    ul.appendChild(liTitle);
+    ul.appendChild(liResult);
+
+    // ボタン群をMU_box内に追加
     const liCtrl = document.createElement('li');
     liCtrl.className = 'MU_box_controls';
     liCtrl.innerHTML = `
@@ -92,9 +95,6 @@ function loadTierList() {
       <button class="remove-mu-box">－</button>
       <button class="mu-box-settings" title="設定">⚙️</button>
     `;
-
-    ul.appendChild(liTitle);
-    ul.appendChild(liResult);
     ul.appendChild(liCtrl);
 
     table.appendChild(ul);
