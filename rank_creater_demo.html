@@ -34,7 +34,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
-  <script language="JavaScript">
+  <!-- <script language="JavaScript">
     //初期設定
     $(function () {
       //HTML画像化イベント登録
@@ -46,13 +46,20 @@
       });
     });
     function html2image(html) {
-      html2canvas(document.querySelector("#canvas-box")).then((canvas) => {
+      // キャプチャ前に高さを固定
+      const box = document.querySelector("#canvas-box");
+      const prevHeight = box.style.height;
+      box.style.height = box.scrollHeight + "px";
+
+      html2canvas(box).then((canvas) => {
         var base64 = canvas.toDataURL("image/png");
-        //$('#image').attr("src", base64);		//画面に画像表示
         $("#download").attr("href", base64);
         $("#download").attr("download", "TIER-LIST");
-        $("#download")[0].click(); //自動ダウンロード
+        $("#download")[0].click();
+        // 元に戻す
+        box.style.height = prevHeight;
       });
+
       html2canvas(document.querySelector("#canvas-box_phone")).then(
         (canvas) => {
           var base64 = canvas.toDataURL("image/png");
@@ -63,7 +70,7 @@
         }
       );
     }
-  </script>
+  </script> -->
   <!--画像を移動する-->
   <!-- <script>
     //◆◆◆ ドラッグ開始時処理 ◆◆◆
@@ -175,19 +182,19 @@
         また、フォントと背景は上部のカラーバーからカスタマイズすることができます。
         行の順番はドラッグ＆ドロップで移動可能です。 作成した画像はSAVEボタンからダウンロード可能です。
         リセットボタンを押すと一度作成したものを初期化することができます。
-        <br />　※ BG : Background (背景)
+        <!-- <br />　※ BG : Background (背景) -->
       </p>
     </div>
-    <div class="center_phone">
+    <!-- <div class="center_phone">
       <button class="Save" type="button" id="exec_phone" name="exec_phone">
         Save or Download
       </button>
       <button class="Reset" type="button">
         <a href="./rank_creater.html">Reset</a>
       </button>
-    </div>
-    <div class="pc_ver">
-      <!-- <div class="button_group">
+    </div> -->
+    <!-- <div class="pc_ver"> -->
+    <!-- <div class="button_group">
         <ul class="button_container">
           <li class="button_list">
             <p>ROW ADD/DELETE</p>
@@ -254,7 +261,7 @@
           </li>
         </ul>
       </div> -->
-      <!-- <div class="color_group">
+    <!-- <div class="color_group">
         <ul class="color_container">
           <li class="color_list">
             <p>FONT COLOR<br />BG1 COLOR<br />BG2 COLOR</p>
@@ -311,92 +318,100 @@
           </li>
         </ul>
       </div> -->
-      <div class="tierlist-flex-wrap">
-        <div class="tierlist" id="canvas-box" name="canvas-box">
-          <div class="MUTITLE">
-            <h2 contenteditable="plaintext-only">MU Table ✎</h2>
-            <img src="./img/common/logo.png" alt="SSBU" />
-          </div>
+    <div class="tierlist-action">
+      <button class="tierlist-action-btn" onclick="saveTierList()">一時保存</button>
+      <button class="tierlist-action-btn" onclick="loadTierList()">復元</button>
+      <label class="custom-file-label">
+        アイテム選択
+        <input type="file" id="customImageInput" accept="image/*" multiple style="display:none;">
+      </label>
+    </div>
+    <div class="tierlist-flex-wrap">
+      <div class="tierlist" id="canvas-box" name="canvas-box">
+        <div class="MUTITLE">
+          <h2 contenteditable="plaintext-only">MU Table ✎</h2>
+          <img src="./img/common/logo.png" alt="SSBU" />
+        </div>
 
-          <div class="MU_table">
-            <!-- 各MU_box（行） -->
-            <ul class="MU_box MU_box1" id="test1" draggable="true">
-              <li class="MU_title" data-bg-area="1" id="STier1"
-                style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
-                <p contenteditable="plaintext-only">S Tier</p>
-              </li>
-              <li class="MU_result box"></li>
-              <li class="MU_box_controls">
-                <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button>
-                <button class="mu-box-settings" title="設定">⚙️</button>
-              </li>
-            </ul>
+        <div class="MU_table">
+          <!-- 各MU_box（行） -->
+          <ul class="MU_box MU_box1" id="test1" draggable="true">
+            <li class="MU_title" data-bg-area="1" id="STier1"
+              style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
+              <p contenteditable="plaintext-only">S Tier</p>
+            </li>
+            <li class="MU_result box"></li>
+            <li class="MU_box_controls">
+              <!-- <button class="add-mu-box">＋</button>
+                <button class="remove-mu-box">－</button> -->
+              <button class="mu-box-settings" title="設定">⚙️</button>
+            </li>
+          </ul>
 
-            <ul class="MU_box MU_box2" id="test2" draggable="true">
-              <li class="MU_title" data-bg-area="2" id="ATier1"
-                style="background: linear-gradient(90deg, #ffa300, #ede404)">
-                <p contenteditable="plaintext-only">A Tier</p>
-              </li>
-              <li class="MU_result box"></li>
-              <li class="MU_box_controls">
-                <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button>
-                <button class="mu-box-settings" title="設定">⚙️</button>
-              </li>
-            </ul>
-            <ul class="MU_box MU_box3" id="test3" draggable="true">
-              <li class="MU_title" data-bg-area="3" id="BTier1"
-                style="background: linear-gradient(90deg, #39f68f, #c4e126)">
-                <p contenteditable="plaintext-only">B Tier</p>
-              </li>
-              <li class="MU_result box"></li>
-              <li class="MU_box_controls">
-                <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button>
-                <button class="mu-box-settings" title="設定">⚙️</button>
-              </li>
-            </ul>
-            <ul class="MU_box MU_box4" id="test4" draggable="true">
-              <li class="MU_title" data-bg-area="4" id="CTier1"
-                style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
-                <p contenteditable="plaintext-only">C Tier</p>
-              </li>
-              <li class="MU_result box"></li>
-              <li class="MU_box_controls">
-                <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button>
-                <button class="mu-box-settings" title="設定">⚙️</button>
-              </li>
-            </ul>
-            <ul class="MU_box MU_box5" id="test5" draggable="true">
-              <li class="MU_title" data-bg-area="5" id="DTier1"
-                style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
-                <p contenteditable="plaintext-only">D Tier</p>
-              </li>
-              <li class="MU_result box"></li>
-              <li class="MU_box_controls">
-                <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button>
-                <button class="mu-box-settings" title="設定">⚙️</button>
-              </li>
-            </ul>
-            <ul class="MU_box MU_box6" id="test6" draggable="true">
-              <li class="MU_title" data-bg-area="6" id="ETier1"
-                style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-                <p contenteditable="plaintext-only">E Tier</p>
-              </li>
-              <li class="MU_result box"></li>
-              <li class="MU_box_controls">
-                <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button>
-                <button class="mu-box-settings" title="設定">⚙️</button>
-              </li>
-            </ul>
-          </div>
+          <ul class="MU_box MU_box2" id="test2" draggable="true">
+            <li class="MU_title" data-bg-area="2" id="ATier1"
+              style="background: linear-gradient(90deg, #ffa300, #ede404)">
+              <p contenteditable="plaintext-only">A Tier</p>
+            </li>
+            <li class="MU_result box"></li>
+            <li class="MU_box_controls">
+              <!-- <button class="add-mu-box">＋</button>
+                <button class="remove-mu-box">－</button> -->
+              <button class="mu-box-settings" title="設定">⚙️</button>
+            </li>
+          </ul>
+          <ul class="MU_box MU_box3" id="test3" draggable="true">
+            <li class="MU_title" data-bg-area="3" id="BTier1"
+              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
+              <p contenteditable="plaintext-only">B Tier</p>
+            </li>
+            <li class="MU_result box"></li>
+            <li class="MU_box_controls">
+              <!-- <button class="add-mu-box">＋</button>
+                <button class="remove-mu-box">－</button> -->
+              <button class="mu-box-settings" title="設定">⚙️</button>
+            </li>
+          </ul>
+          <ul class="MU_box MU_box4" id="test4" draggable="true">
+            <li class="MU_title" data-bg-area="4" id="CTier1"
+              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
+              <p contenteditable="plaintext-only">C Tier</p>
+            </li>
+            <li class="MU_result box"></li>
+            <li class="MU_box_controls">
+              <!-- <button class="add-mu-box">＋</button>
+                <button class="remove-mu-box">－</button> -->
+              <button class="mu-box-settings" title="設定">⚙️</button>
+            </li>
+          </ul>
+          <ul class="MU_box MU_box5" id="test5" draggable="true">
+            <li class="MU_title" data-bg-area="5" id="DTier1"
+              style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
+              <p contenteditable="plaintext-only">D Tier</p>
+            </li>
+            <li class="MU_result box"></li>
+            <li class="MU_box_controls">
+              <!-- <button class="add-mu-box">＋</button>
+                <button class="remove-mu-box">－</button> -->
+              <button class="mu-box-settings" title="設定">⚙️</button>
+            </li>
+          </ul>
+          <ul class="MU_box MU_box6" id="test6" draggable="true">
+            <li class="MU_title" data-bg-area="6" id="ETier1"
+              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+              <p contenteditable="plaintext-only">E Tier</p>
+            </li>
+            <li class="MU_result box"></li>
+            <li class="MU_box_controls">
+              <!-- <button class="add-mu-box">＋</button>
+                <button class="remove-mu-box">－</button> -->
+              <button class="mu-box-settings" title="設定">⚙️</button>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="center">
+    </div>
+    <!-- <div class="center">
         <button class="Save" type="button" id="exec" name="exec">
           Save or Download
         </button>
@@ -404,297 +419,274 @@
           <a href="./rank_creater.html">Reset</a>
         </button>
 
-      </div>
-      <div class="selector">
-        <select class="extraction">
-          <option value="initial">基本</option>
-          <option value="全て">全て</option>
-          <option value="command">コマンド</option>
-          <option value="stage">ステージ</option>
-          <option value="text_box">フリーワード</option>
-          <option value="mario">01.マリオ</option>
-          <option value="donkey_kong">02.ドンキーコング</option>
-          <option value="link">03.リンク</option>
-          <option value="samus">04.サムス</option>
-          <option value="darksamus">05.ダークサムス</option>
-          <option value="yoshi">06.ヨッシー</option>
-          <option value="kirby">07.カービィ</option>
-          <option value="fox">08.フォックス</option>
-          <option value="pikachu">09.ピカチュウ</option>
-          <option value="luigi">10.ルイージ</option>
-          <option value="ness">11.ネス</option>
-          <option value="captain_falcon">12.キャプテン・ファルコン</option>
-          <option value="jigglypuff">13.プリン</option>
-          <option value="peach">14.ピーチ</option>
-          <option value="daisy">15.デイジー</option>
-          <option value="bowser">16.クッパ</option>
-          <option value="ice_climber">17.アイスクライマー</option>
-          <option value="sheik">18.シーク</option>
-          <option value="zelda">19.ゼルダ</option>
-          <option value="dr_mario">20.ドクターマリオ</option>
-          <option value="pichu">21.ピチュー</option>
-          <option value="falco">22.ファルコ</option>
-          <option value="marth">23.マルス</option>
-          <option value="lucina">24.ルキナ</option>
-          <option value="young_link">25.こどもリンク</option>
-          <option value="ganondorf">26.ガノンドロフ</option>
-          <option value="mewtwo">27.ミュウツー</option>
-          <option value="roy">28.ロイ</option>
-          <option value="chrom">29.クロム</option>
-          <option value="mr_game_and_watch">30.Mr.ゲーム&ウォッチ</option>
-          <option value="metaknight">31.メタナイト</option>
-          <option value="pit">32.ピット</option>
-          <option value="blackpit">33.ピット</option>
-          <option value="zero_suit_samus">34.ゼロスーツサムス</option>
-          <option value="wario">35.ワリオ</option>
-          <option value="snake">36.スネーク</option>
-          <option value="ike">37.アイク</option>
-          <option value="pokemon_trainer">38.ポケモントレーナー</option>
-          <option value="diddy_kong">39.ディディーコング</option>
-          <option value="lucas">40.リュカ</option>
-          <option value="sonic">41.ソニック</option>
-          <option value="king_dedede">42.デデデ</option>
-          <option value="olimar">43.ピクミン＆オリマー</option>
-          <option value="lucario">44.ルカリオ</option>
-          <option value="rob">45.ロボット</option>
-          <option value="toon_link">46.トゥーンリンク</option>
-          <option value="wolf">47.ウルフ</option>
-          <option value="villager">48.むらびと</option>
-          <option value="megaman">49.ロックマン</option>
-          <option value="wii_fit_trainer">50.Wii Fit トレーナー</option>
-          <option value="rosalina_luma">51.ロゼッタ＆チコ</option>
-          <option value="little_mac">52.リトルマック</option>
-          <option value="greninja">53.ゲッコウガ</option>
-          <!-- <option value="mii_brawler">54.格闘Mii</option>
+      </div> -->
+
+    <div class="selector">
+      <select class="extraction">
+        <option value="initial">基本</option>
+        <option value="全て">全て</option>
+        <option value="command">コマンド</option>
+        <option value="stage">ステージ</option>
+        <option value="text_box">フリーワード</option>
+        <option value="mario">01.マリオ</option>
+        <option value="donkey_kong">02.ドンキーコング</option>
+        <option value="link">03.リンク</option>
+        <option value="samus">04.サムス</option>
+        <option value="darksamus">05.ダークサムス</option>
+        <option value="yoshi">06.ヨッシー</option>
+        <option value="kirby">07.カービィ</option>
+        <option value="fox">08.フォックス</option>
+        <option value="pikachu">09.ピカチュウ</option>
+        <option value="luigi">10.ルイージ</option>
+        <option value="ness">11.ネス</option>
+        <option value="captain_falcon">12.キャプテン・ファルコン</option>
+        <option value="jigglypuff">13.プリン</option>
+        <option value="peach">14.ピーチ</option>
+        <option value="daisy">15.デイジー</option>
+        <option value="bowser">16.クッパ</option>
+        <option value="ice_climber">17.アイスクライマー</option>
+        <option value="sheik">18.シーク</option>
+        <option value="zelda">19.ゼルダ</option>
+        <option value="dr_mario">20.ドクターマリオ</option>
+        <option value="pichu">21.ピチュー</option>
+        <option value="falco">22.ファルコ</option>
+        <option value="marth">23.マルス</option>
+        <option value="lucina">24.ルキナ</option>
+        <option value="young_link">25.こどもリンク</option>
+        <option value="ganondorf">26.ガノンドロフ</option>
+        <option value="mewtwo">27.ミュウツー</option>
+        <option value="roy">28.ロイ</option>
+        <option value="chrom">29.クロム</option>
+        <option value="mr_game_and_watch">30.Mr.ゲーム&ウォッチ</option>
+        <option value="metaknight">31.メタナイト</option>
+        <option value="pit">32.ピット</option>
+        <option value="blackpit">33.ピット</option>
+        <option value="zero_suit_samus">34.ゼロスーツサムス</option>
+        <option value="wario">35.ワリオ</option>
+        <option value="snake">36.スネーク</option>
+        <option value="ike">37.アイク</option>
+        <option value="pokemon_trainer">38.ポケモントレーナー</option>
+        <option value="diddy_kong">39.ディディーコング</option>
+        <option value="lucas">40.リュカ</option>
+        <option value="sonic">41.ソニック</option>
+        <option value="king_dedede">42.デデデ</option>
+        <option value="olimar">43.ピクミン＆オリマー</option>
+        <option value="lucario">44.ルカリオ</option>
+        <option value="rob">45.ロボット</option>
+        <option value="toon_link">46.トゥーンリンク</option>
+        <option value="wolf">47.ウルフ</option>
+        <option value="villager">48.むらびと</option>
+        <option value="megaman">49.ロックマン</option>
+        <option value="wii_fit_trainer">50.Wii Fit トレーナー</option>
+        <option value="rosalina_luma">51.ロゼッタ＆チコ</option>
+        <option value="little_mac">52.リトルマック</option>
+        <option value="greninja">53.ゲッコウガ</option>
+        <!-- <option value="mii_brawler">54.格闘Mii</option>
           <option value="mii_swordfighter">55.剣術Mii</option>
           <option value="mii_gunner">56.射撃Mii</option> -->
-          <option value="palutena">57.パルテナ</option>
-          <option value="pacman">58.パックマン</option>
-          <option value="robin">59.ルフレ</option>
-          <option value="shulk">60.シュルク</option>
-          <option value="bowser_jr">61.クッパJr.</option>
-          <option value="duck_hunt">62.ダックハント</option>
-          <option value="ryu">63.リュウ</option>
-          <option value="ken">64.ケン</option>
-          <option value="cloud">65.クラウド</option>
-          <option value="corrin">66.カムイ</option>
-          <option value="bayonetta">67.ベヨネッタ</option>
-          <option value="inkling">68.インクリング</option>
-          <option value="ridley">69.リドリー</option>
-          <option value="simon">70.シモン</option>
-          <option value="richter">71.リヒター</option>
-          <option value="king_k_rool">72.キングクルール</option>
-          <option value="isabelle">73.しずえ</option>
-          <option value="incineroar">74.ガオガエン</option>
-          <option value="piranha_plant">75.パックンフラワー</option>
-          <option value="joker">76.ジョーカー</option>
-          <option value="hero">77.勇者</option>
-          <option value="banjo_and_kazooie">78.バンジョー＆カズーイ</option>
-          <option value="terry">79.テリー</option>
-          <option value="byleth">80.ベレトス</option>
-          <option value="minmin">81.ミェンミェン</option>
-          <option value="steve">82.スティーブ</option>
-          <option value="sephiroth">83.セフィロス</option>
-          <option value="homura">84.ホムヒカ</option>
-          <option value="kazuya">85.カズヤ</option>
-          <option value="sora">86.ソラ</option>
-        </select>
-      </div>
-      <!--表はここから-->
-      <div class="Fighter_Storage">
-        <!--       <div class="Fighter_TITLE">
+        <option value="palutena">57.パルテナ</option>
+        <option value="pacman">58.パックマン</option>
+        <option value="robin">59.ルフレ</option>
+        <option value="shulk">60.シュルク</option>
+        <option value="bowser_jr">61.クッパJr.</option>
+        <option value="duck_hunt">62.ダックハント</option>
+        <option value="ryu">63.リュウ</option>
+        <option value="ken">64.ケン</option>
+        <option value="cloud">65.クラウド</option>
+        <option value="corrin">66.カムイ</option>
+        <option value="bayonetta">67.ベヨネッタ</option>
+        <option value="inkling">68.インクリング</option>
+        <option value="ridley">69.リドリー</option>
+        <option value="simon">70.シモン</option>
+        <option value="richter">71.リヒター</option>
+        <option value="king_k_rool">72.キングクルール</option>
+        <option value="isabelle">73.しずえ</option>
+        <option value="incineroar">74.ガオガエン</option>
+        <option value="piranha_plant">75.パックンフラワー</option>
+        <option value="joker">76.ジョーカー</option>
+        <option value="hero">77.勇者</option>
+        <option value="banjo_and_kazooie">78.バンジョー＆カズーイ</option>
+        <option value="terry">79.テリー</option>
+        <option value="byleth">80.ベレトス</option>
+        <option value="minmin">81.ミェンミェン</option>
+        <option value="steve">82.スティーブ</option>
+        <option value="sephiroth">83.セフィロス</option>
+        <option value="homura">84.ホムヒカ</option>
+        <option value="kazuya">85.カズヤ</option>
+        <option value="sora">86.ソラ</option>
+      </select>
+    </div>
+    <!--表はここから-->
+    <div class="Fighter_Storage">
+      <!--       <div class="Fighter_TITLE">
           <h2>Fighter Storage</h2>
         </div>
 -->
-        <div class="Fighter_table">
-          <div class="Fighter_box box" draggable="true" id="nonImageArea">
-            <!--ここからデータ挿入-->
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/01.マリオ.png"
-              alt="ファイター画像01.マリオ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/02.ドンキーコング.png"
-              alt="ファイター画像02.ドンキーコング">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/03.リンク.png"
-              alt="ファイター画像03.リンク">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/04.サムス_05.ダークサムス.png"
-              alt="ファイター画像04.サムス_05.ダークサムス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/06.ヨッシー.png"
-              alt="ファイター画像06.ヨッシー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/07.カービィ.png"
-              alt="ファイター画像07.カービィ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/08.フォックス.png"
-              alt="ファイター画像08.フォックス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/09.ピカチュウ.png"
-              alt="ファイター画像09.ピカチュウ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/10.ルイージ.png"
-              alt="ファイター画像10.ルイージ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/11.ネス.png" alt="ファイター画像11.ネス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/12.キャプテン・ファルコン.png"
-              alt="ファイター画像12.キャプテン・ファルコン">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/13.プリン.png"
-              alt="ファイター画像13.プリン">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/14.ピーチ_15.デイジー.png"
-              alt="ファイター画像14.ピーチ_15.デイジー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/16.クッパ.png"
-              alt="ファイター画像16.クッパ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/17.アイスクライマー.png"
-              alt="ファイター画像17.アイスクライマー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/18.シーク.png"
-              alt="ファイター画像18.シーク">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/19.ゼルダ.png"
-              alt="ファイター画像19.ゼルダ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/20.ドクターマリオ.png"
-              alt="ファイター画像20.ドクターマリオ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/21.ピチュー.png"
-              alt="ファイター画像21.ピチュー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/22.ファルコ.png"
-              alt="ファイター画像22.ファルコ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/23.マルス.png"
-              alt="ファイター画像23.マルス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/24.ルキナ.png"
-              alt="ファイター画像24.ルキナ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/25.こどもリンク.png"
-              alt="ファイター画像25.こどもリンク">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/26.ガノンドルフ.png"
-              alt="ファイター画像26.ガノンドロフ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/27.ミュウツー.png"
-              alt="ファイター画像27.ミュウツー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/28.ロイ.png" alt="ファイター画像28.ロイ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/29.クロム.png"
-              alt="ファイター画像29.クロム">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/30.Mr.ゲーム&ウォッチ.png"
-              alt="ファイター画像30.Mr.ゲーム&ウォッチ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/31.メタナイト.png"
-              alt="ファイター画像31.メタナイト">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/32.ピット_33.ブラックピット.png"
-              alt="ファイター画像32.ピット_33.ブラックピット">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/34.ゼロスーツサムス.png"
-              alt="ファイター画像34.ゼロスーツサムス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/35.ワリオ.png"
-              alt="ファイター画像35.ワリオ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/36.スネーク.png"
-              alt="ファイター画像36.スネーク">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/37.アイク.png"
-              alt="ファイター画像37.アイク">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/38.ポケモントレーナー.png"
-              alt="ファイター画像38.ポケモントレーナー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/39.ディディーコング.png"
-              alt="ファイター画像39.ディディーコング">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/40.リュカ.png"
-              alt="ファイター画像40.リュカ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/41.ソニック.png"
-              alt="ファイター画像41.ソニック">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/42.デデデ.png"
-              alt="ファイター画像42.デデデ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/43.ピクミン＆オリマー.png"
-              alt="ファイター画像43.ピクミン＆オリマー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/44.ルカリオ.png"
-              alt="ファイター画像44.ルカリオ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/45.ロボット.png"
-              alt="ファイター画像45.ロボット">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/46.トゥーンリンク.png"
-              alt="ファイター画像46.トゥーンリンク">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/47.ウルフ.png"
-              alt="ファイター画像47.ウルフ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/48.むらびと.png"
-              alt="ファイター画像48.むらびと">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/49.ロックマン.png"
-              alt="ファイター画像49.ロックマン">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/50.Wii Fit トレーナー.png"
-              alt="ファイター画像50.Wii Fit トレーナー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/51.ロゼッタ＆チコ.png"
-              alt="ファイター画像51.ロゼッタ＆チコ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/52.リトルマック.png"
-              alt="ファイター画像52.リトルマック">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/53.ゲッコウガ.png"
-              alt="ファイター画像53.ゲッコウガ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/54.格闘Mii.png"
-              alt="ファイター画像54.格闘Mii">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/55.剣術Mii.png"
-              alt="ファイター画像55.剣術Mii">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/56.射撃Mii.png"
-              alt="ファイター画像56.射撃Mii">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/57.パルテナ.png"
-              alt="ファイター画像57.パルテナ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/58.パックマン.png"
-              alt="ファイター画像58.パックマン">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/59.ルフレ.png"
-              alt="ファイター画像59.ルフレ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/60.シュルク.png"
-              alt="ファイター画像60.シュルク">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/61.クッパJr..png"
-              alt="ファイター画像61.クッパJr.">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/62.ダックハント.png"
-              alt="ファイター画像62.ダックハント">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/63.リュウ.png"
-              alt="ファイター画像63.リュウ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/64.ケン.png" alt="ファイター画像64.ケン">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/65.クラウド.png"
-              alt="ファイター画像65.クラウド">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/66.カムイ.png"
-              alt="ファイター画像66.カムイ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/67.ベヨネッタ.png"
-              alt="ファイター画像67.ベヨネッタ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/68.インクリング.png"
-              alt="ファイター画像68.インクリング">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/69.リドリー.png"
-              alt="ファイター画像69.リドリー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/70.シモン_71.リヒター.png"
-              alt="ファイター画像70.シモン_71.リヒター">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/72.キングクルール.png"
-              alt="ファイター画像72.キングクルール">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/73.しずえ.png"
-              alt="ファイター画像73.しずえ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/74.ガオガエン.png"
-              alt="ファイター画像74.ガオガエン">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/75.パックンフラワー.png"
-              alt="ファイター画像75.パックンフラワー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/76.ジョーカー.png"
-              alt="ファイター画像76.ジョーカー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/77.勇者.png" alt="ファイター画像77.勇者">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/78.バンジョー＆カズーイ.png"
-              alt="ファイター画像78.バンジョー＆カズーイ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/79.テリー.png"
-              alt="ファイター画像79.テリー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/80.ベレトス.png"
-              alt="ファイター画像80.ベレトス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/81.ミェンミェン.png"
-              alt="ファイター画像81.ミェンミェン">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/82.スティーブ.png"
-              alt="ファイター画像82.スティーブ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/83.セフィロス.png"
-              alt="ファイター画像83.セフィロス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/84.ホムヒカ.png"
-              alt="ファイター画像84.ホムヒカ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/85.カズヤ.png"
-              alt="ファイター画像85.カズヤ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/86.ソラ.png" alt="ファイター画像86.ソラ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/04.サムス.png"
-              alt="ファイター画像04.サムス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/05.ダークサムス.png"
-              alt="ファイター画像05.ダークサムス">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/14.ピーチ.png"
-              alt="ファイター画像14.ピーチ">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/15.デイジー.png"
-              alt="ファイター画像15.デイジー">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/32.ピット.png"
-              alt="ファイター画像32.ピット">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/33.ブラックピット.png"
-              alt="ファイター画像33.ブラックピット">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/70.シモン.png"
-              alt="ファイター画像70.シモン">
-            <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/71.リヒター.png"
-              alt="ファイター画像71.リヒター">
+      <div class="Fighter_table">
+        <div class="Fighter_box box" draggable="true" id="nonImageArea">
+          <!--ここからデータ挿入-->
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/01.マリオ.png" alt="ファイター画像01.マリオ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/02.ドンキーコング.png"
+            alt="ファイター画像02.ドンキーコング">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/03.リンク.png" alt="ファイター画像03.リンク">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/04.サムス_05.ダークサムス.png"
+            alt="ファイター画像04.サムス_05.ダークサムス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/06.ヨッシー.png"
+            alt="ファイター画像06.ヨッシー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/07.カービィ.png"
+            alt="ファイター画像07.カービィ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/08.フォックス.png"
+            alt="ファイター画像08.フォックス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/09.ピカチュウ.png"
+            alt="ファイター画像09.ピカチュウ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/10.ルイージ.png"
+            alt="ファイター画像10.ルイージ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/11.ネス.png" alt="ファイター画像11.ネス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/12.キャプテン・ファルコン.png"
+            alt="ファイター画像12.キャプテン・ファルコン">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/13.プリン.png" alt="ファイター画像13.プリン">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/14.ピーチ_15.デイジー.png"
+            alt="ファイター画像14.ピーチ_15.デイジー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/16.クッパ.png" alt="ファイター画像16.クッパ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/17.アイスクライマー.png"
+            alt="ファイター画像17.アイスクライマー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/18.シーク.png" alt="ファイター画像18.シーク">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/19.ゼルダ.png" alt="ファイター画像19.ゼルダ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/20.ドクターマリオ.png"
+            alt="ファイター画像20.ドクターマリオ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/21.ピチュー.png"
+            alt="ファイター画像21.ピチュー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/22.ファルコ.png"
+            alt="ファイター画像22.ファルコ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/23.マルス.png" alt="ファイター画像23.マルス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/24.ルキナ.png" alt="ファイター画像24.ルキナ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/25.こどもリンク.png"
+            alt="ファイター画像25.こどもリンク">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/26.ガノンドルフ.png"
+            alt="ファイター画像26.ガノンドロフ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/27.ミュウツー.png"
+            alt="ファイター画像27.ミュウツー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/28.ロイ.png" alt="ファイター画像28.ロイ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/29.クロム.png" alt="ファイター画像29.クロム">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/30.Mr.ゲーム&ウォッチ.png"
+            alt="ファイター画像30.Mr.ゲーム&ウォッチ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/31.メタナイト.png"
+            alt="ファイター画像31.メタナイト">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/32.ピット_33.ブラックピット.png"
+            alt="ファイター画像32.ピット_33.ブラックピット">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/34.ゼロスーツサムス.png"
+            alt="ファイター画像34.ゼロスーツサムス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/35.ワリオ.png" alt="ファイター画像35.ワリオ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/36.スネーク.png"
+            alt="ファイター画像36.スネーク">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/37.アイク.png" alt="ファイター画像37.アイク">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/38.ポケモントレーナー.png"
+            alt="ファイター画像38.ポケモントレーナー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/39.ディディーコング.png"
+            alt="ファイター画像39.ディディーコング">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/40.リュカ.png" alt="ファイター画像40.リュカ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/41.ソニック.png"
+            alt="ファイター画像41.ソニック">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/42.デデデ.png" alt="ファイター画像42.デデデ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/43.ピクミン＆オリマー.png"
+            alt="ファイター画像43.ピクミン＆オリマー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/44.ルカリオ.png"
+            alt="ファイター画像44.ルカリオ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/45.ロボット.png"
+            alt="ファイター画像45.ロボット">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/46.トゥーンリンク.png"
+            alt="ファイター画像46.トゥーンリンク">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/47.ウルフ.png" alt="ファイター画像47.ウルフ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/48.むらびと.png"
+            alt="ファイター画像48.むらびと">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/49.ロックマン.png"
+            alt="ファイター画像49.ロックマン">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/50.Wii Fit トレーナー.png"
+            alt="ファイター画像50.Wii Fit トレーナー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/51.ロゼッタ＆チコ.png"
+            alt="ファイター画像51.ロゼッタ＆チコ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/52.リトルマック.png"
+            alt="ファイター画像52.リトルマック">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/53.ゲッコウガ.png"
+            alt="ファイター画像53.ゲッコウガ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/54.格闘Mii.png"
+            alt="ファイター画像54.格闘Mii">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/55.剣術Mii.png"
+            alt="ファイター画像55.剣術Mii">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/56.射撃Mii.png"
+            alt="ファイター画像56.射撃Mii">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/57.パルテナ.png"
+            alt="ファイター画像57.パルテナ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/58.パックマン.png"
+            alt="ファイター画像58.パックマン">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/59.ルフレ.png" alt="ファイター画像59.ルフレ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/60.シュルク.png"
+            alt="ファイター画像60.シュルク">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/61.クッパJr..png"
+            alt="ファイター画像61.クッパJr.">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/62.ダックハント.png"
+            alt="ファイター画像62.ダックハント">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/63.リュウ.png" alt="ファイター画像63.リュウ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/64.ケン.png" alt="ファイター画像64.ケン">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/65.クラウド.png"
+            alt="ファイター画像65.クラウド">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/66.カムイ.png" alt="ファイター画像66.カムイ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/67.ベヨネッタ.png"
+            alt="ファイター画像67.ベヨネッタ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/68.インクリング.png"
+            alt="ファイター画像68.インクリング">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/69.リドリー.png"
+            alt="ファイター画像69.リドリー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/70.シモン_71.リヒター.png"
+            alt="ファイター画像70.シモン_71.リヒター">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/72.キングクルール.png"
+            alt="ファイター画像72.キングクルール">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/73.しずえ.png" alt="ファイター画像73.しずえ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/74.ガオガエン.png"
+            alt="ファイター画像74.ガオガエン">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/75.パックンフラワー.png"
+            alt="ファイター画像75.パックンフラワー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/76.ジョーカー.png"
+            alt="ファイター画像76.ジョーカー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/77.勇者.png" alt="ファイター画像77.勇者">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/78.バンジョー＆カズーイ.png"
+            alt="ファイター画像78.バンジョー＆カズーイ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/79.テリー.png" alt="ファイター画像79.テリー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/80.ベレトス.png"
+            alt="ファイター画像80.ベレトス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/81.ミェンミェン.png"
+            alt="ファイター画像81.ミェンミェン">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/82.スティーブ.png"
+            alt="ファイター画像82.スティーブ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/83.セフィロス.png"
+            alt="ファイター画像83.セフィロス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/84.ホムヒカ.png"
+            alt="ファイター画像84.ホムヒカ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/85.カズヤ.png" alt="ファイター画像85.カズヤ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/86.ソラ.png" alt="ファイター画像86.ソラ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/04.サムス.png" alt="ファイター画像04.サムス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/05.ダークサムス.png"
+            alt="ファイター画像05.ダークサムス">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/14.ピーチ.png" alt="ファイター画像14.ピーチ">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/15.デイジー.png"
+            alt="ファイター画像15.デイジー">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/32.ピット.png" alt="ファイター画像32.ピット">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/33.ブラックピット.png"
+            alt="ファイター画像33.ブラックピット">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/70.シモン.png" alt="ファイター画像70.シモン">
+          <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/71.リヒター.png"
+            alt="ファイター画像71.リヒター">
 
-          </div>
         </div>
       </div>
-      <!-- 画像変換 -->
-      <div>
-        <img id="image" name="image" src=" " class="IMG" />
-        <a id="download" href="#" download=""></a>
-      </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="./js/toggle-menu_rev.js"></script>
+    </div>
+    <!-- 画像変換 -->
+    <div>
+      <img id="image" name="image" src=" " class="IMG" />
+      <a id="download" href="#" download=""></a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/toggle-menu_rev.js"></script>
   </main> <!--mainはここまで-->
 
   <!--footerはここから-->
@@ -707,15 +699,8 @@
         当サイトは個人が運営する非公式のWebサービスです。<br>
         任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
     <p class="copyright">ver13.0.0 2025/03/21<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
-    <!-- Tier表保存・復元ボタン -->
-    <div style="margin:10px 0;">
-      <button onclick="saveTierList()">Tier表を保存</button>
-      <button onclick="loadTierList()">Tier表を復元</button>
-    </div>
-    <!-- HTML: 画像アップロードボタン -->
-    <input type="file" id="customImageInput" accept="image/*" multiple style="margin:10px 0;">
-    <button onclick="generateShareURL()">共有用URLを作成</button>
-    <button onclick="generateTierListSummary()">Tierリスト自動生成</button>
+    <!-- <button onclick="generateShareURL()">共有用URLを作成</button>
+    <button onclick="generateTierListSummary()">Tierリスト自動生成</button> -->
   </footer>
   <!--footerはここまで-->
   <!--JS挿入部-->
@@ -723,7 +708,7 @@
   <script src="./js/canvas.js"></script>
   <script src="./js/backgroundcolor.js"></script>
   <script src="./js/drag_pc.js"></script>
-  <script src="./js/drag_box.js"></script>
+  <!-- <script src="./js/drag_box.js"></script> -->
   <script src="./js/drag_phone.js"></script>
   <script src="./js/select.js"></script>
   <script src="./js/drag_free_pc.js"></script>

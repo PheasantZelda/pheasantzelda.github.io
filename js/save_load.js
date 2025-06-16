@@ -1,7 +1,6 @@
-// Tier表の状態を保存
 function saveTierList() {
   const tierData = [];
-  document.querySelectorAll('.MU_box, .MU_boxx').forEach((box) => {
+  document.querySelectorAll('.MU_box').forEach((box) => {
     const titleElem = box.querySelector('.MU_title');
     const tier = {
       title: titleElem.querySelector('p').innerText,
@@ -31,14 +30,13 @@ function saveTierList() {
   alert('保存しました');
 }
 
-// Tier表の状態を復元
 function loadTierList() {
   const data = localStorage.getItem('tierListData');
   if (!data) return alert('保存データがありません');
   const tierData = JSON.parse(data);
 
   // 既存のMU_boxを全て削除
-  document.querySelectorAll('.MU_box, .MU_boxx').forEach((box) => box.remove());
+  document.querySelectorAll('.MU_box').forEach((box) => box.remove());
 
   // tierDataからMU_boxを再生成
   const table = document.querySelector('.MU_table');
@@ -63,26 +61,28 @@ function loadTierList() {
     const liResult = document.createElement('li');
     liResult.className = 'MU_result box';
     // アイテム復元
-    tier.items.forEach((item) => {
-      if (item.type === 'img') {
-        const img = document.createElement('img');
-        img.src = item.src;
-        img.alt = item.alt;
-        img.className = item.class;
-        img.draggable = true;
-        liResult.appendChild(img);
-      } else if (item.type === 'text') {
-        const div = document.createElement('div');
-        div.className = 'text_box';
-        div.draggable = true;
-        const p = document.createElement('p');
-        p.className = 'text_content';
-        p.contentEditable = true;
-        p.innerText = item.text;
-        div.appendChild(p);
-        liResult.appendChild(div);
-      }
-    });
+    if (tier.items && Array.isArray(tier.items)) {
+      tier.items.forEach((item) => {
+        if (item.type === 'img') {
+          const img = document.createElement('img');
+          img.src = item.src;
+          img.alt = item.alt;
+          img.className = item.class;
+          img.draggable = true;
+          liResult.appendChild(img);
+        } else if (item.type === 'text') {
+          const div = document.createElement('div');
+          div.className = 'text_box';
+          div.draggable = true;
+          const p = document.createElement('p');
+          p.className = 'text_content';
+          p.contentEditable = true;
+          p.innerText = item.text;
+          div.appendChild(p);
+          liResult.appendChild(div);
+        }
+      });
+    }
 
     ul.appendChild(liTitle);
     ul.appendChild(liResult);
@@ -91,14 +91,12 @@ function loadTierList() {
     const liCtrl = document.createElement('li');
     liCtrl.className = 'MU_box_controls';
     liCtrl.innerHTML = `
-      <button class="add-mu-box">＋</button>
-      <button class="remove-mu-box">－</button>
       <button class="mu-box-settings" title="設定">⚙️</button>
     `;
     ul.appendChild(liCtrl);
 
     table.appendChild(ul);
-    setMUBoxDraggable([ul]);
+    if (typeof setMUBoxDraggable === 'function') setMUBoxDraggable([ul]);
   });
   alert('復元しました');
 }
