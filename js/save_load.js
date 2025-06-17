@@ -18,8 +18,7 @@ function saveTierList() {
             type: 'img',
             src: item.src,
             alt: item.alt || '',
-            class: item.className || '',
-            custom: item.classList.contains('custom') // custom画像かどうか
+            class: item.className || ''
           });
         } else if (item.classList.contains('text_box')) {
           tier.items.push({ type: 'text', text: item.innerText });
@@ -75,7 +74,7 @@ function loadTierList() {
           img.className = item.class || 'item';
           img.draggable = true;
           liResult.appendChild(img);
-          // 追加：スマホ用タッチイベントも付与
+          // スマホ用タッチイベントも付与
           if (typeof setItemDraggablePhone === 'function') {
             setItemDraggablePhone(img);
           }
@@ -106,9 +105,8 @@ function loadTierList() {
     `;
     ul.appendChild(liCtrl);
 
-    // MU_boxをテーブルに追加
     table.appendChild(ul);
-    setMUBoxDraggable([ul]);
+    if (typeof setMUBoxDraggable === 'function') setMUBoxDraggable([ul]);
   });
   alert('復元しました');
 }
