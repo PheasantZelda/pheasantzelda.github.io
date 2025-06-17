@@ -120,3 +120,10 @@ draggableItemstext.forEach((item) => {
   item.addEventListener('touchmove', handleTouchMove);
   item.addEventListener('touchend', handleTouchEnd);
 });
+
+function setItemDraggablePhone(img) {
+  // 例：タッチ開始・移動・終了イベントをimgに付与
+  img.addEventListener('touchstart', handleTouchStart);
+  img.addEventListener('touchmove', handleTouchMove);
+  img.addEventListener('touchend', handleTouchEnd);
+}

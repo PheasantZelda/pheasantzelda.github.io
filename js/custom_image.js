@@ -12,6 +12,11 @@ document
         img.draggable = true;
         img.alt = 'カスタム画像';
         document.getElementById('nonImageArea').appendChild(img);
+
+        // ここでスマホ用ドラッグイベントも付与
+        if (typeof setItemDraggablePhone === 'function') {
+          setItemDraggablePhone(img);
+        }
       };
       reader.readAsDataURL(file);
     });
