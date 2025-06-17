@@ -17,8 +17,9 @@ function saveTierList() {
           tier.items.push({
             type: 'img',
             src: item.src,
-            alt: item.alt,
-            class: item.className
+            alt: item.alt || '',
+            class: item.className || '',
+            custom: item.classList.contains('custom') // custom画像かどうか
           });
         } else if (item.classList.contains('text_box')) {
           tier.items.push({ type: 'text', text: item.innerText });
@@ -26,8 +27,12 @@ function saveTierList() {
       });
     tierData.push(tier);
   });
-  localStorage.setItem('tierListData', JSON.stringify(tierData));
-  alert('保存しました');
+  try {
+    localStorage.setItem('tierListData', JSON.stringify(tierData));
+    alert('保存しました');
+  } catch (e) {
+    alert('保存に失敗しました（画像が多すぎる可能性があります）');
+  }
 }
 
 function loadTierList() {
@@ -66,10 +71,14 @@ function loadTierList() {
         if (item.type === 'img') {
           const img = document.createElement('img');
           img.src = item.src;
-          img.alt = item.alt;
-          img.className = item.class;
+          img.alt = item.alt || '';
+          img.className = item.class || 'item';
           img.draggable = true;
           liResult.appendChild(img);
+          // 追加：スマホ用タッチイベントも付与
+          if (typeof setItemDraggablePhone === 'function') {
+            setItemDraggablePhone(img);
+          }
         } else if (item.type === 'text') {
           const div = document.createElement('div');
           div.className = 'text_box';
@@ -91,12 +100,15 @@ function loadTierList() {
     const liCtrl = document.createElement('li');
     liCtrl.className = 'MU_box_controls';
     liCtrl.innerHTML = `
-      <button class="mu-box-settings" title="設定">⚙️</button>
+      <button class="mu-box-settings" title="設定">
+        <img src="img/common/gear.png" alt="設定">
+      </button>
     `;
     ul.appendChild(liCtrl);
 
+    // MU_boxをテーブルに追加
     table.appendChild(ul);
-    if (typeof setMUBoxDraggable === 'function') setMUBoxDraggable([ul]);
+    setMUBoxDraggable([ul]);
   });
   alert('復元しました');
 }

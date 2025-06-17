@@ -23,37 +23,17 @@ document.addEventListener('click', function (e) {
     e.target.closest('.MU_box_controls') &&
     (e.target.classList.contains('add-mu-box') ||
       e.target.classList.contains('remove-mu-box') ||
-      e.target.classList.contains('mu-box-settings'))
+      e.target.classList.contains('mu-box-settings') ||
+      e.target.closest('.mu-box-settings') !== null) // ← imgクリックにも対応
   ) {
     const box = e.target.closest('.MU_box');
     if (!box) return;
 
-    // 追加
-    if (e.target.classList.contains('add-mu-box')) {
-      const clone = box.cloneNode(true);
-      // 画像を削除
-      clone.querySelectorAll('.MU_result img').forEach((img) => img.remove());
-      // デフォルトの背景・フォント色を設定
-      const title = clone.querySelector('.MU_title');
-      title.style.background = 'linear-gradient(90deg, #3d3c3c, #6b696e)';
-      title.style.color = '#ffffff';
-      clone.querySelector('.MU_title p').textContent = 'New Tier';
-      box.after(clone);
-      setMUBoxDraggable([clone]);
-    }
-
-    // 削除
-    if (e.target.classList.contains('remove-mu-box')) {
-      const boxes = Array.from(document.querySelectorAll('.MU_table .MU_box'));
-      if (boxes.length > 1) {
-        if (window.confirm('この行を削除しますか？')) {
-          box.remove();
-        }
-      }
-    }
-
     // 設定
-    if (e.target.classList.contains('mu-box-settings')) {
+    if (
+      e.target.classList.contains('mu-box-settings') ||
+      e.target.closest('.mu-box-settings') !== null // ← imgクリックにも対応
+    ) {
       // 既存のポップアップがあれば消す
       document
         .querySelectorAll('.mu-settings-popup')
@@ -148,6 +128,10 @@ document.addEventListener('click', function (e) {
         clone.querySelector('.MU_title p').textContent = 'New Tier';
         box.after(clone);
         setMUBoxDraggable([clone]);
+        // 追加：スマホ用タッチイベントも付与
+        clone
+          .querySelectorAll('.MU_result .item')
+          .forEach((img) => setItemDraggablePhone(img));
         popup.remove();
       };
       popup.querySelector('.remove-mu-box').onclick = function () {
