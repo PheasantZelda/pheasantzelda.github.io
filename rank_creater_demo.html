@@ -320,97 +320,108 @@
       </div> -->
     <div class="tierlist-action">
       <button class="tierlist-action-btn" onclick="saveTierList()">一時保存</button>
-      <button class="tierlist-action-btn" onclick="loadTierList()">復元</button>
+      <button class="tierlist-action-btn" onclick="loadTierList()">リロード</button>
       <label class="custom-file-label">
         アイテム選択
         <input type="file" id="customImageInput" accept="image/*" multiple style="display:none;">
       </label>
     </div>
-    <div class="tierlist-flex-wrap">
-      <div class="tierlist" id="canvas-box" name="canvas-box">
-        <div class="MUTITLE">
-          <h2 contenteditable="plaintext-only">MU Table ✎</h2>
-          <img src="./img/common/logo.png" alt="SSBU" />
-        </div>
+    <div class="tierlist" id="canvas-box" name="canvas-box">
+      <div class="MUTITLE">
+        <h2 contenteditable="plaintext-only">MU Table ✎</h2>
+        <img src="./img/common/logo.png" alt="SSBU" />
+      </div>
 
-        <div class="MU_table">
-          <!-- 各MU_box（行） -->
-          <ul class="MU_box MU_box1" id="test1" draggable="true">
-            <li class="MU_title" data-bg-area="1" id="STier1"
-              style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
-              <p contenteditable="plaintext-only">S Tier</p>
-            </li>
-            <li class="MU_result box"></li>
-            <li class="MU_box_controls">
-              <!-- <button class="add-mu-box">＋</button>
+      <div class="MU_table">
+        <!-- 各MU_box（行） -->
+        <ul class="MU_box MU_box1" id="test1" draggable="true">
+          <li class="MU_title" data-bg-area="1" id="STier1"
+            style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
+            <p contenteditable="plaintext-only">S Tier</p>
+          </li>
+          <li class="MU_result box"></li>
+          <li class="MU_box_controls">
+            <!-- <button class="add-mu-box">＋</button>
                 <button class="remove-mu-box">－</button> -->
-              <button class="mu-box-settings" title="設定">⚙️</button>
-            </li>
-          </ul>
+            <button class="mu-box-settings" title="設定">
+              <img src="img/common/gear.png" alt="設定" style="width: 1em; height: 1em; vertical-align: middle;">
+            </button>
+          </li>
+        </ul>
 
-          <ul class="MU_box MU_box2" id="test2" draggable="true">
-            <li class="MU_title" data-bg-area="2" id="ATier1"
-              style="background: linear-gradient(90deg, #ffa300, #ede404)">
-              <p contenteditable="plaintext-only">A Tier</p>
-            </li>
-            <li class="MU_result box"></li>
-            <li class="MU_box_controls">
-              <!-- <button class="add-mu-box">＋</button>
+        <ul class="MU_box MU_box2" id="test2" draggable="true">
+          <li class="MU_title" data-bg-area="2" id="ATier1"
+            style="background: linear-gradient(90deg, #ffa300, #ede404)">
+            <p contenteditable="plaintext-only">A Tier</p>
+          </li>
+          <li class="MU_result box"></li>
+          <li class="MU_box_controls">
+            <!-- <button class="add-mu-box">＋</button>
                 <button class="remove-mu-box">－</button> -->
-              <button class="mu-box-settings" title="設定">⚙️</button>
-            </li>
-          </ul>
-          <ul class="MU_box MU_box3" id="test3" draggable="true">
-            <li class="MU_title" data-bg-area="3" id="BTier1"
-              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
-              <p contenteditable="plaintext-only">B Tier</p>
-            </li>
-            <li class="MU_result box"></li>
-            <li class="MU_box_controls">
-              <!-- <button class="add-mu-box">＋</button>
+            <button class="mu-box-settings" title="設定">
+              <img src="img/common/gear.png" alt="設定" style="width: 1em; height: 1em; vertical-align: middle;">
+            </button>
+          </li>
+        </ul>
+        <ul class="MU_box MU_box3" id="test3" draggable="true">
+          <li class="MU_title" data-bg-area="3" id="BTier1"
+            style="background: linear-gradient(90deg, #39f68f, #c4e126)">
+            <p contenteditable="plaintext-only">B Tier</p>
+          </li>
+          <li class="MU_result box"></li>
+          <li class="MU_box_controls">
+            <!-- <button class="add-mu-box">＋</button>
                 <button class="remove-mu-box">－</button> -->
-              <button class="mu-box-settings" title="設定">⚙️</button>
-            </li>
-          </ul>
-          <ul class="MU_box MU_box4" id="test4" draggable="true">
-            <li class="MU_title" data-bg-area="4" id="CTier1"
-              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
-              <p contenteditable="plaintext-only">C Tier</p>
-            </li>
-            <li class="MU_result box"></li>
-            <li class="MU_box_controls">
-              <!-- <button class="add-mu-box">＋</button>
+            <button class="mu-box-settings" title="設定">
+              <img src="img/common/gear.png" alt="設定" style="width: 1em; height: 1em; vertical-align: middle;">
+            </button>
+          </li>
+        </ul>
+        <ul class="MU_box MU_box4" id="test4" draggable="true">
+          <li class="MU_title" data-bg-area="4" id="CTier1"
+            style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
+            <p contenteditable="plaintext-only">C Tier</p>
+          </li>
+          <li class="MU_result box"></li>
+          <li class="MU_box_controls">
+            <!-- <button class="add-mu-box">＋</button>
                 <button class="remove-mu-box">－</button> -->
-              <button class="mu-box-settings" title="設定">⚙️</button>
-            </li>
-          </ul>
-          <ul class="MU_box MU_box5" id="test5" draggable="true">
-            <li class="MU_title" data-bg-area="5" id="DTier1"
-              style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
-              <p contenteditable="plaintext-only">D Tier</p>
-            </li>
-            <li class="MU_result box"></li>
-            <li class="MU_box_controls">
-              <!-- <button class="add-mu-box">＋</button>
+            <button class="mu-box-settings" title="設定">
+              <img src="img/common/gear.png" alt="設定" style="width: 1em; height: 1em; vertical-align: middle;">
+            </button>
+          </li>
+        </ul>
+        <ul class="MU_box MU_box5" id="test5" draggable="true">
+          <li class="MU_title" data-bg-area="5" id="DTier1"
+            style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
+            <p contenteditable="plaintext-only">D Tier</p>
+          </li>
+          <li class="MU_result box"></li>
+          <li class="MU_box_controls">
+            <!-- <button class="add-mu-box">＋</button>
                 <button class="remove-mu-box">－</button> -->
-              <button class="mu-box-settings" title="設定">⚙️</button>
-            </li>
-          </ul>
-          <ul class="MU_box MU_box6" id="test6" draggable="true">
-            <li class="MU_title" data-bg-area="6" id="ETier1"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              <p contenteditable="plaintext-only">E Tier</p>
-            </li>
-            <li class="MU_result box"></li>
-            <li class="MU_box_controls">
-              <!-- <button class="add-mu-box">＋</button>
+            <button class="mu-box-settings" title="設定">
+              <img src="img/common/gear.png" alt="設定" style="width: 1em; height: 1em; vertical-align: middle;">
+            </button>
+          </li>
+        </ul>
+        <ul class="MU_box MU_box6" id="test6" draggable="true">
+          <li class="MU_title" data-bg-area="6" id="ETier1"
+            style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+            <p contenteditable="plaintext-only">E Tier</p>
+          </li>
+          <li class="MU_result box"></li>
+          <li class="MU_box_controls">
+            <!-- <button class="add-mu-box">＋</button>
                 <button class="remove-mu-box">－</button> -->
-              <button class="mu-box-settings" title="設定">⚙️</button>
-            </li>
-          </ul>
-        </div>
+            <button class="mu-box-settings" title="設定">
+              <img src="img/common/gear.png" alt="設定" style="width: 1em; height: 1em; vertical-align: middle;">
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
+
     <!-- <div class="center">
         <button class="Save" type="button" id="exec" name="exec">
           Save or Download
@@ -427,6 +438,7 @@
         <option value="全て">全て</option>
         <option value="command">コマンド</option>
         <option value="stage">ステージ</option>
+        <option value="custom">追加アイテム</option>
         <option value="text_box">フリーワード</option>
         <option value="mario">01.マリオ</option>
         <option value="donkey_kong">02.ドンキーコング</option>

@@ -74,7 +74,10 @@ document.addEventListener('click', function (e) {
       // ポップアップ生成
       const popup = document.createElement('div');
       popup.className = 'mu-settings-popup';
-      popup.style.position = 'absolute';
+      popup.style.position = 'fixed';
+      popup.style.top = '50%';
+      popup.style.left = '50%';
+      popup.style.transform = 'translate(-50%, -50%)';
       popup.style.zIndex = 1000;
       popup.style.background = '#222';
       popup.style.padding = '12px 16px';
@@ -98,10 +101,10 @@ document.addEventListener('click', function (e) {
       `;
 
       // ボタンの位置にポップアップを表示
-      const rect = e.target.getBoundingClientRect();
-      popup.style.position = 'absolute';
-      popup.style.top = `${window.scrollY + rect.bottom + 4}px`; // ボタンの下
-      popup.style.left = `${window.scrollX + rect.left}px`; // ボタンの左端
+      // const rect = e.target.getBoundingClientRect();
+      // popup.style.position = 'absolute';
+      // popup.style.top = `${window.scrollY + rect.bottom + 4}px`; // ボタンの下
+      // popup.style.left = `${window.scrollX + rect.left}px`; // ボタンの左端
 
       document.body.appendChild(popup);
 
