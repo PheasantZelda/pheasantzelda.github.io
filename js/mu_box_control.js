@@ -128,7 +128,7 @@ document.addEventListener('click', function (e) {
         clone.querySelector('.MU_title p').textContent = 'New Tier';
         box.after(clone);
         setMUBoxDraggable([clone]);
-        // 追加：スマホ用タッチイベントも付与
+        // ここを追加
         clone
           .querySelectorAll('.MU_result .item')
           .forEach((img) => setItemDraggablePhone(img));

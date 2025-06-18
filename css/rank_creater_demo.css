@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.MU_box_controls {
+  display: flex;
+  flex-direction: column;
+  /* 縦並び */
+  height: auto;
+  /* MU_boxの高さと必ず揃える */
+  pointer-events: auto;
+  width: 36px;
+  /* ボタン幅を固定（任意） */
+}
+
+.MU_box_controls button {
+  flex: auto;
+  margin-left: 20%;
+  width: auto;
+  /* 親の幅に合わせる */
+  background: #444;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+
+@media (max-width: 840px) {
+
+  /* 各MU_box_controlsをMU_boxの高さ・位置に合わせて配置 */
+  .MU_box_controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    /* MU_boxのmin-heightと同じ */
+    pointer-events: auto;
+    /* ボタンはクリック可 */
+  }
+
+  /* ボタンを縦3つ並び・高さ均等に */
+  .MU_box_controls button {
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 8px;
+    cursor: pointer;
+    padding: 0;
+  }
+}
