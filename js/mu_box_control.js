@@ -132,6 +132,11 @@ document.addEventListener('click', function (e) {
         clone
           .querySelectorAll('.MU_result .item')
           .forEach((img) => setItemDraggablePhone(img));
+        // MU_boxをクローンして追加した直後
+        const newMUResult = clone.querySelector('.MU_result');
+        if (newMUResult) {
+          handleDrop(newMUResult);
+        }
         popup.remove();
       };
       popup.querySelector('.remove-mu-box').onclick = function () {
