@@ -128,13 +128,15 @@ document.addEventListener('click', function (e) {
         clone.querySelector('.MU_title p').textContent = 'New Tier';
         box.after(clone);
         setMUBoxDraggable([clone]);
-        // ここを追加
-        clone
-          .querySelectorAll('.MU_result .item')
-          .forEach((img) => setItemDraggablePhone(img));
-        // MU_boxをクローンして追加した直後
+        // スマホ用タッチイベントも付与
+        clone.querySelectorAll('.MU_result .item').forEach((img) => {
+          if (typeof setItemDraggablePhone === 'function') {
+            setItemDraggablePhone(img);
+          }
+        });
+        // 新しいMU_resultにもドロップイベントを付与
         const newMUResult = clone.querySelector('.MU_result');
-        if (newMUResult) {
+        if (newMUResult && typeof handleDrop === 'function') {
           handleDrop(newMUResult);
         }
         popup.remove();
