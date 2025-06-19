@@ -139,6 +139,11 @@ document.addEventListener('click', function (e) {
         if (newMUResult && typeof handleDrop === 'function') {
           handleDrop(newMUResult);
         }
+
+        // ★ここで最新のMU_result要素を取得
+        const allMUResults = document.querySelectorAll('.MU_result');
+        // ここでallMUResultsを使って何か処理ができる
+
         popup.remove();
       };
       popup.querySelector('.remove-mu-box').onclick = function () {
