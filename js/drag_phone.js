@@ -42,7 +42,8 @@ function handleTouchEnd(e) {
   e.target.classList.remove('active');
   if (!draggedItem) return;
 
-  mappingAreas.forEach((mappingArea) => {
+  // mappingAreasを毎回取得し直す
+  document.querySelectorAll('.MU_result').forEach((mappingArea) => {
     const rect = mappingArea.getBoundingClientRect();
 
     let left = parseFloat(draggedItem.style.left) + startX;
@@ -66,29 +67,30 @@ function handleTouchEnd(e) {
     }
   });
 
-  nonImageAreas.forEach((nonImageArea) => {
-    const rect = nonImageArea.getBoundingClientRect();
+  // nonImageAreasも同様に毎回取得し直す場合は、下記も修正してください
+  // document.querySelectorAll('.Fighter_box').forEach((nonImageArea) => {
+  //   const rect = nonImageArea.getBoundingClientRect();
 
-    let left = parseFloat(draggedItem.style.left) + startX;
-    let top = parseFloat(draggedItem.style.top) + startY;
+  //   let left = parseFloat(draggedItem.style.left) + startX;
+  //   let top = parseFloat(draggedItem.style.top) + startY;
 
-    if (
-      left >= rect.left &&
-      left < rect.right &&
-      top >= rect.top &&
-      top < rect.bottom
-    ) {
-      const touch = e.changedTouches[0];
-      const x = touch.clientX - rect.left;
-      const y = touch.clientY - rect.top;
-      draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
-      draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
-      draggedItem.crossOrigin = 'anonymous';
-      nonImageArea.prepend(draggedItem);
-      draggedItem.style.left = ''; // スタイルをリセット
-      draggedItem.style.top = ''; // スタイルをリセット
-    }
-  });
+  //   if (
+  //     left >= rect.left &&
+  //     left < rect.right &&
+  //     top >= rect.top &&
+  //     top < rect.bottom
+  //   ) {
+  //     const touch = e.changedTouches[0];
+  //     const x = touch.clientX - rect.left;
+  //     const y = touch.clientY - rect.top;
+  //     draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
+  //     draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
+  //     draggedItem.crossOrigin = 'anonymous';
+  //     nonImageArea.prepend(draggedItem);
+  //     draggedItem.style.left = ''; // スタイルをリセット
+  //     draggedItem.style.top = ''; // スタイルをリセット
+  //   }
+  // });
 }
 
 draggableItems.forEach((item) => {
