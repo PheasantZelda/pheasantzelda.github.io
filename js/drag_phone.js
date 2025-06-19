@@ -121,27 +121,27 @@ draggableItemstext.forEach((item) => {
   item.addEventListener('touchend', handleTouchEnd);
 });
 
-function setItemDraggablePhone(img) {
-  // 例：タッチ開始・移動・終了イベントをimgに付与
-  img.addEventListener('touchstart', handleTouchStart);
-  img.addEventListener('touchmove', handleTouchMove);
-  img.addEventListener('touchend', handleTouchEnd);
-}
+// function setItemDraggablePhone(img) {
+//   // 例：タッチ開始・移動・終了イベントをimgに付与
+//   img.addEventListener('touchstart', handleTouchStart);
+//   img.addEventListener('touchmove', handleTouchMove);
+//   img.addEventListener('touchend', handleTouchEnd);
+// }
 
-popup.querySelector('.add-mu-box').onclick = function () {
-  const clone = box.cloneNode(true);
-  // 画像を削除
-  clone.querySelectorAll('.MU_result img').forEach((img) => img.remove());
-  // デフォルトの背景・フォント色を設定
-  const title = clone.querySelector('.MU_title');
-  title.style.background = 'linear-gradient(90deg, #3d3c3c, #6b696e)';
-  title.style.color = '#ffffff';
-  clone.querySelector('.MU_title p').textContent = 'New Tier';
-  box.after(clone);
-  setMUBoxDraggable([clone]);
-  // 追加：スマホ用タッチイベントも付与
-  clone
-    .querySelectorAll('.MU_result .item')
-    .forEach((img) => setItemDraggablePhone(img));
-  popup.remove();
+// popup.querySelector('.add-mu-box').onclick = function () {
+//   const clone = box.cloneNode(true);
+//   // 画像を削除
+//   clone.querySelectorAll('.MU_result img').forEach((img) => img.remove());
+//   // デフォルトの背景・フォント色を設定
+//   const title = clone.querySelector('.MU_title');
+//   title.style.background = 'linear-gradient(90deg, #3d3c3c, #6b696e)';
+//   title.style.color = '#ffffff';
+//   clone.querySelector('.MU_title p').textContent = 'New Tier';
+//   box.after(clone);
+//   setMUBoxDraggable([clone]);
+//   // 追加：スマホ用タッチイベントも付与
+//   clone
+//     .querySelectorAll('.MU_result .item')
+//     .forEach((img) => setItemDraggablePhone(img));
+//   popup.remove();
 };
