@@ -68,29 +68,29 @@ function handleTouchEnd(e) {
   });
 
   // nonImageAreasも同様に毎回取得し直す場合は、下記も修正してください
-  // document.querySelectorAll('.Fighter_box').forEach((nonImageArea) => {
-  //   const rect = nonImageArea.getBoundingClientRect();
+  document.querySelectorAll('.Fighter_box').forEach((nonImageArea) => {
+    const rect = nonImageArea.getBoundingClientRect();
 
-  //   let left = parseFloat(draggedItem.style.left) + startX;
-  //   let top = parseFloat(draggedItem.style.top) + startY;
+    let left = parseFloat(draggedItem.style.left) + startX;
+    let top = parseFloat(draggedItem.style.top) + startY;
 
-  //   if (
-  //     left >= rect.left &&
-  //     left < rect.right &&
-  //     top >= rect.top &&
-  //     top < rect.bottom
-  //   ) {
-  //     const touch = e.changedTouches[0];
-  //     const x = touch.clientX - rect.left;
-  //     const y = touch.clientY - rect.top;
-  //     draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
-  //     draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
-  //     draggedItem.crossOrigin = 'anonymous';
-  //     nonImageArea.prepend(draggedItem);
-  //     draggedItem.style.left = ''; // スタイルをリセット
-  //     draggedItem.style.top = ''; // スタイルをリセット
-  //   }
-  // });
+    if (
+      left >= rect.left &&
+      left < rect.right &&
+      top >= rect.top &&
+      top < rect.bottom
+    ) {
+      const touch = e.changedTouches[0];
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+      draggedItem.style.left = `${x - draggedItem.offsetWidth / 2}px`;
+      draggedItem.style.top = `${y - draggedItem.offsetHeight / 2}px`;
+      draggedItem.crossOrigin = 'anonymous';
+      nonImageArea.prepend(draggedItem);
+      draggedItem.style.left = ''; // スタイルをリセット
+      draggedItem.style.top = ''; // スタイルをリセット
+    }
+  });
 }
 
 draggableItems.forEach((item) => {
@@ -104,3 +104,10 @@ draggableItemstext.forEach((item) => {
   item.addEventListener('touchmove', handleTouchMove);
   item.addEventListener('touchend', handleTouchEnd);
 });
+
+// スマホ用ドラッグイベントを画像に付与する関数
+function setItemDraggablePhone(img) {
+  img.addEventListener('touchstart', handleTouchStart);
+  img.addEventListener('touchmove', handleTouchMove);
+  img.addEventListener('touchend', handleTouchEnd);
+}
