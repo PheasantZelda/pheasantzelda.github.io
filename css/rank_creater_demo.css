@@ -72,7 +72,7 @@
 
   /* シンプル＆小さめなボタンデザイン */
   .tierlist-action-btn {
-    display: none;
+    display: flex;
   }
 
   .custom-file-label {
