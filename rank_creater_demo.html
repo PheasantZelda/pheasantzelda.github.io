@@ -175,150 +175,17 @@
       </nav>
     </div>
     <div class="section">Tier表メーカー</div>
-    <div class="explain">
+    <!-- <div class="explain">
       <p>
-        <!-- 　キャラランクやMatch UPについて皆さんの意見を活発化するためにTier表メーカーを実装しました。
+        　キャラランクやMatch UPについて皆さんの意見を活発化するためにTier表メーカーを実装しました。
         タイトルと各行の名称はユーザー自身で編集することができます。
         各行の追加/削除は ROW ADD/DELETE の横のボタンをクリックすることで編集できます。
         また、フォントと背景は上部のカラーバーからカスタマイズすることができます。
         行の順番はドラッグ＆ドロップで移動可能です。 作成した画像はSAVEボタンからダウンロード可能です。
-        リセットボタンを押すと一度作成したものを初期化することができます。 -->
-        <!-- <br />　※ BG : Background (背景) -->
+        リセットボタンを押すと一度作成したものを初期化することができます。
+        <br />　※ BG : Background (背景)
       </p>
-    </div>
-    <!-- <div class="center_phone">
-      <button class="Save" type="button" id="exec_phone" name="exec_phone">
-        Save or Download
-      </button>
-      <button class="Reset" type="button">
-        <a href="./rank_creater.html">Reset</a>
-      </button>
     </div> -->
-    <!-- <div class="pc_ver"> -->
-    <!-- <div class="button_group">
-        <ul class="button_container">
-          <li class="button_list">
-            <p>ROW ADD/DELETE</p>
-          </li>
-          <li class="button_list">
-            <button class="buttons button1 clickon" id="STier" data-bg-area="A1"
-              style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
-              S +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button2 clickon" id="ATier" data-bg-area="A2"
-              style="background: linear-gradient(90deg, #ffa300, #ede404)">
-              A +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button3 clickon" id="BTier" data-bg-area="A3"
-              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
-              B +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button4 clickon" id="CTier" data-bg-area="A4"
-              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
-              C +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button5 clickon" id="DTier" data-bg-area="A5"
-              style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
-              D +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button6 clickon" id="ETier" data-bg-area="A6"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              E +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button7 clickoff" id="FTier" data-bg-area="A7"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              F +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button8 clickoff" id="GTier" data-bg-area="A8"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              G +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button9 clickoff" id="HTier" data-bg-area="A9"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              H +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button10 clickoff" id="ITier" data-bg-area="A10"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              I +/-
-            </button>
-          </li>
-        </ul>
-      </div> -->
-    <!-- <div class="color_group">
-        <ul class="color_container">
-          <li class="color_list">
-            <p>FONT COLOR<br />BG1 COLOR<br />BG2 COLOR</p>
-          </li>
-          <li class="color_list">
-            <input type="color" class="color_input" value="#ffffff" onChange="setFontColor1(this.value);" />
-            <input class="color_input" type="color" data-bg="1" value="#ff3331" />
-            <input class="color_input" type="color" data-bg="1" value="#ff7e21" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor2(this.value);" />
-            <input class="color_input" type="color" data-bg="2" value="#ffa300" />
-            <input class="color_input" type="color" data-bg="2" value="#ede404" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor3(this.value);" />
-            <input class="color_input" type="color" data-bg="3" value="#39f68f" />
-            <input class="color_input" type="color" data-bg="3" value="#c4e126" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor4(this.value);" />
-            <input class="color_input" type="color" data-bg="4" value="#3782f6" />
-            <input class="color_input" type="color" data-bg="4" value="#1cddeb" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor5(this.value);" />
-            <input class="color_input" type="color" data-bg="5" value="#4d3eff" />
-            <input class="color_input" type="color" data-bg="5" value="#8833ff" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor6(this.value);" />
-            <input class="color_input" type="color" data-bg="6" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="6" value="#6b696e" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor7(this.value);" />
-            <input class="color_input" type="color" data-bg="7" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="7" value="#6b696e" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor8(this.value);" />
-            <input class="color_input" type="color" data-bg="8" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="8" value="#6b696e" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor9(this.value);" />
-            <input class="color_input" type="color" data-bg="9" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="9" value="#6b696e" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor10(this.value);" />
-            <input class="color_input" type="color" data-bg="10" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="10" value="#6b696e" />
-          </li>
-        </ul>
-      </div> -->
     <div class="tierlist-action">
       <label class="custom-file-label">
         画像をアップロード
@@ -342,8 +209,6 @@
           </li>
           <li class="MU_result box"></li>
           <li class="MU_box_controls">
-            <!-- <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button> -->
             <button class="mu-box-settings" title="設定" tyle="width: 1em; height: 1em; vertical-align: middle;">
               <img src="img/common/gear.png" alt="設定">
             </button>
@@ -357,8 +222,6 @@
           </li>
           <li class="MU_result box"></li>
           <li class="MU_box_controls">
-            <!-- <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button> -->
             <button class="mu-box-settings" title="設定">
               <img src="img/common/gear.png" alt="設定">
             </button>
@@ -371,8 +234,6 @@
           </li>
           <li class="MU_result box"></li>
           <li class="MU_box_controls">
-            <!-- <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button> -->
             <button class="mu-box-settings" title="設定">
               <img src="img/common/gear.png" alt="設定">
             </button>
@@ -385,8 +246,6 @@
           </li>
           <li class="MU_result box"></li>
           <li class="MU_box_controls">
-            <!-- <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button> -->
             <button class="mu-box-settings" title="設定">
               <img src="img/common/gear.png" alt="設定">
             </button>
@@ -399,8 +258,6 @@
           </li>
           <li class="MU_result box"></li>
           <li class="MU_box_controls">
-            <!-- <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button> -->
             <button class="mu-box-settings" title="設定">
               <img src="img/common/gear.png" alt="設定">
             </button>
@@ -413,8 +270,6 @@
           </li>
           <li class="MU_result box"></li>
           <li class="MU_box_controls">
-            <!-- <button class="add-mu-box">＋</button>
-                <button class="remove-mu-box">－</button> -->
             <button class="mu-box-settings" title="設定">
               <img src="img/common/gear.png" alt="設定">
             </button>
@@ -423,15 +278,15 @@
       </div>
     </div>
 
-    <!-- <div class="center">
-        <button class="Save" type="button" id="exec" name="exec">
-          Save or Download
-        </button>
-        <button class="Reset" type="button">
-          <a href="./rank_creater.html">Reset</a>
-        </button>
+    <div class="center">
+      <button class="Save" type="button" id="exec" name="exec">
+        Save or Download
+      </button>
+      <button class="Reset" type="button">
+        <a href="./rank_creater.html">Reset</a>
+      </button>
 
-      </div> -->
+    </div>
 
     <div class="selector">
       <select class="extraction">
@@ -725,9 +580,9 @@
   <script src="./js/drag_free_pc.js"></script>
   <script src="./js/custom_image.js"></script>
   <script src="./js/save_load.js"></script>
-  <!-- <script src="./js/share_url.js"></script>
+  <script src="./js/share_url.js"></script>
   <script src="./js/custom_label.js"></script>
-  <script src="./js/auto_tierlist.js"></script> -->
+  <script src="./js/auto_tierlist.js"></script>
   <script src="./js/mu_box_control.js"></script>
   <!-- <script src="./js/drag_free_phone.js"></script> -->
   <!-- <script>

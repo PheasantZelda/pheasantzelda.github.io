@@ -64,7 +64,7 @@
     background: #444;
     color: #fff;
     border: none;
-    border-radius: 3%;
+    border-radius: 5%;
     font-size: 8px;
     cursor: pointer;
     padding: 0;
@@ -78,10 +78,10 @@
   .custom-file-label {
     background-color: rgb(73, 73, 73);
     color: rgb(255, 255, 255);
-    border-radius: 3%;
-    font-size: 10px;
-    padding: 9px 18px;
-    margin: 0 20px 6px 0;
+    border-radius: 5%;
+    font-size: 8px;
+    padding: 5px 10px;
+    margin: 0;
     cursor: pointer;
     transition: background 0.2s;
   }
