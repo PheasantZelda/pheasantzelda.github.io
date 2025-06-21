@@ -72,16 +72,29 @@
 
   /* シンプル＆小さめなボタンデザイン */
   .tierlist-action-btn {
-    display: flex;
+    background-color: rgb(73, 73, 73);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 2px;
+    font-size: 10px;
+    padding: 4px 8px;
+    margin: 0 8px 0px 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .tierlist-action-btn:hover {
+    background-color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
   }
 
   .custom-file-label {
     background-color: rgb(73, 73, 73);
     color: rgb(255, 255, 255);
-    border-radius: 5%;
-    font-size: 8px;
-    padding: 5px 10px;
-    margin: 0;
+    border-radius: 2px;
+    font-size: 10px;
+    padding: 7px 10px;
+    margin: 0 16px 0 0;
     cursor: pointer;
     transition: background 0.2s;
   }
