@@ -120,7 +120,13 @@ document.addEventListener('click', function (e) {
       popup.querySelector('.add-mu-box').onclick = function () {
         const clone = box.cloneNode(true);
         // 画像を削除
-        clone.querySelectorAll('.MU_result img').forEach((img) => img.remove());
+        clone
+          .querySelectorAll('.MU_result .item')
+          .forEach((img) => img.remove());
+        // text_boxを削除
+        clone
+          .querySelectorAll('.MU_result .text_box')
+          .forEach((div) => div.remove());
         // デフォルトの背景・フォント色を設定
         const title = clone.querySelector('.MU_title');
         title.style.background = 'linear-gradient(90deg, #3d3c3c, #6b696e)';

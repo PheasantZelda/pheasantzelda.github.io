@@ -26,8 +26,32 @@ function saveTierList() {
       });
     tierData.push(tier);
   });
+
+  // Fighter_table内の保存
+  const nonImageArea = document.getElementById('nonImageArea');
+  const fighterItems = [];
+  if (nonImageArea) {
+    nonImageArea.querySelectorAll('.item, .text_box').forEach((item) => {
+      if (item.classList.contains('item')) {
+        fighterItems.push({
+          type: 'img',
+          src: item.src,
+          alt: item.alt || '',
+          class: item.className || ''
+        });
+      } else if (item.classList.contains('text_box')) {
+        fighterItems.push({ type: 'text', text: item.innerText });
+      }
+    });
+  }
+
+  const saveObj = {
+    tierData: tierData,
+    fighterItems: fighterItems
+  };
+
   try {
-    localStorage.setItem('tierListData', JSON.stringify(tierData));
+    localStorage.setItem('tierListData', JSON.stringify(saveObj));
     alert('保存しました');
   } catch (e) {
     alert('保存に失敗しました（画像が多すぎる可能性があります）');
@@ -37,7 +61,9 @@ function saveTierList() {
 function loadTierList() {
   const data = localStorage.getItem('tierListData');
   if (!data) return alert('保存データがありません');
-  const tierData = JSON.parse(data);
+  const saveObj = JSON.parse(data);
+  const tierData = saveObj.tierData || [];
+  const fighterItems = saveObj.fighterItems || [];
 
   // 既存のMU_boxを全て削除
   document.querySelectorAll('.MU_box').forEach((box) => box.remove());
@@ -108,5 +134,38 @@ function loadTierList() {
     table.appendChild(ul);
     if (typeof setMUBoxDraggable === 'function') setMUBoxDraggable([ul]);
   });
+
+  // Fighter_table内の復元
+  const nonImageArea = document.getElementById('nonImageArea');
+  if (nonImageArea) {
+    // 既存のitem/text_boxを削除
+    nonImageArea
+      .querySelectorAll('.item, .text_box')
+      .forEach((el) => el.remove());
+    // 復元
+    fighterItems.forEach((item) => {
+      if (item.type === 'img') {
+        const img = document.createElement('img');
+        img.src = item.src;
+        img.alt = item.alt || '';
+        img.className = item.class || 'item';
+        img.draggable = true;
+        nonImageArea.appendChild(img);
+        if (typeof setItemDraggablePhone === 'function') {
+          setItemDraggablePhone(img);
+        }
+      } else if (item.type === 'text') {
+        const div = document.createElement('div');
+        div.className = 'text_box';
+        div.draggable = true;
+        const p = document.createElement('p');
+        p.className = 'text_content';
+        p.contentEditable = true;
+        p.innerText = item.text;
+        div.appendChild(p);
+        nonImageArea.appendChild(div);
+      }
+    });
+  }
   alert('復元しました');
 }
