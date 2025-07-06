@@ -31,7 +31,7 @@
   <link rel="apple-touch-icon" type="image/png" href="img/common/apple-touch-icon-180x180.png" />
   <link rel="icon" href="img/common/favicon.ico" />
   <!-- HTMLを画像に変換しダウンロードする -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
   <script language="JavaScript">
@@ -63,7 +63,7 @@
         }
       );
     }
-  </script>
+  </script> -->
   <!--画像を移動する-->
   <!-- <script>
     //◆◆◆ ドラッグ開始時処理 ◆◆◆
@@ -148,26 +148,26 @@
     </div>
   </div>
 </header>
-  <!--headerはここまで-->
+    <!--headerはここまで-->
 
-  <!--mainはここから-->
-  <main class="main">
-    <div class="title">
-      <img src="./img/common/Main.jpg" alt="SSBU" />
-      <h1>Tier表メーカー</h1>
-      <p>TIER-List MAKER</p>
-    </div>
-    <!--パンくずリスト-->
-    <div class="bread">
-      <nav>
-        <ol class="breadcrumb">
-          <li><a href="/">ホーム</a></li>
-          <li><a href="./rank_creater.html">Tier表メーカー</a></li>
-        </ol>
-      </nav>
-    </div>
-    <div class="section">Tier表メーカー</div>
-    <div class="explain">
+    <!--mainはここから-->
+    <main class="main">
+      <div class="title">
+        <img src="./img/common/Main.jpg" alt="SSBU" />
+        <h1>Tier表メーカー</h1>
+        <p>TIER-List MAKER</p>
+      </div>
+      <!--パンくずリスト-->
+      <div class="bread">
+        <nav>
+          <ol class="breadcrumb">
+            <li><a href="/">ホーム</a></li>
+            <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+          </ol>
+        </nav>
+      </div>
+      <div class="section">Tier表メーカー</div>
+      <!-- <div class="explain">
       <p>
         　キャラランクやMatch UPについて皆さんの意見を活発化するためにTier表メーカーを実装しました。
         タイトルと各行の名称はユーザー自身で編集することができます。
@@ -177,150 +177,24 @@
         リセットボタンを押すと一度作成したものを初期化することができます。
         <br />　※ BG : Background (背景)
       </p>
-    </div>
-    <div class="center_phone">
-      <button class="Save" type="button" id="exec_phone" name="exec_phone">
-        Save or Download
-      </button>
-      <button class="Reset" type="button">
-        <a href="./rank_creater.html">Reset</a>
-      </button>
-    </div>
-    <div class="pc_ver">
-      <div class="button_group">
-        <ul class="button_container">
-          <li class="button_list">
-            <p>ROW ADD/DELETE</p>
-          </li>
-          <li class="button_list">
-            <button class="buttons button1 clickon" id="STier" data-bg-area="A1"
-              style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
-              S +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button2 clickon" id="ATier" data-bg-area="A2"
-              style="background: linear-gradient(90deg, #ffa300, #ede404)">
-              A +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button3 clickon" id="BTier" data-bg-area="A3"
-              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
-              B +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button4 clickon" id="CTier" data-bg-area="A4"
-              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
-              C +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button5 clickon" id="DTier" data-bg-area="A5"
-              style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
-              D +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button6 clickon" id="ETier" data-bg-area="A6"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              E +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button7 clickoff" id="FTier" data-bg-area="A7"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              F +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button8 clickoff" id="GTier" data-bg-area="A8"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              G +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button9 clickoff" id="HTier" data-bg-area="A9"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              H +/-
-            </button>
-          </li>
-          <li class="button_list">
-            <button class="buttons button10 clickoff" id="ITier" data-bg-area="A10"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              I +/-
-            </button>
-          </li>
-        </ul>
-      </div>
-      <div class="color_group">
-        <ul class="color_container">
-          <li class="color_list">
-            <p>FONT COLOR<br />BG1 COLOR<br />BG2 COLOR</p>
-          </li>
-          <li class="color_list">
-            <input type="color" class="color_input" value="#ffffff" onChange="setFontColor1(this.value);" />
-            <input class="color_input" type="color" data-bg="1" value="#ff3331" />
-            <input class="color_input" type="color" data-bg="1" value="#ff7e21" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor2(this.value);" />
-            <input class="color_input" type="color" data-bg="2" value="#ffa300" />
-            <input class="color_input" type="color" data-bg="2" value="#ede404" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor3(this.value);" />
-            <input class="color_input" type="color" data-bg="3" value="#39f68f" />
-            <input class="color_input" type="color" data-bg="3" value="#c4e126" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor4(this.value);" />
-            <input class="color_input" type="color" data-bg="4" value="#3782f6" />
-            <input class="color_input" type="color" data-bg="4" value="#1cddeb" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor5(this.value);" />
-            <input class="color_input" type="color" data-bg="5" value="#4d3eff" />
-            <input class="color_input" type="color" data-bg="5" value="#8833ff" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor6(this.value);" />
-            <input class="color_input" type="color" data-bg="6" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="6" value="#6b696e" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor7(this.value);" />
-            <input class="color_input" type="color" data-bg="7" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="7" value="#6b696e" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor8(this.value);" />
-            <input class="color_input" type="color" data-bg="8" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="8" value="#6b696e" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor9(this.value);" />
-            <input class="color_input" type="color" data-bg="9" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="9" value="#6b696e" />
-          </li>
-          <li class="color_list">
-            <input class="color_input" type="color" value="#ffffff" onChange="setFontColor10(this.value);" />
-            <input class="color_input" type="color" data-bg="10" value="#3d3c3c" />
-            <input class="color_input" type="color" data-bg="10" value="#6b696e" />
-          </li>
-        </ul>
+    </div> -->
+      <div class="tierlist-action">
+        <label class="custom-file-label">
+          画像アップロード
+          <input type="file" id="customImageInput" accept="image/*" multiple style="display:none;">
+        </label>
+        <button class="tierlist-action-btn" onclick="saveTierList()">一時保存</button>
+        <button class="tierlist-action-btn" onclick="loadTierList()">リロード</button>
       </div>
       <div class="tierlist" id="canvas-box" name="canvas-box">
         <div class="MUTITLE">
-          <h2 contenteditable="plaintext-only">MU Table ✎</h2>
+          <h2 contenteditable="plaintext-only">MU Table</h2>
           <img src="./img/common/logo.png" alt="SSBU" />
         </div>
 
         <div class="MU_table">
-          <ul class="MU_box MU_box1" id="test1" draggable="true">
-            <li class="MU_title" data-bg-area="1" id="STier1"
-              style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
+          <ul class="MU_box" draggable="true">
+            <li class="MU_title" style="background: linear-gradient(90deg, #ff3331, #ff7e21)">
               <p contenteditable="plaintext-only">S Tier</p>
             </li>
             <li class="MU_result box">
@@ -328,11 +202,15 @@
 
               <!--ここまでデータ挿入-->
             </li>
+            <li class="MU_box_controls">
+              <button class="mu-box-settings" title="設定">
+                <img src="img/common/gear.png" alt="設定">
+              </button>
+            </li>
           </ul>
 
-          <ul class="MU_box MU_box2" id="test2" draggable="true">
-            <li class="MU_title" data-bg-area="2" id="ATier1"
-              style="background: linear-gradient(90deg, #ffa300, #ede404)">
+          <ul class="MU_box" draggable="true">
+            <li class="MU_title" style="background: linear-gradient(90deg, #ffa300, #ede404)">
               <p contenteditable="plaintext-only">A Tier</p>
             </li>
             <li class="MU_result box">
@@ -340,10 +218,14 @@
 
               <!--ここまでデータ挿入-->
             </li>
+            <li class="MU_box_controls">
+              <button class="mu-box-settings" title="設定">
+                <img src="img/common/gear.png" alt="設定">
+              </button>
+            </li>
           </ul>
-          <ul class="MU_box MU_box3" id="test3" draggable="true">
-            <li class="MU_title" data-bg-area="3" id="BTier1"
-              style="background: linear-gradient(90deg, #39f68f, #c4e126)">
+          <ul class="MU_box" draggable="true">
+            <li class="MU_title" style="background: linear-gradient(90deg, #39f68f, #c4e126)">
               <p contenteditable="plaintext-only">B Tier</p>
             </li>
             <li class="MU_result box">
@@ -351,10 +233,14 @@
 
               <!--ここまでデータ挿入-->
             </li>
+            <li class="MU_box_controls">
+              <button class="mu-box-settings" title="設定">
+                <img src="img/common/gear.png" alt="設定">
+              </button>
+            </li>
           </ul>
-          <ul class="MU_box MU_box4" id="test4" draggable="true">
-            <li class="MU_title" data-bg-area="4" id="CTier1"
-              style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
+          <ul class="MU_box" draggable="true">
+            <li class="MU_title" style="background: linear-gradient(90deg, #3782f6, #1cddeb)">
               <p contenteditable="plaintext-only">C Tier</p>
             </li>
             <li class="MU_result box">
@@ -362,10 +248,14 @@
 
               <!--ここまでデータ挿入-->
             </li>
+            <li class="MU_box_controls">
+              <button class="mu-box-settings" title="設定">
+                <img src="img/common/gear.png" alt="設定">
+              </button>
+            </li>
           </ul>
-          <ul class="MU_box MU_box5" id="test5" draggable="true">
-            <li class="MU_title" data-bg-area="5" id="DTier1"
-              style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
+          <ul class="MU_box" draggable="true">
+            <li class="MU_title" style="background: linear-gradient(90deg, #4d3eff, #8833ff)">
               <p contenteditable="plaintext-only">D Tier</p>
             </li>
             <li class="MU_result box">
@@ -373,79 +263,43 @@
 
               <!--ここまでデータ挿入-->
             </li>
+            <li class="MU_box_controls">
+              <button class="mu-box-settings" title="設定">
+                <img src="img/common/gear.png" alt="設定">
+              </button>
+            </li>
           </ul>
-          <ul class="MU_box MU_box6" id="test6" draggable="true">
-            <li class="MU_title" data-bg-area="6" id="ETier1"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
+          <ul class="MU_box" draggable="true">
+            <li class="MU_title" style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
               <p contenteditable="plaintext-only">E Tier</p>
             </li>
-            <li class="MU_result box">
-              <!--ここからデータ挿入-->
-
-              <!--ここまでデータ挿入-->
-            </li>
-          </ul>
-          <ul class="MU_boxx MU_box7" id="test7" draggable="true">
-            <li class="MU_title" data-bg-area="7" id="FTier1"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              <p contenteditable="plaintext-only">F Tier</p>
-            </li>
-            <li class="MU_result box">
-              <!--ここからデータ挿入-->
-
-              <!--ここまでデータ挿入-->
-            </li>
-          </ul>
-          <ul class="MU_boxx MU_box8" id="test8" draggable="true">
-            <li class="MU_title" data-bg-area="8" id="GTier1"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              <p contenteditable="plaintext-only">G Tier</p>
-            </li>
-            <li class="MU_result box">
-              <!--ここからデータ挿入-->
-
-              <!--ここまでデータ挿入-->
-            </li>
-          </ul>
-          <ul class="MU_boxx MU_box9" id="test9" draggable="true">
-            <li class="MU_title" data-bg-area="9" id="HTier1"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              <p contenteditable="plaintext-only">H Tier</p>
-            </li>
-            <li class="MU_result box">
-              <!--ここからデータ挿入-->
-
-              <!--ここまでデータ挿入-->
-            </li>
-          </ul>
-          <ul class="MU_boxx MU_box10" id="test10" draggable="true">
-            <li class="MU_title" data-bg-area="10" id="ITier1"
-              style="background: linear-gradient(90deg, #3d3c3c, #6b696e)">
-              <p contenteditable="plaintext-only">I Tier</p>
-            </li>
-            <li class="MU_result box">
-              <!--ここからデータ挿入-->
-
-              <!--ここまでデータ挿入-->
+            <li class="MU_result box"></li>
+            <li class="MU_box_controls">
+              <button class="mu-box-settings" title="設定">
+                <img src="img/common/gear.png" alt="設定">
+              </button>
             </li>
           </ul>
         </div>
       </div>
-      <div class="center">
-        <button class="Save" type="button" id="exec" name="exec">
-          Save or Download
-        </button>
-        <button class="Reset" type="button">
-          <a href="./rank_creater.html">Reset</a>
-        </button>
 
-      </div>
+      <!-- <div class="center">
+      <button class="Save" type="button" id="exec" name="exec">
+        Save or Download
+      </button>
+      <button class="Reset" type="button">
+        <a href="./rank_creater.html">Reset</a>
+      </button>
+
+    </div> -->
+
       <div class="selector">
         <select class="extraction">
           <option value="initial">基本</option>
           <option value="全て">全て</option>
           <option value="command">コマンド</option>
           <option value="stage">ステージ</option>
+          <option value="custom">追加アイテム</option>
           <option value="text_box">フリーワード</option>
           <option value="mario">01.マリオ</option>
           <option value="donkey_kong">02.ドンキーコング</option>
@@ -590,7 +444,7 @@
             <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/25.こどもリンク.png"
               alt="ファイター画像25.こどもリンク">
             <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/26.ガノンドルフ.png"
-              alt="ファイター画像26.ガノンドルフ">
+              alt="ファイター画像26.ガノンドロフ">
             <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/27.ミュウツー.png"
               alt="ファイター画像27.ミュウツー">
             <img loading="lazy" draggable="true" class="item initial" src="./img/fighter/28.ロイ.png" alt="ファイター画像28.ロイ">
@@ -2457,17 +2311,16 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- 画像変換 -->
-    <div>
+      <!-- 画像変換 -->
+      <!-- <div>
       <img id="image" name="image" src=" " class="IMG" />
       <a id="download" href="#" download=""></a>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/toggle-menu_rev.js"></script>
-  </main> <!--mainはここまで-->
+    </div> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="./js/toggle-menu_rev.js"></script>
+    </main> <!--mainはここまで-->
 
-  <!--footerはここから-->
+    <!--footerはここから-->
     <footer class="footer">
   <a class="footer-logo" href="./index.html">
     <img src="./img/common/logo.png" alt="SSBU">
@@ -2476,20 +2329,26 @@
   <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
       当サイトは個人が運営する非公式のWebサービスです。<br>
       任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-  <p class="copyright">ver13.0.0 2025/03/21<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
+  <p class="copyright">ver14.0.0 2025/07/06<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
 </footer>
-  <!--footerはここまで-->
-  <!--JS挿入部-->
-  <!--非表示機能-->
-  <script src="./js/canvas.js"></script>
-  <script src="./js/backgroundcolor.js"></script>
-  <script src="./js/drag_pc.js"></script>
-  <script src="./js/drag_box.js"></script>
-  <script src="./js/drag_phone.js"></script>
-  <script src="./js/select.js"></script>
-  <script src="./js/drag_free_pc.js"></script>
-  <!-- <script src="./js/drag_free_phone.js"></script> -->
-  <!-- <script>
+      <!--footerはここまで-->
+      <!--JS挿入部-->
+      <!--非表示機能-->
+      <!-- <script src="./js/canvas.js"></script> -->
+      <!-- <script src="./js/backgroundcolor.js"></script> -->
+      <script src="./js/drag_pc.js"></script>
+      <!-- <script src="./js/drag_box.js"></script> -->
+      <script src="./js/drag_phone.js"></script>
+      <script src="./js/select.js"></script>
+      <script src="./js/drag_free_pc.js"></script>
+      <script src="./js/custom_image.js"></script>
+      <script src="./js/save_load.js"></script>
+      <!-- <script src="./js/share_url.js"></script>
+  <script src="./js/custom_label.js"></script>
+  <script src="./js/auto_tierlist.js"></script> -->
+      <script src="./js/mu_box_control.js"></script>
+      <!-- <script src="./js/drag_free_phone.js"></script> -->
+      <!-- <script>
     window.onload = function () {
       // スクロールを禁止にする関数
       function disableScroll(event) {
@@ -2515,36 +2374,36 @@
       };
     };
   </script> -->
-  <!--ボタンのon/offデザイン-->
-  <script>
-    const btnElem1 = document.querySelectorAll(".clickon");
+      <!--ボタンのon/offデザイン-->
+      <script>
+        const btnElem1 = document.querySelectorAll(".clickon");
 
-    const initBtnTrigger1 = function () {
-      for (let i = 0; i < btnElem1.length; i++) {
-        btnElem1[i].addEventListener("click", function () {
-          this.classList.toggle("is-btnActive");
-        });
-      }
-    };
-    initBtnTrigger1();
-    const btnElem2 = document.querySelectorAll(".clickoff");
+        const initBtnTrigger1 = function () {
+          for (let i = 0; i < btnElem1.length; i++) {
+            btnElem1[i].addEventListener("click", function () {
+              this.classList.toggle("is-btnActive");
+            });
+          }
+        };
+        initBtnTrigger1();
+        const btnElem2 = document.querySelectorAll(".clickoff");
 
-    const initBtnTrigger2 = function () {
-      for (let i = 0; i < btnElem2.length; i++) {
-        btnElem2[i].addEventListener("click", function () {
-          this.classList.toggle("is-btnActive");
-        });
-      }
-    };
-    initBtnTrigger2();
-  </script>
-  <!--ローディング-->
-  <script>
-    window.onload = function () {
-      const spinner = document.getElementById("loading");
-      spinner.classList.add("loaded");
-    };
-  </script>
+        const initBtnTrigger2 = function () {
+          for (let i = 0; i < btnElem2.length; i++) {
+            btnElem2[i].addEventListener("click", function () {
+              this.classList.toggle("is-btnActive");
+            });
+          }
+        };
+        initBtnTrigger2();
+      </script>
+      <!--ローディング-->
+      <script>
+        window.onload = function () {
+          const spinner = document.getElementById("loading");
+          spinner.classList.add("loaded");
+        };
+      </script>
 </body>
 
 </html>

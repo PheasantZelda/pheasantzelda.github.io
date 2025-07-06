@@ -108,14 +108,14 @@ document.addEventListener('click', function (e) {
         if (prev && prev.classList.contains('MU_box')) {
           box.parentNode.insertBefore(box, prev);
         }
-        popup.remove();
+        // popup.remove(); // ← ポップアップを閉じないようにコメントアウト
       };
       popup.querySelector('.row-down').onclick = function () {
         const next = box.nextElementSibling;
         if (next && next.classList.contains('MU_box')) {
           box.parentNode.insertBefore(next, box);
         }
-        popup.remove();
+        // popup.remove(); // ← ポップアップを閉じないようにコメントアウト
       };
       popup.querySelector('.add-mu-box').onclick = function () {
         const clone = box.cloneNode(true);

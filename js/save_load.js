@@ -167,5 +167,22 @@ function loadTierList() {
       }
     });
   }
+
+  // ★ セレクトボックスを「基本」に戻す
+  const extractionSelect = document.querySelector('.extraction');
+  if (extractionSelect) {
+    extractionSelect.value = 'initial';
+    // changeイベントを発火して表示を更新
+    if (typeof $ === 'function') {
+      $(extractionSelect).trigger('change');
+    } else if ('createEvent' in document) {
+      var evt = document.createEvent('HTMLEvents');
+      evt.initEvent('change', false, true);
+      extractionSelect.dispatchEvent(evt);
+    } else {
+      extractionSelect.dispatchEvent(new Event('change'));
+    }
+  }
+
   alert('復元しました');
 }

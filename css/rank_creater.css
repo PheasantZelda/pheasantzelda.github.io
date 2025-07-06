@@ -3,8 +3,8 @@
 .tierlist {
   width: 1050px;
   background-color: #2c2a2a;
-  padding: 20px 0px;
-  margin-top: 25px;
+  padding: 0px 0px 20px 0px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
@@ -39,7 +39,7 @@
   justify-content: center;
   position: relative;
   align-items: center;
-  padding: 20px 0;
+  padding: 40px 0px 30px 0;
   line-height: 1.5;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .MU_table {
-  width: 1000px;
+  width: 1010px;
   margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
@@ -67,15 +67,15 @@
   flex: 1 1 auto;
 }
 
-.MU_box_phone {
+/* .MU_box_phone {
   display: flex;
   padding-top: 5px;
   flex: 1 1 auto;
-}
+} */
 
 .MU_title {
   padding: 3px;
-  width: 300px;
+  width: 280px;
   min-height: 68px;
   text-align: center;
   margin-right: 5px;
@@ -112,6 +112,93 @@
   position: relative;
   cursor: pointer;
   z-index: 2;
+}
+
+.MU_box_controls {
+  display: flex;
+  flex-direction: column;
+  /* 縦並び */
+  height: auto;
+  /* MU_boxの高さと必ず揃える */
+  pointer-events: auto;
+  width: 36px;
+  /* ボタン幅を固定（任意） */
+}
+
+.MU_box_controls button {
+  flex: auto;
+  margin-left: 20%;
+  width: auto;
+  /* 親の幅に合わせる */
+  background: #444;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mu-box-settings img {
+  width: 50%;
+}
+
+.mu-settings-popup button {
+  min-width: 32px;
+  min-height: 32px;
+  font-size: 18px;
+  margin: 0 2px;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mu-settings-popup button:hover {
+  background: #666;
+}
+
+/* ボタンを中央に配置 */
+.tierlist-action {
+  display: flex;
+  width: 1050px;
+  justify-content: right;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  /* 上右下左 */
+}
+
+/* シンプル＆小さめなボタンデザイン */
+.tierlist-action-btn {
+  background-color: rgb(73, 73, 73);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 0 0px 8px 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tierlist-action-btn:hover {
+  background-color: rgb(56, 56, 56);
+  color: rgb(255, 255, 255);
+}
+
+.custom-file-label {
+  background-color: rgb(73, 73, 73);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 11px 16px;
+  margin: 0 20px 8px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.custom-file-label:hover {
+  background-color: rgb(56, 56, 56);
 }
 
 /* 
@@ -174,11 +261,12 @@
   align-items: center;
 }
 
+/* 
 .center_phone {
   display: none;
-}
+} */
 
-.Save {
+/* .Save {
   margin-left: 190px;
   width: 100%;
   height: 40px;
@@ -212,7 +300,7 @@
 
 .Reset:hover {
   opacity: 0.8;
-}
+} */
 
 .IMG {
   max-width: 20%;
@@ -225,7 +313,7 @@
   margin-top: 50px;
 }
 
-.button_group {
+/* .button_group {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -256,7 +344,7 @@
 .buttons:hover {
   opacity: 0.8;
   transform: scale(0.9);
-}
+} */
 
 .clickoff {
   opacity: 0.5;
@@ -270,6 +358,7 @@
   opacity: 1;
 }
 
+/* 
 .color_group {
   display: flex;
   justify-content: center;
@@ -306,8 +395,9 @@
 
 .color_input:hover {
   opacity: 0.8;
-}
+} */
 
+/* 
 .MU_box1.is-hidden {
   display: none;
 }
@@ -362,11 +452,11 @@
   display: flex;
   margin-top: 5px;
   flex: 1 1 auto;
-}
+} */
 
-.controller {
+/* .controller {
   display: none;
-}
+} */
 
 /*
 .phone_ver {
@@ -522,11 +612,11 @@ select::-ms-expand {
     flex: 1 1 auto;
   }
 
-  .MU_box_phone {
+  /* .MU_box_phone {
     display: flex;
     padding-top: 2px;
     flex: 1 1 auto;
-  }
+  } */
 
   .MU_title {
     min-height: 25px;
@@ -641,6 +731,7 @@ select::-ms-expand {
     max-width: 12.5%;
   }
 
+  /* 
   .MU_box7.is-hidden {
     margin-top: 2px;
   }
@@ -655,7 +746,7 @@ select::-ms-expand {
 
   .MU_box10.is-hidden {
     margin-top: 2px;
-  }
+  } */
 
   .Fighter_Storage {
     max-width: 98%;
@@ -682,7 +773,7 @@ select::-ms-expand {
     max-width: 12%;
   } */
 
-  .controller {
+  /* .controller {
     display: none;
     text-align: center;
     padding-bottom: 0px;
@@ -778,11 +869,11 @@ select::-ms-expand {
     width: 20px;
     border-radius: 0px;
   }
-
+ */
   /* .pc_ver {
     display: none;
   } */
-
+  /* 
   .phone_ver {
     display: block;
   }
@@ -841,7 +932,7 @@ select::-ms-expand {
     display: flex;
     margin-top: 5px;
     flex: 1 1 auto;
-  }
+  } */
 
   .selector::after {
     content: '< >';
@@ -860,5 +951,61 @@ select::-ms-expand {
     padding: 0px 20px;
     font-size: 12px;
     border: 0.5px solid white;
+  }
+
+
+  .tierlist-action {
+    display: flex;
+    max-width: 98%;
+    justify-content: right;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    /* 上右下左 */
+  }
+
+  .MU_box_controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    /* MU_boxのmin-heightと同じ */
+    pointer-events: auto;
+    /* ボタンはクリック可 */
+  }
+
+  /* ボタンを縦3つ並び・高さ均等に */
+  .MU_box_controls button {
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5%;
+    font-size: 8px;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  /* シンプル＆小さめなボタンデザイン */
+  .tierlist-action-btn {
+    background-color: rgb(73, 73, 73);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 2px;
+    font-size: 10px;
+    padding: 4px 8px;
+    margin: 0 8px 0px 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .custom-file-label {
+    background-color: rgb(73, 73, 73);
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    font-size: 10px;
+    padding: 7px 10px;
+    margin: 0 16px 0 0;
+    cursor: pointer;
+    transition: background 0.2s;
   }
 }
