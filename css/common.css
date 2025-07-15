@@ -352,7 +352,7 @@ nav li.has-child ul ul {
 
 .section {
   width: 1000px;
-  height: 40px;
+  /* height: 40px; */
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -686,7 +686,7 @@ nav li.has-child ul ul {
   }
 
   .section {
-    height: 30px;
+    /* height: 30px; */
     max-width: 90%;
     margin-top: 10px;
     font-size: 20px;
