@@ -1,3 +1,8 @@
-./node_module
-./ejs
-./dest
+node_modules
+ejs
+dest
+dest_32期
+test_mu.html
+css/common_test.css
+.vscode/settings.json
+.gitignore
