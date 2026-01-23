@@ -264,7 +264,7 @@ const MATCHUP_DATA = {
       battles: 2312,
       win_rate: 48.66
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1530,
       win_rate: 52.16
     },
@@ -594,7 +594,7 @@ const MATCHUP_DATA = {
       battles: 3716,
       win_rate: 54.41
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 2580,
       win_rate: 44.46
     },
@@ -924,7 +924,7 @@ const MATCHUP_DATA = {
       battles: 2233,
       win_rate: 50.52
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1390,
       win_rate: 44.1
     },
@@ -1254,7 +1254,7 @@ const MATCHUP_DATA = {
       battles: 3612,
       win_rate: 54.9
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 2688,
       win_rate: 54.5
     },
@@ -1584,7 +1584,7 @@ const MATCHUP_DATA = {
       battles: 3137,
       win_rate: 52.31
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 2050,
       win_rate: 53.41
     },
@@ -1914,7 +1914,7 @@ const MATCHUP_DATA = {
       battles: 989,
       win_rate: 46.92
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 668,
       win_rate: 47.01
     },
@@ -2244,7 +2244,7 @@ const MATCHUP_DATA = {
       battles: 1507,
       win_rate: 45.06
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 956,
       win_rate: 51.78
     },
@@ -2574,7 +2574,7 @@ const MATCHUP_DATA = {
       battles: 1565,
       win_rate: 53.16
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1002,
       win_rate: 60.58
     },
@@ -2904,7 +2904,7 @@ const MATCHUP_DATA = {
       battles: 2480,
       win_rate: 50.28
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1551,
       win_rate: 36.94
     },
@@ -3234,7 +3234,7 @@ const MATCHUP_DATA = {
       battles: 2653,
       win_rate: 53.19
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1769,
       win_rate: 39.23
     },
@@ -3564,7 +3564,7 @@ const MATCHUP_DATA = {
       battles: 2409,
       win_rate: 46.16
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1866,
       win_rate: 52.52
     },
@@ -3894,7 +3894,7 @@ const MATCHUP_DATA = {
       battles: 889,
       win_rate: 56.92
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 685,
       win_rate: 55.04
     },
@@ -4224,7 +4224,7 @@ const MATCHUP_DATA = {
       battles: 752,
       win_rate: 57.98
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 510,
       win_rate: 46.67
     },
@@ -4554,7 +4554,7 @@ const MATCHUP_DATA = {
       battles: 1842,
       win_rate: 44.08
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1120,
       win_rate: 45.09
     },
@@ -4884,7 +4884,7 @@ const MATCHUP_DATA = {
       battles: 1722,
       win_rate: 52.38
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1082,
       win_rate: 25.79
     },
@@ -5214,7 +5214,7 @@ const MATCHUP_DATA = {
       battles: 587,
       win_rate: 51.96
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 408,
       win_rate: 65.69
     },
@@ -5544,7 +5544,7 @@ const MATCHUP_DATA = {
       battles: 1636,
       win_rate: 48.9
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1147,
       win_rate: 51.0
     },
@@ -5874,7 +5874,7 @@ const MATCHUP_DATA = {
       battles: 642,
       win_rate: 38.47
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 377,
       win_rate: 39.52
     },
@@ -6204,7 +6204,7 @@ const MATCHUP_DATA = {
       battles: 680,
       win_rate: 47.65
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 442,
       win_rate: 56.79
     },
@@ -6534,7 +6534,7 @@ const MATCHUP_DATA = {
       battles: 3214,
       win_rate: 48.16
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 2041,
       win_rate: 52.43
     },
@@ -6864,7 +6864,7 @@ const MATCHUP_DATA = {
       battles: 475,
       win_rate: 35.16
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 298,
       win_rate: 40.6
     },
@@ -7194,7 +7194,7 @@ const MATCHUP_DATA = {
       battles: 1325,
       win_rate: 38.79
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 936,
       win_rate: 42.84
     },
@@ -7524,7 +7524,7 @@ const MATCHUP_DATA = {
       battles: 905,
       win_rate: 63.31
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 580,
       win_rate: 38.97
     },
@@ -7854,7 +7854,7 @@ const MATCHUP_DATA = {
       battles: 2812,
       win_rate: 45.66
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1974,
       win_rate: 38.1
     },
@@ -8184,7 +8184,7 @@ const MATCHUP_DATA = {
       battles: 1089,
       win_rate: 51.24
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 760,
       win_rate: 52.24
     },
@@ -8514,7 +8514,7 @@ const MATCHUP_DATA = {
       battles: 1613,
       win_rate: 42.1
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1033,
       win_rate: 45.11
     },
@@ -8844,7 +8844,7 @@ const MATCHUP_DATA = {
       battles: 714,
       win_rate: 45.38
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 450,
       win_rate: 48.44
     },
@@ -9174,7 +9174,7 @@ const MATCHUP_DATA = {
       battles: 2419,
       win_rate: 52.25
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1606,
       win_rate: 50.12
     },
@@ -9504,7 +9504,7 @@ const MATCHUP_DATA = {
       battles: 1554,
       win_rate: 57.46
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 930,
       win_rate: 65.05
     },
@@ -9834,7 +9834,7 @@ const MATCHUP_DATA = {
       battles: 1520,
       win_rate: 45.86
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 972,
       win_rate: 58.95
     },
@@ -10164,7 +10164,7 @@ const MATCHUP_DATA = {
       battles: 1209,
       win_rate: 57.32
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 828,
       win_rate: 65.58
     },
@@ -10494,7 +10494,7 @@ const MATCHUP_DATA = {
       battles: 996,
       win_rate: 50.3
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 623,
       win_rate: 50.72
     },
@@ -10824,7 +10824,7 @@ const MATCHUP_DATA = {
       battles: 4835,
       win_rate: 55.62
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 3175,
       win_rate: 48.09
     },
@@ -11154,7 +11154,7 @@ const MATCHUP_DATA = {
       battles: 1918,
       win_rate: 41.5
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1198,
       win_rate: 41.24
     },
@@ -11484,7 +11484,7 @@ const MATCHUP_DATA = {
       battles: 1922,
       win_rate: 50.42
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1222,
       win_rate: 46.56
     },
@@ -11814,7 +11814,7 @@ const MATCHUP_DATA = {
       battles: 1563,
       win_rate: 53.55
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 940,
       win_rate: 54.47
     },
@@ -12144,7 +12144,7 @@ const MATCHUP_DATA = {
       battles: 1552,
       win_rate: 54.83
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1053,
       win_rate: 38.18
     },
@@ -12474,7 +12474,7 @@ const MATCHUP_DATA = {
       battles: 2309,
       win_rate: 52.01
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1559,
       win_rate: 62.48
     },
@@ -12804,7 +12804,7 @@ const MATCHUP_DATA = {
       battles: 2206,
       win_rate: 61.2
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1562,
       win_rate: 37.58
     },
@@ -13134,7 +13134,7 @@ const MATCHUP_DATA = {
       battles: 835,
       win_rate: 48.02
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 570,
       win_rate: 41.58
     },
@@ -13464,7 +13464,7 @@ const MATCHUP_DATA = {
       battles: 883,
       win_rate: 48.13
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 507,
       win_rate: 63.51
     },
@@ -13794,7 +13794,7 @@ const MATCHUP_DATA = {
       battles: 5024,
       win_rate: 57.64
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 3362,
       win_rate: 54.19
     },
@@ -14124,7 +14124,7 @@ const MATCHUP_DATA = {
       battles: 1330,
       win_rate: 60.83
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 845,
       win_rate: 40.71
     },
@@ -14454,7 +14454,7 @@ const MATCHUP_DATA = {
       battles: 1886,
       win_rate: 44.43
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1236,
       win_rate: 50.32
     },
@@ -14784,7 +14784,7 @@ const MATCHUP_DATA = {
       battles: 1200,
       win_rate: 57.42
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 824,
       win_rate: 52.67
     },
@@ -15114,7 +15114,7 @@ const MATCHUP_DATA = {
       battles: 1293,
       win_rate: 63.34
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 847,
       win_rate: 47.34
     },
@@ -15444,7 +15444,7 @@ const MATCHUP_DATA = {
       battles: 1836,
       win_rate: 55.01
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1195,
       win_rate: 48.79
     },
@@ -15774,7 +15774,7 @@ const MATCHUP_DATA = {
       battles: 746,
       win_rate: 50.13
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 477,
       win_rate: 40.04
     },
@@ -16104,7 +16104,7 @@ const MATCHUP_DATA = {
       battles: 1756,
       win_rate: 35.36
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1280,
       win_rate: 40.23
     },
@@ -16434,7 +16434,7 @@ const MATCHUP_DATA = {
       battles: 2922,
       win_rate: 49.21
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1908,
       win_rate: 55.82
     },
@@ -16764,7 +16764,7 @@ const MATCHUP_DATA = {
       battles: 761,
       win_rate: 47.17
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 567,
       win_rate: 52.38
     },
@@ -17094,7 +17094,7 @@ const MATCHUP_DATA = {
       battles: 830,
       win_rate: 53.25
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 604,
       win_rate: 50.66
     },
@@ -17424,7 +17424,7 @@ const MATCHUP_DATA = {
       battles: 692,
       win_rate: 61.85
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 487,
       win_rate: 45.59
     },
@@ -17754,7 +17754,7 @@ const MATCHUP_DATA = {
       battles: 2266,
       win_rate: 56.8
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1513,
       win_rate: 58.69
     },
@@ -18084,7 +18084,7 @@ const MATCHUP_DATA = {
       battles: 1921,
       win_rate: 53.2
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1359,
       win_rate: 38.56
     },
@@ -18414,7 +18414,7 @@ const MATCHUP_DATA = {
       battles: 2611,
       win_rate: 65.42
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1848,
       win_rate: 45.67
     },
@@ -18744,7 +18744,7 @@ const MATCHUP_DATA = {
       battles: 1678,
       win_rate: 33.02
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1012,
       win_rate: 53.46
     },
@@ -19074,7 +19074,7 @@ const MATCHUP_DATA = {
       battles: 2131,
       win_rate: 58.28
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1347,
       win_rate: 55.98
     },
@@ -19404,7 +19404,7 @@ const MATCHUP_DATA = {
       battles: 995,
       win_rate: 67.94
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 588,
       win_rate: 35.54
     },
@@ -19734,7 +19734,7 @@ const MATCHUP_DATA = {
       battles: 920,
       win_rate: 43.8
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 562,
       win_rate: 45.37
     },
@@ -20064,7 +20064,7 @@ const MATCHUP_DATA = {
       battles: 1729,
       win_rate: 40.37
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1233,
       win_rate: 44.77
     },
@@ -20394,7 +20394,7 @@ const MATCHUP_DATA = {
       battles: 3108,
       win_rate: 41.41
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1948,
       win_rate: 45.84
     },
@@ -20724,7 +20724,7 @@ const MATCHUP_DATA = {
       battles: 1256,
       win_rate: 45.94
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 882,
       win_rate: 40.36
     },
@@ -21054,7 +21054,7 @@ const MATCHUP_DATA = {
       battles: 2436,
       win_rate: 56.81
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1567,
       win_rate: 64.96
     },
@@ -21384,7 +21384,7 @@ const MATCHUP_DATA = {
       battles: 1407,
       win_rate: 58.49
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 921,
       win_rate: 51.36
     },
@@ -21714,7 +21714,7 @@ const MATCHUP_DATA = {
       battles: 1496,
       win_rate: 50.0
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1337,
       win_rate: 41.06
     },
@@ -22044,7 +22044,7 @@ const MATCHUP_DATA = {
       battles: 1337,
       win_rate: 58.94
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1032,
       win_rate: 50.0
     },
@@ -22374,7 +22374,7 @@ const MATCHUP_DATA = {
       battles: 1262,
       win_rate: 56.89
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 831,
       win_rate: 45.85
     },
@@ -22704,7 +22704,7 @@ const MATCHUP_DATA = {
       battles: 834,
       win_rate: 55.16
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 560,
       win_rate: 60.18
     },
@@ -23034,7 +23034,7 @@ const MATCHUP_DATA = {
       battles: 1090,
       win_rate: 40.0
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 769,
       win_rate: 36.02
     },
@@ -23364,7 +23364,7 @@ const MATCHUP_DATA = {
       battles: 1032,
       win_rate: 57.85
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 764,
       win_rate: 41.49
     },
@@ -23694,7 +23694,7 @@ const MATCHUP_DATA = {
       battles: 2425,
       win_rate: 45.44
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1565,
       win_rate: 53.04
     },
@@ -24024,7 +24024,7 @@ const MATCHUP_DATA = {
       battles: 2968,
       win_rate: 42.55
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 2047,
       win_rate: 47.53
     },
@@ -24354,7 +24354,7 @@ const MATCHUP_DATA = {
       battles: 1339,
       win_rate: 55.49
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 918,
       win_rate: 58.06
     },
@@ -24684,7 +24684,7 @@ const MATCHUP_DATA = {
       battles: 2582,
       win_rate: 42.37
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1651,
       win_rate: 42.82
     },
@@ -25014,7 +25014,7 @@ const MATCHUP_DATA = {
       battles: 1840,
       win_rate: 48.1
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1228,
       win_rate: 47.31
     },
@@ -25344,7 +25344,7 @@ const MATCHUP_DATA = {
       battles: 4560,
       win_rate: 52.21
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 3210,
       win_rate: 60.16
     },
@@ -25674,7 +25674,7 @@ const MATCHUP_DATA = {
       battles: 5890,
       win_rate: 51.31
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 3756,
       win_rate: 38.68
     },
@@ -26004,7 +26004,7 @@ const MATCHUP_DATA = {
       battles: 2301,
       win_rate: 49.5
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1541,
       win_rate: 45.3
     },
@@ -26334,7 +26334,7 @@ const MATCHUP_DATA = {
       battles: 4140,
       win_rate: 40.6
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 2592,
       win_rate: 55.4
     },
@@ -26664,7 +26664,7 @@ const MATCHUP_DATA = {
       battles: 5100,
       win_rate: 51.86
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 3517,
       win_rate: 39.07
     },
@@ -26994,7 +26994,7 @@ const MATCHUP_DATA = {
       battles: 1932,
       win_rate: 58.39
     },
-    リヒター: {
+    シモン_リヒター: {
       battles: 1276,
       win_rate: 43.65
     },
