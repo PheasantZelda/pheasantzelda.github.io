@@ -17,7 +17,6 @@
 
 .Link img {
   height: 55px;
-
 }
 
 .Link dt {
@@ -85,7 +84,7 @@
 .service__body P {
   line-height: 2;
   text-align: left;
-  font-size: 15px
+  font-size: 15px;
 }
 
 .service__body h2 {
@@ -145,7 +144,7 @@
 
 .service-list__item::before,
 .service-list__item::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -3px;
   width: calc(100% + 6px);
@@ -172,7 +171,7 @@
 
 .service-list__item:hover::after,
 .service-list__item:hover::before {
-  transform: scale(1.0);
+  transform: scale(1);
 }
 
 .service-list__item:hover {
@@ -195,7 +194,9 @@
 }
 
 @keyframes color-change {
-  0%, 100% {
+
+  0%,
+  100% {
     color: #ff1493;
   }
 
@@ -204,17 +205,16 @@
   }
 
   50% {
-    color: #0091EA;
+    color: #0091ea;
   }
 
   75% {
     color: #9400d3;
   }
-
 }
 
 .service-list__text {
-  line-height: 1.0em;
+  line-height: 1em;
 }
 
 .service-list__text p {
@@ -225,7 +225,6 @@
 .footer {
   margin-top: 40px;
 }
-
 
 /*１周年記念*/
 .release {
@@ -258,11 +257,11 @@
 
 @keyframes scrollAnime {
   0% {
-    transform: translateX(0)
+    transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-100%)
+    transform: translateX(-100%);
   }
 }
 
@@ -407,7 +406,7 @@ span {
   .service-list__item {
     padding: 20px 15px;
     border-radius: 0px;
-    line-height: 1.0;
+    line-height: 1;
     color: white;
     /*     background-color: #292b2c;
     box-shadow: 8px 8px 16px rgb(194, 11, 11);
@@ -427,7 +426,7 @@ span {
   }
 
   .service-list__text {
-    line-height: 1.0em;
+    line-height: 1em;
   }
 
   .service-list__text p {
@@ -437,7 +436,6 @@ span {
 
   .Link img {
     height: 40px;
-
   }
 
   .Link td {
@@ -459,8 +457,7 @@ span {
     line-height: 20px;
   }
 
-
-  /* ２周年企画 */
+  /* ２周年企画（削除済み） */
   #full-overlay .inner img {
     width: 90%;
   }
@@ -483,5 +480,4 @@ span {
     top: 15%;
     width: 12%;
   }
-
 }
