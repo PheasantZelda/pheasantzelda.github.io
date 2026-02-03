@@ -398,6 +398,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 recommendedSubsList.appendChild(card);
             });
         }
+        // Update Share Button
+        const shareBtn = document.getElementById('share-btn');
+        if (shareBtn) {
+            let tweetText = `【スマアナ サブ補完チェッカー】\nメイン: ${mainChar}\n`;
+            
+            if (weakOpponents.length === 0) {
+                tweetText += `苦手な相手はいません！最強です！\n`;
+            } else {
+                tweetText += `苦手: ${weakOpponents.slice(0, 3).map(o => o.name).join(', ')}${weakOpponents.length > 3 ? '...' : ''}\n`;
+            }
+
+            if (recommendedSubs.length > 0) {
+                tweetText += `おすすめサブ: ${recommendedSubs.slice(0, 3).map(s => s.name).join(', ')}\n`;
+            } else {
+                tweetText += `おすすめサブは見つかりませんでした...\n`;
+            }
+
+            tweetText += `#スマアナ #スマブラSP\n`;
+            tweetText += `https://pheasantzelda.github.io/sub_character.html`;
+
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+            shareBtn.href = twitterUrl;
+        }
     }
 
     // Modal functions
