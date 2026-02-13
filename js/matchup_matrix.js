@@ -1,6 +1,6 @@
 /**
  * Matchup Matrix - Interactive Heatmap
- * キャラ相性マトリックス（ヒートマップ）
+ * キャラ相性ヒートマップ（ヒートマップ）
  */
 
 (function () {
@@ -305,11 +305,15 @@
     const img2 = document.getElementById('modal-fighter2-img');
     if (page1) {
       img1.style.cursor = 'pointer';
-      img1.onclick = () => { window.location.href = page1; };
+      img1.onclick = () => {
+        window.location.href = page1;
+      };
     }
     if (page2) {
       img2.style.cursor = 'pointer';
-      img2.onclick = () => { window.location.href = page2; };
+      img2.onclick = () => {
+        window.location.href = page2;
+      };
     }
 
     document.getElementById('modal-winrate').textContent =
@@ -372,23 +376,23 @@
 
     // Instead of transform scale, adjust the font size and cell padding/size
     // Base font size approx 12px at 100%
-    const newFontSize = Math.max(5, 12 * (currentZoom / 100)); 
+    const newFontSize = Math.max(5, 12 * (currentZoom / 100));
     // Allow going down to 4px minimum if zoom is low enough
     const newCellSize = Math.max(4, 40 * (currentZoom / 100));
-    
+
     matrixTable.style.fontSize = `${newFontSize}px`;
-    
+
     // Hide text if zoom is below 60%
     if (currentZoom < 60) {
       matrixTable.classList.add('zoom-text-hidden');
       const cells = matrixTable.querySelectorAll('td');
-      cells.forEach(cell => cell.classList.add('text-hidden'));
+      cells.forEach((cell) => cell.classList.add('text-hidden'));
     } else {
       matrixTable.classList.remove('zoom-text-hidden');
       const cells = matrixTable.querySelectorAll('td');
-      cells.forEach(cell => cell.classList.remove('text-hidden'));
+      cells.forEach((cell) => cell.classList.remove('text-hidden'));
     }
-    
+
     // Update CSS variables if possible, or iterate cells (less efficient)
     // Here we will set styles on the table that CSS can use, or update classes
     // Let's modify the css to use variables or just inline style for now for simplicity on the table
@@ -406,19 +410,19 @@
         box-sizing: border-box !important;
       }
       .matrix-table th img {
-        width: ${Math.max(4, 32 * (currentZoom/100))}px !important;
-        height: ${Math.max(4, 32 * (currentZoom/100))}px !important;
+        width: ${Math.max(4, 32 * (currentZoom / 100))}px !important;
+        height: ${Math.max(4, 32 * (currentZoom / 100))}px !important;
         object-fit: cover !important;
       }
     `;
-    
+
     const existingStyle = document.getElementById('zoom-style');
     if (existingStyle) {
       existingStyle.replaceWith(style);
     } else {
       document.head.appendChild(style);
     }
-    
+
     // Remove transform
     matrixTable.style.transform = '';
     matrixTable.style.transformOrigin = '';
@@ -469,7 +473,7 @@
       if (e.key === 'Escape') {
         if (modal.style.display === 'flex') closeModal();
         if (filterModal.style.display === 'flex') closeFilterModal();
-      } 
+      }
     });
   }
 
@@ -486,31 +490,31 @@
 
   function populateFighterCheckboxes() {
     fighterListContainer.innerHTML = '';
-    
-    fighters.forEach(fighter => {
+
+    fighters.forEach((fighter) => {
       const isChecked = selectedFighters.includes(fighter);
-      
+
       const item = document.createElement('div');
       item.className = 'checkbox-item';
-      
+
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.id = `fighter-${fighter}`;
       checkbox.value = fighter;
       checkbox.checked = isChecked;
-      
+
       const label = document.createElement('label');
       label.htmlFor = `fighter-${fighter}`;
       label.className = 'fighter-label';
       label.textContent = fighter;
-      
+
       // Allow clicking the wrapper to toggle
       item.addEventListener('click', (e) => {
         if (e.target !== checkbox && e.target !== label) {
           checkbox.checked = !checkbox.checked;
         }
       });
-      
+
       item.appendChild(checkbox);
       item.appendChild(label);
       fighterListContainer.appendChild(item);
@@ -518,34 +522,40 @@
   }
 
   function handleSelectAll() {
-    const checkboxes = fighterListContainer.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(cb => cb.checked = true);
+    const checkboxes = fighterListContainer.querySelectorAll(
+      'input[type="checkbox"]'
+    );
+    checkboxes.forEach((cb) => (cb.checked = true));
   }
 
   function handleDeselectAll() {
-    const checkboxes = fighterListContainer.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(cb => cb.checked = false);
+    const checkboxes = fighterListContainer.querySelectorAll(
+      'input[type="checkbox"]'
+    );
+    checkboxes.forEach((cb) => (cb.checked = false));
   }
 
   function applyFilter() {
-    const checkboxes = fighterListContainer.querySelectorAll('input[type="checkbox"]');
+    const checkboxes = fighterListContainer.querySelectorAll(
+      'input[type="checkbox"]'
+    );
     const newSelection = [];
-    
-    checkboxes.forEach(cb => {
+
+    checkboxes.forEach((cb) => {
       if (cb.checked) {
         newSelection.push(cb.value);
       }
     });
-    
+
     if (newSelection.length === 0) {
       alert('少なくとも1体のファイターを選択してください。');
       return;
     }
-    
+
     // Sort selected based on original fighters order
-    selectedFighters = fighters.filter(f => newSelection.includes(f));
+    selectedFighters = fighters.filter((f) => newSelection.includes(f));
     activeFighters = [...selectedFighters];
-    
+
     buildMatrix();
     closeFilterModal();
   }
@@ -554,8 +564,12 @@
    * Initialize
    */
   function init() {
-    console.log('Matchup Matrix: Initializing with', fighters.length, 'fighters');
-    
+    console.log(
+      'Matchup Matrix: Initializing with',
+      fighters.length,
+      'fighters'
+    );
+
     buildMatrix();
     initModalEvents();
 
@@ -563,7 +577,7 @@
     winrateFilter.addEventListener('change', handleFilter);
     zoomSlider.addEventListener('input', handleZoom);
     resetBtn.addEventListener('click', handleReset);
-    
+
     // Event listeners for fighter selection
     filterBtn.addEventListener('click', openFilterModal);
     selectAllBtn.addEventListener('click', handleSelectAll);
