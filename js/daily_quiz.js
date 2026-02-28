@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "クッパJr.",
             "リトルマック"
         ],
-        "answer": 2,
+        "answer": 0,
         "refLink": "./parameter/parameter1.html#最大落下速度"
     },
     {
@@ -893,7 +893,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "リドリー",
             "クッパ"
         ],
-        "answer": 3,
+        "answer": 1,
         "refLink": "./parameter/parameter1.html#その場掴み長さ"
     },
     {
@@ -1278,7 +1278,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ホムラ",
             "ルキナ"
         ],
-        "answer": 0,
+        "answer": 2,
         "refLink": "./parameter/parameter2.html#下強発生F"
     },
     {
@@ -1553,7 +1553,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ファルコ",
             "ロックマン"
         ],
-        "answer": 0,
+        "answer": 2,
         "refLink": "./parameter/parameter3.html#空N全体F"
     },
     {
@@ -1751,7 +1751,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ドクターマリオ",
             "トゥーンリンク"
         ],
-        "answer": 2,
+        "answer": 3,
         "refLink": "./parameter/parameter3.html#空後全体F"
     },
     {
@@ -1762,7 +1762,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "しずえ",
             "バンジョー＆カズーイ"
         ],
-        "answer": 2,
+        "answer": 0,
         "refLink": "./parameter/parameter3.html#空後全体F"
     },
     {
@@ -2021,10 +2021,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "下スマ全体Fが2番目に小さいファイターは？",
         "options": [
-            "Mr.ゲーム&ウォッチ",
+            "ピクミン＆オリマー",
             "ゼルダ",
-            "メタナイト",
-            "ルイージ"
+            "ピット/ブラックピット",
+            "テリー"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#下スマ全体F"
@@ -2048,7 +2048,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "カムイ",
             "格闘Mii"
         ],
-        "answer": 0,
+        "answer": 2,
         "refLink": "./parameter/parameter1.html#空中加速"
     },
     {
@@ -2076,7 +2076,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "最大ダッシュ速度が2番目に小さいファイターは？",
         "options": [
-            "ルフレ",
+            "ソニック",
             "ガオガエン",
             "プリン",
             "ガノンドルフ"
@@ -2121,7 +2121,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "シールドサイズが3番目に小さいファイターは？",
         "options": [
             "ネス",
-            "リュカ",
+            "キングクルール",
             "ピカチュウ",
             "ピチュー"
         ],
@@ -2133,8 +2133,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "メタナイト",
             "リュウ",
-            "ドクターマリオ",
-            "ケン"
+            "ルキナ",
+            "ピーチ/デイジー"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#下スマ発生F"
@@ -2319,8 +2319,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "崖掴まり姿勢が3番目に大きいファイターは？",
         "options": [
             "フシギソウ",
-            "クッパJr.",
-            "ダックハント",
+            "ソニック",
+            "ガノンドルフ",
             "ピチュー"
         ],
         "answer": 0,
@@ -2353,7 +2353,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ゲッコウガ",
             "フォックス",
-            "マルス",
+            "ゼロスーツサムス",
             "ルキナ"
         ],
         "answer": 3,
@@ -2367,7 +2367,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "シモン/リヒター",
             "ロゼッタ＆チコ"
         ],
-        "answer": 0,
+        "answer": 2,
         "refLink": "./parameter/parameter1.html#攻撃上がり距離"
     },
     {
@@ -2516,8 +2516,8 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空上全体Fが3番目に小さいファイターは？",
         "options": [
-            "ルイージ",
-            "ピカチュウ",
+            "スティーブ",
+            "ゼニガメ",
             "クッパJr.",
             "ピチュー"
         ],
@@ -2560,7 +2560,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空上着地隙が3番目に大きいファイターは？",
         "options": [
-            "ピクミン＆オリマー",
+            "ゼロスーツサムス",
             "クッパ",
             "ロックマン",
             "サムス/ダークサムス"
@@ -2584,7 +2584,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ジョーカー",
             "ホムラ",
-            "ゲッコウガ",
+            "リトルマック",
             "シュルク"
         ],
         "answer": 0,
@@ -2615,10 +2615,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "下スマ発生Fが3番目に小さいファイターは？",
         "options": [
-            "ゼルダ",
-            "ドクターマリオ",
+            "メタナイト",
+            "ルキナ",
             "ケン",
-            "リュウ"
+            "ピーチ/デイジー"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter2.html#下スマ発生F"
@@ -2804,7 +2804,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ロックマン",
             "スネーク",
-            "リザードン",
+            "ミェンミェン",
             "ピチュー"
         ],
         "answer": 0,
@@ -2827,7 +2827,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ガノンドルフ",
             "射撃Mii",
             "ルフレ",
-            "プリン"
+            "ソニック"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter1.html#最大ダッシュ速度"
@@ -3027,15 +3027,15 @@ document.addEventListener('DOMContentLoaded', function () {
             "ホムラ",
             "ピチュー"
         ],
-        "answer": 1,
+        "answer": 2,
         "refLink": "./parameter/parameter2.html#上強全体F"
     },
     {
         "question": "空前発生Fが3番目に小さいファイターは？",
         "options": [
-            "ゼニガメ",
-            "ソニック",
-            "ワリオ",
+            "マルス",
+            "ルキナ",
+            "ロボット",
             "パックマン"
         ],
         "answer": 3,
@@ -3115,7 +3115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ファルコ",
             "カムイ"
         ],
-        "answer": 1,
+        "answer": 2,
         "refLink": "./parameter/parameter1.html#最大落下速度"
     },
     {
@@ -3244,8 +3244,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ケン",
             "リュカ",
-            "ロボット",
-            "ネス"
+            "リュウ",
+            "フシギソウ"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#下強発生F"
@@ -3299,7 +3299,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ヒカリ",
             "しずえ",
-            "メタナイト",
+            "ピーチ/デイジー",
             "インクリング"
         ],
         "answer": 1,
@@ -3309,7 +3309,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空下発生Fが3番目に大きいファイターは？",
         "options": [
             "射撃Mii",
-            "デデデ",
+            "スネーク",
             "ベレトス",
             "スティーブ"
         ],
@@ -3341,7 +3341,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "その場掴み発生が2番目に大きいファイターは？",
         "options": [
-            "ゼロスーツサムス",
+            "マリオ",
             "ミェンミェン",
             "ヨッシー",
             "サムス/ダークサムス"
@@ -3412,7 +3412,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "リュカ",
             "ダックハント"
         ],
-        "answer": 1,
+        "answer": 0,
         "refLink": "./parameter/parameter1.html#ダッシュ初速度"
     },
     {
@@ -3508,8 +3508,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ピクミン＆オリマー",
             "ルイージ",
-            "Mr.ゲーム&ウォッチ",
-            "ゼルダ"
+            "ピット/ブラックピット",
+            "テリー"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#下スマ全体F"
@@ -3517,10 +3517,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "最大落下速度が2番目に大きいファイターは？",
         "options": [
-            "パックンフラワー",
+            "格闘Mii",
             "リトルマック",
             "フォックス",
-            "デデデ"
+            "ピチュー"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter1.html#最大落下速度"
@@ -3595,7 +3595,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "小ジャンプ高さが2番目に小さいファイターは？",
         "options": [
             "プリン",
-            "セフィロス",
+            "ゲッコウガ",
             "スティーブ",
             "ロックマン"
         ],
@@ -3610,7 +3610,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "むらびと",
             "ルカリオ"
         ],
-        "answer": 0,
+        "answer": 1,
         "refLink": "./parameter/parameter2.html#横強全体F"
     },
     {
@@ -3628,7 +3628,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空中加速が2番目に小さいファイターは？",
         "options": [
             "ガノンドルフ",
-            "スネーク",
+            "プリン",
             "シモン/リヒター",
             "リトルマック"
         ],
@@ -3638,8 +3638,8 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空上着地隙が2番目に小さいファイターは？",
         "options": [
-            "ゼニガメ",
-            "テリー",
+            "ワリオ",
+            "ルイージ",
             "インクリング",
             "ゼロスーツサムス"
         ],
@@ -3687,7 +3687,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ロゼッタ＆チコ",
             "ゼルダ"
         ],
-        "answer": 3,
+        "answer": 2,
         "refLink": "./parameter/parameter3.html#空下着地隙"
     },
     {
@@ -3847,10 +3847,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "下強全体Fが3番目に小さいファイターは？",
         "options": [
-            "ケン",
+            "ネス",
             "リュウ",
             "ルイージ",
-            "ロボット"
+            "リュカ"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#下強全体F"
@@ -3947,9 +3947,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "重力が3番目に小さいファイターは？",
         "options": [
             "カービィ",
-            "ロゼッタ＆チコ",
+            "フォックス",
             "スティーブ",
-            "ソラ"
+            "ゲッコウガ"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter1.html#重力"
@@ -4003,7 +4003,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "クッパ",
             "フシギソウ",
-            "バンジョー＆カズーイ",
+            "ロックマン",
             "パックンフラワー"
         ],
         "answer": 1,
@@ -4045,7 +4045,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "下スマ発生Fが3番目に大きいファイターは？",
         "options": [
-            "セフィロス",
+            "メタナイト",
             "キングクルール",
             "ミュウツー",
             "リュカ"
@@ -4056,8 +4056,8 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "上スマ発生Fが2番目に小さいファイターは？",
         "options": [
-            "ピット/ブラックピット",
-            "リザードン",
+            "ファルコ",
+            "クッパJr.",
             "キングクルール",
             "ディディーコング"
         ],
@@ -4090,7 +4090,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "崖掴まり姿勢が2番目に大きいファイターは？",
         "options": [
             "クッパJr.",
-            "ピクミン＆オリマー",
+            "ソニック",
             "ピチュー",
             "フシギソウ"
         ],
@@ -4144,8 +4144,8 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空後着地隙が2番目に小さいファイターは？",
         "options": [
-            "リンク",
-            "マリオ",
+            "アイスクライマー",
+            "シーク",
             "こどもリンク",
             "ミェンミェン"
         ],
@@ -4157,7 +4157,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ロックマン",
             "クッパ",
-            "キングクルール",
+            "トゥーンリンク",
             "リンク"
         ],
         "answer": 0,
@@ -4179,7 +4179,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "リュカ",
             "シーク",
-            "ゼニガメ",
+            "ミェンミェン",
             "こどもリンク"
         ],
         "answer": 3,
@@ -4243,10 +4243,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空N着地隙が2番目に大きいファイターは？",
         "options": [
-            "スネーク",
+            "ロックマン",
             "クッパ",
             "バンジョー＆カズーイ",
-            "フシギソウ"
+            "スティーブ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter3.html#空N着地隙"
@@ -4255,8 +4255,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空上発生Fが3番目に大きいファイターは？",
         "options": [
             "シモン/リヒター",
-            "ゼルダ",
-            "シュルク",
+            "マリオ",
+            "シーク",
             "セフィロス"
         ],
         "answer": 0,
@@ -4298,9 +4298,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "DA 発生Fが2番目に小さいファイターは？",
         "options": [
-            "フォックス",
+            "シーク",
             "ルイージ",
-            "フシギソウ",
+            "ワリオ",
             "プリン"
         ],
         "answer": 1,
@@ -4336,7 +4336,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "リュウ",
             "ケン"
         ],
-        "answer": 3,
+        "answer": 2,
         "refLink": "./parameter/parameter2.html#横強全体F"
     },
     {
@@ -4453,7 +4453,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "重さが3番目に大きいファイターは？",
         "options": [
             "キングクルール",
-            "デデデ",
+            "クッパ",
             "ドンキーコング",
             "ガノンドルフ"
         ],
@@ -4475,8 +4475,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "ダッシュ加速量が2番目に小さいファイターは？",
         "options": [
             "カムイ",
-            "アイク",
-            "シュルク",
+            "ルカリオ",
+            "ディディーコング",
             "ルフレ"
         ],
         "answer": 0,
@@ -4488,7 +4488,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "バンジョー＆カズーイ",
             "ベレトス",
             "スティーブ",
-            "キングクルール"
+            "リュウ"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#下強発生F"
@@ -4497,7 +4497,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空下着地隙が2番目に小さいファイターは？",
         "options": [
             "インクリング",
-            "しずえ",
+            "ヒカリ",
             "メタナイト",
             "ピーチ/デイジー"
         ],
@@ -4575,7 +4575,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ロックマン",
             "ミュウツー",
-            "ワリオ",
+            "ゲッコウガ",
             "プリン"
         ],
         "answer": 3,
@@ -4584,10 +4584,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "歩行加速量が3番目に小さいファイターは？",
         "options": [
-            "パックンフラワー",
+            "ケン",
             "キングクルール",
             "バンジョー＆カズーイ",
-            "セフィロス"
+            "リュウ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter1.html#歩行加速量"
@@ -4617,9 +4617,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "上強発生Fが3番目に小さいファイターは？",
         "options": [
-            "ケン",
+            "カービィ",
             "ゼロスーツサムス",
-            "フォックス",
+            "リトルマック",
             "リュカ"
         ],
         "answer": 1,
@@ -4630,7 +4630,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "スネーク",
             "ゼニガメ",
-            "リトルマック",
+            "ピチュー",
             "カービィ"
         ],
         "answer": 0,
@@ -4677,7 +4677,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "キャプテン・ファルコン",
             "フォックス"
         ],
-        "answer": 1,
+        "answer": 0,
         "refLink": "./parameter/parameter3.html#空N着地隙"
     },
     {
@@ -4706,7 +4706,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "急降下速度が2番目に大きいファイターは？",
         "options": [
             "フォックス",
-            "デデデ",
+            "格闘Mii",
             "リトルマック",
             "ジョーカー"
         ],
@@ -4716,9 +4716,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空上全体Fが2番目に大きいファイターは？",
         "options": [
-            "リンク",
+            "スティーブ",
             "キングクルール",
-            "トゥーンリンク",
+            "クッパJr.",
             "こどもリンク"
         ],
         "answer": 3,
@@ -4798,7 +4798,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "マルス",
             "バンジョー＆カズーイ"
         ],
-        "answer": 2,
+        "answer": 0,
         "refLink": "./parameter/parameter3.html#空前着地隙"
     },
     {
@@ -4815,10 +4815,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "地上抵抗が2番目に小さいファイターは？",
         "options": [
-            "リドリー",
-            "サムス/ダークサムス",
+            "ソニック",
+            "ピット/ブラックピット",
             "バンジョー＆カズーイ",
-            "アイスクライマー"
+            "ジョーカー"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter1.html#地上抵抗"
@@ -4827,9 +4827,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空前発生Fが2番目に小さいファイターは？",
         "options": [
             "ワリオ",
-            "パックマン",
-            "ゼニガメ",
-            "シーク"
+            "マルス",
+            "ルキナ",
+            "ロボット"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter3.html#空前発生F"
@@ -4882,8 +4882,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "ダッシュ加速量が3番目に大きいファイターは？",
         "options": [
             "リトルマック",
-            "ソニック",
-            "ディディーコング",
+            "ゲッコウガ",
+            "サムス/ダークサムス",
             "ピチュー"
         ],
         "answer": 0,
@@ -4915,9 +4915,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "地上抵抗が3番目に小さいファイターは？",
         "options": [
             "サムス/ダークサムス",
-            "アイスクライマー",
-            "ホムラ",
-            "バンジョー＆カズーイ"
+            "ソニック",
+            "ピット/ブラックピット",
+            "ジョーカー"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter1.html#地上抵抗"
@@ -4991,7 +4991,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空前着地隙が2番目に大きいファイターは？",
         "options": [
-            "スネーク",
+            "ミェンミェン",
             "リザードン",
             "キャプテン・ファルコン",
             "フォックス"
@@ -5026,7 +5026,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ガノンドルフ",
             "ソラ",
-            "セフィロス",
+            "ゲッコウガ",
             "ソニック"
         ],
         "answer": 0,
@@ -5035,7 +5035,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空前発生Fが3番目に大きいファイターは？",
         "options": [
-            "ドンキーコング",
+            "シーク",
             "クラウド",
             "リンク",
             "アイスクライマー"
@@ -5124,8 +5124,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "最大落下速度が3番目に大きいファイターは？",
         "options": [
             "格闘Mii",
-            "リトルマック",
-            "デデデ",
+            "フォックス",
+            "ピチュー",
             "パックンフラワー"
         ],
         "answer": 3,
@@ -5134,10 +5134,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空上着地隙が3番目に小さいファイターは？",
         "options": [
-            "ゼニガメ",
-            "マリオ",
+            "ゼロスーツサムス",
+            "ワリオ",
             "テリー",
-            "インクリング"
+            "ルイージ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter3.html#空上着地隙"
@@ -5145,9 +5145,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "ダッシュ加速量が2番目に大きいファイターは？",
         "options": [
-            "ルカリオ",
-            "ソニック",
-            "リトルマック",
+            "ピチュー",
+            "ゲッコウガ",
+            "サムス/ダークサムス",
             "ディディーコング"
         ],
         "answer": 3,
@@ -5178,10 +5178,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "横強全体Fが3番目に小さいファイターは？",
         "options": [
-            "フォックス",
+            "スティーブ",
             "カービィ",
             "ゼニガメ",
-            "リュウ"
+            "ピチュー"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#横強全体F"
@@ -5200,7 +5200,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空下全体Fが2番目に小さいファイターは？",
         "options": [
-            "メタナイト",
+            "テリー",
             "ルカリオ",
             "ルイージ",
             "リトルマック"
@@ -5293,7 +5293,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "むらびと",
             "ルカリオ"
         ],
-        "answer": 3,
+        "answer": 0,
         "refLink": "./parameter/parameter2.html#横強全体F"
     },
     {
@@ -5302,7 +5302,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "デデデ",
             "格闘Mii",
             "ジョーカー",
-            "リトルマック"
+            "フォックス"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter1.html#急降下速度"
@@ -5377,7 +5377,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "その場掴み発生が3番目に大きいファイターは？",
         "options": [
             "ゼロスーツサムス",
-            "サムス/ダークサムス",
+            "マリオ",
             "ヨッシー",
             "ルイージ"
         ],
@@ -5387,7 +5387,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "横スマ全体Fが2番目に大きいファイターは？",
         "options": [
-            "デデデ",
+            "ルイージ",
             "射撃Mii",
             "アイク",
             "スネーク"
@@ -5466,8 +5466,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ドクターマリオ",
             "Mr.ゲーム&ウォッチ",
-            "マリオ",
-            "ルイージ"
+            "ピチュー",
+            "テリー"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter2.html#上スマ全体F"
@@ -5564,9 +5564,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空下全体Fが2番目に大きいファイターは？",
         "options": [
             "リンク",
-            "トゥーンリンク",
+            "メタナイト",
             "クッパ",
-            "こどもリンク"
+            "リトルマック"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter3.html#空下全体F"
@@ -5634,7 +5634,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "こどもリンク",
             "Wii Fit トレーナー"
         ],
-        "answer": 3,
+        "answer": 1,
         "refLink": "./parameter/parameter1.html#空中加速"
     },
     {
@@ -5652,8 +5652,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "DA 全体Fが3番目に小さいファイターは？",
         "options": [
             "ゲッコウガ",
-            "スティーブ",
-            "ロボット",
+            "トゥーンリンク",
+            "メタナイト",
             "フォックス"
         ],
         "answer": 3,
@@ -5689,7 +5689,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "バンジョー＆カズーイ",
             "ゼルダ"
         ],
-        "answer": 1,
+        "answer": 0,
         "refLink": "./parameter/parameter3.html#空後着地隙"
     },
     {
@@ -5728,9 +5728,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空上発生Fが2番目に小さいファイターは？",
         "options": [
-            "マリオ",
-            "ディディーコング",
-            "カズヤ",
+            "こどもリンク",
+            "ジョーカー",
+            "ケン",
             "シーク"
         ],
         "answer": 3,
@@ -5819,7 +5819,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "フォックス",
             "ルカリオ",
             "マリオ",
-            "メタナイト"
+            "スネーク"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter3.html#空下発生F"
@@ -5840,7 +5840,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ピクミン＆オリマー",
             "Mr.ゲーム&ウォッチ",
-            "ウルフ",
+            "スティーブ",
             "メタナイト"
         ],
         "answer": 3,
@@ -5917,8 +5917,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "プリン",
             "ソラ",
-            "ロゼッタ＆チコ",
-            "カービィ"
+            "フォックス",
+            "ゲッコウガ"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter1.html#重力"
@@ -6063,13 +6063,13 @@ document.addEventListener('DOMContentLoaded', function () {
             "しずえ",
             "ソニック"
         ],
-        "answer": 1,
+        "answer": 0,
         "refLink": "./parameter/parameter1.html#最大空中速度"
     },
     {
         "question": "横スマ全体Fが3番目に大きいファイターは？",
         "options": [
-            "射撃Mii",
+            "ルイージ",
             "クッパ",
             "デデデ",
             "スネーク"
@@ -6107,7 +6107,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "キャプテン・ファルコン",
             "ネス"
         ],
-        "answer": 3,
+        "answer": 2,
         "refLink": "./parameter/parameter3.html#空下着地隙"
     },
     {
@@ -6169,7 +6169,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空後発生Fが2番目に大きいファイターは？",
         "options": [
             "シュルク",
-            "ロボット",
+            "シーク",
             "勇者",
             "キングクルール"
         ],
@@ -6212,10 +6212,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "上スマ全体Fが3番目に小さいファイターは？",
         "options": [
-            "ドクターマリオ",
+            "Mr.ゲーム&ウォッチ",
             "マリオ",
-            "ルイージ",
-            "ピクミン＆オリマー"
+            "ピチュー",
+            "テリー"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#上スマ全体F"
@@ -6228,7 +6228,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "クッパ",
             "カービィ"
         ],
-        "answer": 2,
+        "answer": 0,
         "refLink": "./parameter/parameter2.html#上スマ発生F"
     },
     {
@@ -6290,9 +6290,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "上強発生Fが2番目に小さいファイターは？",
         "options": [
             "ケン",
-            "ゼロスーツサムス",
-            "フォックス",
-            "リュウ"
+            "リュカ",
+            "カービィ",
+            "リトルマック"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter2.html#上強発生F"
@@ -6346,8 +6346,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ピクミン＆オリマー",
             "ミェンミェン",
-            "パルテナ",
-            "セフィロス"
+            "スティーブ",
+            "リトルマック"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter2.html#横強発生F"
@@ -6588,7 +6588,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "リンク",
             "ディディーコング",
-            "フォックス",
+            "サムス/ダークサムス",
             "勇者"
         ],
         "answer": 0,
@@ -6602,7 +6602,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "リンク",
             "ケン"
         ],
-        "answer": 2,
+        "answer": 0,
         "refLink": "./parameter/parameter3.html#空前全体F"
     },
     {
@@ -6620,8 +6620,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空前着地隙が3番目に大きいファイターは？",
         "options": [
             "キャプテン・ファルコン",
-            "フォックス",
-            "デデデ",
+            "ミェンミェン",
+            "シーク",
             "リザードン"
         ],
         "answer": 0,
@@ -6642,8 +6642,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空N全体Fが3番目に大きいファイターは？",
         "options": [
             "アイク",
-            "スネーク",
-            "シュルク",
+            "リトルマック",
+            "スティーブ",
             "ソラ"
         ],
         "answer": 0,
@@ -6764,7 +6764,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ケン",
             "ロボット",
-            "リュウ",
+            "ネス",
             "リュカ"
         ],
         "answer": 0,
@@ -6795,7 +6795,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "攻撃上がり距離が2番目に大きいファイターは？",
         "options": [
-            "ミュウツー",
+            "ガノンドルフ",
             "リンク",
             "クッパ",
             "ドンキーコング"
@@ -6864,7 +6864,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ドンキーコング",
             "ガノンドルフ",
             "ミュウツー",
-            "リンク"
+            "クッパ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter1.html#攻撃上がり距離"
@@ -6927,8 +6927,8 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空N発生Fが2番目に小さいファイターは？",
         "options": [
-            "パックマン",
-            "むらびと",
+            "ピット/ブラックピット",
+            "テリー",
             "リトルマック",
             "ファルコ"
         ],
@@ -6972,7 +6972,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "小ジャンプ高さが2番目に大きいファイターは？",
         "options": [
             "ゲッコウガ",
-            "ベヨネッタ",
+            "ディディーコング",
             "ルイージ",
             "ゼロスーツサムス"
         ],
@@ -6984,8 +6984,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "プリン",
             "パルテナ",
-            "ピーチ/デイジー",
-            "ワリオ"
+            "ロゼッタ＆チコ",
+            "ゼニガメ"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter1.html#空中加速"
@@ -7007,7 +7007,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ピカチュウ",
             "ピット/ブラックピット",
             "ジョーカー",
-            "ソニック"
+            "Wii Fit トレーナー"
         ],
         "answer": 1,
         "refLink": "./parameter/parameter1.html#地上抵抗"
@@ -7049,7 +7049,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空後発生Fが3番目に小さいファイターは？",
         "options": [
             "ピカチュウ",
-            "ロックマン",
+            "ゲッコウガ",
             "ゼニガメ",
             "Wii Fit トレーナー"
         ],
@@ -7108,7 +7108,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "マリオ",
             "ヨッシー"
         ],
-        "answer": 3,
+        "answer": 2,
         "refLink": "./parameter/parameter1.html#地上抵抗"
     },
     {
@@ -7163,7 +7163,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ゼルダ",
             "ディディーコング"
         ],
-        "answer": 2,
+        "answer": 0,
         "refLink": "./parameter/parameter3.html#空前着地隙"
     },
     {
@@ -7192,9 +7192,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空上発生Fが3番目に小さいファイターは？",
         "options": [
             "ディディーコング",
-            "カズヤ",
-            "シーク",
-            "ドクターマリオ"
+            "こどもリンク",
+            "ジョーカー",
+            "ケン"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter3.html#空上発生F"
@@ -7203,9 +7203,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空後着地隙が3番目に小さいファイターは？",
         "options": [
             "リンク",
-            "インクリング",
-            "マリオ",
-            "こどもリンク"
+            "ミェンミェン",
+            "アイスクライマー",
+            "シーク"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter3.html#空後着地隙"
@@ -7313,9 +7313,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空上全体Fが3番目に大きいファイターは？",
         "options": [
             "リンク",
-            "トゥーンリンク",
-            "こどもリンク",
-            "射撃Mii"
+            "スティーブ",
+            "クッパJr.",
+            "ピチュー"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter3.html#空上全体F"
@@ -7361,7 +7361,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "プリン",
             "射撃Mii"
         ],
-        "answer": 1,
+        "answer": 2,
         "refLink": "./parameter/parameter2.html#下強発生F"
     },
     {
@@ -7423,7 +7423,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "歩行加速量が2番目に小さいファイターは？",
         "options": [
             "セフィロス",
-            "クッパ",
+            "ケン",
             "キングクルール",
             "バンジョー＆カズーイ"
         ],
@@ -7467,9 +7467,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空N発生Fが3番目に小さいファイターは？",
         "options": [
             "むらびと",
-            "ファルコ",
-            "パックマン",
-            "ルイージ"
+            "リトルマック",
+            "ピット/ブラックピット",
+            "テリー"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter3.html#空N発生F"
@@ -7501,7 +7501,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "スティーブ",
             "ケン",
-            "ロックマン",
+            "インクリング",
             "リュウ"
         ],
         "answer": 0,
@@ -7510,7 +7510,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "DA 発生Fが3番目に小さいファイターは？",
         "options": [
-            "ルイージ",
+            "ワリオ",
             "フシギソウ",
             "プリン",
             "シーク"
@@ -7526,7 +7526,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ファルコ",
             "スネーク"
         ],
-        "answer": 2,
+        "answer": 3,
         "refLink": "./parameter/parameter1.html#最大空中速度"
     },
     {
@@ -7611,8 +7611,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ルキナ",
             "アイスクライマー",
-            "マルス",
-            "ピット/ブラックピット"
+            "ピクミン＆オリマー",
+            "ディディーコング"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter2.html#横スマ発生F"
@@ -7653,9 +7653,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空中抵抗が3番目に小さいファイターは？",
         "options": [
-            "ルキナ",
-            "マルス",
-            "ウルフ",
+            "ロックマン",
+            "プリン",
+            "ワリオ",
             "剣術Mii"
         ],
         "answer": 3,
@@ -7746,7 +7746,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "カムイ",
             "格闘Mii"
         ],
-        "answer": 1,
+        "answer": 0,
         "refLink": "./parameter/parameter1.html#空中加速"
     },
     {
@@ -7863,7 +7863,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空後発生Fが3番目に大きいファイターは？",
         "options": [
             "キングクルール",
-            "勇者",
+            "シーク",
             "デデデ",
             "シュルク"
         ],
@@ -7917,7 +7917,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "DA 全体Fが2番目に小さいファイターは？",
         "options": [
-            "トゥーンリンク",
+            "スティーブ",
             "ロボット",
             "フォックス",
             "ゲッコウガ"
@@ -7994,10 +7994,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "その場掴み発生が2番目に小さいファイターは？",
         "options": [
-            "マリオ",
-            "カービィ",
+            "ピカチュウ",
+            "ミュウツー",
             "リンク",
-            "フォックス"
+            "ロイ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter1.html#その場掴み発生"
@@ -8071,10 +8071,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空後発生Fが2番目に小さいファイターは？",
         "options": [
-            "ピカチュウ",
+            "Wii Fit トレーナー",
             "ゼニガメ",
             "ロックマン",
-            "シーク"
+            "ゲッコウガ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter3.html#空後発生F"
@@ -8084,8 +8084,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ルイージ",
             "スネーク",
-            "リュカ",
-            "Mr.ゲーム&ウォッチ"
+            "クッパ",
+            "リンク"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter1.html#攻撃上がり距離"
@@ -8126,9 +8126,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空N着地隙が3番目に小さいファイターは？",
         "options": [
-            "リュウ",
+            "ロックマン",
             "ケン",
-            "インクリング",
+            "リンク",
             "スティーブ"
         ],
         "answer": 1,
@@ -8307,7 +8307,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "パルテナ",
             "ミェンミェン"
         ],
-        "answer": 0,
+        "answer": 3,
         "refLink": "./parameter/parameter1.html#大ジャンプ高さ"
     },
     {
@@ -8358,7 +8358,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "崖掴まり姿勢が3番目に小さいファイターは？",
         "options": [
             "セフィロス",
-            "ガノンドルフ",
+            "ソニック",
             "ゲッコウガ",
             "ソラ"
         ],
@@ -8434,10 +8434,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "その場掴み発生が3番目に小さいファイターは？",
         "options": [
-            "フォックス",
-            "リンク",
+            "ピカチュウ",
+            "ミュウツー",
             "カービィ",
-            "ネス"
+            "ロイ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter1.html#その場掴み発生"
@@ -8457,7 +8457,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "ダッシュ加速量が3番目に小さいファイターは？",
         "options": [
             "ルフレ",
-            "カムイ",
+            "ルカリオ",
             "シュルク",
             "ソラ"
         ],
@@ -8577,7 +8577,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空下全体Fが3番目に大きいファイターは？",
         "options": [
-            "リンク",
+            "メタナイト",
             "ロボット",
             "トゥーンリンク",
             "クッパ"
@@ -8588,9 +8588,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空中加速が3番目に小さいファイターは？",
         "options": [
-            "カズヤ",
+            "プリン",
             "シモン/リヒター",
-            "リトルマック",
+            "パルテナ",
             "ガノンドルフ"
         ],
         "answer": 3,
@@ -8621,9 +8621,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "地上抵抗が3番目に大きいファイターは？",
         "options": [
-            "ピカチュウ",
+            "ソニック",
             "ジョーカー",
-            "Wii Fit トレーナー",
+            "リトルマック",
             "ピット/ブラックピット"
         ],
         "answer": 1,
@@ -8668,7 +8668,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "パルテナ",
             "バンジョー＆カズーイ",
             "キングクルール",
-            "ベレトス"
+            "リュウ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter2.html#下強発生F"
@@ -8692,7 +8692,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "シモン/リヒター",
             "ロゼッタ＆チコ"
         ],
-        "answer": 1,
+        "answer": 0,
         "refLink": "./parameter/parameter1.html#攻撃上がり距離"
     },
     {
@@ -8732,8 +8732,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空中加速が3番目に大きいファイターは？",
         "options": [
             "ロゼッタ＆チコ",
-            "ピーチ/デイジー",
-            "パルテナ",
+            "プリン",
+            "ゼニガメ",
             "ワリオ"
         ],
         "answer": 3,
@@ -8863,7 +8863,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空中抵抗が3番目に大きいファイターは？",
         "options": [
-            "プリン",
+            "ロックマン",
             "ミュウツー",
             "ゲッコウガ",
             "ワリオ"
@@ -8879,7 +8879,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ファルコ",
             "スネーク"
         ],
-        "answer": 1,
+        "answer": 2,
         "refLink": "./parameter/parameter1.html#最大空中速度"
     },
     {
@@ -8984,7 +8984,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "重さが3番目に小さいファイターは？",
         "options": [
-            "ゼニガメ",
+            "クッパ",
             "プリン",
             "フォックス",
             "Mr.ゲーム&ウォッチ"
@@ -9006,9 +9006,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "空中抵抗が2番目に小さいファイターは？",
         "options": [
-            "マルス",
-            "剣術Mii",
-            "ルカリオ",
+            "ロックマン",
+            "プリン",
+            "ワリオ",
             "ウルフ"
         ],
         "answer": 3,
@@ -9051,9 +9051,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "横スマ発生Fが2番目に小さいファイターは？",
         "options": [
             "マルス",
-            "サムス/ダークサムス",
-            "ピット/ブラックピット",
-            "ルキナ"
+            "アイスクライマー",
+            "ピクミン＆オリマー",
+            "ディディーコング"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter2.html#横スマ発生F"
@@ -9074,7 +9074,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "デデデ",
             "キングクルール",
-            "ロックマン",
+            "トゥーンリンク",
             "リンク"
         ],
         "answer": 1,
@@ -9085,7 +9085,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "リザードン",
             "スネーク",
-            "ロックマン",
+            "ミェンミェン",
             "クッパ"
         ],
         "answer": 0,
@@ -9094,9 +9094,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "横スマ全体Fが2番目に小さいファイターは？",
         "options": [
-            "メタナイト",
+            "Mr.ゲーム&ウォッチ",
             "ウルフ",
-            "ルイージ",
+            "スティーブ",
             "ピクミン＆オリマー"
         ],
         "answer": 1,
@@ -9110,7 +9110,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ゲッコウガ",
             "ドクターマリオ"
         ],
-        "answer": 2,
+        "answer": 3,
         "refLink": "./parameter/parameter3.html#空後着地隙"
     },
     {
@@ -9196,7 +9196,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "スティーブ",
             "ロックマン",
             "デデデ",
-            "ベレトス"
+            "スネーク"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter3.html#空下発生F"
@@ -9249,7 +9249,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "空下発生Fが2番目に小さいファイターは？",
         "options": [
             "メタナイト",
-            "ルカリオ",
+            "フォックス",
             "スネーク",
             "マリオ"
         ],
@@ -9314,10 +9314,10 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         "question": "横強発生Fが2番目に小さいファイターは？",
         "options": [
-            "スネーク",
+            "カービィ",
             "ゼニガメ",
             "リトルマック",
-            "スティーブ"
+            "ピチュー"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter2.html#横強発生F"
@@ -9363,7 +9363,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "マルス",
             "テリー"
         ],
-        "answer": 2,
+        "answer": 0,
         "refLink": "./parameter/parameter1.html#急降下速度"
     },
     {
@@ -9440,7 +9440,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ドクターマリオ",
             "パルテナ"
         ],
-        "answer": 3,
+        "answer": 1,
         "refLink": "./parameter/parameter1.html#攻撃上がり距離"
     },
     {
@@ -9514,7 +9514,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "options": [
             "ルイージ",
             "カービィ",
-            "ガノンドルフ",
+            "ヨッシー",
             "アイスクライマー"
         ],
         "answer": 3,
@@ -9528,7 +9528,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "クッパ",
             "カービィ"
         ],
-        "answer": 1,
+        "answer": 2,
         "refLink": "./parameter/parameter2.html#上スマ発生F"
     },
     {
@@ -9559,7 +9559,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ルイージ",
             "ディディーコング",
             "ベヨネッタ",
-            "ゼロスーツサムス"
+            "ゲッコウガ"
         ],
         "answer": 2,
         "refLink": "./parameter/parameter1.html#小ジャンプ高さ"
@@ -9601,8 +9601,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "上スマ発生Fが3番目に小さいファイターは？",
         "options": [
             "ファルコ",
-            "ピット/ブラックピット",
-            "キングクルール",
+            "ディディーコング",
+            "クッパJr.",
             "リザードン"
         ],
         "answer": 3,
@@ -9726,7 +9726,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ケン",
             "トゥーンリンク"
         ],
-        "answer": 2,
+        "answer": 3,
         "refLink": "./parameter/parameter1.html#急降下速度"
     },
     {
@@ -9755,7 +9755,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "question": "上強全体Fが2番目に小さいファイターは？",
         "options": [
             "ゼニガメ",
-            "リュウ",
+            "カービィ",
             "ケン",
             "スティーブ"
         ],
@@ -9834,7 +9834,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "ピクミン＆オリマー",
             "ミェンミェン",
             "セフィロス",
-            "リンク"
+            "スティーブ"
         ],
         "answer": 0,
         "refLink": "./parameter/parameter2.html#横強発生F"
