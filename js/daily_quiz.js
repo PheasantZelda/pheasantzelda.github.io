@@ -5938,6 +5938,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const totalMsg = resultDiv.querySelector('.total-msg');
   const quizContent = document.getElementById('quiz-content');
 
+  let answeredInSession = false; // 重複回答防止フラグ
+
   // If already played today
   if (lastPlayed === todayStr) {
     const storedResult = localStorage.getItem('smashAna_lastResult');
@@ -5956,6 +5958,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function checkAnswer(selectedIndex) {
+    if (answeredInSession) {
+      // 既に回答済みの場合は結果画面に戻るだけ
+      showResult(selectedIndex === currentQuiz.answer, true);
+      quizContent.style.display = 'none';
+      resultDiv.style.display = 'block';
+      return;
+    }
+    answeredInSession = true;
+
     const isCorrect = selectedIndex === currentQuiz.answer;
 
     // Update Stats
