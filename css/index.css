@@ -269,7 +269,7 @@ span {
   animation: color-change 5s linear infinite;
 }
 
-/* ２周年企画 */
+/* ４周年企画 */
 #full-overlay {
   transition: all 0.3s;
   position: fixed;
@@ -279,42 +279,61 @@ span {
   height: 100%;
   background: rgba(37, 37, 37, 0.801);
   z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#full-overlay .inner img {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  width: 30%;
-  transform: translate(-50%, -50%);
+#full-overlay .inner {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#full-overlay .inner span {
-  position: fixed;
-  left: 83%;
-  top: 10%;
-  transform: translate(-50%, -50%);
+.overlay_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.overlay_main_img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .year_text {
-  position: fixed;
-  left: 80%;
-  top: 35%;
-  transform: translate(-50%, -50%);
   font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.year_text:hover {
+  text-decoration: underline;
+}
+
+.year_text p {
+  margin: 0;
 }
 
 .year_img {
-  position: fixed;
-  left: 65%;
-  top: 35%;
-  width: 12%;
-  transform: translate(-50%, -50%);
+  width: 45px;
+  flex-shrink: 0;
   animation: squash 2.0s ease-in-out infinite;
 }
 
 .year_img img {
+  width: 100%;
+  height: auto;
   border-radius: 20%;
+  display: block;
 }
 
 @keyframes squash {
@@ -332,9 +351,11 @@ span {
 }
 
 .square_btn {
+  position: absolute;
+  top: -45px;
+  right: 0;
   cursor: pointer;
   display: block;
-  position: relative;
   width: 30px;
   height: 30px;
   border: 2px solid #333;
@@ -455,29 +476,5 @@ span {
   .news p {
     font-size: 10px;
     line-height: 20px;
-  }
-
-  /* ２周年企画（削除済み） */
-  #full-overlay .inner img {
-    width: 90%;
-  }
-
-  #full-overlay .inner span {
-    position: fixed;
-    left: 92%;
-    top: 10%;
-    transform: translate(-50%, -50%);
-  }
-
-  .year_text {
-    left: 45%;
-    top: 15%;
-    font-size: 14px;
-  }
-
-  .year_img {
-    left: 5%;
-    top: 15%;
-    width: 12%;
   }
 }
