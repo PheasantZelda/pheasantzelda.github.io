@@ -20,7 +20,11 @@ async function initDynamicCharaPage() {
 
     const updateRateDisplay = (tier) => {
         const label = RATE_LABELS[tier] || "";
-        const periodText = "対象期間: 15.5期 (2021.8) - 33期 (2026.01) レート帯: ";
+        // スマホの場合はテキストを短くする
+        const isMobile = window.innerWidth <= 840;
+        const periodText = isMobile 
+            ? "対象: 15.5-33期 レート: " 
+            : "対象期間: 15.5期 (2021.8) - 33期 (2026.01) レート帯: ";
         
         const targetSections = ["相性表", "サブ適正表", "戦績詳細"];
         targetSections.forEach(id => {
@@ -35,11 +39,8 @@ async function initDynamicCharaPage() {
                         infoEl = document.createElement("p");
                         infoEl.className = "current-rate-info";
                         nextEl.appendChild(infoEl);
-                    } else if (infoEl.parentNode !== nextEl) {
-                        nextEl.appendChild(infoEl);
                     }
                     infoEl.textContent = periodText + label;
-                    infoEl.style.cssText = "font-size: 0.8rem; color: rgba(255, 255, 255, 1); text-align: right; width: 1000px; max-width: 95%; margin: 8px auto 0 auto; padding: 0; font-family: sans-serif;";
                     break;
                 } else if (id === "戦績詳細" && nextEl.classList.contains("example")) {
                     let infoEl = nextEl.querySelector(".current-rate-info");
@@ -54,8 +55,6 @@ async function initDynamicCharaPage() {
                         }
                     }
                     infoEl.textContent = periodText + label;
-                    // テーブルの幅(600px)に合わせて右上に配置
-                    infoEl.style.cssText = "font-size: 0.8rem; color: rgba(255, 255, 255, 1); text-align: right; width: 100%; max-width: 600px; margin: 0 auto 5px auto; padding: 0; font-family: sans-serif;";
                     break;
                 }
                 nextEl = nextEl.nextElementSibling;

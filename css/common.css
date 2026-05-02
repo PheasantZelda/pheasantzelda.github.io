@@ -821,21 +821,54 @@ nav li.has-child ul ul {
   font-weight: bold;
 }
 
+/* レート情報テキストのレスポンシブスタイル */
+.current-rate-info {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 1);
+    text-align: right;
+    width: 1050px;
+    max-width: 95%;
+    margin: 8px auto 0 auto;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.example .current-rate-info {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 5px auto;
+}
+
 @media (max-width: 840px) {
   .rate-selector-container {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     margin: 15px 0;
   }
   
   .rate-selector-container label {
-    font-size: 1em;
+    font-size: 0.85em;
+    opacity: 0.9;
   }
   
   .custom-select {
-    width: 90%;
-    max-width: 300px;
-    padding: 12px 45px 12px 15px;
+    width: 95%;
+    max-width: 280px;
+    padding: 8px 35px 8px 12px;
+    font-size: 0.85em;
+    background-size: 14px;
+    background-position: right 10px center;
   }
+
+    /* レート情報のスマホ調整 */
+    .current-rate-info {
+        font-size: 0.65rem;
+        width: 95%;
+        margin: 5px auto 0 auto;
+    }
+    .example .current-rate-info {
+        max-width: 80%;
+    }
 }
+/*# sourceMappingURL=common.css.map */
 /*# sourceMappingURL=common.css.map */
