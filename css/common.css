@@ -767,4 +767,75 @@ nav li.has-child ul ul {
   }
 }
 
+/* =========== プルダウンデザイン設定 =========== */
+.rate-selector-container {
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.rate-selector-container label {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #2c2a2a;
+  border: 2px solid #e7412b;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 10px 45px 10px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  /* SVG icon for the down arrow colored #e7412b */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23e7412b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.custom-select:hover {
+  border-color: #ff6045;
+  background-color: #383535;
+  box-shadow: 0 4px 10px rgba(231, 65, 43, 0.4);
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #ff6045;
+  box-shadow: 0 0 0 3px rgba(231, 65, 43, 0.3);
+}
+
+.custom-select option {
+  background-color: #2c2a2a;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@media (max-width: 840px) {
+  .rate-selector-container {
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .rate-selector-container label {
+    font-size: 1em;
+  }
+  
+  .custom-select {
+    width: 90%;
+    max-width: 300px;
+    padding: 12px 45px 12px 15px;
+  }
+}
 /*# sourceMappingURL=common.css.map */
