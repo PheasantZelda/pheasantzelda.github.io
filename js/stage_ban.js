@@ -474,6 +474,8 @@ function renderTable(fighterName, container) {
   filteredData.forEach((row, index) => {
     const card = document.createElement("div");
     card.className = "fighter-card stage-ban-data-card";
+    card.style.cursor = "pointer";
+    card.title = "クリックで拡大表示";
 
     // ファイター情報
     const cardFighterInfo = document.createElement("div");
@@ -545,6 +547,28 @@ function renderTable(fighterName, container) {
     });
 
     card.appendChild(cardStagesList);
+
+    // カードクリックで同じ行のカードをすべて展開・格納する
+    card.addEventListener("click", (e) => {
+      // リンクがクリックされた場合は遷移を優先する
+      if (e.target.closest("a")) return;
+      
+      const isOpen = card.classList.contains("is-open");
+      const allCards = Array.from(cardsView.querySelectorAll(".fighter-card"));
+      const myTop = card.offsetTop;
+      
+      // 同じ行にある（offsetTopが等しい）カードを抽出
+      const rowCards = allCards.filter(c => c.offsetTop === myTop);
+      
+      if (isOpen) {
+        // すでに開いていれば閉じる
+        rowCards.forEach(c => c.classList.remove("is-open"));
+      } else {
+        // 閉じていれば開く
+        rowCards.forEach(c => c.classList.add("is-open"));
+      }
+    });
+
     cardsView.appendChild(card);
   });
 
@@ -582,6 +606,19 @@ function renderTable(fighterName, container) {
     btnDiv.appendChild(btn);
     container.appendChild(btnDiv);
   }
+
+  // DOMにレンダリング後、最初の行のカードを開く
+  setTimeout(() => {
+    const allCards = Array.from(cardsView.querySelectorAll(".fighter-card"));
+    if (allCards.length > 0) {
+      const firstRowTop = allCards[0].offsetTop;
+      allCards.forEach(c => {
+        if (c.offsetTop === firstRowTop) {
+          c.classList.add("is-open");
+        }
+      });
+    }
+  }, 50);
 }
 
 function createViewToggle(container, tableContainer) {
@@ -706,4 +743,5 @@ function initFloatingRateSelector(rateSelect) {
   const parentContainer = rateSelect.closest(".rate-selector-container") || rateSelect;
   observer.observe(parentContainer);
 }
+
 

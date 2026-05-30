@@ -443,9 +443,16 @@
 }
 
 .card-stages-list {
-  display: flex;
+  display: none; /* デフォルトは非表示 */
   flex-direction: column;
   gap: 6px;
+}
+
+/* ---------------------------------------------------
+   開いた状態 (is-open)
+--------------------------------------------------- */
+.fighter-card.is-open .card-stages-list {
+  display: flex;
 }
 
 .card-stage-item {
