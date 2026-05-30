@@ -635,7 +635,7 @@ function createViewToggle(container, tableContainer) {
   const btnCards = document.createElement("button");
   btnCards.id = "view-toggle-cards";
   btnCards.className = "view-toggle-btn active";
-  btnCards.textContent = "カード表示";
+  btnCards.textContent = "カード";
 
   toggleContainer.appendChild(btnCards);
   toggleContainer.appendChild(btnGrid);

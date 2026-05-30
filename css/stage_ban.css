@@ -15,7 +15,7 @@
   margin-bottom: 12px;
   position: sticky;
   top: 56px;          /* 繝｢繝舌う繝ｫ蝗ｺ螳壹�繝�ム繝ｼ鬮倥＆蛻�ｒ繧ｪ繝輔そ繝�ヨ */
-  z-index: 20;
+  z-index: 2;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 3px 12px rgba(0,0,0,0.35);
