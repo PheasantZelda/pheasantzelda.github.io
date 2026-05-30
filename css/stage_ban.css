@@ -1,0 +1,585 @@
+/* stage_ban.css */
+
+/* ===================================================
+   蟇ｾ雎｡繝輔ぃ繧､繧ｿ繝ｼ蝗ｺ螳壹ヰ繝翫��医げ繝ｪ繝�ラ繝ｻ繧ｫ繝ｼ繝牙�騾夲ｼ�
+   繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺励※繧ょｸｸ縺ｫ繧ｳ繝ｳ繝�リ荳企Κ縺ｫ雋ｼ繧贋ｻ倥￥
+=================================================== */
+.stage-fighter-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(120deg, rgba(231, 65, 43, 0.30) 0%, rgba(30, 30, 30, 0.85) 100%);
+  border: 1.5px solid rgba(231, 65, 43, 0.55);
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 12px;
+  position: sticky;
+  top: 56px;          /* 繝｢繝舌う繝ｫ蝗ｺ螳壹�繝�ム繝ｼ鬮倥＆蛻�ｒ繧ｪ繝輔そ繝�ヨ */
+  z-index: 20;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
+
+/* 繧ｰ繝ｪ繝�ラ陦ｨ遉ｺ縺ｮ譎ゅ�繝舌リ繝ｼ繧帝撼陦ｨ遉ｺ縺ｫ縺励※繝��繝悶Ν繝倥ャ繝繝ｼ縺ｮ陲ｫ繧翫ｒ髦ｲ縺� */
+.stage-table-wrapper:not(.view-cards) .stage-fighter-banner {
+  display: none;
+}
+
+@media (min-width: 841px) {
+  .stage-fighter-banner {
+    top: 0; /* PC 縺ｧ縺ｯ蝗ｺ螳壹�繝�ム繝ｼ縺ｪ縺� */
+  }
+}
+
+.stage-fighter-banner-img {
+  width: 56px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid rgba(231, 65, 43, 0.7);
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(231, 65, 43, 0.4);
+}
+
+.stage-fighter-banner-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stage-fighter-banner-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stage-fighter-banner-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 480px) {
+  .stage-fighter-banner {
+    padding: 8px 12px;
+    gap: 10px;
+  }
+  .stage-fighter-banner-img {
+    width: 40px;
+  }
+  .stage-fighter-banner-name {
+    font-size: 14px;
+  }
+}
+
+/* ===================================================
+   繧ｰ繝ｪ繝�ラ繝��繝悶Ν 繝倥ャ繝繝ｼ蟾ｦ遶ｯ縺ｮ蟇ｾ雎｡繝輔ぃ繧､繧ｿ繝ｼ逕ｻ蜒�
+=================================================== */
+.th-fighter-col {
+  vertical-align: middle !important;
+}
+
+.th-fighter-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.th-fighter-img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+  border: 1.5px solid rgba(231, 65, 43, 0.6);
+  display: block;
+}
+
+.th-fighter-label, .header-stage-name {
+  font-size: 11px;
+  color: #aaa;
+  font-weight: normal;
+}
+
+@media (max-width: 840px) {
+  .th-fighter-img {
+    width: 32px;
+  }
+  .th-fighter-label, .header-stage-name {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .th-fighter-img {
+    width: 24px;
+  }
+  .th-fighter-label, .header-stage-name {
+    font-size: 6px;
+  }
+}
+
+
+.stage-ban-container {
+  width: 1000px;
+  max-width: 95%;
+  margin: 20px auto;
+  background-color: #292b2c;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.player-selector {
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.player-selector select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #181a1b;
+  color: white;
+  border: 1px solid #e7412b;
+  min-width: 300px;
+}
+
+.selected-fighter-image-container img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #e7412b;
+}
+
+.stage-table-wrapper {
+  overflow: visible;
+}
+
+.stage-ban-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.stage-ban-table th, .stage-ban-table td {
+  border: 1px solid #444;
+  padding: 8px;
+}
+
+.stage-ban-table th {
+  background-color: #1e1e1e;
+  font-size: 14px;
+  vertical-align: bottom;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-stage-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.header-stage-img {
+  /* width: 60px; */
+  border-radius: 4px;
+  /* margin-top: 5px;
+  display: block; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stage-ban-table td.fighter-col {
+  width: 100px;
+  background-color: #1e1e1e;
+  vertical-align: middle;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+.stage-ban-table td.fighter-col img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.fighter-name-label {
+  font-size: 10px;
+  margin-top: 4px;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: break-all;
+  max-width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stage-ban-table td.prob-col {
+  width: 12%;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+@media (max-width: 840px) {
+  .stage-ban-table th {
+    font-size: 9px;
+    top: 50px; /* Mobile fixed header is 50px */
+    padding: 4px 2px;
+  }
+  .stage-ban-table th:first-child {
+    top: 50px;
+  }
+  /* .header-stage-img {
+    width: 32px;
+  } */
+  .stage-ban-table td.fighter-col {
+    width: 50px;
+    padding: 4px 2px;
+  }
+  .stage-ban-table td.fighter-col img {
+    width: 32px;
+  }
+  .fighter-name-label {
+    font-size: 7px;
+    max-width: 50px;
+  }
+  .stage-ban-table td.prob-col {
+    font-size: 9px;
+    padding: 4px 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stage-ban-table th {
+    font-size: 8px;
+    padding: 2px 1px;
+  }
+  /* .header-stage-img {
+    width: 24px;
+  } */
+  .stage-ban-table td.fighter-col {
+    width: 40px;
+    padding: 2px 1px;
+  }
+  .stage-ban-table td.fighter-col img {
+    width: 24px;
+  }
+  .fighter-name-label {
+    font-size: 6px;
+    max-width: 40px;
+  }
+  .stage-ban-table td.prob-col {
+    font-size: 8px;
+    padding: 2px 1px;
+  }
+}
+
+/* .stage-ban-table th:first-child {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 12;
+  background-color: #1e1e1e;
+} */
+
+/* Hover highlights */
+.stage-ban-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.stage-ban-table tbody tr:hover td.fighter-col {
+  background-color: #2a2a2a;
+}
+
+/* Floating Rate Selector styles */
+.floating-rate-selector {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 2000;
+  background: rgba(231, 65, 43, 0.95);
+  border: 1px solid #e7412b;
+  border-radius: 30px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.floating-rate-selector.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.floating-rate-selector select {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  padding-right: 18px;
+  appearance: none;
+  -webkit-appearance: none;
+  /* SVG icon for arrow down */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 12px;
+}
+
+.floating-rate-selector select option {
+  background-color: #292b2c;
+  color: white;
+}
+
+/* View Toggle Styles */
+.view-toggle-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.view-toggle-btn {
+  background-color: #181a1b;
+  border: 1.5px solid #e7412b;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.view-toggle-btn:hover {
+  background-color: rgba(231, 65, 43, 0.1);
+}
+
+.view-toggle-btn.active {
+  background-color: #e7412b;
+  color: white;
+  box-shadow: 0 0 10px rgba(231, 65, 43, 0.4);
+}
+
+/* Toggleable views */
+.stage-table-view {
+  display: block;
+}
+
+.stage-cards-view {
+  display: none;
+}
+
+.stage-table-wrapper.view-cards .stage-table-view {
+  display: none;
+}
+
+.stage-table-wrapper.view-cards .stage-cards-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 10px 0;
+}
+
+/* Card layout */
+.fighter-card {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.fighter-card:hover {
+  transform: translateY(-2px);
+  border-color: #e7412b;
+}
+
+.card-fighter-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.card-fighter-info img {
+  width: 36px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #444;
+}
+
+.card-fighter-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card-stages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-stage-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+  padding: 6px 10px;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-stage-item img {
+  width: 36px;
+  border-radius: 3px;
+}
+
+.card-stage-name {
+  font-size: 12px;
+  flex-grow: 1;
+  color: #ddd;
+}
+
+.card-stage-prob {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  text-align: right;
+  min-width: 55px;
+}
+
+/* ===== 繧ｫ繝ｼ繝芽｡ｨ遉ｺ繝倥ャ繝繝ｼ�郁ｪｰ縺ｮ諡貞凄繧ｹ繝��繧ｸ縺具ｼ� ===== */
+.stage-cards-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(231, 65, 43, 0.25), rgba(180, 30, 10, 0.15));
+  border: 1px solid rgba(231, 65, 43, 0.4);
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 14px;
+  /* 繧ｫ繝ｼ繝峨ン繝･繝ｼ蜀�〒蜈ｨ蟷�ｒ蜊�繧√ｋ繧医≧ grid 縺ｮ span 繧剃ｽｿ縺� */
+  grid-column: 1 / -1;
+}
+
+.stage-cards-header-img {
+  width: 48px;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid rgba(231, 65, 43, 0.6);
+  flex-shrink: 0;
+}
+
+.stage-cards-header-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.03em;
+}
+
+/* ===== 繧ｰ繝ｪ繝�ラ繝ｻ繧ｫ繝ｼ繝牙�騾�: 繝輔ぃ繧､繧ｿ繝ｼ繝ｪ繝ｳ繧ｯ縺ｮ繝帙ヰ繝ｼ ===== */
+.fighter-col a {
+  display: inline-block;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.fighter-col a:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+
+.fighter-col a img {
+  display: block;
+}
+
+/* ===== 繧ｫ繝ｼ繝�: 繝輔ぃ繧､繧ｿ繝ｼ蜷阪Μ繝ｳ繧ｯ ===== */
+.card-fighter-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.card-fighter-link:hover .card-fighter-name {
+  color: #e7412b;
+  text-decoration: underline;
+}
+
+.card-fighter-info a {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.card-fighter-info a:first-child:hover {
+  transform: scale(1.12);
+  opacity: 0.85;
+}
+
+/* ===================================================
+   「さらに表示」制御 (JavaScriptで is-expanded クラスを付与)
+=================================================== */
+
+/* --- テーブルビュー（グリッド表示） --- */
+/* 展開前: 10件表示（11番目以降を隠す） */
+.stage-table-wrapper:not(.is-expanded) .stage-table-view .stage-ban-data-row:nth-child(n+11) {
+  display: none !important;
+}
+
+/* --- カード表示 --- */
+/* 展開前: 画面幅に応じて表示数を変える */
+
+/* 1列表示時（スマホなど）: 5件表示 */
+.stage-table-wrapper:not(.is-expanded) .stage-cards-view .stage-ban-data-card:nth-child(n+6) {
+  display: none !important;
+}
+
+/* 2列表示時（おおよそ600px以上）: 6件表示 (2列×3行) */
+@media (min-width: 600px) {
+  .stage-table-wrapper:not(.is-expanded) .stage-cards-view .stage-ban-data-card:nth-child(n+6) {
+    display: flex !important;
+  }
+  .stage-table-wrapper:not(.is-expanded) .stage-cards-view .stage-ban-data-card:nth-child(n+7) {
+    display: none !important;
+  }
+}
+
+/* 3列表示時（おおよそ900px以上）: 9件表示 (3列×3行) */
+@media (min-width: 900px) {
+  .stage-table-wrapper:not(.is-expanded) .stage-cards-view .stage-ban-data-card:nth-child(n+7) {
+    display: flex !important;
+  }
+  .stage-table-wrapper:not(.is-expanded) .stage-cards-view .stage-ban-data-card:nth-child(n+10) {
+    display: none !important;
+  }
+}
