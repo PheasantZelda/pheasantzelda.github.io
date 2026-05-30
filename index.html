@@ -84,11 +84,12 @@
             <li><a href="./ranking/ranking.html">キャラランク</a></li>
             <li><a href="./rank_creater.html">Tier表メーカー</a></li>
             <li><a href="./record/ranking_rate.html">歴代最終レート</a></li>
-            <li><a href="./sub_character.html">サブ補完チェッカー</a></li>
+            <li><a href="./counter_picker.html">おすすめキャラ診断</a></li>
             <li class="has-child"><a href="#">ツール</a>
               <ul>
                 <li><a href="./quiz.html">スマアナ検定</a></li>
                 <li><a href="./puzzle.html">スマブラパズル</a></li>
+                <li><a href="./sub_character.html">サブ補完チェッカー</a></li>
                 <li class="has-child"><a href="./parameter.html">特性早見表</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
                   <ul>
                     <li><a href="./parameter/parameter1.html">パラメータ</a></li>
@@ -105,7 +106,6 @@
                 <li><a href="./fighter_pick.html">キャラ使用率</a></li>
                 <li><a href="./record/tournament.html">オンライン大会</a></li>
                 <li><a href="./match_up.html">キャラ相性優劣</a></li>
-                <li><a href="./matchup_matrix.html">相性ヒートマップ</a></li>
                 <li><a href="./record/kagaribi9.html">篝火#9 新規勢記事</a></li>
               </ul>
             </li>
@@ -123,15 +123,12 @@
     <div class="release">
       <div class="scroll">
         <div class="news">
-          <p>2026/01/24 に <span>ver16.0.0にアップテート</span>しました！
-            新しくサブ補完チェッカーを追加しました。メインファイターの苦手なファイターやおすすめのサブファイターを一覧できます。
-            また、33期の対戦結果を反映しましたのでぜひチェックしてください。</p>
-          <p>2026/01/24 に <span>ver16.0.0にアップテート</span>しました！
-            新しくサブ補完チェッカーを追加しました。メインファイターの苦手なファイターやおすすめのサブファイターを一覧できます。
-            また、33期の対戦結果を反映しましたのでぜひチェックしてください。</p>
-          <p>2026/01/24 に <span>ver16.0.0にアップテート</span>しました！
-            新しくサブ補完チェッカーを追加しました。メインファイターの苦手なファイターやおすすめのサブファイターを一覧できます。
-            また、33期の対戦結果を反映しましたのでぜひチェックしてください。</p>
+          <p>2026/05/30 に <span>ver17.0.0にアップテート</span>しました！
+            新しく各ページに各プレイヤーの拒否ステージ情報を追加しました。また新規ツールとしておすすめキャラ診断を追加しました。</p>
+          <p>2026/05/30 に <span>ver17.0.0にアップテート</span>しました！
+            新しく各ページに各プレイヤーの拒否ステージ情報を追加しました。また新規ツールとしておすすめキャラ診断を追加しました。</p>
+          <p>2026/05/30 に <span>ver17.0.0にアップテート</span>しました！
+            新しく各ページに各プレイヤーの拒否ステージ情報を追加しました。また新規ツールとしておすすめキャラ診断を追加しました。</p>
         </div>
       </div>
     </div>
@@ -179,7 +176,7 @@
         「<a href="https://smashmate.net/">スマメイト*</a>」の対戦結果を元にファイター毎の勝率からキャラランクや統計データをまとめて掲載しているサイトになります。
         スマブラSPでは他にも多くの方がキャラランクや相性表, サブ補完適性を作成されていますが、当サイトはオンライン対戦の結果を勝敗数から定量的にまとめることに主眼を置いています。
         扱っているデータについては皆様にも数値として見ていただけるように詳細の結果も掲載していますので、ぜひご覧ください。
-        これまで集計したデータは、26 年 01 月 時点で 15-33 期 (サブ期も含む) の結果、およそ 1260 万対戦の結果をまとめています。
+        これまで集計したデータは、26 年 05 月 時点で 15-34 期 (サブ期も含む) の結果、およそ 1880 万対戦の結果をまとめています。
         各期が終了次第、更新しますので随時ご確認ください。
         <br>　*スマメイトとは・・・<a href="https://twitter.com/@smashmate_info">coco様</a>
         (旧のちょう様)が運営されているオンライン上で気軽にスマブラ対戦募集やレーティング、大会開催ができるWebサイト
@@ -321,6 +318,18 @@
             </div>
           </div>
         </a>
+        <a class="link" href="./counter_pick.html">
+          <div class="service-list__item">
+            <div class="service-list__body">
+              <img src="./img/common/diagonosis.png" alt="ファイタの画像">
+              <div class="service-list__title">Counter Picker <p class="new"> upd!</p><br>おすすめキャラ診断
+              </div>
+              <div class="service-list__text">
+                <p>苦手ファイターからおすすめファイターを診断します</p>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
@@ -398,7 +407,7 @@
     <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
         当サイトは個人が運営する非公式のWebサービスです。<br>
         任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-    <p class="copyright">ver16.0.1 2026/02/13<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
+    <p class="copyright">ver17.0.0 2026/05/30<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
   </footer>
   <!--footerはここまで-->
 </body>
