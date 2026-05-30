@@ -65,10 +65,9 @@ async function initDynamicCharaPage() {
   const loadDataForTier = async (tier) => {
     updateRateDisplay(tier);
     try {
-      // マスターJSONの読み込み
-      const response = await fetch(`../js/data/dynamic_pages_${tier}.json`);
-      const allData = await response.json();
-      const data = allData[mainId];
+      // キャラID別の分割JSONを読み込む（全キャラ分ではなく自分のデータだけ）
+      const response = await fetch(`../js/data/dynamic_pages_${tier}_${mainId}.json`);
+      const data = await response.json();
 
       if (!data) {
         console.error(
