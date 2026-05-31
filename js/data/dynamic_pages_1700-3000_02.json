@@ -1012,61 +1012,61 @@
     {
       "rank": 1,
       "player": "マイルドなH.O",
-      "period": "31期",
+      "period": "31.0",
       "rate": 2448.0
     },
     {
       "rank": 2,
       "player": "空白",
-      "period": "28期",
+      "period": "28.0",
       "rate": 2409.0
     },
     {
       "rank": 3,
       "player": "ラリックス",
-      "period": "25期",
+      "period": "25.0",
       "rate": 2408.0
     },
     {
       "rank": 4,
-      "player": "「」",
-      "period": "21期",
-      "rate": 2355.0
-    },
-    {
-      "rank": 5,
       "player": ".",
-      "period": "33期",
+      "period": "33.0",
       "rate": 2251.0
     },
     {
-      "rank": 6,
+      "rank": 5,
       "player": "垂れ乳大納言",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2248.0
     },
     {
-      "rank": 7,
+      "rank": 6,
       "player": "いーにむ",
-      "period": "34期",
+      "period": "34.0",
       "rate": 2226.0
     },
     {
-      "rank": 8,
+      "rank": 7,
       "player": "ポピー",
-      "period": "26期",
+      "period": "26.0",
       "rate": 2202.0
+    },
+    {
+      "rank": 8,
+      "player": "かにきん",
+      "period": "22.0",
+      "rate": 2108.0
     },
     {
       "rank": 9,
       "player": "カルメロ",
-      "period": "33期",
+      "period": "33.0",
       "rate": 2108.0
     },
     {
       "rank": 10,
-      "player": "かにきん",
-      "period": "22期",
+      "player": "まふてる",
+      "period": "22.0",
       "rate": 2108.0
     }
   ],

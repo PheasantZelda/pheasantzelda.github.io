@@ -1012,62 +1012,62 @@
     {
       "rank": 1,
       "player": "sy",
-      "period": "30期",
+      "period": "30.0",
       "rate": 2302.0
     },
     {
       "rank": 2,
-      "player": "sy@配信",
-      "period": "27期",
-      "rate": 2207.0
-    },
-    {
-      "rank": 3,
       "player": "たらことり",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2115.0
     },
     {
-      "rank": 4,
+      "rank": 3,
       "player": "K.O. Kou",
-      "period": "24期",
+      "period": "24.0",
       "rate": 2113.0
     },
     {
-      "rank": 5,
+      "rank": 4,
       "player": "りーマック",
-      "period": "22期",
+      "period": "22.0",
       "rate": 2101.0
     },
     {
-      "rank": 6,
+      "rank": 5,
       "player": "kingアバラ",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2037.0
     },
     {
-      "rank": 7,
+      "rank": 6,
       "player": "K.BLAST",
-      "period": "33期",
+      "period": "33.0",
       "rate": 2031.0
     },
     {
-      "rank": 8,
+      "rank": 7,
       "player": "よはね",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2026.0
     },
     {
-      "rank": 9,
+      "rank": 8,
       "player": "もなもな",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2019.0
     },
     {
-      "rank": 10,
+      "rank": 9,
       "player": "ネイサンドレイク",
-      "period": "16期",
+      "period": "16.0",
       "rate": 2011.0
+    },
+    {
+      "rank": 10,
+      "player": "RYO",
+      "period": "24.0",
+      "rate": 2010.0
     }
   ],
   "match_details": [

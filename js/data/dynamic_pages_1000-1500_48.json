@@ -1012,49 +1012,49 @@
     {
       "rank": 1,
       "player": "kept",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2226.0
     },
     {
       "rank": 2,
       "player": "ホロア",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2217.0
     },
     {
       "rank": 3,
       "player": "ななみ",
-      "period": "30期",
+      "period": "30.0",
       "rate": 2125.0
     },
     {
       "rank": 4,
       "player": "シリコン",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2118.0
     },
     {
       "rank": 5,
       "player": "しんちゃん",
-      "period": "28期",
+      "period": "28.0",
       "rate": 2115.0
     },
     {
       "rank": 6,
       "player": "きくざかり",
-      "period": "24期",
+      "period": "24.0",
       "rate": 2105.0
     },
     {
       "rank": 7,
       "player": "オトリ",
-      "period": "21期",
+      "period": "21.0",
       "rate": 2104.0
     },
     {
       "rank": 8,
       "player": "イエロ",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2032.0
     },
     {
@@ -1066,7 +1066,7 @@
     {
       "rank": 10,
       "player": "ハル",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2006.0
     }
   ],

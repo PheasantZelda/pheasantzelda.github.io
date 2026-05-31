@@ -1011,63 +1011,63 @@
   "final_rates": [
     {
       "rank": 1,
-      "player": "TG",
-      "period": "29期",
+      "player": "TG(トリグリ)",
+      "period": "29.0",
       "rate": 2506.0
     },
     {
       "rank": 2,
       "player": "たぁ",
-      "period": "30期",
+      "period": "30.0",
       "rate": 2282.0
     },
     {
       "rank": 3,
-      "player": "TG(トリグリ)",
-      "period": "25期",
-      "rate": 2272.0
-    },
-    {
-      "rank": 4,
       "player": "ヒー",
-      "period": "30期",
+      "period": "30.0",
       "rate": 2130.0
     },
     {
-      "rank": 5,
+      "rank": 4,
       "player": "みなみ",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2113.0
     },
     {
-      "rank": 6,
+      "rank": 5,
       "player": "ここみるはいしん",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2107.0
     },
     {
-      "rank": 7,
+      "rank": 6,
       "player": "PET配信",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2102.0
     },
     {
-      "rank": 8,
+      "rank": 7,
       "player": "Maー",
-      "period": "23期",
+      "period": "23.0",
       "rate": 2075.0
     },
     {
-      "rank": 9,
+      "rank": 8,
       "player": "や～や",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2065.0
     },
     {
-      "rank": 10,
+      "rank": 9,
       "player": "なまえ",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2028.0
+    },
+    {
+      "rank": 10,
+      "player": "mantis p",
+      "period": "17.0",
+      "rate": 2018.0
     }
   ],
   "match_details": [

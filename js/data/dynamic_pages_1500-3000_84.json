@@ -1009,62 +1009,62 @@
   "final_rates": [
     {
       "rank": 1,
-      "player": "あcola",
-      "period": "27期",
+      "player": "ZETA/あcola",
+      "period": "27.0",
       "rate": 2500.0
     },
     {
       "rank": 2,
       "player": "カルメロ",
-      "period": "30期",
+      "period": "30.0",
       "rate": 2424.0
     },
     {
       "rank": 3,
       "player": "r2",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2404.0
     },
     {
       "rank": 4,
       "player": "R",
-      "period": "30期",
+      "period": "30.0",
       "rate": 2311.0
     },
     {
       "rank": 5,
       "player": "しゅーとん",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2307.0
     },
     {
       "rank": 6,
       "player": "かいかい",
-      "period": "33期",
+      "period": "33.0",
       "rate": 2304.0
     },
     {
       "rank": 7,
       "player": "りてしあ",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2260.0
     },
     {
       "rank": 8,
-      "player": "Chon",
-      "period": "34期",
+      "player": "N7/Chon",
+      "period": "34.0",
       "rate": 2234.0
     },
     {
       "rank": 9,
       "player": "ふぁいやー",
-      "period": "31期",
+      "period": "31.0",
       "rate": 2205.0
     },
     {
       "rank": 10,
       "player": "roro",
-      "period": "24期",
+      "period": "24.0",
       "rate": 2200.0
     }
   ],

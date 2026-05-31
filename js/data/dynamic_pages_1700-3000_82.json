@@ -1011,63 +1011,63 @@
   "final_rates": [
     {
       "rank": 1,
-      "player": "ZETA/あcola",
-      "period": "34期",
+      "player": "あcola",
+      "period": "34.0",
       "rate": 2601.0
     },
     {
       "rank": 2,
       "player": "ミーヤー",
-      "period": "21期",
+      "period": "21.0",
       "rate": 2546.0
     },
     {
       "rank": 3,
       "player": "カルメロ",
-      "period": "31期",
+      "period": "31.0",
       "rate": 2503.0
     },
     {
       "rank": 4,
-      "player": "あcola",
-      "period": "20期",
-      "rate": 2502.0
-    },
-    {
-      "rank": 5,
-      "player": "Plusko!",
-      "period": "34期",
-      "rate": 2445.0
-    },
-    {
-      "rank": 6,
       "player": "らき",
-      "period": "32期",
+      "period": "32.0",
       "rate": 2401.0
     },
     {
-      "rank": 7,
+      "rank": 5,
       "player": "エル",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2400.0
     },
     {
-      "rank": 8,
+      "rank": 6,
       "player": "にやえ",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2400.0
     },
     {
-      "rank": 9,
+      "rank": 7,
       "player": "はるぽよ",
-      "period": "34期",
+      "period": "34.0",
       "rate": 2346.0
     },
     {
-      "rank": 10,
+      "rank": 8,
       "player": "せいじ",
-      "period": "27期",
+      "period": "27.0",
       "rate": 2319.0
+    },
+    {
+      "rank": 9,
+      "player": "あどらる",
+      "period": "34.0",
+      "rate": 2313.0
+    },
+    {
+      "rank": 10,
+      "player": "ラリックス",
+      "period": "24.0",
+      "rate": 2304.0
     }
   ],
   "match_details": [

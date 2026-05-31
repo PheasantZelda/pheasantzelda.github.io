@@ -1012,62 +1012,62 @@
     {
       "rank": 1,
       "player": "ミーヤー",
-      "period": "28期",
+      "period": "28.0",
       "rate": 2608.0
     },
     {
       "rank": 2,
-      "player": "-",
-      "period": "34期",
-      "rate": 2509.0
-    },
-    {
-      "rank": 3,
       "player": "サウザンド",
-      "period": "30期",
+      "period": "30.0",
       "rate": 2311.0
     },
     {
-      "rank": 4,
+      "rank": 3,
       "player": "Mr.レトロ　配信",
-      "period": "29期",
+      "period": "29.0",
       "rate": 2212.0
     },
     {
-      "rank": 5,
+      "rank": 4,
       "player": "かえる",
-      "period": "20期",
+      "period": "20.0",
       "rate": 2206.0
     },
     {
-      "rank": 6,
-      "player": "あcola",
-      "period": "31期",
+      "rank": 5,
+      "player": "ZETA/あcola",
+      "period": "31.0",
       "rate": 2173.0
     },
     {
-      "rank": 7,
+      "rank": 6,
       "player": "ゆり",
-      "period": "33期",
+      "period": "33.0",
       "rate": 2118.0
     },
     {
-      "rank": 8,
+      "rank": 7,
       "player": "mimi",
-      "period": "23期",
+      "period": "23.0",
       "rate": 2113.0
     },
     {
-      "rank": 9,
+      "rank": 8,
       "player": "KRB AyaLin",
-      "period": "27期",
+      "period": "27.0",
+      "rate": 2112.0
+    },
+    {
+      "rank": 9,
+      "player": "クロ",
+      "period": "23.0",
       "rate": 2112.0
     },
     {
       "rank": 10,
-      "player": "クロ",
-      "period": "23期",
-      "rate": 2112.0
+      "player": "まじっく",
+      "period": "27.0",
+      "rate": 2109.0
     }
   ],
   "match_details": [
