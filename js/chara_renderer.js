@@ -243,7 +243,7 @@ function renderFinalRates(data) {
             <tr class="item">
                 <td><a>${r.rank}</a></td>
                 <td><p>${r.rank}</p><img src="../img/fighter/${data.main_image || '01.マリオ.png'}" alt="ファイター画像"></td>
-                <td><a href="https://smashmate.net/user/${r.player}/" target="_blank">${r.player}</a></td>
+                <td><a>${r.player}</a></td>
                 <td><a>${r.rate}</a></td>
                 <td><a>${r.period}</a></td>
             </tr>`;

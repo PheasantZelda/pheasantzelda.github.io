@@ -590,3 +590,49 @@
     display: none !important;
   }
 }
+
+/* ===================================================
+   モード切り替えボタン（「相手が拒否」↔「自分が拒否される」）
+=================================================== */
+.mode-toggle-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0 4px;
+  flex-wrap: wrap;
+}
+
+.mode-toggle-btn {
+  background-color: #181a1b;
+  border: 1.5px solid #e7412b;
+  color: #ccc;
+  padding: 7px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  min-width: 160px;
+  transition: all 0.2s ease;
+  outline: none;
+  letter-spacing: 0.03em;
+}
+
+.mode-toggle-btn:hover {
+  background-color: rgba(231, 65, 43, 0.12);
+  color: #fff;
+}
+
+.mode-toggle-btn.active {
+  background-color: #e7412b;
+  color: #fff;
+  border-color: #e7412b;
+  box-shadow: 0 0 12px rgba(231, 65, 43, 0.45);
+}
+
+@media (max-width: 480px) {
+  .mode-toggle-btn {
+    font-size: 11px;
+    padding: 6px 12px;
+    min-width: 130px;
+  }
+}

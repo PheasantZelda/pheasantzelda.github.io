@@ -251,11 +251,25 @@ async function initStageBanPage() {
   // 初期データのロード
   await loadStageBanData(initialTier);
 
+  // 現在のモード: "normal"=通常(相手が拒否), "reverse"=逆引き(自分が拒否される)
+  let currentMode = "normal";
+
   const targetFighter = container.getAttribute("data-fighter");
   if (targetFighter) {
     // 個別ファイターページ用：ドロップダウンは不要で対象ファイターの表のみ表示
     const tableContainer = document.createElement("div");
     tableContainer.className = "stage-table-wrapper";
+
+    // モード切り替えボタンをcreateViewToggleより前に追加
+    createModeToggle(container, () => {
+      currentMode = currentMode === "normal" ? "reverse" : "normal";
+      if (currentMode === "normal") {
+        renderTable(targetFighter, tableContainer);
+      } else {
+        renderReverseTable(targetFighter, tableContainer);
+      }
+    });
+
     createViewToggle(container, tableContainer);
     container.appendChild(tableContainer);
     renderTable(targetFighter, tableContainer);
@@ -264,7 +278,11 @@ async function initStageBanPage() {
     if (rateSelect) {
       rateSelect.addEventListener("change", async (e) => {
         await loadStageBanData(e.target.value);
-        renderTable(targetFighter, tableContainer);
+        if (currentMode === "normal") {
+          renderTable(targetFighter, tableContainer);
+        } else {
+          renderReverseTable(targetFighter, tableContainer);
+        }
       });
     }
     return;
@@ -299,9 +317,22 @@ async function initStageBanPage() {
 
   selectorDiv.appendChild(select);
   selectorDiv.appendChild(selectedImageContainer);
-  
+
   const tableContainer = document.createElement("div");
   tableContainer.className = "stage-table-wrapper";
+
+  // モード切り替えボタンをcreateViewToggleより前に追加
+  createModeToggle(container, () => {
+    currentMode = currentMode === "normal" ? "reverse" : "normal";
+    const selectedFighter = select.value;
+    if (!selectedFighter) return;
+    if (currentMode === "normal") {
+      renderTable(selectedFighter, tableContainer);
+    } else {
+      renderReverseTable(selectedFighter, tableContainer);
+    }
+  });
+
   createViewToggle(container, tableContainer);
   
   container.appendChild(selectorDiv);
@@ -312,7 +343,11 @@ async function initStageBanPage() {
     if (selectedFighter) {
       selectedImage.src = getFighterImageByEnglishId(selectedFighter);
       selectedImage.alt = selectedFighter;
-      renderTable(selectedFighter, tableContainer);
+      if (currentMode === "normal") {
+        renderTable(selectedFighter, tableContainer);
+      } else {
+        renderReverseTable(selectedFighter, tableContainer);
+      }
     }
   };
 
@@ -621,6 +656,50 @@ function renderTable(fighterName, container) {
   }, 50);
 }
 
+/**
+ * 「通常表示」と「逆引き表示」のモード切り替えボタンを作成する
+ * @param {HTMLElement} container - ボタンを追加する親コンテナ
+ * @param {Function} onToggle - モード切り替え時に呼ばれるコールバック
+ */
+function createModeToggle(container, onToggle) {
+  if (container.querySelector(".mode-toggle-container")) return;
+
+  const modeContainer = document.createElement("div");
+  modeContainer.className = "mode-toggle-container";
+
+  const btnNormal = document.createElement("button");
+  btnNormal.className = "mode-toggle-btn active";
+  btnNormal.textContent = "相手が拒否するステージ";
+  btnNormal.title = "選択ファイターに対して、各対戦相手がどのステージを拒否するかを表示";
+
+  const btnReverse = document.createElement("button");
+  btnReverse.className = "mode-toggle-btn";
+  btnReverse.textContent = "自分が拒否されるステージ";
+  btnReverse.title = "選択ファイターが各対戦相手から、どのステージを拒否されているかを表示";
+
+  modeContainer.appendChild(btnNormal);
+  modeContainer.appendChild(btnReverse);
+  container.appendChild(modeContainer);
+
+  let isNormal = true;
+
+  btnNormal.addEventListener("click", () => {
+    if (isNormal) return;
+    isNormal = true;
+    btnNormal.classList.add("active");
+    btnReverse.classList.remove("active");
+    onToggle();
+  });
+
+  btnReverse.addEventListener("click", () => {
+    if (!isNormal) return;
+    isNormal = false;
+    btnReverse.classList.add("active");
+    btnNormal.classList.remove("active");
+    onToggle();
+  });
+}
+
 function createViewToggle(container, tableContainer) {
   if (container.querySelector(".view-toggle-container")) return;
 
@@ -667,6 +746,279 @@ function createViewToggle(container, tableContainer) {
   
   btnGrid.addEventListener("click", () => setViewMode("grid"));
   btnCards.addEventListener("click", () => setViewMode("cards"));
+}
+
+/**
+ * 逆引きテーブルをレンダリングする
+ * 「対象ファイター（fighterName）が各対戦相手から、どのステージを拒否されているか」を表示
+ * データを転置して、各ステージごとに拒否確率の高い対戦相手を並べる
+ * @param {string} fighterName - 対象ファイター名（英語ID）
+ * @param {HTMLElement} container - レンダリング先コンテナ
+ */
+function renderReverseTable(fighterName, container) {
+  container.innerHTML = "";
+
+  // 全ファイターのデータから「fighterNameに対する拒否確率」を逆引きで収集
+  // stageBanData: [{name: "マリオ", data: [{BAN_FIGHTER, FD, BF, ...}]}]
+  // 「Aがfighterを拒否する確率」= stageBanDataの中でname==Aのデータ内の、BAN_FIGHTER==fighterNameの行
+  const reversedRows = [];
+  stageBanData.forEach(fighterObj => {
+    // fighterObj.name = 対戦相手のファイター名
+    const opponent = fighterObj.name;
+    if (opponent === fighterName) return; // 自分自身はスキップ
+    // そのファイターのデータ内でfighterNameに対する行を探す
+    const row = (fighterObj.data || []).find(r =>
+      r.BAN_FIGHTER === fighterName
+    );
+    if (!row) return;
+    reversedRows.push({
+      opponent,
+      FD: row.FD || 0,
+      BF: row.BF || 0,
+      PS2: row.PS2 || 0,
+      SBF: row.SBF || 0,
+      HB: row.HB || 0,
+      VT: row.VT || 0,
+      SV: row.SV || 0,
+    });
+  });
+
+  // おまかせを除外
+  const filteredRows = reversedRows.filter(r => r.opponent !== "omakase" && r.opponent !== "おまかせ");
+
+  // === バナー ===
+  const fighterBanner = document.createElement("div");
+  fighterBanner.className = "stage-fighter-banner";
+
+  const bannerImg = document.createElement("img");
+  bannerImg.src = getFighterImageByEnglishId(fighterName);
+  bannerImg.alt = fighterName;
+  bannerImg.className = "stage-fighter-banner-img";
+
+  const bannerLabel = document.createElement("div");
+  bannerLabel.className = "stage-fighter-banner-label";
+
+  const bannerSub = document.createElement("span");
+  bannerSub.className = "stage-fighter-banner-sub";
+  bannerSub.textContent = "拒否されるステージ一覧";
+
+  const bannerName = document.createElement("span");
+  bannerName.className = "stage-fighter-banner-name";
+  bannerName.textContent = fighterName;
+
+  bannerLabel.appendChild(bannerSub);
+  bannerLabel.appendChild(bannerName);
+  fighterBanner.appendChild(bannerImg);
+  fighterBanner.appendChild(bannerLabel);
+  container.appendChild(fighterBanner);
+
+  // === テーブルビュー ===
+  const tableView = document.createElement("div");
+  tableView.className = "stage-table-view";
+
+  const table = document.createElement("table");
+  table.className = "stage-ban-table";
+
+  const thead = document.createElement("thead");
+  const trHead = document.createElement("tr");
+
+  // ヘッダー左端に対象ファイターの画像
+  const thFighter = document.createElement("th");
+  thFighter.className = "th-fighter-col";
+  const thFighterInner = document.createElement("div");
+  thFighterInner.className = "th-fighter-inner";
+  const thFighterImg = document.createElement("img");
+  thFighterImg.src = getFighterImageByEnglishId(fighterName);
+  thFighterImg.alt = fighterName;
+  thFighterImg.className = "th-fighter-img";
+  thFighterInner.appendChild(thFighterImg);
+  const thFighterLabel = document.createElement("span");
+  thFighterLabel.className = "th-fighter-label";
+  thFighterLabel.textContent = "拒否される";
+  thFighterInner.appendChild(thFighterLabel);
+  thFighter.appendChild(thFighterInner);
+  trHead.appendChild(thFighter);
+
+  STAGE_CONFIG.forEach(stage => {
+    const th = document.createElement("th");
+    th.innerHTML = `
+      <div class="header-stage-inner">
+        <img src="${resolvePath(stage.img)}" alt="${stage.name}" class="header-stage-img">
+        <span class="header-stage-name">${stage.name}</span>
+      </div>
+    `;
+    trHead.appendChild(th);
+  });
+  thead.appendChild(trHead);
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+  filteredRows.forEach(row => {
+    const tr = document.createElement("tr");
+    tr.className = "stage-ban-data-row";
+    const tdFighter = document.createElement("td");
+    tdFighter.className = "fighter-col";
+    const imgFighter = document.createElement("img");
+    imgFighter.src = getFighterImageByEnglishId(row.opponent);
+    imgFighter.alt = row.opponent;
+
+    // ファイター画像にリンクを付与
+    const fighterPageUrl = getFighterPageUrl(row.opponent);
+    if (fighterPageUrl) {
+      const aFighter = document.createElement("a");
+      aFighter.href = fighterPageUrl;
+      aFighter.title = row.opponent;
+      aFighter.appendChild(imgFighter);
+      tdFighter.appendChild(aFighter);
+    } else {
+      tdFighter.appendChild(imgFighter);
+    }
+    tr.appendChild(tdFighter);
+
+    STAGE_CONFIG.forEach(stage => {
+      const tdStage = document.createElement("td");
+      tdStage.className = "prob-col";
+      const prob = row[stage.id] || 0;
+      tdStage.textContent = `${prob.toFixed(1)}%`;
+      const alpha = prob / 100.0;
+      tdStage.style.backgroundColor = `rgba(231, 65, 43, ${alpha})`;
+      tdStage.style.color = alpha > 0.4 ? "white" : "#ddd";
+      tdStage.style.textShadow = alpha > 0.4 ? "1px 1px 2px black" : "none";
+      tr.appendChild(tdStage);
+    });
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  tableView.appendChild(table);
+
+  // === カードビュー ===
+  const cardsView = document.createElement("div");
+  cardsView.className = "stage-cards-view";
+
+  filteredRows.forEach(row => {
+    const card = document.createElement("div");
+    card.className = "fighter-card stage-ban-data-card";
+    card.style.cursor = "pointer";
+    card.title = "クリックで拡大表示";
+
+    const cardFighterInfo = document.createElement("div");
+    cardFighterInfo.className = "card-fighter-info";
+
+    const imgFighter = document.createElement("img");
+    imgFighter.src = getFighterImageByEnglishId(row.opponent);
+    imgFighter.alt = row.opponent;
+
+    const nameFighter = document.createElement("span");
+    nameFighter.className = "card-fighter-name";
+    nameFighter.textContent = row.opponent;
+
+    const cardFighterPageUrl = getFighterPageUrl(row.opponent);
+    if (cardFighterPageUrl) {
+      const aFighterImg = document.createElement("a");
+      aFighterImg.href = cardFighterPageUrl;
+      aFighterImg.title = row.opponent;
+      aFighterImg.appendChild(imgFighter);
+      const aFighterName = document.createElement("a");
+      aFighterName.href = cardFighterPageUrl;
+      aFighterName.className = "card-fighter-link";
+      aFighterName.appendChild(nameFighter);
+      cardFighterInfo.appendChild(aFighterImg);
+      cardFighterInfo.appendChild(aFighterName);
+    } else {
+      cardFighterInfo.appendChild(imgFighter);
+      cardFighterInfo.appendChild(nameFighter);
+    }
+    card.appendChild(cardFighterInfo);
+
+    const cardStagesList = document.createElement("div");
+    cardStagesList.className = "card-stages-list";
+
+    const stagesWithProb = STAGE_CONFIG.map(stage => ({
+      name: stage.name,
+      img: stage.img,
+      prob: row[stage.id] || 0
+    })).sort((a, b) => b.prob - a.prob);
+
+    stagesWithProb.forEach(s => {
+      const cardStageItem = document.createElement("div");
+      cardStageItem.className = "card-stage-item";
+      const imgStage = document.createElement("img");
+      imgStage.src = resolvePath(s.img);
+      imgStage.alt = s.name;
+      const nameStage = document.createElement("span");
+      nameStage.className = "card-stage-name";
+      nameStage.textContent = s.name;
+      const probStage = document.createElement("span");
+      probStage.className = "card-stage-prob";
+      probStage.textContent = `${s.prob.toFixed(1)}%`;
+      const alpha = s.prob / 100.0;
+      probStage.style.backgroundColor = `rgba(231, 65, 43, ${alpha})`;
+      probStage.style.color = alpha > 0.4 ? "white" : "#ddd";
+      probStage.style.textShadow = alpha > 0.4 ? "1px 1px 2px black" : "none";
+      cardStageItem.appendChild(imgStage);
+      cardStageItem.appendChild(nameStage);
+      cardStageItem.appendChild(probStage);
+      cardStagesList.appendChild(cardStageItem);
+    });
+    card.appendChild(cardStagesList);
+
+    card.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;
+      const isOpen = card.classList.contains("is-open");
+      const allCards = Array.from(cardsView.querySelectorAll(".fighter-card"));
+      const myTop = card.offsetTop;
+      const rowCards = allCards.filter(c => c.offsetTop === myTop);
+      if (isOpen) {
+        rowCards.forEach(c => c.classList.remove("is-open"));
+      } else {
+        rowCards.forEach(c => c.classList.add("is-open"));
+      }
+    });
+
+    cardsView.appendChild(card);
+  });
+
+  container.appendChild(tableView);
+  container.appendChild(cardsView);
+
+  container.classList.remove("is-expanded");
+
+  if (filteredRows.length > 5) {
+    const btnDiv = document.createElement("div");
+    btnDiv.style.textAlign = "center";
+    btnDiv.style.marginTop = "16px";
+    const btn = document.createElement("button");
+    btn.className = "stage-ban-expand-btn";
+    btn.textContent = "さらに表示";
+    btn.style.padding = "8px 24px";
+    btn.style.cursor = "pointer";
+    btn.style.background = "linear-gradient(135deg, #e7412b, #c43420)";
+    btn.style.color = "white";
+    btn.style.border = "none";
+    btn.style.borderRadius = "20px";
+    btn.style.fontWeight = "bold";
+    btn.style.boxShadow = "0 4px 12px rgba(231, 65, 43, 0.4)";
+    btn.style.transition = "transform 0.2s";
+    btn.addEventListener("click", () => {
+      const isExpanded = container.classList.toggle("is-expanded");
+      btn.textContent = isExpanded ? "閉じる" : "さらに表示";
+    });
+    btn.addEventListener("mouseover", () => btn.style.transform = "scale(1.05)");
+    btn.addEventListener("mouseout", () => btn.style.transform = "scale(1)");
+    btnDiv.appendChild(btn);
+    container.appendChild(btnDiv);
+  }
+
+  // 最初の行のカードを開く
+  setTimeout(() => {
+    const allCards = Array.from(cardsView.querySelectorAll(".fighter-card"));
+    if (allCards.length > 0) {
+      const firstRowTop = allCards[0].offsetTop;
+      allCards.forEach(c => {
+        if (c.offsetTop === firstRowTop) c.classList.add("is-open");
+      });
+    }
+  }, 50);
 }
 
 function initFloatingRateSelector(rateSelect) {
