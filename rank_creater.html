@@ -34,49 +34,118 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
   <script language="JavaScript">
-    //初期設定
+    // ===== ダウンロード機能（PC・スマホ両対応） =====
     $(function () {
-      //HTML画像化イベント登録
-      $("#exec").on("click", function () {
+      // PC版・スマホ版共通のダウンロードボタンのイベント登録
+      $("#exec, #exec_phone").on("click", function () {
         html2image();
       });
-      $("#exec_phone").on("click", function () {
-        html2image_phone();
-      });
     });
-    function html2image() {
-      // 画像化前に .tierlist h2::after と .MU_box_controls を一時的に非表示
-      const style = document.createElement('style');
-      style.id = 'hide-h2-after';
-      style.innerHTML = `
-    .tierlist h2::after { display: none !important; }
-    .MU_box_controls { display: none !important; }
-  `;
-      document.head.appendChild(style);
 
-      html2canvas(document.querySelector("#canvas-box"), {
-        useCORS: true,
-        backgroundColor: null,
-        scale: 2
-      }).then((canvas) => {
-        // 画像化後に元に戻す
-        document.getElementById('hide-h2-after').remove();
-        var base64 = canvas.toDataURL("image/png");
-        $("#download").attr("href", base64);
-        $("#download").attr("download", "TIER-LIST");
-        $("#download")[0].click();
-      });
-    }
-    function html2image_phone() {
-      html2canvas(document.querySelector("#canvas-box_phone"), {
-        useCORS: true,
-        backgroundColor: null,
-        scale: 2
-      }).then((canvas) => {
-        var base64 = canvas.toDataURL("image/png");
-        $("#download").attr("href", base64);
-        $("#download").attr("download", "TIER-LIST");
-        $("#download")[0].click();
+    /**
+     * Tier表を画像としてダウンロードする（PC・Android・iOS対応）
+     *
+     * 問題の原因：
+     * 1. .tierlistに position:sticky / top:-120px が設定されているため、
+     *    html2canvasが画面上の表示位置を基準にキャプチャすると
+     *    上部が切れたりスクロール位置に引っ張られる。
+     * 2. #canvas-box_phone は存在しないためスマホ版がエラーになる。
+     * 3. #downloadアンカーがコメントアウト内にあり使えない。
+     *
+     * 解決策：
+     * - sticky設定をキャプチャ入設中に position:initial に一時変更
+     * - ページトップにスクロールしてからキャプチャ
+     * - ダウンロードはJSで動的に生成したアンカーで実行（PC/Android）
+     * - iOSは新規タブで画像を表示して長押し保存に案内
+     */
+    function html2image() {
+      const canvasBox = document.querySelector("#canvas-box");
+      if (!canvasBox) {
+        alert('キャプチャ対象が見つかりません。ページを再読み込みしてください。');
+        return;
+      }
+
+      // ① 画像化前に装飾・操作ボタンを非表示にする
+      const hideStyle = document.createElement('style');
+      hideStyle.id = 'dl-hide-style';
+      hideStyle.innerHTML = `
+        .tierlist h2::after { display: none !important; }
+        .MU_box_controls { display: none !important; }
+      `;
+      document.head.appendChild(hideStyle);
+
+      // ② position:sticky が原因で画像がスクロール位置に引っ張られる問題を解決する
+      // キャプチャ中に限り position:initial・上部開始にする
+      const origPosition = canvasBox.style.position;
+      const origTop = canvasBox.style.top;
+      canvasBox.style.position = 'initial';
+      canvasBox.style.top = 'auto';
+
+      // ③ ページを一時的にトップにスクロールしてからキャプチャ
+      const savedScrollY = window.scrollY;
+      window.scrollTo(0, 0);
+
+      // DOM反映を待ってからキャプチャ開始
+      requestAnimationFrame(function() {
+        html2canvas(canvasBox, {
+          useCORS: true,
+          backgroundColor: '#2c2a2a',
+          scale: 2,
+          allowTaint: false,
+          logging: false,
+          scrollX: 0,
+          scrollY: 0
+        }).then(function(canvas) {
+          // 元のスタイル・スクロール位置を復元
+          document.getElementById('dl-hide-style').remove();
+          canvasBox.style.position = origPosition;
+          canvasBox.style.top = origTop;
+          window.scrollTo(0, savedScrollY);
+
+          // iOS判定：Safariは<a download>が動作しない場合がある
+          const isIOS = /iP(hone|ad|od)/i.test(navigator.userAgent);
+
+          if (isIOS) {
+            // iOS：新規タブで画像を表示→長押しで保存案内
+            const dataURL = canvas.toDataURL('image/png');
+            const newTab = window.open();
+            if (newTab) {
+              newTab.document.write(
+                '<title>TIER-LIST</title>' +
+                '<p style="font-family:sans-serif;color:#555;font-size:14px;text-align:center;margin-top:16px">' +
+                '画像を長押し→「写真に追加」または「ファイルに保存」で保存してください</p>' +
+                '<img src="' + dataURL + '" style="max-width:100%;display:block;margin:8px auto">'
+              );
+            } else {
+              alert('ポップアップがブロックされました。\nブラウザの設定でポップアップを許可してから再度お試しください。');
+            }
+          } else {
+            // PC / Android: BlobURL + <a download> でダウンロード
+            canvas.toBlob(function(blob) {
+              const blobURL = URL.createObjectURL(blob);
+              const anchor = document.createElement('a');
+              anchor.href = blobURL;
+              anchor.download = 'TIER-LIST.png';
+              anchor.style.display = 'none';
+              document.body.appendChild(anchor);
+              anchor.click();
+              // メモリ解放
+              setTimeout(function() {
+                URL.revokeObjectURL(blobURL);
+                document.body.removeChild(anchor);
+              }, 1000);
+            }, 'image/png');
+          }
+        }).catch(function(err) {
+          // エラー時のクリーンアップ
+          const s = document.getElementById('dl-hide-style');
+          if (s) s.remove();
+          canvasBox.style.position = origPosition;
+          canvasBox.style.top = origTop;
+          window.scrollTo(0, savedScrollY);
+          console.error('画像の生成に失敗しました:', err);
+          alert('画像の生成に失敗しました。ページを再読み込みして再度お試しください。');
+        });
       });
     }
   </script>
