@@ -870,3 +870,38 @@ nav li.has-child ul ul {
         max-width: 80%;
     }
 }
+
+/* ===== ティアメーカー共通タブ ===== */
+.mode-tabs {
+  width: 1050px;
+  max-width: 98%;
+  margin: 15px auto 5px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.mode-tab-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #bbb;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.mode-tab-btn:hover {
+  background-color: #444;
+  color: #fff;
+}
+.mode-tab-btn.active {
+  background-color: #e7412b;
+  border-color: #e7412b;
+  color: #fff;
+}
+@media (max-width: 840px) {
+  .mode-tabs { gap: 5px; margin: 10px auto 5px; }
+  .mode-tab-btn { padding: 8px 12px; font-size: 12px; }
+}
