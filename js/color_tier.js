@@ -44,6 +44,9 @@ const FIGHTERS = [
   { name: 'スネーク',             file: '36.スネーク_1p_512x512.png'            },
   { name: 'アイク',               file: '37.アイク_1p_512x512.png'              },
   { name: 'ポケモントレーナー',   file: '38.ポケモントレーナー_1p_512x512.png'  },
+  { name: 'ゼニガメ',             file: '38-1.ゼニガメ_1p_512x512.png'          },
+  { name: 'フシギソウ',           file: '38-2.フシギソウ_1p_512x512.png'        },
+  { name: 'リザードン',           file: '38-3.リザードン_1p_512x512.png'        },
   { name: 'ディディーコング',     file: '39.ディディーコング_1p_512x512.png'    },
   { name: 'リュカ',               file: '40.リュカ_1p_512x512.png'              },
   { name: 'ソニック',             file: '41.ソニック_1p_512x512.png'            },
@@ -89,7 +92,8 @@ const FIGHTERS = [
   { name: 'ミェンミェン',         file: '81.ミェンミェン_1p_512x512.png'        },
   { name: 'スティーブ',           file: '82.スティーブ_1p_512x512.png'          },
   { name: 'セフィロス',           file: '83.セフィロス_1p_512x512.png'          },
-  { name: 'ホムヒカ',             file: '84.ホムヒカ_1p_512x512.png'            },
+  { name: 'ホムラ',               file: '84.ホムラ_1p_512x512.png'            },
+  { name: 'ヒカリ',               file: '84.ヒカリ_1p_512x512.png'            },
   { name: 'カズヤ',               file: '85.カズヤ_1p_512x512.png'              },
   { name: 'ソラ',                 file: '86.ソラ_1p_512x512.png'                },
 ];
@@ -274,3 +278,55 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// ===== 一時保存・読込 =====
+function saveColorList() {
+  const cellsData = [];
+  const total = Math.min(FIGHTERS.length, TOTAL_CELLS);
+  for (let i = 0; i < total; i++) {
+    const badge = document.getElementById('badge-' + i);
+    const img = document.getElementById('img-' + i);
+    cellsData.push({
+      badge: badge ? badge.textContent : '',
+      imgSrc: img ? img.src : '',
+      opacity: img ? img.style.opacity : '0.3'
+    });
+  }
+  const titleInput = document.getElementById('color-title-input');
+  const saveData = {
+    title: titleInput ? titleInput.value : 'Favorite Color Variations',
+    cells: cellsData
+  };
+  try {
+    localStorage.setItem('colorTierData', JSON.stringify(saveData));
+    alert('一時保存しました');
+  } catch (e) {
+    alert('保存に失敗しました');
+  }
+}
+
+function loadColorList() {
+  const data = localStorage.getItem('colorTierData');
+  if (!data) return alert('保存データがありません');
+  const saveData = JSON.parse(data);
+  
+  if (saveData.title) {
+    const titleInput = document.getElementById('color-title-input');
+    const titleDisplay = document.getElementById('color-title-display');
+    if (titleInput) titleInput.value = saveData.title;
+    if (titleDisplay) titleDisplay.textContent = saveData.title;
+  }
+  
+  if (saveData.cells && Array.isArray(saveData.cells)) {
+    saveData.cells.forEach((cellData, i) => {
+      const badge = document.getElementById('badge-' + i);
+      const img = document.getElementById('img-' + i);
+      if (badge) badge.textContent = cellData.badge || '';
+      if (img) {
+        if (cellData.imgSrc) img.src = cellData.imgSrc;
+        img.style.opacity = cellData.opacity || '0.3';
+      }
+    });
+  }
+  alert('ロードしました');
+}

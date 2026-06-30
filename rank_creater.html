@@ -44,19 +44,6 @@
 
     /**
      * Tier表を画像としてダウンロードする（PC・Android・iOS対応）
-     *
-     * 問題の原因：
-     * 1. .tierlistに position:sticky / top:-120px が設定されているため、
-     *    html2canvasが画面上の表示位置を基準にキャプチャすると
-     *    上部が切れたりスクロール位置に引っ張られる。
-     * 2. #canvas-box_phone は存在しないためスマホ版がエラーになる。
-     * 3. #downloadアンカーがコメントアウト内にあり使えない。
-     *
-     * 解決策：
-     * - sticky設定をキャプチャ入設中に position:initial に一時変更
-     * - ページトップにスクロールしてからキャプチャ
-     * - ダウンロードはJSで動的に生成したアンカーで実行（PC/Android）
-     * - iOSは新規タブで画像を表示して長押し保存に案内
      */
     function html2image() {
       const canvasBox = document.querySelector("#canvas-box");
@@ -89,7 +76,6 @@
       document.head.appendChild(hideStyle);
 
       // ② position:sticky が原因で画像がスクロール位置に引っ張られる問題を解決する
-      // キャプチャ中に限り position:initial・上部開始にする
       const origPosition = canvasBox.style.position;
       const origTop = canvasBox.style.top;
       canvasBox.style.position = 'initial';
@@ -100,7 +86,7 @@
       window.scrollTo(0, 0);
 
       // DOM反映を待ってからキャプチャ開始
-      requestAnimationFrame(function() {
+      requestAnimationFrame(function () {
         html2canvas(canvasBox, {
           useCORS: true,
           backgroundColor: '#2c2a2a',
@@ -109,15 +95,13 @@
           logging: false,
           scrollX: 0,
           scrollY: 0
-        }).then(function(canvas) {
-          // 元のスタイル・スクロール位置を復元
+        }).then(function (canvas) {
           document.getElementById('dl-hide-style').remove();
           canvasBox.style.position = origPosition;
           canvasBox.style.top = origTop;
           window.scrollTo(0, savedScrollY);
 
           if (isIOS) {
-            // iOS：先に開いておいた新規タブに画像を表示→長押しで保存案内
             const dataURL = canvas.toDataURL('image/png');
             newTab.document.open();
             newTab.document.write(
@@ -128,8 +112,7 @@
             );
             newTab.document.close();
           } else {
-            // PC / Android: BlobURL + <a download> でダウンロード
-            canvas.toBlob(function(blob) {
+            canvas.toBlob(function (blob) {
               const blobURL = URL.createObjectURL(blob);
               const anchor = document.createElement('a');
               anchor.href = blobURL;
@@ -137,15 +120,13 @@
               anchor.style.display = 'none';
               document.body.appendChild(anchor);
               anchor.click();
-              // メモリ解放
-              setTimeout(function() {
+              setTimeout(function () {
                 URL.revokeObjectURL(blobURL);
                 document.body.removeChild(anchor);
               }, 1000);
             }, 'image/png');
           }
-        }).catch(function(err) {
-          // エラー時のクリーンアップ
+        }).catch(function (err) {
           const s = document.getElementById('dl-hide-style');
           if (s) s.remove();
           canvasBox.style.position = origPosition;
@@ -228,55 +209,61 @@
   </div>
   <!--headerはここから-->
   <header class="header">
-  <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
-  <div class="header-inner">
-    <!--./index.htmlでトップページを指す-->
-    <a class="header-logo" href="./index.html">
-      <img src="./img/common/logo.png" alt="SSBU">
-    </a>
-    <button class="header__hamburger hamburger" id="js-hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="header-site-menu">
-      <nav class="site-menu">
-        <ul>
-          <li><a href="./fighter.html">ファイタ一覧</a></li>
-          <li><a href="./ranking/ranking.html">キャラランク</a></li>
-          <li><a href="./rank_creater.html">Tier表メーカー</a></li>
-          <li><a href="./record/ranking_rate.html">歴代最終レート</a></li>
-          <li><a href="./counter_picker.html">おすすめキャラ診断</a></li>
-          <li class="has-child"><a href="#">ツール</a>
-            <ul>
-              <li><a href="./quiz.html">スマアナ検定</a></li>
-              <li><a href="./puzzle.html">スマブラパズル</a></li>
-              <li><a href="./sub_character.html">サブ補完チェッカー</a></li>
-              <li class="has-child"><a href="./parameter.html">特性早見表</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
-                <ul>
-                  <li><a href="./parameter/parameter1.html">パラメータ</a></li>
-                  <li><a href="./parameter/parameter2.html">地上攻撃</a></li>
-                  <li><a href="./parameter/parameter3.html">空中攻撃</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="has-child"><a href="#">統計・過去データ</a>
-            <ul>
-              <li><a href="./statstics.html">統計データ</a></li>
-              <li><a href="./capability.html">簡易不利相性</a></li>
-              <li><a href="./fighter_pick.html">キャラ使用率</a></li>
-              <li><a href="./record/tournament.html">オンライン大会</a></li>
-              <li><a href="./match_up.html">キャラ相性優劣</a></li>
-              <li><a href="./record/kagaribi9.html">篝火#9 新規勢記事</a></li>
-            </ul>
-          </li>
-          <li><a href="./userpolicy.html">利用規約</a></li>
-        </ul>
-      </nav>
+    <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
+    <div class="header-inner">
+      <!--./index.htmlでトップページを指す-->
+      <a class="header-logo" href="./index.html">
+        <img src="./img/common/logo.png" alt="SSBU">
+      </a>
+      <button class="header__hamburger hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header-site-menu">
+        <nav class="site-menu">
+          <ul>
+            <li><a href="./fighter.html">ファイタ一覧</a></li>
+            <li><a href="./ranking/ranking.html">キャラランク</a></li>
+            <li class="has-child"><a href="./rank_creater.html">Tier表メーカー</a>
+              <ul>
+                <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+                <li><a href="./move_tier.html">最強技表メーカー</a></li>
+                <li><a href="./color_tier.html">カラバリ表メーカー</a></li>
+              </ul>
+            </li>
+            <li><a href="./record/ranking_rate.html">歴代最終レート</a></li>
+            <li><a href="./counter_picker.html">おすすめキャラ診断</a></li>
+            <li class="has-child"><a href="#">ツール</a>
+              <ul>
+                <li><a href="./quiz.html">スマアナ検定</a></li>
+                <li><a href="./puzzle.html">スマブラパズル</a></li>
+                <li><a href="./sub_character.html">サブ補完チェッカー</a></li>
+                <li class="has-child"><a href="./parameter.html">特性早見表</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
+                  <ul>
+                    <li><a href="./parameter/parameter1.html">パラメータ</a></li>
+                    <li><a href="./parameter/parameter2.html">地上攻撃</a></li>
+                    <li><a href="./parameter/parameter3.html">空中攻撃</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-child"><a href="#">統計・過去データ</a>
+              <ul>
+                <li><a href="./statstics.html">統計データ</a></li>
+                <li><a href="./capability.html">簡易不利相性</a></li>
+                <li><a href="./fighter_pick.html">キャラ使用率</a></li>
+                <li><a href="./record/tournament.html">オンライン大会</a></li>
+                <li><a href="./match_up.html">キャラ相性優劣</a></li>
+                <li><a href="./record/kagaribi9.html">篝火#9 新規勢記事</a></li>
+              </ul>
+            </li>
+            <li><a href="./userpolicy.html">利用規約</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
   <!--headerはここまで-->
 
   <!--mainはここから-->
@@ -296,6 +283,13 @@
       </nav>
     </div>
     <div class="section">Tier表メーカー</div>
+
+    <!-- ページ切り替えタブ -->
+    <div class="mode-tabs">
+      <a href="./rank_creater.html" class="mode-tab-btn active">キャラランク</a>
+      <a href="./color_tier.html" class="mode-tab-btn">カラバリ</a>
+      <a href="./move_tier.html" class="mode-tab-btn">最強技</a>
+    </div>
     <!-- <div class="explain">
       <p>
         　キャラランクやMatch UPについて皆さんの意見を活発化するためにTier表メーカーを実装しました。
@@ -2426,15 +2420,15 @@
 
   <!--footerはここから-->
   <footer class="footer">
-  <a class="footer-logo" href="./index.html">
-    <img src="./img/common/logo.png" alt="SSBU">
-  </a>
-  <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
-  <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
-      当サイトは個人が運営する非公式のWebサービスです。<br>
-      任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-  <p class="copyright">ver17.0.0 2026/05/30<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
-</footer>
+    <a class="footer-logo" href="./index.html">
+      <img src="./img/common/logo.png" alt="SSBU">
+    </a>
+    <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
+    <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
+        当サイトは個人が運営する非公式のWebサービスです。<br>
+        任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
+    <p class="copyright">ver17.1.0 2026/06/28<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
+  </footer>
   <!--footerはここまで-->
   <!--JS挿入部-->
   <!--非表示機能-->

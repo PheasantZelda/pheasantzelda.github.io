@@ -406,3 +406,70 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// ===== 一時保存・読込 =====
+function saveMoveList() {
+  const cellsData = [];
+  MOVES.forEach((move, i) => {
+    const imgArea = document.getElementById('cell-' + i);
+    const img = imgArea ? imgArea.querySelector('.cell-fighter-img') : null;
+    if (img) {
+      cellsData.push({
+        idx: i,
+        fighter: {
+          name: img.alt,
+          file: img.dataset.file
+        }
+      });
+    }
+  });
+
+  const titleInput = document.getElementById('grid-title-input');
+  const saveData = {
+    title: titleInput ? titleInput.value : 'Best Move Picks',
+    lang: currentLang,
+    cells: cellsData
+  };
+
+  try {
+    localStorage.setItem('moveTierData', JSON.stringify(saveData));
+    alert('一時保存しました');
+  } catch (e) {
+    alert('保存に失敗しました');
+  }
+}
+
+function loadMoveList() {
+  const data = localStorage.getItem('moveTierData');
+  if (!data) return alert('保存データがありません');
+  const saveData = JSON.parse(data);
+
+  if (saveData.title) {
+    const titleInput = document.getElementById('grid-title-input');
+    const titleDisplay = document.getElementById('grid-title-display');
+    if (titleInput) titleInput.value = saveData.title;
+    if (titleDisplay) titleDisplay.textContent = saveData.title;
+  }
+
+  if (saveData.lang) {
+    setLang(saveData.lang);
+  }
+
+  // グリッドをクリア
+  MOVES.forEach((_, i) => {
+    const imgArea = document.getElementById('cell-' + i);
+    if (imgArea) imgArea.innerHTML = '';
+  });
+
+  // セルを復元
+  if (saveData.cells && Array.isArray(saveData.cells)) {
+    saveData.cells.forEach((c) => {
+      const imgArea = document.getElementById('cell-' + c.idx);
+      if (imgArea && c.fighter) {
+        setCellImage(imgArea, c.fighter);
+      }
+    });
+  }
+
+  alert('ロードしました');
+}

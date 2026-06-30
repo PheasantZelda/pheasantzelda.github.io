@@ -62,114 +62,120 @@
   </script>
   <!--headerはここから-->
   <header class="header">
-    <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
-    <div class="header-inner">
-      <!--./index.htmlでトップページを指す-->
-      <a class="header-logo" href="./index.html">
-        <img src="./img/common/logo.png" alt="SSBU">
-      </a>
-      <button class="header__hamburger hamburger" id="js-hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="header-site-menu">
-        <nav class="site-menu">
-          <ul>
-            <li><a href="./fighter.html">ファイタ一覧</a></li>
-            <li><a href="./ranking/ranking.html">キャラランク</a></li>
-            <li><a href="./rank_creater.html">Tier表メーカー</a></li>
-            <li><a href="./record/ranking_rate.html">歴代最終レート</a></li>
-            <li><a href="./counter_picker.html">おすすめキャラ診断</a></li>
-            <li class="has-child"><a href="#">ツール</a>
-              <ul>
-                <li><a href="./quiz.html">スマアナ検定</a></li>
-                <li><a href="./puzzle.html">スマブラパズル</a></li>
-                <li><a href="./sub_character.html">サブ補完チェッカー</a></li>
-                <li class="has-child"><a href="./parameter.html">特性早見表</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
-                  <ul>
-                    <li><a href="./parameter/parameter1.html">パラメータ</a></li>
-                    <li><a href="./parameter/parameter2.html">地上攻撃</a></li>
-                    <li><a href="./parameter/parameter3.html">空中攻撃</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="has-child"><a href="#">統計・過去データ</a>
-              <ul>
-                <li><a href="./statstics.html">統計データ</a></li>
-                <li><a href="./capability.html">簡易不利相性</a></li>
-                <li><a href="./fighter_pick.html">キャラ使用率</a></li>
-                <li><a href="./record/tournament.html">オンライン大会</a></li>
-                <li><a href="./match_up.html">キャラ相性優劣</a></li>
-                <li><a href="./record/kagaribi9.html">篝火#9 新規勢記事</a></li>
-              </ul>
-            </li>
-            <li><a href="./userpolicy.html">利用規約</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <!--headerはここまで-->
-
-  <!--mainはここから-->
-  <main class="main">
-    <div class="title">
-      <img src="./img/common/Main.jpg" alt="Header Image" />
-      <h1>おすすめキャラ診断</h1>
-      <p>Counter Picker</p>
-    </div>
-
-    <!--パンくずリスト-->
-    <div class="bread">
-      <nav>
-        <ol class="breadcrumb">
-          <li><a href="/">ホーム</a></li>
+  <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
+  <div class="header-inner">
+    <!--./index.htmlでトップページを指す-->
+    <a class="header-logo" href="./index.html">
+      <img src="./img/common/logo.png" alt="SSBU">
+    </a>
+    <button class="header__hamburger hamburger" id="js-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="header-site-menu">
+      <nav class="site-menu">
+        <ul>
+          <li><a href="./fighter.html">ファイタ一覧</a></li>
+          <li><a href="./ranking/ranking.html">キャラランク</a></li>
+          <li class="has-child"><a href="./rank_creater.html">Tier表メーカー</a>
+            <ul>
+              <li><a href="./rank_creater.html">Tier表メーカー</a></li>
+              <li><a href="./move_tier.html">最強技表メーカー</a></li>
+              <li><a href="./color_tier.html">カラバリ表メーカー</a></li>
+            </ul>
+          </li>
+          <li><a href="./record/ranking_rate.html">歴代最終レート</a></li>
           <li><a href="./counter_picker.html">おすすめキャラ診断</a></li>
-        </ol>
+          <li class="has-child"><a href="#">ツール</a>
+            <ul>
+              <li><a href="./quiz.html">スマアナ検定</a></li>
+              <li><a href="./puzzle.html">スマブラパズル</a></li>
+              <li><a href="./sub_character.html">サブ補完チェッカー</a></li>
+              <li class="has-child"><a href="./parameter.html">特性早見表</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
+                <ul>
+                  <li><a href="./parameter/parameter1.html">パラメータ</a></li>
+                  <li><a href="./parameter/parameter2.html">地上攻撃</a></li>
+                  <li><a href="./parameter/parameter3.html">空中攻撃</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child"><a href="#">統計・過去データ</a>
+            <ul>
+              <li><a href="./statstics.html">統計データ</a></li>
+              <li><a href="./capability.html">簡易不利相性</a></li>
+              <li><a href="./fighter_pick.html">キャラ使用率</a></li>
+              <li><a href="./record/tournament.html">オンライン大会</a></li>
+              <li><a href="./match_up.html">キャラ相性優劣</a></li>
+              <li><a href="./record/kagaribi9.html">篝火#9 新規勢記事</a></li>
+            </ul>
+          </li>
+          <li><a href="./userpolicy.html">利用規約</a></li>
+        </ul>
       </nav>
     </div>
+  </div>
+</header>
+    <!--headerはここまで-->
 
-    <div class="section">使い方</div>
-    <div class="explain">
-      <p>
-        対戦で苦手だと感じるファイターを好きな数だけ登録してください。
-        登録した苦手ファイターに対して<span>勝率55%以上</span>で有利に戦えるファイターを、
-        カバー数と勝率からスコアリングし、おすすめのカウンターピックとして提案します。
-        勝率はスマアナの統計データ（スマメイトの対戦結果）を元にしています。
-      </p>
-    </div>
-
-    <!-- メインコンテナ -->
-    <div class="cp-container">
-
-      <!-- ステップインジケーター -->
-      <div class="cp-steps">
-        <div class="cp-step active" id="cp-step-1">
-          <div class="cp-step-number">1</div>
-          <div class="cp-step-label">苦手を登録</div>
-        </div>
-        <div class="cp-step-connector" id="cp-connector"></div>
-        <div class="cp-step" id="cp-step-2">
-          <div class="cp-step-number">2</div>
-          <div class="cp-step-label">おすすめ表示</div>
-        </div>
+    <!--mainはここから-->
+    <main class="main">
+      <div class="title">
+        <img src="./img/common/Main.jpg" alt="Header Image" />
+        <h1>おすすめキャラ診断</h1>
+        <p>Counter Picker</p>
       </div>
 
-      <!-- STEP 1: ファイター選択 -->
-      <div class="cp-card">
-        <div class="cp-card-title">
-          <span class="icon">⚔️</span>
-          苦手なファイターを選択
-          <span class="cp-count-badge" id="cp-count-badge" style="display:none">0</span>
-        </div>
-        <div class="cp-card-subtitle">
-          対戦で苦労するファイターをクリックして登録してください。複数選択可能です。
+      <!--パンくずリスト-->
+      <div class="bread">
+        <nav>
+          <ol class="breadcrumb">
+            <li><a href="/">ホーム</a></li>
+            <li><a href="./counter_picker.html">おすすめキャラ診断</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="section">使い方</div>
+      <div class="explain">
+        <p>
+          対戦で苦手だと感じるファイターを好きな数だけ登録してください。
+          登録した苦手ファイターに対して<span>勝率55%以上</span>で有利に戦えるファイターを、
+          カバー数と勝率からスコアリングし、おすすめのカウンターピックとして提案します。
+          勝率はスマアナの統計データ（スマメイトの対戦結果）を元にしています。
+        </p>
+      </div>
+
+      <!-- メインコンテナ -->
+      <div class="cp-container">
+
+        <!-- ステップインジケーター -->
+        <div class="cp-steps">
+          <div class="cp-step active" id="cp-step-1">
+            <div class="cp-step-number">1</div>
+            <div class="cp-step-label">苦手を登録</div>
+          </div>
+          <div class="cp-step-connector" id="cp-connector"></div>
+          <div class="cp-step" id="cp-step-2">
+            <div class="cp-step-number">2</div>
+            <div class="cp-step-label">おすすめ表示</div>
+          </div>
         </div>
 
-        <!-- オプション設定 -->
-        <!-- <div class="cp-options">
+        <!-- STEP 1: ファイター選択 -->
+        <div class="cp-card">
+          <div class="cp-card-title">
+            <span class="icon">⚔️</span>
+            苦手なファイターを選択
+            <span class="cp-count-badge" id="cp-count-badge" style="display:none">0</span>
+          </div>
+          <div class="cp-card-subtitle">
+            対戦で苦労するファイターをクリックして登録してください。複数選択可能です。
+          </div>
+
+          <!-- オプション設定 -->
+          <!-- <div class="cp-options">
             <div class="cp-option-item">
               <label for="cp-threshold">有利基準（勝率）: <span id="cp-threshold-val">55</span>%以上</label>
               <input type="range" id="cp-threshold" min="50" max="60" step="1" value="55">
@@ -184,68 +190,68 @@
             </div>
           </div> -->
 
-        <!-- ファイターグリッド -->
-        <div class="cp-fighter-grid" id="cp-fighter-grid">
-          <!-- JSで生成 -->
-        </div>
-
-        <!-- 選択済みエリア -->
-        <div class="cp-selected-area" id="cp-selected-area">
-          <span class="cp-selected-placeholder">上のグリッドからファイターをクリックして登録</span>
-        </div>
-      </div>
-
-      <!-- アクションボタン -->
-      <div class="cp-actions">
-        <button class="cp-btn cp-btn-secondary" id="cp-reset-btn" type="button">リセット</button>
-        <button class="cp-btn cp-btn-primary" id="cp-analyze-btn" type="button" disabled>おすすめを分析</button>
-      </div>
-
-      <!-- STEP 2: 結果表示 -->
-      <div class="cp-results" id="cp-results">
-        <div class="cp-card">
-          <div class="cp-card-title">
-            <span class="icon">🏆</span>
-            おすすめカウンターピック
-          </div>
-          <div class="cp-card-subtitle">
-            クリックで詳細を表示。カバー数が多く、勝率が高いほど上位にランクされます。
-          </div>
-          <div class="cp-result-list" id="cp-result-list">
+          <!-- ファイターグリッド -->
+          <div class="cp-fighter-grid" id="cp-fighter-grid">
             <!-- JSで生成 -->
           </div>
+
+          <!-- 選択済みエリア -->
+          <div class="cp-selected-area" id="cp-selected-area">
+            <span class="cp-selected-placeholder">上のグリッドからファイターをクリックして登録</span>
+          </div>
         </div>
 
-        <!-- シェア -->
-        <div class="cp-share-area">
-          <a id="cp-share-btn" href="#" target="_blank" class="cp-share-btn">
-            <span class="cp-share-x">𝕏</span> で結果をポスト
-          </a>
+        <!-- アクションボタン -->
+        <div class="cp-actions">
+          <button class="cp-btn cp-btn-secondary" id="cp-reset-btn" type="button">リセット</button>
+          <button class="cp-btn cp-btn-primary" id="cp-analyze-btn" type="button" disabled>おすすめを分析</button>
         </div>
+
+        <!-- STEP 2: 結果表示 -->
+        <div class="cp-results" id="cp-results">
+          <div class="cp-card">
+            <div class="cp-card-title">
+              <span class="icon">🏆</span>
+              おすすめカウンターピック
+            </div>
+            <div class="cp-card-subtitle">
+              クリックで詳細を表示。カバー数が多く、勝率が高いほど上位にランクされます。
+            </div>
+            <div class="cp-result-list" id="cp-result-list">
+              <!-- JSで生成 -->
+            </div>
+          </div>
+
+          <!-- シェア -->
+          <div class="cp-share-area">
+            <a id="cp-share-btn" href="#" target="_blank" class="cp-share-btn">
+              <span class="cp-share-x">𝕏</span> で結果をポスト
+            </a>
+          </div>
+        </div>
+
       </div>
 
-    </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="./js/toggle-menu_rev.js"></script>
+      <script src="./js/matchup_data.js"></script>
+      <script src="./js/fighter_images.js"></script>
+      <script src="./js/counter_picker.js"></script>
+    </main>
+    <!--mainはここまで-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/toggle-menu_rev.js"></script>
-    <script src="./js/matchup_data.js"></script>
-    <script src="./js/fighter_images.js"></script>
-    <script src="./js/counter_picker.js"></script>
-  </main>
-  <!--mainはここまで-->
-
-  <!--footerはここから-->
-  <footer class="footer">
-    <a class="footer-logo" href="./index.html">
-      <img src="./img/common/logo.png" alt="SSBU">
-    </a>
-    <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
-    <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
-        当サイトは個人が運営する非公式のWebサービスです。<br>
-        任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-    <p class="copyright">ver17.0.0 2026/05/30<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
-  </footer>
-  <!--footerはここまで-->
+    <!--footerはここから-->
+    <footer class="footer">
+  <a class="footer-logo" href="./index.html">
+    <img src="./img/common/logo.png" alt="SSBU">
+  </a>
+  <p class="footer-tel">「スマブラは人類史上最高のゲームである」</p>
+  <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
+      当サイトは個人が運営する非公式のWebサービスです。<br>
+      任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
+  <p class="copyright">ver17.1.0 2026/06/28<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
+</footer>
+      <!--footerはここまで-->
 </body>
 
 </html>
