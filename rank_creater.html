@@ -26,6 +26,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="./js/csv.js"></script>
   <link href="./css/common.css" rel="stylesheet" />
+  <!-- ４周年企画 -->
+  <link href="./css/index.css" rel="stylesheet" />
   <link href="./css/rank_creater.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="./img/common/icon-192x192.png" />
   <link rel="apple-touch-icon" type="image/png" href="./img/common/apple-touch-icon-180x180.png" />
@@ -281,6 +283,13 @@
           <li><a href="./rank_creater.html">Tier表メーカー</a></li>
         </ol>
       </nav>
+    </div>
+    <div id="full-overlay">
+      <div class="inner">
+        <span class="square_btn"></span>
+        <a href="./move_tier.html"><img src="./img/contents/new_format_for_tier_list.png" alt="">
+        </a>
+      </div>
     </div>
     <div class="section">Tier表メーカー</div>
 
@@ -2502,6 +2511,18 @@
       spinner.classList.add("loaded");
     };
   </script>
+  <!-- 2周年企画 -->
+  <script>$(function () {
+      // 「隠す！」ボタンクリック
+      $(".show-overlay").on('click', function () {
+        $("#full-overlay").fadeIn();
+      });
+
+      // 「みる？」ボタンクリック
+      $(".square_btn").on('click', function () {
+        $("#full-overlay").fadeOut();
+      });
+    });</script>
 </body>
 
 </html>
