@@ -350,40 +350,7 @@ span {
   }
 }
 
-.square_btn {
-  position: absolute;
-  top: -45px;
-  right: 0;
-  cursor: pointer;
-  display: block;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #333;
-  /* 枠の調整 */
-  background: #fff;
-  /* ボタンの背景色 */
-}
 
-.square_btn::before, .square_btn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 3px;
-  /* 棒の幅（太さ） */
-  height: 27px;
-  /* 棒の高さ */
-  background: #333;
-  /* バツ印の色 */
-}
-
-.square_btn::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.square_btn::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
 
 @media (max-width: 840px) {
   .movie {

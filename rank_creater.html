@@ -286,7 +286,6 @@
     </div>
     <div id="full-overlay">
       <div class="inner">
-        <span class="square_btn"></span>
         <a href="./move_tier.html"><img src="./img/contents/new_format_for_tier_list.png" alt="">
         </a>
       </div>
@@ -2518,9 +2517,11 @@
         $("#full-overlay").fadeIn();
       });
 
-      // 「みる？」ボタンクリック
-      $(".square_btn").on('click', function () {
-        $("#full-overlay").fadeOut();
+      // 背景クリックで閉じる
+      $("#full-overlay").on('click', function (e) {
+        if (e.target === this) {
+          $("#full-overlay").fadeOut();
+        }
       });
     });</script>
 </body>
