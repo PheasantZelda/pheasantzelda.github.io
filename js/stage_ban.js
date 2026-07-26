@@ -7,12 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
  * chara/ ページ内ならば相対パスで、それ以外は ../chara/ パスを使用
  */
 function getFighterPageUrl(enId) {
+  if (!enId) return null;
+  const normalizedId = enId.replace(/\//g, '_');
   const urlMap = {
     "mario": "01.mario.html",
     "donkey_kong": "02.donkey_kong.html",
     "link": "03.link.html",
     "samus": "04.samus_dark_samus.html",
     "dark_samus": "04.samus_dark_samus.html",
+    "samus_dark_samus": "04.samus_dark_samus.html",
     "yoshi": "06.yoshi.html",
     "kirby": "07.kirby.html",
     "fox": "08.fox.html",
@@ -23,6 +26,7 @@ function getFighterPageUrl(enId) {
     "jigglypuff": "13.jigglypuff.html",
     "peach": "14.peach_daisy.html",
     "daisy": "14.peach_daisy.html",
+    "peach_daisy": "14.peach_daisy.html",
     "bowser": "16.bowser.html",
     "ice_climber": "17.ice_climber.html",
     "sheik": "18.sheik.html",
@@ -41,6 +45,7 @@ function getFighterPageUrl(enId) {
     "metaknight": "31.metaknight.html",
     "pit": "32.pit_dark_pit.html",
     "dark_pit": "32.pit_dark_pit.html",
+    "pit_dark_pit": "32.pit_dark_pit.html",
     "zero_suit_samus": "34.zero_suit_samus.html",
     "wario": "35.wario.html",
     "snake": "36.snake.html",
@@ -79,6 +84,7 @@ function getFighterPageUrl(enId) {
     "ridley": "69.ridley.html",
     "simon": "70.simon_richter.html",
     "richter": "70.simon_richter.html",
+    "simon_richter": "70.simon_richter.html",
     "king_k_rool": "72.king_k_rool.html",
     "isabelle": "73.isabelle.html",
     "incineroar": "74.incineroar.html",
@@ -95,7 +101,7 @@ function getFighterPageUrl(enId) {
     "kazuya": "85.kazuya.html",
     "sora": "86.sora.html"
   };
-  const fileName = urlMap[enId];
+  const fileName = urlMap[normalizedId];
   if (!fileName) return null;
   // chara/ ページ内なら ./ を、それ以外なら ../chara/ を使用
   const isCharaPage = window.location.pathname.includes("/chara/") || window.location.pathname.includes("/chara_org/");
@@ -120,12 +126,15 @@ function resolvePath(path) {
 }
 
 function getFighterImageByEnglishId(enId) {
+  if (!enId) return resolvePath("./img/common/personel.png");
+  const normalizedId = enId.replace(/\//g, '_');
   const map = {
     "mario": "マリオ",
     "donkey_kong": "ドンキーコング",
     "link": "リンク",
     "samus": "サムス_ダークサムス",
     "dark_samus": "サムス_ダークサムス",
+    "samus_dark_samus": "サムス_ダークサムス",
     "yoshi": "ヨッシー",
     "kirby": "カービィ",
     "fox": "フォックス",
@@ -136,6 +145,7 @@ function getFighterImageByEnglishId(enId) {
     "jigglypuff": "プリン",
     "peach": "ピーチ_デイジー",
     "daisy": "ピーチ_デイジー",
+    "peach_daisy": "ピーチ_デイジー",
     "bowser": "クッパ",
     "ice_climber": "アイスクライマー",
     "sheik": "シーク",
@@ -154,6 +164,7 @@ function getFighterImageByEnglishId(enId) {
     "metaknight": "メタナイト",
     "pit": "ピット_ブラックピット",
     "dark_pit": "ピット_ブラックピット",
+    "pit_dark_pit": "ピット_ブラックピット",
     "zero_suit_samus": "ゼロスーツサムス",
     "wario": "ワリオ",
     "snake": "スネーク",
@@ -192,6 +203,7 @@ function getFighterImageByEnglishId(enId) {
     "ridley": "リドリー",
     "simon": "シモン_リヒター",
     "richter": "シモン_リヒター",
+    "simon_richter": "シモン_リヒター",
     "king_k_rool": "キングクルール",
     "isabelle": "しずえ",
     "incineroar": "ガオガエン",
@@ -211,13 +223,13 @@ function getFighterImageByEnglishId(enId) {
     "omakase": "おまかせ"
   };
 
-  const jaName = map[enId];
+  const jaName = map[normalizedId];
   if (jaName && typeof FIGHTER_IMAGES !== 'undefined' && FIGHTER_IMAGES[jaName]) {
     return resolvePath(FIGHTER_IMAGES[jaName]);
   }
   // 日本語表記のままの場合
-  if (typeof FIGHTER_IMAGES !== 'undefined' && FIGHTER_IMAGES[enId]) {
-    return resolvePath(FIGHTER_IMAGES[enId]);
+  if (typeof FIGHTER_IMAGES !== 'undefined' && FIGHTER_IMAGES[normalizedId]) {
+    return resolvePath(FIGHTER_IMAGES[normalizedId]);
   }
   return resolvePath("./img/common/personel.png");
 }
@@ -256,32 +268,59 @@ async function initStageBanPage() {
 
   const targetFighter = container.getAttribute("data-fighter");
   if (targetFighter) {
-    // 個別ファイターページ用：ドロップダウンは不要で対象ファイターの表のみ表示
+    let currentSelectedFighter = targetFighter;
     const tableContainer = document.createElement("div");
     tableContainer.className = "stage-table-wrapper";
+
+    // スラッシュが含まれる場合（例: サムス/ダークサムス）、切り替え用セレクトボックスを表示
+    if (targetFighter.includes('/')) {
+      const subFighters = targetFighter.split('/');
+      currentSelectedFighter = subFighters[0];
+
+      const selectorDiv = document.createElement("div");
+      selectorDiv.className = "player-selector sub-fighter-selector";
+      const select = document.createElement("select");
+      subFighters.forEach(name => {
+        const option = document.createElement("option");
+        option.value = name;
+        option.textContent = name;
+        select.appendChild(option);
+      });
+      selectorDiv.appendChild(select);
+      container.appendChild(selectorDiv);
+
+      select.addEventListener("change", (e) => {
+        currentSelectedFighter = e.target.value;
+        if (currentMode === "normal") {
+          renderTable(currentSelectedFighter, tableContainer);
+        } else {
+          renderReverseTable(currentSelectedFighter, tableContainer);
+        }
+      });
+    }
 
     // モード切り替えボタンをcreateViewToggleより前に追加
     createModeToggle(container, () => {
       currentMode = currentMode === "normal" ? "reverse" : "normal";
       if (currentMode === "normal") {
-        renderTable(targetFighter, tableContainer);
+        renderTable(currentSelectedFighter, tableContainer);
       } else {
-        renderReverseTable(targetFighter, tableContainer);
+        renderReverseTable(currentSelectedFighter, tableContainer);
       }
     });
 
     createViewToggle(container, tableContainer);
     container.appendChild(tableContainer);
-    renderTable(targetFighter, tableContainer);
+    renderTable(currentSelectedFighter, tableContainer);
 
     // レート帯切り替えイベント
     if (rateSelect) {
       rateSelect.addEventListener("change", async (e) => {
         await loadStageBanData(e.target.value);
         if (currentMode === "normal") {
-          renderTable(targetFighter, tableContainer);
+          renderTable(currentSelectedFighter, tableContainer);
         } else {
-          renderReverseTable(targetFighter, tableContainer);
+          renderReverseTable(currentSelectedFighter, tableContainer);
         }
       });
     }
@@ -368,7 +407,8 @@ async function initStageBanPage() {
 
 function renderTable(fighterName, container) {
   container.innerHTML = "";
-  const fighterObj = stageBanData.find(obj => obj.name === fighterName);
+  const searchName = fighterName.includes('/') ? fighterName.split('/')[0] : fighterName;
+  const fighterObj = stageBanData.find(obj => obj.name === searchName);
   if (!fighterObj) return;
   let fighterData = JSON.parse(JSON.stringify(fighterObj.data));
 
@@ -721,7 +761,7 @@ function createViewToggle(container, tableContainer) {
   
   // セレクターDivの後、tableContainerの前に挿入するために、挿入位置を調整
   const selector = container.querySelector(".player-selector");
-  if (selector) {
+  if (selector && tableContainer.parentNode === container) {
     container.insertBefore(toggleContainer, tableContainer);
   } else {
     container.appendChild(toggleContainer);
@@ -757,6 +797,7 @@ function createViewToggle(container, tableContainer) {
  */
 function renderReverseTable(fighterName, container) {
   container.innerHTML = "";
+  const searchNames = fighterName.split('/');
 
   // 全ファイターのデータから「fighterNameに対する拒否確率」を逆引きで収集
   // stageBanData: [{name: "マリオ", data: [{BAN_FIGHTER, FD, BF, ...}]}]
@@ -765,10 +806,10 @@ function renderReverseTable(fighterName, container) {
   stageBanData.forEach(fighterObj => {
     // fighterObj.name = 対戦相手のファイター名
     const opponent = fighterObj.name;
-    if (opponent === fighterName) return; // 自分自身はスキップ
+    if (searchNames.includes(opponent)) return; // 自分自身はスキップ
     // そのファイターのデータ内でfighterNameに対する行を探す
     const row = (fighterObj.data || []).find(r =>
-      r.BAN_FIGHTER === fighterName
+      searchNames.includes(r.BAN_FIGHTER)
     );
     if (!row) return;
     reversedRows.push({
