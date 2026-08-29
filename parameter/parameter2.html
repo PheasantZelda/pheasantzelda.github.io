@@ -2,19 +2,17 @@
 <html lang="ja">
 <!--Headerはここから-->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
 
-  gtag("config", "G-6GR32CWGN7");
-</script>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6GR32CWGN7');
+  </script>
   <!--google adsense-->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
     crossorigin="anonymous"></script>
@@ -26,13 +24,13 @@
   <meta property="og:title" content="ファイタ特性早見表 | 地上攻撃" />
   <meta property="og:description" content="スマブラのファイタの特性を早見表形式で掲載。技のフレームやパラメータの確認にご使用ください。" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pheasantzelda.github.io/parameter2.html" />
+  <meta property="og:url" content="https://pheasantzelda.github.io/parameter/parameter2.html" />
   <meta name="og:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="ファイタ特性早見表 | 地上攻撃" />
   <meta name="twitter:description" content="スマブラのファイタの特性を早見表形式で掲載。技のフレームやパラメータの確認にご使用ください。" />
   <meta name="twitter:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
-  <meta name="twitter:url" content="https://pheasantzelda.github.io/parameter2.html" />
+  <meta name="twitter:url" content="https://pheasantzelda.github.io/parameter/parameter2.html" />
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="../css/common.css" rel="stylesheet" />
@@ -69,7 +67,7 @@
     <a class="header-logo" href="../index.html">
       <img src="../img/common/logo.png" alt="SSBU">
     </a>
-    <button class="header__hamburger hamburger" id="js-hamburger">
+    <button class="header__hamburger hamburger" id="js-hamburger" aria-label="メニューを開閉" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>

@@ -9,8 +9,8 @@ ham.on('click', function () {
 // ドロップダウンの設定を関数でまとめる
 function mediaQueriesWin() {
   var width = $(window).width();
-  if (width <= 768) {
-    // 横幅が768px以下の場合
+  if (width <= 840) {
+    // 横幅が840px以下の場合
     $('.has-child>a').off('click'); // has-childクラスがついたaタグのonイベントを複数登録を避ける為offにして一旦初期状態へ
     $('.has-child>a').on('click', function () {
       // has-childクラスがついたaタグをクリックしたら
@@ -20,7 +20,7 @@ function mediaQueriesWin() {
       return false; // リンクの無効化
     });
   } else {
-    // 横幅が768px以上の場合
+    // 横幅が840px超の場合
     $('.has-child>a').off('click'); // has-childクラスがついたaタグのonイベントをoff(無効)にし
     $('.has-child').removeClass('active'); // activeクラスを削除
     $('.has-child').children('ul').css('display', ''); // スライドトグルで動作したdisplayも無効化にする
@@ -36,7 +36,7 @@ $(window).resize(function () {
 $(window).on('load', function () {
   mediaQueriesWin(); /* ドロップダウンの関数を呼ぶ */
   // 初回読み込み時にすべてのトグルを閉じる
-  if ($(window).width() <= 768) {
+  if ($(window).width() <= 840) {
     $('.has-child').removeClass('active');
     $('.has-child').children('ul').css('display', 'none');
   }

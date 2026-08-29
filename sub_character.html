@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
 <!--Headerはここから-->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
 
-  gtag("config", "G-6GR32CWGN7");
-</script>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6GR32CWGN7');
+  </script>
   <!--google adsense-->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <title>サブ補完チェッカー | スマブラ</title>
-  <meta name="description" content="スマブラSPの環境変遷を可視化。シーズンごとのファイタ使用率や勝率の推移をグラフで比較・分析できます。">
+  <meta name="description" content="メインキャラの苦手なファイターをカバーする最適なサブキャラを自動提案。スマブラSPの統計データ（スマメイト対戦結果）に基づく相性補完ツールです。">
   <meta property="og:site_name" content="スマブラ統計サイト「スマアナ」" />
   <meta property="og:title" content="サブ補完チェッカー | スマアナ" />
-  <meta property="og:description" content="スマブラSPの環境変遷を可視化。シーズンごとのファイタ使用率や勝率の推移をグラフで比較・分析できます。" />
+  <meta property="og:description" content="メインキャラの苦手なファイターをカバーする最適なサブキャラを自動提案。スマブラSPの統計データ（スマメイト対戦結果）に基づく相性補完ツールです。" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pheasantzelda.github.io/meta_trends.html" />
+  <meta property="og:url" content="https://pheasantzelda.github.io/sub_character.html" />
   <meta name="og:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="サブ補完チェッカー | スマブラ" />
-  <meta name="twitter:description" content="スマブラSPの環境変遷を可視化。シーズンごとのファイタ使用率や勝率の推移をグラフで比較・分析できます。" />
+  <meta name="twitter:description" content="メインキャラの苦手なファイターをカバーする最適なサブキャラを自動提案。スマブラSPの統計データ（スマメイト対戦結果）に基づく相性補完ツールです。" />
   <meta name="twitter:image" content="https://pheasantzelda.github.io/img/common/icon-144x144.png" />
-  <meta name="twitter:url" content="https://pheasantzelda.github.io/meta_trends.html" />
+  <meta name="twitter:url" content="https://pheasantzelda.github.io/sub_character.html" />
   <!--スマホ用の画面設定-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./css/common.css" rel="stylesheet" />
@@ -67,7 +65,7 @@
     <a class="header-logo" href="./index.html">
       <img src="./img/common/logo.png" alt="SSBU">
     </a>
-    <button class="header__hamburger hamburger" id="js-hamburger">
+    <button class="header__hamburger hamburger" id="js-hamburger" aria-label="メニューを開閉" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>

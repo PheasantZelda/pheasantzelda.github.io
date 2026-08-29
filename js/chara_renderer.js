@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // スピナーフォールバック（最大1秒で解除）
+  const spinner = document.getElementById('loading');
+  if (spinner) {
+    setTimeout(() => {
+      spinner.classList.add('loaded');
+    }, 150);
+  }
   initDynamicCharaPage();
 });
 

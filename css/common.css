@@ -131,7 +131,7 @@ nav ul li li a {
 }
 
 nav ul li a:hover {
-  color: #e7412b;
+  color: #ff5238;
 }
 
 /*==矢印の設定*/
@@ -202,7 +202,7 @@ nav li.has-child ul li a {
 
 nav li.has-child ul li a:hover,
 nav li.has-child ul li a:active {
-  color: #e7412b;
+  color: #ff5238;
 }
 
 

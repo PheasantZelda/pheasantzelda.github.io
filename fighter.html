@@ -2,19 +2,18 @@
 <html lang="ja">
 
 <!--Headerはここから-->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-6GR32CWGN7');
-
-</script>
 
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6GR32CWGN7');
+  </script>
     <!--google adsense-->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
         crossorigin="anonymous"></script>
@@ -46,11 +45,14 @@
         </div>
     </div>
     <script>
-        window.onload = function () {
-            const spinner = document.getElementById('loading');
-            spinner.classList.add('loaded');
-        }
-    </script>
+    function removeSpinner() {
+      const spinner = document.getElementById('loading');
+      if (spinner) spinner.classList.add('loaded');
+    }
+    window.onload = removeSpinner;
+    document.addEventListener('DOMContentLoaded', () => setTimeout(removeSpinner, 300));
+    setTimeout(removeSpinner, 2000);
+  </script>
     <!--headerはここから-->
     <header class="header">
   <!--スマホ表示時にスタイリングしやすくするためもう一つ箱<div>を定義-->
@@ -59,7 +61,7 @@
     <a class="header-logo" href="./index.html">
       <img src="./img/common/logo.png" alt="SSBU">
     </a>
-    <button class="header__hamburger hamburger" id="js-hamburger">
+    <button class="header__hamburger hamburger" id="js-hamburger" aria-label="メニューを開閉" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>

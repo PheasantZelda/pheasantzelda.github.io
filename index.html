@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<!--Headerはここから-->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-6GR32CWGN7');
-
-</script>
-
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6GR32CWGN7');
+  </script>
   <!--google adsense-->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
     crossorigin="anonymous"></script>
@@ -43,6 +38,16 @@
   <link rel="icon" type="image/png" href="./img/common/icon-192x192.png">
   <link rel="apple-touch-icon" type="image/png" href="./img/common/apple-touch-icon-180x180.png">
   <link rel="icon" href="./img/common/favicon.ico">
+  <!-- 構造化データ (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "スマアナ",
+    "url": "https://pheasantzelda.github.io/",
+    "description": "スマブラSPのオンライン対戦サイト「スマメイト」の対戦結果の統計をまとめた攻略・分析Webサービス"
+  }
+  </script>
 </head>
 
 <!--Bodyはここから-->
@@ -59,10 +64,13 @@
     </div>
   </div>
   <script>
-    window.onload = function () {
+    function removeSpinner() {
       const spinner = document.getElementById('loading');
-      spinner.classList.add('loaded');
+      if (spinner) spinner.classList.add('loaded');
     }
+    window.onload = removeSpinner;
+    document.addEventListener('DOMContentLoaded', () => setTimeout(removeSpinner, 300));
+    setTimeout(removeSpinner, 2000);
   </script>
   <!--headerはここから-->
   <header class="header">
@@ -72,7 +80,7 @@
       <a class="header-logo" href="./index.html">
         <img src="./img/common/logo.png" alt="SSBU">
       </a>
-      <button class="header__hamburger hamburger" id="js-hamburger">
+      <button class="header__hamburger hamburger" id="js-hamburger" aria-label="メニューを開閉" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
