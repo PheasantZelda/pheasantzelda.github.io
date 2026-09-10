@@ -89,7 +89,7 @@ async function initDynamicCharaPage() {
       renderMuTable(data.mu_table);
       renderSubTable(data.sub_table);
       renderFinalRates(data);
-      renderMatchDetails(data.match_details);
+      renderMatchDetails(data.match_details, data.mu_table);
     } catch (err) {
       console.error('Failed to load dynamic data for tier', tier, ':', err);
     }
@@ -258,7 +258,16 @@ function renderFinalRates(data) {
   tbody.innerHTML = html;
 }
 
-function renderMatchDetails(details) {
+function renderMatchDetails(details, muTable) {
+  // mu_tableからキャラID → slugのマッピングを構築（例: '11' → '11.ness'）
+  const idToSlug = {};
+  if (muTable) {
+    for (const arr of Object.values(muTable)) {
+      for (const item of arr) {
+        if (item.id && item.slug) idToSlug[item.id] = item.slug;
+      }
+    }
+  }
   const titles = document.querySelectorAll('.section');
   let targetTable = null;
   for (const t of titles) {
@@ -292,10 +301,12 @@ function renderMatchDetails(details) {
   details.forEach((d, index) => {
     const trClass = index >= 10 ? 'item details-hidden-row' : 'item';
     const style = index >= 10 ? 'style="display: none;"' : '';
+    // mu_tableのスラグマップから英語slugを取得（例: '11' → '11.ness'）
+    const enemySlug = idToSlug[d.enemy_id] || d.enemy_id;
     html += `
             <tr class="${trClass}" ${style}>
-                <td><a href="./${d.enemy_id}.html">
-                    <p>${d.enemy_id}</p><img src="../img/fighter/${d.enemy_image}" alt="ファイター画像">
+                <td><a href="./${enemySlug}.html">
+                    <p>${d.enemy_name || d.enemy_id}</p><img src="../img/fighter/${d.enemy_image}" alt="ファイター画像">
                 </a></td>
                 <td><a href="#">${d.match_count}</a></td>
                 <td><a href="#">${d.win_count}</a></td>
