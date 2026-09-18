@@ -1,0 +1,2962 @@
+{
+  "1000-1500": [
+    {
+      "id": "61",
+      "slug": "61.bowser_jr",
+      "image": "61.クッパJr..png",
+      "win_rate": 54.845326065578384,
+      "battles": 35591,
+      "wins": 19520,
+      "rank": 1
+    },
+    {
+      "id": "49",
+      "slug": "49.megaman",
+      "image": "49.ロックマン.png",
+      "win_rate": 53.69085489567418,
+      "battles": 39923,
+      "wins": 21435,
+      "rank": 2
+    },
+    {
+      "id": "36",
+      "slug": "36.snake",
+      "image": "36.スネーク.png",
+      "win_rate": 53.415302001981736,
+      "battles": 93857,
+      "wins": 50134,
+      "rank": 3
+    },
+    {
+      "id": "81",
+      "slug": "81.minmin",
+      "image": "81.ミェンミェン.png",
+      "win_rate": 52.90594924308984,
+      "battles": 99021,
+      "wins": 52388,
+      "rank": 4
+    },
+    {
+      "id": "40",
+      "slug": "40.lucas",
+      "image": "40.リュカ.png",
+      "win_rate": 52.74058796797987,
+      "battles": 57214,
+      "wins": 30175,
+      "rank": 5
+    },
+    {
+      "id": "82",
+      "slug": "82.steve",
+      "image": "82.スティーブ.png",
+      "win_rate": 52.68290641218818,
+      "battles": 119460,
+      "wins": 62935,
+      "rank": 6
+    },
+    {
+      "id": "70",
+      "slug": "70.simon_richter",
+      "image": "70.シモン_71.リヒター.png",
+      "win_rate": 52.63157894736842,
+      "battles": 22629,
+      "wins": 11910,
+      "rank": 7
+    },
+    {
+      "id": "63",
+      "slug": "63.ryu",
+      "image": "63.リュウ.png",
+      "win_rate": 52.61444292505046,
+      "battles": 30714,
+      "wins": 16160,
+      "rank": 8
+    },
+    {
+      "id": "12",
+      "slug": "12.captain_falcon",
+      "image": "12.キャプテン・ファルコン.png",
+      "win_rate": 52.54791245405873,
+      "battles": 78633,
+      "wins": 41320,
+      "rank": 9
+    },
+    {
+      "id": "11",
+      "slug": "11.ness",
+      "image": "11.ネス.png",
+      "win_rate": 52.20513103753003,
+      "battles": 108633,
+      "wins": 56712,
+      "rank": 10
+    },
+    {
+      "id": "04",
+      "slug": "04.samus_dark_samus",
+      "image": "04.サムス_05.ダークサムス.png",
+      "win_rate": 52.19787321543975,
+      "battles": 85105,
+      "wins": 44423,
+      "rank": 11
+    },
+    {
+      "id": "38",
+      "slug": "38.pokemon_trainer",
+      "image": "38.ポケモントレーナー.png",
+      "win_rate": 52.12942386148794,
+      "battles": 60298,
+      "wins": 31433,
+      "rank": 12
+    },
+    {
+      "id": "56",
+      "slug": "56.mii_gunner",
+      "image": "56.射撃Mii.png",
+      "win_rate": 52.12485896953743,
+      "battles": 18613,
+      "wins": 9702,
+      "rank": 13
+    },
+    {
+      "id": "39",
+      "slug": "39.diddy_kong",
+      "image": "39.ディディーコング.png",
+      "win_rate": 52.081259879398154,
+      "battles": 34162,
+      "wins": 17792,
+      "rank": 14
+    },
+    {
+      "id": "10",
+      "slug": "10.luigi",
+      "image": "10.ルイージ.png",
+      "win_rate": 51.936254980079674,
+      "battles": 62750,
+      "wins": 32590,
+      "rank": 15
+    },
+    {
+      "id": "77",
+      "slug": "77.hero",
+      "image": "77.勇者.png",
+      "win_rate": 51.90197858737184,
+      "battles": 105732,
+      "wins": 54877,
+      "rank": 16
+    },
+    {
+      "id": "17",
+      "slug": "17.ice_climber",
+      "image": "17.アイスクライマー.png",
+      "win_rate": 51.83296656110783,
+      "battles": 18631,
+      "wins": 9657,
+      "rank": 17
+    },
+    {
+      "id": "50",
+      "slug": "50.wii_fit_trainer",
+      "image": "50.Wii Fit トレーナー.png",
+      "win_rate": 51.68988959066583,
+      "battles": 41482,
+      "wins": 21442,
+      "rank": 18
+    },
+    {
+      "id": "13",
+      "slug": "13.jigglypuff",
+      "image": "13.プリン.png",
+      "win_rate": 51.66600890793257,
+      "battles": 53211,
+      "wins": 27492,
+      "rank": 19
+    },
+    {
+      "id": "64",
+      "slug": "64.ken",
+      "image": "64.ケン.png",
+      "win_rate": 51.62277562504628,
+      "battles": 40517,
+      "wins": 20916,
+      "rank": 20
+    },
+    {
+      "id": "78",
+      "slug": "78.banjo_and_kazooie",
+      "image": "78.バンジョー＆カズーイ.png",
+      "win_rate": 51.57025203413376,
+      "battles": 40312,
+      "wins": 20789,
+      "rank": 21
+    },
+    {
+      "id": "25",
+      "slug": "25.young_link",
+      "image": "25.こどもリンク.png",
+      "win_rate": 51.53956686852099,
+      "battles": 19486,
+      "wins": 10043,
+      "rank": 22
+    },
+    {
+      "id": "35",
+      "slug": "35.wario",
+      "image": "35.ワリオ.png",
+      "win_rate": 51.53881754020595,
+      "battles": 34572,
+      "wins": 17818,
+      "rank": 23
+    },
+    {
+      "id": "48",
+      "slug": "48.villager",
+      "image": "48.むらびと.png",
+      "win_rate": 51.4192277053373,
+      "battles": 23851,
+      "wins": 12264,
+      "rank": 24
+    },
+    {
+      "id": "45",
+      "slug": "45.rob",
+      "image": "45.ロボット.png",
+      "win_rate": 51.37086071278283,
+      "battles": 154465,
+      "wins": 79350,
+      "rank": 25
+    },
+    {
+      "id": "29",
+      "slug": "29.chrom",
+      "image": "29.クロム.png",
+      "win_rate": 51.31932734812924,
+      "battles": 21943,
+      "wins": 11261,
+      "rank": 26
+    },
+    {
+      "id": "46",
+      "slug": "46.toon_link",
+      "image": "46.トゥーンリンク.png",
+      "win_rate": 51.29948991984455,
+      "battles": 24702,
+      "wins": 12672,
+      "rank": 27
+    },
+    {
+      "id": "02",
+      "slug": "02.donkey_kong",
+      "image": "02.ドンキーコング.png",
+      "win_rate": 51.28326208701992,
+      "battles": 120708,
+      "wins": 61903,
+      "rank": 28
+    },
+    {
+      "id": "27",
+      "slug": "27.mewtwo",
+      "image": "27.ミュウツー.png",
+      "win_rate": 51.20896778636468,
+      "battles": 52276,
+      "wins": 26770,
+      "rank": 29
+    },
+    {
+      "id": "67",
+      "slug": "67.bayonetta",
+      "image": "67.ベヨネッタ.png",
+      "win_rate": 51.19762658803829,
+      "battles": 54942,
+      "wins": 28129,
+      "rank": 30
+    },
+    {
+      "id": "68",
+      "slug": "68.inkling",
+      "image": "68.インクリング.png",
+      "win_rate": 51.13021986509448,
+      "battles": 58263,
+      "wins": 29790,
+      "rank": 31
+    },
+    {
+      "id": "69",
+      "slug": "69.ridley",
+      "image": "69.リドリー.png",
+      "win_rate": 51.03291090133195,
+      "battles": 61864,
+      "wins": 31571,
+      "rank": 32
+    },
+    {
+      "id": "30",
+      "slug": "30.mr_game_and_watch",
+      "image": "30.Mr.ゲーム&ウォッチ.png",
+      "win_rate": 50.96124777463022,
+      "battles": 89311,
+      "wins": 45514,
+      "rank": 33
+    },
+    {
+      "id": "53",
+      "slug": "53.greninja",
+      "image": "53.ゲッコウガ.png",
+      "win_rate": 50.94646249628053,
+      "battles": 87378,
+      "wins": 44516,
+      "rank": 34
+    },
+    {
+      "id": "42",
+      "slug": "42.king_dedede",
+      "image": "42.デデデ.png",
+      "win_rate": 50.868925376589445,
+      "battles": 60477,
+      "wins": 30764,
+      "rank": 35
+    },
+    {
+      "id": "19",
+      "slug": "19.zelda",
+      "image": "19.ゼルダ.png",
+      "win_rate": 50.86605177830419,
+      "battles": 59523,
+      "wins": 30277,
+      "rank": 36
+    },
+    {
+      "id": "55",
+      "slug": "55.mii_swordfighter",
+      "image": "55.剣術Mii.png",
+      "win_rate": 50.84801689434435,
+      "battles": 15153,
+      "wins": 7705,
+      "rank": 37
+    },
+    {
+      "id": "59",
+      "slug": "59.robin",
+      "image": "59.ルフレ.png",
+      "win_rate": 50.83249056510692,
+      "battles": 81082,
+      "wins": 41216,
+      "rank": 38
+    },
+    {
+      "id": "22",
+      "slug": "22.falco",
+      "image": "22.ファルコ.png",
+      "win_rate": 50.81214993537269,
+      "battles": 92840,
+      "wins": 47174,
+      "rank": 39
+    },
+    {
+      "id": "34",
+      "slug": "34.zero_suit_samus",
+      "image": "34.ゼロスーツサムス.png",
+      "win_rate": 50.79976673470238,
+      "battles": 48014,
+      "wins": 24391,
+      "rank": 40
+    },
+    {
+      "id": "03",
+      "slug": "03.link",
+      "image": "03.リンク.png",
+      "win_rate": 50.78796830602461,
+      "battles": 79889,
+      "wins": 40574,
+      "rank": 41
+    },
+    {
+      "id": "73",
+      "slug": "73.isabelle",
+      "image": "73.しずえ.png",
+      "win_rate": 50.77348803093952,
+      "battles": 29994,
+      "wins": 15229,
+      "rank": 42
+    },
+    {
+      "id": "54",
+      "slug": "54.mii_brawler",
+      "image": "54.格闘Mii.png",
+      "win_rate": 50.60159064645503,
+      "battles": 29422,
+      "wins": 14888,
+      "rank": 43
+    },
+    {
+      "id": "66",
+      "slug": "66.corrin",
+      "image": "66.カムイ.png",
+      "win_rate": 50.395542493264756,
+      "battles": 81660,
+      "wins": 41153,
+      "rank": 44
+    },
+    {
+      "id": "47",
+      "slug": "47.wolf",
+      "image": "47.ウルフ.png",
+      "win_rate": 50.3942888346396,
+      "battles": 124528,
+      "wins": 62755,
+      "rank": 45
+    },
+    {
+      "id": "06",
+      "slug": "06.yoshi",
+      "image": "06.ヨッシー.png",
+      "win_rate": 50.37585632290317,
+      "battles": 108020,
+      "wins": 54416,
+      "rank": 46
+    },
+    {
+      "id": "57",
+      "slug": "57.palutena",
+      "image": "57.パルテナ.png",
+      "win_rate": 50.34812737172084,
+      "battles": 90915,
+      "wins": 45774,
+      "rank": 47
+    },
+    {
+      "id": "52",
+      "slug": "52.little_mac",
+      "image": "52.リトルマック.png",
+      "win_rate": 50.24076353350176,
+      "battles": 46311,
+      "wins": 23267,
+      "rank": 48
+    },
+    {
+      "id": "58",
+      "slug": "58.pacman",
+      "image": "58.パックマン.png",
+      "win_rate": 50.19230108856152,
+      "battles": 58242,
+      "wins": 29233,
+      "rank": 49
+    },
+    {
+      "id": "37",
+      "slug": "37.ike",
+      "image": "37.アイク.png",
+      "win_rate": 50.14960763281206,
+      "battles": 53139,
+      "wins": 26649,
+      "rank": 50
+    },
+    {
+      "id": "79",
+      "slug": "79.terry",
+      "image": "79.テリー.png",
+      "win_rate": 50.14198222536032,
+      "battles": 65149,
+      "wins": 32667,
+      "rank": 51
+    },
+    {
+      "id": "44",
+      "slug": "44.lucario",
+      "image": "44.ルカリオ.png",
+      "win_rate": 50.13220637754525,
+      "battles": 44249,
+      "wins": 22183,
+      "rank": 52
+    },
+    {
+      "id": "72",
+      "slug": "72.king_k_rool",
+      "image": "72.キングクルール.png",
+      "win_rate": 50.067996049071674,
+      "battles": 69857,
+      "wins": 34976,
+      "rank": 53
+    },
+    {
+      "id": "14",
+      "slug": "14.peach_daisy",
+      "image": "14.ピーチ_15.デイジー.png",
+      "win_rate": 50.01870772773061,
+      "battles": 34745,
+      "wins": 17379,
+      "rank": 54
+    },
+    {
+      "id": "41",
+      "slug": "41.sonic",
+      "image": "41.ソニック.png",
+      "win_rate": 50.0007845721728,
+      "battles": 63729,
+      "wins": 31865,
+      "rank": 55
+    },
+    {
+      "id": "43",
+      "slug": "43.olimar",
+      "image": "43.ピクミン＆オリマー.png",
+      "win_rate": 49.928786200348156,
+      "battles": 31595,
+      "wins": 15775,
+      "rank": 56
+    },
+    {
+      "id": "08",
+      "slug": "08.fox",
+      "image": "08.フォックス.png",
+      "win_rate": 49.917633775704736,
+      "battles": 54027,
+      "wins": 26969,
+      "rank": 57
+    },
+    {
+      "id": "20",
+      "slug": "20.dr_mario",
+      "image": "20.ドクターマリオ.png",
+      "win_rate": 49.808902443732386,
+      "battles": 25903,
+      "wins": 12902,
+      "rank": 58
+    },
+    {
+      "id": "21",
+      "slug": "21.pichu",
+      "image": "21.ピチュー.png",
+      "win_rate": 49.67223764247328,
+      "battles": 16933,
+      "wins": 8411,
+      "rank": 59
+    },
+    {
+      "id": "74",
+      "slug": "74.incineroar",
+      "image": "74.ガオガエン.png",
+      "win_rate": 49.65399078792194,
+      "battles": 44941,
+      "wins": 22315,
+      "rank": 60
+    },
+    {
+      "id": "83",
+      "slug": "83.sephiroth",
+      "image": "83.セフィロス.png",
+      "win_rate": 49.645254074784276,
+      "battles": 130375,
+      "wins": 64725,
+      "rank": 61
+    },
+    {
+      "id": "16",
+      "slug": "16.bowser",
+      "image": "16.クッパ.png",
+      "win_rate": 49.52973361555973,
+      "battles": 100156,
+      "wins": 49607,
+      "rank": 62
+    },
+    {
+      "id": "86",
+      "slug": "86.sora",
+      "image": "86.ソラ.png",
+      "win_rate": 49.51555442105146,
+      "battles": 90103,
+      "wins": 44615,
+      "rank": 63
+    },
+    {
+      "id": "75",
+      "slug": "75.piranha_plant",
+      "image": "75.パックンフラワー.png",
+      "win_rate": 49.5038666619584,
+      "battles": 28319,
+      "wins": 14019,
+      "rank": 64
+    },
+    {
+      "id": "01",
+      "slug": "01.mario",
+      "image": "01.マリオ.png",
+      "win_rate": 49.465658750800095,
+      "battles": 123423,
+      "wins": 61052,
+      "rank": 65
+    },
+    {
+      "id": "85",
+      "slug": "85.kazuya",
+      "image": "85.カズヤ.png",
+      "win_rate": 49.245657532154986,
+      "battles": 137537,
+      "wins": 67731,
+      "rank": 66
+    },
+    {
+      "id": "31",
+      "slug": "31.metaknight",
+      "image": "31.メタナイト.png",
+      "win_rate": 49.123002187859235,
+      "battles": 26967,
+      "wins": 13247,
+      "rank": 67
+    },
+    {
+      "id": "62",
+      "slug": "62.duck_hunt",
+      "image": "62.ダックハント.png",
+      "win_rate": 49.11104634217429,
+      "battles": 17155,
+      "wins": 8425,
+      "rank": 68
+    },
+    {
+      "id": "51",
+      "slug": "51.rosalina_luma",
+      "image": "51.ロゼッタ＆チコ.png",
+      "win_rate": 49.101244430788135,
+      "battles": 19527,
+      "wins": 9588,
+      "rank": 69
+    },
+    {
+      "id": "26",
+      "slug": "26.ganondorf",
+      "image": "26.ガノンドロフ.png",
+      "win_rate": 48.74914979455309,
+      "battles": 107327,
+      "wins": 52321,
+      "rank": 70
+    },
+    {
+      "id": "60",
+      "slug": "60.shulk",
+      "image": "60.シュルク.png",
+      "win_rate": 48.57147445677485,
+      "battles": 62267,
+      "wins": 30244,
+      "rank": 71
+    },
+    {
+      "id": "80",
+      "slug": "80.byleth",
+      "image": "80.ベレトス.png",
+      "win_rate": 48.22559953921876,
+      "battles": 152784,
+      "wins": 73681,
+      "rank": 72
+    },
+    {
+      "id": "09",
+      "slug": "09.pikachu",
+      "image": "09.ピカチュウ.png",
+      "win_rate": 48.1842640772456,
+      "battles": 73221,
+      "wins": 35281,
+      "rank": 73
+    },
+    {
+      "id": "65",
+      "slug": "65.cloud",
+      "image": "65.クラウド.png",
+      "win_rate": 47.92540569045279,
+      "battles": 208595,
+      "wins": 99970,
+      "rank": 74
+    },
+    {
+      "id": "28",
+      "slug": "28.roy",
+      "image": "28.ロイ.png",
+      "win_rate": 47.876813603179,
+      "battles": 86568,
+      "wins": 41446,
+      "rank": 75
+    },
+    {
+      "id": "07",
+      "slug": "07.kirby",
+      "image": "07.カービィ.png",
+      "win_rate": 47.78670692181326,
+      "battles": 67569,
+      "wins": 32289,
+      "rank": 76
+    },
+    {
+      "id": "18",
+      "slug": "18.sheik",
+      "image": "18.シーク.png",
+      "win_rate": 47.747317566428855,
+      "battles": 35602,
+      "wins": 16999,
+      "rank": 77
+    },
+    {
+      "id": "84",
+      "slug": "84.homura",
+      "image": "84.ホムヒカ.png",
+      "win_rate": 47.156453914465025,
+      "battles": 216543,
+      "wins": 102114,
+      "rank": 78
+    },
+    {
+      "id": "76",
+      "slug": "76.joker",
+      "image": "76.ジョーカー.png",
+      "win_rate": 46.933682460579206,
+      "battles": 260459,
+      "wins": 122243,
+      "rank": 79
+    },
+    {
+      "id": "24",
+      "slug": "24.lucina",
+      "image": "24.ルキナ.png",
+      "win_rate": 46.262305398642475,
+      "battles": 133478,
+      "wins": 61750,
+      "rank": 80
+    },
+    {
+      "id": "32",
+      "slug": "32.pit_dark_pit",
+      "image": "32.ピット_33.ブラックピット.png",
+      "win_rate": 45.64932764436777,
+      "battles": 129842,
+      "wins": 59272,
+      "rank": 81
+    },
+    {
+      "id": "23",
+      "slug": "23.marth",
+      "image": "23.マルス.png",
+      "win_rate": 45.17691994836519,
+      "battles": 56551,
+      "wins": 25548,
+      "rank": 82
+    }
+  ],
+  "1500-1700": [
+    {
+      "id": "70",
+      "slug": "70.simon_richter",
+      "image": "70.シモン_71.リヒター.png",
+      "win_rate": 53.0600428463899,
+      "battles": 34542,
+      "wins": 18328,
+      "rank": 1
+    },
+    {
+      "id": "17",
+      "slug": "17.ice_climber",
+      "image": "17.アイスクライマー.png",
+      "win_rate": 52.60193059695371,
+      "battles": 36569,
+      "wins": 19236,
+      "rank": 2
+    },
+    {
+      "id": "56",
+      "slug": "56.mii_gunner",
+      "image": "56.射撃Mii.png",
+      "win_rate": 52.566334335601624,
+      "battles": 18957,
+      "wins": 9965,
+      "rank": 3
+    },
+    {
+      "id": "51",
+      "slug": "51.rosalina_luma",
+      "image": "51.ロゼッタ＆チコ.png",
+      "win_rate": 51.90516068250811,
+      "battles": 19106,
+      "wins": 9917,
+      "rank": 4
+    },
+    {
+      "id": "62",
+      "slug": "62.duck_hunt",
+      "image": "62.ダックハント.png",
+      "win_rate": 51.62993146879052,
+      "battles": 21596,
+      "wins": 11150,
+      "rank": 5
+    },
+    {
+      "id": "52",
+      "slug": "52.little_mac",
+      "image": "52.リトルマック.png",
+      "win_rate": 51.576983618026006,
+      "battles": 51459,
+      "wins": 26541,
+      "rank": 6
+    },
+    {
+      "id": "49",
+      "slug": "49.megaman",
+      "image": "49.ロックマン.png",
+      "win_rate": 51.54527061203844,
+      "battles": 39540,
+      "wins": 20381,
+      "rank": 7
+    },
+    {
+      "id": "36",
+      "slug": "36.snake",
+      "image": "36.スネーク.png",
+      "win_rate": 51.543101187577264,
+      "battles": 133465,
+      "wins": 68792,
+      "rank": 8
+    },
+    {
+      "id": "64",
+      "slug": "64.ken",
+      "image": "64.ケン.png",
+      "win_rate": 51.52899945024739,
+      "battles": 58208,
+      "wins": 29994,
+      "rank": 9
+    },
+    {
+      "id": "58",
+      "slug": "58.pacman",
+      "image": "58.パックマン.png",
+      "win_rate": 51.44389653084177,
+      "battles": 57795,
+      "wins": 29732,
+      "rank": 10
+    },
+    {
+      "id": "78",
+      "slug": "78.banjo_and_kazooie",
+      "image": "78.バンジョー＆カズーイ.png",
+      "win_rate": 51.28672284217718,
+      "battles": 35128,
+      "wins": 18016,
+      "rank": 11
+    },
+    {
+      "id": "82",
+      "slug": "82.steve",
+      "image": "82.スティーブ.png",
+      "win_rate": 51.153816791244175,
+      "battles": 144087,
+      "wins": 73706,
+      "rank": 12
+    },
+    {
+      "id": "39",
+      "slug": "39.diddy_kong",
+      "image": "39.ディディーコング.png",
+      "win_rate": 51.12830936001668,
+      "battles": 38376,
+      "wins": 19621,
+      "rank": 13
+    },
+    {
+      "id": "79",
+      "slug": "79.terry",
+      "image": "79.テリー.png",
+      "win_rate": 51.080987340308695,
+      "battles": 69196,
+      "wins": 35346,
+      "rank": 14
+    },
+    {
+      "id": "85",
+      "slug": "85.kazuya",
+      "image": "85.カズヤ.png",
+      "win_rate": 51.01954284392707,
+      "battles": 129715,
+      "wins": 66180,
+      "rank": 15
+    },
+    {
+      "id": "81",
+      "slug": "81.minmin",
+      "image": "81.ミェンミェン.png",
+      "win_rate": 51.01599205584621,
+      "battles": 134942,
+      "wins": 68842,
+      "rank": 16
+    },
+    {
+      "id": "04",
+      "slug": "04.samus_dark_samus",
+      "image": "04.サムス_05.ダークサムス.png",
+      "win_rate": 51.009774394412524,
+      "battles": 108242,
+      "wins": 55214,
+      "rank": 17
+    },
+    {
+      "id": "31",
+      "slug": "31.metaknight",
+      "image": "31.メタナイト.png",
+      "win_rate": 50.99562528284809,
+      "battles": 39774,
+      "wins": 20283,
+      "rank": 18
+    },
+    {
+      "id": "30",
+      "slug": "30.mr_game_and_watch",
+      "image": "30.Mr.ゲーム&ウォッチ.png",
+      "win_rate": 50.84428703264909,
+      "battles": 80186,
+      "wins": 40770,
+      "rank": 19
+    },
+    {
+      "id": "59",
+      "slug": "59.robin",
+      "image": "59.ルフレ.png",
+      "win_rate": 50.8394827357441,
+      "battles": 97977,
+      "wins": 49811,
+      "rank": 20
+    },
+    {
+      "id": "53",
+      "slug": "53.greninja",
+      "image": "53.ゲッコウガ.png",
+      "win_rate": 50.78119224229282,
+      "battles": 81158,
+      "wins": 41213,
+      "rank": 21
+    },
+    {
+      "id": "46",
+      "slug": "46.toon_link",
+      "image": "46.トゥーンリンク.png",
+      "win_rate": 50.752934574194455,
+      "battles": 42766,
+      "wins": 21705,
+      "rank": 22
+    },
+    {
+      "id": "73",
+      "slug": "73.isabelle",
+      "image": "73.しずえ.png",
+      "win_rate": 50.739413680781766,
+      "battles": 30700,
+      "wins": 15577,
+      "rank": 23
+    },
+    {
+      "id": "60",
+      "slug": "60.shulk",
+      "image": "60.シュルク.png",
+      "win_rate": 50.7310266728681,
+      "battles": 49451,
+      "wins": 25087,
+      "rank": 24
+    },
+    {
+      "id": "41",
+      "slug": "41.sonic",
+      "image": "41.ソニック.png",
+      "win_rate": 50.587980776660025,
+      "battles": 64713,
+      "wins": 32737,
+      "rank": 25
+    },
+    {
+      "id": "54",
+      "slug": "54.mii_brawler",
+      "image": "54.格闘Mii.png",
+      "win_rate": 50.57878573115994,
+      "battles": 21165,
+      "wins": 10705,
+      "rank": 26
+    },
+    {
+      "id": "67",
+      "slug": "67.bayonetta",
+      "image": "67.ベヨネッタ.png",
+      "win_rate": 50.565916998840166,
+      "battles": 75011,
+      "wins": 37930,
+      "rank": 27
+    },
+    {
+      "id": "50",
+      "slug": "50.wii_fit_trainer",
+      "image": "50.Wii Fit トレーナー.png",
+      "win_rate": 50.55516310746436,
+      "battles": 55209,
+      "wins": 27911,
+      "rank": 28
+    },
+    {
+      "id": "61",
+      "slug": "61.bowser_jr",
+      "image": "61.クッパJr..png",
+      "win_rate": 50.43633374722373,
+      "battles": 57181,
+      "wins": 28840,
+      "rank": 29
+    },
+    {
+      "id": "75",
+      "slug": "75.piranha_plant",
+      "image": "75.パックンフラワー.png",
+      "win_rate": 50.40878659796994,
+      "battles": 32413,
+      "wins": 16339,
+      "rank": 30
+    },
+    {
+      "id": "25",
+      "slug": "25.young_link",
+      "image": "25.こどもリンク.png",
+      "win_rate": 50.39759092833953,
+      "battles": 21253,
+      "wins": 10711,
+      "rank": 31
+    },
+    {
+      "id": "74",
+      "slug": "74.incineroar",
+      "image": "74.ガオガエン.png",
+      "win_rate": 50.39012003693444,
+      "battles": 43320,
+      "wins": 21829,
+      "rank": 32
+    },
+    {
+      "id": "18",
+      "slug": "18.sheik",
+      "image": "18.シーク.png",
+      "win_rate": 50.35514853696672,
+      "battles": 22385,
+      "wins": 11272,
+      "rank": 33
+    },
+    {
+      "id": "55",
+      "slug": "55.mii_swordfighter",
+      "image": "55.剣術Mii.png",
+      "win_rate": 50.305587892898714,
+      "battles": 20616,
+      "wins": 10371,
+      "rank": 34
+    },
+    {
+      "id": "45",
+      "slug": "45.rob",
+      "image": "45.ロボット.png",
+      "win_rate": 50.27339821228733,
+      "battles": 141186,
+      "wins": 70979,
+      "rank": 35
+    },
+    {
+      "id": "42",
+      "slug": "42.king_dedede",
+      "image": "42.デデデ.png",
+      "win_rate": 50.24099499764326,
+      "battles": 65769,
+      "wins": 33043,
+      "rank": 36
+    },
+    {
+      "id": "57",
+      "slug": "57.palutena",
+      "image": "57.パルテナ.png",
+      "win_rate": 50.16171751642643,
+      "battles": 78532,
+      "wins": 39393,
+      "rank": 37
+    },
+    {
+      "id": "22",
+      "slug": "22.falco",
+      "image": "22.ファルコ.png",
+      "win_rate": 50.09015044779649,
+      "battles": 101497,
+      "wins": 50840,
+      "rank": 38
+    },
+    {
+      "id": "20",
+      "slug": "20.dr_mario",
+      "image": "20.ドクターマリオ.png",
+      "win_rate": 50.08909046732,
+      "battles": 24694,
+      "wins": 12369,
+      "rank": 39
+    },
+    {
+      "id": "02",
+      "slug": "02.donkey_kong",
+      "image": "02.ドンキーコング.png",
+      "win_rate": 50.085025703172334,
+      "battles": 102322,
+      "wins": 51248,
+      "rank": 40
+    },
+    {
+      "id": "72",
+      "slug": "72.king_k_rool",
+      "image": "72.キングクルール.png",
+      "win_rate": 50.0696856403336,
+      "battles": 45203,
+      "wins": 22633,
+      "rank": 41
+    },
+    {
+      "id": "08",
+      "slug": "08.fox",
+      "image": "08.フォックス.png",
+      "win_rate": 49.979124916499664,
+      "battles": 47904,
+      "wins": 23942,
+      "rank": 42
+    },
+    {
+      "id": "10",
+      "slug": "10.luigi",
+      "image": "10.ルイージ.png",
+      "win_rate": 49.97663253600714,
+      "battles": 70611,
+      "wins": 35289,
+      "rank": 43
+    },
+    {
+      "id": "26",
+      "slug": "26.ganondorf",
+      "image": "26.ガノンドロフ.png",
+      "win_rate": 49.95032667515983,
+      "battles": 85559,
+      "wins": 42737,
+      "rank": 44
+    },
+    {
+      "id": "27",
+      "slug": "27.mewtwo",
+      "image": "27.ミュウツー.png",
+      "win_rate": 49.90435254941785,
+      "battles": 42343,
+      "wins": 21131,
+      "rank": 45
+    },
+    {
+      "id": "21",
+      "slug": "21.pichu",
+      "image": "21.ピチュー.png",
+      "win_rate": 49.85571587125416,
+      "battles": 18020,
+      "wins": 8984,
+      "rank": 46
+    },
+    {
+      "id": "12",
+      "slug": "12.captain_falcon",
+      "image": "12.キャプテン・ファルコン.png",
+      "win_rate": 49.7955474784189,
+      "battles": 81437,
+      "wins": 40552,
+      "rank": 47
+    },
+    {
+      "id": "77",
+      "slug": "77.hero",
+      "image": "77.勇者.png",
+      "win_rate": 49.77492497499166,
+      "battles": 83972,
+      "wins": 41797,
+      "rank": 48
+    },
+    {
+      "id": "06",
+      "slug": "06.yoshi",
+      "image": "06.ヨッシー.png",
+      "win_rate": 49.663419913419915,
+      "battles": 92400,
+      "wins": 45889,
+      "rank": 49
+    },
+    {
+      "id": "34",
+      "slug": "34.zero_suit_samus",
+      "image": "34.ゼロスーツサムス.png",
+      "win_rate": 49.64790311729087,
+      "battles": 44590,
+      "wins": 22138,
+      "rank": 50
+    },
+    {
+      "id": "38",
+      "slug": "38.pokemon_trainer",
+      "image": "38.ポケモントレーナー.png",
+      "win_rate": 49.53166550923965,
+      "battles": 59039,
+      "wins": 29243,
+      "rank": 51
+    },
+    {
+      "id": "07",
+      "slug": "07.kirby",
+      "image": "07.カービィ.png",
+      "win_rate": 49.52061503754935,
+      "battles": 33689,
+      "wins": 16683,
+      "rank": 52
+    },
+    {
+      "id": "63",
+      "slug": "63.ryu",
+      "image": "63.リュウ.png",
+      "win_rate": 49.43944478340451,
+      "battles": 26224,
+      "wins": 12965,
+      "rank": 53
+    },
+    {
+      "id": "48",
+      "slug": "48.villager",
+      "image": "48.むらびと.png",
+      "win_rate": 49.4077738515901,
+      "battles": 35375,
+      "wins": 17478,
+      "rank": 54
+    },
+    {
+      "id": "28",
+      "slug": "28.roy",
+      "image": "28.ロイ.png",
+      "win_rate": 49.383952895685034,
+      "battles": 56895,
+      "wins": 28097,
+      "rank": 55
+    },
+    {
+      "id": "13",
+      "slug": "13.jigglypuff",
+      "image": "13.プリン.png",
+      "win_rate": 49.378183110268864,
+      "battles": 33772,
+      "wins": 16676,
+      "rank": 56
+    },
+    {
+      "id": "14",
+      "slug": "14.peach_daisy",
+      "image": "14.ピーチ_15.デイジー.png",
+      "win_rate": 49.37130485469232,
+      "battles": 24018,
+      "wins": 11858,
+      "rank": 57
+    },
+    {
+      "id": "03",
+      "slug": "03.link",
+      "image": "03.リンク.png",
+      "win_rate": 49.340806493918855,
+      "battles": 72437,
+      "wins": 35741,
+      "rank": 58
+    },
+    {
+      "id": "11",
+      "slug": "11.ness",
+      "image": "11.ネス.png",
+      "win_rate": 49.30557076825341,
+      "battles": 91298,
+      "wins": 45015,
+      "rank": 59
+    },
+    {
+      "id": "44",
+      "slug": "44.lucario",
+      "image": "44.ルカリオ.png",
+      "win_rate": 49.24868882525178,
+      "battles": 31079,
+      "wins": 15306,
+      "rank": 60
+    },
+    {
+      "id": "37",
+      "slug": "37.ike",
+      "image": "37.アイク.png",
+      "win_rate": 49.245839406162084,
+      "battles": 59006,
+      "wins": 29058,
+      "rank": 61
+    },
+    {
+      "id": "68",
+      "slug": "68.inkling",
+      "image": "68.インクリング.png",
+      "win_rate": 49.16612948546305,
+      "battles": 60501,
+      "wins": 29746,
+      "rank": 62
+    },
+    {
+      "id": "69",
+      "slug": "69.ridley",
+      "image": "69.リドリー.png",
+      "win_rate": 49.14791985244273,
+      "battles": 63433,
+      "wins": 31176,
+      "rank": 63
+    },
+    {
+      "id": "66",
+      "slug": "66.corrin",
+      "image": "66.カムイ.png",
+      "win_rate": 49.12088770805658,
+      "battles": 51188,
+      "wins": 25144,
+      "rank": 64
+    },
+    {
+      "id": "19",
+      "slug": "19.zelda",
+      "image": "19.ゼルダ.png",
+      "win_rate": 49.06502337441564,
+      "battles": 51766,
+      "wins": 25399,
+      "rank": 65
+    },
+    {
+      "id": "35",
+      "slug": "35.wario",
+      "image": "35.ワリオ.png",
+      "win_rate": 49.05201750121536,
+      "battles": 37026,
+      "wins": 18162,
+      "rank": 66
+    },
+    {
+      "id": "29",
+      "slug": "29.chrom",
+      "image": "29.クロム.png",
+      "win_rate": 49.02751144679685,
+      "battles": 25553,
+      "wins": 12528,
+      "rank": 67
+    },
+    {
+      "id": "16",
+      "slug": "16.bowser",
+      "image": "16.クッパ.png",
+      "win_rate": 49.00901189827138,
+      "battles": 62362,
+      "wins": 30563,
+      "rank": 68
+    },
+    {
+      "id": "83",
+      "slug": "83.sephiroth",
+      "image": "83.セフィロス.png",
+      "win_rate": 48.998478998479,
+      "battles": 85470,
+      "wins": 41879,
+      "rank": 69
+    },
+    {
+      "id": "01",
+      "slug": "01.mario",
+      "image": "01.マリオ.png",
+      "win_rate": 48.97165744623372,
+      "battles": 85137,
+      "wins": 41693,
+      "rank": 70
+    },
+    {
+      "id": "09",
+      "slug": "09.pikachu",
+      "image": "09.ピカチュウ.png",
+      "win_rate": 48.888382767742954,
+      "battles": 57079,
+      "wins": 27905,
+      "rank": 71
+    },
+    {
+      "id": "84",
+      "slug": "84.homura",
+      "image": "84.ホムヒカ.png",
+      "win_rate": 48.792852690629545,
+      "battles": 120325,
+      "wins": 58710,
+      "rank": 72
+    },
+    {
+      "id": "23",
+      "slug": "23.marth",
+      "image": "23.マルス.png",
+      "win_rate": 48.7894411218808,
+      "battles": 24245,
+      "wins": 11829,
+      "rank": 73
+    },
+    {
+      "id": "47",
+      "slug": "47.wolf",
+      "image": "47.ウルフ.png",
+      "win_rate": 48.72573056788814,
+      "battles": 75455,
+      "wins": 36766,
+      "rank": 74
+    },
+    {
+      "id": "40",
+      "slug": "40.lucas",
+      "image": "40.リュカ.png",
+      "win_rate": 48.63381558188715,
+      "battles": 59582,
+      "wins": 28977,
+      "rank": 75
+    },
+    {
+      "id": "86",
+      "slug": "86.sora",
+      "image": "86.ソラ.png",
+      "win_rate": 48.621142909199754,
+      "battles": 76839,
+      "wins": 37360,
+      "rank": 76
+    },
+    {
+      "id": "80",
+      "slug": "80.byleth",
+      "image": "80.ベレトス.png",
+      "win_rate": 48.39764728050931,
+      "battles": 74297,
+      "wins": 35958,
+      "rank": 77
+    },
+    {
+      "id": "76",
+      "slug": "76.joker",
+      "image": "76.ジョーカー.png",
+      "win_rate": 48.37748984722491,
+      "battles": 103420,
+      "wins": 50032,
+      "rank": 78
+    },
+    {
+      "id": "43",
+      "slug": "43.olimar",
+      "image": "43.ピクミン＆オリマー.png",
+      "win_rate": 48.36710692961824,
+      "battles": 22108,
+      "wins": 10693,
+      "rank": 79
+    },
+    {
+      "id": "65",
+      "slug": "65.cloud",
+      "image": "65.クラウド.png",
+      "win_rate": 48.35525491669798,
+      "battles": 119745,
+      "wins": 57903,
+      "rank": 80
+    },
+    {
+      "id": "24",
+      "slug": "24.lucina",
+      "image": "24.ルキナ.png",
+      "win_rate": 47.954086317722684,
+      "battles": 54450,
+      "wins": 26111,
+      "rank": 81
+    },
+    {
+      "id": "32",
+      "slug": "32.pit_dark_pit",
+      "image": "32.ピット_33.ブラックピット.png",
+      "win_rate": 47.88087692963436,
+      "battles": 53961,
+      "wins": 25837,
+      "rank": 82
+    }
+  ],
+  "1500-3000": [
+    {
+      "id": "62",
+      "slug": "62.duck_hunt",
+      "image": "62.ダックハント.png",
+      "win_rate": 52.68270471275708,
+      "battles": 79062,
+      "wins": 41652,
+      "rank": 1
+    },
+    {
+      "id": "17",
+      "slug": "17.ice_climber",
+      "image": "17.アイスクライマー.png",
+      "win_rate": 52.419372408334,
+      "battles": 137701,
+      "wins": 72182,
+      "rank": 2
+    },
+    {
+      "id": "25",
+      "slug": "25.young_link",
+      "image": "25.こどもリンク.png",
+      "win_rate": 52.41386877331578,
+      "battles": 72912,
+      "wins": 38216,
+      "rank": 3
+    },
+    {
+      "id": "39",
+      "slug": "39.diddy_kong",
+      "image": "39.ディディーコング.png",
+      "win_rate": 52.22651468180156,
+      "battles": 125802,
+      "wins": 65702,
+      "rank": 4
+    },
+    {
+      "id": "56",
+      "slug": "56.mii_gunner",
+      "image": "56.射撃Mii.png",
+      "win_rate": 52.040045017049366,
+      "battles": 59533,
+      "wins": 30981,
+      "rank": 5
+    },
+    {
+      "id": "82",
+      "slug": "82.steve",
+      "image": "82.スティーブ.png",
+      "win_rate": 52.021496383457055,
+      "battles": 483058,
+      "wins": 251294,
+      "rank": 6
+    },
+    {
+      "id": "78",
+      "slug": "78.banjo_and_kazooie",
+      "image": "78.バンジョー＆カズーイ.png",
+      "win_rate": 51.956914100165655,
+      "battles": 121339,
+      "wins": 63044,
+      "rank": 7
+    },
+    {
+      "id": "51",
+      "slug": "51.rosalina_luma",
+      "image": "51.ロゼッタ＆チコ.png",
+      "win_rate": 51.9208687379023,
+      "battles": 60962,
+      "wins": 31652,
+      "rank": 8
+    },
+    {
+      "id": "70",
+      "slug": "70.simon_richter",
+      "image": "70.シモン_71.リヒター.png",
+      "win_rate": 51.57237571911358,
+      "battles": 116289,
+      "wins": 59973,
+      "rank": 9
+    },
+    {
+      "id": "49",
+      "slug": "49.megaman",
+      "image": "49.ロックマン.png",
+      "win_rate": 51.50380620375641,
+      "battles": 112448,
+      "wins": 57915,
+      "rank": 10
+    },
+    {
+      "id": "54",
+      "slug": "54.mii_brawler",
+      "image": "54.格闘Mii.png",
+      "win_rate": 51.38777745019585,
+      "battles": 71229,
+      "wins": 36603,
+      "rank": 11
+    },
+    {
+      "id": "14",
+      "slug": "14.peach_daisy",
+      "image": "14.ピーチ_15.デイジー.png",
+      "win_rate": 51.04401557969953,
+      "battles": 68294,
+      "wins": 34860,
+      "rank": 12
+    },
+    {
+      "id": "85",
+      "slug": "85.kazuya",
+      "image": "85.カズヤ.png",
+      "win_rate": 51.03974903470522,
+      "battles": 440539,
+      "wins": 224850,
+      "rank": 13
+    },
+    {
+      "id": "79",
+      "slug": "79.terry",
+      "image": "79.テリー.png",
+      "win_rate": 50.95634816508603,
+      "battles": 213416,
+      "wins": 108749,
+      "rank": 14
+    },
+    {
+      "id": "81",
+      "slug": "81.minmin",
+      "image": "81.ミェンミェン.png",
+      "win_rate": 50.912352229916756,
+      "battles": 400284,
+      "wins": 203794,
+      "rank": 15
+    },
+    {
+      "id": "04",
+      "slug": "04.samus_dark_samus",
+      "image": "04.サムス_05.ダークサムス.png",
+      "win_rate": 50.880263467419425,
+      "battles": 318825,
+      "wins": 162219,
+      "rank": 16
+    },
+    {
+      "id": "43",
+      "slug": "43.olimar",
+      "image": "43.ピクミン＆オリマー.png",
+      "win_rate": 50.86203049460766,
+      "battles": 67225,
+      "wins": 34192,
+      "rank": 17
+    },
+    {
+      "id": "45",
+      "slug": "45.rob",
+      "image": "45.ロボット.png",
+      "win_rate": 50.847654139487865,
+      "battles": 431249,
+      "wins": 219280,
+      "rank": 18
+    },
+    {
+      "id": "46",
+      "slug": "46.toon_link",
+      "image": "46.トゥーンリンク.png",
+      "win_rate": 50.73887967523949,
+      "battles": 121197,
+      "wins": 61494,
+      "rank": 19
+    },
+    {
+      "id": "36",
+      "slug": "36.snake",
+      "image": "36.スネーク.png",
+      "win_rate": 50.73786612180054,
+      "battles": 417962,
+      "wins": 212065,
+      "rank": 20
+    },
+    {
+      "id": "31",
+      "slug": "31.metaknight",
+      "image": "31.メタナイト.png",
+      "win_rate": 50.696602108509616,
+      "battles": 130993,
+      "wins": 66409,
+      "rank": 21
+    },
+    {
+      "id": "55",
+      "slug": "55.mii_swordfighter",
+      "image": "55.剣術Mii.png",
+      "win_rate": 50.68703364775446,
+      "battles": 71030,
+      "wins": 36003,
+      "rank": 22
+    },
+    {
+      "id": "50",
+      "slug": "50.wii_fit_trainer",
+      "image": "50.Wii Fit トレーナー.png",
+      "win_rate": 50.64446996260293,
+      "battles": 162847,
+      "wins": 82473,
+      "rank": 23
+    },
+    {
+      "id": "30",
+      "slug": "30.mr_game_and_watch",
+      "image": "30.Mr.ゲーム&ウォッチ.png",
+      "win_rate": 50.62336895880786,
+      "battles": 216886,
+      "wins": 109795,
+      "rank": 24
+    },
+    {
+      "id": "10",
+      "slug": "10.luigi",
+      "image": "10.ルイージ.png",
+      "win_rate": 50.60856964488332,
+      "battles": 219449,
+      "wins": 111060,
+      "rank": 25
+    },
+    {
+      "id": "06",
+      "slug": "06.yoshi",
+      "image": "06.ヨッシー.png",
+      "win_rate": 50.603729699612224,
+      "battles": 267421,
+      "wins": 135325,
+      "rank": 26
+    },
+    {
+      "id": "41",
+      "slug": "41.sonic",
+      "image": "41.ソニック.png",
+      "win_rate": 50.59763899354343,
+      "battles": 203049,
+      "wins": 102738,
+      "rank": 27
+    },
+    {
+      "id": "53",
+      "slug": "53.greninja",
+      "image": "53.ゲッコウガ.png",
+      "win_rate": 50.53584567644518,
+      "battles": 250072,
+      "wins": 126376,
+      "rank": 28
+    },
+    {
+      "id": "63",
+      "slug": "63.ryu",
+      "image": "63.リュウ.png",
+      "win_rate": 50.362191926692915,
+      "battles": 71371,
+      "wins": 35944,
+      "rank": 29
+    },
+    {
+      "id": "60",
+      "slug": "60.shulk",
+      "image": "60.シュルク.png",
+      "win_rate": 50.30458503450519,
+      "battles": 138385,
+      "wins": 69614,
+      "rank": 30
+    },
+    {
+      "id": "21",
+      "slug": "21.pichu",
+      "image": "21.ピチュー.png",
+      "win_rate": 50.27796230901017,
+      "battles": 57202,
+      "wins": 28760,
+      "rank": 31
+    },
+    {
+      "id": "58",
+      "slug": "58.pacman",
+      "image": "58.パックマン.png",
+      "win_rate": 50.226396889149804,
+      "battles": 172043,
+      "wins": 86411,
+      "rank": 32
+    },
+    {
+      "id": "18",
+      "slug": "18.sheik",
+      "image": "18.シーク.png",
+      "win_rate": 50.17392139905833,
+      "battles": 52035,
+      "wins": 26108,
+      "rank": 33
+    },
+    {
+      "id": "67",
+      "slug": "67.bayonetta",
+      "image": "67.ベヨネッタ.png",
+      "win_rate": 50.14398263861517,
+      "battles": 215651,
+      "wins": 108136,
+      "rank": 34
+    },
+    {
+      "id": "48",
+      "slug": "48.villager",
+      "image": "48.むらびと.png",
+      "win_rate": 50.13920857162959,
+      "battles": 99491,
+      "wins": 49884,
+      "rank": 35
+    },
+    {
+      "id": "61",
+      "slug": "61.bowser_jr",
+      "image": "61.クッパJr..png",
+      "win_rate": 50.110827512090275,
+      "battles": 178656,
+      "wins": 89526,
+      "rank": 36
+    },
+    {
+      "id": "42",
+      "slug": "42.king_dedede",
+      "image": "42.デデデ.png",
+      "win_rate": 50.066558584503504,
+      "battles": 193063,
+      "wins": 96660,
+      "rank": 37
+    },
+    {
+      "id": "64",
+      "slug": "64.ken",
+      "image": "64.ケン.png",
+      "win_rate": 49.9986984759153,
+      "battles": 153666,
+      "wins": 76831,
+      "rank": 38
+    },
+    {
+      "id": "77",
+      "slug": "77.hero",
+      "image": "77.勇者.png",
+      "win_rate": 49.998413214747586,
+      "battles": 252082,
+      "wins": 126037,
+      "rank": 39
+    },
+    {
+      "id": "12",
+      "slug": "12.captain_falcon",
+      "image": "12.キャプテン・ファルコン.png",
+      "win_rate": 49.962441739445225,
+      "battles": 220990,
+      "wins": 110412,
+      "rank": 40
+    },
+    {
+      "id": "75",
+      "slug": "75.piranha_plant",
+      "image": "75.パックンフラワー.png",
+      "win_rate": 49.90447247578294,
+      "battles": 89503,
+      "wins": 44666,
+      "rank": 41
+    },
+    {
+      "id": "22",
+      "slug": "22.falco",
+      "image": "22.ファルコ.png",
+      "win_rate": 49.838361871707285,
+      "battles": 273141,
+      "wins": 136129,
+      "rank": 42
+    },
+    {
+      "id": "38",
+      "slug": "38.pokemon_trainer",
+      "image": "38.ポケモントレーナー.png",
+      "win_rate": 49.80321564983999,
+      "battles": 154992,
+      "wins": 77191,
+      "rank": 43
+    },
+    {
+      "id": "52",
+      "slug": "52.little_mac",
+      "image": "52.リトルマック.png",
+      "win_rate": 49.77913539904163,
+      "battles": 154846,
+      "wins": 77081,
+      "rank": 44
+    },
+    {
+      "id": "08",
+      "slug": "08.fox",
+      "image": "08.フォックス.png",
+      "win_rate": 49.7343017954281,
+      "battles": 127212,
+      "wins": 63268,
+      "rank": 45
+    },
+    {
+      "id": "84",
+      "slug": "84.homura",
+      "image": "84.ホムヒカ.png",
+      "win_rate": 49.71740679173593,
+      "battles": 336880,
+      "wins": 167488,
+      "rank": 46
+    },
+    {
+      "id": "02",
+      "slug": "02.donkey_kong",
+      "image": "02.ドンキーコング.png",
+      "win_rate": 49.70867166676997,
+      "battles": 322660,
+      "wins": 160390,
+      "rank": 47
+    },
+    {
+      "id": "03",
+      "slug": "03.link",
+      "image": "03.リンク.png",
+      "win_rate": 49.67944059557838,
+      "battles": 185769,
+      "wins": 92289,
+      "rank": 48
+    },
+    {
+      "id": "73",
+      "slug": "73.isabelle",
+      "image": "73.しずえ.png",
+      "win_rate": 49.67848160344336,
+      "battles": 77134,
+      "wins": 38319,
+      "rank": 49
+    },
+    {
+      "id": "07",
+      "slug": "07.kirby",
+      "image": "07.カービィ.png",
+      "win_rate": 49.60970488211262,
+      "battles": 87626,
+      "wins": 43471,
+      "rank": 50
+    },
+    {
+      "id": "34",
+      "slug": "34.zero_suit_samus",
+      "image": "34.ゼロスーツサムス.png",
+      "win_rate": 49.57913594584132,
+      "battles": 111081,
+      "wins": 55073,
+      "rank": 51
+    },
+    {
+      "id": "20",
+      "slug": "20.dr_mario",
+      "image": "20.ドクターマリオ.png",
+      "win_rate": 49.540755682022834,
+      "battles": 55526,
+      "wins": 27508,
+      "rank": 52
+    },
+    {
+      "id": "59",
+      "slug": "59.robin",
+      "image": "59.ルフレ.png",
+      "win_rate": 49.454826371540975,
+      "battles": 238181,
+      "wins": 117792,
+      "rank": 53
+    },
+    {
+      "id": "26",
+      "slug": "26.ganondorf",
+      "image": "26.ガノンドロフ.png",
+      "win_rate": 49.35729808826256,
+      "battles": 253539,
+      "wins": 125140,
+      "rank": 54
+    },
+    {
+      "id": "72",
+      "slug": "72.king_k_rool",
+      "image": "72.キングクルール.png",
+      "win_rate": 49.350320620992235,
+      "battles": 106668,
+      "wins": 52641,
+      "rank": 55
+    },
+    {
+      "id": "57",
+      "slug": "57.palutena",
+      "image": "57.パルテナ.png",
+      "win_rate": 49.338421519303594,
+      "battles": 204133,
+      "wins": 100716,
+      "rank": 56
+    },
+    {
+      "id": "37",
+      "slug": "37.ike",
+      "image": "37.アイク.png",
+      "win_rate": 49.21980815258734,
+      "battles": 161691,
+      "wins": 79584,
+      "rank": 57
+    },
+    {
+      "id": "27",
+      "slug": "27.mewtwo",
+      "image": "27.ミュウツー.png",
+      "win_rate": 49.207803572347764,
+      "battles": 97135,
+      "wins": 47798,
+      "rank": 58
+    },
+    {
+      "id": "11",
+      "slug": "11.ness",
+      "image": "11.ネス.png",
+      "win_rate": 49.180984196546575,
+      "battles": 232291,
+      "wins": 114243,
+      "rank": 59
+    },
+    {
+      "id": "69",
+      "slug": "69.ridley",
+      "image": "69.リドリー.png",
+      "win_rate": 49.113137414333835,
+      "battles": 172180,
+      "wins": 84563,
+      "rank": 60
+    },
+    {
+      "id": "16",
+      "slug": "16.bowser",
+      "image": "16.クッパ.png",
+      "win_rate": 49.106233397910884,
+      "battles": 150207,
+      "wins": 73761,
+      "rank": 61
+    },
+    {
+      "id": "44",
+      "slug": "44.lucario",
+      "image": "44.ルカリオ.png",
+      "win_rate": 49.08759647663042,
+      "battles": 69706,
+      "wins": 34217,
+      "rank": 62
+    },
+    {
+      "id": "29",
+      "slug": "29.chrom",
+      "image": "29.クロム.png",
+      "win_rate": 49.02865344200113,
+      "battles": 58527,
+      "wins": 28695,
+      "rank": 63
+    },
+    {
+      "id": "19",
+      "slug": "19.zelda",
+      "image": "19.ゼルダ.png",
+      "win_rate": 49.01426106735075,
+      "battles": 154757,
+      "wins": 75853,
+      "rank": 64
+    },
+    {
+      "id": "47",
+      "slug": "47.wolf",
+      "image": "47.ウルフ.png",
+      "win_rate": 48.94572608719179,
+      "battles": 166323,
+      "wins": 81408,
+      "rank": 65
+    },
+    {
+      "id": "01",
+      "slug": "01.mario",
+      "image": "01.マリオ.png",
+      "win_rate": 48.804064204949796,
+      "battles": 202352,
+      "wins": 98756,
+      "rank": 66
+    },
+    {
+      "id": "35",
+      "slug": "35.wario",
+      "image": "35.ワリオ.png",
+      "win_rate": 48.80230912147218,
+      "battles": 90424,
+      "wins": 44129,
+      "rank": 67
+    },
+    {
+      "id": "74",
+      "slug": "74.incineroar",
+      "image": "74.ガオガエン.png",
+      "win_rate": 48.72001059562552,
+      "battles": 105704,
+      "wins": 51499,
+      "rank": 68
+    },
+    {
+      "id": "68",
+      "slug": "68.inkling",
+      "image": "68.インクリング.png",
+      "win_rate": 48.71264232372479,
+      "battles": 135782,
+      "wins": 66143,
+      "rank": 69
+    },
+    {
+      "id": "83",
+      "slug": "83.sephiroth",
+      "image": "83.セフィロス.png",
+      "win_rate": 48.67809180196432,
+      "battles": 199560,
+      "wins": 97142,
+      "rank": 70
+    },
+    {
+      "id": "66",
+      "slug": "66.corrin",
+      "image": "66.カムイ.png",
+      "win_rate": 48.63327752584952,
+      "battles": 118861,
+      "wins": 57806,
+      "rank": 71
+    },
+    {
+      "id": "65",
+      "slug": "65.cloud",
+      "image": "65.クラウド.png",
+      "win_rate": 48.493441641340816,
+      "battles": 265539,
+      "wins": 128769,
+      "rank": 72
+    },
+    {
+      "id": "40",
+      "slug": "40.lucas",
+      "image": "40.リュカ.png",
+      "win_rate": 48.483150396111036,
+      "battles": 142763,
+      "wins": 69216,
+      "rank": 73
+    },
+    {
+      "id": "28",
+      "slug": "28.roy",
+      "image": "28.ロイ.png",
+      "win_rate": 48.370042762579814,
+      "battles": 136568,
+      "wins": 66058,
+      "rank": 74
+    },
+    {
+      "id": "86",
+      "slug": "86.sora",
+      "image": "86.ソラ.png",
+      "win_rate": 48.339428801382425,
+      "battles": 168978,
+      "wins": 81683,
+      "rank": 75
+    },
+    {
+      "id": "32",
+      "slug": "32.pit_dark_pit",
+      "image": "32.ピット_33.ブラックピット.png",
+      "win_rate": 48.32899708852134,
+      "battles": 129144,
+      "wins": 62414,
+      "rank": 76
+    },
+    {
+      "id": "13",
+      "slug": "13.jigglypuff",
+      "image": "13.プリン.png",
+      "win_rate": 48.301835452431604,
+      "battles": 80852,
+      "wins": 39053,
+      "rank": 77
+    },
+    {
+      "id": "09",
+      "slug": "09.pikachu",
+      "image": "09.ピカチュウ.png",
+      "win_rate": 48.171476990679295,
+      "battles": 133359,
+      "wins": 64241,
+      "rank": 78
+    },
+    {
+      "id": "80",
+      "slug": "80.byleth",
+      "image": "80.ベレトス.png",
+      "win_rate": 47.79912532046448,
+      "battles": 165775,
+      "wins": 79239,
+      "rank": 79
+    },
+    {
+      "id": "24",
+      "slug": "24.lucina",
+      "image": "24.ルキナ.png",
+      "win_rate": 47.71060817673946,
+      "battles": 126016,
+      "wins": 60123,
+      "rank": 80
+    },
+    {
+      "id": "76",
+      "slug": "76.joker",
+      "image": "76.ジョーカー.png",
+      "win_rate": 47.669322709163346,
+      "battles": 210840,
+      "wins": 100506,
+      "rank": 81
+    },
+    {
+      "id": "23",
+      "slug": "23.marth",
+      "image": "23.マルス.png",
+      "win_rate": 47.02686796894452,
+      "battles": 44179,
+      "wins": 20776,
+      "rank": 82
+    }
+  ],
+  "1700-3000": [
+    {
+      "id": "39",
+      "slug": "39.diddy_kong",
+      "image": "39.ディディーコング.png",
+      "win_rate": 52.866556524050964,
+      "battles": 52659,
+      "wins": 27839,
+      "rank": 1
+    },
+    {
+      "id": "43",
+      "slug": "43.olimar",
+      "image": "43.ピクミン＆オリマー.png",
+      "win_rate": 52.79145846065356,
+      "battles": 27817,
+      "wins": 14685,
+      "rank": 2
+    },
+    {
+      "id": "25",
+      "slug": "25.young_link",
+      "image": "25.こどもリンク.png",
+      "win_rate": 52.060383516931864,
+      "battles": 31863,
+      "wins": 16588,
+      "rank": 3
+    },
+    {
+      "id": "62",
+      "slug": "62.duck_hunt",
+      "image": "62.ダックハント.png",
+      "win_rate": 51.93272013524742,
+      "battles": 34899,
+      "wins": 18124,
+      "rank": 4
+    },
+    {
+      "id": "14",
+      "slug": "14.peach_daisy",
+      "image": "14.ピーチ_15.デイジー.png",
+      "win_rate": 51.89672293942403,
+      "battles": 25175,
+      "wins": 13065,
+      "rank": 5
+    },
+    {
+      "id": "82",
+      "slug": "82.steve",
+      "image": "82.スティーブ.png",
+      "win_rate": 51.88499412328267,
+      "battles": 202494,
+      "wins": 105064,
+      "rank": 6
+    },
+    {
+      "id": "56",
+      "slug": "56.mii_gunner",
+      "image": "56.射撃Mii.png",
+      "win_rate": 51.63017245162139,
+      "battles": 22789,
+      "wins": 11766,
+      "rank": 7
+    },
+    {
+      "id": "23",
+      "slug": "23.marth",
+      "image": "23.マルス.png",
+      "win_rate": 51.53627311522049,
+      "battles": 7030,
+      "wins": 3623,
+      "rank": 8
+    },
+    {
+      "id": "17",
+      "slug": "17.ice_climber",
+      "image": "17.アイスクライマー.png",
+      "win_rate": 51.3746252471774,
+      "battles": 62708,
+      "wins": 32216,
+      "rank": 9
+    },
+    {
+      "id": "29",
+      "slug": "29.chrom",
+      "image": "29.クロム.png",
+      "win_rate": 51.2694877505568,
+      "battles": 17960,
+      "wins": 9208,
+      "rank": 10
+    },
+    {
+      "id": "18",
+      "slug": "18.sheik",
+      "image": "18.シーク.png",
+      "win_rate": 51.24999999999999,
+      "battles": 14400,
+      "wins": 7380,
+      "rank": 11
+    },
+    {
+      "id": "49",
+      "slug": "49.megaman",
+      "image": "49.ロックマン.png",
+      "win_rate": 51.243820762238876,
+      "battles": 37626,
+      "wins": 19281,
+      "rank": 12
+    },
+    {
+      "id": "10",
+      "slug": "10.luigi",
+      "image": "10.ルイージ.png",
+      "win_rate": 51.22841746398329,
+      "battles": 90930,
+      "wins": 46582,
+      "rank": 13
+    },
+    {
+      "id": "47",
+      "slug": "47.wolf",
+      "image": "47.ウルフ.png",
+      "win_rate": 51.20197066003915,
+      "battles": 45467,
+      "wins": 23280,
+      "rank": 14
+    },
+    {
+      "id": "06",
+      "slug": "06.yoshi",
+      "image": "06.ヨッシー.png",
+      "win_rate": 51.18613500336914,
+      "battles": 100916,
+      "wins": 51655,
+      "rank": 15
+    },
+    {
+      "id": "60",
+      "slug": "60.shulk",
+      "image": "60.シュルク.png",
+      "win_rate": 51.11589190928101,
+      "battles": 49736,
+      "wins": 25423,
+      "rank": 16
+    },
+    {
+      "id": "78",
+      "slug": "78.banjo_and_kazooie",
+      "image": "78.バンジョー＆カズーイ.png",
+      "win_rate": 50.970320700797544,
+      "battles": 53539,
+      "wins": 27289,
+      "rank": 17
+    },
+    {
+      "id": "51",
+      "slug": "51.rosalina_luma",
+      "image": "51.ロゼッタ＆チコ.png",
+      "win_rate": 50.92086711314769,
+      "battles": 22696,
+      "wins": 11557,
+      "rank": 18
+    },
+    {
+      "id": "79",
+      "slug": "79.terry",
+      "image": "79.テリー.png",
+      "win_rate": 50.9046971389712,
+      "battles": 82348,
+      "wins": 41919,
+      "rank": 19
+    },
+    {
+      "id": "03",
+      "slug": "03.link",
+      "image": "03.リンク.png",
+      "win_rate": 50.80569345714239,
+      "battles": 60631,
+      "wins": 30804,
+      "rank": 20
+    },
+    {
+      "id": "44",
+      "slug": "44.lucario",
+      "image": "44.ルカリオ.png",
+      "win_rate": 50.71547817791557,
+      "battles": 16772,
+      "wins": 8506,
+      "rank": 21
+    },
+    {
+      "id": "46",
+      "slug": "46.toon_link",
+      "image": "46.トゥーンリンク.png",
+      "win_rate": 50.6251018555165,
+      "battles": 42953,
+      "wins": 21745,
+      "rank": 22
+    },
+    {
+      "id": "63",
+      "slug": "63.ryu",
+      "image": "63.リュウ.png",
+      "win_rate": 50.541722883192286,
+      "battles": 24459,
+      "wins": 12362,
+      "rank": 23
+    },
+    {
+      "id": "54",
+      "slug": "54.mii_brawler",
+      "image": "54.格闘Mii.png",
+      "win_rate": 50.51990337149459,
+      "battles": 28563,
+      "wins": 14430,
+      "rank": 24
+    },
+    {
+      "id": "30",
+      "slug": "30.mr_game_and_watch",
+      "image": "30.Mr.ゲーム&ウォッチ.png",
+      "win_rate": 50.477629118112496,
+      "battles": 69510,
+      "wins": 35087,
+      "rank": 25
+    },
+    {
+      "id": "45",
+      "slug": "45.rob",
+      "image": "45.ロボット.png",
+      "win_rate": 50.47494151839512,
+      "battles": 169284,
+      "wins": 85446,
+      "rank": 26
+    },
+    {
+      "id": "22",
+      "slug": "22.falco",
+      "image": "22.ファルコ.png",
+      "win_rate": 50.44209257150513,
+      "battles": 89574,
+      "wins": 45183,
+      "rank": 27
+    },
+    {
+      "id": "38",
+      "slug": "38.pokemon_trainer",
+      "image": "38.ポケモントレーナー.png",
+      "win_rate": 50.431789121668146,
+      "battles": 50835,
+      "wins": 25637,
+      "rank": 28
+    },
+    {
+      "id": "27",
+      "slug": "27.mewtwo",
+      "image": "27.ミュウツー.png",
+      "win_rate": 50.4257907542579,
+      "battles": 26304,
+      "wins": 13264,
+      "rank": 29
+    },
+    {
+      "id": "81",
+      "slug": "81.minmin",
+      "image": "81.ミェンミェン.png",
+      "win_rate": 50.3984557744251,
+      "battles": 149201,
+      "wins": 75195,
+      "rank": 30
+    },
+    {
+      "id": "85",
+      "slug": "85.kazuya",
+      "image": "85.カズヤ.png",
+      "win_rate": 50.3639422178313,
+      "battles": 187255,
+      "wins": 94309,
+      "rank": 31
+    },
+    {
+      "id": "65",
+      "slug": "65.cloud",
+      "image": "65.クラウド.png",
+      "win_rate": 50.24970540373717,
+      "battles": 71284,
+      "wins": 35820,
+      "rank": 32
+    },
+    {
+      "id": "69",
+      "slug": "69.ridley",
+      "image": "69.リドリー.png",
+      "win_rate": 50.2073281642594,
+      "battles": 64873,
+      "wins": 32571,
+      "rank": 33
+    },
+    {
+      "id": "84",
+      "slug": "84.homura",
+      "image": "84.ホムヒカ.png",
+      "win_rate": 50.20732718669203,
+      "battles": 122994,
+      "wins": 61752,
+      "rank": 34
+    },
+    {
+      "id": "07",
+      "slug": "07.kirby",
+      "image": "07.カービィ.png",
+      "win_rate": 50.15528480256647,
+      "battles": 29301,
+      "wins": 14696,
+      "rank": 35
+    },
+    {
+      "id": "50",
+      "slug": "50.wii_fit_trainer",
+      "image": "50.Wii Fit トレーナー.png",
+      "win_rate": 50.07979036132435,
+      "battles": 59531,
+      "wins": 29813,
+      "rank": 36
+    },
+    {
+      "id": "68",
+      "slug": "68.inkling",
+      "image": "68.インクリング.png",
+      "win_rate": 50.06937454090378,
+      "battles": 36757,
+      "wins": 18404,
+      "rank": 37
+    },
+    {
+      "id": "40",
+      "slug": "40.lucas",
+      "image": "40.リュカ.png",
+      "win_rate": 50.06290438533429,
+      "battles": 44512,
+      "wins": 22284,
+      "rank": 38
+    },
+    {
+      "id": "01",
+      "slug": "01.mario",
+      "image": "01.マリオ.png",
+      "win_rate": 50.05329498350394,
+      "battles": 59105,
+      "wins": 29584,
+      "rank": 39
+    },
+    {
+      "id": "31",
+      "slug": "31.metaknight",
+      "image": "31.メタナイト.png",
+      "win_rate": 50.032963623671755,
+      "battles": 51572,
+      "wins": 25803,
+      "rank": 40
+    },
+    {
+      "id": "67",
+      "slug": "67.bayonetta",
+      "image": "67.ベヨネッタ.png",
+      "win_rate": 50.002656183595406,
+      "battles": 75296,
+      "wins": 37650,
+      "rank": 41
+    },
+    {
+      "id": "48",
+      "slug": "48.villager",
+      "image": "48.むらびと.png",
+      "win_rate": 49.921343820823886,
+      "battles": 37505,
+      "wins": 18723,
+      "rank": 42
+    },
+    {
+      "id": "61",
+      "slug": "61.bowser_jr",
+      "image": "61.クッパJr..png",
+      "win_rate": 49.89920616163161,
+      "battles": 71929,
+      "wins": 35892,
+      "rank": 43
+    },
+    {
+      "id": "66",
+      "slug": "66.corrin",
+      "image": "66.カムイ.png",
+      "win_rate": 49.87548805607649,
+      "battles": 32527,
+      "wins": 16223,
+      "rank": 44
+    },
+    {
+      "id": "70",
+      "slug": "70.simon_richter",
+      "image": "70.シモン_71.リヒター.png",
+      "win_rate": 49.84955493334448,
+      "battles": 47858,
+      "wins": 23857,
+      "rank": 45
+    },
+    {
+      "id": "12",
+      "slug": "12.captain_falcon",
+      "image": "12.キャプテン・ファルコン.png",
+      "win_rate": 49.83344521424139,
+      "battles": 78953,
+      "wins": 39345,
+      "rank": 46
+    },
+    {
+      "id": "36",
+      "slug": "36.snake",
+      "image": "36.スネーク.png",
+      "win_rate": 49.80176004509724,
+      "battles": 159655,
+      "wins": 79511,
+      "rank": 47
+    },
+    {
+      "id": "34",
+      "slug": "34.zero_suit_samus",
+      "image": "34.ゼロスーツサムス.png",
+      "win_rate": 49.79832454235185,
+      "battles": 32230,
+      "wins": 16050,
+      "rank": 48
+    },
+    {
+      "id": "41",
+      "slug": "41.sonic",
+      "image": "41.ソニック.png",
+      "win_rate": 49.79269572338955,
+      "battles": 78146,
+      "wins": 38911,
+      "rank": 49
+    },
+    {
+      "id": "21",
+      "slug": "21.pichu",
+      "image": "21.ピチュー.png",
+      "win_rate": 49.78157990535129,
+      "battles": 21976,
+      "wins": 10940,
+      "rank": 50
+    },
+    {
+      "id": "59",
+      "slug": "59.robin",
+      "image": "59.ルフレ.png",
+      "win_rate": 49.75808732675331,
+      "battles": 67173,
+      "wins": 33424,
+      "rank": 51
+    },
+    {
+      "id": "20",
+      "slug": "20.dr_mario",
+      "image": "20.ドクターマリオ.png",
+      "win_rate": 49.72153683468453,
+      "battles": 14185,
+      "wins": 7053,
+      "rank": 52
+    },
+    {
+      "id": "73",
+      "slug": "73.isabelle",
+      "image": "73.しずえ.png",
+      "win_rate": 49.63400026618163,
+      "battles": 22541,
+      "wins": 11188,
+      "rank": 53
+    },
+    {
+      "id": "77",
+      "slug": "77.hero",
+      "image": "77.勇者.png",
+      "win_rate": 49.62337742740987,
+      "battles": 96914,
+      "wins": 48092,
+      "rank": 54
+    },
+    {
+      "id": "04",
+      "slug": "04.samus_dark_samus",
+      "image": "04.サムス_05.ダークサムス.png",
+      "win_rate": 49.529183596458125,
+      "battles": 113951,
+      "wins": 56439,
+      "rank": 55
+    },
+    {
+      "id": "08",
+      "slug": "08.fox",
+      "image": "08.フォックス.png",
+      "win_rate": 49.39427567392612,
+      "battles": 43254,
+      "wins": 21365,
+      "rank": 56
+    },
+    {
+      "id": "53",
+      "slug": "53.greninja",
+      "image": "53.ゲッコウガ.png",
+      "win_rate": 49.386117454796874,
+      "battles": 95458,
+      "wins": 47143,
+      "rank": 57
+    },
+    {
+      "id": "35",
+      "slug": "35.wario",
+      "image": "35.ワリオ.png",
+      "win_rate": 49.351104875482285,
+      "battles": 25659,
+      "wins": 12663,
+      "rank": 58
+    },
+    {
+      "id": "11",
+      "slug": "11.ness",
+      "image": "11.ネス.png",
+      "win_rate": 49.33271521690267,
+      "battles": 71184,
+      "wins": 35117,
+      "rank": 59
+    },
+    {
+      "id": "42",
+      "slug": "42.king_dedede",
+      "image": "42.デデデ.png",
+      "win_rate": 49.31537224901602,
+      "battles": 72156,
+      "wins": 35584,
+      "rank": 60
+    },
+    {
+      "id": "55",
+      "slug": "55.mii_swordfighter",
+      "image": "55.剣術Mii.png",
+      "win_rate": 49.23554546668447,
+      "battles": 29956,
+      "wins": 14749,
+      "rank": 61
+    },
+    {
+      "id": "64",
+      "slug": "64.ken",
+      "image": "64.ケン.png",
+      "win_rate": 49.109926168990974,
+      "battles": 48760,
+      "wins": 23946,
+      "rank": 62
+    },
+    {
+      "id": "75",
+      "slug": "75.piranha_plant",
+      "image": "75.パックンフラワー.png",
+      "win_rate": 49.07327728867412,
+      "battles": 30214,
+      "wins": 14827,
+      "rank": 63
+    },
+    {
+      "id": "83",
+      "slug": "83.sephiroth",
+      "image": "83.セフィロス.png",
+      "win_rate": 49.06552094522019,
+      "battles": 55860,
+      "wins": 27408,
+      "rank": 64
+    },
+    {
+      "id": "72",
+      "slug": "72.king_k_rool",
+      "image": "72.キングクルール.png",
+      "win_rate": 49.01564514443012,
+      "battles": 28699,
+      "wins": 14067,
+      "rank": 65
+    },
+    {
+      "id": "76",
+      "slug": "76.joker",
+      "image": "76.ジョーカー.png",
+      "win_rate": 48.955991699809786,
+      "battles": 46264,
+      "wins": 22649,
+      "rank": 66
+    },
+    {
+      "id": "02",
+      "slug": "02.donkey_kong",
+      "image": "02.ドンキーコング.png",
+      "win_rate": 48.937104157521794,
+      "battles": 127576,
+      "wins": 62432,
+      "rank": 67
+    },
+    {
+      "id": "32",
+      "slug": "32.pit_dark_pit",
+      "image": "32.ピット_33.ブラックピット.png",
+      "win_rate": 48.84598598238813,
+      "battles": 38951,
+      "wins": 19026,
+      "rank": 68
+    },
+    {
+      "id": "58",
+      "slug": "58.pacman",
+      "image": "58.パックマン.png",
+      "win_rate": 48.784827068405505,
+      "battles": 61267,
+      "wins": 29889,
+      "rank": 69
+    },
+    {
+      "id": "80",
+      "slug": "80.byleth",
+      "image": "80.ベレトス.png",
+      "win_rate": 48.77243227013419,
+      "battles": 43297,
+      "wins": 21117,
+      "rank": 70
+    },
+    {
+      "id": "16",
+      "slug": "16.bowser",
+      "image": "16.クッパ.png",
+      "win_rate": 48.759599720735395,
+      "battles": 42970,
+      "wins": 20952,
+      "rank": 71
+    },
+    {
+      "id": "86",
+      "slug": "86.sora",
+      "image": "86.ソラ.png",
+      "win_rate": 48.73018950225367,
+      "battles": 41266,
+      "wins": 20109,
+      "rank": 72
+    },
+    {
+      "id": "24",
+      "slug": "24.lucina",
+      "image": "24.ルキナ.png",
+      "win_rate": 48.5865977902138,
+      "battles": 34845,
+      "wins": 16930,
+      "rank": 73
+    },
+    {
+      "id": "37",
+      "slug": "37.ike",
+      "image": "37.アイク.png",
+      "win_rate": 48.55451493196678,
+      "battles": 56590,
+      "wins": 27477,
+      "rank": 74
+    },
+    {
+      "id": "09",
+      "slug": "09.pikachu",
+      "image": "09.ピカチュウ.png",
+      "win_rate": 48.479450640231306,
+      "battles": 38736,
+      "wins": 18779,
+      "rank": 75
+    },
+    {
+      "id": "26",
+      "slug": "26.ganondorf",
+      "image": "26.ガノンドロフ.png",
+      "win_rate": 48.37638061056634,
+      "battles": 93618,
+      "wins": 45289,
+      "rank": 76
+    },
+    {
+      "id": "57",
+      "slug": "57.palutena",
+      "image": "57.パルテナ.png",
+      "win_rate": 48.06250519491314,
+      "battles": 60155,
+      "wins": 28912,
+      "rank": 77
+    },
+    {
+      "id": "52",
+      "slug": "52.little_mac",
+      "image": "52.リトルマック.png",
+      "win_rate": 47.91746135542114,
+      "battles": 55053,
+      "wins": 26380,
+      "rank": 78
+    },
+    {
+      "id": "28",
+      "slug": "28.roy",
+      "image": "28.ロイ.png",
+      "win_rate": 47.89309455976123,
+      "battles": 36855,
+      "wins": 17651,
+      "rank": 79
+    },
+    {
+      "id": "13",
+      "slug": "13.jigglypuff",
+      "image": "13.プリン.png",
+      "win_rate": 47.58428760436151,
+      "battles": 21919,
+      "wins": 10430,
+      "rank": 80
+    },
+    {
+      "id": "19",
+      "slug": "19.zelda",
+      "image": "19.ゼルダ.png",
+      "win_rate": 47.07139287622133,
+      "battles": 58031,
+      "wins": 27316,
+      "rank": 81
+    },
+    {
+      "id": "74",
+      "slug": "74.incineroar",
+      "image": "74.ガオガエン.png",
+      "win_rate": 46.66153253754332,
+      "battles": 25970,
+      "wins": 12118,
+      "rank": 82
+    }
+  ]
+}

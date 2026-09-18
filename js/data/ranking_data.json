@@ -1,0 +1,1980 @@
+{
+  "overall": [
+    {
+      "id": "62",
+      "slug": "62.duck_hunt",
+      "image": "62.ダックハント.png",
+      "rank": 1
+    },
+    {
+      "id": "25",
+      "slug": "25.young_link",
+      "image": "25.こどもリンク.png",
+      "rank": 2
+    },
+    {
+      "id": "17",
+      "slug": "17.ice_climber",
+      "image": "17.アイスクライマー.png",
+      "rank": 3
+    },
+    {
+      "id": "39",
+      "slug": "39.diddy_kong",
+      "image": "39.ディディーコング.png",
+      "rank": 4
+    },
+    {
+      "id": "56",
+      "slug": "56.mii_gunner",
+      "image": "56.射撃Mii.png",
+      "rank": 5
+    },
+    {
+      "id": "78",
+      "slug": "78.banjo_and_kazooie",
+      "image": "78.バンジョー＆カズーイ.png",
+      "rank": 6
+    },
+    {
+      "id": "82",
+      "slug": "82.steve",
+      "image": "82.スティーブ.png",
+      "rank": 7
+    },
+    {
+      "id": "51",
+      "slug": "51.rosalina_luma",
+      "image": "51.ロゼッタ＆チコ.png",
+      "rank": 8
+    },
+    {
+      "id": "70",
+      "slug": "70.simon_richter",
+      "image": "70.シモン_71.リヒター.png",
+      "rank": 9
+    },
+    {
+      "id": "49",
+      "slug": "49.megaman",
+      "image": "49.ロックマン.png",
+      "rank": 10
+    },
+    {
+      "id": "54",
+      "slug": "54.mii_brawler",
+      "image": "54.格闘Mii.png",
+      "rank": 11
+    },
+    {
+      "id": "14",
+      "slug": "14.peach_daisy",
+      "image": "14.ピーチ_15.デイジー.png",
+      "rank": 12
+    },
+    {
+      "id": "79",
+      "slug": "79.terry",
+      "image": "79.テリー.png",
+      "rank": 13
+    },
+    {
+      "id": "04",
+      "slug": "04.samus_dark_samus",
+      "image": "04.サムス_05.ダークサムス.png",
+      "rank": 14
+    },
+    {
+      "id": "81",
+      "slug": "81.minmin",
+      "image": "81.ミェンミェン.png",
+      "rank": 15
+    },
+    {
+      "id": "85",
+      "slug": "85.kazuya",
+      "image": "85.カズヤ.png",
+      "rank": 16
+    },
+    {
+      "id": "31",
+      "slug": "31.metaknight",
+      "image": "31.メタナイト.png",
+      "rank": 17
+    },
+    {
+      "id": "45",
+      "slug": "45.rob",
+      "image": "45.ロボット.png",
+      "rank": 18
+    },
+    {
+      "id": "36",
+      "slug": "36.snake",
+      "image": "36.スネーク.png",
+      "rank": 19
+    },
+    {
+      "id": "55",
+      "slug": "55.mii_swordfighter",
+      "image": "55.剣術Mii.png",
+      "rank": 20
+    },
+    {
+      "id": "43",
+      "slug": "43.olimar",
+      "image": "43.ピクミン＆オリマー.png",
+      "rank": 21
+    },
+    {
+      "id": "41",
+      "slug": "41.sonic",
+      "image": "41.ソニック.png",
+      "rank": 22
+    },
+    {
+      "id": "50",
+      "slug": "50.wii_fit_trainer",
+      "image": "50.Wii Fit トレーナー.png",
+      "rank": 23
+    },
+    {
+      "id": "06",
+      "slug": "06.yoshi",
+      "image": "06.ヨッシー.png",
+      "rank": 24
+    },
+    {
+      "id": "46",
+      "slug": "46.toon_link",
+      "image": "46.トゥーンリンク.png",
+      "rank": 25
+    },
+    {
+      "id": "30",
+      "slug": "30.mr_game_and_watch",
+      "image": "30.Mr.ゲーム&ウォッチ.png",
+      "rank": 26
+    },
+    {
+      "id": "53",
+      "slug": "53.greninja",
+      "image": "53.ゲッコウガ.png",
+      "rank": 27
+    },
+    {
+      "id": "10",
+      "slug": "10.luigi",
+      "image": "10.ルイージ.png",
+      "rank": 28
+    },
+    {
+      "id": "63",
+      "slug": "63.ryu",
+      "image": "63.リュウ.png",
+      "rank": 29
+    },
+    {
+      "id": "21",
+      "slug": "21.pichu",
+      "image": "21.ピチュー.png",
+      "rank": 30
+    },
+    {
+      "id": "58",
+      "slug": "58.pacman",
+      "image": "58.パックマン.png",
+      "rank": 31
+    },
+    {
+      "id": "60",
+      "slug": "60.shulk",
+      "image": "60.シュルク.png",
+      "rank": 32
+    },
+    {
+      "id": "67",
+      "slug": "67.bayonetta",
+      "image": "67.ベヨネッタ.png",
+      "rank": 33
+    },
+    {
+      "id": "42",
+      "slug": "42.king_dedede",
+      "image": "42.デデデ.png",
+      "rank": 34
+    },
+    {
+      "id": "61",
+      "slug": "61.bowser_jr",
+      "image": "61.クッパJr..png",
+      "rank": 35
+    },
+    {
+      "id": "48",
+      "slug": "48.villager",
+      "image": "48.むらびと.png",
+      "rank": 36
+    },
+    {
+      "id": "64",
+      "slug": "64.ken",
+      "image": "64.ケン.png",
+      "rank": 37
+    },
+    {
+      "id": "18",
+      "slug": "18.sheik",
+      "image": "18.シーク.png",
+      "rank": 38
+    },
+    {
+      "id": "12",
+      "slug": "12.captain_falcon",
+      "image": "12.キャプテン・ファルコン.png",
+      "rank": 39
+    },
+    {
+      "id": "75",
+      "slug": "75.piranha_plant",
+      "image": "75.パックンフラワー.png",
+      "rank": 40
+    },
+    {
+      "id": "77",
+      "slug": "77.hero",
+      "image": "77.勇者.png",
+      "rank": 41
+    },
+    {
+      "id": "73",
+      "slug": "73.isabelle",
+      "image": "73.しずえ.png",
+      "rank": 42
+    },
+    {
+      "id": "52",
+      "slug": "52.little_mac",
+      "image": "52.リトルマック.png",
+      "rank": 43
+    },
+    {
+      "id": "84",
+      "slug": "84.homura",
+      "image": "84.ホムヒカ.png",
+      "rank": 44
+    },
+    {
+      "id": "22",
+      "slug": "22.falco",
+      "image": "22.ファルコ.png",
+      "rank": 45
+    },
+    {
+      "id": "03",
+      "slug": "03.link",
+      "image": "03.リンク.png",
+      "rank": 46
+    },
+    {
+      "id": "07",
+      "slug": "07.kirby",
+      "image": "07.カービィ.png",
+      "rank": 47
+    },
+    {
+      "id": "38",
+      "slug": "38.pokemon_trainer",
+      "image": "38.ポケモントレーナー.png",
+      "rank": 48
+    },
+    {
+      "id": "08",
+      "slug": "08.fox",
+      "image": "08.フォックス.png",
+      "rank": 49
+    },
+    {
+      "id": "02",
+      "slug": "02.donkey_kong",
+      "image": "02.ドンキーコング.png",
+      "rank": 50
+    },
+    {
+      "id": "20",
+      "slug": "20.dr_mario",
+      "image": "20.ドクターマリオ.png",
+      "rank": 51
+    },
+    {
+      "id": "34",
+      "slug": "34.zero_suit_samus",
+      "image": "34.ゼロスーツサムス.png",
+      "rank": 52
+    },
+    {
+      "id": "72",
+      "slug": "72.king_k_rool",
+      "image": "72.キングクルール.png",
+      "rank": 53
+    },
+    {
+      "id": "59",
+      "slug": "59.robin",
+      "image": "59.ルフレ.png",
+      "rank": 54
+    },
+    {
+      "id": "37",
+      "slug": "37.ike",
+      "image": "37.アイク.png",
+      "rank": 55
+    },
+    {
+      "id": "26",
+      "slug": "26.ganondorf",
+      "image": "26.ガノンドロフ.png",
+      "rank": 56
+    },
+    {
+      "id": "57",
+      "slug": "57.palutena",
+      "image": "57.パルテナ.png",
+      "rank": 57
+    },
+    {
+      "id": "11",
+      "slug": "11.ness",
+      "image": "11.ネス.png",
+      "rank": 58
+    },
+    {
+      "id": "69",
+      "slug": "69.ridley",
+      "image": "69.リドリー.png",
+      "rank": 59
+    },
+    {
+      "id": "27",
+      "slug": "27.mewtwo",
+      "image": "27.ミュウツー.png",
+      "rank": 60
+    },
+    {
+      "id": "19",
+      "slug": "19.zelda",
+      "image": "19.ゼルダ.png",
+      "rank": 61
+    },
+    {
+      "id": "44",
+      "slug": "44.lucario",
+      "image": "44.ルカリオ.png",
+      "rank": 62
+    },
+    {
+      "id": "47",
+      "slug": "47.wolf",
+      "image": "47.ウルフ.png",
+      "rank": 63
+    },
+    {
+      "id": "16",
+      "slug": "16.bowser",
+      "image": "16.クッパ.png",
+      "rank": 64
+    },
+    {
+      "id": "29",
+      "slug": "29.chrom",
+      "image": "29.クロム.png",
+      "rank": 65
+    },
+    {
+      "id": "74",
+      "slug": "74.incineroar",
+      "image": "74.ガオガエン.png",
+      "rank": 66
+    },
+    {
+      "id": "01",
+      "slug": "01.mario",
+      "image": "01.マリオ.png",
+      "rank": 67
+    },
+    {
+      "id": "68",
+      "slug": "68.inkling",
+      "image": "68.インクリング.png",
+      "rank": 68
+    },
+    {
+      "id": "83",
+      "slug": "83.sephiroth",
+      "image": "83.セフィロス.png",
+      "rank": 69
+    },
+    {
+      "id": "66",
+      "slug": "66.corrin",
+      "image": "66.カムイ.png",
+      "rank": 70
+    },
+    {
+      "id": "35",
+      "slug": "35.wario",
+      "image": "35.ワリオ.png",
+      "rank": 71
+    },
+    {
+      "id": "65",
+      "slug": "65.cloud",
+      "image": "65.クラウド.png",
+      "rank": 72
+    },
+    {
+      "id": "28",
+      "slug": "28.roy",
+      "image": "28.ロイ.png",
+      "rank": 73
+    },
+    {
+      "id": "86",
+      "slug": "86.sora",
+      "image": "86.ソラ.png",
+      "rank": 74
+    },
+    {
+      "id": "40",
+      "slug": "40.lucas",
+      "image": "40.リュカ.png",
+      "rank": 75
+    },
+    {
+      "id": "32",
+      "slug": "32.pit_dark_pit",
+      "image": "32.ピット_33.ブラックピット.png",
+      "rank": 76
+    },
+    {
+      "id": "13",
+      "slug": "13.jigglypuff",
+      "image": "13.プリン.png",
+      "rank": 77
+    },
+    {
+      "id": "09",
+      "slug": "09.pikachu",
+      "image": "09.ピカチュウ.png",
+      "rank": 78
+    },
+    {
+      "id": "24",
+      "slug": "24.lucina",
+      "image": "24.ルキナ.png",
+      "rank": 79
+    },
+    {
+      "id": "80",
+      "slug": "80.byleth",
+      "image": "80.ベレトス.png",
+      "rank": 80
+    },
+    {
+      "id": "76",
+      "slug": "76.joker",
+      "image": "76.ジョーカー.png",
+      "rank": 81
+    },
+    {
+      "id": "23",
+      "slug": "23.marth",
+      "image": "23.マルス.png",
+      "rank": 82
+    }
+  ],
+  "change": [
+    {
+      "id": "27",
+      "slug": "27.mewtwo",
+      "image": "27.ミュウツー.png",
+      "change": 4.0
+    },
+    {
+      "id": "85",
+      "slug": "85.kazuya",
+      "image": "85.カズヤ.png",
+      "change": 3.0
+    },
+    {
+      "id": "64",
+      "slug": "64.ken",
+      "image": "64.ケン.png",
+      "change": 3.0
+    },
+    {
+      "id": "55",
+      "slug": "55.mii_swordfighter",
+      "image": "55.剣術Mii.png",
+      "change": 2.0
+    },
+    {
+      "id": "43",
+      "slug": "43.olimar",
+      "image": "43.ピクミン＆オリマー.png",
+      "change": 2.0
+    },
+    {
+      "id": "06",
+      "slug": "06.yoshi",
+      "image": "06.ヨッシー.png",
+      "change": 2.0
+    },
+    {
+      "id": "60",
+      "slug": "60.shulk",
+      "image": "60.シュルク.png",
+      "change": 2.0
+    },
+    {
+      "id": "48",
+      "slug": "48.villager",
+      "image": "48.むらびと.png",
+      "change": 2.0
+    },
+    {
+      "id": "77",
+      "slug": "77.hero",
+      "image": "77.勇者.png",
+      "change": 2.0
+    },
+    {
+      "id": "22",
+      "slug": "22.falco",
+      "image": "22.ファルコ.png",
+      "change": 2.0
+    },
+    {
+      "id": "03",
+      "slug": "03.link",
+      "image": "03.リンク.png",
+      "change": 2.0
+    },
+    {
+      "id": "08",
+      "slug": "08.fox",
+      "image": "08.フォックス.png",
+      "change": 2.0
+    },
+    {
+      "id": "68",
+      "slug": "68.inkling",
+      "image": "68.インクリング.png",
+      "change": 2.0
+    },
+    {
+      "id": "81",
+      "slug": "81.minmin",
+      "image": "81.ミェンミェン.png",
+      "change": 1.0
+    },
+    {
+      "id": "53",
+      "slug": "53.greninja",
+      "image": "53.ゲッコウガ.png",
+      "change": 1.0
+    },
+    {
+      "id": "75",
+      "slug": "75.piranha_plant",
+      "image": "75.パックンフラワー.png",
+      "change": 1.0
+    },
+    {
+      "id": "84",
+      "slug": "84.homura",
+      "image": "84.ホムヒカ.png",
+      "change": 1.0
+    },
+    {
+      "id": "34",
+      "slug": "34.zero_suit_samus",
+      "image": "34.ゼロスーツサムス.png",
+      "change": 1.0
+    },
+    {
+      "id": "57",
+      "slug": "57.palutena",
+      "image": "57.パルテナ.png",
+      "change": 1.0
+    },
+    {
+      "id": "69",
+      "slug": "69.ridley",
+      "image": "69.リドリー.png",
+      "change": 1.0
+    },
+    {
+      "id": "16",
+      "slug": "16.bowser",
+      "image": "16.クッパ.png",
+      "change": 1.0
+    },
+    {
+      "id": "01",
+      "slug": "01.mario",
+      "image": "01.マリオ.png",
+      "change": 1.0
+    },
+    {
+      "id": "28",
+      "slug": "28.roy",
+      "image": "28.ロイ.png",
+      "change": 1.0
+    },
+    {
+      "id": "40",
+      "slug": "40.lucas",
+      "image": "40.リュカ.png",
+      "change": 1.0
+    },
+    {
+      "id": "62",
+      "slug": "62.duck_hunt",
+      "image": "62.ダックハント.png",
+      "change": 0.0
+    },
+    {
+      "id": "25",
+      "slug": "25.young_link",
+      "image": "25.こどもリンク.png",
+      "change": 0.0
+    },
+    {
+      "id": "17",
+      "slug": "17.ice_climber",
+      "image": "17.アイスクライマー.png",
+      "change": 0.0
+    },
+    {
+      "id": "39",
+      "slug": "39.diddy_kong",
+      "image": "39.ディディーコング.png",
+      "change": 0.0
+    },
+    {
+      "id": "56",
+      "slug": "56.mii_gunner",
+      "image": "56.射撃Mii.png",
+      "change": 0.0
+    },
+    {
+      "id": "78",
+      "slug": "78.banjo_and_kazooie",
+      "image": "78.バンジョー＆カズーイ.png",
+      "change": 0.0
+    },
+    {
+      "id": "82",
+      "slug": "82.steve",
+      "image": "82.スティーブ.png",
+      "change": 0.0
+    },
+    {
+      "id": "51",
+      "slug": "51.rosalina_luma",
+      "image": "51.ロゼッタ＆チコ.png",
+      "change": 0.0
+    },
+    {
+      "id": "70",
+      "slug": "70.simon_richter",
+      "image": "70.シモン_71.リヒター.png",
+      "change": 0.0
+    },
+    {
+      "id": "49",
+      "slug": "49.megaman",
+      "image": "49.ロックマン.png",
+      "change": 0.0
+    },
+    {
+      "id": "54",
+      "slug": "54.mii_brawler",
+      "image": "54.格闘Mii.png",
+      "change": 0.0
+    },
+    {
+      "id": "14",
+      "slug": "14.peach_daisy",
+      "image": "14.ピーチ_15.デイジー.png",
+      "change": 0.0
+    },
+    {
+      "id": "79",
+      "slug": "79.terry",
+      "image": "79.テリー.png",
+      "change": 0.0
+    },
+    {
+      "id": "04",
+      "slug": "04.samus_dark_samus",
+      "image": "04.サムス_05.ダークサムス.png",
+      "change": 0.0
+    },
+    {
+      "id": "46",
+      "slug": "46.toon_link",
+      "image": "46.トゥーンリンク.png",
+      "change": 0.0
+    },
+    {
+      "id": "63",
+      "slug": "63.ryu",
+      "image": "63.リュウ.png",
+      "change": 0.0
+    },
+    {
+      "id": "21",
+      "slug": "21.pichu",
+      "image": "21.ピチュー.png",
+      "change": 0.0
+    },
+    {
+      "id": "58",
+      "slug": "58.pacman",
+      "image": "58.パックマン.png",
+      "change": 0.0
+    },
+    {
+      "id": "61",
+      "slug": "61.bowser_jr",
+      "image": "61.クッパJr..png",
+      "change": 0.0
+    },
+    {
+      "id": "12",
+      "slug": "12.captain_falcon",
+      "image": "12.キャプテン・ファルコン.png",
+      "change": 0.0
+    },
+    {
+      "id": "59",
+      "slug": "59.robin",
+      "image": "59.ルフレ.png",
+      "change": 0.0
+    },
+    {
+      "id": "37",
+      "slug": "37.ike",
+      "image": "37.アイク.png",
+      "change": 0.0
+    },
+    {
+      "id": "26",
+      "slug": "26.ganondorf",
+      "image": "26.ガノンドロフ.png",
+      "change": 0.0
+    },
+    {
+      "id": "19",
+      "slug": "19.zelda",
+      "image": "19.ゼルダ.png",
+      "change": 0.0
+    },
+    {
+      "id": "47",
+      "slug": "47.wolf",
+      "image": "47.ウルフ.png",
+      "change": 0.0
+    },
+    {
+      "id": "74",
+      "slug": "74.incineroar",
+      "image": "74.ガオガエン.png",
+      "change": 0.0
+    },
+    {
+      "id": "35",
+      "slug": "35.wario",
+      "image": "35.ワリオ.png",
+      "change": 0.0
+    },
+    {
+      "id": "65",
+      "slug": "65.cloud",
+      "image": "65.クラウド.png",
+      "change": 0.0
+    },
+    {
+      "id": "13",
+      "slug": "13.jigglypuff",
+      "image": "13.プリン.png",
+      "change": 0.0
+    },
+    {
+      "id": "09",
+      "slug": "09.pikachu",
+      "image": "09.ピカチュウ.png",
+      "change": 0.0
+    },
+    {
+      "id": "24",
+      "slug": "24.lucina",
+      "image": "24.ルキナ.png",
+      "change": 0.0
+    },
+    {
+      "id": "80",
+      "slug": "80.byleth",
+      "image": "80.ベレトス.png",
+      "change": 0.0
+    },
+    {
+      "id": "76",
+      "slug": "76.joker",
+      "image": "76.ジョーカー.png",
+      "change": 0.0
+    },
+    {
+      "id": "23",
+      "slug": "23.marth",
+      "image": "23.マルス.png",
+      "change": 0.0
+    },
+    {
+      "id": "45",
+      "slug": "45.rob",
+      "image": "45.ロボット.png",
+      "change": -1.0
+    },
+    {
+      "id": "36",
+      "slug": "36.snake",
+      "image": "36.スネーク.png",
+      "change": -1.0
+    },
+    {
+      "id": "41",
+      "slug": "41.sonic",
+      "image": "41.ソニック.png",
+      "change": -1.0
+    },
+    {
+      "id": "10",
+      "slug": "10.luigi",
+      "image": "10.ルイージ.png",
+      "change": -1.0
+    },
+    {
+      "id": "67",
+      "slug": "67.bayonetta",
+      "image": "67.ベヨネッタ.png",
+      "change": -1.0
+    },
+    {
+      "id": "42",
+      "slug": "42.king_dedede",
+      "image": "42.デデデ.png",
+      "change": -1.0
+    },
+    {
+      "id": "52",
+      "slug": "52.little_mac",
+      "image": "52.リトルマック.png",
+      "change": -1.0
+    },
+    {
+      "id": "02",
+      "slug": "02.donkey_kong",
+      "image": "02.ドンキーコング.png",
+      "change": -1.0
+    },
+    {
+      "id": "20",
+      "slug": "20.dr_mario",
+      "image": "20.ドクターマリオ.png",
+      "change": -1.0
+    },
+    {
+      "id": "72",
+      "slug": "72.king_k_rool",
+      "image": "72.キングクルール.png",
+      "change": -1.0
+    },
+    {
+      "id": "11",
+      "slug": "11.ness",
+      "image": "11.ネス.png",
+      "change": -1.0
+    },
+    {
+      "id": "66",
+      "slug": "66.corrin",
+      "image": "66.カムイ.png",
+      "change": -1.0
+    },
+    {
+      "id": "86",
+      "slug": "86.sora",
+      "image": "86.ソラ.png",
+      "change": -1.0
+    },
+    {
+      "id": "32",
+      "slug": "32.pit_dark_pit",
+      "image": "32.ピット_33.ブラックピット.png",
+      "change": -1.0
+    },
+    {
+      "id": "31",
+      "slug": "31.metaknight",
+      "image": "31.メタナイト.png",
+      "change": -2.0
+    },
+    {
+      "id": "30",
+      "slug": "30.mr_game_and_watch",
+      "image": "30.Mr.ゲーム&ウォッチ.png",
+      "change": -2.0
+    },
+    {
+      "id": "18",
+      "slug": "18.sheik",
+      "image": "18.シーク.png",
+      "change": -2.0
+    },
+    {
+      "id": "38",
+      "slug": "38.pokemon_trainer",
+      "image": "38.ポケモントレーナー.png",
+      "change": -2.0
+    },
+    {
+      "id": "83",
+      "slug": "83.sephiroth",
+      "image": "83.セフィロス.png",
+      "change": -2.0
+    },
+    {
+      "id": "50",
+      "slug": "50.wii_fit_trainer",
+      "image": "50.Wii Fit トレーナー.png",
+      "change": -3.0
+    },
+    {
+      "id": "07",
+      "slug": "07.kirby",
+      "image": "07.カービィ.png",
+      "change": -3.0
+    },
+    {
+      "id": "44",
+      "slug": "44.lucario",
+      "image": "44.ルカリオ.png",
+      "change": -3.0
+    },
+    {
+      "id": "29",
+      "slug": "29.chrom",
+      "image": "29.クロム.png",
+      "change": -3.0
+    },
+    {
+      "id": "73",
+      "slug": "73.isabelle",
+      "image": "73.しずえ.png",
+      "change": -5.0
+    }
+  ],
+  "terms": {
+    "33": [
+      {
+        "id": "39",
+        "slug": "39.diddy_kong",
+        "image": "39.ディディーコング.png",
+        "rank": 1
+      },
+      {
+        "id": "82",
+        "slug": "82.steve",
+        "image": "82.スティーブ.png",
+        "rank": 2
+      },
+      {
+        "id": "55",
+        "slug": "55.mii_swordfighter",
+        "image": "55.剣術Mii.png",
+        "rank": 3
+      },
+      {
+        "id": "62",
+        "slug": "62.duck_hunt",
+        "image": "62.ダックハント.png",
+        "rank": 4
+      },
+      {
+        "id": "78",
+        "slug": "78.banjo_and_kazooie",
+        "image": "78.バンジョー＆カズーイ.png",
+        "rank": 5
+      },
+      {
+        "id": "61",
+        "slug": "61.bowser_jr",
+        "image": "61.クッパJr..png",
+        "rank": 6
+      },
+      {
+        "id": "49",
+        "slug": "49.megaman",
+        "image": "49.ロックマン.png",
+        "rank": 7
+      },
+      {
+        "id": "56",
+        "slug": "56.mii_gunner",
+        "image": "56.射撃Mii.png",
+        "rank": 8
+      },
+      {
+        "id": "17",
+        "slug": "17.ice_climber",
+        "image": "17.アイスクライマー.png",
+        "rank": 9
+      },
+      {
+        "id": "30",
+        "slug": "30.mr_game_and_watch",
+        "image": "30.Mr.ゲーム&ウォッチ.png",
+        "rank": 10
+      },
+      {
+        "id": "51",
+        "slug": "51.rosalina_luma",
+        "image": "51.ロゼッタ＆チコ.png",
+        "rank": 11
+      },
+      {
+        "id": "20",
+        "slug": "20.dr_mario",
+        "image": "20.ドクターマリオ.png",
+        "rank": 12
+      },
+      {
+        "id": "04",
+        "slug": "04.samus_dark_samus",
+        "image": "04.サムス_05.ダークサムス.png",
+        "rank": 13
+      },
+      {
+        "id": "10",
+        "slug": "10.luigi",
+        "image": "10.ルイージ.png",
+        "rank": 14
+      },
+      {
+        "id": "45",
+        "slug": "45.rob",
+        "image": "45.ロボット.png",
+        "rank": 15
+      },
+      {
+        "id": "46",
+        "slug": "46.toon_link",
+        "image": "46.トゥーンリンク.png",
+        "rank": 16
+      },
+      {
+        "id": "54",
+        "slug": "54.mii_brawler",
+        "image": "54.格闘Mii.png",
+        "rank": 17
+      },
+      {
+        "id": "50",
+        "slug": "50.wii_fit_trainer",
+        "image": "50.Wii Fit トレーナー.png",
+        "rank": 18
+      },
+      {
+        "id": "36",
+        "slug": "36.snake",
+        "image": "36.スネーク.png",
+        "rank": 19
+      },
+      {
+        "id": "31",
+        "slug": "31.metaknight",
+        "image": "31.メタナイト.png",
+        "rank": 20
+      },
+      {
+        "id": "72",
+        "slug": "72.king_k_rool",
+        "image": "72.キングクルール.png",
+        "rank": 21
+      },
+      {
+        "id": "70",
+        "slug": "70.simon_richter",
+        "image": "70.シモン_71.リヒター.png",
+        "rank": 22
+      },
+      {
+        "id": "67",
+        "slug": "67.bayonetta",
+        "image": "67.ベヨネッタ.png",
+        "rank": 23
+      },
+      {
+        "id": "25",
+        "slug": "25.young_link",
+        "image": "25.こどもリンク.png",
+        "rank": 24
+      },
+      {
+        "id": "81",
+        "slug": "81.minmin",
+        "image": "81.ミェンミェン.png",
+        "rank": 25
+      },
+      {
+        "id": "07",
+        "slug": "07.kirby",
+        "image": "07.カービィ.png",
+        "rank": 26
+      },
+      {
+        "id": "22",
+        "slug": "22.falco",
+        "image": "22.ファルコ.png",
+        "rank": 27
+      },
+      {
+        "id": "41",
+        "slug": "41.sonic",
+        "image": "41.ソニック.png",
+        "rank": 28
+      },
+      {
+        "id": "52",
+        "slug": "52.little_mac",
+        "image": "52.リトルマック.png",
+        "rank": 29
+      },
+      {
+        "id": "64",
+        "slug": "64.ken",
+        "image": "64.ケン.png",
+        "rank": 30
+      },
+      {
+        "id": "60",
+        "slug": "60.shulk",
+        "image": "60.シュルク.png",
+        "rank": 31
+      },
+      {
+        "id": "53",
+        "slug": "53.greninja",
+        "image": "53.ゲッコウガ.png",
+        "rank": 32
+      },
+      {
+        "id": "06",
+        "slug": "06.yoshi",
+        "image": "06.ヨッシー.png",
+        "rank": 33
+      },
+      {
+        "id": "14",
+        "slug": "14.peach_daisy",
+        "image": "14.ピーチ_15.デイジー.png",
+        "rank": 34
+      },
+      {
+        "id": "79",
+        "slug": "79.terry",
+        "image": "79.テリー.png",
+        "rank": 35
+      },
+      {
+        "id": "37",
+        "slug": "37.ike",
+        "image": "37.アイク.png",
+        "rank": 36
+      },
+      {
+        "id": "27",
+        "slug": "27.mewtwo",
+        "image": "27.ミュウツー.png",
+        "rank": 37
+      },
+      {
+        "id": "43",
+        "slug": "43.olimar",
+        "image": "43.ピクミン＆オリマー.png",
+        "rank": 38
+      },
+      {
+        "id": "29",
+        "slug": "29.chrom",
+        "image": "29.クロム.png",
+        "rank": 39
+      },
+      {
+        "id": "58",
+        "slug": "58.pacman",
+        "image": "58.パックマン.png",
+        "rank": 40
+      },
+      {
+        "id": "73",
+        "slug": "73.isabelle",
+        "image": "73.しずえ.png",
+        "rank": 41
+      },
+      {
+        "id": "85",
+        "slug": "85.kazuya",
+        "image": "85.カズヤ.png",
+        "rank": 42
+      },
+      {
+        "id": "11",
+        "slug": "11.ness",
+        "image": "11.ネス.png",
+        "rank": 43
+      },
+      {
+        "id": "42",
+        "slug": "42.king_dedede",
+        "image": "42.デデデ.png",
+        "rank": 44
+      },
+      {
+        "id": "02",
+        "slug": "02.donkey_kong",
+        "image": "02.ドンキーコング.png",
+        "rank": 45
+      },
+      {
+        "id": "48",
+        "slug": "48.villager",
+        "image": "48.むらびと.png",
+        "rank": 46
+      },
+      {
+        "id": "12",
+        "slug": "12.captain_falcon",
+        "image": "12.キャプテン・ファルコン.png",
+        "rank": 47
+      },
+      {
+        "id": "19",
+        "slug": "19.zelda",
+        "image": "19.ゼルダ.png",
+        "rank": 48
+      },
+      {
+        "id": "26",
+        "slug": "26.ganondorf",
+        "image": "26.ガノンドロフ.png",
+        "rank": 49
+      },
+      {
+        "id": "59",
+        "slug": "59.robin",
+        "image": "59.ルフレ.png",
+        "rank": 50
+      },
+      {
+        "id": "44",
+        "slug": "44.lucario",
+        "image": "44.ルカリオ.png",
+        "rank": 51
+      },
+      {
+        "id": "38",
+        "slug": "38.pokemon_trainer",
+        "image": "38.ポケモントレーナー.png",
+        "rank": 52
+      },
+      {
+        "id": "34",
+        "slug": "34.zero_suit_samus",
+        "image": "34.ゼロスーツサムス.png",
+        "rank": 53
+      },
+      {
+        "id": "63",
+        "slug": "63.ryu",
+        "image": "63.リュウ.png",
+        "rank": 54
+      },
+      {
+        "id": "47",
+        "slug": "47.wolf",
+        "image": "47.ウルフ.png",
+        "rank": 55
+      },
+      {
+        "id": "18",
+        "slug": "18.sheik",
+        "image": "18.シーク.png",
+        "rank": 56
+      },
+      {
+        "id": "66",
+        "slug": "66.corrin",
+        "image": "66.カムイ.png",
+        "rank": 57
+      },
+      {
+        "id": "08",
+        "slug": "08.fox",
+        "image": "08.フォックス.png",
+        "rank": 58
+      },
+      {
+        "id": "77",
+        "slug": "77.hero",
+        "image": "77.勇者.png",
+        "rank": 59
+      },
+      {
+        "id": "84",
+        "slug": "84.homura",
+        "image": "84.ホムヒカ.png",
+        "rank": 60
+      },
+      {
+        "id": "75",
+        "slug": "75.piranha_plant",
+        "image": "75.パックンフラワー.png",
+        "rank": 61
+      },
+      {
+        "id": "68",
+        "slug": "68.inkling",
+        "image": "68.インクリング.png",
+        "rank": 62
+      },
+      {
+        "id": "57",
+        "slug": "57.palutena",
+        "image": "57.パルテナ.png",
+        "rank": 63
+      },
+      {
+        "id": "65",
+        "slug": "65.cloud",
+        "image": "65.クラウド.png",
+        "rank": 64
+      },
+      {
+        "id": "03",
+        "slug": "03.link",
+        "image": "03.リンク.png",
+        "rank": 65
+      },
+      {
+        "id": "16",
+        "slug": "16.bowser",
+        "image": "16.クッパ.png",
+        "rank": 66
+      },
+      {
+        "id": "01",
+        "slug": "01.mario",
+        "image": "01.マリオ.png",
+        "rank": 67
+      },
+      {
+        "id": "69",
+        "slug": "69.ridley",
+        "image": "69.リドリー.png",
+        "rank": 68
+      },
+      {
+        "id": "35",
+        "slug": "35.wario",
+        "image": "35.ワリオ.png",
+        "rank": 69
+      },
+      {
+        "id": "74",
+        "slug": "74.incineroar",
+        "image": "74.ガオガエン.png",
+        "rank": 70
+      },
+      {
+        "id": "32",
+        "slug": "32.pit_dark_pit",
+        "image": "32.ピット_33.ブラックピット.png",
+        "rank": 71
+      },
+      {
+        "id": "21",
+        "slug": "21.pichu",
+        "image": "21.ピチュー.png",
+        "rank": 72
+      },
+      {
+        "id": "28",
+        "slug": "28.roy",
+        "image": "28.ロイ.png",
+        "rank": 73
+      },
+      {
+        "id": "83",
+        "slug": "83.sephiroth",
+        "image": "83.セフィロス.png",
+        "rank": 74
+      },
+      {
+        "id": "80",
+        "slug": "80.byleth",
+        "image": "80.ベレトス.png",
+        "rank": 75
+      },
+      {
+        "id": "86",
+        "slug": "86.sora",
+        "image": "86.ソラ.png",
+        "rank": 76
+      },
+      {
+        "id": "40",
+        "slug": "40.lucas",
+        "image": "40.リュカ.png",
+        "rank": 77
+      },
+      {
+        "id": "23",
+        "slug": "23.marth",
+        "image": "23.マルス.png",
+        "rank": 78
+      },
+      {
+        "id": "24",
+        "slug": "24.lucina",
+        "image": "24.ルキナ.png",
+        "rank": 79
+      },
+      {
+        "id": "13",
+        "slug": "13.jigglypuff",
+        "image": "13.プリン.png",
+        "rank": 80
+      },
+      {
+        "id": "76",
+        "slug": "76.joker",
+        "image": "76.ジョーカー.png",
+        "rank": 81
+      },
+      {
+        "id": "09",
+        "slug": "09.pikachu",
+        "image": "09.ピカチュウ.png",
+        "rank": 82
+      }
+    ],
+    "32": [
+      {
+        "id": "39",
+        "slug": "39.diddy_kong",
+        "image": "39.ディディーコング.png",
+        "rank": 1
+      },
+      {
+        "id": "82",
+        "slug": "82.steve",
+        "image": "82.スティーブ.png",
+        "rank": 2
+      },
+      {
+        "id": "55",
+        "slug": "55.mii_swordfighter",
+        "image": "55.剣術Mii.png",
+        "rank": 3
+      },
+      {
+        "id": "62",
+        "slug": "62.duck_hunt",
+        "image": "62.ダックハント.png",
+        "rank": 4
+      },
+      {
+        "id": "78",
+        "slug": "78.banjo_and_kazooie",
+        "image": "78.バンジョー＆カズーイ.png",
+        "rank": 5
+      },
+      {
+        "id": "61",
+        "slug": "61.bowser_jr",
+        "image": "61.クッパJr..png",
+        "rank": 6
+      },
+      {
+        "id": "49",
+        "slug": "49.megaman",
+        "image": "49.ロックマン.png",
+        "rank": 7
+      },
+      {
+        "id": "56",
+        "slug": "56.mii_gunner",
+        "image": "56.射撃Mii.png",
+        "rank": 8
+      },
+      {
+        "id": "17",
+        "slug": "17.ice_climber",
+        "image": "17.アイスクライマー.png",
+        "rank": 9
+      },
+      {
+        "id": "30",
+        "slug": "30.mr_game_and_watch",
+        "image": "30.Mr.ゲーム&ウォッチ.png",
+        "rank": 10
+      },
+      {
+        "id": "51",
+        "slug": "51.rosalina_luma",
+        "image": "51.ロゼッタ＆チコ.png",
+        "rank": 11
+      },
+      {
+        "id": "20",
+        "slug": "20.dr_mario",
+        "image": "20.ドクターマリオ.png",
+        "rank": 12
+      },
+      {
+        "id": "04",
+        "slug": "04.samus_dark_samus",
+        "image": "04.サムス_05.ダークサムス.png",
+        "rank": 13
+      },
+      {
+        "id": "10",
+        "slug": "10.luigi",
+        "image": "10.ルイージ.png",
+        "rank": 14
+      },
+      {
+        "id": "45",
+        "slug": "45.rob",
+        "image": "45.ロボット.png",
+        "rank": 15
+      },
+      {
+        "id": "46",
+        "slug": "46.toon_link",
+        "image": "46.トゥーンリンク.png",
+        "rank": 16
+      },
+      {
+        "id": "54",
+        "slug": "54.mii_brawler",
+        "image": "54.格闘Mii.png",
+        "rank": 17
+      },
+      {
+        "id": "50",
+        "slug": "50.wii_fit_trainer",
+        "image": "50.Wii Fit トレーナー.png",
+        "rank": 18
+      },
+      {
+        "id": "36",
+        "slug": "36.snake",
+        "image": "36.スネーク.png",
+        "rank": 19
+      },
+      {
+        "id": "31",
+        "slug": "31.metaknight",
+        "image": "31.メタナイト.png",
+        "rank": 20
+      },
+      {
+        "id": "72",
+        "slug": "72.king_k_rool",
+        "image": "72.キングクルール.png",
+        "rank": 21
+      },
+      {
+        "id": "70",
+        "slug": "70.simon_richter",
+        "image": "70.シモン_71.リヒター.png",
+        "rank": 22
+      },
+      {
+        "id": "67",
+        "slug": "67.bayonetta",
+        "image": "67.ベヨネッタ.png",
+        "rank": 23
+      },
+      {
+        "id": "25",
+        "slug": "25.young_link",
+        "image": "25.こどもリンク.png",
+        "rank": 24
+      },
+      {
+        "id": "81",
+        "slug": "81.minmin",
+        "image": "81.ミェンミェン.png",
+        "rank": 25
+      },
+      {
+        "id": "07",
+        "slug": "07.kirby",
+        "image": "07.カービィ.png",
+        "rank": 26
+      },
+      {
+        "id": "22",
+        "slug": "22.falco",
+        "image": "22.ファルコ.png",
+        "rank": 27
+      },
+      {
+        "id": "41",
+        "slug": "41.sonic",
+        "image": "41.ソニック.png",
+        "rank": 28
+      },
+      {
+        "id": "52",
+        "slug": "52.little_mac",
+        "image": "52.リトルマック.png",
+        "rank": 29
+      },
+      {
+        "id": "64",
+        "slug": "64.ken",
+        "image": "64.ケン.png",
+        "rank": 30
+      },
+      {
+        "id": "60",
+        "slug": "60.shulk",
+        "image": "60.シュルク.png",
+        "rank": 31
+      },
+      {
+        "id": "53",
+        "slug": "53.greninja",
+        "image": "53.ゲッコウガ.png",
+        "rank": 32
+      },
+      {
+        "id": "06",
+        "slug": "06.yoshi",
+        "image": "06.ヨッシー.png",
+        "rank": 33
+      },
+      {
+        "id": "14",
+        "slug": "14.peach_daisy",
+        "image": "14.ピーチ_15.デイジー.png",
+        "rank": 34
+      },
+      {
+        "id": "79",
+        "slug": "79.terry",
+        "image": "79.テリー.png",
+        "rank": 35
+      },
+      {
+        "id": "37",
+        "slug": "37.ike",
+        "image": "37.アイク.png",
+        "rank": 36
+      },
+      {
+        "id": "27",
+        "slug": "27.mewtwo",
+        "image": "27.ミュウツー.png",
+        "rank": 37
+      },
+      {
+        "id": "43",
+        "slug": "43.olimar",
+        "image": "43.ピクミン＆オリマー.png",
+        "rank": 38
+      },
+      {
+        "id": "29",
+        "slug": "29.chrom",
+        "image": "29.クロム.png",
+        "rank": 39
+      },
+      {
+        "id": "58",
+        "slug": "58.pacman",
+        "image": "58.パックマン.png",
+        "rank": 40
+      },
+      {
+        "id": "73",
+        "slug": "73.isabelle",
+        "image": "73.しずえ.png",
+        "rank": 41
+      },
+      {
+        "id": "85",
+        "slug": "85.kazuya",
+        "image": "85.カズヤ.png",
+        "rank": 42
+      },
+      {
+        "id": "11",
+        "slug": "11.ness",
+        "image": "11.ネス.png",
+        "rank": 43
+      },
+      {
+        "id": "42",
+        "slug": "42.king_dedede",
+        "image": "42.デデデ.png",
+        "rank": 44
+      },
+      {
+        "id": "02",
+        "slug": "02.donkey_kong",
+        "image": "02.ドンキーコング.png",
+        "rank": 45
+      },
+      {
+        "id": "48",
+        "slug": "48.villager",
+        "image": "48.むらびと.png",
+        "rank": 46
+      },
+      {
+        "id": "12",
+        "slug": "12.captain_falcon",
+        "image": "12.キャプテン・ファルコン.png",
+        "rank": 47
+      },
+      {
+        "id": "19",
+        "slug": "19.zelda",
+        "image": "19.ゼルダ.png",
+        "rank": 48
+      },
+      {
+        "id": "26",
+        "slug": "26.ganondorf",
+        "image": "26.ガノンドロフ.png",
+        "rank": 49
+      },
+      {
+        "id": "59",
+        "slug": "59.robin",
+        "image": "59.ルフレ.png",
+        "rank": 50
+      },
+      {
+        "id": "44",
+        "slug": "44.lucario",
+        "image": "44.ルカリオ.png",
+        "rank": 51
+      },
+      {
+        "id": "38",
+        "slug": "38.pokemon_trainer",
+        "image": "38.ポケモントレーナー.png",
+        "rank": 52
+      },
+      {
+        "id": "34",
+        "slug": "34.zero_suit_samus",
+        "image": "34.ゼロスーツサムス.png",
+        "rank": 53
+      },
+      {
+        "id": "63",
+        "slug": "63.ryu",
+        "image": "63.リュウ.png",
+        "rank": 54
+      },
+      {
+        "id": "47",
+        "slug": "47.wolf",
+        "image": "47.ウルフ.png",
+        "rank": 55
+      },
+      {
+        "id": "18",
+        "slug": "18.sheik",
+        "image": "18.シーク.png",
+        "rank": 56
+      },
+      {
+        "id": "66",
+        "slug": "66.corrin",
+        "image": "66.カムイ.png",
+        "rank": 57
+      },
+      {
+        "id": "08",
+        "slug": "08.fox",
+        "image": "08.フォックス.png",
+        "rank": 58
+      },
+      {
+        "id": "77",
+        "slug": "77.hero",
+        "image": "77.勇者.png",
+        "rank": 59
+      },
+      {
+        "id": "84",
+        "slug": "84.homura",
+        "image": "84.ホムヒカ.png",
+        "rank": 60
+      },
+      {
+        "id": "75",
+        "slug": "75.piranha_plant",
+        "image": "75.パックンフラワー.png",
+        "rank": 61
+      },
+      {
+        "id": "68",
+        "slug": "68.inkling",
+        "image": "68.インクリング.png",
+        "rank": 62
+      },
+      {
+        "id": "57",
+        "slug": "57.palutena",
+        "image": "57.パルテナ.png",
+        "rank": 63
+      },
+      {
+        "id": "65",
+        "slug": "65.cloud",
+        "image": "65.クラウド.png",
+        "rank": 64
+      },
+      {
+        "id": "03",
+        "slug": "03.link",
+        "image": "03.リンク.png",
+        "rank": 65
+      },
+      {
+        "id": "16",
+        "slug": "16.bowser",
+        "image": "16.クッパ.png",
+        "rank": 66
+      },
+      {
+        "id": "01",
+        "slug": "01.mario",
+        "image": "01.マリオ.png",
+        "rank": 67
+      },
+      {
+        "id": "69",
+        "slug": "69.ridley",
+        "image": "69.リドリー.png",
+        "rank": 68
+      },
+      {
+        "id": "35",
+        "slug": "35.wario",
+        "image": "35.ワリオ.png",
+        "rank": 69
+      },
+      {
+        "id": "74",
+        "slug": "74.incineroar",
+        "image": "74.ガオガエン.png",
+        "rank": 70
+      },
+      {
+        "id": "32",
+        "slug": "32.pit_dark_pit",
+        "image": "32.ピット_33.ブラックピット.png",
+        "rank": 71
+      },
+      {
+        "id": "21",
+        "slug": "21.pichu",
+        "image": "21.ピチュー.png",
+        "rank": 72
+      },
+      {
+        "id": "28",
+        "slug": "28.roy",
+        "image": "28.ロイ.png",
+        "rank": 73
+      },
+      {
+        "id": "83",
+        "slug": "83.sephiroth",
+        "image": "83.セフィロス.png",
+        "rank": 74
+      },
+      {
+        "id": "80",
+        "slug": "80.byleth",
+        "image": "80.ベレトス.png",
+        "rank": 75
+      },
+      {
+        "id": "86",
+        "slug": "86.sora",
+        "image": "86.ソラ.png",
+        "rank": 76
+      },
+      {
+        "id": "40",
+        "slug": "40.lucas",
+        "image": "40.リュカ.png",
+        "rank": 77
+      },
+      {
+        "id": "23",
+        "slug": "23.marth",
+        "image": "23.マルス.png",
+        "rank": 78
+      },
+      {
+        "id": "24",
+        "slug": "24.lucina",
+        "image": "24.ルキナ.png",
+        "rank": 79
+      },
+      {
+        "id": "13",
+        "slug": "13.jigglypuff",
+        "image": "13.プリン.png",
+        "rank": 80
+      },
+      {
+        "id": "76",
+        "slug": "76.joker",
+        "image": "76.ジョーカー.png",
+        "rank": 81
+      },
+      {
+        "id": "09",
+        "slug": "09.pikachu",
+        "image": "09.ピカチュウ.png",
+        "rank": 82
+      }
+    ]
+  }
+}

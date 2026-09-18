@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+<!--Headerはここから-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-6GR32CWGN7');
+
+</script>
+
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR32CWGN7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-6GR32CWGN7');
-  </script>
   <!--google adsense-->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2745183580586769"
     crossorigin="anonymous"></script>
@@ -38,16 +43,6 @@
   <link rel="icon" type="image/png" href="./img/common/icon-192x192.png">
   <link rel="apple-touch-icon" type="image/png" href="./img/common/apple-touch-icon-180x180.png">
   <link rel="icon" href="./img/common/favicon.ico">
-  <!-- 構造化データ (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "スマアナ",
-    "url": "https://pheasantzelda.github.io/",
-    "description": "スマブラSPのオンライン対戦サイト「スマメイト」の対戦結果の統計をまとめた攻略・分析Webサービス"
-  }
-  </script>
 </head>
 
 <!--Bodyはここから-->
@@ -64,13 +59,10 @@
     </div>
   </div>
   <script>
-    function removeSpinner() {
+    window.onload = function () {
       const spinner = document.getElementById('loading');
-      if (spinner) spinner.classList.add('loaded');
+      spinner.classList.add('loaded');
     }
-    window.onload = removeSpinner;
-    document.addEventListener('DOMContentLoaded', () => setTimeout(removeSpinner, 300));
-    setTimeout(removeSpinner, 2000);
   </script>
   <!--headerはここから-->
   <header class="header">
@@ -80,7 +72,7 @@
       <a class="header-logo" href="./index.html">
         <img src="./img/common/logo.png" alt="SSBU">
       </a>
-      <button class="header__hamburger hamburger" id="js-hamburger" aria-label="メニューを開閉" aria-expanded="false">
+      <button class="header__hamburger hamburger" id="js-hamburger">
         <span></span>
         <span></span>
         <span></span>
@@ -137,12 +129,12 @@
     <div class="release">
       <div class="scroll">
         <div class="news">
-          <p>2026/06/28 に <span>ver17.1.0にアップテート</span>しました！
-            Tier表メーカーに新しくカラバリと最強技のフォーマットを追加しました。</p>
-          <p>2026/06/28 に <span>ver17.1.0にアップテート</span>しました！
-            Tier表メーカーに新しくカラバリと最強技のフォーマットを追加しました。</p>
-          <p>2026/06/28 に <span>ver17.1.0にアップテート</span>しました！
-            Tier表メーカーに新しくカラバリと最強技のフォーマットを追加しました。</p>
+          <p>2026/09/18 に <span>ver18.0.0にアップテート</span>しました！
+            35期のデータを追加しました。前回のマイナーアップデート、最強技表メーカーとFavorit Color表メーカーもチェックしてください。</p>
+          <p>2026/09/18 に <span>ver18.0.0にアップテート</span>しました！
+            35期のデータを追加しました。前回のマイナーアップデート、最強技表メーカーとFavorit Color表メーカーもチェックしてください。</p>
+          <p>2026/09/18 に <span>ver18.0.0にアップテート</span>しました！
+            35期のデータを追加しました。前回のマイナーアップデート、最強技表メーカーとFavorit Color表メーカーもチェックしてください。</p>
         </div>
       </div>
     </div>
@@ -179,7 +171,8 @@
     </div> -->
     <!-- <div id="full-overlay">
       <div class="inner">
-        <a href="./move_tier.html"><img src="./img/contents/new_format_for_tier_list.png" alt="">
+        <span class="square_btn"></span>
+        <a href="./sub_character.html"><img src="./img/contents/サブ補完チェッカー.png" alt="">
         </a>
       </div>
     </div> -->
@@ -189,7 +182,7 @@
         「<a href="https://smashmate.net/">スマメイト*</a>」の対戦結果を元にファイター毎の勝率からキャラランクや統計データをまとめて掲載しているサイトになります。
         スマブラSPでは他にも多くの方がキャラランクや相性表, サブ補完適性を作成されていますが、当サイトはオンライン対戦の結果を勝敗数から定量的にまとめることに主眼を置いています。
         扱っているデータについては皆様にも数値として見ていただけるように詳細の結果も掲載していますので、ぜひご覧ください。
-        これまで集計したデータは、26 年 05 月 時点で 15-34 期 (サブ期も含む) の結果、およそ 1880 万対戦の結果をまとめています。
+        これまで集計したデータは、26 年 09 月 時点で 15-35 期 (サブ期も含む) の結果、およそ 1320 万対戦の結果をまとめています。
         各期が終了次第、更新しますので随時ご確認ください。
         <br>　*スマメイトとは・・・<a href="https://twitter.com/@smashmate_info">coco様</a>
         (旧のちょう様)が運営されているオンライン上で気軽にスマブラ対戦募集やレーティング、大会開催ができるWebサイト
@@ -211,7 +204,7 @@
         <a class="link" href="./fighter.html">
           <div class="service-list__item fighter">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/personel.png" alt="ファイタの画像">
+              <img src="./img/common/personel.png" alt="ファイタの画像">
               <div class="service-list__title">Fighter <p class="new"> upd!</p><br>ファイタ統計</div>
               <div class="service-list__text">
                 <p>ファイタ毎の戦績や相性表 サブ適正表を掲載</p>
@@ -222,7 +215,7 @@
         <a class="link" href="./ranking/ranking.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/trophy.png" alt="ファイタの画像">
+              <img src="./img/common/trophy.png" alt="ファイタの画像">
               <div class="service-list__title">Ranking <p class="new"> upd!</p><br>キャラランク</div>
               <div class="service-list__text">
                 <p>スマメイトの戦績から算出したキャラランクを掲載</p>
@@ -233,8 +226,8 @@
         <a class="link" href="./sub_character.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/fighter_pick.png" alt="サブ補完の画像">
-              <div class="service-list__title">Sub-Char <p class="new"> NEW!</p><br>サブ補完チェッカー</div>
+              <img src="./img/common/fighter_pick.png" alt="サブ補完の画像">
+              <div class="service-list__title">Sub-Char<br>サブ補完チェッカー</div>
               <div class="service-list__text">
                 <p>苦手キャラをカバーするサブキャラを提案</p>
               </div>
@@ -244,7 +237,7 @@
         <a class="link" href="./statstics.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/graph.png" alt="ファイタの画像">
+              <img src="./img/common/graph.png" alt="ファイタの画像">
               <div class="service-list__title">Analysis <p class="new"> upd!</p><br>全体統計</div>
               <div class="service-list__text">
                 <p>ファイタ全体の統計データをグラフ化 戦績を掲載</p>
@@ -255,7 +248,7 @@
         <a class="link" href="./capability.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/ranking.png" alt="ファイタの画像">
+              <img src="./img/common/ranking.png" alt="ファイタの画像">
               <div class="service-list__title">Simply MU <p class="new"> upd!</p><br>簡易不利相性</div>
               <div class="service-list__text">
                 <p>ファイタ毎の不利相性のTOP3を掲載</p>
@@ -266,7 +259,7 @@
         <a class="link" href="./rank_creater.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/tier1.png" alt="ファイタの画像">
+              <img src="./img/common/tier1.png" alt="ファイタの画像">
               <div class="service-list__title">Tier Maker<br>Tier表メーカー</div>
               <div class="service-list__text">
                 <p>自分でキャラランクやMU表を作成可能</p>
@@ -277,8 +270,8 @@
         <a class="link" href="./matchup_matrix.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/heatmap.png" alt="相性ヒートマップ">
-              <div class="service-list__title">Heatmap <p class="new"> NEW!</p><br>相性ヒートマップ</div>
+              <img src="./img/common/heatmap.png" alt="相性ヒートマップ">
+              <div class="service-list__title">Heatmap<br>相性ヒートマップ</div>
               <div class="service-list__text">
                 <p>全ファイターの相性をヒートマップで一覧表示</p>
               </div>
@@ -288,7 +281,7 @@
         <a class="link" href="./parameter.html">
           <div class="service-list__item fighter">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/chart.png" alt="パラメータ">
+              <img src="./img/common/chart.png" alt="パラメータ">
               <div class="service-list__title">Parameter<br>ファイタ特性早見表</div>
               <div class="service-list__text">
                 <p>ファイタのパラメータや技Fやダメージを掲載</p>
@@ -299,7 +292,7 @@
         <a class="link" href="./quiz.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/quiz.png" alt="ファイタの画像">
+              <img src="./img/common/quiz.png" alt="ファイタの画像">
               <div class="service-list__title">Quiz<br>スマアナ検定</div>
               <div class="service-list__text">
                 <p>スマアナやスマブラにまつわるクイズを掲載</p>
@@ -310,7 +303,7 @@
         <a class="link" href="./puzzle.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/puzzle.png" alt="ファイタの画像">
+              <img src="./img/common/puzzle.png" alt="ファイタの画像">
               <div class="service-list__title"> Puzzle<br>スマブラパズル
               </div>
               <div class="service-list__text">
@@ -322,7 +315,7 @@
         <a class="link" href="./record.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/rate.png" alt="ファイタの画像">
+              <img src="./img/common/rate.png" alt="ファイタの画像">
               <div class="service-list__title">Record <p class="new"> upd!</p><br>歴代記録
               </div>
               <div class="service-list__text">
@@ -334,7 +327,7 @@
         <a class="link" href="./counter_picker.html">
           <div class="service-list__item">
             <div class="service-list__body">
-              <img loading="lazy" src="./img/common/diagonosis.png" alt="ファイタの画像">
+              <img src="./img/common/diagonosis.png" alt="ファイタの画像">
               <div class="service-list__title">Counter Picker <p class="new"> upd!</p><br>おすすめキャラ診断
               </div>
               <div class="service-list__text">
@@ -403,11 +396,9 @@
           $("#full-overlay").fadeIn();
         });
 
-        // 背景クリックで閉じる
-        $("#full-overlay").on('click', function (e) {
-          if (e.target === this) {
-            $("#full-overlay").fadeOut();
-          }
+        // 「みる？」ボタンクリック
+        $(".square_btn").on('click', function () {
+          $("#full-overlay").fadeOut();
         });
       });</script> -->
   </main>
@@ -422,7 +413,7 @@
     <p class="footer-time"><small><a href="https://www.smashbros.com/ja_JP/">大乱闘スマッシュブラザーズ</a>は、任天堂株式会社様の登録商標であり、<br>
         当サイトは個人が運営する非公式のWebサービスです。<br>
         任天堂株式会社様、他関連企業様とは一切関係ありませんので、予めご了承ください。</small></p>
-    <p class="copyright">ver17.1.0 2026/06/28<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
+    <p class="copyright">ver18.0.0 2026/09/18<br>　<br><small>&copy;SMASHMATE-ANALYSIS All rights reserved.</small></p>
   </footer>
   <!--footerはここまで-->
 </body>
