@@ -169,13 +169,13 @@
         <img class="overlay_main_img" src="./img/contents/４周年企画1.png" alt="企画">
       </div>
     </div> -->
-    <!-- <div id="full-overlay">
+    <div id="full-overlay">
       <div class="inner">
         <span class="square_btn"></span>
-        <a href="./sub_character.html"><img src="./img/contents/サブ補完チェッカー.png" alt="">
+        <a href="https://smashmate.net/"><img src="./img/contents/12年間ありがとう！スマメイト記念ポスター.png" alt="">
         </a>
       </div>
-    </div> -->
+    </div>
     <div class="section">「スマアナ」とは．．．</div>
     <div class="explain">
       <p>　スマアナとは、スマブラSPオンライン対戦サイト
@@ -390,17 +390,24 @@
     <script src="./js/toggle-menu_rev.js"></script>
     <script src="./js/daily_quiz.js"></script>
     <!-- 2周年企画 -->
-    <!-- <script>$(function () {
-        // 「隠す！」ボタンクリック
-        $(".show-overlay").on('click', function () {
+    <script>$(function () {
+        // オーバーレイを表示
+        $(".show-overlay").on("click", function () {
           $("#full-overlay").fadeIn();
         });
 
-        // 「みる？」ボタンクリック
-        $(".square_btn").on('click', function () {
-          $("#full-overlay").fadeOut();
+        // 画像以外の背景をクリックしたら閉じる
+        $("#full-overlay").on("click", function (event) {
+          if (!$(event.target).closest(".inner").length) {
+            $("#full-overlay").fadeOut(300);
+          }
         });
-      });</script> -->
+
+        // 閉じるボタンでも閉じる
+        $(".square_btn").on("click", function () {
+          $("#full-overlay").fadeOut(300);
+        });
+      });</script>
   </main>
   <!--mainはここまで-->
 
