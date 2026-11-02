@@ -7,7 +7,7 @@
         "name_ja": "ミェンミェン",
         "slug": "81.minmin",
         "image": "81.ミェンミェン.png",
-        "rate": 66.56
+        "rate": 66.46
       },
       {
         "id": "69",
@@ -57,16 +57,16 @@
         "slug": "83.sephiroth",
         "image": "83.セフィロス.png",
         "rate": 61.51
-      },
+      }
+    ],
+    "微有利": [
       {
         "id": "55",
         "name_ja": "剣術Mii",
         "slug": "55.mii_swordfighter",
         "image": "55.剣術Mii.png",
-        "rate": 60.5
-      }
-    ],
-    "微有利": [
+        "rate": 59.5
+      },
       {
         "id": "26",
         "name_ja": "ガノンドロフ",
@@ -75,18 +75,18 @@
         "rate": 58.89
       },
       {
+        "id": "09",
+        "name_ja": "ピカチュウ",
+        "slug": "09.pikachu",
+        "image": "09.ピカチュウ.png",
+        "rate": 58.16
+      },
+      {
         "id": "22",
         "name_ja": "ファルコ",
         "slug": "22.falco",
         "image": "22.ファルコ.png",
         "rate": 58.05
-      },
-      {
-        "id": "09",
-        "name_ja": "ピカチュウ",
-        "slug": "09.pikachu",
-        "image": "09.ピカチュウ.png",
-        "rate": 57.73
       },
       {
         "id": "76",
@@ -117,18 +117,18 @@
         "rate": 56.02
       },
       {
+        "id": "61",
+        "name_ja": "クッパJr.",
+        "slug": "61.bowser_jr",
+        "image": "61.クッパJr..png",
+        "rate": 55.74
+      },
+      {
         "id": "12",
         "name_ja": "キャプテン・ファルコン",
         "slug": "12.captain_falcon",
         "image": "12.キャプテン・ファルコン.png",
         "rate": 55.71
-      },
-      {
-        "id": "61",
-        "name_ja": "クッパJr.",
-        "slug": "61.bowser_jr",
-        "image": "61.クッパJr..png",
-        "rate": 55.59
       },
       {
         "id": "52",
@@ -159,18 +159,18 @@
         "rate": 55.05
       },
       {
-        "id": "07",
-        "name_ja": "カービィ",
-        "slug": "07.kirby",
-        "image": "07.カービィ.png",
-        "rate": 54.9
-      },
-      {
         "id": "47",
         "name_ja": "ウルフ",
         "slug": "47.wolf",
         "image": "47.ウルフ.png",
         "rate": 54.85
+      },
+      {
+        "id": "07",
+        "name_ja": "カービィ",
+        "slug": "07.kirby",
+        "image": "07.カービィ.png",
+        "rate": 54.84
       },
       {
         "id": "80",
@@ -184,7 +184,7 @@
         "name_ja": "リヒター",
         "slug": "70.simon_richter",
         "image": "70.シモン_71.リヒター.png",
-        "rate": 53.68
+        "rate": 53.88
       },
       {
         "id": "31",
@@ -221,7 +221,7 @@
         "name_ja": "キングクルール",
         "slug": "72.king_k_rool",
         "image": "72.キングクルール.png",
-        "rate": 51.7
+        "rate": 52.03
       },
       {
         "id": "65",
@@ -245,25 +245,25 @@
         "rate": 50.52
       },
       {
-        "id": "79",
-        "name_ja": "テリー",
-        "slug": "79.terry",
-        "image": "79.テリー.png",
-        "rate": 50.36
+        "id": "04",
+        "name_ja": "サムス",
+        "slug": "04.samus_dark_samus",
+        "image": "04.サムス_05.ダークサムス.png",
+        "rate": 50.29
       },
       {
         "id": "45",
         "name_ja": "ロボット",
         "slug": "45.rob",
         "image": "45.ロボット.png",
-        "rate": 50.33
+        "rate": 50.27
       },
       {
-        "id": "04",
-        "name_ja": "サムス",
-        "slug": "04.samus_dark_samus",
-        "image": "04.サムス_05.ダークサムス.png",
-        "rate": 50.29
+        "id": "79",
+        "name_ja": "テリー",
+        "slug": "79.terry",
+        "image": "79.テリー.png",
+        "rate": 50.24
       },
       {
         "id": "13",
@@ -277,7 +277,7 @@
         "name_ja": "ポケモントレーナー",
         "slug": "38.pokemon_trainer",
         "image": "38.ポケモントレーナー.png",
-        "rate": 50.0
+        "rate": 49.79
       },
       {
         "id": "35",
@@ -356,7 +356,7 @@
         "name_ja": "ホムヒカ",
         "slug": "84.homura",
         "image": "84.ホムヒカ.png",
-        "rate": 46.39
+        "rate": 46.3
       },
       {
         "id": "60",
@@ -377,14 +377,14 @@
         "name_ja": "ルフレ",
         "slug": "59.robin",
         "image": "59.ルフレ.png",
-        "rate": 45.09
+        "rate": 45.26
       },
       {
         "id": "77",
         "name_ja": "勇者",
         "slug": "77.hero",
         "image": "77.勇者.png",
-        "rate": 44.92
+        "rate": 44.82
       },
       {
         "id": "29",
@@ -412,7 +412,7 @@
         "name_ja": "ピクミン＆オリマー",
         "slug": "43.olimar",
         "image": "43.ピクミン＆オリマー.png",
-        "rate": 44.0
+        "rate": 44.09
       },
       {
         "id": "73",
@@ -426,7 +426,7 @@
         "name_ja": "カズヤ",
         "slug": "85.kazuya",
         "image": "85.カズヤ.png",
-        "rate": 43.28
+        "rate": 43.17
       },
       {
         "id": "39",
@@ -443,18 +443,18 @@
         "rate": 42.22
       },
       {
-        "id": "10",
-        "name_ja": "ルイージ",
-        "slug": "10.luigi",
-        "image": "10.ルイージ.png",
-        "rate": 41.42
-      },
-      {
         "id": "54",
         "name_ja": "格闘Mii",
         "slug": "54.mii_brawler",
         "image": "54.格闘Mii.png",
-        "rate": 41.35
+        "rate": 41.48
+      },
+      {
+        "id": "10",
+        "name_ja": "ルイージ",
+        "slug": "10.luigi",
+        "image": "10.ルイージ.png",
+        "rate": 41.46
       },
       {
         "id": "66",
@@ -468,7 +468,7 @@
         "name_ja": "バンジョー＆カズーイ",
         "slug": "78.banjo_and_kazooie",
         "image": "78.バンジョー＆カズーイ.png",
-        "rate": 40.26
+        "rate": 40.33
       }
     ],
     "不利": [
@@ -480,18 +480,18 @@
         "rate": 39.77
       },
       {
-        "id": "86",
-        "name_ja": "ソラ",
-        "slug": "86.sora",
-        "image": "86.ソラ.png",
-        "rate": 39.09
-      },
-      {
         "id": "75",
         "name_ja": "パックンフラワー",
         "slug": "75.piranha_plant",
         "image": "75.パックンフラワー.png",
-        "rate": 37.8
+        "rate": 39.69
+      },
+      {
+        "id": "86",
+        "name_ja": "ソラ",
+        "slug": "86.sora",
+        "image": "86.ソラ.png",
+        "rate": 38.91
       },
       {
         "id": "06",
@@ -533,7 +533,7 @@
         "name_ja": "ソニック",
         "slug": "41.sonic",
         "image": "41.ソニック.png",
-        "rate": 34.82
+        "rate": 34.9
       },
       {
         "id": "51",
@@ -554,7 +554,7 @@
         "name_ja": "スネーク",
         "slug": "36.snake",
         "image": "36.スネーク.png",
-        "rate": 33.38
+        "rate": 33.71
       },
       {
         "id": "46",
@@ -621,14 +621,14 @@
         "image": "56.射撃Mii.png"
       },
       {
-        "id": "25",
-        "slug": "25.young_link",
-        "image": "25.こどもリンク.png"
-      },
-      {
         "id": "82",
         "slug": "82.steve",
         "image": "82.スティーブ.png"
+      },
+      {
+        "id": "25",
+        "slug": "25.young_link",
+        "image": "25.こどもリンク.png"
       },
       {
         "id": "84",
@@ -646,9 +646,9 @@
         "image": "60.シュルク.png"
       },
       {
-        "id": "29",
-        "slug": "29.chrom",
-        "image": "29.クロム.png"
+        "id": "72",
+        "slug": "72.king_k_rool",
+        "image": "72.キングクルール.png"
       },
       {
         "id": "78",
@@ -656,9 +656,9 @@
         "image": "78.バンジョー＆カズーイ.png"
       },
       {
-        "id": "72",
-        "slug": "72.king_k_rool",
-        "image": "72.キングクルール.png"
+        "id": "29",
+        "slug": "29.chrom",
+        "image": "29.クロム.png"
       },
       {
         "id": "63",
@@ -666,19 +666,14 @@
         "image": "63.リュウ.png"
       },
       {
-        "id": "70",
-        "slug": "70.simon_richter",
-        "image": "70.シモン_71.リヒター.png"
-      },
-      {
         "id": "79",
         "slug": "79.terry",
         "image": "79.テリー.png"
       },
       {
-        "id": "62",
-        "slug": "62.duck_hunt",
-        "image": "62.ダックハント.png"
+        "id": "70",
+        "slug": "70.simon_richter",
+        "image": "70.シモン_71.リヒター.png"
       },
       {
         "id": "43",
@@ -691,6 +686,11 @@
         "image": "20.ドクターマリオ.png"
       },
       {
+        "id": "62",
+        "slug": "62.duck_hunt",
+        "image": "62.ダックハント.png"
+      },
+      {
         "id": "03",
         "slug": "03.link",
         "image": "03.リンク.png"
@@ -698,24 +698,24 @@
     ],
     "普通": [
       {
-        "id": "39",
-        "slug": "39.diddy_kong",
-        "image": "39.ディディーコング.png"
-      },
-      {
         "id": "66",
         "slug": "66.corrin",
         "image": "66.カムイ.png"
       },
       {
-        "id": "81",
-        "slug": "81.minmin",
-        "image": "81.ミェンミェン.png"
+        "id": "39",
+        "slug": "39.diddy_kong",
+        "image": "39.ディディーコング.png"
       },
       {
         "id": "46",
         "slug": "46.toon_link",
         "image": "46.トゥーンリンク.png"
+      },
+      {
+        "id": "81",
+        "slug": "81.minmin",
+        "image": "81.ミェンミェン.png"
       },
       {
         "id": "22",
@@ -753,11 +753,6 @@
         "image": "14.ピーチ_15.デイジー.png"
       },
       {
-        "id": "55",
-        "slug": "55.mii_swordfighter",
-        "image": "55.剣術Mii.png"
-      },
-      {
         "id": "48",
         "slug": "48.villager",
         "image": "48.むらびと.png"
@@ -766,6 +761,11 @@
         "id": "04",
         "slug": "04.samus_dark_samus",
         "image": "04.サムス_05.ダークサムス.png"
+      },
+      {
+        "id": "55",
+        "slug": "55.mii_swordfighter",
+        "image": "55.剣術Mii.png"
       },
       {
         "id": "83",
@@ -780,19 +780,14 @@
     ],
     "おすすめしない": [
       {
-        "id": "37",
-        "slug": "37.ike",
-        "image": "37.アイク.png"
-      },
-      {
         "id": "17",
         "slug": "17.ice_climber",
         "image": "17.アイスクライマー.png"
       },
       {
-        "id": "80",
-        "slug": "80.byleth",
-        "image": "80.ベレトス.png"
+        "id": "37",
+        "slug": "37.ike",
+        "image": "37.アイク.png"
       },
       {
         "id": "08",
@@ -800,14 +795,14 @@
         "image": "08.フォックス.png"
       },
       {
+        "id": "80",
+        "slug": "80.byleth",
+        "image": "80.ベレトス.png"
+      },
+      {
         "id": "75",
         "slug": "75.piranha_plant",
         "image": "75.パックンフラワー.png"
-      },
-      {
-        "id": "64",
-        "slug": "64.ken",
-        "image": "64.ケン.png"
       },
       {
         "id": "19",
@@ -820,14 +815,19 @@
         "image": "51.ロゼッタ＆チコ.png"
       },
       {
-        "id": "57",
-        "slug": "57.palutena",
-        "image": "57.パルテナ.png"
+        "id": "64",
+        "slug": "64.ken",
+        "image": "64.ケン.png"
       },
       {
         "id": "86",
         "slug": "86.sora",
         "image": "86.ソラ.png"
+      },
+      {
+        "id": "57",
+        "slug": "57.palutena",
+        "image": "57.パルテナ.png"
       },
       {
         "id": "59",
@@ -840,14 +840,14 @@
         "image": "74.ガオガエン.png"
       },
       {
-        "id": "38",
-        "slug": "38.pokemon_trainer",
-        "image": "38.ポケモントレーナー.png"
-      },
-      {
         "id": "76",
         "slug": "76.joker",
         "image": "76.ジョーカー.png"
+      },
+      {
+        "id": "38",
+        "slug": "38.pokemon_trainer",
+        "image": "38.ポケモントレーナー.png"
       },
       {
         "id": "24",
@@ -865,19 +865,14 @@
         "image": "28.ロイ.png"
       },
       {
-        "id": "27",
-        "slug": "27.mewtwo",
-        "image": "27.ミュウツー.png"
-      },
-      {
         "id": "06",
         "slug": "06.yoshi",
         "image": "06.ヨッシー.png"
       },
       {
-        "id": "01",
-        "slug": "01.mario",
-        "image": "01.マリオ.png"
+        "id": "27",
+        "slug": "27.mewtwo",
+        "image": "27.ミュウツー.png"
       },
       {
         "id": "12",
@@ -885,14 +880,9 @@
         "image": "12.キャプテン・ファルコン.png"
       },
       {
-        "id": "52",
-        "slug": "52.little_mac",
-        "image": "52.リトルマック.png"
-      },
-      {
-        "id": "11",
-        "slug": "11.ness",
-        "image": "11.ネス.png"
+        "id": "01",
+        "slug": "01.mario",
+        "image": "01.マリオ.png"
       },
       {
         "id": "67",
@@ -905,14 +895,29 @@
         "image": "26.ガノンドロフ.png"
       },
       {
-        "id": "42",
-        "slug": "42.king_dedede",
-        "image": "42.デデデ.png"
+        "id": "52",
+        "slug": "52.little_mac",
+        "image": "52.リトルマック.png"
+      },
+      {
+        "id": "11",
+        "slug": "11.ness",
+        "image": "11.ネス.png"
       },
       {
         "id": "32",
         "slug": "32.pit_dark_pit",
         "image": "32.ピット_33.ブラックピット.png"
+      },
+      {
+        "id": "42",
+        "slug": "42.king_dedede",
+        "image": "42.デデデ.png"
+      },
+      {
+        "id": "40",
+        "slug": "40.lucas",
+        "image": "40.リュカ.png"
       },
       {
         "id": "10",
@@ -930,19 +935,9 @@
         "image": "69.リドリー.png"
       },
       {
-        "id": "40",
-        "slug": "40.lucas",
-        "image": "40.リュカ.png"
-      },
-      {
         "id": "02",
         "slug": "02.donkey_kong",
         "image": "02.ドンキーコング.png"
-      },
-      {
-        "id": "68",
-        "slug": "68.inkling",
-        "image": "68.インクリング.png"
       },
       {
         "id": "18",
@@ -953,6 +948,11 @@
         "id": "34",
         "slug": "34.zero_suit_samus",
         "image": "34.ゼロスーツサムス.png"
+      },
+      {
+        "id": "68",
+        "slug": "68.inkling",
+        "image": "68.インクリング.png"
       }
     ],
     "絶対にやめたほうがいい": [
@@ -977,11 +977,6 @@
         "image": "21.ピチュー.png"
       },
       {
-        "id": "07",
-        "slug": "07.kirby",
-        "image": "07.カービィ.png"
-      },
-      {
         "id": "09",
         "slug": "09.pikachu",
         "image": "09.ピカチュウ.png"
@@ -990,6 +985,11 @@
         "id": "41",
         "slug": "41.sonic",
         "image": "41.ソニック.png"
+      },
+      {
+        "id": "07",
+        "slug": "07.kirby",
+        "image": "07.カービィ.png"
       },
       {
         "id": "35",
@@ -1120,10 +1120,10 @@
       "enemy_id": "07",
       "enemy_name": "カービィ",
       "enemy_image": "07.カービィ.png",
-      "match_count": 153,
-      "win_count": 84,
-      "win_rate": "54.90%",
-      "raw_rate": 54.9
+      "match_count": 155,
+      "win_count": 85,
+      "win_rate": "54.84%",
+      "raw_rate": 54.84
     },
     {
       "enemy_id": "08",
@@ -1138,19 +1138,19 @@
       "enemy_id": "09",
       "enemy_name": "ピカチュウ",
       "enemy_image": "09.ピカチュウ.png",
-      "match_count": 194,
-      "win_count": 112,
-      "win_rate": "57.73%",
-      "raw_rate": 57.73
+      "match_count": 196,
+      "win_count": 114,
+      "win_rate": "58.16%",
+      "raw_rate": 58.16
     },
     {
       "enemy_id": "10",
       "enemy_name": "ルイージ",
       "enemy_image": "10.ルイージ.png",
-      "match_count": 437,
-      "win_count": 181,
-      "win_rate": "41.42%",
-      "raw_rate": 41.42
+      "match_count": 439,
+      "win_count": 182,
+      "win_rate": "41.46%",
+      "raw_rate": 41.46
     },
     {
       "enemy_id": "11",
@@ -1363,10 +1363,10 @@
       "enemy_id": "36",
       "enemy_name": "スネーク",
       "enemy_image": "36.スネーク.png",
-      "match_count": 701,
-      "win_count": 234,
-      "win_rate": "33.38%",
-      "raw_rate": 33.38
+      "match_count": 706,
+      "win_count": 238,
+      "win_rate": "33.71%",
+      "raw_rate": 33.71
     },
     {
       "enemy_id": "37",
@@ -1381,10 +1381,10 @@
       "enemy_id": "38",
       "enemy_name": "ポケモントレーナー",
       "enemy_image": "38.ポケモントレーナー.png",
-      "match_count": 242,
+      "match_count": 243,
       "win_count": 121,
-      "win_rate": "50.00%",
-      "raw_rate": 50.0
+      "win_rate": "49.79%",
+      "raw_rate": 49.79
     },
     {
       "enemy_id": "39",
@@ -1408,10 +1408,10 @@
       "enemy_id": "41",
       "enemy_name": "ソニック",
       "enemy_image": "41.ソニック.png",
-      "match_count": 382,
-      "win_count": 133,
-      "win_rate": "34.82%",
-      "raw_rate": 34.82
+      "match_count": 384,
+      "win_count": 134,
+      "win_rate": "34.90%",
+      "raw_rate": 34.9
     },
     {
       "enemy_id": "42",
@@ -1426,10 +1426,10 @@
       "enemy_id": "43",
       "enemy_name": "ピクミン＆オリマー",
       "enemy_image": "43.ピクミン＆オリマー.png",
-      "match_count": 125,
-      "win_count": 55,
-      "win_rate": "44.00%",
-      "raw_rate": 44.0
+      "match_count": 127,
+      "win_count": 56,
+      "win_rate": "44.09%",
+      "raw_rate": 44.09
     },
     {
       "enemy_id": "44",
@@ -1444,10 +1444,10 @@
       "enemy_id": "45",
       "enemy_name": "ロボット",
       "enemy_image": "45.ロボット.png",
-      "match_count": 749,
+      "match_count": 750,
       "win_count": 377,
-      "win_rate": "50.33%",
-      "raw_rate": 50.33
+      "win_rate": "50.27%",
+      "raw_rate": 50.27
     },
     {
       "enemy_id": "46",
@@ -1525,19 +1525,19 @@
       "enemy_id": "54",
       "enemy_name": "格闘Mii",
       "enemy_image": "54.格闘Mii.png",
-      "match_count": 133,
-      "win_count": 55,
-      "win_rate": "41.35%",
-      "raw_rate": 41.35
+      "match_count": 135,
+      "win_count": 56,
+      "win_rate": "41.48%",
+      "raw_rate": 41.48
     },
     {
       "enemy_id": "55",
       "enemy_name": "剣術Mii",
       "enemy_image": "55.剣術Mii.png",
-      "match_count": 119,
+      "match_count": 121,
       "win_count": 72,
-      "win_rate": "60.50%",
-      "raw_rate": 60.5
+      "win_rate": "59.50%",
+      "raw_rate": 59.5
     },
     {
       "enemy_id": "56",
@@ -1570,10 +1570,10 @@
       "enemy_id": "59",
       "enemy_name": "ルフレ",
       "enemy_image": "59.ルフレ.png",
-      "match_count": 326,
-      "win_count": 147,
-      "win_rate": "45.09%",
-      "raw_rate": 45.09
+      "match_count": 327,
+      "win_count": 148,
+      "win_rate": "45.26%",
+      "raw_rate": 45.26
     },
     {
       "enemy_id": "60",
@@ -1588,10 +1588,10 @@
       "enemy_id": "61",
       "enemy_name": "クッパJr.",
       "enemy_image": "61.クッパJr..png",
-      "match_count": 295,
-      "win_count": 164,
-      "win_rate": "55.59%",
-      "raw_rate": 55.59
+      "match_count": 296,
+      "win_count": 165,
+      "win_rate": "55.74%",
+      "raw_rate": 55.74
     },
     {
       "enemy_id": "62",
@@ -1669,19 +1669,19 @@
       "enemy_id": "70",
       "enemy_name": "リヒター",
       "enemy_image": "70.シモン_71.リヒター.png",
-      "match_count": 231,
-      "win_count": 124,
-      "win_rate": "53.68%",
-      "raw_rate": 53.68
+      "match_count": 232,
+      "win_count": 125,
+      "win_rate": "53.88%",
+      "raw_rate": 53.88
     },
     {
       "enemy_id": "72",
       "enemy_name": "キングクルール",
       "enemy_image": "72.キングクルール.png",
-      "match_count": 147,
-      "win_count": 76,
-      "win_rate": "51.70%",
-      "raw_rate": 51.7
+      "match_count": 148,
+      "win_count": 77,
+      "win_rate": "52.03%",
+      "raw_rate": 52.03
     },
     {
       "enemy_id": "73",
@@ -1705,10 +1705,10 @@
       "enemy_id": "75",
       "enemy_name": "パックンフラワー",
       "enemy_image": "75.パックンフラワー.png",
-      "match_count": 127,
-      "win_count": 48,
-      "win_rate": "37.80%",
-      "raw_rate": 37.8
+      "match_count": 131,
+      "win_count": 52,
+      "win_rate": "39.69%",
+      "raw_rate": 39.69
     },
     {
       "enemy_id": "76",
@@ -1723,28 +1723,28 @@
       "enemy_id": "77",
       "enemy_name": "勇者",
       "enemy_image": "77.勇者.png",
-      "match_count": 443,
+      "match_count": 444,
       "win_count": 199,
-      "win_rate": "44.92%",
-      "raw_rate": 44.92
+      "win_rate": "44.82%",
+      "raw_rate": 44.82
     },
     {
       "enemy_id": "78",
       "enemy_name": "バンジョー＆カズーイ",
       "enemy_image": "78.バンジョー＆カズーイ.png",
-      "match_count": 303,
-      "win_count": 122,
-      "win_rate": "40.26%",
-      "raw_rate": 40.26
+      "match_count": 305,
+      "win_count": 123,
+      "win_rate": "40.33%",
+      "raw_rate": 40.33
     },
     {
       "enemy_id": "79",
       "enemy_name": "テリー",
       "enemy_image": "79.テリー.png",
-      "match_count": 417,
+      "match_count": 418,
       "win_count": 210,
-      "win_rate": "50.36%",
-      "raw_rate": 50.36
+      "win_rate": "50.24%",
+      "raw_rate": 50.24
     },
     {
       "enemy_id": "80",
@@ -1759,10 +1759,10 @@
       "enemy_id": "81",
       "enemy_name": "ミェンミェン",
       "enemy_image": "81.ミェンミェン.png",
-      "match_count": 637,
+      "match_count": 638,
       "win_count": 424,
-      "win_rate": "66.56%",
-      "raw_rate": 66.56
+      "win_rate": "66.46%",
+      "raw_rate": 66.46
     },
     {
       "enemy_id": "82",
@@ -1786,28 +1786,28 @@
       "enemy_id": "84",
       "enemy_name": "ホムヒカ",
       "enemy_image": "84.ホムヒカ.png",
-      "match_count": 485,
+      "match_count": 486,
       "win_count": 225,
-      "win_rate": "46.39%",
-      "raw_rate": 46.39
+      "win_rate": "46.30%",
+      "raw_rate": 46.3
     },
     {
       "enemy_id": "85",
       "enemy_name": "カズヤ",
       "enemy_image": "85.カズヤ.png",
-      "match_count": 908,
-      "win_count": 393,
-      "win_rate": "43.28%",
-      "raw_rate": 43.28
+      "match_count": 915,
+      "win_count": 395,
+      "win_rate": "43.17%",
+      "raw_rate": 43.17
     },
     {
       "enemy_id": "86",
       "enemy_name": "ソラ",
       "enemy_image": "86.ソラ.png",
-      "match_count": 220,
+      "match_count": 221,
       "win_count": 86,
-      "win_rate": "39.09%",
-      "raw_rate": 39.09
+      "win_rate": "38.91%",
+      "raw_rate": 38.91
     }
   ]
 }
