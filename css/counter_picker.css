@@ -24,21 +24,21 @@
   gap: 10px;
   padding: 12px 24px;
   border-radius: 50px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
 }
 
 .cp-step.active {
-  background: linear-gradient(135deg, rgba(231,65,43,0.2), rgba(231,65,43,0.05));
+  background: linear-gradient(135deg, rgba(231, 65, 43, 0.2), rgba(231, 65, 43, 0.05));
   border-color: #e7412b;
-  box-shadow: 0 0 20px rgba(231,65,43,0.15);
+  box-shadow: 0 0 20px rgba(231, 65, 43, 0.15);
 }
 
 .cp-step.completed {
-  background: rgba(46,204,113,0.1);
-  border-color: rgba(46,204,113,0.4);
+  background: rgba(46, 204, 113, 0.1);
+  border-color: rgba(46, 204, 113, 0.4);
 }
 
 .cp-step-number {
@@ -50,15 +50,15 @@
   justify-content: center;
   font-weight: 700;
   font-size: 14px;
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.4);
   transition: all 0.4s;
 }
 
 .cp-step.active .cp-step-number {
   background: #e7412b;
   color: #fff;
-  box-shadow: 0 0 12px rgba(231,65,43,0.4);
+  box-shadow: 0 0 12px rgba(231, 65, 43, 0.4);
 }
 
 .cp-step.completed .cp-step-number {
@@ -69,7 +69,7 @@
 .cp-step-label {
   font-size: 14px;
   font-weight: 600;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255, 255, 255, 0.35);
   transition: color 0.4s;
 }
 
@@ -78,28 +78,28 @@
 }
 
 .cp-step.completed .cp-step-label {
-  color: rgba(46,204,113,0.9);
+  color: rgba(46, 204, 113, 0.9);
 }
 
 .cp-step-connector {
   width: 50px;
   height: 2px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   transition: background 0.6s;
   position: relative;
 }
 
 .cp-step-connector.active {
   background: linear-gradient(90deg, #2ecc71, #e7412b);
-  box-shadow: 0 0 8px rgba(231,65,43,0.3);
+  box-shadow: 0 0 8px rgba(231, 65, 43, 0.3);
 }
 
 /* ===== 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ繧ｫ繝ｼ繝会ｼ医げ繝ｩ繧ｹ繝｢繝ｼ繝輔ぅ繧ｺ繝��� ===== */
 .cp-card {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 30px;
   margin-bottom: 30px;
@@ -115,12 +115,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
 }
 
 .cp-card:hover {
-  border-color: rgba(255,255,255,0.12);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .cp-card-title {
@@ -139,7 +139,7 @@
 
 .cp-card-subtitle {
   font-size: 13px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 24px;
   line-height: 1.6;
 }
@@ -153,7 +153,7 @@
   overflow-y: auto;
   padding: 4px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(231,65,43,0.3) transparent;
+  scrollbar-color: rgba(231, 65, 43, 0.3) transparent;
 }
 
 .cp-fighter-grid::-webkit-scrollbar {
@@ -165,7 +165,7 @@
 }
 
 .cp-fighter-grid::-webkit-scrollbar-thumb {
-  background: rgba(231,65,43,0.3);
+  background: rgba(231, 65, 43, 0.3);
   border-radius: 3px;
 }
 
@@ -177,7 +177,7 @@
   padding: 8px 4px;
   border-radius: 12px;
   border: 2px solid transparent;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -185,27 +185,35 @@
 }
 
 .cp-fighter-btn:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
 
 .cp-fighter-btn.selected {
-  background: linear-gradient(135deg, rgba(231,65,43,0.25), rgba(231,65,43,0.08));
+  background: linear-gradient(135deg, rgba(231, 65, 43, 0.25), rgba(231, 65, 43, 0.08));
   border-color: #e7412b;
-  box-shadow: 0 0 16px rgba(231,65,43,0.2);
+  box-shadow: 0 0 16px rgba(231, 65, 43, 0.2);
   transform: scale(1.08);
   animation: cp-select-pulse 0.4s ease;
 }
 
 @keyframes cp-select-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1.08); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
 }
 
 .cp-fighter-btn.selected::after {
-  content: '笨�';
+  content: '選択';
   position: absolute;
   top: 2px;
   right: 4px;
@@ -220,7 +228,7 @@
   align-items: center;
   justify-content: center;
   font-size: 9px;
-  box-shadow: 0 0 6px rgba(231,65,43,0.5);
+  box-shadow: 0 0 6px rgba(231, 65, 43, 0.5);
 }
 
 /* 繝輔ぃ繧､繧ｿ繝ｼ繧｢繧､繧ｳ繝ｳ: 荳ｸ蝙玖｡ｨ遉ｺ */
@@ -229,13 +237,13 @@
   height: 52px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   transition: all 0.25s;
 }
 
 .cp-fighter-btn.selected img {
   border-color: #e7412b;
-  box-shadow: 0 0 10px rgba(231,65,43,0.5);
+  box-shadow: 0 0 10px rgba(231, 65, 43, 0.5);
 }
 
 /* ===== 驕ｸ謚樊ｸ医∩繧ｿ繧ｰ繧ｨ繝ｪ繧｢ ===== */
@@ -247,7 +255,7 @@
   margin-bottom: 8px;
   font-size: 13px;
   font-weight: 600;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .cp-selected-header .cp-sel-count {
@@ -265,8 +273,8 @@
   gap: 10px;
   min-height: 50px;
   padding: 16px;
-  background: rgba(255,255,255,0.02);
-  border: 2px dashed rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px dashed rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   transition: all 0.3s;
   align-items: center;
@@ -274,13 +282,13 @@
 
 .cp-selected-area.has-items {
   border-style: solid;
-  border-color: rgba(231,65,43,0.2);
-  background: rgba(231,65,43,0.03);
+  border-color: rgba(231, 65, 43, 0.2);
+  background: rgba(231, 65, 43, 0.03);
 }
 
 .cp-selected-placeholder {
   font-size: 13px;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
   font-style: italic;
   width: 100%;
   text-align: center;
@@ -291,15 +299,22 @@
   align-items: center;
   gap: 8px;
   padding: 6px 12px 6px 6px;
-  background: rgba(231,65,43,0.15);
-  border: 1px solid rgba(231,65,43,0.3);
+  background: rgba(231, 65, 43, 0.15);
+  border: 1px solid rgba(231, 65, 43, 0.3);
   border-radius: 50px;
   animation: cp-tag-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @keyframes cp-tag-in {
-  from { transform: scale(0.5); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .cp-tag img {
@@ -319,8 +334,8 @@
   height: 20px;
   border-radius: 50%;
   border: none;
-  background: rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   cursor: pointer;
   display: flex;
@@ -359,12 +374,12 @@
 .cp-btn-primary {
   background: linear-gradient(135deg, #e7412b, #d63520);
   color: #fff;
-  box-shadow: 0 4px 16px rgba(231,65,43,0.3);
+  box-shadow: 0 4px 16px rgba(231, 65, 43, 0.3);
 }
 
 .cp-btn-primary:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(231,65,43,0.4);
+  box-shadow: 0 8px 24px rgba(231, 65, 43, 0.4);
 }
 
 .cp-btn-primary:active:not(:disabled) {
@@ -376,10 +391,21 @@
 }
 
 @keyframes cp-btn-bounce {
-  0%, 100% { transform: translateY(0); }
-  30% { transform: translateY(-6px); }
-  50% { transform: translateY(-2px); }
-  70% { transform: translateY(-4px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-6px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  70% {
+    transform: translateY(-4px);
+  }
 }
 
 .cp-btn-primary:disabled {
@@ -391,13 +417,13 @@
 }
 
 .cp-btn-secondary {
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.7);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cp-btn-secondary:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
@@ -412,8 +438,15 @@
 }
 
 @keyframes cp-fade-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== 邨先棡繧ｫ繝ｼ繝� ===== */
@@ -428,8 +461,8 @@
   align-items: center;
   gap: 16px;
   padding: 18px 20px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   transition: all 0.3s;
   cursor: pointer;
@@ -450,8 +483,8 @@
 }
 
 .cp-result-item:hover {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(231,65,43,0.2);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(231, 65, 43, 0.2);
   transform: translateX(4px);
 }
 
@@ -462,15 +495,26 @@
 .cp-result-rank {
   font-size: 22px;
   font-weight: 800;
-  color: rgba(255,255,255,0.15);
+  color: rgba(255, 255, 255, 0.15);
   min-width: 36px;
   text-align: center;
 }
 
 /* 荳贋ｽ�3菴阪�繝｡繝繝ｫ邨ｵ譁�ｭ励↓鄂ｮ謠帙＆繧後ｋ縺溘ａ濶ｲ縺ｯ荳崎ｦ√√ヵ繧ｩ繝ｼ繝ｫ繝舌ャ繧ｯ逕ｨ縺ｫ谿九☆ */
-.cp-result-item:nth-child(1) .cp-result-rank { color: #FFD700; text-shadow: 0 0 8px rgba(255,215,0,0.4); }
-.cp-result-item:nth-child(2) .cp-result-rank { color: #C0C0C0; text-shadow: 0 0 8px rgba(192,192,192,0.3); }
-.cp-result-item:nth-child(3) .cp-result-rank { color: #CD7F32; text-shadow: 0 0 8px rgba(205,127,50,0.3); }
+.cp-result-item:nth-child(1) .cp-result-rank {
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.cp-result-item:nth-child(2) .cp-result-rank {
+  color: #C0C0C0;
+  text-shadow: 0 0 8px rgba(192, 192, 192, 0.3);
+}
+
+.cp-result-item:nth-child(3) .cp-result-rank {
+  color: #CD7F32;
+  text-shadow: 0 0 8px rgba(205, 127, 50, 0.3);
+}
 
 /* 邨先棡縺ｮ繝輔ぃ繧､繧ｿ繝ｼ繧｢繧､繧ｳ繝ｳ: 魄ｮ譏手｡ｨ遉ｺ */
 .cp-result-img {
@@ -497,7 +541,7 @@
   display: flex;
   gap: 16px;
   font-size: 12px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .cp-result-stats span {
@@ -517,7 +561,7 @@
 .cp-coverage-bar-wrap {
   width: 100px;
   height: 6px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -543,17 +587,17 @@
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: rgba(67,132,252,0.1);
+  background: rgba(67, 132, 252, 0.1);
   color: #4384fc;
   font-size: 16px;
   text-decoration: none;
   flex-shrink: 0;
   transition: all 0.25s;
-  border: 1px solid rgba(67,132,252,0.2);
+  border: 1px solid rgba(67, 132, 252, 0.2);
 }
 
 .cp-result-link:hover {
-  background: rgba(67,132,252,0.25);
+  background: rgba(67, 132, 252, 0.25);
   transform: scale(1.1);
   color: #fff;
 }
@@ -563,8 +607,8 @@
   display: none;
   padding: 16px 20px;
   margin: -1px 0 12px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-top: none;
   border-radius: 0 0 16px 16px;
   animation: cp-detail-open 0.3s ease;
@@ -575,8 +619,15 @@
 }
 
 @keyframes cp-detail-open {
-  from { opacity: 0; max-height: 0; }
-  to { opacity: 1; max-height: 500px; }
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
 }
 
 .cp-detail-grid {
@@ -590,8 +641,8 @@
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  background: rgba(46,204,113,0.08);
-  border: 1px solid rgba(46,204,113,0.2);
+  background: rgba(46, 204, 113, 0.08);
+  border: 1px solid rgba(46, 204, 113, 0.2);
   border-radius: 10px;
 }
 
@@ -635,7 +686,7 @@
 .cp-empty {
   text-align: center;
   padding: 40px 20px;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 14px;
   font-style: italic;
 }
@@ -654,10 +705,10 @@
   width: 100%;
   padding: 14px;
   margin-top: 8px;
-  background: rgba(255,255,255,0.04);
-  border: 1px dashed rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
   border-radius: 14px;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -665,14 +716,14 @@
 }
 
 .cp-btn-more:hover {
-  background: rgba(231,65,43,0.08);
-  border-color: rgba(231,65,43,0.3);
+  background: rgba(231, 65, 43, 0.08);
+  border-color: rgba(231, 65, 43, 0.3);
   color: #fff;
 }
 
 .cp-more-count {
   font-size: 12px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
   font-weight: 400;
 }
 
@@ -690,7 +741,7 @@
   padding: 12px 28px;
   background: #000;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   font-size: 14px;
   font-weight: 700;
@@ -700,7 +751,7 @@
 
 .cp-share-btn:hover {
   background: #1a1a1a;
-  border-color: rgba(255,255,255,0.3);
+  border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
 
@@ -882,14 +933,16 @@
   flex-direction: column;
   gap: 16px;
 }
+
 .cp-option-item {
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 14px;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   flex-wrap: wrap;
 }
+
 .cp-option-item label {
   display: flex;
   align-items: center;
@@ -897,11 +950,13 @@
   font-weight: 600;
   cursor: pointer;
 }
+
 .cp-option-item input[type="range"] {
   flex: 1;
   max-width: 200px;
   accent-color: #e7412b;
 }
+
 .cp-option-item select {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -910,6 +965,7 @@
   border-radius: 8px;
   font-size: 13px;
 }
+
 .cp-option-item select:disabled {
   opacity: 0.4;
   cursor: not-allowed;
@@ -962,6 +1018,7 @@
   background: rgba(46, 204, 113, 0.08);
   border-color: rgba(46, 204, 113, 0.25);
 }
+
 .cp-detail-chip.wr-adv .cp-detail-chip-wr {
   color: #2ecc71;
 }
@@ -970,6 +1027,7 @@
   background: rgba(241, 196, 15, 0.08);
   border-color: rgba(241, 196, 15, 0.25);
 }
+
 .cp-detail-chip.wr-even .cp-detail-chip-wr {
   color: #f1c40f;
 }
@@ -978,6 +1036,7 @@
   background: rgba(231, 76, 60, 0.08);
   border-color: rgba(231, 76, 60, 0.25);
 }
+
 .cp-detail-chip.wr-disadv .cp-detail-chip-wr {
   color: #e74c3c;
 }

@@ -327,34 +327,21 @@ document.addEventListener('DOMContentLoaded', function () {
             score += 10 + (vs.win_rate - 50);
             coveredCount++;
             totalWR += vs.win_rate;
-            coverageDetails.push({ name: weakKey, win_rate: vs.win_rate, battles: vs.battles });
           } else if (vs.win_rate >= 50.0) {
             score += (vs.win_rate - 50) * 0.5;
           }
+          coverageDetails.push({ name: weakKey, win_rate: vs.win_rate, battles: vs.battles });
         }
       });
 
       if (coveredCount > 0) {
         coverageDetails.sort((a, b) => b.win_rate - a.win_rate);
 
-        // 未選択ファイターに対する勝率データ
-        const otherDetails = [];
-        allKeys.forEach(otherKey => {
-          if (!weakKeys.includes(otherKey) && otherKey !== subKey) {
-            const vs = matchupData[subKey] && matchupData[subKey][otherKey];
-            if (vs) {
-              otherDetails.push({ name: otherKey, win_rate: vs.win_rate, battles: vs.battles });
-            }
-          }
-        });
-        otherDetails.sort((a, b) => b.win_rate - a.win_rate);
-
         candidates.push({
           name: subKey, score, coveredCount,
           avgWinRate: totalWR / coveredCount,
           totalWeaks: weakKeys.length,
-          coverageDetails,
-          otherDetails
+          coverageDetails
         });
       }
     });
@@ -421,7 +408,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const dURL = getCharURL(d.name);
         const ls = dURL ? `<a href="${dURL}" style="text-decoration:none" onclick="event.stopPropagation()">` : '';
         const le = dURL ? '</a>' : '';
-        dHTML += `${ls}<div class="cp-detail-chip wr-adv">
+        let wrClass = 'wr-even';
+        if (d.win_rate >= 55.0) wrClass = 'wr-adv';
+        else if (d.win_rate < 45.0) wrClass = 'wr-disadv';
+
+        dHTML += `${ls}<div class="cp-detail-chip ${wrClass}">
           <img src="${getImagePath(d.name)}" alt="${d.name}" onerror="this.src='./img/common/no_image.png'">
           <div class="cp-detail-chip-info">
             <div class="cp-detail-chip-name">${d.name}</div>
@@ -429,35 +420,6 @@ document.addEventListener('DOMContentLoaded', function () {
           </div></div>${le}`;
       });
       dHTML += '</div>';
-
-      // 未選択ファイターの表示セクション
-      if (cand.otherDetails && cand.otherDetails.length > 0) {
-        dHTML += `
-          <button type="button" class="cp-other-toggle-btn" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('open'); this.textContent = this.nextElementSibling.classList.contains('open') ? '▲ 未選択ファイターの勝率を閉じる' : '▼ 未選択ファイターの勝率を表示 (${cand.otherDetails.length}体)';">
-            ▼ 未選択ファイターの勝率を表示 (${cand.otherDetails.length}体)
-          </button>
-          <div class="cp-other-section" onclick="event.stopPropagation()">
-            <div class="cp-other-title">📋 選択していないファイターへの勝率一覧</div>
-            <div class="cp-detail-grid">
-        `;
-        cand.otherDetails.forEach(d => {
-          const dURL = getCharURL(d.name);
-          const ls = dURL ? `<a href="${dURL}" style="text-decoration:none" onclick="event.stopPropagation()">` : '';
-          const le = dURL ? '</a>' : '';
-          let wrClass = 'wr-even';
-          if (d.win_rate >= 55.0) wrClass = 'wr-adv';
-          else if (d.win_rate < 45.0) wrClass = 'wr-disadv';
-
-          dHTML += `${ls}<div class="cp-detail-chip ${wrClass}">
-            <img src="${getImagePath(d.name)}" alt="${d.name}" onerror="this.src='./img/common/no_image.png'">
-            <div class="cp-detail-chip-info">
-              <div class="cp-detail-chip-name">${d.name}</div>
-              <div class="cp-detail-chip-wr">勝率 ${d.win_rate.toFixed(1)}%</div>
-            </div></div>${le}`;
-        });
-        dHTML += `</div></div>`;
-      }
-
       detail.innerHTML = dHTML;
 
       item.addEventListener('click', () => {
