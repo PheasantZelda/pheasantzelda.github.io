@@ -1,7 +1,7 @@
-/* カウンターピッカー専用スタイル */
+/* 繧ｫ繧ｦ繝ｳ繧ｿ繝ｼ繝斐ャ繧ｫ繝ｼ蟆ら畑繧ｹ繧ｿ繧､繝ｫ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* ===== メインコンテナ ===== */
+/* ===== 繝｡繧､繝ｳ繧ｳ繝ｳ繝�リ ===== */
 .cp-container {
   width: 1000px;
   margin: 20px auto;
@@ -9,7 +9,7 @@
   font-family: 'Inter', 'Noto Sans JP', sans-serif;
 }
 
-/* ===== ステップインジケーター ===== */
+/* ===== 繧ｹ繝�ャ繝励う繝ｳ繧ｸ繧ｱ繝ｼ繧ｿ繝ｼ ===== */
 .cp-steps {
   display: flex;
   justify-content: center;
@@ -94,7 +94,7 @@
   box-shadow: 0 0 8px rgba(231,65,43,0.3);
 }
 
-/* ===== セクションカード（グラスモーフィズム） ===== */
+/* ===== 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ繧ｫ繝ｼ繝会ｼ医げ繝ｩ繧ｹ繝｢繝ｼ繝輔ぅ繧ｺ繝��� ===== */
 .cp-card {
   background: rgba(255,255,255,0.03);
   backdrop-filter: blur(20px);
@@ -144,7 +144,7 @@
   line-height: 1.6;
 }
 
-/* ===== ファイターグリッド ===== */
+/* ===== 繝輔ぃ繧､繧ｿ繝ｼ繧ｰ繝ｪ繝�ラ ===== */
 .cp-fighter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -205,7 +205,7 @@
 }
 
 .cp-fighter-btn.selected::after {
-  content: '✓';
+  content: '笨�';
   position: absolute;
   top: 2px;
   right: 4px;
@@ -223,7 +223,7 @@
   box-shadow: 0 0 6px rgba(231,65,43,0.5);
 }
 
-/* ファイターアイコン: 丸型表示 */
+/* 繝輔ぃ繧､繧ｿ繝ｼ繧｢繧､繧ｳ繝ｳ: 荳ｸ蝙玖｡ｨ遉ｺ */
 .cp-fighter-btn img {
   width: 52px;
   height: 52px;
@@ -238,7 +238,7 @@
   box-shadow: 0 0 10px rgba(231,65,43,0.5);
 }
 
-/* ===== 選択済みタグエリア ===== */
+/* ===== 驕ｸ謚樊ｸ医∩繧ｿ繧ｰ繧ｨ繝ｪ繧｢ ===== */
 .cp-selected-header {
   display: flex;
   align-items: center;
@@ -335,7 +335,7 @@
   color: #fff;
 }
 
-/* ===== アクションボタン ===== */
+/* ===== 繧｢繧ｯ繧ｷ繝ｧ繝ｳ繝懊ち繝ｳ ===== */
 .cp-actions {
   display: flex;
   justify-content: center;
@@ -401,7 +401,7 @@
   color: #fff;
 }
 
-/* ===== 結果エリア ===== */
+/* ===== 邨先棡繧ｨ繝ｪ繧｢ ===== */
 .cp-results {
   display: none;
   animation: cp-fade-up 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -416,7 +416,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== 結果カード ===== */
+/* ===== 邨先棡繧ｫ繝ｼ繝� ===== */
 .cp-result-list {
   display: flex;
   flex-direction: column;
@@ -467,12 +467,12 @@
   text-align: center;
 }
 
-/* 上位3位はメダル絵文字に置換されるため色は不要、フォールバック用に残す */
+/* 荳贋ｽ�3菴阪�繝｡繝繝ｫ邨ｵ譁�ｭ励↓鄂ｮ謠帙＆繧後ｋ縺溘ａ濶ｲ縺ｯ荳崎ｦ√√ヵ繧ｩ繝ｼ繝ｫ繝舌ャ繧ｯ逕ｨ縺ｫ谿九☆ */
 .cp-result-item:nth-child(1) .cp-result-rank { color: #FFD700; text-shadow: 0 0 8px rgba(255,215,0,0.4); }
 .cp-result-item:nth-child(2) .cp-result-rank { color: #C0C0C0; text-shadow: 0 0 8px rgba(192,192,192,0.3); }
 .cp-result-item:nth-child(3) .cp-result-rank { color: #CD7F32; text-shadow: 0 0 8px rgba(205,127,50,0.3); }
 
-/* 結果のファイターアイコン: 鮮明表示 */
+/* 邨先棡縺ｮ繝輔ぃ繧､繧ｿ繝ｼ繧｢繧､繧ｳ繝ｳ: 魄ｮ譏手｡ｨ遉ｺ */
 .cp-result-img {
   width: 52px;
   height: 52px;
@@ -535,7 +535,7 @@
   color: #2ecc71;
 }
 
-/* ===== ファイター詳細ページリンク ===== */
+/* ===== 繝輔ぃ繧､繧ｿ繝ｼ隧ｳ邏ｰ繝壹�繧ｸ繝ｪ繝ｳ繧ｯ ===== */
 .cp-result-link {
   display: flex;
   align-items: center;
@@ -558,7 +558,7 @@
   color: #fff;
 }
 
-/* ===== 展開可能な詳細 ===== */
+/* ===== 螻暮幕蜿ｯ閭ｽ縺ｪ隧ｳ邏ｰ ===== */
 .cp-result-detail {
   display: none;
   padding: 16px 20px;
@@ -615,7 +615,7 @@
   font-weight: 700;
 }
 
-/* ===== カウンターバッジ ===== */
+/* ===== 繧ｫ繧ｦ繝ｳ繧ｿ繝ｼ繝舌ャ繧ｸ ===== */
 .cp-count-badge {
   display: inline-flex;
   align-items: center;
@@ -631,7 +631,7 @@
   margin-left: 8px;
 }
 
-/* ===== 空状態 ===== */
+/* ===== 遨ｺ迥ｶ諷� ===== */
 .cp-empty {
   text-align: center;
   padding: 40px 20px;
@@ -640,12 +640,12 @@
   font-style: italic;
 }
 
-/* ===== 初期非表示（さらに表示で展開） ===== */
+/* ===== 蛻晄悄髱櫁｡ｨ遉ｺ�医＆繧峨↓陦ｨ遉ｺ縺ｧ螻暮幕�� ===== */
 .cp-hidden-result {
   display: none !important;
 }
 
-/* ===== さらに表示ボタン ===== */
+/* ===== 縺輔ｉ縺ｫ陦ｨ遉ｺ繝懊ち繝ｳ ===== */
 .cp-btn-more {
   display: flex;
   align-items: center;
@@ -676,7 +676,7 @@
   font-weight: 400;
 }
 
-/* ===== シェアボタン ===== */
+/* ===== 繧ｷ繧ｧ繧｢繝懊ち繝ｳ ===== */
 .cp-share-area {
   display: flex;
   justify-content: center;
@@ -709,7 +709,7 @@
   font-weight: 800;
 }
 
-/* ===== レスポンシブ ===== */
+/* ===== 繝ｬ繧ｹ繝昴Φ繧ｷ繝� ===== */
 @media (max-width: 840px) {
   .cp-container {
     max-width: 90%;
@@ -755,7 +755,7 @@
     margin-bottom: 16px;
   }
 
-  /* モバイル: 4列グリッド */
+  /* 繝｢繝舌う繝ｫ: 4蛻励げ繝ｪ繝�ラ */
   .cp-fighter-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
@@ -871,7 +871,7 @@
   }
 }
 
-/* ===== �I�v�V�����ݒ� ===== */
+/* ===== オプション設定 ===== */
 .cp-options {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -913,4 +913,71 @@
 .cp-option-item select:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+
+/* ===== 未選択ファイター勝率表示用スタイル ===== */
+.cp-other-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cp-other-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.cp-other-section {
+  display: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.cp-other-section.open {
+  display: block;
+  animation: cp-detail-open 0.3s ease;
+}
+
+.cp-other-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.cp-detail-chip.wr-adv {
+  background: rgba(46, 204, 113, 0.08);
+  border-color: rgba(46, 204, 113, 0.25);
+}
+.cp-detail-chip.wr-adv .cp-detail-chip-wr {
+  color: #2ecc71;
+}
+
+.cp-detail-chip.wr-even {
+  background: rgba(241, 196, 15, 0.08);
+  border-color: rgba(241, 196, 15, 0.25);
+}
+.cp-detail-chip.wr-even .cp-detail-chip-wr {
+  color: #f1c40f;
+}
+
+.cp-detail-chip.wr-disadv {
+  background: rgba(231, 76, 60, 0.08);
+  border-color: rgba(231, 76, 60, 0.25);
+}
+.cp-detail-chip.wr-disadv .cp-detail-chip-wr {
+  color: #e74c3c;
 }

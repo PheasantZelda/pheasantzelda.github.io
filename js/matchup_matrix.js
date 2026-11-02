@@ -23,8 +23,17 @@
   const deselectAllBtn = document.getElementById('deselect-all-btn');
   const applyFilterBtn = document.getElementById('apply-filter-btn');
 
-  // Get fighter list from MATCHUP_DATA
-  const fighters = Object.keys(MATCHUP_DATA);
+  // Rate selector
+  const rateSelect = document.getElementById('rate-select');
+
+  // MATCHUP_DATA cache and current active data
+  let currentMatchupData = typeof MATCHUP_DATA !== 'undefined' ? MATCHUP_DATA : {};
+  const tierCache = {
+    '1500-3000': currentMatchupData
+  };
+
+  // Get fighter list
+  const fighters = Object.keys(currentMatchupData);
 
   // State
   let currentZoom = 100;
@@ -135,7 +144,7 @@
         cell.dataset.fighter1 = fighter1;
         cell.dataset.fighter2 = fighter2;
 
-        const matchupData = MATCHUP_DATA[fighter1]?.[fighter2];
+        const matchupData = currentMatchupData[fighter1]?.[fighter2];
 
         if (fighter1 === fighter2) {
           // Diagonal cell
@@ -563,6 +572,27 @@
   /**
    * Initialize
    */
+  /**
+   * Load data for specified tier
+   */
+  async function loadTierData(tier) {
+    if (tierCache[tier]) {
+      currentMatchupData = tierCache[tier];
+      buildMatrix();
+      return;
+    }
+    try {
+      const res = await fetch(`./js/data/matchup_data_${tier}.json`);
+      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+      const data = await res.json();
+      tierCache[tier] = data;
+      currentMatchupData = data;
+      buildMatrix();
+    } catch (e) {
+      console.error('Failed to load matchup data for tier:', tier, e);
+    }
+  }
+
   function init() {
     console.log(
       'Matchup Matrix: Initializing with',
@@ -574,6 +604,11 @@
     initModalEvents();
 
     // Event listeners for controls
+    if (rateSelect) {
+      rateSelect.addEventListener('change', (e) => {
+        loadTierData(e.target.value);
+      });
+    }
     winrateFilter.addEventListener('change', handleFilter);
     zoomSlider.addEventListener('input', handleZoom);
     resetBtn.addEventListener('click', handleReset);

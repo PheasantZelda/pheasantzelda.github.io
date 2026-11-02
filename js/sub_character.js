@@ -11,8 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const coverageList = document.getElementById('coverage-list');
     const modalClose = document.querySelector('.modal-close');
     const modalOverlay = document.querySelector('.modal-overlay');
+    const rateSelect = document.getElementById('rate-select');
 
-    let matchupData = {};
+    let matchupData = typeof MATCHUP_DATA !== 'undefined' ? MATCHUP_DATA : {};
+    const tierCache = {
+        '1500-3000': matchupData
+    };
     let currentCoverageData = {}; // Store coverage details for each sub
     let currentRecommendedSubs = []; // Store current recommendations for sorting
     let currentMainChar = '';
@@ -103,6 +107,28 @@ document.addEventListener('DOMContentLoaded', function() {
         "ソラ": "./chara/86.sora.html"
     }
 
+        async function loadTierData(tier) {
+        if (tierCache[tier]) {
+            matchupData = tierCache[tier];
+            if (currentMainChar) {
+                analyzeMatchups(currentMainChar);
+            }
+            return;
+        }
+        try {
+            const res = await fetch(`./js/data/matchup_data_${tier}.json`);
+            if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+            const data = await res.json();
+            tierCache[tier] = data;
+            matchupData = data;
+            if (currentMainChar) {
+                analyzeMatchups(currentMainChar);
+            }
+        } catch (e) {
+            console.error('Failed to load matchup data for tier:', tier, e);
+        }
+    }
+
     // Load data
     if (typeof MATCHUP_DATA !== 'undefined') {
         matchupData = MATCHUP_DATA;
@@ -110,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
         checkURLParameters();
     } else {
         console.error('MATCHUP_DATA not found. Make sure matchup_data.js is loaded.');
+    }
+
+    if (rateSelect) {
+        rateSelect.addEventListener('change', (e) => {
+            loadTierData(e.target.value);
+        });
     }
 
     // Check URL parameters for auto-selection

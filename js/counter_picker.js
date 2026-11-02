@@ -14,9 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const step1 = document.getElementById('cp-step-1');
   const step2 = document.getElementById('cp-step-2');
   const connector = document.getElementById('cp-connector');
+  const rateSelect = document.getElementById('rate-select');
 
   let selectedFighters = new Set();
-  let matchupData = {};
+  let matchupData = typeof MATCHUP_DATA !== 'undefined' ? MATCHUP_DATA : {};
+  const tierCache = {
+    '1500-3000': matchupData
+  };
 
   // 番号順のファイターリスト（ダッシュファイターは結合キーで1アイコン）
   const FIGHTER_ORDER = [
@@ -140,11 +144,39 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // --- データ読み込み ---
+    async function loadTierData(tier) {
+    if (tierCache[tier]) {
+      matchupData = tierCache[tier];
+      if (resultsSection.style.display !== 'none' && selectedFighters.size > 0) {
+        runAnalysis();
+      }
+      return;
+    }
+    try {
+      const res = await fetch(`./js/data/matchup_data_${tier}.json`);
+      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+      const data = await res.json();
+      tierCache[tier] = data;
+      matchupData = data;
+      if (resultsSection.style.display !== 'none' && selectedFighters.size > 0) {
+        runAnalysis();
+      }
+    } catch (e) {
+      console.error('Failed to load matchup data for tier:', tier, e);
+    }
+  }
+
   if (typeof MATCHUP_DATA !== 'undefined') {
     matchupData = MATCHUP_DATA;
     buildFighterGrid();
   } else {
     console.error('MATCHUP_DATA が読み込まれていません');
+  }
+
+  if (rateSelect) {
+    rateSelect.addEventListener('change', (e) => {
+      loadTierData(e.target.value);
+    });
   }
 
   /**
@@ -304,11 +336,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (coveredCount > 0) {
         coverageDetails.sort((a, b) => b.win_rate - a.win_rate);
+
+        // 未選択ファイターに対する勝率データ
+        const otherDetails = [];
+        allKeys.forEach(otherKey => {
+          if (!weakKeys.includes(otherKey) && otherKey !== subKey) {
+            const vs = matchupData[subKey] && matchupData[subKey][otherKey];
+            if (vs) {
+              otherDetails.push({ name: otherKey, win_rate: vs.win_rate, battles: vs.battles });
+            }
+          }
+        });
+        otherDetails.sort((a, b) => b.win_rate - a.win_rate);
+
         candidates.push({
           name: subKey, score, coveredCount,
           avgWinRate: totalWR / coveredCount,
           totalWeaks: weakKeys.length,
-          coverageDetails
+          coverageDetails,
+          otherDetails
         });
       }
     });
@@ -375,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const dURL = getCharURL(d.name);
         const ls = dURL ? `<a href="${dURL}" style="text-decoration:none" onclick="event.stopPropagation()">` : '';
         const le = dURL ? '</a>' : '';
-        dHTML += `${ls}<div class="cp-detail-chip">
+        dHTML += `${ls}<div class="cp-detail-chip wr-adv">
           <img src="${getImagePath(d.name)}" alt="${d.name}" onerror="this.src='./img/common/no_image.png'">
           <div class="cp-detail-chip-info">
             <div class="cp-detail-chip-name">${d.name}</div>
@@ -383,6 +429,35 @@ document.addEventListener('DOMContentLoaded', function () {
           </div></div>${le}`;
       });
       dHTML += '</div>';
+
+      // 未選択ファイターの表示セクション
+      if (cand.otherDetails && cand.otherDetails.length > 0) {
+        dHTML += `
+          <button type="button" class="cp-other-toggle-btn" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('open'); this.textContent = this.nextElementSibling.classList.contains('open') ? '▲ 未選択ファイターの勝率を閉じる' : '▼ 未選択ファイターの勝率を表示 (${cand.otherDetails.length}体)';">
+            ▼ 未選択ファイターの勝率を表示 (${cand.otherDetails.length}体)
+          </button>
+          <div class="cp-other-section" onclick="event.stopPropagation()">
+            <div class="cp-other-title">📋 選択していないファイターへの勝率一覧</div>
+            <div class="cp-detail-grid">
+        `;
+        cand.otherDetails.forEach(d => {
+          const dURL = getCharURL(d.name);
+          const ls = dURL ? `<a href="${dURL}" style="text-decoration:none" onclick="event.stopPropagation()">` : '';
+          const le = dURL ? '</a>' : '';
+          let wrClass = 'wr-even';
+          if (d.win_rate >= 55.0) wrClass = 'wr-adv';
+          else if (d.win_rate < 45.0) wrClass = 'wr-disadv';
+
+          dHTML += `${ls}<div class="cp-detail-chip ${wrClass}">
+            <img src="${getImagePath(d.name)}" alt="${d.name}" onerror="this.src='./img/common/no_image.png'">
+            <div class="cp-detail-chip-info">
+              <div class="cp-detail-chip-name">${d.name}</div>
+              <div class="cp-detail-chip-wr">勝率 ${d.win_rate.toFixed(1)}%</div>
+            </div></div>${le}`;
+        });
+        dHTML += `</div></div>`;
+      }
+
       detail.innerHTML = dHTML;
 
       item.addEventListener('click', () => {
