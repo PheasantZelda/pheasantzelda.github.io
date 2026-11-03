@@ -258,7 +258,7 @@ async function initStageBanPage() {
   if (rateSelect) {
     initFloatingRateSelector(rateSelect);
   }
-  const initialTier = rateSelect ? rateSelect.value : "1500-3000";
+  const initialTier = rateSelect ? rateSelect.value : "1500-2702";
 
   // 初期データのロード
   await loadStageBanData(initialTier);

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let matchupData = typeof MATCHUP_DATA !== 'undefined' ? MATCHUP_DATA : {};
     const tierCache = {
-        '1500-3000': matchupData
+        '1500-2702': matchupData
     };
     let currentCoverageData = {}; // Store coverage details for each sub
     let currentRecommendedSubs = []; // Store current recommendations for sorting

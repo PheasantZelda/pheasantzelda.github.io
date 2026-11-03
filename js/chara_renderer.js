@@ -19,10 +19,11 @@ async function initDynamicCharaPage() {
 
   // レート帯の表示名を定義
   const RATE_LABELS = {
-    '1500-3000': '1500 以上',
+    '1500-2702': '1500 以上',
     '1000-1500': '1000-1500',
     '1500-1700': '1500-1700',
-    '1700-3000': '1700 以上'
+    '1700-2702': '1700 以上',
+    '1900-2702': '1900 以上'
   };
 
   const updateRateDisplay = (tier) => {
@@ -30,8 +31,8 @@ async function initDynamicCharaPage() {
     // スマホの場合はテキストを短くする
     const isMobile = window.innerWidth <= 840;
     const periodText = isMobile
-      ? '対象: 15.5-34期 レート: '
-      : '対象期間: 15.5期 (2021.8) - 34期 (2026.05) レート帯: ';
+      ? '対象: 15.5-36期 レート: '
+      : '対象期間: 15.5期 (2021.8) - 36期 (2026.11) レート帯: ';
 
     const targetSections = ['相性表', 'サブ適正表', '戦績詳細'];
     targetSections.forEach((id) => {
@@ -73,7 +74,9 @@ async function initDynamicCharaPage() {
     updateRateDisplay(tier);
     try {
       // キャラID別の分割JSONを読み込む（全キャラ分ではなく自分のデータだけ）
-      const response = await fetch(`../js/data/dynamic_pages_${tier}_${mainId}.json`);
+      const response = await fetch(
+        `../js/data/dynamic_pages_${tier}_${mainId}.json`
+      );
       const data = await response.json();
 
       if (!data) {
@@ -97,7 +100,7 @@ async function initDynamicCharaPage() {
 
   // 初期ロード
   const select = document.getElementById('chara-rate-select');
-  const initialTier = select ? select.value : '1500-3000';
+  const initialTier = select ? select.value : '1500-2702';
   await loadDataForTier(initialTier);
 
   if (select) {

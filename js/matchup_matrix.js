@@ -29,7 +29,7 @@
   // MATCHUP_DATA cache and current active data
   let currentMatchupData = typeof MATCHUP_DATA !== 'undefined' ? MATCHUP_DATA : {};
   const tierCache = {
-    '1500-3000': currentMatchupData
+    '1500-2702': currentMatchupData
   };
 
   // Get fighter list
